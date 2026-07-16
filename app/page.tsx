@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 type Language = "cn" | "en";
 
@@ -302,7 +303,7 @@ const useCases = [
 
 function BrandMark() {
   return (
-    <img className="brand-mark-image" src="/lunartulip-silver-emblem.png" alt="" aria-hidden="true" />
+    <Image className="brand-mark-image" src="/lunartulip-silver-emblem.png" width={34} height={38} alt="" aria-hidden="true" />
   );
 }
 
@@ -357,13 +358,28 @@ export default function Home() {
   useEffect(() => {
     const savedLanguage = window.localStorage.getItem("lunartulip-language");
     if (savedLanguage === "cn" || savedLanguage === "en") {
-      setLanguage(savedLanguage);
+      const frame = window.requestAnimationFrame(() => setLanguage(savedLanguage));
+      return () => window.cancelAnimationFrame(frame);
     }
   }, []);
 
   useEffect(() => {
     document.documentElement.lang = language === "cn" ? "zh-CN" : "en";
   }, [language]);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [menuOpen]);
 
   useEffect(() => {
     const updateScrollState = () => setHasScrolled(window.scrollY > 24);
@@ -398,7 +414,7 @@ export default function Home() {
           <span>LUNARTULIP LAB</span>
         </a>
 
-        <nav className="desktop-nav" aria-label="页面章节">
+        <nav className="desktop-nav" aria-label={language === "cn" ? "页面章节" : "Page sections"}>
           {navigation.map((item) => (
             <a href={item.href} className={activeSection === item.href ? "active" : ""} aria-current={activeSection === item.href ? "location" : undefined} key={item.href}>
               {tx(item.label)}
@@ -412,11 +428,11 @@ export default function Home() {
           <span>/</span>
           <button type="button" className={language === "en" ? "active" : ""} onClick={() => selectLanguage("en")} aria-pressed={language === "en"}>EN</button>
         </div>
-        <div className="system-status" aria-label="System status: ready">
+        <div className="system-status" aria-label={language === "cn" ? "研究系统运行中" : "Research system active"}>
           <span aria-hidden="true" />
-          <b>LIVE</b>
+          <b>SYSTEM</b>
           <i>/</i>
-          SYSTEM READY
+          ACTIVE
         </div>
         </div>
 
@@ -432,9 +448,18 @@ export default function Home() {
         </button>
       </header>
 
+      <button
+        className={`nav-backdrop ${menuOpen ? "is-open" : ""}`}
+        type="button"
+        aria-label={language === "cn" ? "关闭导航" : "Close navigation"}
+        aria-hidden={!menuOpen}
+        tabIndex={menuOpen ? 0 : -1}
+        onClick={() => setMenuOpen(false)}
+      />
+
       <nav className={`mobile-nav ${menuOpen ? "is-open" : ""}`} aria-label={language === "cn" ? "移动端页面章节" : "Mobile sections"} aria-hidden={!menuOpen}>
         {navigation.map((item, index) => (
-          <a href={item.href} key={item.href} onClick={() => setMenuOpen(false)}>
+          <a href={item.href} className={activeSection === item.href ? "active" : ""} aria-current={activeSection === item.href ? "location" : undefined} key={item.href} onClick={() => setMenuOpen(false)}>
             <span>0{index + 1}</span> {tx(item.label)}
           </a>
         ))}
@@ -462,38 +487,38 @@ export default function Home() {
             <a className="secondary-action" href="#contact">
               {language === "cn" ? "预约交流" : "Start a conversation"} <span aria-hidden="true"><ArrowUpRightIcon /></span>
             </a>
-            <p className="inline-status">
-              <span aria-hidden="true" /> LIVE / SYSTEM READY
-            </p>
           </div>
         </div>
 
-        <div className="signal-visual" aria-label="从命题、证据到反馈的研究信号图">
+        <div className="signal-visual" aria-label={language === "cn" ? "从命题、证据到反馈的研究信号图" : "Research signal map from thesis and evidence to feedback"}>
           <div className="axis axis-x" />
           <div className="axis axis-y" />
           <div className="orbit orbit-one" />
           <div className="orbit orbit-two" />
           <div className="orbit orbit-three" />
-          <img
+          <Image
             className="lunar-form"
             src="/lunartulip-silver-emblem.png"
+            width={470}
+            height={510}
             alt="银色月面新月环抱郁金香的 LunarTulip Lab 标志"
+            priority
           />
           <span className="signal-node node-one" />
           <span className="signal-node node-two" />
           <span className="signal-node node-three" />
           <span className="signal-node node-four" />
           <div className="metric-card metric-thesis">
-            <small>THESIS VECTOR</small>
-            <code>[0.618, −0.382, 0.236]</code>
-            <p>CONFIDENCE <b>0.72</b></p>
+            <small>THESIS PATH</small>
+            <code>QUESTION → HYPOTHESIS → TEST</code>
+            <p>HUMAN JUDGMENT <b>IN LOOP</b></p>
           </div>
           <div className="metric-card metric-evidence">
-            <small>EVIDENCE TRACE</small>
-            <code>N=1,248 · RECENCY 7D</code>
-            <p>QUALITY <b>0.81</b></p>
+            <small>EVIDENCE SYSTEM</small>
+            <code>SOURCE → CLAIM → CAUSE</code>
+            <p>TRACEABLE <b>/ UPDATEABLE</b></p>
           </div>
-          <p className="coordinates">LUNAR COORDINATES<br />λ 23.43° &nbsp; β −5.21°</p>
+          <p className="coordinates">ACTIVE RESEARCH SYSTEM<br />LUNARTULIP LAB · 2026</p>
         </div>
       </section>
 
@@ -506,17 +531,17 @@ export default function Home() {
         <a className="preview-link" href="#capabilities" onClick={() => setActiveCapability("thesis")}>
           <span className="mini-signal" aria-hidden="true" />
           <div><code>01 / THESIS ENGINE</code><p>{tx("把模糊判断转化为可验证命题。")}</p></div>
-          <ArrowUpRightIcon />
+          <ArrowRightIcon />
         </a>
         <a className="preview-link" href="#capabilities" onClick={() => setActiveCapability("evidence")}>
           <span className="mini-graph" aria-hidden="true" />
           <div><code>02 / EVIDENCE GRAPH</code><p>{tx("聚合多源证据，显式化因果链路。")}</p></div>
-          <ArrowUpRightIcon />
+          <ArrowRightIcon />
         </a>
         <a className="preview-link" href="#capabilities" onClick={() => setActiveCapability("feedback")}>
           <span className="mini-loop" aria-hidden="true"><LoopIcon /></span>
-          <div><code>03 / DECISION LOOP</code><p>{tx("评估决策效果，让反馈驱动迭代。")}</p></div>
-          <ArrowUpRightIcon />
+          <div><code>05 / FEEDBACK LOOP</code><p>{tx("评估决策效果，让反馈驱动迭代。")}</p></div>
+          <ArrowRightIcon />
         </a>
       </section>
 
@@ -574,7 +599,7 @@ export default function Home() {
               >
                 <span className="cap-node" aria-hidden="true"><i /></span>
                 <span className="cap-label"><small>{item.number} / {item.code}</small><b>{tx(item.title)}</b></span>
-                <span className="cap-arrow" aria-hidden="true"><ArrowUpRightIcon /></span>
+                <span className="cap-arrow" aria-hidden="true"><ArrowRightIcon /></span>
               </button>
             ))}
           </div>
@@ -724,7 +749,7 @@ export default function Home() {
               <div className="practice-copy">
                 <h3>{language === "cn" ? item.title : item.titleEn}</h3>
                 <p>{language === "cn" ? item.thesis : item.thesisEn}</p>
-                <a href="#cases">{language === "cn" ? "查看方法结构" : "View methodology"}<span><ArrowUpRightIcon /></span></a>
+                <a href="#cases">{language === "cn" ? "查看方法结构" : "View methodology"}<span><ArrowRightIcon /></span></a>
               </div>
             </article>
           ))}
