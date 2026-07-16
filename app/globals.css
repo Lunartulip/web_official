@@ -223,12 +223,11 @@ main {
   border-radius: 7px;
   color: white;
   background:
-    radial-gradient(circle at 87% 12%, rgba(232,241,241,.72) 0, rgba(171,194,199,.42) 17%, rgba(107,139,151,.2) 31%, transparent 48%),
-    radial-gradient(circle at 8% 115%, rgba(88,121,138,.24), transparent 46%),
-    #203946;
+    radial-gradient(ellipse 62% 138% at 62% 48%, rgba(221,233,235,.7) 0%, rgba(137,164,175,.48) 31%, rgba(71,99,114,.2) 58%, transparent 76%),
+    linear-gradient(112deg, #1a303d 0%, #2a4656 50%, #1d3441 100%);
   box-shadow:
     0 16px 38px rgba(35,63,78,.24),
-    8px 12px 28px rgba(126,151,160,.16),
+    0 12px 30px rgba(126,151,160,.15),
     inset 0 1px 0 rgba(246,251,251,.5),
     inset 0 -1px 0 rgba(5,17,25,.18);
   font-size: 16px;
@@ -246,14 +245,14 @@ main {
 }
 .primary-action span {
   position: relative;
-  color: #1b3441;
+  color: rgba(248,252,252,.94);
   font-size: 22px;
-  text-shadow: 0 1px 0 rgba(255,255,255,.28);
+  text-shadow: 0 1px 8px rgba(20,42,53,.42);
   transition: transform .2s ease;
 }
 .primary-action:hover {
   transform: translateY(-2px);
-  box-shadow: 0 20px 44px rgba(35,63,78,.3), 10px 14px 32px rgba(126,151,160,.2), inset 0 1px 0 rgba(246,251,251,.62);
+  box-shadow: 0 20px 44px rgba(35,63,78,.3), 0 14px 34px rgba(126,151,160,.2), inset 0 1px 0 rgba(246,251,251,.62);
 }
 .primary-action:hover::before { transform: translateX(115%); }
 .primary-action:hover span { transform: translateX(5px); }
