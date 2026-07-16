@@ -221,13 +221,16 @@ main {
   align-items: center;
   border: 1px solid rgba(190,211,221,.26);
   border-radius: 7px;
-  color: #18303d;
-  background: #b9c9cc;
+  color: white;
+  background:
+    radial-gradient(circle at 87% 12%, rgba(232,241,241,.72) 0, rgba(171,194,199,.42) 17%, rgba(107,139,151,.2) 31%, transparent 48%),
+    radial-gradient(circle at 8% 115%, rgba(88,121,138,.24), transparent 46%),
+    #203946;
   box-shadow:
-    0 16px 38px rgba(55,81,92,.2),
-    8px 12px 28px rgba(126,151,160,.14),
-    inset 0 1px 0 rgba(255,255,255,.68),
-    inset 0 -1px 0 rgba(45,69,79,.15);
+    0 16px 38px rgba(35,63,78,.24),
+    8px 12px 28px rgba(126,151,160,.16),
+    inset 0 1px 0 rgba(246,251,251,.5),
+    inset 0 -1px 0 rgba(5,17,25,.18);
   font-size: 16px;
   font-weight: 580;
   transition: transform .2s ease, box-shadow .2s ease;
@@ -249,7 +252,6 @@ main {
   transition: transform .2s ease;
 }
 .primary-action:hover {
-  background: #c4d2d4;
   transform: translateY(-2px);
   box-shadow: 0 20px 44px rgba(35,63,78,.3), 10px 14px 32px rgba(126,151,160,.2), inset 0 1px 0 rgba(246,251,251,.62);
 }
