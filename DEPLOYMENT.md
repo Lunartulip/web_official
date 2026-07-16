@@ -135,6 +135,8 @@ Choose the HTTPS redirect when prompted.
 
 ## 7. Firewall
 
+In the Alibaba Cloud ECS security group, allow inbound TCP `80` and `443` from `0.0.0.0/0`. Keep SSH `22` restricted to trusted administrator IPs whenever possible. The cloud security group applies before UFW, so both layers must permit web traffic.
+
 If UFW is enabled:
 
 ```bash

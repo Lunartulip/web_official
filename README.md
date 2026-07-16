@@ -19,7 +19,6 @@ Requirements:
 
 - Node.js `>=22.13.0`
 - npm
-- Linux or WSL for the bundled validation scripts
 
 ```bash
 npm ci
@@ -35,6 +34,8 @@ npm ci
 npm run build
 npm run start
 ```
+
+The default scripts use the standard Next.js runtime and work on Windows, macOS and Linux. The optional `*:cloudflare` scripts require Bash/Linux tooling.
 
 For the Singapore-server migration, Nginx, HTTPS, DNS and service setup, see [DEPLOYMENT.md](./DEPLOYMENT.md).
 
