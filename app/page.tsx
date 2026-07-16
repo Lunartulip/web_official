@@ -306,6 +306,30 @@ function BrandMark() {
   );
 }
 
+function ArrowRightIcon() {
+  return (
+    <svg className="ui-icon" viewBox="0 0 20 20" aria-hidden="true">
+      <path d="M3 10h13M11.5 5.5 16 10l-4.5 4.5" />
+    </svg>
+  );
+}
+
+function ArrowUpRightIcon() {
+  return (
+    <svg className="ui-icon" viewBox="0 0 20 20" aria-hidden="true">
+      <path d="M5 15 15 5M7 5h8v8" />
+    </svg>
+  );
+}
+
+function LoopIcon() {
+  return (
+    <svg className="ui-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M18.2 8A7 7 0 1 0 19 15M18.2 8V3.8M18.2 8H14" />
+    </svg>
+  );
+}
+
 export default function Home() {
   const [language, setLanguage] = useState<Language>("cn");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -397,7 +421,7 @@ export default function Home() {
         </div>
 
         <button
-          className="menu-toggle"
+          className={`menu-toggle ${menuOpen ? "is-open" : ""}`}
           type="button"
           aria-label={menuOpen ? (language === "cn" ? "关闭导航" : "Close navigation") : (language === "cn" ? "打开导航" : "Open navigation")}
           aria-expanded={menuOpen}
@@ -433,10 +457,10 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a className="primary-action" href="#capabilities">
-              {tx("探索能力地图")} <span aria-hidden="true">→</span>
+              {tx("探索能力地图")} <span aria-hidden="true"><ArrowRightIcon /></span>
             </a>
             <a className="secondary-action" href="#contact">
-              {language === "cn" ? "预约交流" : "Start a conversation"} <span aria-hidden="true">↗</span>
+              {language === "cn" ? "预约交流" : "Start a conversation"} <span aria-hidden="true"><ArrowUpRightIcon /></span>
             </a>
             <p className="inline-status">
               <span aria-hidden="true" /> LIVE / SYSTEM READY
@@ -479,18 +503,21 @@ export default function Home() {
           <h2 id="capability-preview-title">{tx("从研究命题到反馈闭环")}</h2>
           <span className="blue-rule" />
         </div>
-        <article>
+        <a className="preview-link" href="#capabilities" onClick={() => setActiveCapability("thesis")}>
           <span className="mini-signal" aria-hidden="true" />
           <div><code>01 / THESIS ENGINE</code><p>{tx("把模糊判断转化为可验证命题。")}</p></div>
-        </article>
-        <article>
+          <ArrowUpRightIcon />
+        </a>
+        <a className="preview-link" href="#capabilities" onClick={() => setActiveCapability("evidence")}>
           <span className="mini-graph" aria-hidden="true" />
           <div><code>02 / EVIDENCE GRAPH</code><p>{tx("聚合多源证据，显式化因果链路。")}</p></div>
-        </article>
-        <article>
-          <span className="mini-loop" aria-hidden="true">↻</span>
+          <ArrowUpRightIcon />
+        </a>
+        <a className="preview-link" href="#capabilities" onClick={() => setActiveCapability("feedback")}>
+          <span className="mini-loop" aria-hidden="true"><LoopIcon /></span>
           <div><code>03 / DECISION LOOP</code><p>{tx("评估决策效果，让反馈驱动迭代。")}</p></div>
-        </article>
+          <ArrowUpRightIcon />
+        </a>
       </section>
 
       <section className="philosophy-section page-section" id="philosophy" aria-labelledby="philosophy-title">
@@ -547,7 +574,7 @@ export default function Home() {
               >
                 <span className="cap-node" aria-hidden="true"><i /></span>
                 <span className="cap-label"><small>{item.number} / {item.code}</small><b>{tx(item.title)}</b></span>
-                <span className="cap-arrow" aria-hidden="true">↗</span>
+                <span className="cap-arrow" aria-hidden="true"><ArrowUpRightIcon /></span>
               </button>
             ))}
           </div>
@@ -574,7 +601,7 @@ export default function Home() {
               {capability.bullets.map((bullet, index) => <span key={bullet}>0{index + 1} {tx(bullet)}</span>)}
             </div>
             <button className="next-control" type="button" onClick={showNextCapability}>
-              <span>{language === "cn" ? "下一能力模块" : "Next capability"}</span><b aria-hidden="true">→</b>
+              <span>{language === "cn" ? "下一能力模块" : "Next capability"}</span><b aria-hidden="true"><ArrowRightIcon /></b>
             </button>
           </div>
         </div>
@@ -615,10 +642,10 @@ export default function Home() {
           </div>
           <div className="workflow-io">
             <div><small>INPUT SIGNAL</small><strong>{tx(workflow.input)}</strong></div>
-            <b aria-hidden="true">→</b>
+            <b aria-hidden="true"><ArrowRightIcon /></b>
             <div><small>SYSTEM OUTPUT</small><strong>{tx(workflow.output)}</strong></div>
             <button className="next-control workflow-next" type="button" onClick={showNextWorkflow}>
-              <span>{language === "cn" ? "下一阶段" : "Next stage"}</span><b aria-hidden="true">→</b>
+              <span>{language === "cn" ? "下一阶段" : "Next stage"}</span><b aria-hidden="true"><ArrowRightIcon /></b>
             </button>
           </div>
         </div>
@@ -697,7 +724,7 @@ export default function Home() {
               <div className="practice-copy">
                 <h3>{language === "cn" ? item.title : item.titleEn}</h3>
                 <p>{language === "cn" ? item.thesis : item.thesisEn}</p>
-                <a href="#cases">{language === "cn" ? "查看方法结构" : "View methodology"}<span>↗</span></a>
+                <a href="#cases">{language === "cn" ? "查看方法结构" : "View methodology"}<span><ArrowUpRightIcon /></span></a>
               </div>
             </article>
           ))}
@@ -719,7 +746,7 @@ export default function Home() {
               <h3>{language === "cn" ? column.title : column.titleEn}</h3>
               <ol>{(language === "cn" ? column.notes : column.notesEn).map((note, index) => <li key={note}><span>0{index + 1}</span><p>{note}</p><i aria-hidden="true">•</i></li>)}</ol>
               <a className="notes-contact" href={`mailto:t.stephanie@lunartuliplab.com?subject=${encodeURIComponent(`[LunarTulip] ${language === "cn" ? column.title : column.titleEn}`)}`}>
-                {language === "cn" ? "交流这一研究方向" : "Discuss this research area"} <span aria-hidden="true">↗</span>
+                {language === "cn" ? "交流这一研究方向" : "Discuss this research area"} <span aria-hidden="true"><ArrowUpRightIcon /></span>
               </a>
             </article>
           ))}
@@ -733,7 +760,7 @@ export default function Home() {
         <p>Build the system behind conviction.</p>
         <a className="contact-email" href="mailto:t.stephanie@lunartuliplab.com">
           <small>{language === "cn" ? "机构合作与研究交流" : "Institutional partnerships & research"}</small>
-          t.stephanie@lunartuliplab.com <span aria-hidden="true">↗</span>
+          t.stephanie@lunartuliplab.com <span aria-hidden="true"><ArrowUpRightIcon /></span>
         </a>
       </section>
 
@@ -743,7 +770,7 @@ export default function Home() {
         <p>© 2026 LUNARTULIP LAB</p>
       </footer>
       <a className={`back-to-top ${hasScrolled ? "is-visible" : ""}`} href="#top" aria-label={language === "cn" ? "返回顶部" : "Back to top"}>
-        <span aria-hidden="true">↑</span>
+        <span aria-hidden="true"><ArrowRightIcon /></span>
       </a>
     </main>
   );
