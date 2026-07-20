@@ -7,7 +7,7 @@ import Link from "next/link";
 type Language = "cn" | "en";
 
 const en: Record<string, string> = {
-  "理念": "Philosophy", "能力地图": "Capabilities", "工作流": "Workflow", "产品": "Solutions", "实践": "Practice", "手札": "Notes", "联系": "Contact", "系统实践": "Systems in Practice", "研究手札": "Research Notes",
+  "理念": "Philosophy", "能力地图": "Capabilities", "工作流": "Workflow", "机构合作": "Institutional", "实践": "Practice", "手札": "Notes", "合作咨询": "Engage", "系统实践": "Systems in Practice", "研究手札": "Research Notes",
   "研究命题引擎": "Thesis Engine", "把直觉转化为可检验、可更新的命题。": "Turn investment intuition into testable, updateable theses.",
   "从研究问题出发，显式化核心假设、反证条件与关键里程碑。保留人的判断，同时让 AI 能够理解研究目标与边界。": "Frame the core hypothesis, disconfirming evidence and critical milestones around a real investment question—preserving human judgment while making its objectives and boundaries legible to AI.",
   "问题 / 直觉 / 市场分歧": "Question / intuition / market disagreement", "结构化命题 / 证伪条件": "Structured thesis / falsification criteria",
@@ -61,10 +61,24 @@ const navigation = [
   { label: "理念", href: "#philosophy" },
   { label: "能力地图", href: "#capabilities" },
   { label: "工作流", href: "#workflow" },
-  { label: "产品", href: "#cases" },
+  { label: "机构合作", href: "#cases" },
   { label: "实践", href: "#practice" },
   { label: "手札", href: "#notes" },
-  { label: "联系", href: "#contact" },
+  { label: "合作咨询", href: "#contact" },
+];
+
+const positioningSignals = [
+  { label: "CURRENT RESEARCH UNIVERSE", cn: "A 股核心验证", en: "A-share core validation" },
+  { label: "CROSS-MARKET MAPPING", cn: "港美产业映射", en: "Hong Kong & U.S. mapping" },
+  { label: "INSTITUTIONAL CONTEXT", cn: "专业机构主动管理", en: "Institutional active management" },
+  { label: "DECISION MODEL", cn: "碳基直觉 × 硅基外骨骼", en: "Human-led × AI-augmented" },
+];
+
+const engagementTopics = [
+  { cn: "机构 Workshop", en: "Institutional Workshop", detailCn: "诊断现有投研流程与 AI 升级起点", detailEn: "Diagnose the current process and AI upgrade path", subject: "Institutional Workshop" },
+  { cn: "泛 AI 科技专题共研", en: "AI-Tech Co-Research", detailCn: "围绕产业链、股票池或命题共同建模", detailEn: "Model a value chain, universe or thesis together", subject: "AI Technology Co-Research" },
+  { cn: "系统咨询与私有化", en: "System Advisory & Private Adaptation", detailCn: "适配数据边界、权限、记录与反馈机制", detailEn: "Adapt data boundaries, permissions, records and feedback", subject: "Decision System Advisory" },
+  { cn: "数据与技术生态合作", en: "Data & Technology Ecosystem", detailCn: "探讨数据、模型、工具与基础设施协作", detailEn: "Explore data, model, tooling and infrastructure partnerships", subject: "Data and Technology Partnership" },
 ];
 
 const practiceCases = [
@@ -263,46 +277,76 @@ const workflowSteps = [
 
 const useCases = [
   {
-    id: "institution",
-    label: "机构投研升级",
-    index: "CASE / 01",
-    title: "投研基础系统",
+    id: "workshop",
+    label: "系统诊断与 Workshop",
+    labelEn: "System Workshop",
+    index: "PATH / 01",
+    title: "投研系统诊断与 Workshop",
+    titleEn: "Research System Diagnostic & Workshop",
     summary:
-      "以标准化 Workshop 为部署方式，覆盖从信息摄入、假设管理和策略逆向工程，到风险闸门、可复用 Skill 与个人 Agent OS 的完整基础链路。",
-    tags: ["STANDARD DELIVERY · 6 SESSIONS", "FULL-STACK FOUNDATION", "PERSONAL AGENT OS"],
-    outputs: ["Schema、Hypothesis Card 与研究生产链路", "Risk Gate、Skill / SOP 与端到端示范", "个人 Agent OS 与 Decision Memory 蓝图"],
+      "从一个真实投研流程出发，诊断信息摄入、假设管理、验证、风险闸门与决策记录，帮助团队形成可落地的 AI-native 升级路线。",
+    summaryEn:
+      "Starting from a live research workflow, diagnose information intake, thesis management, validation, risk gates and decision records to define an actionable AI-native upgrade path.",
+    fit: "适合对象：拥有既有投资框架、正在探索 AI 化的公募、私募、资管团队与专业家族办公室。",
+    fitEn: "Best for: funds, asset managers and professional family offices with an established investment process.",
+    start: "合作起点：围绕一个代表性研究场景完成诊断，并通过 6 个 Session 建立基础系统。",
+    startEn: "Starting point: diagnose one representative research context and establish the foundation through six focused sessions.",
+    tags: ["6 FOCUSED SESSIONS", "RESEARCH FOUNDATION", "AGENT WORKFLOW"],
+    outputs: ["研究生产链路与 Hypothesis Card 结构", "Risk Gate、Skill / SOP 与端到端示范", "Decision Memory 与后续实施路线图"],
+    outputsEn: ["Research production chain and hypothesis-card structure", "Risk gates, skills / SOPs and an end-to-end demonstration", "Decision memory and an implementation roadmap"],
     metric: "HORIZONTAL FOUNDATION",
     center: "RESEARCH OS",
     nodes: ["INFORMATION", "HYPOTHESIS", "SKILL / SOP", "RISK GATE", "MEMORY"],
     logic: "FOUNDATION → REUSE",
+    subject: "Research System Workshop",
   },
   {
     id: "alphamap",
-    label: "产业因果研究",
-    index: "CASE / 02",
-    title: "产业因果研究",
+    label: "泛 AI 科技专题共研",
+    labelEn: "AI-Tech Co-Research",
+    index: "PATH / 02",
+    title: "泛 AI 科技专题共研 / AlphaMap",
+    titleEn: "AI Technology Co-Research / AlphaMap",
     summary:
-      "围绕客户真实行业、股票池与数据边界，通过咨询 Session 建模，并以可本地部署的 AlphaMap 软件承载产业因果链与持续跟踪。",
-    tags: ["ALPHAMAP", "CONSULTING SESSIONS", "LOCAL DEPLOYMENT"],
-    outputs: ["客户场景下的产业因果模型", "驱动—传导—兑现路径与观察节点", "可本地部署的 AlphaMap 工作台"],
+      "围绕具体产业链、授权股票池或研究命题开展共研，把驱动、传导、瓶颈、兑现路径与跟踪节点组织进可持续更新的 AlphaMap。",
+    summaryEn:
+      "Co-research a defined value chain, authorized universe or investment thesis, organizing drivers, transmission, bottlenecks, realization paths and watchpoints into an updateable AlphaMap.",
+    fit: "适合对象：需要打穿泛 AI 科技产业链、建立跨市场映射或验证关键研究命题的机构团队。",
+    fitEn: "Best for: institutions mapping AI technology value chains across markets or validating a critical research thesis.",
+    start: "合作起点：选择一个产业主题或股票池，在双方确认的数据与研究边界内完成首个因果模型。",
+    startEn: "Starting point: select one theme or universe and build the first causal model within agreed data and research boundaries.",
+    tags: ["AI TECHNOLOGY", "CAUSAL RESEARCH", "ALPHAMAP"],
+    outputs: ["机构场景下的产业因果模型", "驱动—传导—兑现路径与观察节点", "可持续维护的 AlphaMap 研究工作台"],
+    outputsEn: ["An institution-specific industry causal model", "Drivers, transmission, realization paths and watchpoints", "An AlphaMap research workspace designed for ongoing updates"],
     metric: "VERTICAL PENETRATION",
     center: "ALPHAMAP",
     nodes: ["DRIVER", "TRANSMISSION", "BOTTLENECK", "REALIZATION", "TRACKING"],
     logic: "CAUSE → SIGNAL",
+    subject: "AI Technology Co-Research / AlphaMap",
   },
   {
     id: "decision",
-    label: "决策系统闭环",
-    index: "CASE / 03",
-    title: "决策系统闭环",
+    label: "决策系统咨询与适配",
+    labelEn: "Decision System Advisory",
+    index: "PATH / 03",
+    title: "AI-native 决策系统咨询与私有化适配",
+    titleEn: "AI-native Decision System Advisory & Private Adaptation",
     summary:
-      "以私有 Harness 连接多个研究场景、人员权限、风险边界与决策记忆，让真实反馈持续写回系统，形成可治理、可演化的组织能力。",
-    tags: ["PRIVATE HARNESS", "GOVERNANCE", "DECISION MEMORY"],
-    outputs: ["跨场景的研究与决策编排", "权限、风险闸门与执行治理", "持续运行的反馈与决策记忆"],
-    metric: "CLOSED-LOOP COMPOUNDING",
+      "在客户数据和权限边界内，适配研究工作流、Agent 编排、风险规则、决策记录与复盘机制，让系统成为团队既有投资流程的可治理外骨骼。",
+    summaryEn:
+      "Within the client’s data and permission boundaries, adapt research workflows, agent orchestration, risk rules, decision records and review mechanisms into a governable extension of the existing investment process.",
+    fit: "适合对象：已有明确场景、内部数据边界与负责人，希望从局部试点走向组织级研究基础设施的机构。",
+    fitEn: "Best for: institutions with a defined use case, internal data boundaries and an accountable owner moving from pilot to organizational infrastructure.",
+    start: "合作起点：先完成受控范围内的场景验证，再共同确认私有化适配、治理与持续维护边界。",
+    startEn: "Starting point: validate a controlled use case before agreeing private adaptation, governance and ongoing maintenance boundaries.",
+    tags: ["PRIVATE ADAPTATION", "GOVERNANCE", "DECISION MEMORY"],
+    outputs: ["跨场景的研究与 Agent 编排", "权限、风险闸门与过程治理", "反馈复盘与 Decision Memory 机制"],
+    outputsEn: ["Cross-context research and agent orchestration", "Permissions, risk gates and process governance", "Feedback review and decision-memory mechanisms"],
+    metric: "INSTITUTIONAL SYSTEM",
     center: "HARNESS",
     nodes: ["RESEARCH", "DECISION", "EXECUTION", "FEEDBACK", "MEMORY"],
     logic: "FEEDBACK → UPDATE",
+    subject: "AI-native Decision System Advisory",
   },
 ];
 
@@ -472,25 +516,33 @@ export default function Home() {
 
       <section className="hero" id="top" aria-labelledby="hero-title">
         <div className="hero-copy">
-          <p className="eyebrow">BUILD THE SYSTEM BEHIND CONVICTION.</p>
+          <p className="eyebrow">CROSS-MARKET PUBLIC EQUITIES · AI TECHNOLOGY</p>
           <h1 id="hero-title">
-            {tx("为主动管理构建")}
-            <br />
-            <span>AI-native</span> {tx("研究与")}
-            <br />
-            {tx("决策系统")}
+            {language === "cn" ? (
+              <>为主动管理构建<br /><span>AI-native</span> 决策增强系统</>
+            ) : (
+              <>Build an <span>AI-native</span><br />decision augmentation system<br />for active management</>
+            )}
           </h1>
           <p className="hero-description">
-            {tx("从研究基础系统、产业因果模型到机构决策闭环，")}
-            <br />
-            {tx("让每一次判断，都成为下一次决策的系统资产。")}
+            {language === "cn" ? (
+              <>
+                <span>聚焦泛 AI 科技产业链的跨市场二级权益研究，当前以 A 股为主要观察与验证场，并持续跟踪港美股产业映射。</span>
+                <span>为公募、私募、资管机构与专业家族办公室连接研究命题、证据追踪、决策记录与反馈复盘。</span>
+              </>
+            ) : (
+              <>
+                <span>Cross-market public-equity research across the AI technology value chain, with A-shares as the current core validation universe and Hong Kong–U.S. industry mapping.</span>
+                <span>Connecting theses, evidence, decision records and feedback for funds, asset managers and professional family offices.</span>
+              </>
+            )}
           </p>
           <div className="hero-actions">
             <a className="primary-action" href="#capabilities">
-              {tx("探索能力地图")} <span aria-hidden="true"><ArrowRightIcon /></span>
+              {language === "cn" ? "了解系统能力" : "Explore the system"} <span aria-hidden="true"><ArrowRightIcon /></span>
             </a>
             <a className="secondary-action" href="#contact">
-              {language === "cn" ? "预约交流" : "Start a conversation"} <span aria-hidden="true"><ArrowUpRightIcon /></span>
+              {language === "cn" ? "洽谈机构合作" : "Discuss a partnership"} <span aria-hidden="true"><ArrowUpRightIcon /></span>
             </a>
           </div>
         </div>
@@ -525,6 +577,15 @@ export default function Home() {
           </div>
           <p className="coordinates">ACTIVE RESEARCH SYSTEM<br />LUNARTULIP LAB · 2026</p>
         </div>
+      </section>
+
+      <section className="positioning-strip" aria-label={language === "cn" ? "市场范围与系统定位" : "Market scope and system positioning"}>
+        {positioningSignals.map((item) => (
+          <div key={item.label}>
+            <small>{item.label}</small>
+            <strong>{language === "cn" ? item.cn : item.en}</strong>
+          </div>
+        ))}
       </section>
 
       <section className="capability-preview" aria-labelledby="capability-preview-title">
@@ -684,13 +745,13 @@ export default function Home() {
       <section className="cases-section page-section" id="cases" aria-labelledby="cases-title">
         <div className="section-heading compact-heading">
           <div>
-            <p className="section-index">PRODUCT LEVELS / 04</p>
-            <h2 id="cases-title">{tx("三种交付深度")}</h2>
+            <p className="section-index">INSTITUTIONAL COLLABORATION / 04</p>
+            <h2 id="cases-title">{language === "cn" ? "机构如何与我们合作" : "How institutions work with us"}</h2>
           </div>
-          <p className="section-lead">{tx("横向建立完整基础，纵向打穿真实场景，最终让系统在机构内部闭环复利。")}</p>
+          <p className="section-lead">{language === "cn" ? "从一个受控场景开始：先诊断与验证，再根据机构的数据、权限和研究边界逐步深化。" : "Start with one controlled context: diagnose and validate first, then deepen the system within institutional data, permission and research boundaries."}</p>
         </div>
 
-        <div className="case-tabs" role="tablist" aria-label={language === "cn" ? "产品层级" : "Solution levels"}>
+        <div className="case-tabs" role="tablist" aria-label={language === "cn" ? "机构合作路径" : "Institutional collaboration paths"}>
           {useCases.map((item) => (
             <button
               type="button"
@@ -700,7 +761,7 @@ export default function Home() {
               onClick={() => setActiveCase(item.id)}
               key={item.id}
             >
-              <span>{item.index.slice(-2)}</span>{tx(item.label)}
+              <span>{item.index.slice(-2)}</span>{language === "cn" ? item.label : item.labelEn}
             </button>
           ))}
         </div>
@@ -708,13 +769,21 @@ export default function Home() {
         <article className="case-detail" role="tabpanel" key={useCase.id}>
           <div className="case-copy">
             <p className="case-index">{useCase.index}</p>
-            <h3>{tx(useCase.title)}</h3>
-            <p className="case-summary">{tx(useCase.summary)}</p>
+            <h3>{language === "cn" ? useCase.title : useCase.titleEn}</h3>
+            <p className="case-summary">{language === "cn" ? useCase.summary : useCase.summaryEn}</p>
+            <dl className="case-context">
+              <div><dt>{language === "cn" ? "适合对象" : "BEST FOR"}</dt><dd>{language === "cn" ? useCase.fit.replace(/^适合对象：/, "") : useCase.fitEn.replace(/^Best for:\s*/i, "")}</dd></div>
+              <div><dt>{language === "cn" ? "合作起点" : "STARTING POINT"}</dt><dd>{language === "cn" ? useCase.start.replace(/^合作起点：/, "") : useCase.startEn.replace(/^Starting point:\s*/i, "")}</dd></div>
+            </dl>
             <div className="case-tags">{useCase.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-            <ul>{useCase.outputs.map((item) => <li key={item}>{tx(item)}</li>)}</ul>
+            <p className="case-output-label">{language === "cn" ? "主要交付物" : "KEY DELIVERABLES"}</p>
+            <ul>{(language === "cn" ? useCase.outputs : useCase.outputsEn).map((item) => <li key={item}>{item}</li>)}</ul>
+            <a className="case-cta" href={`mailto:t.stephanie@lunartuliplab.com?subject=${encodeURIComponent(`[LunarTulip] ${useCase.subject}`)}`}>
+              {language === "cn" ? "介绍您的机构场景" : "Tell us about your context"} <span aria-hidden="true"><ArrowUpRightIcon /></span>
+            </a>
           </div>
           <div className="case-instrument" aria-label={`${useCase.metric} 模块示意`}>
-            <div className="instrument-header"><span>{useCase.metric}</span><small>LIVE MODEL / 01</small></div>
+            <div className="instrument-header"><span>{useCase.metric}</span><small>PROTOTYPE VIEW / 01</small></div>
             <div className="instrument-field">
               <div className="semantic-map" aria-label={`${useCase.center} 系统结构`}>
                 {useCase.nodes.map((node, index) => (
@@ -734,13 +803,39 @@ export default function Home() {
         </article>
       </section>
 
+      <section className="vision-section page-section" aria-labelledby="vision-title">
+        <div className="vision-panel">
+          <div className="vision-copy">
+            <p className="section-index">LONG-TERM DIRECTION / 05</p>
+            <h2 id="vision-title">From Decision Augmentation<br />to an AI-native Buy-side Prototype</h2>
+            <p>
+              {language === "cn"
+                ? "LunarTulip Lab 正在持续构建 AI-native buy-side 的组织与系统原型：以增强净值表现为目标，以人的投资责任与判断为核心，让研究、验证、决策记录、风险约束和反馈学习进入同一套可持续演化的基础设施。"
+                : "LunarTulip Lab is building an organizational and system prototype for an AI-native buy side: designed to strengthen long-term investment outcomes while keeping human accountability and judgment at the center, and bringing research, validation, decision records, risk constraints and feedback learning into one evolving infrastructure."}
+            </p>
+          </div>
+          <div className="vision-boundary">
+            <article>
+              <small>CURRENT / NOW</small>
+              <h3>{language === "cn" ? "当前对外合作" : "Current mandate"}</h3>
+              <p>{language === "cn" ? "聚焦投研系统诊断、技术咨询、专题共研与机构场景下的私有化适配。" : "Research-system diagnostics, technical advisory, thematic co-research and private adaptation for institutional contexts."}</p>
+            </article>
+            <article>
+              <small>FUTURE / COMPLIANCE-LED</small>
+              <h3>{language === "cn" ? "长期资管方向" : "Long-term asset-management direction"}</h3>
+              <p>{language === "cn" ? "未来资管业务将在相应主体、资质与合规框架完备后独立开展；当前官网不设置基金募集、专户或收益承诺入口。" : "Any future asset-management business will operate independently only after the appropriate entity, qualifications and compliance framework are in place. This website offers no fundraising, managed-account or return-promise channel."}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section className="practice-section page-section" id="practice" aria-labelledby="practice-title">
         <div className="section-heading compact-heading">
           <div>
-            <p className="section-index">SYSTEMS IN PRACTICE / 05</p>
+            <p className="section-index">SYSTEMS IN PRACTICE / 06</p>
             <h2 id="practice-title">{language === "cn" ? "系统如何进入真实研究" : "How the system works in practice"}</h2>
           </div>
-          <p className="section-lead">{language === "cn" ? "公开方法与结构，保留客户数据、策略参数和内部决策记忆。" : "Showing the method and structure while protecting client data, strategy parameters and private decision memory."}</p>
+          <p className="section-lead">{language === "cn" ? "以下是泛 AI 科技方向的公开方法示范；系统可在机构授权的股票池、数据与研究边界内适配。" : "Public methodology demonstrations across AI technology; the system can be adapted to an institution’s authorized universe, data and research boundaries."}</p>
         </div>
         <div className="practice-grid">
           {practiceCases.map((item) => (
@@ -764,7 +859,7 @@ export default function Home() {
       <section className="notes-section page-section" id="notes" aria-labelledby="notes-title">
         <div className="section-heading compact-heading">
           <div>
-            <p className="section-index">RESEARCH NOTES / 06</p>
+            <p className="section-index">RESEARCH NOTES / 07</p>
             <h2 id="notes-title">{language === "cn" ? "持续写下正在形成的判断" : "Notes from a research system in motion"}</h2>
           </div>
           <p className="section-lead">{language === "cn" ? "从方法论、决策系统到真实建造过程，构成 LunarTulip 的公开研究档案。" : "A public research archive spanning methodology, decision systems and the work of building them."}</p>
@@ -788,19 +883,36 @@ export default function Home() {
 
       <section className="closing-section" id="contact" aria-labelledby="closing-title">
         <div className="closing-orbit" aria-hidden="true"><span /><i /></div>
-        <p className="section-index">LUNARTULIP LAB / ACTIVE RESEARCH SYSTEMS</p>
-        <h2 id="closing-title">{tx("把研究做成会生长的系统。")}</h2>
-        <p>Build the system behind conviction.</p>
+        <p className="section-index">ENGAGE LUNARTULIP LAB / CHINA & GLOBAL</p>
+        <h2 id="closing-title">{language === "cn" ? "从一个真实问题开始。" : "Start with a real investment question."}</h2>
+        <p>{language === "cn" ? "请介绍您的机构、研究场景与希望解决的问题。" : "Tell us about your institution, research context and the problem you want to solve."}</p>
+        <div className="engagement-grid">
+          {engagementTopics.map((topic, index) => (
+            <a key={topic.subject} href={`mailto:t.stephanie@lunartuliplab.com?subject=${encodeURIComponent(`[LunarTulip] ${topic.subject}`)}`}>
+              <small>0{index + 1}</small>
+              <strong>{language === "cn" ? topic.cn : topic.en}</strong>
+              <span>{language === "cn" ? topic.detailCn : topic.detailEn}</span>
+              <i aria-hidden="true"><ArrowUpRightIcon /></i>
+            </a>
+          ))}
+        </div>
         <a className="contact-email" href="mailto:t.stephanie@lunartuliplab.com">
-          <small>{language === "cn" ? "机构合作与研究交流" : "Institutional partnerships & research"}</small>
+          <small>{language === "cn" ? "海内外机构合作与研究交流" : "China & global institutional partnerships"}</small>
           t.stephanie@lunartuliplab.com <span aria-hidden="true"><ArrowUpRightIcon /></span>
         </a>
       </section>
 
       <footer>
-        <a className="brand footer-brand" href="#top"><BrandMark />LUNARTULIP LAB</a>
-        <p><a href="mailto:t.stephanie@lunartuliplab.com">t.stephanie@lunartuliplab.com</a></p>
-        <p>© 2026 LUNARTULIP LAB</p>
+        <div className="footer-main">
+          <a className="brand footer-brand" href="#top"><BrandMark />LUNARTULIP LAB</a>
+          <p><a href="mailto:t.stephanie@lunartuliplab.com">t.stephanie@lunartuliplab.com</a></p>
+          <p>© 2026 LUNARTULIP LAB</p>
+        </div>
+        <p className="footer-boundary">
+          {language === "cn"
+            ? "官网公开内容用于研究方法与系统能力介绍，不构成投资建议、基金募集、产品推介或收益承诺。"
+            : "Public content describes research methods and system capabilities. It is not investment advice, fundraising, a product solicitation or a promise of returns."}
+        </p>
       </footer>
       <a className={`back-to-top ${hasScrolled ? "is-visible" : ""}`} href="#top" aria-label={language === "cn" ? "返回顶部" : "Back to top"}>
         <span aria-hidden="true"><ArrowRightIcon /></span>
