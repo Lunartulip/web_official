@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 type Language = "cn" | "en";
 
@@ -102,6 +103,7 @@ const noteColumns = [
       "After AI Adoption Becomes Consensus, the Real Divide Begins",
       "The Gap in AI-Native Buy-Side Decision-Making Is Just Beginning",
     ],
+    slugs: ["ai-expands-alpha-radius", "subjective-funds-ai-divide", "buy-side-decision-gap"],
   },
   {
     code: "COLUMN / 02",
@@ -117,6 +119,7 @@ const noteColumns = [
       "The First Divide in AI Buy-Side Decisions: Who Validates the Output?",
       "Why More AI Research Can Make Buy-Side Decisions Harder",
     ],
+    slugs: ["active-management-hypothesis-library", "who-validates-ai-output", "more-ai-research-harder-decisions"],
   },
   {
     code: "COLUMN / 03",
@@ -132,6 +135,7 @@ const noteColumns = [
       "How Bayesian Updating Reshapes Portfolio Management",
       "The Missing Link in Qlib: From Signals to Strategy",
     ],
+    slugs: ["portfolio-managers-implicit-bayesians", "bayesian-portfolio-management", "qlib-signal-to-strategy"],
   },
   {
     code: "COLUMN / 04",
@@ -147,6 +151,7 @@ const noteColumns = [
       "From Information Anxiety to System Freedom: Building My Notion Research Brain",
       "After Claude Code, Quant Funds’ Engineering Moats Are Collapsing",
     ],
+    slugs: ["trading-like-pm-lab-notes", "notion-research-brain", "coding-agents-quant-moat"],
   },
 ];
 
@@ -769,13 +774,16 @@ export default function Home() {
             <article className="notes-column" key={column.code}>
               <p className="card-index">{column.code}</p>
               <h3>{language === "cn" ? column.title : column.titleEn}</h3>
-              <ol>{(language === "cn" ? column.notes : column.notesEn).map((note, index) => <li key={note}><span>0{index + 1}</span><p>{note}</p><i aria-hidden="true">•</i></li>)}</ol>
+              <ol>{(language === "cn" ? column.notes : column.notesEn).map((note, index) => <li key={note}><span>0{index + 1}</span><Link href={`/notes/${column.slugs[index]}`}><p>{note}</p></Link><i aria-hidden="true">↗</i></li>)}</ol>
               <a className="notes-contact" href={`mailto:t.stephanie@lunartuliplab.com?subject=${encodeURIComponent(`[LunarTulip] ${language === "cn" ? column.title : column.titleEn}`)}`}>
                 {language === "cn" ? "交流这一研究方向" : "Discuss this research area"} <span aria-hidden="true"><ArrowUpRightIcon /></span>
               </a>
             </article>
           ))}
         </div>
+        <Link className="notes-archive-link" href="/notes">
+          {language === "cn" ? "查看全部研究手札" : "View all research notes"} <span aria-hidden="true"><ArrowRightIcon /></span>
+        </Link>
       </section>
 
       <section className="closing-section" id="contact" aria-labelledby="closing-title">
