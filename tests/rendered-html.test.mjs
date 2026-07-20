@@ -26,10 +26,10 @@ test("publishes the official contact and canonical domain", () => {
 });
 
 test("states the market scope and institutional audience", () => {
-  assert.match(pageSource, /泛 AI 科技产业链的跨市场二级权益研究/);
-  assert.match(pageSource, /A 股为主要观察与验证场/);
+  assert.match(pageSource, /全球泛 AI 科技产业链的二级权益研究/);
+  assert.match(pageSource, /跨 A 股、美股与港股/);
   assert.match(pageSource, /公募、私募、资管机构与专业家族办公室/);
-  assert.match(pageSource, /Hong Kong–U\.S\. industry mapping/);
+  assert.match(pageSource, /A-shares \/ U\.S\. \/ Hong Kong/);
 });
 
 test("defines three current institutional collaboration paths", () => {

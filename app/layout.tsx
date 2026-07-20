@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     default: "LunarTulip Lab — 泛 AI 科技权益研究与 AI-native 买方决策增强",
     template: "%s | LunarTulip Lab",
   },
-  description: "聚焦泛 AI 科技产业链的跨市场二级权益研究，为公募、私募、资管机构与专业家族办公室提供 AI-native 投研系统诊断、专题共研与买方决策增强咨询。",
+  description: "聚焦全球泛 AI 科技产业链的二级权益研究，跨 A 股、美股与港股追踪技术演进、产业传导与价值兑现，为专业机构提供 AI-native 买方决策增强。",
   keywords: [
     "泛 AI 科技权益研究",
     "跨市场二级权益",
@@ -16,6 +16,8 @@ export const metadata: Metadata = {
     "公募私募资管家办",
     "产业链研究",
     "A股科技股研究",
+    "美股AI科技股研究",
+    "港股科技股研究",
     "AlphaMap",
     "AI-native investment research",
     "buy-side decision augmentation",
@@ -37,7 +39,7 @@ export const metadata: Metadata = {
     url: "/",
     siteName: "LunarTulip Lab",
     title: "LunarTulip Lab — AI-native Decision Augmentation for Public-Equity Investors",
-    description: "Cross-market public-equity research across the AI technology value chain, and AI-native decision systems for funds, asset managers and professional family offices.",
+    description: "Public-equity research across the global AI technology value chain, connecting A-share, U.S. and Hong Kong markets with AI-native decision systems for institutional investors.",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "LunarTulip Lab" }],
   },
   twitter: {

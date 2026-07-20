@@ -68,8 +68,8 @@ const navigation = [
 ];
 
 const positioningSignals = [
-  { label: "CURRENT RESEARCH UNIVERSE", cn: "A 股核心验证", en: "A-share core validation" },
-  { label: "CROSS-MARKET MAPPING", cn: "港美产业映射", en: "Hong Kong & U.S. mapping" },
+  { label: "GLOBAL AI TECHNOLOGY UNIVERSE", cn: "全球泛 AI 科技权益", en: "Global AI technology equities" },
+  { label: "CROSS-MARKET MAPPING", cn: "跨 A 股、美股与港股", en: "A-shares / U.S. / Hong Kong" },
   { label: "INSTITUTIONAL CONTEXT", cn: "专业机构主动管理", en: "Institutional active management" },
   { label: "DECISION MODEL", cn: "碳基直觉 × 硅基外骨骼", en: "Human-led × AI-augmented" },
 ];
@@ -527,12 +527,12 @@ export default function Home() {
           <p className="hero-description">
             {language === "cn" ? (
               <>
-                <span>聚焦泛 AI 科技产业链的跨市场二级权益研究，当前以 A 股为主要观察与验证场，并持续跟踪港美股产业映射。</span>
+                <span>聚焦全球泛 AI 科技产业链的二级权益研究，跨 A 股、美股与港股追踪技术演进、产业传导与价值兑现。</span>
                 <span>为公募、私募、资管机构与专业家族办公室连接研究命题、证据追踪、决策记录与反馈复盘。</span>
               </>
             ) : (
               <>
-                <span>Cross-market public-equity research across the AI technology value chain, with A-shares as the current core validation universe and Hong Kong–U.S. industry mapping.</span>
+                <span>Public-equity research across the global AI technology value chain, connecting A-share, U.S. and Hong Kong markets from technical progress to industry transmission and value realization.</span>
                 <span>Connecting theses, evidence, decision records and feedback for funds, asset managers and professional family offices.</span>
               </>
             )}
