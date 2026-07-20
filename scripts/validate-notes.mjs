@@ -30,7 +30,7 @@ for (const file of files) {
   assert.ok(!seenNotionIds.has(data.notionId), `${file}: duplicate notionId ${data.notionId}`);
   assert.ok(data.summary.length >= 60 && data.summary.length <= 120, `${file}: summary should be 60–120 characters`);
   assert.ok(pageSource.includes(data.slug), `${file}: homepage does not reference this article slug`);
-  assert.doesNotMatch(content, /<empty-block|prod-files-secure|【[^】]*截图】|好，直接给你|已深度思考/, `${file}: contains editorial residue`);
+  assert.doesNotMatch(content, /<empty-block|prod-files-secure|【[^】]*截图】|好，直接给你|已深度思考|占位/, `${file}: contains editorial residue`);
 
   seenSlugs.add(data.slug);
   seenNotionIds.add(data.notionId);
