@@ -299,30 +299,38 @@ const useCases = [
     nodes: ["INFORMATION", "HYPOTHESIS", "SKILL / SOP", "RISK GATE", "MEMORY"],
     logic: "FOUNDATION → REUSE",
     subject: "Research System Workshop",
+    tabCode: "01",
+    ctaCn: "介绍您的机构场景",
+    ctaEn: "Tell us about your context",
   },
   {
     id: "alphamap",
-    label: "泛 AI 科技专题共研",
-    labelEn: "AI-Tech Co-Research",
+    label: "持续共研 / Research Desk",
+    labelEn: "Always-On Co-Research",
     index: "PATH / 02",
-    title: "泛 AI 科技专题共研 / AlphaMap",
-    titleEn: "AI Technology Co-Research / AlphaMap",
+    title: "泛 AI 科技专题共研 × Always-On Research Desk",
+    titleEn: "AI Technology Co-Research × Always-On Research Desk",
     summary:
-      "围绕具体产业链、授权股票池或研究命题开展共研，把驱动、传导、瓶颈、兑现路径与跟踪节点组织进可持续更新的 AlphaMap。",
+      "先以 AlphaMap 围绕产业链、授权股票池或研究命题建立因果框架，再由 Always-On Research Desk 承载事件账本、假设看板、每日简报与决策记忆，让专题共研进入持续运行和结果检验。",
     summaryEn:
-      "Co-research a defined value chain, authorized universe or investment thesis, organizing drivers, transmission, bottlenecks, realization paths and watchpoints into an updateable AlphaMap.",
-    fit: "适合对象：需要打穿泛 AI 科技产业链、建立跨市场映射或验证关键研究命题的机构团队。",
-    fitEn: "Best for: institutions mapping AI technology value chains across markets or validating a critical research thesis.",
-    start: "合作起点：选择一个产业主题或股票池，在双方确认的数据与研究边界内完成首个因果模型。",
-    startEn: "Starting point: select one theme or universe and build the first causal model within agreed data and research boundaries.",
-    tags: ["AI TECHNOLOGY", "CAUSAL RESEARCH", "ALPHAMAP"],
-    outputs: ["机构场景下的产业因果模型", "驱动—传导—兑现路径与观察节点", "可持续维护的 AlphaMap 研究工作台"],
-    outputsEn: ["An institution-specific industry causal model", "Drivers, transmission, realization paths and watchpoints", "An AlphaMap research workspace designed for ongoing updates"],
-    metric: "VERTICAL PENETRATION",
-    center: "ALPHAMAP",
-    nodes: ["DRIVER", "TRANSMISSION", "BOTTLENECK", "REALIZATION", "TRACKING"],
-    logic: "CAUSE → SIGNAL",
-    subject: "AI Technology Co-Research / AlphaMap",
+      "Begin with an AlphaMap causal model for a defined value chain, authorized universe or thesis; then use the Always-On Research Desk to run the event ledger, hypothesis board, daily briefs and decision memory as an ongoing, outcome-tested collaboration.",
+    fit: "适合对象：希望从单次专题研究走向持续共研，并以较低集成成本验证 AI-native 工作方式的机构团队与专业投资人。",
+    fitEn: "Best for: institutional teams and professional investors moving from a one-off thematic project into continuous co-research and validation of an AI-native workflow with limited integration.",
+    start: "合作起点：预约一次产品演示，共同确认首个研究命题、覆盖范围与数据边界后，进入受邀试点。",
+    startEn: "Starting point: request a demo, then jointly define the first research thesis, coverage and data boundaries before beginning an invited pilot.",
+    tags: ["ALPHAMAP", "ALWAYS-ON DESK", "DECISION MEMORY"],
+    outputs: ["产业因果模型与持续跟踪范围", "每日研究简报、事件账本与假设看板", "决策记忆与结果复盘记分"],
+    outputsEn: ["An industry causal model and ongoing tracking scope", "Daily briefs, an event ledger and hypothesis board", "Decision memory with outcome review scorecards"],
+    metric: "ALWAYS-ON CO-RESEARCH",
+    center: "DESK",
+    nodes: ["ALPHAMAP", "EVENT", "HYPOTHESIS", "BRIEF", "MEMORY"],
+    logic: "MAP → LEDGER → BRIEF",
+    subject: "Research Desk Demo Request",
+    tabCode: "02",
+    ctaCn: "预约产品演示 · Request Demo",
+    ctaEn: "Request a demo",
+    boundaryCn: "研究协作与受邀试点，不构成投资建议、基金募集、金融产品推介或收益承诺。",
+    boundaryEn: "Research collaboration and an invited pilot—not investment advice, fundraising, a financial-product solicitation or a promise of returns.",
   },
   {
     id: "decision",
@@ -347,6 +355,9 @@ const useCases = [
     nodes: ["RESEARCH", "DECISION", "EXECUTION", "FEEDBACK", "MEMORY"],
     logic: "FEEDBACK → UPDATE",
     subject: "AI-native Decision System Advisory",
+    tabCode: "03",
+    ctaCn: "介绍您的机构场景",
+    ctaEn: "Tell us about your context",
   },
 ];
 
@@ -748,7 +759,7 @@ export default function Home() {
             <p className="section-index">INSTITUTIONAL COLLABORATION / 04</p>
             <h2 id="cases-title">{language === "cn" ? "机构如何与我们合作" : "How institutions work with us"}</h2>
           </div>
-          <p className="section-lead">{language === "cn" ? "从一个受控场景开始：先诊断与验证，再根据机构的数据、权限和研究边界逐步深化。" : "Start with one controlled context: diagnose and validate first, then deepen the system within institutional data, permission and research boundaries."}</p>
+          <p className="section-lead">{language === "cn" ? "从系统诊断，到持续共研，再到机构私有化适配；每一步都从一个边界清晰的真实场景开始。" : "Move from system diagnosis to always-on co-research and private institutional adaptation—each step beginning with one clearly bounded, real context."}</p>
         </div>
 
         <div className="case-tabs" role="tablist" aria-label={language === "cn" ? "机构合作路径" : "Institutional collaboration paths"}>
@@ -761,7 +772,7 @@ export default function Home() {
               onClick={() => setActiveCase(item.id)}
               key={item.id}
             >
-              <span>{item.index.slice(-2)}</span>{language === "cn" ? item.label : item.labelEn}
+              <span>{item.tabCode}</span>{language === "cn" ? item.label : item.labelEn}
             </button>
           ))}
         </div>
@@ -778,8 +789,11 @@ export default function Home() {
             <div className="case-tags">{useCase.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
             <p className="case-output-label">{language === "cn" ? "主要交付物" : "KEY DELIVERABLES"}</p>
             <ul>{(language === "cn" ? useCase.outputs : useCase.outputsEn).map((item) => <li key={item}>{item}</li>)}</ul>
+            {useCase.boundaryCn && (
+              <p className="case-boundary">{language === "cn" ? useCase.boundaryCn : useCase.boundaryEn}</p>
+            )}
             <a className="case-cta" href={`mailto:t.stephanie@lunartuliplab.com?subject=${encodeURIComponent(`[LunarTulip] ${useCase.subject}`)}`}>
-              {language === "cn" ? "介绍您的机构场景" : "Tell us about your context"} <span aria-hidden="true"><ArrowUpRightIcon /></span>
+              {language === "cn" ? useCase.ctaCn : useCase.ctaEn} <span aria-hidden="true"><ArrowUpRightIcon /></span>
             </a>
           </div>
           <div className="case-instrument" aria-label={`${useCase.metric} 模块示意`}>
@@ -818,7 +832,7 @@ export default function Home() {
             <article>
               <small>CURRENT / NOW</small>
               <h3>{language === "cn" ? "当前对外合作" : "Current mandate"}</h3>
-              <p>{language === "cn" ? "聚焦投研系统诊断、技术咨询、专题共研与机构场景下的私有化适配。" : "Research-system diagnostics, technical advisory, thematic co-research and private adaptation for institutional contexts."}</p>
+              <p>{language === "cn" ? "聚焦投研系统诊断、专题共研、Always-On Research Desk 持续研究协作与机构场景下的私有化适配。" : "Research-system diagnostics, thematic co-research, continuous collaboration through the Always-On Research Desk and private adaptation for institutional contexts."}</p>
             </article>
             <article>
               <small>FUTURE / COMPLIANCE-LED</small>
@@ -910,8 +924,8 @@ export default function Home() {
         </div>
         <p className="footer-boundary">
           {language === "cn"
-            ? "官网公开内容用于研究方法与系统能力介绍，不构成投资建议、基金募集、产品推介或收益承诺。"
-            : "Public content describes research methods and system capabilities. It is not investment advice, fundraising, a product solicitation or a promise of returns."}
+            ? "官网公开内容用于研究方法与系统能力介绍，不构成投资建议、基金募集、金融产品推介或收益承诺。"
+            : "Public content describes research methods and system capabilities. It is not investment advice, fundraising, a financial-product solicitation or a promise of returns."}
         </p>
       </footer>
       <a className={`back-to-top ${hasScrolled ? "is-visible" : ""}`} href="#top" aria-label={language === "cn" ? "返回顶部" : "Back to top"}>
