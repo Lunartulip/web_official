@@ -61,7 +61,9 @@ export default function DeskPreview() {
 
   useEffect(() => {
     const saved = window.localStorage.getItem("lunartulip-language");
-    if (saved === "cn" || saved === "en") setLanguage(saved);
+    if (saved !== "cn" && saved !== "en") return;
+    const restoreLanguage = window.setTimeout(() => setLanguage(saved), 0);
+    return () => window.clearTimeout(restoreLanguage);
   }, []);
 
   const selectLanguage = (next: Language) => {
