@@ -56,7 +56,7 @@ test("integrates Research Desk into the second of three institutional paths", ()
   assert.match(pageSource, /研究协作与受邀试点，不构成投资建议/);
 });
 
-test("publishes a bilingual and compliant Research Desk preview", () => {
+test("publishes a bilingual and compliant Research Desk preview", async () => {
   assert.match(deskPageSource, /canonical: "\/desk"/);
   assert.match(deskPreviewSource, /Always-On Research Desk/);
   assert.match(deskPreviewSource, /Change Ledger|CHANGE LEDGER/);
@@ -68,6 +68,11 @@ test("publishes a bilingual and compliant Research Desk preview", () => {
   assert.match(deskPreviewSource, /不构成投资建议、基金募集、金融产品推介或收益承诺/);
   assert.doesNotMatch(deskPreviewSource, /命中率|目标价|实盘业绩|paper portfolio/i);
   assert.match(sitemapSource, /lunartuliplab\.com\/desk/);
+  for (const screenshot of ["shot-today.webp", "shot-hypotheses.webp", "shot-ledger.webp"]) {
+    const file = await stat(new URL(`../public/desk/${screenshot}`, import.meta.url));
+    assert.ok(file.size > 50_000);
+    assert.match(deskPreviewSource, new RegExp(screenshot.replace(".", "\\.")));
+  }
 });
 
 test("separates the current mandate from the long-term buy-side vision", () => {

@@ -177,30 +177,19 @@ export default function DeskPreview() {
           <div className={styles.shellTabs}>
             <span className={styles.shellActive}>TODAY</span><span>HYPOTHESES</span><span>CHANGE LEDGER</span>
           </div>
-          <div className={styles.shellGrid}>
-            <article className={styles.briefPanel}>
-              <p>01 / TODAY</p>
-              <h3>{isCn ? "每日研究简报" : "Daily research brief"}</h3>
-              <div className={styles.briefBlock}><small>WHAT CHANGED</small><strong>{isCn ? "关键变化被压缩为三条可验证更新" : "Material changes compressed into three testable updates"}</strong></div>
-              <div className={styles.briefBlock}><small>WHAT IT MEANS</small><strong>{isCn ? "分别连接至需求、瓶颈与兑现路径" : "Linked to demand, bottlenecks and realization paths"}</strong></div>
-              <div className={styles.briefBlock}><small>WHAT TO TEST NEXT</small><strong>{isCn ? "下一组数据与反证条件已进入队列" : "Next data checks and falsifiers queued"}</strong></div>
-            </article>
-            <article className={styles.hypothesisPanel}>
-              <p>02 / HYPOTHESIS BOARD</p>
-              <h3>{isCn ? "有生命周期的研究命题" : "Theses with a lifecycle"}</h3>
-              {[
-                ["CORE / 01", isCn ? "基础设施约束的传导强度" : "Transmission strength of infrastructure constraints", "STRENGTHENING"],
-                ["CORE / 02", isCn ? "需求兑现的时间窗口" : "Demand realization window", "TESTING"],
-                ["RISK / 01", isCn ? "替代路径的边际变化" : "Marginal shift in substitution paths", "WATCH"],
-              ].map((row) => <div className={styles.thesisRow} key={row[0]}><small>{row[0]}</small><strong>{row[1]}</strong><i>{row[2]}</i></div>)}
-            </article>
-            <article className={styles.ledgerPanel}>
-              <p>03 / CHANGE LEDGER</p>
-              <h3>{isCn ? "可回溯的证据变化" : "Traceable evidence changes"}</h3>
-              {[["07:20", "SOURCE → CLAIM", "+ THESIS 01"], ["09:45", "EVENT → CAUSE", "~ THESIS 02"], ["14:10", "DATA → CHECK", "? RISK 01"]].map((row) => (
-                <div className={styles.ledgerRow} key={row[0]}><time>{row[0]}</time><span /><strong>{row[1]}</strong><i>{row[2]}</i></div>
-              ))}
-            </article>
+          <div className={styles.screenshotGrid}>
+            <figure className={styles.screenshotPrimary}>
+              <Image src="/desk/shot-today.webp" width={1600} height={1001} alt={isCn ? "Research Desk Today 今日研究优先级脱敏界面" : "Sanitized Research Desk Today interface"} />
+              <figcaption><div><small>01 / TODAY</small><strong>{isCn ? "今日研究优先级" : "Today’s research priorities"}</strong></div><span>{isCn ? "把一天的变化折叠成研究优先级、信念更新与下一组验证动作。" : "Compress daily change into research priorities, belief updates and the next validation actions."}</span></figcaption>
+            </figure>
+            <figure>
+              <Image src="/desk/shot-hypotheses.webp" width={1600} height={1001} alt={isCn ? "Research Desk Hypotheses 假设看板脱敏界面" : "Sanitized Research Desk Hypotheses interface"} />
+              <figcaption><div><small>02 / HYPOTHESES</small><strong>{isCn ? "假设生命周期看板" : "Hypothesis lifecycle board"}</strong></div><span>{isCn ? "强化、削弱、反转与待验证节点全程留痕。" : "Track strengthening, weakening, reversal and pending validation points."}</span></figcaption>
+            </figure>
+            <figure>
+              <Image src="/desk/shot-ledger.webp" width={1600} height={1001} alt={isCn ? "Research Desk Change Ledger 事件账本脱敏界面" : "Sanitized Research Desk Change Ledger interface"} />
+              <figcaption><div><small>03 / CHANGE LEDGER</small><strong>{isCn ? "可回溯事件账本" : "Traceable event ledger"}</strong></div><span>{isCn ? "每条变化连接到对应假设、证据与后续动作。" : "Connect each change to its thesis, evidence and next action."}</span></figcaption>
+            </figure>
           </div>
           <div className={styles.shellFoot}><span>SANITIZED DEMONSTRATION</span><span>NO LIVE PORTFOLIO DATA</span><span>EVIDENCE TRACE ENABLED</span></div>
         </div>

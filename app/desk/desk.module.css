@@ -132,6 +132,15 @@
 .shellTabs span { height: 72px; display: flex; align-items: center; position: relative; }
 .shellTabs span.shellActive { color: #c1d5de; }
 .shellTabs span.shellActive::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: #7fa0b0; }
+.screenshotGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #35414a; }
+.screenshotGrid figure { margin: 0; min-width: 0; background: #111920; }
+.screenshotGrid figure.screenshotPrimary { grid-column: 1 / -1; }
+.screenshotGrid img { width: 100%; height: auto; display: block; border-bottom: 1px solid #35414a; }
+.screenshotGrid figcaption { min-height: 98px; padding: 19px 22px; display: grid; grid-template-columns: minmax(180px,.65fr) 1fr; gap: 28px; align-items: center; }
+.screenshotGrid figcaption div { display: flex; flex-direction: column; gap: 10px; }
+.screenshotGrid figcaption small { color: #657781; font: 7px/1 var(--mono); }
+.screenshotGrid figcaption strong { color: #d5dde0; font-size: 12px; font-weight: 600; }
+.screenshotGrid figcaption > span { color: #829099; font-size: 10px; line-height: 1.7; text-align: right; }
 .shellGrid { display: grid; grid-template-columns: 1.05fr 1fr .85fr; }
 .shellGrid > article { min-height: 460px; padding: 34px 30px; border-right: 1px solid #35414a; }
 .shellGrid > article:last-child { border-right: 0; }
@@ -237,8 +246,12 @@
   .valueGrid article { min-height: 280px; }
   .valueGrid h3 { margin-top: 54px; }
   .workspace { padding: 90px 18px; }
-  .productShell { margin-top: 45px; overflow-x: auto; }
-  .shellBar, .shellTabs, .shellGrid, .shellFoot { min-width: 720px; }
+  .productShell { margin-top: 45px; }
+  .shellTabs { gap: 22px; overflow-x: auto; }
+  .screenshotGrid { grid-template-columns: 1fr; }
+  .screenshotGrid figure.screenshotPrimary { grid-column: auto; }
+  .screenshotGrid figcaption { min-height: 0; padding: 18px; grid-template-columns: 1fr; gap: 13px; }
+  .screenshotGrid figcaption > span { text-align: left; }
   .shellGrid { grid-template-columns: 1fr 1fr 1fr; }
   .shellGrid > article, .shellGrid > article:last-child { min-height: 440px; grid-column: auto; border-top: 0; border-right: 1px solid #35414a; }
   .loop { grid-template-columns: 1fr; gap: 48px; }
