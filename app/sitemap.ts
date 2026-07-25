@@ -17,6 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    {
+      url: "https://lunartuliplab.com/desk",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
     ...notes.map((note) => ({
       url: `https://lunartuliplab.com/notes/${note.slug}`,
       lastModified: new Date(`${note.publishedAt}T00:00:00+08:00`),

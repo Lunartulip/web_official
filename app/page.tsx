@@ -302,6 +302,7 @@ const useCases = [
     tabCode: "01",
     ctaCn: "介绍您的机构场景",
     ctaEn: "Tell us about your context",
+    ctaHref: "",
   },
   {
     id: "alphamap",
@@ -327,8 +328,9 @@ const useCases = [
     logic: "MAP → LEDGER → BRIEF",
     subject: "Research Desk Demo Request",
     tabCode: "02",
-    ctaCn: "预约产品演示 · Request Demo",
-    ctaEn: "Request a demo",
+    ctaCn: "查看产品演示 · View Demo",
+    ctaEn: "View product demo",
+    ctaHref: "/desk",
     boundaryCn: "研究协作与受邀试点，不构成投资建议、基金募集、金融产品推介或收益承诺。",
     boundaryEn: "Research collaboration and an invited pilot—not investment advice, fundraising, a financial-product solicitation or a promise of returns.",
   },
@@ -358,6 +360,7 @@ const useCases = [
     tabCode: "03",
     ctaCn: "介绍您的机构场景",
     ctaEn: "Tell us about your context",
+    ctaHref: "",
   },
 ];
 
@@ -792,9 +795,15 @@ export default function Home() {
             {useCase.boundaryCn && (
               <p className="case-boundary">{language === "cn" ? useCase.boundaryCn : useCase.boundaryEn}</p>
             )}
-            <a className="case-cta" href={`mailto:t.stephanie@lunartuliplab.com?subject=${encodeURIComponent(`[LunarTulip] ${useCase.subject}`)}`}>
-              {language === "cn" ? useCase.ctaCn : useCase.ctaEn} <span aria-hidden="true"><ArrowUpRightIcon /></span>
-            </a>
+            {useCase.ctaHref ? (
+              <Link className="case-cta case-cta-primary" href={useCase.ctaHref}>
+                {language === "cn" ? useCase.ctaCn : useCase.ctaEn} <span aria-hidden="true"><ArrowUpRightIcon /></span>
+              </Link>
+            ) : (
+              <a className="case-cta" href={`mailto:t.stephanie@lunartuliplab.com?subject=${encodeURIComponent(`[LunarTulip] ${useCase.subject}`)}`}>
+                {language === "cn" ? useCase.ctaCn : useCase.ctaEn} <span aria-hidden="true"><ArrowUpRightIcon /></span>
+              </a>
+            )}
           </div>
           <div className="case-instrument" aria-label={`${useCase.metric} 模块示意`}>
             <div className="instrument-header"><span>{useCase.metric}</span><small>PROTOTYPE VIEW / 01</small></div>

@@ -4,6 +4,8 @@ import test from "node:test";
 
 const pageSource = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
 const layoutSource = await readFile(new URL("../app/layout.tsx", import.meta.url), "utf8");
+const deskPageSource = await readFile(new URL("../app/desk/page.tsx", import.meta.url), "utf8");
+const deskPreviewSource = await readFile(new URL("../app/desk/desk-preview.tsx", import.meta.url), "utf8");
 const notePageSource = await readFile(new URL("../app/notes/[slug]/page.tsx", import.meta.url), "utf8");
 const sitemapSource = await readFile(new URL("../app/sitemap.ts", import.meta.url), "utf8");
 
@@ -49,8 +51,23 @@ test("integrates Research Desk into the second of three institutional paths", ()
   assert.doesNotMatch(pageSource, /index: "PATH \/ 04"/);
   assert.doesNotMatch(pageSource, /id: "desk"|PRODUCT \/ L2|tabCode: "L2"|订阅方式|by subscription/);
   assert.match(pageSource, /Research Desk Demo Request/);
-  assert.match(pageSource, /预约产品演示 · Request Demo/);
+  assert.match(pageSource, /查看产品演示 · View Demo/);
+  assert.match(pageSource, /ctaHref: "\/desk"/);
   assert.match(pageSource, /研究协作与受邀试点，不构成投资建议/);
+});
+
+test("publishes a bilingual and compliant Research Desk preview", () => {
+  assert.match(deskPageSource, /canonical: "\/desk"/);
+  assert.match(deskPreviewSource, /Always-On Research Desk/);
+  assert.match(deskPreviewSource, /Change Ledger|CHANGE LEDGER/);
+  assert.match(deskPreviewSource, /Hypothesis Board|HYPOTHESIS BOARD/);
+  assert.match(deskPreviewSource, /Decision Memory|DECISION MEMORY/);
+  assert.match(deskPreviewSource, /Research Desk Demo Request/);
+  assert.match(deskPreviewSource, /lunartulip-language/);
+  assert.match(deskPreviewSource, /脱敏演示数据/);
+  assert.match(deskPreviewSource, /不构成投资建议、基金募集、金融产品推介或收益承诺/);
+  assert.doesNotMatch(deskPreviewSource, /命中率|目标价|实盘业绩|paper portfolio/i);
+  assert.match(sitemapSource, /lunartuliplab\.com\/desk/);
 });
 
 test("separates the current mandate from the long-term buy-side vision", () => {
