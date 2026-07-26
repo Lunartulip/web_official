@@ -892,6 +892,12 @@ main {
 .workflow-next b { grid-column: auto; grid-row: auto; color: var(--blue); }
 
 .cases-section { padding-top: var(--section-space); }
+.case-heading-aside { justify-self: end; display: flex; flex-direction: column; align-items: flex-start; }
+.case-heading-aside .section-lead { justify-self: auto; margin-bottom: 20px; }
+.case-heading-aside > a { display: inline-flex; align-items: center; gap: 11px; color: #456474; font: 9px/1.4 var(--mono); letter-spacing: .045em; text-transform: uppercase; }
+.case-heading-aside > a span { width: 29px; height: 29px; display: grid; place-items: center; border: 1px solid var(--line-strong); border-radius: 50%; transition: color .2s ease, background .2s ease, transform .2s ease; }
+.case-heading-aside > a .ui-icon { width: 13px; height: 13px; }
+.case-heading-aside > a:hover span { color: white; background: #5f7e8f; transform: translate(2px,-2px); }
 
 .case-tabs { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line-strong); border-bottom: 0; border-radius: 10px 10px 0 0; overflow: hidden; }
 .case-tabs button {
@@ -1474,6 +1480,7 @@ footer a:focus-visible { outline-color: var(--blue-bright); outline-offset: 2px;
   .workflow-copy { padding: 36px 26px; border-right: 0; border-bottom: 1px solid var(--line-strong); }
   .workflow-io { padding: 32px 26px; }
   .cases-section { padding-top: 96px; }
+  .case-heading-aside { justify-self: start; }
   .case-tabs { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; }
   .case-tabs button { flex: 0 0 210px; min-height: 70px; padding: 0 18px; }
   .case-tabs button { scroll-snap-align: start; }

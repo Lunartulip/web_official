@@ -53,6 +53,7 @@ test("integrates Research Desk into the second of three institutional paths", ()
   assert.match(pageSource, /Research Desk Demo Request/);
   assert.match(pageSource, /查看产品演示 · View Demo/);
   assert.match(pageSource, /ctaHref: "\/desk"/);
+  assert.match(pageSource, /Explore the Always-On Research Desk/);
   assert.match(pageSource, /研究协作与受邀试点，不构成投资建议/);
 });
 

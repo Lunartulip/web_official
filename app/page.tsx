@@ -762,7 +762,12 @@ export default function Home() {
             <p className="section-index">INSTITUTIONAL COLLABORATION / 04</p>
             <h2 id="cases-title">{language === "cn" ? "机构如何与我们合作" : "How institutions work with us"}</h2>
           </div>
-          <p className="section-lead">{language === "cn" ? "从系统诊断，到持续共研，再到机构私有化适配；每一步都从一个边界清晰的真实场景开始。" : "Move from system diagnosis to always-on co-research and private institutional adaptation—each step beginning with one clearly bounded, real context."}</p>
+          <div className="case-heading-aside">
+            <p className="section-lead">{language === "cn" ? "从系统诊断，到持续共研，再到机构私有化适配；每一步都从一个边界清晰的真实场景开始。" : "Move from system diagnosis to always-on co-research and private institutional adaptation—each step beginning with one clearly bounded, real context."}</p>
+            <Link href="/desk">
+              {language === "cn" ? "查看 Always-On Research Desk" : "Explore the Always-On Research Desk"} <span aria-hidden="true"><ArrowUpRightIcon /></span>
+            </Link>
+          </div>
         </div>
 
         <div className="case-tabs" role="tablist" aria-label={language === "cn" ? "机构合作路径" : "Institutional collaboration paths"}>
