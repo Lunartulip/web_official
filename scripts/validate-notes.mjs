@@ -11,7 +11,7 @@ const seenSlugs = new Set();
 const seenNotionIds = new Set();
 const requiredFields = ["title", "summary", "publishedAt", "category", "slug", "notionId", "sourceChannel", "sourceTitle"];
 
-assert.equal(files.length, 12, "The first research-notes release must contain 12 articles");
+assert.equal(files.length, 13, "The research-notes archive must contain 13 articles");
 
 for (const file of files) {
   const source = await readFile(path.join(notesDirectory, file), "utf8");

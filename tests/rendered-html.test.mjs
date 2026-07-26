@@ -7,6 +7,7 @@ const layoutSource = await readFile(new URL("../app/layout.tsx", import.meta.url
 const deskPageSource = await readFile(new URL("../app/desk/page.tsx", import.meta.url), "utf8");
 const deskPreviewSource = await readFile(new URL("../app/desk/desk-preview.tsx", import.meta.url), "utf8");
 const notePageSource = await readFile(new URL("../app/notes/[slug]/page.tsx", import.meta.url), "utf8");
+const selfDrivingNoteSource = await readFile(new URL("../content/notes/self-driving-portfolio-ai-investing.md", import.meta.url), "utf8");
 const sitemapSource = await readFile(new URL("../app/sitemap.ts", import.meta.url), "utf8");
 
 test("defines every public navigation section", () => {
@@ -99,13 +100,23 @@ test("ships the LunarTulip brand artwork", async () => {
   assert.ok(favicon.size > 100);
 });
 
-test("publishes the first twelve research notes from the homepage", async () => {
+test("publishes all thirteen research notes from the homepage", async () => {
   const noteFiles = (await readdir(new URL("../content/notes/", import.meta.url))).filter((file) => file.endsWith(".md"));
-  assert.equal(noteFiles.length, 12);
+  assert.equal(noteFiles.length, 13);
   for (const file of noteFiles) {
     const slug = file.replace(/\.md$/, "");
     assert.match(pageSource, new RegExp(slug));
   }
+});
+
+test("publishes the Self-Driving Portfolio note with explicit long-term vision", () => {
+  assert.match(selfDrivingNoteSource, /Self-Driving Portfolio：AI 投研的真正终点/);
+  assert.match(selfDrivingNoteSource, /AI-native Fund 的长期组织形态/);
+  assert.match(selfDrivingNoteSource, /未来的资管业务会在匹配的主体、资质和合规框架中展开/);
+  assert.match(selfDrivingNoteSource, /Sharpe ratio 为 0\.39，60\/40 基准为 0\.41/);
+  assert.match(selfDrivingNoteSource, /https:\/\/arxiv\.org\/abs\/2604\.02279/);
+  assert.doesNotMatch(selfDrivingNoteSource, /不是|而是|并非|不再|却|只不过|不只|而非/);
+  assert.doesNotMatch(selfDrivingNoteSource, /<empty-block|<br>|Lunartuliup/);
 });
 
 test("adds article metadata, structured data and research disclaimer", () => {

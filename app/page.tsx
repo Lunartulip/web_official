@@ -124,16 +124,18 @@ const noteColumns = [
     title: "买方决策系统",
     titleEn: "Decision Systems",
     notes: [
+      "Self-Driving Portfolio：AI 投研的真正终点",
       "如果量化基金有因子库，主动管理也该有假设库",
       "AI 买方决策的第一道分水岭：谁来验收",
       "AI 投研越多，为什么买方决策反而更难？",
     ],
     notesEn: [
+      "Self-Driving Portfolio: The Real Destination of AI Investing",
       "If Quant Funds Have Factor Libraries, Active Managers Need Thesis Libraries",
       "The First Divide in AI Buy-Side Decisions: Who Validates the Output?",
       "Why More AI Research Can Make Buy-Side Decisions Harder",
     ],
-    slugs: ["active-management-hypothesis-library", "who-validates-ai-output", "more-ai-research-harder-decisions"],
+    slugs: ["self-driving-portfolio-ai-investing", "active-management-hypothesis-library", "who-validates-ai-output", "more-ai-research-harder-decisions"],
   },
   {
     code: "COLUMN / 03",
