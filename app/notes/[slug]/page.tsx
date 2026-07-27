@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { institutionalMailto } from "../../../lib/contact";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -132,7 +133,7 @@ export default async function NotePage({ params }: NotePageProps) {
 
       <footer className="research-footer">
         <Link className="brand footer-brand" href="/">LUNARTULIP LAB</Link>
-        <a href="mailto:t.stephanie@lunartuliplab.com">t.stephanie@lunartuliplab.com</a>
+        <a href={institutionalMailto({ source: "NOTE_DETAIL", topic: note.title })}>t.stephanie@lunartuliplab.com</a>
         <p>© 2026 LUNARTULIP LAB</p>
       </footer>
     </main>

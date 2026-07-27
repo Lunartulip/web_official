@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { institutionalMailto } from "../lib/contact";
 
 type Language = "cn" | "en";
 
@@ -807,7 +808,7 @@ export default function Home() {
                 {language === "cn" ? useCase.ctaCn : useCase.ctaEn} <span aria-hidden="true"><ArrowUpRightIcon /></span>
               </Link>
             ) : (
-              <a className="case-cta" href={`mailto:t.stephanie@lunartuliplab.com?subject=${encodeURIComponent(`[LunarTulip] ${useCase.subject}`)}`}>
+              <a className="case-cta" href={institutionalMailto({ source: "HOME_CASE", topic: useCase.subject, language })}>
                 {language === "cn" ? useCase.ctaCn : useCase.ctaEn} <span aria-hidden="true"><ArrowUpRightIcon /></span>
               </a>
             )}
@@ -900,7 +901,7 @@ export default function Home() {
               <p className="card-index">{column.code}</p>
               <h3>{language === "cn" ? column.title : column.titleEn}</h3>
               <ol>{(language === "cn" ? column.notes : column.notesEn).map((note, index) => <li key={note}><span>0{index + 1}</span><Link href={`/notes/${column.slugs[index]}`}><p>{note}</p></Link><i aria-hidden="true">↗</i></li>)}</ol>
-              <a className="notes-contact" href={`mailto:t.stephanie@lunartuliplab.com?subject=${encodeURIComponent(`[LunarTulip] ${language === "cn" ? column.title : column.titleEn}`)}`}>
+              <a className="notes-contact" href={institutionalMailto({ source: "HOME_NOTE_COLUMN", topic: language === "cn" ? column.title : column.titleEn, language })}>
                 {language === "cn" ? "交流这一研究方向" : "Discuss this research area"} <span aria-hidden="true"><ArrowUpRightIcon /></span>
               </a>
             </article>
@@ -918,7 +919,7 @@ export default function Home() {
         <p>{language === "cn" ? "请介绍您的机构、研究场景与希望解决的问题。" : "Tell us about your institution, research context and the problem you want to solve."}</p>
         <div className="engagement-grid">
           {engagementTopics.map((topic, index) => (
-            <a key={topic.subject} href={`mailto:t.stephanie@lunartuliplab.com?subject=${encodeURIComponent(`[LunarTulip] ${topic.subject}`)}`}>
+            <a key={topic.subject} href={institutionalMailto({ source: "HOME_ENGAGEMENT", topic: topic.subject, language })}>
               <small>0{index + 1}</small>
               <strong>{language === "cn" ? topic.cn : topic.en}</strong>
               <span>{language === "cn" ? topic.detailCn : topic.detailEn}</span>
@@ -926,7 +927,7 @@ export default function Home() {
             </a>
           ))}
         </div>
-        <a className="contact-email" href="mailto:t.stephanie@lunartuliplab.com">
+        <a className="contact-email" href={institutionalMailto({ source: "HOME_CONTACT", topic: language === "cn" ? "机构合作咨询" : "Institutional Inquiry", language })}>
           <small>{language === "cn" ? "海内外机构合作与研究交流" : "China & global institutional partnerships"}</small>
           t.stephanie@lunartuliplab.com <span aria-hidden="true"><ArrowUpRightIcon /></span>
         </a>
@@ -935,7 +936,7 @@ export default function Home() {
       <footer>
         <div className="footer-main">
           <a className="brand footer-brand" href="#top"><BrandMark />LUNARTULIP LAB</a>
-          <p><a href="mailto:t.stephanie@lunartuliplab.com">t.stephanie@lunartuliplab.com</a></p>
+          <p><a href={institutionalMailto({ source: "HOME_FOOTER", topic: language === "cn" ? "官网联系" : "Website Contact", language })}>t.stephanie@lunartuliplab.com</a></p>
           <p>© 2026 LUNARTULIP LAB</p>
         </div>
         <p className="footer-boundary">
