@@ -936,7 +936,13 @@ export default function Home() {
       <footer>
         <div className="footer-main">
           <a className="brand footer-brand" href="#top"><BrandMark />LUNARTULIP LAB</a>
-          <p><a href={institutionalMailto({ source: "HOME_FOOTER", topic: language === "cn" ? "官网联系" : "Website Contact", language })}>t.stephanie@lunartuliplab.com</a></p>
+          <div className="footer-contact">
+            <p><a href={institutionalMailto({ source: "HOME_FOOTER", topic: language === "cn" ? "官网联系" : "Website Contact", language })}>t.stephanie@lunartuliplab.com</a></p>
+            <p className="footer-social">
+              <span>{language === "cn" ? "微信公众号" : "WeChat Official Account"}：Lunartulip Lab</span>
+              <span>{language === "cn" ? "小红书" : "Xiaohongshu"}：Lunartulip Lab</span>
+            </p>
+          </div>
           <p>© 2026 LUNARTULIP LAB</p>
         </div>
         <p className="footer-boundary">

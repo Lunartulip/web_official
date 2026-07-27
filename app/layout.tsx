@@ -4,8 +4,8 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://lunartuliplab.com"),
   title: {
-    default: "LunarTulip Lab — 泛 AI 科技权益研究与 AI-native 买方决策增强",
-    template: "%s | LunarTulip Lab",
+    default: "Lunartulip Lab — 泛 AI 科技权益研究与 AI-native 买方决策增强",
+    template: "%s | Lunartulip Lab",
   },
   description: "聚焦全球泛 AI 科技产业链的二级权益研究，为专业机构提供 AI-native 买方决策增强、Always-On Research Desk 持续研究协作与私有化适配。",
   keywords: [
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     "active management",
     "investment research systems",
   ],
-  authors: [{ name: "LunarTulip Lab", url: "/" }],
-  creator: "LunarTulip Lab",
-  publisher: "LunarTulip Lab",
+  authors: [{ name: "Lunartulip Lab", url: "/" }],
+  creator: "Lunartulip Lab",
+  publisher: "Lunartulip Lab",
   category: "Technology",
   alternates: {
     canonical: "/",
@@ -41,14 +41,14 @@ export const metadata: Metadata = {
     locale: "zh_CN",
     alternateLocale: "en_US",
     url: "/",
-    siteName: "LunarTulip Lab",
-    title: "LunarTulip Lab — AI-native Decision Augmentation for Public-Equity Investors",
+    siteName: "Lunartulip Lab",
+    title: "Lunartulip Lab — AI-native Decision Augmentation for Public-Equity Investors",
     description: "AI-native decision systems and continuous institutional collaboration through the Always-On Research Desk across the global AI technology value chain.",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "LunarTulip Lab" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Lunartulip Lab" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "LunarTulip Lab — AI-native Buy-side Decision Augmentation",
+    title: "Lunartulip Lab — AI-native Buy-side Decision Augmentation",
     description: "AI technology public-equity research and institutional decision systems.",
     images: ["/opengraph-image"],
   },
@@ -62,30 +62,52 @@ export const metadata: Metadata = {
   },
 };
 
-const organizationSchema = {
+const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "LunarTulip Lab",
-  url: "https://lunartuliplab.com",
-  logo: "https://lunartuliplab.com/lunartulip-silver-emblem.png",
-  email: "t.stephanie@lunartuliplab.com",
-  description: "Cross-market public-equity research across the AI technology value chain and AI-native decision augmentation for institutional active management.",
-  knowsAbout: [
-    "AI technology public equities",
-    "institutional investment research systems",
-    "buy-side decision augmentation",
-    "continuous research collaboration",
-    "Always-On Research Desk",
-    "industry causal research",
-    "active management",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://lunartuliplab.com/#organization",
+      name: "Lunartulip Lab",
+      alternateName: ["LunarTulip Lab", "Lunar Tulip Lab"],
+      url: "https://lunartuliplab.com/",
+      logo: {
+        "@type": "ImageObject",
+        "@id": "https://lunartuliplab.com/#logo",
+        url: "https://lunartuliplab.com/lunartulip-silver-emblem.png",
+      },
+      email: "t.stephanie@lunartuliplab.com",
+      description: "Cross-market public-equity research across the AI technology value chain and AI-native decision augmentation for institutional active management.",
+      knowsAbout: [
+        "AI technology public equities",
+        "institutional investment research systems",
+        "buy-side decision augmentation",
+        "continuous research collaboration",
+        "Always-On Research Desk",
+        "industry causal research",
+        "active management",
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "institutional partnerships",
+        email: "t.stephanie@lunartuliplab.com",
+        availableLanguage: ["Chinese", "English"],
+      },
+      sameAs: ["https://github.com/Lunartulip"],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lunartuliplab.com/#website",
+      url: "https://lunartuliplab.com/",
+      name: "Lunartulip Lab",
+      alternateName: ["LunarTulip Lab", "Lunar Tulip Lab"],
+      description: "Official website and public research archive of Lunartulip Lab.",
+      publisher: {
+        "@id": "https://lunartuliplab.com/#organization",
+      },
+      inLanguage: ["zh-CN", "en"],
+    },
   ],
-  contactPoint: {
-    "@type": "ContactPoint",
-    contactType: "institutional partnerships",
-    email: "t.stephanie@lunartuliplab.com",
-    availableLanguage: ["Chinese", "English"],
-  },
-  sameAs: ["https://github.com/Lunartulip"],
 };
 
 export default function RootLayout({
@@ -99,7 +121,7 @@ export default function RootLayout({
         {children}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </body>
     </html>

@@ -9,6 +9,7 @@ const deskPreviewSource = await readFile(new URL("../app/desk/desk-preview.tsx",
 const notePageSource = await readFile(new URL("../app/notes/[slug]/page.tsx", import.meta.url), "utf8");
 const selfDrivingNoteSource = await readFile(new URL("../content/notes/self-driving-portfolio-ai-investing.md", import.meta.url), "utf8");
 const sitemapSource = await readFile(new URL("../app/sitemap.ts", import.meta.url), "utf8");
+const contactSource = await readFile(new URL("../lib/contact.ts", import.meta.url), "utf8");
 
 test("defines every public navigation section", () => {
   for (const id of ["top", "philosophy", "capabilities", "workflow", "cases", "practice", "notes", "contact"]) {
@@ -23,7 +24,12 @@ test("keeps language selection persistent and accessible", () => {
 });
 
 test("publishes the official contact and canonical domain", () => {
-  assert.match(pageSource, /mailto:t\.stephanie@lunartuliplab\.com/);
+  assert.match(pageSource, /institutionalMailto/);
+  assert.match(contactSource, /t\.stephanie@lunartuliplab\.com/);
+  assert.match(pageSource, /微信公众号/);
+  assert.match(pageSource, /小红书/);
+  assert.match(pageSource, /WeChat Official Account/);
+  assert.match(pageSource, /Xiaohongshu/);
   assert.match(layoutSource, /https:\/\/lunartuliplab\.com/);
   assert.match(layoutSource, /canonical:\s*["']\/["']/);
 });
@@ -91,6 +97,17 @@ test("exposes institutional search intent in site metadata", () => {
   }
   assert.match(layoutSource, /knowsAbout/);
   assert.match(layoutSource, /institutional partnerships/);
+});
+
+test("defines a canonical Lunartulip organization and website entity", () => {
+  assert.match(layoutSource, /"@type": "Organization"/);
+  assert.match(layoutSource, /"@type": "WebSite"/);
+  assert.match(layoutSource, /"@id": "https:\/\/lunartuliplab\.com\/#organization"/);
+  assert.match(layoutSource, /"@id": "https:\/\/lunartuliplab\.com\/#website"/);
+  assert.match(layoutSource, /name: "Lunartulip Lab"/);
+  assert.match(layoutSource, /alternateName: \["LunarTulip Lab", "Lunar Tulip Lab"\]/);
+  assert.match(layoutSource, /publisher: \{\s*"@id": "https:\/\/lunartuliplab\.com\/#organization"/);
+  assert.doesNotMatch(layoutSource, /founder:/);
 });
 
 test("ships the LunarTulip brand artwork", async () => {
