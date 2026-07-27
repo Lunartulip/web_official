@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./desk.module.css";
+import { institutionalMailto } from "../../lib/contact";
 
 type Language = "cn" | "en";
 
@@ -57,7 +58,11 @@ function UpRightIcon() {
 export default function DeskPreview() {
   const [language, setLanguage] = useState<Language>("cn");
   const isCn = language === "cn";
-  const demoMailto = `mailto:t.stephanie@lunartuliplab.com?subject=${encodeURIComponent("[LunarTulip] Research Desk Demo Request")}`;
+  const demoMailto = institutionalMailto({
+    source: "RESEARCH_DESK_DEMO",
+    topic: "Research Desk Demo Request",
+    language,
+  });
 
   useEffect(() => {
     const saved = window.localStorage.getItem("lunartulip-language");
@@ -238,7 +243,7 @@ export default function DeskPreview() {
           <span>LUNARTULIP LAB</span>
         </Link>
         <p>ALWAYS-ON RESEARCH DESK · INVITED PREVIEW</p>
-        <a href="mailto:t.stephanie@lunartuliplab.com">t.stephanie@lunartuliplab.com</a>
+        <a href={institutionalMailto({ source: "RESEARCH_DESK_FOOTER", topic: "Research Desk Inquiry", language })}>t.stephanie@lunartuliplab.com</a>
       </footer>
     </main>
   );
