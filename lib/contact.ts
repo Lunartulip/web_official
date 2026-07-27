@@ -1,0 +1,50 @@
+export const INSTITUTIONAL_EMAIL = "t.stephanie@lunartuliplab.com";
+
+export function institutionalMailto(input: {
+  source: string;
+  topic: string;
+  language?: "cn" | "en";
+}): string {
+  const source = normalizeTag(input.source);
+  const topic = input.topic.trim().slice(0, 160) || "Institutional Inquiry";
+  const subject = `[LunarTulip][Website][${source}] ${topic}`;
+  const body =
+    input.language === "en"
+      ? [
+          "Hello LunarTulip Lab,",
+          "",
+          `I am contacting you from the ${source} section of lunartuliplab.com.`,
+          "",
+          "Organization:",
+          "Your role:",
+          "Research / decision workflow to discuss:",
+          "Most important current bottleneck:",
+          "Expected start window:",
+          "",
+          "Please do not include positions, trading credentials, or other sensitive data in this first email.",
+        ].join("\n")
+      : [
+          "您好，LunarTulip Lab：",
+          "",
+          `我从 lunartuliplab.com 的 ${source} 入口联系。`,
+          "",
+          "机构名称：",
+          "您的角色：",
+          "希望讨论的投研 / 决策场景：",
+          "当前最希望解决的瓶颈：",
+          "预计启动时间：",
+          "",
+          "首次邮件请勿附带持仓、交易凭证或其他敏感数据。",
+        ].join("\n");
+  return `mailto:${INSTITUTIONAL_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+function normalizeTag(value: string): string {
+  const normalized = value
+    .trim()
+    .toUpperCase()
+    .replace(/[^A-Z0-9_-]+/g, "_")
+    .replace(/^_+|_+$/g, "")
+    .slice(0, 48);
+  return normalized || "GENERAL";
+}
