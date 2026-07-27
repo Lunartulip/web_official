@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { institutionalMailto } from "../../lib/contact";
 import { formatNoteDate, getAllNotes } from "@/lib/notes";
 
 export const metadata: Metadata = {
@@ -60,7 +61,7 @@ export default function NotesPage() {
           <Image className="brand-mark-image" src="/lunartulip-silver-emblem.png" alt="" width={34} height={38} />
           LUNARTULIP LAB
         </Link>
-        <a href="mailto:t.stephanie@lunartuliplab.com">t.stephanie@lunartuliplab.com</a>
+        <a href={institutionalMailto({ source: "NOTES_INDEX", topic: "研究手札咨询" })}>t.stephanie@lunartuliplab.com</a>
         <p>© 2026 LUNARTULIP LAB</p>
       </footer>
     </main>
