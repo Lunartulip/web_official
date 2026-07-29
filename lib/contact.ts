@@ -7,11 +7,11 @@ export function institutionalMailto(input: {
 }): string {
   const source = normalizeTag(input.source);
   const topic = input.topic.trim().slice(0, 160) || "Institutional Inquiry";
-  const subject = `[LunarTulip][Website][${source}] ${topic}`;
+  const subject = `[Lunartulip][Website][${source}] ${topic}`;
   const body =
     input.language === "en"
       ? [
-          "Hello LunarTulip Lab,",
+          "Hello Lunartulip Lab,",
           "",
           `I am contacting you from the ${source} section of lunartuliplab.com.`,
           "",
@@ -24,7 +24,7 @@ export function institutionalMailto(input: {
           "Please do not include positions, trading credentials, or other sensitive data in this first email.",
         ].join("\n")
       : [
-          "您好，LunarTulip Lab：",
+          "您好，Lunartulip Lab：",
           "",
           `我从 lunartuliplab.com 的 ${source} 入口联系。`,
           "",

@@ -6,17 +6,25 @@ import { formatNoteDate, getAllNotes } from "@/lib/notes";
 
 export const metadata: Metadata = {
   title: "研究手札",
-  description: "LunarTulip Lab 关于 AI 原生主动管理、买方决策系统、量化基本面与系统建造的公开研究档案。",
+  description: "Lunartulip Lab 关于 AI investment research、AI for quantitative investing、quantamental investing、AI-native fund 与 agentic investment research 的公开研究档案。",
   alternates: {
     canonical: "/notes",
   },
   openGraph: {
-    title: "研究手札 | LunarTulip Lab",
+    title: "研究手札 | Lunartulip Lab",
     description: "持续写下正在形成的判断：从方法论、决策系统到真实建造过程。",
     url: "/notes",
     type: "website",
   },
 };
+
+const researchTopics = [
+  { term: "AI INVESTMENT RESEARCH", cn: "AI 投研", definition: "AI 如何进入机构信息处理、证据追踪、假设更新与研究生产流程。" },
+  { term: "AI FOR QUANTITATIVE INVESTING", cn: "AI4Quant", definition: "Agent、代码生成与机器学习如何改变因子研究、策略验证和量化工程。" },
+  { term: "QUANTAMENTAL INVESTING", cn: "量化基本面", definition: "产业理解、主观命题与量化纪律如何在同一套组合决策语言中协作。" },
+  { term: "AI-NATIVE FUND", cn: "AI-native Fund", definition: "研究、验证、风险、决策记忆与净值反馈进入同一组织系统的长期形态。" },
+  { term: "AGENTIC INVESTMENT RESEARCH", cn: "Agentic 投资研究", definition: "可编排、可验收、可追溯的 Agent 工作流如何成为买方研究基础设施。" },
+];
 
 export default function NotesPage() {
   const notes = getAllNotes();
@@ -34,7 +42,17 @@ export default function NotesPage() {
       <section className="notes-archive-hero">
         <p className="section-index">RESEARCH NOTES / ARCHIVE</p>
         <h1>持续写下正在形成的判断</h1>
-        <p>从 AI 原生主动管理、买方决策系统到真实建造过程，构成 LunarTulip 的公开研究档案。</p>
+        <p>从 AI 原生主动管理、买方决策系统到真实建造过程，构成 Lunartulip 的公开研究档案。</p>
+      </section>
+
+      <section className="research-topics" aria-label="研究主题集群">
+        {researchTopics.map((topic, index) => (
+          <article key={topic.term}>
+            <small>0{index + 1} / {topic.term}</small>
+            <h2>{topic.cn}</h2>
+            <p>{topic.definition}</p>
+          </article>
+        ))}
       </section>
 
       <section className="notes-archive" aria-label="研究手札文章">

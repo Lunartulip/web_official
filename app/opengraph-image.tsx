@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { ImageResponse } from "next/og";
 
-export const alt = "LunarTulip Lab — AI-native Research & Decision Systems";
+export const alt = "Lunartulip Lab — AI-native Research & Decision Systems";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

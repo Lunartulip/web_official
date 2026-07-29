@@ -13,9 +13,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: "https://lunartuliplab.com/notes",
-      lastModified: notes.length > 0 ? new Date(`${notes[0].publishedAt}T00:00:00+08:00`) : new Date(),
+      lastModified: notes.length > 0 ? new Date(`${notes[0].updatedAt ?? notes[0].publishedAt}T00:00:00+08:00`) : new Date(),
       changeFrequency: "weekly",
       priority: 0.8,
+    },
+    {
+      url: "https://lunartuliplab.com/workshop",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
     },
     {
       url: "https://lunartuliplab.com/desk",
@@ -23,6 +29,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.85,
     },
+    {
+      url: "https://lunartuliplab.com/about",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    ...["", "/workshop", "/desk", "/about"].map((path, index) => ({
+      url: `https://lunartuliplab.com/en${path}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: index === 0 ? 0.9 : 0.75,
+    })),
     ...notes.map((note) => ({
       url: `https://lunartuliplab.com/notes/${note.slug}`,
       lastModified: new Date(`${note.updatedAt ?? note.publishedAt}T00:00:00+08:00`),

@@ -39,6 +39,18 @@ const workflow = [
   { code: "LEARN", cn: "反馈复盘", en: "Learn from outcomes" },
 ];
 
+const pilotSteps = [
+  { code: "01 / SCOPE", cn: "确认一个真实研究命题、覆盖范围、数据来源与人工责任人。", en: "Define one live thesis, coverage, data sources and accountable human owner." },
+  { code: "02 / OPERATE", cn: "在受控边界内运行事件账本、假设更新、每日优先级与 Decision Memory。", en: "Operate the ledger, thesis updates, daily priorities and decision memory within a controlled boundary." },
+  { code: "03 / EVALUATE", cn: "依据使用频率、可追溯性、更新质量与团队采用情况决定年度合作。", en: "Evaluate usage, traceability, update quality and team adoption before an annual partnership." },
+];
+
+const deskFaqs = [
+  { qCn: "Desk 是可自助购买的软件吗？", qEn: "Is the Desk self-serve software?", aCn: "当前以机构 B2B 受邀付费试点进入。覆盖范围、数据边界、更新频率、人工审核和支持方式需要共同确认。", aEn: "The current entry point is an invited B2B paid pilot. Coverage, data boundaries, cadence, human review and support are agreed jointly." },
+  { qCn: "必须先完成 Workshop 吗？", qEn: "Is the Workshop required first?", aCn: "Workshop 是默认部署路径。已有成熟研究流程、明确负责人和数据边界的机构，可以先做 readiness assessment，再直接进入 Desk 试点。", aEn: "The Workshop is the default deployment path. Mature institutions with an accountable owner and defined data boundaries may enter through a readiness assessment." },
+  { qCn: "如何报价？", qEn: "How is it priced?", aCn: "试点与年度合作均按研究覆盖、数据来源、更新频率、集成、席位和支持需求定制报价。当前不提供个人订阅或公开自助购买。", aEn: "Pilot and annual pricing depends on research coverage, data sources, cadence, integration, seats and support. There is no individual subscription or public self-serve purchase." },
+];
+
 function ArrowIcon() {
   return (
     <svg viewBox="0 0 20 20" aria-hidden="true">
@@ -55,8 +67,8 @@ function UpRightIcon() {
   );
 }
 
-export default function DeskPreview() {
-  const [language, setLanguage] = useState<Language>("cn");
+export default function DeskPreview({ initialLanguage = "cn" }: { initialLanguage?: Language }) {
+  const [language, setLanguage] = useState<Language>(initialLanguage);
   const isCn = language === "cn";
   const demoMailto = institutionalMailto({
     source: "RESEARCH_DESK_DEMO",
@@ -65,11 +77,12 @@ export default function DeskPreview() {
   });
 
   useEffect(() => {
+    if (initialLanguage === "en") return;
     const saved = window.localStorage.getItem("lunartulip-language");
     if (saved !== "cn" && saved !== "en") return;
     const restoreLanguage = window.setTimeout(() => setLanguage(saved), 0);
     return () => window.clearTimeout(restoreLanguage);
-  }, []);
+  }, [initialLanguage]);
 
   const selectLanguage = (next: Language) => {
     setLanguage(next);
@@ -80,7 +93,7 @@ export default function DeskPreview() {
   return (
     <main className={styles.page}>
       <header className={styles.header}>
-        <Link className={styles.brand} href="/">
+        <Link className={styles.brand} href={isCn ? "/" : "/en"}>
           <Image src="/lunartulip-silver-emblem.png" width={31} height={34} alt="" aria-hidden="true" />
           <span>LUNARTULIP LAB</span>
           <i>/ RESEARCH DESK</i>
@@ -98,14 +111,15 @@ export default function DeskPreview() {
 
       <section className={styles.hero}>
         <div className={styles.heroCopy}>
-          <p className={styles.eyebrow}>INVITED PRODUCT PREVIEW / ALWAYS-ON CO-RESEARCH</p>
+          <p className={styles.eyebrow}>INSTITUTIONAL B2B PILOT / ALWAYS-ON RESEARCH</p>
+          <p className={styles.productName}>Always-On Research Desk</p>
           <h1>
-            {isCn ? <>让每一次研究判断，<br /><span>持续接受验证。</span></> : <>Keep every research judgment<br /><span>accountable to evidence.</span></>}
+            {isCn ? <>每天知道什么变了，<br /><span>哪些判断需要更新。</span></> : <>Know what changed today<br /><span>and which judgments need updating.</span></>}
           </h1>
           <p className={styles.heroLead}>
             {isCn
-              ? "Always-On Research Desk 是机构持续共研的运行载体：连接事件账本、假设看板、每日简报与决策记忆，让变化、判断和反馈进入同一套可回溯的研究状态。"
-              : "Always-On Research Desk is an operating environment for continuous institutional co-research—connecting the event ledger, hypothesis board, daily briefs and decision memory in one traceable research state."}
+              ? "面向公募、私募、资管机构与专业家族办公室的持续研究工作台。事件账本、假设看板、每日优先级与 Decision Memory 在同一套研究状态中运行，由研究员和 PM 审阅关键更新。"
+              : "An always-on research workspace for funds, asset managers and professional family offices. The event ledger, hypothesis board, daily priorities and decision memory operate in one research state, with material updates reviewed by researchers and PMs."}
           </p>
           <div className={styles.heroActions}>
             <a className={styles.primaryButton} href="#workspace">
@@ -117,7 +131,7 @@ export default function DeskPreview() {
           </div>
           <p className={styles.inviteNote}>
             <span />
-            {isCn ? "当前开放受邀试点 · 共同确认首个研究命题与边界" : "Invited pilots available · Define the first thesis and boundaries together"}
+            {isCn ? "当前开放 B2B 受邀付费试点 · 共同确认首个研究命题与边界" : "Invited B2B paid pilots · Define the first thesis and boundaries together"}
           </p>
         </div>
 
@@ -154,7 +168,7 @@ export default function DeskPreview() {
 
       <section className={styles.values} aria-labelledby="desk-values">
         <div className={styles.sectionHeading}>
-          <div><p className={styles.eyebrow}>WHY RESEARCH DESK / 01</p><h2 id="desk-values">{isCn ? "不是更多信息，而是更好的研究状态。" : "Not more information—a better research state."}</h2></div>
+          <div><p className={styles.eyebrow}>WHY RESEARCH DESK / 01</p><h2 id="desk-values">{isCn ? "把变化、判断与反馈放进同一套研究状态。" : "Keep change, judgment and feedback in one research state."}</h2></div>
           <p>{isCn ? "把一次性的研究动作变成能够持续更新、接受检验并保留记忆的协作系统。" : "Turn one-off research actions into a collaborative system that updates, faces evidence and retains memory."}</p>
         </div>
         <div className={styles.valueGrid}>
@@ -205,7 +219,7 @@ export default function DeskPreview() {
       <section className={styles.loop} aria-labelledby="loop-title">
         <div>
           <p className={styles.eyebrow}>OPERATING LOOP / 03</p>
-          <h2 id="loop-title">{isCn ? "从变化到记忆，不止生成一份报告。" : "From change to memory—not merely another report."}</h2>
+          <h2 id="loop-title">{isCn ? "从变化到记忆，形成一条可持续运行的回路。" : "From change to memory, forming an operating research loop."}</h2>
         </div>
         <div className={styles.loopTrack}>
           {workflow.map((item, index) => (
@@ -219,9 +233,23 @@ export default function DeskPreview() {
         </div>
       </section>
 
+      <section className={styles.pilot} aria-labelledby="pilot-title">
+        <div className={styles.pilotIntro}>
+          <p className={styles.eyebrow}>B2B PILOT PATH / 04</p>
+          <h2 id="pilot-title">{isCn ? "先验证一条真实研究回路，再决定年度合作。" : "Validate one live research loop before an annual partnership."}</h2>
+          <p>{isCn ? "Workshop 是默认进入路径；已有成熟流程的机构可经 readiness assessment 直接进入。试点按覆盖范围、数据、频率、集成与支持定制报价。" : "The Workshop is the default entry path; mature institutions may enter through a readiness assessment. Pilot pricing is customized by coverage, data, cadence, integration and support."}</p>
+        </div>
+        <div className={styles.pilotGrid}>
+          {pilotSteps.map((step) => <article key={step.code}><small>{step.code}</small><p>{isCn ? step.cn : step.en}</p></article>)}
+        </div>
+        <div className={styles.deskFaq}>
+          {deskFaqs.map((item) => <details key={item.qEn}><summary>{isCn ? item.qCn : item.qEn}<span>+</span></summary><p>{isCn ? item.aCn : item.aEn}</p></details>)}
+        </div>
+      </section>
+
       <section className={styles.request} id="request-demo" aria-labelledby="request-title">
         <div>
-          <p className={styles.eyebrow}>REQUEST AN INVITED DEMO / 04</p>
+          <p className={styles.eyebrow}>REQUEST AN INVITED DEMO / 05</p>
           <h2 id="request-title">{isCn ? "从一个真实研究命题开始。" : "Start with one real research thesis."}</h2>
           <p>{isCn ? "请在邮件中简单介绍机构或团队、关注的研究方向，以及希望通过 Desk 验证的问题。我们将共同确认首个试点的覆盖范围与数据边界。" : "Tell us briefly about your institution or team, research focus and the problem you want to test through the Desk. We will define the first pilot’s coverage and data boundaries together."}</p>
         </div>
@@ -238,7 +266,7 @@ export default function DeskPreview() {
       </section>
 
       <footer className={styles.footer}>
-        <Link className={styles.brand} href="/">
+        <Link className={styles.brand} href={isCn ? "/" : "/en"}>
           <Image src="/lunartulip-silver-emblem.png" width={29} height={32} alt="" aria-hidden="true" />
           <span>LUNARTULIP LAB</span>
         </Link>

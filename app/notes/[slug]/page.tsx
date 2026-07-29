@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: NotePageProps): Promise<Metad
       url: `/notes/${note.slug}`,
       publishedTime: note.publishedAt,
       modifiedTime: note.updatedAt ?? note.publishedAt,
-      authors: ["LunarTulip Lab"],
+      authors: ["Lunartulip Lab"],
       tags: [note.category, "AI-native research", "buy-side decision systems"],
     },
     twitter: {
@@ -65,12 +65,12 @@ export default async function NotePage({ params }: NotePageProps) {
     mainEntityOfPage: `https://lunartuliplab.com/notes/${note.slug}`,
     author: {
       "@type": "Organization",
-      name: "LunarTulip Lab",
+      name: "Lunartulip Lab",
       url: "https://lunartuliplab.com",
     },
     publisher: {
       "@type": "Organization",
-      name: "LunarTulip Lab",
+      name: "Lunartulip Lab",
       url: "https://lunartuliplab.com",
       logo: {
         "@type": "ImageObject",
