@@ -25,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...notes.map((note) => ({
       url: `https://lunartuliplab.com/notes/${note.slug}`,
-      lastModified: new Date(`${note.publishedAt}T00:00:00+08:00`),
+      lastModified: new Date(`${note.updatedAt ?? note.publishedAt}T00:00:00+08:00`),
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),

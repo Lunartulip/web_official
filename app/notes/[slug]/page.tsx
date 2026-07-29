@@ -34,6 +34,7 @@ export async function generateMetadata({ params }: NotePageProps): Promise<Metad
       type: "article",
       url: `/notes/${note.slug}`,
       publishedTime: note.publishedAt,
+      modifiedTime: note.updatedAt ?? note.publishedAt,
       authors: ["LunarTulip Lab"],
       tags: [note.category, "AI-native research", "buy-side decision systems"],
     },
@@ -59,7 +60,7 @@ export default async function NotePage({ params }: NotePageProps) {
     headline: note.title,
     description: note.summary,
     datePublished: note.publishedAt,
-    dateModified: note.publishedAt,
+    dateModified: note.updatedAt ?? note.publishedAt,
     inLanguage: "zh-CN",
     mainEntityOfPage: `https://lunartuliplab.com/notes/${note.slug}`,
     author: {
@@ -101,6 +102,7 @@ export default async function NotePage({ params }: NotePageProps) {
           <div className="article-byline">
             <span>LUNARTULIP LAB</span>
             <time dateTime={note.publishedAt}>{formatNoteDate(note.publishedAt)}</time>
+            {note.updatedAt && <span>更新于 {formatNoteDate(note.updatedAt)}</span>}
             <span>首发于{note.sourceChannel}</span>
           </div>
         </header>

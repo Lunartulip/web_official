@@ -6,6 +6,7 @@ export type NoteMeta = {
   title: string;
   summary: string;
   publishedAt: string;
+  updatedAt?: string;
   category: string;
   slug: string;
   notionId: string;
@@ -40,6 +41,7 @@ function readNote(filename: string): Note {
   const metadata = {
     ...data,
     publishedAt: normalizeDate(data.publishedAt),
+    updatedAt: data.updatedAt ? normalizeDate(data.updatedAt) : undefined,
   } as NoteMeta;
 
   for (const field of requiredFields) {
@@ -50,6 +52,10 @@ function readNote(filename: string): Note {
 
   if (!/^\d{4}-\d{2}-\d{2}$/.test(metadata.publishedAt)) {
     throw new Error(`${filename} has an invalid publishedAt date`);
+  }
+
+  if (metadata.updatedAt && !/^\d{4}-\d{2}-\d{2}$/.test(metadata.updatedAt)) {
+    throw new Error(`${filename} has an invalid updatedAt date`);
   }
 
   return { ...metadata, content: content.trim() };

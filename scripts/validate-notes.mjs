@@ -19,12 +19,19 @@ for (const file of files) {
   const publishedAt = data.publishedAt instanceof Date
     ? data.publishedAt.toISOString().slice(0, 10)
     : String(data.publishedAt);
+  const updatedAt = data.updatedAt instanceof Date
+    ? data.updatedAt.toISOString().slice(0, 10)
+    : data.updatedAt ? String(data.updatedAt) : undefined;
 
   for (const field of requiredFields) {
     assert.ok(data[field], `${file}: missing ${field}`);
   }
 
   assert.match(publishedAt, /^\d{4}-\d{2}-\d{2}$/, `${file}: invalid publishedAt`);
+  if (updatedAt) {
+    assert.match(updatedAt, /^\d{4}-\d{2}-\d{2}$/, `${file}: invalid updatedAt`);
+    assert.ok(updatedAt >= publishedAt, `${file}: updatedAt must not precede publishedAt`);
+  }
   assert.equal(file, `${data.slug}.md`, `${file}: filename must match slug`);
   assert.ok(!seenSlugs.has(data.slug), `${file}: duplicate slug ${data.slug}`);
   assert.ok(!seenNotionIds.has(data.notionId), `${file}: duplicate notionId ${data.notionId}`);

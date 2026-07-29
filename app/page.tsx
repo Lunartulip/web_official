@@ -159,12 +159,12 @@ const noteColumns = [
     title: "系统生长手记",
     titleEn: "Field Notes",
     notes: [
-      "Trading like PM：我的 AI-Native Investment Lab 生长手记",
+      "AI 量化与基本面融合：一个 AI-native Fund 原型的生长手记",
       "从信息焦虑到系统自由：我的 Notion 投研大脑养成记",
       "Claude Code 之后，量化基金的工程护城河正在坍缩",
     ],
     notesEn: [
-      "Trading Like a PM: Notes from Building an AI-Native Investment Lab",
+      "AI Quant Meets Fundamental Research: Building an AI-native Fund Prototype",
       "From Information Anxiety to System Freedom: Building My Notion Research Brain",
       "After Claude Code, Quant Funds’ Engineering Moats Are Collapsing",
     ],

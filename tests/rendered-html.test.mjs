@@ -8,6 +8,7 @@ const deskPageSource = await readFile(new URL("../app/desk/page.tsx", import.met
 const deskPreviewSource = await readFile(new URL("../app/desk/desk-preview.tsx", import.meta.url), "utf8");
 const notePageSource = await readFile(new URL("../app/notes/[slug]/page.tsx", import.meta.url), "utf8");
 const selfDrivingNoteSource = await readFile(new URL("../content/notes/self-driving-portfolio-ai-investing.md", import.meta.url), "utf8");
+const tradingLabNoteSource = await readFile(new URL("../content/notes/trading-like-pm-lab-notes.md", import.meta.url), "utf8");
 const sitemapSource = await readFile(new URL("../app/sitemap.ts", import.meta.url), "utf8");
 const contactSource = await readFile(new URL("../lib/contact.ts", import.meta.url), "utf8");
 
@@ -136,10 +137,23 @@ test("publishes the Self-Driving Portfolio note with explicit long-term vision",
   assert.doesNotMatch(selfDrivingNoteSource, /<empty-block|<br>|Lunartuliup/);
 });
 
+test("repositions the Investment Lab note around AI quant and a fund prototype", () => {
+  assert.match(tradingLabNoteSource, /AI 量化与基本面融合：一个 AI-native Fund 原型的生长手记/);
+  assert.match(tradingLabNoteSource, /updatedAt: 2026-07-29/);
+  assert.match(tradingLabNoteSource, /AI4Quant/);
+  assert.match(tradingLabNoteSource, /144\.7%/);
+  assert.match(tradingLabNoteSource, /73\.3%/);
+  assert.match(tradingLabNoteSource, /18\.9%/);
+  assert.match(tradingLabNoteSource, /未经第三方审计；历史表现不代表未来结果/);
+  assert.doesNotMatch(tradingLabNoteSource, /一人小基金|小账户|全职管理一只|资金实践合作|不过早套上/);
+});
+
 test("adds article metadata, structured data and research disclaimer", () => {
   assert.match(notePageSource, /generateMetadata/);
   assert.match(notePageSource, /application\/ld\+json/);
+  assert.match(notePageSource, /dateModified: note\.updatedAt \?\? note\.publishedAt/);
   assert.match(notePageSource, /不构成任何投资建议/);
   assert.match(sitemapSource, /getAllNotes/);
   assert.match(sitemapSource, /notes\/\$\{note\.slug\}/);
+  assert.match(sitemapSource, /note\.updatedAt \?\? note\.publishedAt/);
 });
