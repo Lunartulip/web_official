@@ -1,0 +1,122 @@
+{
+  "source": "workspace/ai-team/shared/state/scorecard/calls_ledger.csv + calls_outcomes.csv",
+  "generated_at": "2026-08-13",
+  "generator": "scripts/calls_kpi_summary.py",
+  "as_of": "2026-08-03",
+  "cohorts": {
+    "backfill": {
+      "total_calls": 77,
+      "settled": 46,
+      "invalidated": 2,
+      "tracking": 31,
+      "pending_director_judgment": 0,
+      "universe_ew": {
+        "settled": 44,
+        "hit": 14,
+        "miss": 17,
+        "flat": 13,
+        "hit_rate": 0.4516,
+        "avg_excess": -0.0065,
+        "win_loss_ratio": 1.01,
+        "win_loss_ratio_hm_only": 1.09,
+        "win_mean": 0.2423,
+        "loss_mean": -0.222
+      },
+      "csi500": {
+        "settled": 44,
+        "hit": 14,
+        "miss": 18,
+        "flat": 12,
+        "hit_rate": 0.4375,
+        "avg_excess": 0.0184,
+        "win_loss_ratio": 1.12,
+        "win_loss_ratio_hm_only": 1.56,
+        "win_mean": 0.2973,
+        "loss_mean": -0.1906
+      }
+    },
+    "desk_discipline": {
+      "total_calls": 0,
+      "settled": 0,
+      "invalidated": 0,
+      "tracking": 0,
+      "pending_director_judgment": 0,
+      "universe_ew": {
+        "settled": 0,
+        "hit": 0,
+        "miss": 0,
+        "flat": 0,
+        "hit_rate": null,
+        "avg_excess": null,
+        "win_loss_ratio": null,
+        "win_loss_ratio_hm_only": null,
+        "win_mean": null,
+        "loss_mean": null
+      },
+      "csi500": {
+        "settled": 0,
+        "hit": 0,
+        "miss": 0,
+        "flat": 0,
+        "hit_rate": null,
+        "avg_excess": null,
+        "win_loss_ratio": null,
+        "win_loss_ratio_hm_only": null,
+        "win_mean": null,
+        "loss_mean": null
+      }
+    }
+  },
+  "first_call_date": "2026-03-30",
+  "evidence_link_rate": 1,
+  "windows": {
+    "d30": {
+      "window_start": "2026-07-05",
+      "window_end": "2026-08-03",
+      "universe_ew": {
+        "settled": 44,
+        "hit": 14,
+        "miss": 17,
+        "flat": 13,
+        "hit_rate": 0.4516,
+        "avg_excess": -0.0065,
+        "win_loss_ratio": 1.01,
+        "win_loss_ratio_hm_only": 1.09,
+        "win_mean": 0.2423,
+        "loss_mean": -0.222
+      },
+      "csi500": {
+        "settled": 44,
+        "hit": 14,
+        "miss": 18,
+        "flat": 12,
+        "hit_rate": 0.4375,
+        "avg_excess": 0.0184,
+        "win_loss_ratio": 1.12,
+        "win_loss_ratio_hm_only": 1.56,
+        "win_mean": 0.2973,
+        "loss_mean": -0.1906
+      }
+    }
+  },
+  "hit_rate_curve": [
+    {
+      "week_start": "2026-07-20",
+      "hit_rate_csi500": 0.5385,
+      "hit_rate_ew": 0.4286,
+      "settled_count": 19
+    },
+    {
+      "week_start": "2026-07-27",
+      "hit_rate_csi500": 0.5455,
+      "hit_rate_ew": 0.5,
+      "settled_count": 33
+    },
+    {
+      "week_start": "2026-08-03",
+      "hit_rate_csi500": 0.4375,
+      "hit_rate_ew": 0.4516,
+      "settled_count": 44
+    }
+  ]
+}

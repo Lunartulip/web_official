@@ -6,13 +6,13 @@ import { formatNoteDate, getAllNotes } from "@/lib/notes";
 
 export const metadata: Metadata = {
   title: "研究手札",
-  description: "Lunartulip Lab 关于 AI investment research、AI for quantitative investing、quantamental investing、AI-native fund 与 agentic investment research 的公开研究档案。",
+  description: "Lunartulip Lab 关于主观基本面研究、系统化量化研究、AI-native investing、量化基本面与投资决策系统的公开方法研究档案。",
   alternates: {
     canonical: "/notes",
   },
   openGraph: {
     title: "研究手札 | Lunartulip Lab",
-    description: "持续写下正在形成的判断：从方法论、决策系统到真实建造过程。",
+    description: "关于主观基本面、系统化量化、AI-native investing 与决策系统的公开方法研究。",
     url: "/notes",
     type: "website",
   },
@@ -41,8 +41,12 @@ export default function NotesPage() {
 
       <section className="notes-archive-hero">
         <p className="section-index">RESEARCH NOTES / ARCHIVE</p>
-        <h1>持续写下正在形成的判断</h1>
-        <p>从 AI 原生主动管理、买方决策系统到真实建造过程，构成 Lunartulip 的公开研究档案。</p>
+        <h1>研究方法、系统实践与长期思考</h1>
+        <p>这里讨论主观基本面、系统化量化、AI-native investing 与投资决策系统；公司与产业深度研究收录于 Lunartulip Deep Dive，历史判断结果汇总于 Authority Ledger。</p>
+        <div className="notes-archive-actions">
+          <Link href="/deep-dive">查看 Deep Dive ↗</Link>
+          <Link href="/authority-ledger">查看 Authority Ledger ↗</Link>
+        </div>
       </section>
 
       <section className="research-topics" aria-label="研究主题集群">

@@ -7,13 +7,22 @@ const layoutSource = await readFile(new URL("../app/layout.tsx", import.meta.url
 const deskPageSource = await readFile(new URL("../app/desk/page.tsx", import.meta.url), "utf8");
 const deskPreviewSource = await readFile(new URL("../app/desk/desk-preview.tsx", import.meta.url), "utf8");
 const workshopPageSource = await readFile(new URL("../app/workshop/page.tsx", import.meta.url), "utf8");
-const workshopPreviewSource = await readFile(new URL("../app/workshop/workshop-preview.tsx", import.meta.url), "utf8");
 const aboutPageSource = await readFile(new URL("../app/about/page.tsx", import.meta.url), "utf8");
 const aboutPreviewSource = await readFile(new URL("../app/about/about-preview.tsx", import.meta.url), "utf8");
 const englishHomeSource = await readFile(new URL("../app/en/page.tsx", import.meta.url), "utf8");
-const englishWorkshopSource = await readFile(new URL("../app/en/workshop/page.tsx", import.meta.url), "utf8");
-const englishDeskSource = await readFile(new URL("../app/en/desk/page.tsx", import.meta.url), "utf8");
 const englishAboutSource = await readFile(new URL("../app/en/about/page.tsx", import.meta.url), "utf8");
+const deepDiveIndexSource = await readFile(new URL("../app/deep-dive/deep-dive-index.tsx", import.meta.url), "utf8");
+const deepDiveArticleSource = await readFile(new URL("../app/deep-dive/deep-dive-article.tsx", import.meta.url), "utf8");
+const deepDivePageSource = await readFile(new URL("../app/deep-dive/[slug]/page.tsx", import.meta.url), "utf8");
+const deepDiveDataSource = await readFile(new URL("../lib/deep-dives.ts", import.meta.url), "utf8");
+const authorityPageSource = await readFile(new URL("../app/authority-ledger/page.tsx", import.meta.url), "utf8");
+const authorityViewSource = await readFile(new URL("../app/authority-ledger/authority-ledger.tsx", import.meta.url), "utf8");
+const authorityDataSource = await readFile(new URL("../data/authority/calls_kpi_summary.json", import.meta.url), "utf8");
+const accessPageSource = await readFile(new URL("../app/institutional-access/institutional-access.tsx", import.meta.url), "utf8");
+const englishDeepDiveSource = await readFile(new URL("../app/en/deep-dive/page.tsx", import.meta.url), "utf8");
+const englishAuthoritySource = await readFile(new URL("../app/en/authority-ledger/page.tsx", import.meta.url), "utf8");
+const englishAccessSource = await readFile(new URL("../app/en/institutional-access/page.tsx", import.meta.url), "utf8");
+const englishDeskSource = await readFile(new URL("../app/en/desk/page.tsx", import.meta.url), "utf8");
 const notesIndexSource = await readFile(new URL("../app/notes/page.tsx", import.meta.url), "utf8");
 const notePageSource = await readFile(new URL("../app/notes/[slug]/page.tsx", import.meta.url), "utf8");
 const selfDrivingNoteSource = await readFile(new URL("../content/notes/self-driving-portfolio-ai-investing.md", import.meta.url), "utf8");
@@ -22,7 +31,7 @@ const sitemapSource = await readFile(new URL("../app/sitemap.ts", import.meta.ur
 const contactSource = await readFile(new URL("../lib/contact.ts", import.meta.url), "utf8");
 
 test("defines every public navigation section", () => {
-  for (const id of ["top", "products", "philosophy", "capabilities", "workflow", "direction", "practice", "notes", "contact"]) {
+  for (const id of ["top", "research", "philosophy", "capabilities", "workflow", "direction", "practice", "notes", "contact"]) {
     assert.match(pageSource, new RegExp(`id=["']${id}["']`));
   }
 });
@@ -44,100 +53,143 @@ test("publishes the official contact and canonical domain", () => {
   assert.match(layoutSource, /canonical:\s*["']\/["']/);
 });
 
-test("states the market scope and institutional audience", () => {
-  assert.match(pageSource, /全球泛 AI 科技产业链的二级权益研究/);
-  assert.match(pageSource, /跨 A 股、美股与港股/);
-  assert.match(pageSource, /公募、私募、资管机构与专业家族办公室/);
-  assert.match(pageSource, /A-shares \/ U\.S\. \/ Hong Kong/);
+test("states the independent research category and dual-engine positioning", () => {
+  assert.match(pageSource, /AI-native 独立研究机构/);
+  assert.match(pageSource, /主观基本面研究/);
+  assert.match(pageSource, /系统化量化研究/);
+  assert.match(pageSource, /Discretionary Fundamental Research/);
+  assert.match(pageSource, /Systematic Quantitative Research/);
+  assert.match(pageSource, /AI-NATIVE RESEARCH WORKSPACE/);
 });
 
-test("publishes two institutional lanes and a visible Workshop to Desk ladder", () => {
+test("publishes two research engines and proof surfaces instead of a product ladder", () => {
   for (const term of [
-    "机构投研系统",
-    "AI-native 资管方向",
-    "AI-native Research System Workshop",
-    "Always-On Research Desk",
-    "¥100,000 起",
-    "US$15,000",
-    "B2B 受邀付费试点",
-    "readiness assessment",
-    "私有化适配随 Desk 深度进入",
+    "ENGINE 01 / DISCRETIONARY FUNDAMENTAL",
+    "ENGINE 02 / SYSTEMATIC QUANT",
+    "Lunartulip Deep Dive",
+    "判断与结局账本",
+    "POINT-IN-TIME / VERSIONED",
+    "AGGREGATE / METHODOLOGY-LED",
+    "两台研究引擎，持续解释与验证市场机会",
   ]) {
     assert.match(pageSource, new RegExp(term.replace("$", "\\$")));
   }
-  assert.match(pageSource, /href: "\/workshop"/);
-  assert.match(pageSource, /href: "\/desk"/);
-  assert.doesNotMatch(pageSource, /PATH \/ 0[1-4]|tabCode:|useCases|activeCase/);
-  assert.doesNotMatch(pageSource, /B2C|SaaS|自助订阅/);
+  assert.match(pageSource, /href: "\/deep-dive"/);
+  assert.match(pageSource, /href: "\/authority-ledger"/);
+  assert.doesNotMatch(pageSource, /href: "\/workshop"|href: "\/desk"|¥100,000 起|US\$15,000|B2B 受邀付费试点/);
 });
 
-test("publishes a bilingual and compliant Research Desk preview", async () => {
-  assert.match(deskPageSource, /canonical: "\/desk"/);
-  assert.match(deskPageSource, /"@type": "Service"/);
-  assert.match(deskPageSource, /"@type": "FAQPage"/);
-  assert.match(deskPreviewSource, /Always-On Research Desk/);
-  assert.match(deskPreviewSource, /Change Ledger|CHANGE LEDGER/);
-  assert.match(deskPreviewSource, /Hypothesis Board|HYPOTHESIS BOARD/);
-  assert.match(deskPreviewSource, /Decision Memory|DECISION MEMORY/);
-  assert.match(deskPreviewSource, /Research Desk Demo Request/);
-  assert.match(deskPreviewSource, /B2B 受邀付费试点/);
-  assert.match(deskPreviewSource, /readiness assessment/);
-  assert.match(deskPreviewSource, /customized by coverage, data, cadence, integration and support|定制报价/);
-  assert.match(deskPreviewSource, /lunartulip-language/);
-  assert.match(deskPreviewSource, /脱敏演示数据/);
-  assert.match(deskPreviewSource, /不构成投资建议、基金募集、金融产品推介或收益承诺/);
-  assert.doesNotMatch(deskPreviewSource, /命中率|目标价|实盘业绩|paper portfolio/i);
+test("publishes two versioned Deep Dive research objects", () => {
+  for (const term of [
+    "palantir-ai-application-commercialization-2026q2",
+    "cloudflare-atlassian-ai-application-commercialization-2026q2",
+    "2026-08-08 corrected",
+    "VERSIONED RESEARCH",
+    "UPDATE HISTORY",
+  ]) {
+    assert.match(deepDiveDataSource + deepDiveArticleSource, new RegExp(term));
+  }
+  assert.match(deepDiveIndexSource, /每篇研究，都有明确问题和更新路径/);
+  for (const term of [
+    "市场共识",
+    "差异化判断",
+    "价值如何一步步穿过收入表",
+    "未来一至两个季度，市场会验收什么",
+    "monetization density",
+    "agent coordination / context",
+  ]) {
+    assert.match(deepDiveDataSource + deepDiveArticleSource, new RegExp(term));
+  }
+  assert.match(deepDivePageSource, /"@type": "ScholarlyArticle"/);
+  assert.match(deepDivePageSource, /dateModified: "2026-08-08"/);
+  assert.doesNotMatch(deepDiveDataSource, /成交价|建仓纪律|回调至 \$|介入时点|目标价位/);
+  assert.doesNotMatch(deepDiveDataSource, /DESK_DEEP_DIVE|HYP010|deepdive\.md|外发闸门|approved/i);
+});
+
+test("renders the Authority Ledger from a generated data projection with visible methodology", () => {
+  for (const term of [
+    '"as_of": "2026-08-03"',
+    '"settled": 46',
+    '"hit_rate": 0.4516',
+    '"win_loss_ratio_hm_only": 1.56',
+    '"evidence_link_rate": 1',
+  ]) {
+    assert.match(authorityDataSource, new RegExp(term));
+  }
+  assert.match(authorityPageSource, /"@type": "Dataset"/);
+  assert.match(englishAuthoritySource, /"@type": "Dataset"/);
+  assert.match(authorityViewSource, /当前已裁决样本来自历史重构区间/);
+  assert.match(authorityViewSource, /方向性命中率 = hit \/ \(hit \+ miss\)/);
+  assert.match(authorityViewSource, /回溯期与纪律期独立列示/);
+});
+
+test("retires Workshop sales while publishing Desk as a research workspace", () => {
+  assert.match(workshopPageSource, /redirect\("\/institutional-access"\)/);
+  assert.match(workshopPageSource, /index: false, follow: false/);
+  assert.doesNotMatch(sitemapSource, /lunartuliplab\.com\/workshop/);
   assert.match(sitemapSource, /lunartuliplab\.com\/desk/);
-  for (const screenshot of ["shot-today.webp", "shot-hypotheses.webp", "shot-ledger.webp"]) {
-    const file = await stat(new URL(`../public/desk/${screenshot}`, import.meta.url));
-    assert.ok(file.size > 50_000);
-    assert.match(deskPreviewSource, new RegExp(screenshot.replace(".", "\\.")));
+  assert.match(deskPageSource, /Always-On Research Desk/);
+  for (const term of [
+    "AI-NATIVE RESEARCH & DECISION WORKSPACE",
+    "两台研究引擎，在一个工作区形成连续判断",
+    "01 / RESEARCH",
+    "02 / STRATEGY",
+    "03 / PORTFOLIO",
+    "04 / LEARNING",
+    "NINE-LAYER ARCHITECTURE",
+    "从信息到反馈，看清判断如何形成、验证和更新",
+    "AlphaMap × Ontology",
+    "MOSTLY AUTOMATED",
+    "双 NAV",
+  ]) {
+    assert.match(deskPreviewSource, new RegExp(term.replace(/[×/]/g, "\\$&")));
   }
-});
-
-test("publishes the fixed-scope six-session Workshop offer", () => {
-  assert.match(workshopPageSource, /canonical: "\/workshop"/);
-  assert.match(workshopPageSource, /"@type": "Service"/);
-  assert.match(workshopPageSource, /"@type": "Offer"/);
-  assert.match(workshopPageSource, /"@type": "FAQPage"/);
-  assert.match(workshopPageSource, /price: "100000"/);
-  assert.match(workshopPageSource, /price: "15000"/);
-  for (const term of ["6 个工作 Session", "Hypothesis Card", "Risk Gate", "Decision Memory", "90 天实施路线", "¥100,000 起", "From US$15,000"]) {
-    assert.match(workshopPreviewSource, new RegExp(term.replace("$", "\\$")));
-  }
-  assert.match(workshopPreviewSource, /Research Desk/);
-  assert.match(workshopPreviewSource, /readiness assessment/);
+  assert.doesNotMatch(deskPreviewSource, /付费试点|预约演示|Request demo|如何报价|price:/i);
+  assert.doesNotMatch(deskPageSource + deskPreviewSource, /"@type": "Service"|"@type": "Offer"/i);
 });
 
 test("defines a canonical About entity page without a founder", () => {
   assert.match(aboutPageSource, /canonical: "\/about"/);
   assert.match(aboutPageSource, /"@type": "AboutPage"/);
   assert.match(aboutPreviewSource, /Lunartulip Lab/);
-  assert.match(aboutPreviewSource, /AI-native 投研系统实验室/);
-  assert.match(aboutPreviewSource, /公募、私募、资管机构与专业家族办公室/);
+  assert.match(aboutPreviewSource, /理解 AI 产业变化/);
+  assert.match(aboutPreviewSource, /主观基本面研究解释产业因果与预期差/);
   assert.match(aboutPreviewSource, /OFFICIAL NAME/);
   assert.doesNotMatch(aboutPageSource + aboutPreviewSource, /founder:/);
 });
 
 test("ships independent English routes with hreflang counterparts", () => {
-  for (const source of [englishHomeSource, englishWorkshopSource, englishDeskSource, englishAboutSource]) {
-    assert.match(source, /initialLanguage="en"/);
+  for (const source of [englishHomeSource, englishAboutSource, englishDeepDiveSource, englishAuthoritySource, englishAccessSource, englishDeskSource]) {
     assert.match(source, /canonical:/);
   }
+  assert.match(englishHomeSource + englishAboutSource, /initialLanguage="en"/);
+  assert.match(englishDeepDiveSource + englishAuthoritySource + englishAccessSource, /language="en"/);
   assert.match(englishHomeSource, /languages:/);
-  assert.match(englishWorkshopSource, /US\$15,000/);
   assert.match(sitemapSource, /lunartuliplab\.com\/en/);
-  assert.match(sitemapSource, /"\/workshop", "\/desk", "\/about"/);
+  assert.match(sitemapSource, /"\/about", "\/deep-dive", "\/authority-ledger", "\/desk", "\/institutional-access"/);
 });
 
 test("separates the current mandate from the long-term buy-side vision", () => {
   assert.match(pageSource, /AI-native Fund/);
-  assert.match(pageSource, /长期资管方向/);
-  assert.match(pageSource, /主观产业研究、量化策略验证、Research Desk、风险约束与 Decision Memory/);
-  assert.match(pageSource, /当前对外合作/);
-  assert.match(pageSource, /未来资管业务将在相应主体、资质与合规框架完备后独立开展/);
-  assert.match(pageSource, /Strategic Institutional Partnership/);
-  assert.match(pageSource, /不构成投资建议、基金募集、金融产品推介或收益承诺/);
+  assert.match(pageSource, /现在看得见研究质量/);
+  assert.match(pageSource, /先验证研究质量/);
+  assert.match(pageSource, /任何未来资管合作均将在相应主体、资质与合规框架完备后独立开展/);
+  assert.match(pageSource, /真实资本结果将长期检验双研究引擎/);
+  assert.match(pageSource, /不构成投资建议、操作指引、基金募集、金融产品推介或收益承诺/);
+});
+
+test("presents institutional access as visitor-oriented research formats", () => {
+  for (const term of [
+    "研究样章与结果记录",
+    "交易日研究简报",
+    "公司与产业深度研究",
+    "双引擎研究系统方法",
+    "选择适合团队的研究入口",
+  ]) {
+    assert.match(accessPageSource, new RegExp(term.replace("$", "\\$")));
+  }
+  assert.match(accessPageSource, /具体范围、频率与信息边界根据研究目标共同确认/);
+  assert.doesNotMatch(accessPageSource, /¥1,200|RMB 1,200|L1 \/ MEMBER|≥L2 \/ NOT OPEN|INTERNAL \/ NEVER SOLD|checkout|credit card|payment provider/i);
 });
 
 test("publishes machine-readable research topic clusters", () => {
@@ -147,11 +199,11 @@ test("publishes machine-readable research topic clusters", () => {
 });
 
 test("exposes institutional search intent in site metadata", () => {
-  for (const term of ["泛 AI 科技权益研究", "机构 AI 投研系统", "买方决策增强", "buy-side decision augmentation", "Always-On Research Desk"]) {
+  for (const term of ["独立科技权益研究机构", "主观基本面研究", "系统化量化研究", "discretionary fundamental research", "systematic quantitative research"]) {
     assert.match(layoutSource, new RegExp(term));
   }
   assert.match(layoutSource, /knowsAbout/);
-  assert.match(layoutSource, /institutional partnerships/);
+  assert.match(layoutSource, /institutional research exchange/);
 });
 
 test("defines a canonical Lunartulip organization and website entity", () => {

@@ -81,14 +81,8 @@ const faqs = [
   {
     qCn: "完成后如何进入 Research Desk？",
     qEn: "How does the Research Desk follow?",
-    aCn: "机构可以独立实施，也可以围绕一个研究命题进入付费试点。已有成熟流程的机构可先做 readiness assessment，再直接进入 Desk 试点。",
-    aEn: "The institution may implement independently or begin a paid pilot around one research thesis. Mature teams can enter through a readiness assessment.",
-  },
-  {
-    qCn: "价格包含哪些范围？",
-    qEn: "What does the starting price cover?",
-    aCn: "起价覆盖 6 个远程工作 Session、会前准备、阶段材料与最终实施路线。额外定制、税费、差旅及现场工作单独确认。",
-    aEn: "The starting price covers six remote working sessions, preparation, working artifacts and the implementation roadmap. Additional customization, taxes, travel and onsite work are quoted separately.",
+    aCn: "机构可以独立实施，也可以围绕一个明确研究问题继续讨论持续跟踪、研究协作或系统方法。具体范围根据团队现状与研究目标共同确认。",
+    aEn: "The institution may implement independently or continue around one explicit research question through continuous monitoring, research exchange or system-method collaboration. Scope is agreed around the team’s current state and research objective.",
   },
 ];
 
@@ -155,14 +149,14 @@ export default function WorkshopPreview({ initialLanguage = "cn" }: { initialLan
           </div>
         </div>
         <aside className={styles.offer}>
-          <p>FIXED-SCOPE STARTING POINT</p>
-          <div><strong>{isCn ? "¥100,000 起" : "From US$15,000"}</strong><span>{isCn ? "6 个远程工作 Session" : "Six remote working sessions"}</span></div>
+          <p>SIX-SESSION WORKING FORMAT</p>
+          <div><strong>{isCn ? "6 个工作 Session" : "Six working sessions"}</strong><span>{isCn ? "围绕一个真实机构研究场景" : "Around one real institutional research context"}</span></div>
           <dl>
             <div><dt>{isCn ? "周期" : "TIMELINE"}</dt><dd>{isCn ? "通常 6–8 周" : "Typically 6–8 weeks"}</dd></div>
             <div><dt>{isCn ? "核心团队" : "CORE TEAM"}</dt><dd>{isCn ? "建议不超过 8 人" : "Up to eight working members"}</dd></div>
             <div><dt>{isCn ? "最终交付" : "FINAL OUTPUT"}</dt><dd>{isCn ? "基础系统 + 90 天实施路线" : "System foundation + 90-day roadmap"}</dd></div>
           </dl>
-          <small>{isCn ? "定制范围、税费、差旅与现场工作另议。" : "Customization, taxes, travel and onsite work quoted separately."}</small>
+          <small>{isCn ? "具体范围、参与角色与工作方式根据机构场景共同确认。" : "Scope, participants and working format are agreed around the institutional context."}</small>
         </aside>
       </section>
 
@@ -188,7 +182,7 @@ export default function WorkshopPreview({ initialLanguage = "cn" }: { initialLan
         <div className={styles.pathwaySteps}>
           <article><small>01</small><strong>WORKSHOP</strong><span>{isCn ? "建立共同语言、系统基础与验收规则" : "Establish shared language, system foundations and review rules"}</span></article>
           <i><ArrowIcon /></i>
-          <article><small>02</small><strong>RESEARCH DESK PILOT</strong><span>{isCn ? "围绕一个真实命题验证持续研究回路" : "Validate the operating loop around one live thesis"}</span></article>
+          <article><small>02</small><strong>CONTINUOUS RESEARCH</strong><span>{isCn ? "围绕一个真实命题建立持续跟踪与更新回路" : "Establish continuous monitoring and updates around one live thesis"}</span></article>
           <i><ArrowIcon /></i>
           <article><small>03</small><strong>PRIVATE ADAPTATION</strong><span>{isCn ? "按需进入内部数据、权限与治理环境" : "Adapt to internal data, permissions and governance as needed"}</span></article>
         </div>
@@ -196,7 +190,7 @@ export default function WorkshopPreview({ initialLanguage = "cn" }: { initialLan
       </section>
 
       <section className={styles.faq} aria-labelledby="faq-title">
-        <div><p className={styles.eyebrow}>QUESTIONS / 03</p><h2 id="faq-title">{isCn ? "机构采购前通常会问。" : "Questions institutions ask before engaging."}</h2></div>
+        <div><p className={styles.eyebrow}>QUESTIONS / 03</p><h2 id="faq-title">{isCn ? "开始前通常会确认的问题。" : "Questions to clarify before starting."}</h2></div>
         <div>
           {faqs.map((item) => <details key={item.qEn}><summary>{isCn ? item.qCn : item.qEn}<span>+</span></summary><p>{isCn ? item.aCn : item.aEn}</p></details>)}
         </div>

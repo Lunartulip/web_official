@@ -1,14 +1,14 @@
 # LunarTulip Lab Official Website
 
-Official bilingual website for LunarTulip Lab, an AI-native active-management research and decision-systems studio.
+Official bilingual website for Lunartulip Lab, an AI-native independent public-equities research institution focused on global AI technology markets.
 
 ## What is included
 
 - Chinese / English language switching
-- Responsive institutional landing page
-- Capability Map and research workflow interactions
-- Product levels and AlphaMap systems-in-practice examples
-- Research Notes taxonomy
+- Responsive institutional research website
+- Discretionary fundamental and systematic quantitative research
+- Deep Dives, Authority Ledger and Research Desk interface samples
+- Research methods, workflow interactions and Research Notes taxonomy
 - Official contact entry: `t.stephanie@lunartuliplab.com`
 
 This repository contains only the public website. It intentionally excludes internal research data, strategy code, client materials, trading logs, credentials, and private LunarTulip Lab assets.

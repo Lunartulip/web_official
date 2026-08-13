@@ -2,45 +2,23 @@ import type { Metadata } from "next";
 import DeskPreview from "../../desk/desk-preview";
 
 export const metadata: Metadata = {
-  title: "Always-On Research Desk",
-  description: "An invited B2B research workspace connecting an event ledger, hypothesis board, daily priorities and decision memory for institutional active investment teams.",
+  title: "Always-On Research Desk | AI-native Research Workspace",
+  description: "See how Lunartulip Lab combines discretionary fundamental and systematic quant research to detect change, test judgment, manage portfolio constraints and learn from outcomes.",
   alternates: {
-    canonical: "/en/desk",
+    canonical: "https://lunartuliplab.com/en/desk",
     languages: {
-      "zh-CN": "/desk",
-      en: "/en/desk",
+      "zh-CN": "https://lunartuliplab.com/desk",
+      en: "https://lunartuliplab.com/en/desk",
     },
   },
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "/en/desk",
     title: "Always-On Research Desk | Lunartulip Lab",
-    description: "Validate one live research loop through an invited B2B paid pilot.",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Lunartulip Research Desk" }],
-  },
-};
-
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "@id": "https://lunartuliplab.com/desk#service",
-  name: "Always-On Research Desk",
-  url: "https://lunartuliplab.com/en/desk",
-  provider: { "@id": "https://lunartuliplab.com/#organization" },
-  serviceType: "Continuous institutional investment research collaboration",
-  offers: {
-    "@type": "Offer",
-    description: "Invited B2B paid pilot with custom pricing based on coverage, data, cadence, integration and support.",
-    availability: "https://schema.org/LimitedAvailability",
+    description: "Discretionary fundamental × systematic quant × a continuously operating research and decision workspace.",
+    url: "https://lunartuliplab.com/en/desk",
+    type: "website",
   },
 };
 
 export default function EnglishDeskPage() {
-  return (
-    <>
-      <DeskPreview initialLanguage="en" />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-    </>
-  );
+  return <DeskPreview initialLanguage="en" />;
 }

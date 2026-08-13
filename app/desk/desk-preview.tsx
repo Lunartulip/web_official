@@ -10,45 +10,52 @@ type Language = "cn" | "en";
 
 const values = [
   {
-    code: "01 / CHANGE LEDGER",
-    titleCn: "事件进入账本，而不是流过屏幕",
-    titleEn: "Events enter a ledger—not a vanishing feed",
-    bodyCn: "每条重要变化都连接到对应假设、证据来源与待验证节点，明确它加强、削弱或尚未改变了什么。",
-    bodyEn: "Each material change connects to a hypothesis, source and next validation point—showing what it strengthens, weakens or leaves unresolved.",
+    code: "01 / RESEARCH",
+    titleCn: "全球信息、产业因果与投资命题",
+    titleEn: "Global information, industry causality and investment theses",
+    bodyCn: "持续摄入公开信息，把公司、产业链、证据与可证伪命题组织进同一研究状态。",
+    bodyEn: "Continuously ingest public information and organize companies, value chains, evidence and falsifiable theses in one research state.",
   },
   {
-    code: "02 / HYPOTHESIS BOARD",
-    titleCn: "观点拥有生命周期",
-    titleEn: "Every thesis has a lifecycle",
-    bodyCn: "把研究命题、反证条件、时间窗口与产业传导路径放进同一张持续更新的看板，而不是散落在对话与文档中。",
-    bodyEn: "Keep theses, falsification criteria, time windows and industry transmission paths in one evolving board—not scattered across chats and documents.",
+    code: "02 / STRATEGY",
+    titleCn: "因子实验、回测、压力测试与市场状态",
+    titleEn: "Factor research, backtests, stress tests and market regimes",
+    bodyCn: "系统化量化引擎检验信号、配置规则与失效边界，为主观判断提供独立验证，不替代 PM。",
+    bodyEn: "The systematic quant engine tests signals, allocation rules and failure boundaries—independent validation without replacing the PM.",
   },
   {
-    code: "03 / DECISION MEMORY",
-    titleCn: "让结果写回下一次研究",
-    titleEn: "Outcomes improve the next research cycle",
-    bodyCn: "保留判断形成时的信息集、后续动作与结果反馈，区分研究、执行和外部噪音，把复盘沉淀成可复用的系统记忆。",
-    bodyEn: "Preserve the information set, subsequent actions and outcome feedback; separate research, execution and noise, then turn review into reusable memory.",
+    code: "03 / PORTFOLIO",
+    titleCn: "组合状态、风险预算、约束与监控",
+    titleEn: "Portfolio state, risk budgets, constraints and monitoring",
+    bodyCn: "让判断进入受约束的组合表达，并持续观察集中度、市场状态、风险边界与结果路径。",
+    bodyEn: "Translate judgment into constrained portfolio expression while monitoring concentration, regimes, risk boundaries and outcome paths.",
+  },
+  {
+    code: "04 / LEARNING",
+    titleCn: "Decision Memory、结果归因与规则更新",
+    titleEn: "Decision memory, attribution and rule updates",
+    bodyCn: "保存判断时点的信息集与后续结果，经归因和人工治理后，把经验写回下一轮研究与决策。",
+    bodyEn: "Preserve point-in-time information and outcomes, then feed governed attribution back into the next research and decision cycle.",
   },
 ];
 
 const workflow = [
-  { code: "SENSE", cn: "捕捉变化", en: "Sense change" },
-  { code: "UPDATE", cn: "更新假设", en: "Update theses" },
-  { code: "BRIEF", cn: "形成简报", en: "Form the brief" },
-  { code: "LEARN", cn: "反馈复盘", en: "Learn from outcomes" },
+  { code: "SENSE", cn: "摄入全球变化", en: "Sense global change" },
+  { code: "REASON", cn: "形成并验证判断", en: "Form and test judgment" },
+  { code: "ALLOCATE", cn: "进入组合约束", en: "Enter portfolio constraints" },
+  { code: "LEARN", cn: "归因并更新记忆", en: "Attribute and update memory" },
 ];
 
-const pilotSteps = [
-  { code: "01 / SCOPE", cn: "确认一个真实研究命题、覆盖范围、数据来源与人工责任人。", en: "Define one live thesis, coverage, data sources and accountable human owner." },
-  { code: "02 / OPERATE", cn: "在受控边界内运行事件账本、假设更新、每日优先级与 Decision Memory。", en: "Operate the ledger, thesis updates, daily priorities and decision memory within a controlled boundary." },
-  { code: "03 / EVALUATE", cn: "依据使用频率、可追溯性、更新质量与团队采用情况决定年度合作。", en: "Evaluate usage, traceability, update quality and team adoption before an annual partnership." },
-];
-
-const deskFaqs = [
-  { qCn: "Desk 是可自助购买的软件吗？", qEn: "Is the Desk self-serve software?", aCn: "当前以机构 B2B 受邀付费试点进入。覆盖范围、数据边界、更新频率、人工审核和支持方式需要共同确认。", aEn: "The current entry point is an invited B2B paid pilot. Coverage, data boundaries, cadence, human review and support are agreed jointly." },
-  { qCn: "必须先完成 Workshop 吗？", qEn: "Is the Workshop required first?", aCn: "Workshop 是默认部署路径。已有成熟研究流程、明确负责人和数据边界的机构，可以先做 readiness assessment，再直接进入 Desk 试点。", aEn: "The Workshop is the default deployment path. Mature institutions with an accountable owner and defined data boundaries may enter through a readiness assessment." },
-  { qCn: "如何报价？", qEn: "How is it priced?", aCn: "试点与年度合作均按研究覆盖、数据来源、更新频率、集成、席位和支持需求定制报价。当前不提供个人订阅或公开自助购买。", aEn: "Pilot and annual pricing depends on research coverage, data sources, cadence, integration, seats and support. There is no individual subscription or public self-serve purchase." },
+const architectureLayers = [
+  { code: "01", cn: "全球信息摄入", en: "Global information intake", engine: "BOTH ENGINES", mode: "AUTOMATED INTAKE" },
+  { code: "02", cn: "证据与覆盖", en: "Evidence & coverage", engine: "FUNDAMENTAL", mode: "HUMAN-GOVERNED" },
+  { code: "03", cn: "AlphaMap × Ontology", en: "AlphaMap × Ontology", engine: "FUNDAMENTAL / R-LINE", mode: "HUMAN-GOVERNED" },
+  { code: "04", cn: "假设生命周期", en: "Thesis lifecycle", engine: "FUNDAMENTAL", mode: "PM-GOVERNED" },
+  { code: "05", cn: "策略发现", en: "Strategy discovery", engine: "SYSTEMATIC QUANT", mode: "MOSTLY AUTOMATED" },
+  { code: "06", cn: "回测与量化验证", en: "Backtesting & quant validation", engine: "SYSTEMATIC QUANT", mode: "MOSTLY AUTOMATED" },
+  { code: "07", cn: "组合与风险约束", en: "Portfolio & risk constraints", engine: "BOTH ENGINES", mode: "GOVERNED" },
+  { code: "08", cn: "双 NAV 与结果归因", en: "Dual NAV & outcome attribution", engine: "BOTH ENGINES", mode: "AUTOMATED OUTPUT" },
+  { code: "09", cn: "决策记忆与学习", en: "Decision memory & learning", engine: "SHARED LOOP", mode: "HUMAN-APPROVED" },
 ];
 
 function ArrowIcon() {
@@ -70,9 +77,9 @@ function UpRightIcon() {
 export default function DeskPreview({ initialLanguage = "cn" }: { initialLanguage?: Language }) {
   const [language, setLanguage] = useState<Language>(initialLanguage);
   const isCn = language === "cn";
-  const demoMailto = institutionalMailto({
-    source: "RESEARCH_DESK_DEMO",
-    topic: "Research Desk Demo Request",
+  const exchangeMailto = institutionalMailto({
+    source: "RESEARCH_DESK_EXCHANGE",
+    topic: "Research Desk / Institutional Research Exchange",
     language,
   });
 
@@ -103,39 +110,39 @@ export default function DeskPreview({ initialLanguage = "cn" }: { initialLanguag
             <button type="button" className={isCn ? styles.active : ""} aria-pressed={isCn} onClick={() => selectLanguage("cn")}>中</button>
             <button type="button" className={!isCn ? styles.active : ""} aria-pressed={!isCn} onClick={() => selectLanguage("en")}>EN</button>
           </div>
-          <a className={styles.headerCta} href={demoMailto}>
-            {isCn ? "预约演示" : "Request demo"} <UpRightIcon />
-          </a>
+          <Link className={styles.headerCta} href={isCn ? "/institutional-access" : "/en/institutional-access"}>
+            {isCn ? "机构研究交流" : "Institutional research exchange"} <UpRightIcon />
+          </Link>
         </div>
       </header>
 
       <section className={styles.hero}>
         <div className={styles.heroCopy}>
-          <p className={styles.eyebrow}>INSTITUTIONAL B2B PILOT / ALWAYS-ON RESEARCH</p>
+          <p className={styles.eyebrow}>AI-NATIVE RESEARCH & DECISION WORKSPACE</p>
           <p className={styles.productName}>Always-On Research Desk</p>
           <h1>
-            {isCn ? <>每天知道什么变了，<br /><span>哪些判断需要更新。</span></> : <>Know what changed today<br /><span>and which judgments need updating.</span></>}
+            {isCn ? <>每天更快看清什么变了，<br /><span>哪些判断需要更新。</span></> : <>See what changed faster—<br /><span>and which judgments need updating.</span></>}
           </h1>
           <p className={styles.heroLead}>
             {isCn
-              ? "面向公募、私募、资管机构与专业家族办公室的持续研究工作台。事件账本、假设看板、每日优先级与 Decision Memory 在同一套研究状态中运行，由研究员和 PM 审阅关键更新。"
-              : "An always-on research workspace for funds, asset managers and professional family offices. The event ledger, hypothesis board, daily priorities and decision memory operate in one research state, with material updates reviewed by researchers and PMs."}
+              ? "Always-On Research Desk 汇集主观基本面与系统化量化两台研究引擎，把市场变化、产业因果、策略验证、组合约束与结果反馈组织成清晰、可追溯、可持续更新的研究工作区。"
+              : "Always-On Research Desk brings together discretionary fundamental and systematic quant research, organizing market change, industry causality, strategy validation, portfolio constraints and outcome feedback into a clear, traceable and continuously updated workspace."}
           </p>
           <div className={styles.heroActions}>
             <a className={styles.primaryButton} href="#workspace">
-              {isCn ? "查看产品界面" : "Explore the interface"} <ArrowIcon />
+              {isCn ? "查看真实界面" : "Explore the real interface"} <ArrowIcon />
             </a>
-            <a className={styles.textLink} href={demoMailto}>
-              {isCn ? "申请受邀演示" : "Request an invited demo"} <UpRightIcon />
+            <a className={styles.textLink} href="#architecture">
+              {isCn ? "查看九层架构" : "View the nine-layer architecture"} <ArrowIcon />
             </a>
           </div>
           <p className={styles.inviteNote}>
             <span />
-            {isCn ? "当前开放 B2B 受邀付费试点 · 共同确认首个研究命题与边界" : "Invited B2B paid pilots · Define the first thesis and boundaries together"}
+            {isCn ? "持续运行 · 人的判断在环 · 证据始终可回溯" : "Continuously operating · Human judgment in loop · Evidence traceable"}
           </p>
         </div>
 
-        <div className={styles.heroConsole} aria-label={isCn ? "Research Desk 产品界面示意" : "Research Desk interface preview"}>
+        <div className={styles.heroConsole} aria-label={isCn ? "Research Desk 脱敏界面预览" : "Sanitized Research Desk interface preview"}>
           <div className={styles.consoleHeader}>
             <span>RESEARCH DESK / TODAY</span>
             <i><b /> SYSTEM PULSE · NOMINAL</i>
@@ -143,7 +150,7 @@ export default function DeskPreview({ initialLanguage = "cn" }: { initialLanguag
           <div className={styles.consoleBody}>
             <aside className={styles.consoleNav}>
               <strong>LT</strong>
-              {["TODAY", "THESES", "LEDGER", "MEMORY"].map((item, index) => <span className={index === 0 ? styles.navActive : ""} key={item}>{item.slice(0, 2)}</span>)}
+              {["TODAY", "COVERAGE", "HYPOTHESES", "MEMORY"].map((item, index) => <span className={index === 0 ? styles.navActive : ""} key={item}>{item.slice(0, 2)}</span>)}
             </aside>
             <div className={styles.todayPanel}>
               <div className={styles.panelHeading}>
@@ -162,14 +169,14 @@ export default function DeskPreview({ initialLanguage = "cn" }: { initialLanguag
               </div>
             </div>
           </div>
-          <div className={styles.consoleFooter}><span>DEMO DATA · SANITIZED</span><i>HUMAN JUDGMENT IN LOOP</i></div>
+          <div className={styles.consoleFooter}><span>SANITIZED WORKSPACE VIEW</span><i>HUMAN JUDGMENT IN LOOP</i></div>
         </div>
       </section>
 
       <section className={styles.values} aria-labelledby="desk-values">
         <div className={styles.sectionHeading}>
-          <div><p className={styles.eyebrow}>WHY RESEARCH DESK / 01</p><h2 id="desk-values">{isCn ? "把变化、判断与反馈放进同一套研究状态。" : "Keep change, judgment and feedback in one research state."}</h2></div>
-          <p>{isCn ? "把一次性的研究动作变成能够持续更新、接受检验并保留记忆的协作系统。" : "Turn one-off research actions into a collaborative system that updates, faces evidence and retains memory."}</p>
+          <div><p className={styles.eyebrow}>30-SECOND SYSTEM VIEW / 01</p><h2 id="desk-values">{isCn ? "两台研究引擎，在一个工作区形成连续判断。" : "Two research engines form continuous judgment in one workspace."}</h2></div>
+          <p>{isCn ? "主观基本面研究解释产业与公司，系统化量化研究检验信号与组合纪律；Research Desk 把两者连接为从变化识别、判断更新到结果学习的连续研究体验。" : "Discretionary fundamental research explains industries and companies; systematic quant tests signals and portfolio discipline. Research Desk connects both into a continuous experience from change detection and judgment updates to outcome learning."}</p>
         </div>
         <div className={styles.valueGrid}>
           {values.map((value) => (
@@ -180,20 +187,42 @@ export default function DeskPreview({ initialLanguage = "cn" }: { initialLanguag
             </article>
           ))}
         </div>
+        <div className={styles.engineTopology}>
+          <article>
+            <p>ENGINE 01 / DISCRETIONARY FUNDAMENTAL</p>
+            <h3>{isCn ? "主观基本面系统" : "Discretionary fundamental system"}</h3>
+            <span>{isCn ? "由 PM 判断驱动，通过 Coverage、R 线 AlphaMap × Ontology、产业因果、证据与 HYP 生命周期持续更新公司与产业判断。" : "Driven by PM judgment, using Coverage, the R-line AlphaMap × Ontology, industry causality, evidence and HYP lifecycles to continuously update company and industry views."}</span>
+            <small>HUMAN-LED RESEARCH</small>
+          </article>
+          <i aria-hidden="true">→</i>
+          <article>
+            <p>ENGINE 02 / SYSTEMATIC QUANT</p>
+            <h3>{isCn ? "系统化量化系统" : "Systematic quant system"}</h3>
+            <span>{isCn ? "基本自动运行。QuantLab 持续完成因子与模型实验、回测验证、配置与量化组合更新。" : "Mostly automated. QuantLab continuously runs factor and model research, backtesting, allocation and systematic portfolio updates."}</span>
+            <small>SYSTEMATIC VALIDATION</small>
+          </article>
+          <i aria-hidden="true">→</i>
+          <article className={styles.topologyDesk}>
+            <p>RESEARCH WORKSPACE</p>
+            <h3>Always-On Research Desk</h3>
+            <span>{isCn ? "在七个工作区中连接两台引擎的研究状态、主观与量化双 NAV、结果账本和可回看的 Decision Memory。" : "Connects both engines’ research state, discretionary and quant NAV curves, outcome ledgers and reviewable decision memory across seven workspaces."}</span>
+            <small>CONTINUOUS RESEARCH WORKSPACE</small>
+          </article>
+        </div>
       </section>
 
       <section className={styles.workspace} id="workspace" aria-labelledby="workspace-title">
         <div className={styles.workspaceIntro}>
-          <p className={styles.eyebrow}>PRODUCT GLANCE / 02</p>
-          <h2 id="workspace-title">{isCn ? "同一套研究状态，三个工作切面。" : "One research state, three working views."}</h2>
-          <p>{isCn ? "以下为脱敏演示界面。真实试点的覆盖范围、信息源与研究边界由双方共同确认。" : "The interface below uses sanitized demo data. Coverage, sources and research boundaries are agreed jointly for each pilot."}</p>
+          <p className={styles.eyebrow}>WORKSPACE IN PRACTICE / 02</p>
+          <h2 id="workspace-title">{isCn ? "七个工作区，把研究状态转化为日常行动。" : "Seven workspaces turn research state into daily action."}</h2>
+          <p>{isCn ? "Today、Change Ledger、Coverage、Hypotheses、Decision Memory、Briefs 与 System Pulse 分别承接优先级、变化、覆盖、命题、学习、输出和运行状态。以下为经过脱敏的实际界面。" : "Today, Change Ledger, Coverage, Hypotheses, Decision Memory, Briefs and System Pulse organize priorities, change, coverage, theses, learning, output and operating state. The interfaces below are sanitized views of the working product."}</p>
         </div>
 
         <div className={styles.productShell}>
           <div className={styles.shellBar}>
             <div><span /><span /><span /></div>
             <strong>ALWAYS-ON RESEARCH DESK</strong>
-            <small>INVITED PREVIEW</small>
+            <small>WORKSPACE PREVIEW</small>
           </div>
           <div className={styles.shellTabs}>
             <span className={styles.shellActive}>TODAY</span><span>HYPOTHESES</span><span>CHANGE LEDGER</span>
@@ -219,7 +248,7 @@ export default function DeskPreview({ initialLanguage = "cn" }: { initialLanguag
       <section className={styles.loop} aria-labelledby="loop-title">
         <div>
           <p className={styles.eyebrow}>OPERATING LOOP / 03</p>
-          <h2 id="loop-title">{isCn ? "从变化到记忆，形成一条可持续运行的回路。" : "From change to memory, forming an operating research loop."}</h2>
+          <h2 id="loop-title">{isCn ? "两台研究引擎，最终进入同一条学习回路。" : "Two research engines enter one learning loop."}</h2>
         </div>
         <div className={styles.loopTrack}>
           {workflow.map((item, index) => (
@@ -233,36 +262,53 @@ export default function DeskPreview({ initialLanguage = "cn" }: { initialLanguag
         </div>
       </section>
 
-      <section className={styles.pilot} aria-labelledby="pilot-title">
+      <section className={styles.pilot} id="architecture" aria-labelledby="pilot-title">
         <div className={styles.pilotIntro}>
-          <p className={styles.eyebrow}>B2B PILOT PATH / 04</p>
-          <h2 id="pilot-title">{isCn ? "先验证一条真实研究回路，再决定年度合作。" : "Validate one live research loop before an annual partnership."}</h2>
-          <p>{isCn ? "Workshop 是默认进入路径；已有成熟流程的机构可经 readiness assessment 直接进入。试点按覆盖范围、数据、频率、集成与支持定制报价。" : "The Workshop is the default entry path; mature institutions may enter through a readiness assessment. Pilot pricing is customized by coverage, data, cadence, integration and support."}</p>
+          <p className={styles.eyebrow}>NINE-LAYER ARCHITECTURE / 04</p>
+          <h2 id="pilot-title">{isCn ? "从信息到反馈，看清判断如何形成、验证和更新。" : "See how judgment forms, gets tested and improves from information to feedback."}</h2>
+          <p>{isCn ? "九层能力覆盖信息摄入、证据与产业因果、命题、策略发现、量化验证、组合约束、结果归因与 Decision Memory。每层标明主要研究引擎与运行方式，便于快速理解人的判断与系统纪律如何协作。" : "Nine layers cover information intake, evidence and industry causality, theses, strategy discovery, quantitative validation, portfolio constraints, outcome attribution and decision memory. Each layer identifies its primary engine and operating mode, making the division between human judgment and system discipline clear."}</p>
         </div>
-        <div className={styles.pilotGrid}>
-          {pilotSteps.map((step) => <article key={step.code}><small>{step.code}</small><p>{isCn ? step.cn : step.en}</p></article>)}
+        <div className={styles.architectureGrid}>
+          {architectureLayers.map((layer) => (
+            <article key={layer.code}>
+              <small>{layer.code}</small>
+              <strong>{isCn ? layer.cn : layer.en}</strong>
+              <span>{layer.engine}</span>
+              <em>{layer.mode}</em>
+            </article>
+          ))}
         </div>
-        <div className={styles.deskFaq}>
-          {deskFaqs.map((item) => <details key={item.qEn}><summary>{isCn ? item.qCn : item.qEn}<span>+</span></summary><p>{isCn ? item.aCn : item.aEn}</p></details>)}
+        <div className={styles.architectureBoundary}>
+          <p>{isCn ? "可供评估" : "AVAILABLE FOR EVALUATION"}</p>
+          <strong>{isCn ? "系统结构、脱敏界面、研究样章、聚合验证与更正记录" : "System architecture, sanitized interfaces, research samples, aggregate validation and corrections"}</strong>
+          <p>{isCn ? "受保护的机构资产" : "PROTECTED INSTITUTIONAL ASSETS"}</p>
+          <strong>{isCn ? "实时仓位、模型权重、单笔判断原文、执行细节与核心 Decision Memory" : "Live positions, model weights, original calls, execution details and core decision memory"}</strong>
         </div>
       </section>
 
       <section className={styles.request} id="request-demo" aria-labelledby="request-title">
         <div>
-          <p className={styles.eyebrow}>REQUEST AN INVITED DEMO / 05</p>
-          <h2 id="request-title">{isCn ? "从一个真实研究命题开始。" : "Start with one real research thesis."}</h2>
-          <p>{isCn ? "请在邮件中简单介绍机构或团队、关注的研究方向，以及希望通过 Desk 验证的问题。我们将共同确认首个试点的覆盖范围与数据边界。" : "Tell us briefly about your institution or team, research focus and the problem you want to test through the Desk. We will define the first pilot’s coverage and data boundaries together."}</p>
+          <p className={styles.eyebrow}>DEEPER VERIFICATION / 05</p>
+          <h2 id="request-title">{isCn ? "从研究作品开始，进一步了解系统方法。" : "Begin with the research, then explore the system behind it."}</h2>
+          <p>{isCn ? "通过 Deep Dive 查看具体研究如何形成，通过 Authority Ledger 查看历史判断如何接受结果检验；机构团队也可以围绕一个明确研究问题，讨论适合自身场景的持续跟踪与研究协作方式。" : "Use Deep Dives to see how specific research is formed and the Authority Ledger to see how prior judgments meet outcomes. Institutional teams can also begin with one clear research question and discuss a suitable format for continuous monitoring and research exchange."}</p>
         </div>
-        <a className={styles.requestButton} href={demoMailto}>
-          <small>{isCn ? "当前仅限受邀演示" : "INVITED DEMOS ONLY"}</small>
-          <strong>{isCn ? "预约 Research Desk 演示" : "Request a Research Desk demo"}</strong>
-          <UpRightIcon />
-        </a>
+        <div className={styles.proofLinks}>
+          <Link className={styles.requestButton} href={isCn ? "/deep-dive" : "/en/deep-dive"}>
+            <small>PUBLIC RESEARCH OBJECTS</small>
+            <strong>{isCn ? "阅读 Deep Dive" : "Read Deep Dives"}</strong>
+            <UpRightIcon />
+          </Link>
+          <Link className={styles.requestButton} href={isCn ? "/authority-ledger" : "/en/authority-ledger"}>
+            <small>CALLS & OUTCOMES</small>
+            <strong>{isCn ? "打开 Authority Ledger" : "Open Authority Ledger"}</strong>
+            <UpRightIcon />
+          </Link>
+        </div>
       </section>
 
       <section className={styles.boundary}>
-        <p>RESEARCH COLLABORATION / CURRENT BOUNDARY</p>
-        <span>{isCn ? "本页展示脱敏演示数据，用于介绍研究方法与系统能力。Research Desk 当前为受邀研究协作试点，不构成投资建议、基金募集、金融产品推介或收益承诺。" : "This page uses sanitized demo data to illustrate research methods and system capabilities. Research Desk is currently an invited research-collaboration pilot—not investment advice, fundraising, a financial-product solicitation or a promise of returns."}</span>
+        <p>RESEARCH METHODOLOGY / IMPORTANT INFORMATION</p>
+        <span>{isCn ? "本页展示研究方法、系统结构与脱敏界面，仅供了解 Lunartulip 的研究能力与工作方式；不构成投资建议、基金募集、金融产品推介或收益承诺。" : "This page presents research methods, system architecture and sanitized interfaces to explain Lunartulip’s research capabilities and working approach. It is not investment advice, fundraising, financial-product solicitation or a promise of returns."}</span>
       </section>
 
       <footer className={styles.footer}>
@@ -270,8 +316,8 @@ export default function DeskPreview({ initialLanguage = "cn" }: { initialLanguag
           <Image src="/lunartulip-silver-emblem.png" width={29} height={32} alt="" aria-hidden="true" />
           <span>LUNARTULIP LAB</span>
         </Link>
-        <p>ALWAYS-ON RESEARCH DESK · INVITED PREVIEW</p>
-        <a href={institutionalMailto({ source: "RESEARCH_DESK_FOOTER", topic: "Research Desk Inquiry", language })}>t.stephanie@lunartuliplab.com</a>
+        <p>ALWAYS-ON RESEARCH DESK · RESEARCH & DECISION WORKSPACE</p>
+        <a href={exchangeMailto}>{isCn ? "机构研究交流" : "Institutional research exchange"}</a>
       </footer>
     </main>
   );

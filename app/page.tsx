@@ -36,131 +36,121 @@ const en: Record<string, string> = {
   "命题 / 图谱 / 验证结果": "Thesis / map / validation", "决策包 + 触发条件": "Decision package + triggers",
   "用反馈更新系统": "Update through feedback", "区分判断、执行与外部噪音的贡献，把真实结果转化为新的系统规则。": "Separate judgment, execution and external noise, then turn outcomes into improved system rules.",
   "过程记录 + 结果反馈": "Process record + outcomes", "归因报告 + 版本更新": "Attribution + system update",
-  "机构投研升级": "Institutional Research Upgrade", "投研基础系统": "Research Foundation System",
-  "以标准化 Workshop 为部署方式，覆盖从信息摄入、假设管理和策略逆向工程，到风险闸门、可复用 Skill 与个人 Agent OS 的完整基础链路。": "A standardized workshop that installs a complete research foundation—from information ingestion, thesis management and strategy reverse-engineering to risk gates, reusable skills and a personal Agent OS.",
-  "Schema、Hypothesis Card 与研究生产链路": "Schemas, hypothesis cards and research production chain", "Risk Gate、Skill / SOP 与端到端示范": "Risk gates, skills / SOPs and end-to-end demonstrations", "个人 Agent OS 与 Decision Memory 蓝图": "Personal Agent OS and decision-memory blueprint",
-  "产业因果研究": "Industry Causal Research", "围绕客户真实行业、股票池与数据边界，通过咨询 Session 建模，并以可本地部署的 AlphaMap 软件承载产业因果链与持续跟踪。": "Model the client’s real sectors, universe and data boundaries through focused sessions, then deliver the causal chain and ongoing tracking in a locally deployable AlphaMap workspace.",
-  "客户场景下的产业因果模型": "A client-specific industry causal model", "驱动—传导—兑现路径与观察节点": "Drivers, transmission, realization and watchpoints", "可本地部署的 AlphaMap 工作台": "Locally deployable AlphaMap workspace",
-  "决策系统闭环": "Decision System Loop", "以私有 Harness 连接多个研究场景、人员权限、风险边界与决策记忆，让真实反馈持续写回系统，形成可治理、可演化的组织能力。": "A private harness connecting research contexts, permissions, risk boundaries and decision memory—so real outcomes continuously update a governable, evolving institutional system.",
-  "跨场景的研究与决策编排": "Cross-context research and decision orchestration", "权限、风险闸门与执行治理": "Permissions, risk gates and execution governance", "持续运行的反馈与决策记忆": "Persistent feedback and decision memory",
-  "为主动管理构建": "Build", "研究与": "research and decision", "决策系统": "systems for active management",
-  "从研究基础系统、产业因果模型到机构决策闭环，": "From research foundations and industry causal models to institutional decision loops,",
-  "让每一次判断，都成为下一次决策的系统资产。": "turn every judgment into a system asset for the next decision.", "探索能力地图": "Explore capabilities",
-  "从研究命题到反馈闭环": "From investment thesis to feedback loop", "把模糊判断转化为可验证命题。": "Turn fuzzy judgment into testable theses.", "聚合多源证据，显式化因果链路。": "Aggregate evidence and make causal chains explicit.", "评估决策效果，让反馈驱动迭代。": "Measure decisions and let feedback drive iteration.",
-  "把基金经理的判断方式，写进一套会生长的买方系统。": "Encode the PM’s judgment into a buy-side system that learns.",
-  "Lunartulip Lab 将信息、假设、证据、动作、仓位、结果与记忆连接起来，让产业判断、量化纪律与 Agent 工作流共同进入持续接受市场反馈的决策系统。": "Lunartulip Lab connects information, theses, evidence, actions, positions, outcomes and memory—bringing domain judgment, quantitative discipline and agent workflows into one decision system shaped by market feedback.",
-  "让每一次研究，都提高下一次研究的起点。": "Make every research cycle raise the starting point of the next.", "判断": "JUDGMENT", "证据": "EVIDENCE", "系统": "SYSTEM",
-  "人的判断\n× 系统的纪律": "Human judgment\n× system discipline", "保留基金经理对语义、情境与非线性机会的理解，用量化与 Agent 外骨骼减少漏损。": "Preserve the PM’s command of context and nonlinear opportunity; use quantitative and agentic scaffolding to reduce leakage.",
-  "真实反馈\n优先于漂亮自动化": "Real feedback\nover elegant automation", "系统的价值不由流程图决定，而由它能否接受现实检验、识别偏差并持续更新决定。": "A system earns its value by surviving reality, exposing error and updating—not by looking elegant on a diagram.",
-  "一张从研究到决策的能力地图": "A capability map from research to decision", "选择模块，查看它在系统中的输入、输出与核心动作。": "Select a module to inspect its inputs, outputs and core actions.",
-  "研究如何穿过系统": "How research moves through the system", "五个阶段不是流水线终点，而是一条带反馈的研究回路。": "Five stages form a feedback-bearing research loop, not a one-way pipeline.",
-  "三种交付深度": "Three levels of delivery", "横向建立完整基础，纵向打穿真实场景，最终让系统在机构内部闭环复利。": "Build the full foundation, penetrate a real investment context, then compound the system inside the institution.",
-  "把研究做成会生长的系统。": "Build research systems that learn.", "返回信号起点": "Back to signal origin"
+  "判断": "JUDGMENT", "证据": "EVIDENCE", "系统": "SYSTEM"
 };
 
 const navigation = [
-  { label: "产品", labelEn: "Products", href: "#products" },
-  { label: "能力地图", href: "#capabilities" },
-  { label: "工作流", href: "#workflow" },
-  { label: "资管方向", labelEn: "Direction", href: "#direction" },
+  { label: "双研究引擎", labelEn: "Research", href: "#research" },
+  { label: "研究与结果", labelEn: "Research & Outcomes", href: "#practice" },
+  { label: "研究方法", labelEn: "Research Methods", href: "#capabilities" },
+  { label: "长期方向", labelEn: "Direction", href: "#direction" },
   { label: "手札", href: "#notes" },
-  { label: "合作咨询", href: "#contact" },
+  { label: "研究交流", labelEn: "Engage", href: "#contact" },
 ];
 
 const positioningSignals = [
-  { label: "GLOBAL AI TECHNOLOGY UNIVERSE", cn: "全球泛 AI 科技权益", en: "Global AI technology equities" },
-  { label: "CROSS-MARKET MAPPING", cn: "跨 A 股、美股与港股", en: "A-shares / U.S. / Hong Kong" },
-  { label: "INSTITUTIONAL CONTEXT", cn: "专业机构主动管理", en: "Institutional active management" },
-  { label: "DECISION MODEL", cn: "碳基直觉 × 硅基外骨骼", en: "Human-led × AI-augmented" },
+  { label: "WHO WE ARE", cn: "独立科技权益研究机构", en: "Independent public-equities research" },
+  { label: "ENGINE / FUNDAMENTAL", cn: "主观基本面研究", en: "Discretionary fundamental research" },
+  { label: "ENGINE / QUANT", cn: "系统化量化研究", en: "Systematic quantitative research" },
+  { label: "RESEARCH WORKSPACE", cn: "Always-On Research Desk", en: "Always-On Research Desk" },
+];
+
+const deskCapabilities = [
+  { code: "RESEARCH", cn: "全球信息、产业因果与投资命题", en: "Global information, industry causality and investment theses" },
+  { code: "STRATEGY", cn: "因子实验、回测、压力测试与市场状态", en: "Factor research, backtests, stress tests and market regimes" },
+  { code: "PORTFOLIO", cn: "组合状态、风险预算、约束与监控", en: "Portfolio state, risk budgets, constraints and monitoring" },
+  { code: "LEARNING", cn: "Decision Memory、结果归因与规则更新", en: "Decision memory, attribution and rule updates" },
 ];
 
 const engagementTopics = [
-  { cn: "6-Session Workshop", en: "6-Session Workshop", detailCn: "部署投研基础系统与 90 天实施路线", detailEn: "Install the research foundation and a 90-day roadmap", subject: "6-Session Research System Workshop" },
-  { cn: "Research Desk 试点", en: "Research Desk Pilot", detailCn: "围绕一个真实命题验证持续研究回路", detailEn: "Validate the operating loop around one live thesis", subject: "Research Desk Paid Pilot" },
-  { cn: "机构私有化适配", en: "Private Institutional Adaptation", detailCn: "适配数据、权限、治理与 Decision Memory", detailEn: "Adapt data, permissions, governance and decision memory", subject: "Private Institutional Adaptation" },
-  { cn: "战略机构合作", en: "Strategic Institutional Partnership", detailCn: "讨论研究、技术与长期资管组织共建", detailEn: "Explore research, technology and long-term operating partnerships", subject: "Strategic Institutional Partnership" },
+  { cn: "全球 AI 科技权益", en: "Global AI Technology Equities", detailCn: "围绕公司、产业链与价值捕获交流研究问题", detailEn: "Discuss company, value-chain and value-capture research questions", subject: "Global AI Technology Equity Research" },
+  { cn: "主观基本面研究", en: "Discretionary Fundamental Research", detailCn: "讨论产业因果、公司利润、估值与预期差", detailEn: "Discuss industry causality, earnings, valuation and expectation gaps", subject: "Discretionary Fundamental Research" },
+  { cn: "系统化量化研究", en: "Systematic Quantitative Research", detailCn: "讨论 ML 策略、组合配置、验证方法与结果复盘", detailEn: "Discuss ML strategies, portfolio allocation, validation methods and outcome review", subject: "Systematic Quantitative Research" },
+  { cn: "机构研究交流", en: "Institutional Research Exchange", detailCn: "从一个具体研究问题与清晰边界开始", detailEn: "Begin with one specific research question and explicit boundaries", subject: "Institutional Research Exchange" },
 ];
 
 const collaborationLanes = [
   {
-    code: "CURRENT / INSTITUTIONAL SYSTEMS",
-    titleCn: "机构投研系统",
-    titleEn: "Institutional Research Systems",
-    bodyCn: "从 6-Session Workshop 建立基础，再由 Always-On Research Desk 持续运行；需要进入内部数据与治理边界时，按机构环境完成私有化适配。",
-    bodyEn: "Install the foundation through a six-session deployment, operate it through the Always-On Research Desk, then adapt data and governance for the institutional environment when required.",
-    href: "#products",
-    ctaCn: "查看当前产品",
-    ctaEn: "Explore current offers",
+    code: "ENGINE 01 / DISCRETIONARY FUNDAMENTAL",
+    titleCn: "主观基本面研究",
+    titleEn: "Discretionary Fundamental Research",
+    bodyCn: "追问技术变化如何穿透产业结构、公司利润、估值与预期差，形成公司深度研究、价值捕获图谱与可持续跟踪的前瞻验证点。",
+    bodyEn: "Trace how technology change travels through industry structure, company earnings, valuation and expectations—producing company deep dives, value-capture maps and forward tests.",
+    href: "/deep-dive",
+    ctaCn: "阅读旗舰 Deep Dive",
+    ctaEn: "Read flagship Deep Dives",
   },
   {
-    code: "LONG TERM / ASSET MANAGEMENT",
-    titleCn: "AI-native 资管方向",
-    titleEn: "AI-native Asset-Management Direction",
-    bodyCn: "以主观研究、量化验证、Research Desk 与 Decision Memory 为基础，持续研究 AI-native Fund 的组织与系统原型。",
-    bodyEn: "Researching the organizational and system prototype of an AI-native Fund across discretionary research, quantitative validation, the Research Desk and decision memory.",
-    href: "#direction",
-    ctaCn: "了解长期方向",
-    ctaEn: "Explore the direction",
+    code: "ENGINE 02 / SYSTEMATIC QUANT",
+    titleCn: "系统化量化研究",
+    titleEn: "Systematic Quantitative Research",
+    bodyCn: "检验信号、权重、市场状态与组合规则是否具有可复现的预测或风险调整价值，公开验证设计、样本边界、成本后结果与失败记录。",
+    bodyEn: "Test whether signals, weights, regimes and portfolio rules offer reproducible predictive or risk-adjusted value, with explicit validation design, sample boundaries, post-cost results and failures.",
+    href: "#notes",
+    ctaCn: "查看量化研究",
+    ctaEn: "Explore quant research",
   },
 ];
 
 const productOffers = [
   {
-    code: "START / DEPLOY",
-    titleCn: "AI-native Research System Workshop",
-    titleEn: "AI-native Research System Deployment",
-    summaryCn: "围绕一个真实投研场景，用 6 个工作 Session 把信息、假设、验证、风险闸门与决策记录装进同一套可运行的基础系统。",
-    summaryEn: "Six working sessions around a live investment-research context to install one operating foundation for information, theses, validation, risk gates and decision records.",
-    fitCn: "已有投资框架、正在推进 AI 化的公募、私募、资管团队与专业家族办公室。",
-    fitEn: "Funds, asset managers and professional family offices with an established investment process.",
-    deliverablesCn: ["投研流程与数据边界诊断", "Hypothesis Card、Skill / SOP 与 Risk Gate", "Decision Memory 蓝图与 90 天实施路线"],
-    deliverablesEn: ["Workflow and data-boundary diagnostic", "Hypothesis cards, skills / SOPs and risk gates", "Decision-memory blueprint and 90-day implementation roadmap"],
-    priceCn: "¥100,000 起",
-    priceEn: "From US$15,000",
-    noteCn: "6 Sessions · 定制范围、税费与差旅另议",
-    noteEn: "6 sessions · customization, taxes and travel quoted separately",
-    href: "/workshop",
-    ctaCn: "了解 6-Session Workshop",
-    ctaEn: "Explore the six-session deployment",
+    code: "PROOF 01 / RESEARCH OBJECTS",
+    titleCn: "Lunartulip Deep Dive",
+    titleEn: "Lunartulip Deep Dive",
+    summaryCn: "围绕具体公司与产业问题的版本化深度研究，以稳定 URL 保留核心论点、关键证据、风险边界、as-of 日期与更新记录。",
+    summaryEn: "Versioned deep research on specific companies and industries, preserving core theses, key evidence, risk boundaries, as-of dates and update histories at stable URLs.",
+    fitCn: "适合希望评估公司研究深度、产业传导判断与持续更新能力的机构和专业投资者。",
+    fitEn: "For institutions and professional investors evaluating company-research depth, industry-transmission judgment and update discipline.",
+    deliverablesCn: ["带时间戳的核心判断", "关键证据与风险边界", "Update History 与更正记录"],
+    deliverablesEn: ["Timestamped thesis", "Key evidence and risk boundary", "Update history and corrections"],
+    priceCn: "POINT-IN-TIME / VERSIONED",
+    priceEn: "POINT-IN-TIME / VERSIONED",
+    noteCn: "目前公开两篇旗舰研究",
+    noteEn: "Two flagship research objects currently available",
+    href: "/deep-dive",
+    ctaCn: "查看 Deep Dive",
+    ctaEn: "View Deep Dives",
   },
   {
-    code: "OPERATE / VALIDATE",
-    titleCn: "Always-On Research Desk",
-    titleEn: "Always-On Research Desk",
-    summaryCn: "让事件账本、假设看板、每日简报与决策记忆持续运行。先以边界清晰的付费试点验证使用频率、研究价值与协作方式。",
-    summaryEn: "Keep the event ledger, hypothesis board, daily briefs and decision memory operating continuously, beginning with a bounded paid pilot.",
-    fitCn: "Workshop 完成后的机构团队；已有成熟流程的机构也可经 readiness assessment 直接进入试点。",
-    fitEn: "Teams completing the workshop, or mature institutions entering directly after a readiness assessment.",
-    deliverablesCn: ["一个真实命题的持续研究状态", "每日优先级、事件账本与假设更新", "结果复盘与 Decision Memory"],
-    deliverablesEn: ["An ongoing research state for one live thesis", "Daily priorities, event ledger and thesis updates", "Outcome review and decision memory"],
-    priceCn: "B2B 受邀付费试点",
-    priceEn: "Invited B2B paid pilot",
-    noteCn: "按覆盖范围、数据、频率、集成与支持定制报价",
-    noteEn: "Custom quote based on coverage, data, cadence, integration and support",
-    href: "/desk",
-    ctaCn: "查看 Research Desk",
-    ctaEn: "Explore the Research Desk",
+    code: "PROOF 02 / AUTHORITY LEDGER",
+    titleCn: "判断与结局账本",
+    titleEn: "Calls & Outcomes Ledger",
+    summaryCn: "汇总历史判断的后续结果、双基准、样本口径与计算方法，让读者可以在统一规则下评估判断质量。",
+    summaryEn: "Aggregate subsequent outcomes, dual benchmarks, cohort definitions and methodology so readers can evaluate prior judgment under one consistent rule set.",
+    fitCn: "适合关注历史判断结果、验证纪律、样本透明度与风险收益不对称性的专业读者。",
+    fitEn: "For professional readers examining prior outcomes, validation discipline, sample transparency and payoff asymmetry.",
+    deliverablesCn: ["回溯期与纪律期分列", "命中率、超额与盈亏比口径", "数据来源、as-of 与生成版本"],
+    deliverablesEn: ["Separate reconstructed and discipline cohorts", "Hit-rate, excess and payoff methodology", "Source, as-of date and generated version"],
+    priceCn: "AGGREGATE / METHODOLOGY-LED",
+    priceEn: "AGGREGATE / METHODOLOGY-LED",
+    noteCn: "数字由统一账本生成，可复核口径与更新时间",
+    noteEn: "Generated from the canonical ledger with reproducible methodology and timestamps",
+    href: "/authority-ledger",
+    ctaCn: "打开 Authority Ledger",
+    ctaEn: "Open Authority Ledger",
   },
 ];
 
 const practiceCases = [
   {
-    code: "ALPHAMAP / 01",
-    title: "AI 基础设施",
-    titleEn: "AI Infrastructure",
-    thesis: "从算力需求、物理瓶颈到利润兑现，持续追踪产业约束如何穿透资产价格。",
-    thesisEn: "Trace how compute demand and physical bottlenecks travel through the value chain into earnings and asset prices.",
-    metric: "BOTTLENECK → PNL",
-    nodes: ["DEMAND", "BOTTLENECK", "CLOCK", "PNL", "ACTION"],
+    code: "DEEP DIVE / PLTR",
+    title: "Palantir：AI 应用层商业化开始进入回报兑现",
+    titleEn: "Palantir: AI application commercialization begins to convert into returns",
+    thesis: "把美国商业收入加速作为 AI 基础设施投入向应用层收入传导的带时间戳验证点。",
+    thesisEn: "A timestamped test of whether AI infrastructure spending is transmitting into application-layer revenue.",
+    metric: "AS OF 2026-08-05",
+    nodes: ["QUESTION", "EVIDENCE", "THESIS", "RISK", "UPDATE"],
+    href: "/deep-dive/palantir-ai-application-commercialization-2026q2",
   },
   {
-    code: "ALPHAMAP / 02",
-    title: "人形机器人",
-    titleEn: "Humanoid Robotics",
-    thesis: "把产业阶段、供应链瓶颈、订单传导与仓位语言放进同一套可更新的研究状态。",
-    thesisEn: "Place industry stage, supply-chain bottlenecks, order transmission and position language in one updateable research state.",
-    metric: "STAGE → POSITION",
-    nodes: ["DRIVER", "SUPPLY", "ORDER", "EARNINGS", "POSITION"],
+    code: "DEEP DIVE / NET + TEAM",
+    title: "Cloudflare + Atlassian：AI 应用层验证从单点走向多点",
+    titleEn: "Cloudflare + Atlassian: AI application validation broadens beyond a single company",
+    thesis: "用机器流量基础设施与企业协作软件盈利拐点，检验 AI 应用层商业化是否正在扩散。",
+    thesisEn: "Test whether AI application commercialization is broadening through machine-traffic infrastructure and enterprise-software profitability.",
+    metric: "AS OF 2026-08-07",
+    nodes: ["QUESTION", "EVIDENCE", "THESIS", "RISK", "UPDATE"],
+    href: "/deep-dive/cloudflare-atlassian-ai-application-commercialization-2026q2",
   },
 ];
 
@@ -502,11 +492,11 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
           <span>/</span>
           <button type="button" className={language === "en" ? "active" : ""} onClick={() => selectLanguage("en")} aria-pressed={language === "en"}>EN</button>
         </div>
-        <div className="system-status" aria-label={language === "cn" ? "研究系统运行中" : "Research system active"}>
+        <div className="system-status" aria-label={language === "cn" ? "全球 AI 科技权益独立研究" : "Independent global AI technology equity research"}>
           <span aria-hidden="true" />
-          <b>SYSTEM</b>
+          <b>RESEARCH</b>
           <i>/</i>
-          ACTIVE
+          GLOBAL AI
         </div>
         </div>
 
@@ -541,33 +531,43 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
 
       <section className="hero" id="top" aria-labelledby="hero-title">
         <div className="hero-copy">
-          <p className="eyebrow">CROSS-MARKET PUBLIC EQUITIES · AI TECHNOLOGY</p>
+          <p className="eyebrow">INDEPENDENT PUBLIC-EQUITIES RESEARCH · GLOBAL AI TECHNOLOGY</p>
           <h1 id="hero-title">
             {language === "cn" ? (
-              <>为主动管理构建<br /><span>AI-native</span> 决策增强系统</>
+              <>
+                <span className="hero-title-line">主观基本面 × 系统化量化</span>
+                <span className="hero-title-line hero-title-tagline">两台研究引擎，持续验证判断。</span>
+              </>
             ) : (
-              <>Build an <span>AI-native</span><br />decision augmentation system<br />for active management</>
+              <>
+                <span className="hero-title-line">Discretionary Fundamental</span>
+                <span className="hero-title-line">× Systematic Quant</span>
+                <span className="hero-title-line hero-title-tagline">Two Research Engines.</span>
+                <span className="hero-title-line">Judgment under Continuous Test.</span>
+              </>
             )}
           </h1>
           <p className="hero-description">
             {language === "cn" ? (
               <>
-                <span>聚焦全球泛 AI 科技产业链的二级权益研究，跨 A 股、美股与港股追踪技术演进、产业传导与价值兑现。</span>
-                <span>为公募、私募、资管机构与专业家族办公室连接研究命题、证据追踪、决策记录与反馈复盘。</span>
+                <span>Lunartulip Lab 是一家聚焦全球泛 AI 科技权益的 AI-native 独立研究机构。</span>
+                <span>我们用主观基本面研究理解产业因果、公司利润与预期差，用系统化量化研究检验信号、组合纪律与风险调整价值。</span>
+                <span>帮助专业投资者与机构研究团队更快识别变化、复核关键假设，并以可追溯记录持续提高判断质量。</span>
               </>
             ) : (
               <>
-                <span>Public-equity research across the global AI technology value chain, connecting A-share, U.S. and Hong Kong markets from technical progress to industry transmission and value realization.</span>
-                <span>Connecting theses, evidence, decision records and feedback for funds, asset managers and professional family offices.</span>
+                <span>Lunartulip Lab is an AI-native independent research institution focused on global AI technology equities.</span>
+                <span>Discretionary fundamental research explains industry causality, earnings and expectations; systematic quant tests signals, portfolio discipline and risk-adjusted value.</span>
+                <span>For professional investors and institutional research teams seeking faster change detection, explicit thesis review and traceable improvement in judgment quality.</span>
               </>
             )}
           </p>
           <div className="hero-actions">
-            <a className="primary-action" href="#products">
-              {language === "cn" ? "了解机构产品" : "Explore institutional offers"} <span aria-hidden="true"><ArrowRightIcon /></span>
+            <a className="primary-action" href="#practice">
+              {language === "cn" ? "阅读旗舰研究" : "Read flagship research"} <span aria-hidden="true"><ArrowRightIcon /></span>
             </a>
-            <Link className="secondary-action" href={language === "en" ? "/en/desk" : "/desk"}>
-              {language === "cn" ? "查看 Research Desk" : "View Research Desk"} <span aria-hidden="true"><ArrowUpRightIcon /></span>
+            <Link className="secondary-action" href={language === "en" ? "/en/authority-ledger" : "/authority-ledger"}>
+              {language === "cn" ? "查看判断账本" : "View the Authority Ledger"} <span aria-hidden="true"><ArrowUpRightIcon /></span>
             </Link>
           </div>
         </div>
@@ -613,22 +613,22 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
         ))}
       </section>
 
-      <section className="product-section page-section" id="products" aria-labelledby="products-title">
+      <section className="product-section page-section" id="research" aria-labelledby="research-title">
         <div className="section-heading product-heading">
           <div>
-            <p className="section-index">INSTITUTIONAL OFFERS / 01</p>
-            <h2 id="products-title">
-              {language === "cn" ? "先建立系统，再让它持续运行。" : "Install the system. Then keep it operating."}
+            <p className="section-index">RESEARCH ENGINES / 01</p>
+            <h2 id="research-title">
+              {language === "cn" ? "两台研究引擎，持续解释与验证市场机会。" : "Two research engines continuously explain and test market opportunity."}
             </h2>
           </div>
           <p className="section-lead">
             {language === "cn"
-              ? "面向公募、私募、资管机构与专业家族办公室。当前可从标准化部署或边界清晰的 Research Desk 试点进入。"
-              : "For funds, asset managers and professional family offices—begin with a structured deployment or a bounded Research Desk pilot."}
+              ? "主观基本面研究回答产业因果、公司利润与预期差，系统化量化研究检验信号、组合纪律与风险调整价值。两台引擎共同产出可追溯的研究判断、验证记录与结果反馈。"
+              : "Discretionary fundamental research addresses industry causality, company earnings and expectation gaps; systematic quant tests signals, portfolio discipline and risk-adjusted value. Together they produce traceable judgment, validation records and outcome feedback."}
           </p>
         </div>
 
-        <div className="collaboration-lanes" aria-label={language === "cn" ? "两条机构合作主线" : "Two institutional collaboration lanes"}>
+        <div className="collaboration-lanes" aria-label={language === "cn" ? "两台研究引擎" : "Two research engines"}>
           {collaborationLanes.map((lane, index) => (
             <article key={lane.code}>
               <div className="lane-index">0{index + 1}</div>
@@ -640,6 +640,29 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
               <a href={lane.href}>{language === "cn" ? lane.ctaCn : lane.ctaEn}<ArrowRightIcon /></a>
             </article>
           ))}
+        </div>
+
+        <div className="desk-control-plane">
+          <div className="desk-control-copy">
+            <p>ALWAYS-ON RESEARCH DESK / AI-NATIVE RESEARCH WORKSPACE</p>
+            <h3>{language === "cn" ? "让两台引擎的判断，在一个工作区持续更新。" : "Keep judgment from both engines continuously updated in one workspace."}</h3>
+            <span>
+              {language === "cn"
+                ? "主观基本面系统由 PM 判断驱动，通过 Coverage 与 R 线 AlphaMap × Ontology 持续更新产业和公司认知；系统化量化系统持续运行策略研究与组合验证。Research Desk 将两台引擎的研究状态、双 NAV 与结果反馈汇集为清晰的日常工作区。"
+                : "The discretionary fundamental system is PM-led, using Coverage and the R-line AlphaMap × Ontology to update industry and company views; the systematic quant system continuously runs strategy research and portfolio validation. Research Desk brings both engines’ research state, dual NAV and outcome feedback into one clear daily workspace."}
+            </span>
+            <Link href={language === "en" ? "/en/desk" : "/desk"}>
+              {language === "cn" ? "查看 Research Desk 真实界面与九层架构" : "Explore the real interface and nine-layer architecture"} <ArrowRightIcon />
+            </Link>
+          </div>
+          <div className="desk-control-grid">
+            {deskCapabilities.map((item, index) => (
+              <div key={item.code}>
+                <small>0{index + 1} / {item.code}</small>
+                <strong>{language === "cn" ? item.cn : item.en}</strong>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="product-ladder">
@@ -657,7 +680,7 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
                   <dd>{language === "cn" ? offer.fitCn : offer.fitEn}</dd>
                 </div>
               </dl>
-              <p className="product-deliverable-label">{language === "cn" ? "完成后得到" : "WHAT THE TEAM LEAVES WITH"}</p>
+              <p className="product-deliverable-label">{language === "cn" ? "内容包含" : "WHAT IT INCLUDES"}</p>
               <ul>{(language === "cn" ? offer.deliverablesCn : offer.deliverablesEn).map((item) => <li key={item}>{item}</li>)}</ul>
               <div className="product-price">
                 <strong>{language === "cn" ? offer.priceCn : offer.priceEn}</strong>
@@ -669,44 +692,45 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
             </article>
           ))}
           <div className="product-connector" aria-hidden="true">
-            <span>WORKSHOP</span><i /><b>OPERATING LOOP</b><i /><span>RESEARCH DESK</span>
+            <span>FUNDAMENTAL</span><i /><b>SHARED EVIDENCE</b><i /><span>QUANT</span>
           </div>
         </div>
 
         <div className="enterprise-mode">
-          <div><small>ENTERPRISE DELIVERY MODE</small><strong>{language === "cn" ? "私有化适配随 Desk 深度进入" : "Private adaptation follows the depth of the Desk engagement"}</strong></div>
-          <p>{language === "cn" ? "当试点需要连接机构内部数据、权限、治理、Agent 编排与 Decision Memory 时，再共同定义部署与持续维护边界。" : "When a pilot needs internal data, permissions, governance, agent orchestration and decision memory, deployment and maintenance boundaries are defined together."}</p>
+          <div><small>INSTITUTIONAL RESEARCH ACCESS</small><strong>{language === "cn" ? "从公开研究开始，按问题与时效深入" : "Begin with public research, then go deeper by question and cadence"}</strong></div>
+          <p>{language === "cn" ? "机构与专业投资者可以先通过 Deep Dive、Authority Ledger 与 Research Desk 界面了解研究质量和工作方法，再围绕持续跟踪、深度研究问题或双引擎方法展开专业交流。" : "Institutions and professional investors can begin with Deep Dives, the Authority Ledger and the Research Desk interface, then explore continuous monitoring, a specific deep-research question or the dual-engine method."}</p>
+          <Link href={language === "en" ? "/en/institutional-access" : "/institutional-access"}>{language === "cn" ? "了解机构研究方式" : "Explore institutional research formats"} <ArrowRightIcon /></Link>
         </div>
       </section>
 
       <section className="philosophy-section page-section" id="philosophy" aria-labelledby="philosophy-title">
         <div className="section-heading">
           <div>
-            <p className="section-index">OPERATING PRINCIPLES / 02</p>
-            <h2 id="philosophy-title">{tx("把基金经理的判断方式，写进一套会生长的买方系统。")}</h2>
+            <p className="section-index">RESEARCH DISCIPLINE / 02</p>
+            <h2 id="philosophy-title">{language === "cn" ? "两台引擎各自验证，在投资学习层汇合。" : "Two engines validate independently and meet in the investment-learning layer."}</h2>
           </div>
           <p className="section-lead">
-            {tx("Lunartulip Lab 将信息、假设、证据、动作、仓位、结果与记忆连接起来，让产业判断、量化纪律与 Agent 工作流共同进入持续接受市场反馈的决策系统。")}
+            {language === "cn" ? "Fundamental 保留对产业因果、公司利润与预期差的完整解释，Quant 独立检验信号、稳定性与成本后价值；两者在证据、决策记录与结果归因层形成共同语言。" : "Fundamental research preserves full explanations of industry causality, company earnings and expectation gaps. Quant independently tests signals, stability and post-cost value. Both meet through shared evidence, decision records and outcome attribution."}
           </p>
         </div>
 
         <div className="principles-grid">
           <article className="principle-card principle-main">
-            <p className="card-index">01 / COMPOUND</p>
-            <h3>{tx("让每一次研究，都提高下一次研究的起点。")}</h3>
+            <p className="card-index">01 / POINT-IN-TIME</p>
+            <h3>{language === "cn" ? "判断必须带时间戳，才能被未来验证。" : "Judgment needs a timestamp before the future can test it."}</h3>
             <div className="compound-diagram" aria-hidden="true">
               <span>{tx("判断")}</span><i>→</i><span>{tx("证据")}</span><i>→</i><span>{tx("系统")}</span><i>↗</i>
             </div>
           </article>
           <article className="principle-card">
-            <p className="card-index">02 / HYBRID</p>
-            <h3>{tx("人的判断\n× 系统的纪律").split("\n").map((line, i) => <span key={line}>{i > 0 && <br />}{line}</span>)}</h3>
-            <p>{tx("保留基金经理对语义、情境与非线性机会的理解，用量化与 Agent 外骨骼减少漏损。")}</p>
+            <p className="card-index">02 / DUAL ENGINE</p>
+            <h3>{language === "cn" ? <>产业因果<br />× 统计验证</> : <>Industry causality<br />× statistical validation</>}</h3>
+            <p>{language === "cn" ? "主观基本面回答机制与预期差；系统化量化回答复现性、稳定性和成本后价值。" : "Fundamental research addresses mechanisms and expectation gaps; systematic quant addresses reproducibility, stability and post-cost value."}</p>
           </article>
           <article className="principle-card">
-            <p className="card-index">03 / FEEDBACK</p>
-            <h3>{tx("真实反馈\n优先于漂亮自动化").split("\n").map((line, i) => <span key={line}>{i > 0 && <br />}{line}</span>)}</h3>
-            <p>{tx("系统的价值不由流程图决定，而由它能否接受现实检验、识别偏差并持续更新决定。")}</p>
+            <p className="card-index">03 / CORRECTION</p>
+            <h3>{language === "cn" ? <>更正记录<br />也是研究资产</> : <>Corrections are<br />research assets</>}</h3>
+            <p>{language === "cn" ? "新证据出现后回到上游修正，并重新生成所有受影响版本，让公开判断始终对应最新证据与明确时点。" : "New evidence triggers an upstream correction and regeneration of every affected version, keeping published judgment aligned with current evidence and an explicit point in time."}</p>
           </article>
         </div>
       </section>
@@ -714,10 +738,10 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
       <section className="capability-section page-section" id="capabilities" aria-labelledby="capabilities-title">
         <div className="section-heading compact-heading">
           <div>
-            <p className="section-index">SYSTEM CAPABILITIES / 03</p>
-            <h2 id="capabilities-title">{language === "cn" ? "五个可见产出，组成一套研究系统。" : "Five visible outputs form one research system."}</h2>
+            <p className="section-index">RESEARCH VALUE CHAIN / 03</p>
+            <h2 id="capabilities-title">{language === "cn" ? "让研究判断可追溯、可验证、可复用。" : "Make research judgment traceable, testable and reusable."}</h2>
           </div>
-          <p className="section-lead">{language === "cn" ? "先看完整回路，再按模块查看方法细节。每项能力都对应机构现状、系统动作与可验收产出。" : "See the full loop first, then inspect each method. Every capability maps a current condition to a system action and an observable output."}</p>
+          <p className="section-lead">{language === "cn" ? "从信息摄入、产业因果与命题管理，到量化验证和结果归因，完整研究链路帮助专业团队减少信息漏损与重复验证成本，并把经验沉淀为可持续复用的机构知识。" : "From information intake, industry causality and thesis management to quantitative validation and outcome attribution, the connected research chain reduces information loss and repeated validation work while turning experience into reusable institutional knowledge."}</p>
         </div>
 
         <div className="capability-overview" aria-label={language === "cn" ? "研究系统完整能力回路" : "Complete research-system capability loop"}>
@@ -762,9 +786,9 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
             <p className="detail-code">{capability.number} / {capability.code}</p>
             <h3>{tx(capability.title)}</h3>
             <div className="capability-outcomes">
-              <div><small>{language === "cn" ? "机构现状" : "CURRENT CONDITION"}</small><p>{language === "cn" ? capability.situationCn : capability.situationEn}</p></div>
-              <div><small>{language === "cn" ? "系统动作" : "SYSTEM ACTION"}</small><p>{language === "cn" ? capability.actionCn : capability.actionEn}</p></div>
-              <div><small>{language === "cn" ? "可见产出" : "VISIBLE OUTPUT"}</small><p>{language === "cn" ? capability.resultCn : capability.resultEn}</p></div>
+              <div><small>{language === "cn" ? "研究挑战" : "RESEARCH CHALLENGE"}</small><p>{language === "cn" ? capability.situationCn : capability.situationEn}</p></div>
+              <div><small>{language === "cn" ? "研究方法" : "RESEARCH METHOD"}</small><p>{language === "cn" ? capability.actionCn : capability.actionEn}</p></div>
+              <div><small>{language === "cn" ? "研究产出" : "RESEARCH OUTPUT"}</small><p>{language === "cn" ? capability.resultCn : capability.resultEn}</p></div>
             </div>
             <details className="capability-method">
               <summary>{language === "cn" ? "查看方法细节" : "View method detail"}</summary>
@@ -784,10 +808,10 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
       <section className="workflow-section page-section" id="workflow" aria-labelledby="workflow-title">
         <div className="section-heading compact-heading">
           <div>
-            <p className="section-index">DAILY OPERATING LOOP / 04</p>
-            <h2 id="workflow-title">{language === "cn" ? "一天的变化，如何变成下一次更好的判断。" : "How daily change improves the next judgment."}</h2>
+            <p className="section-index">CONTINUOUS RESEARCH OPERATIONS / 04</p>
+            <h2 id="workflow-title">{language === "cn" ? "更快识别真正变化，及时更新关键判断。" : "Identify material change faster and update critical judgment in time."}</h2>
           </div>
-          <p className="section-lead">{language === "cn" ? "Research Desk 把市场变化、假设更新、研究优先级、判断记录与结果反馈连接成同一条日常回路。" : "The Research Desk connects market change, thesis updates, research priorities, decision records and outcome feedback in one daily operating loop."}</p>
+          <p className="section-lead">{language === "cn" ? "系统持续汇总市场变化、关键证据、命题状态与结果反馈，形成清晰的今日研究优先级和下一验证动作，让研究团队把注意力从追逐信息转向更新判断。" : "The system continuously connects market change, key evidence, thesis state and outcome feedback into clear daily priorities and next validation actions—shifting research attention from chasing information to updating judgment."}</p>
         </div>
 
         <div className="workflow-loop" aria-label={language === "cn" ? "持续研究日常回路" : "Daily continuous research loop"}>
@@ -807,12 +831,12 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
       <section className="vision-section page-section" id="direction" aria-labelledby="vision-title">
         <div className="vision-panel">
           <div className="vision-copy">
-            <p className="section-index">LONG-TERM DIRECTION / 05</p>
-            <h2 id="vision-title">{language === "cn" ? <>AI-native Fund<br />长期资管方向</> : <>AI-native Fund<br />Asset-Management Direction</>}</h2>
+            <p className="section-index">VALUE REALIZATION / 05</p>
+            <h2 id="vision-title">{language === "cn" ? <>现在看得见研究质量，<br />长期看资本结果。</> : <>See research quality now.<br />Judge long-term value through capital outcomes.</>}</h2>
             <p>
               {language === "cn"
-                ? "Lunartulip Lab 正在持续研究 AI-native Fund 的组织与系统原型。主观产业研究、量化策略验证、Research Desk、风险约束与 Decision Memory 在同一套买方基础设施中接受长期反馈，最终投资责任始终由人承担。"
-                : "Lunartulip Lab is researching the organizational and system prototype of an AI-native Fund. Discretionary industry research, quantitative validation, the Research Desk, risk constraints and decision memory learn from long-term feedback in one buy-side infrastructure, with final investment accountability remaining human."}
+                ? "机构与专业投资者可以先通过研究作品、版本记录、更正与结局账本判断我们的研究质量。长期，双研究引擎将在真实资本责任下持续接受检验；任何未来资管合作均将在相应主体、资质与合规框架完备后独立开展。"
+                : "Institutions and professional investors can first evaluate our research quality through published work, version histories, corrections and outcome records. Over time, both engines will remain accountable to real capital outcomes; any future asset-management activity will operate separately under the appropriate entity, qualifications and compliance framework."}
             </p>
             <div className="vision-links">
               <Link href="/notes/self-driving-portfolio-ai-investing">{language === "cn" ? "阅读长期组织形态" : "Read the long-term operating thesis"}<ArrowRightIcon /></Link>
@@ -821,14 +845,15 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
           </div>
           <div className="vision-boundary">
             <article>
-              <small>CURRENT / NOW</small>
-              <h3>{language === "cn" ? "当前对外合作" : "Current mandate"}</h3>
-              <p>{language === "cn" ? "6-Session Research System Workshop、Always-On Research Desk 付费试点，以及随试点深度进入的数据、权限与治理适配。" : "The six-session research-system deployment, paid Always-On Research Desk pilots, and data, permission and governance adaptation as an engagement deepens."}</p>
+              <small>RESEARCH ACCESS</small>
+              <h3>{language === "cn" ? "先验证研究质量" : "Evaluate research quality first"}</h3>
+              <p>{language === "cn" ? "通过 Deep Dive、研究方法、更新记录与 Authority Ledger，评估研究深度、验证纪律和结果质量；如需持续跟踪或围绕具体研究问题深入，可进一步开展机构研究交流。" : "Use Deep Dives, research methods, update histories and the Authority Ledger to assess depth, validation discipline and outcome quality, then explore continuous monitoring or a specific research question through institutional exchange."}</p>
+              <Link href={language === "en" ? "/en/institutional-access" : "/institutional-access"}>{language === "cn" ? "了解机构研究方式" : "Explore institutional research formats"} <ArrowRightIcon /></Link>
             </article>
             <article>
-              <small>FUTURE / COMPLIANCE-LED</small>
-              <h3>{language === "cn" ? "长期资管方向" : "Long-term asset-management direction"}</h3>
-              <p>{language === "cn" ? "面向持牌机构、潜在合作主体与产业伙伴讨论研究、技术和组织共建。未来资管业务将在相应主体、资质与合规框架完备后独立开展。" : "Research, technology and organizational partnerships may be discussed with licensed institutions and strategic counterparties. Any future asset-management business will operate through an appropriate entity, qualifications and compliance framework."}</p>
+              <small>LONG-TERM DIRECTION</small>
+              <h3>{language === "cn" ? "长期资本管理方向" : "Long-term capital-management direction"}</h3>
+              <p>{language === "cn" ? "真实资本结果将长期检验双研究引擎的判断质量、风险纪律与学习能力。相关业务将在相应主体、资质与合规框架完备后独立开展。" : "Real capital outcomes will test the two engines’ judgment quality, risk discipline and learning capacity over time. Related activity will operate separately under the appropriate entity, qualifications and compliance framework."}</p>
               <a href={institutionalMailto({ source: "HOME_ASSET_DIRECTION", topic: "Strategic Institutional Partnership", language })}>
                 {language === "cn" ? "讨论战略机构合作" : "Discuss a strategic institutional partnership"} <ArrowUpRightIcon />
               </a>
@@ -840,10 +865,10 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
       <section className="practice-section page-section" id="practice" aria-labelledby="practice-title">
         <div className="section-heading compact-heading">
           <div>
-            <p className="section-index">SYSTEMS IN PRACTICE / 06</p>
-            <h2 id="practice-title">{language === "cn" ? "系统如何进入真实研究" : "How the system works in practice"}</h2>
+            <p className="section-index">DEEP RESEARCH / 06</p>
+            <h2 id="practice-title">{language === "cn" ? "从具体公司和产业问题，看见研究深度。" : "See the depth of research through specific company and industry questions."}</h2>
           </div>
-          <p className="section-lead">{language === "cn" ? "以下是泛 AI 科技方向的公开方法示范；系统可在机构授权的股票池、数据与研究边界内适配。" : "Public methodology demonstrations across AI technology; the system can be adapted to an institution’s authorized universe, data and research boundaries."}</p>
+          <p className="section-lead">{language === "cn" ? "两篇旗舰研究分别围绕具体公司与产业问题展开，完整保留研究问题、核心论点、关键证据、风险边界、as-of 日期与更新记录。" : "Two flagship research objects address specific company and industry questions, preserving the research question, core thesis, key evidence, risk boundary, as-of date and update history."}</p>
         </div>
         <div className="practice-grid">
           {practiceCases.map((item) => (
@@ -857,7 +882,7 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
               <div className="practice-copy">
                 <h3>{language === "cn" ? item.title : item.titleEn}</h3>
                 <p>{language === "cn" ? item.thesis : item.thesisEn}</p>
-                <a href="#capabilities">{language === "cn" ? "查看方法结构" : "View methodology"}<span><ArrowRightIcon /></span></a>
+                <Link href={language === "en" ? `/en${item.href}` : item.href}>{language === "cn" ? "阅读研究" : "Read the research"}<span><ArrowRightIcon /></span></Link>
               </div>
             </article>
           ))}
@@ -868,9 +893,9 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
         <div className="section-heading compact-heading">
           <div>
             <p className="section-index">RESEARCH NOTES / 07</p>
-            <h2 id="notes-title">{language === "cn" ? "持续写下正在形成的判断" : "Notes from a research system in motion"}</h2>
+            <h2 id="notes-title">{language === "cn" ? "研究方法、系统实践与长期思考" : "Research methods, system practice and long-term thinking"}</h2>
           </div>
-          <p className="section-lead">{language === "cn" ? "从方法论、决策系统到真实建造过程，构成 Lunartulip 的公开研究档案。" : "A public research archive spanning methodology, decision systems and the work of building them."}</p>
+          <p className="section-lead">{language === "cn" ? "围绕主观基本面、系统化量化、AI-native investing 与投资决策系统，持续沉淀可供专业读者参考的方法研究。" : "Ongoing methodological research for professional readers across discretionary fundamental, systematic quant, AI-native investing and investment decision systems."}</p>
         </div>
         <div className="notes-grid">
           {noteColumns.map((column) => (
@@ -892,8 +917,8 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
       <section className="closing-section" id="contact" aria-labelledby="closing-title">
         <div className="closing-orbit" aria-hidden="true"><span /><i /></div>
         <p className="section-index">ENGAGE LUNARTULIP LAB / CHINA & GLOBAL</p>
-        <h2 id="closing-title">{language === "cn" ? "从一个真实问题开始。" : "Start with a real investment question."}</h2>
-        <p>{language === "cn" ? "请介绍您的机构、研究场景与希望解决的问题。" : "Tell us about your institution, research context and the problem you want to solve."}</p>
+        <h2 id="closing-title">{language === "cn" ? "从一个值得验证的研究问题开始。" : "Start with a research question worth testing."}</h2>
+        <p>{language === "cn" ? "请介绍您的机构背景、关注市场与具体研究问题，我们将从最适合的研究方式开始交流。" : "Tell us about your institution, market focus and a specific research question, and we will begin with the most relevant research format."}</p>
         <div className="engagement-grid">
           {engagementTopics.map((topic, index) => (
             <a key={topic.subject} href={institutionalMailto({ source: "HOME_ENGAGEMENT", topic: topic.subject, language })}>
@@ -917,8 +942,9 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
             <p><a href={institutionalMailto({ source: "HOME_FOOTER", topic: language === "cn" ? "官网联系" : "Website Contact", language })}>t.stephanie@lunartuliplab.com</a></p>
             <p className="footer-links">
               <Link href={language === "en" ? "/en/about" : "/about"}>{language === "cn" ? "关于我们" : "About"}</Link>
-              <Link href={language === "en" ? "/en/workshop" : "/workshop"}>Workshop</Link>
-              <Link href={language === "en" ? "/en/desk" : "/desk"}>Research Desk</Link>
+              <Link href={language === "en" ? "/en/deep-dive" : "/deep-dive"}>Deep Dive</Link>
+              <Link href={language === "en" ? "/en/authority-ledger" : "/authority-ledger"}>Authority Ledger</Link>
+              <Link href={language === "en" ? "/en/institutional-access" : "/institutional-access"}>Research Access</Link>
             </p>
             <p className="footer-social">
               <span>{language === "cn" ? "微信公众号" : "WeChat Official Account"}：Lunartulip Lab</span>
@@ -929,8 +955,8 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
         </div>
         <p className="footer-boundary">
           {language === "cn"
-            ? "官网公开内容用于研究方法与系统能力介绍，不构成投资建议、基金募集、金融产品推介或收益承诺。"
-            : "Public content describes research methods and system capabilities. It is not investment advice, fundraising, a financial-product solicitation or a promise of returns."}
+            ? "官网公开内容用于展示研究问题、方法、版本与聚合验证记录，不构成投资建议、操作指引、基金募集、金融产品推介或收益承诺。"
+            : "Public content presents research questions, methods, versions and aggregate validation records. It is not investment advice, trading instruction, fundraising, financial-product solicitation or a promise of returns."}
         </p>
       </footer>
       <a className={`back-to-top ${hasScrolled ? "is-visible" : ""}`} href="#top" aria-label={language === "cn" ? "返回顶部" : "Back to top"}>

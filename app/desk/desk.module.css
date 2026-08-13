@@ -112,12 +112,23 @@
 .sectionHeading { display: grid; grid-template-columns: 1.1fr .65fr; gap: 80px; align-items: end; }
 .sectionHeading h2, .workspaceIntro h2, .loop h2, .request h2 { max-width: 800px; margin: 0; font-size: clamp(34px,4vw,55px); line-height: 1.3; letter-spacing: -.05em; font-weight: 650; }
 .sectionHeading > p, .workspaceIntro > p:last-child { max-width: 500px; margin: 0; color: var(--desk-muted); font-size: 14px; line-height: 1.85; }
-.valueGrid { margin-top: 62px; display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--desk-line-strong); border-left: 1px solid var(--desk-line-strong); }
-.valueGrid article { min-height: 330px; padding: 34px 32px; position: relative; border-right: 1px solid var(--desk-line-strong); border-bottom: 1px solid var(--desk-line-strong); background: rgba(255,255,255,.26); transition: background .25s ease, transform .25s ease; }
+.valueGrid { margin-top: 62px; display: grid; grid-template-columns: repeat(4,1fr); border-top: 1px solid var(--desk-line-strong); border-left: 1px solid var(--desk-line-strong); }
+.valueGrid article { min-height: 350px; padding: 34px 28px; position: relative; border-right: 1px solid var(--desk-line-strong); border-bottom: 1px solid var(--desk-line-strong); background: rgba(255,255,255,.26); transition: background .25s ease, transform .25s ease; }
 .valueGrid article:hover { z-index: 1; background: rgba(255,255,255,.62); transform: translateY(-3px); }
 .valueGrid article > p { margin: 0; color: #7c8990; font: 8px/1 var(--mono); letter-spacing: .06em; }
 .valueGrid h3 { margin: 70px 0 18px; font-size: 21px; line-height: 1.55; letter-spacing: -.025em; font-weight: 600; }
 .valueGrid span { color: var(--desk-muted); font-size: 13px; line-height: 1.85; }
+.engineTopology { margin-top: 24px; display: grid; grid-template-columns: 1fr 34px 1fr 34px 1fr; align-items: stretch; }
+.engineTopology article { min-height: 270px; padding: 29px 28px; display: flex; flex-direction: column; border: 1px solid var(--desk-line-strong); background: rgba(255,255,255,.32); }
+.engineTopology > i { display: grid; place-items: center; color: #6f8b99; font: 16px/1 var(--mono); font-style: normal; }
+.engineTopology article > p { margin: 0; color: #73848c; font: 7px/1.5 var(--mono); letter-spacing: .07em; }
+.engineTopology h3 { margin: 32px 0 14px; font-size: 21px; line-height: 1.45; }
+.engineTopology article > span { color: #637079; font-size: 12px; line-height: 1.85; }
+.engineTopology article > small { margin-top: auto; padding-top: 24px; color: #698797; font: 7px/1.4 var(--mono); letter-spacing: .07em; }
+.engineTopology article.topologyDesk { color: #dce4e7; border-color: #3b4952; background: #121c23; }
+.engineTopology article.topologyDesk > p,
+.engineTopology article.topologyDesk > small { color: #7c97a5; }
+.engineTopology article.topologyDesk > span { color: #94a1a8; }
 
 .workspace { width: 100%; max-width: none; padding: 120px max(48px,calc((100vw - 1320px)/2)); color: white; background: #0e151c; }
 .workspaceIntro { display: grid; grid-template-columns: 1fr .55fr; gap: 80px; align-items: end; }
@@ -180,6 +191,15 @@
 .pilotGrid article:last-child { border-right: 0; }
 .pilotGrid small { color: #688493; font: 8px/1 var(--mono); letter-spacing: .07em; }
 .pilotGrid p { margin: 50px 0 0; color: #59666f; font-size: 12px; line-height: 1.85; }
+.architectureGrid { margin-top: 55px; display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid var(--desk-line-strong); border-left: 1px solid var(--desk-line-strong); }
+.architectureGrid article { min-height: 175px; padding: 25px 27px; display: grid; grid-template-columns: 1fr auto; align-content: space-between; gap: 20px; border-right: 1px solid var(--desk-line-strong); border-bottom: 1px solid var(--desk-line-strong); background: rgba(255,255,255,.28); }
+.architectureGrid small { color: #7b8990; font: 8px/1 var(--mono); }
+.architectureGrid strong { grid-column: 1 / -1; font-size: 16px; line-height: 1.5; font-weight: 600; }
+.architectureGrid span { grid-column: 2; grid-row: 1; color: #5f7d8c; font: 7px/1 var(--mono); letter-spacing: .08em; text-align: right; }
+.architectureGrid em { grid-column: 1 / -1; color: #7c898f; font: 7px/1.4 var(--mono); font-style: normal; letter-spacing: .07em; }
+.architectureBoundary { margin: 44px 0 0 auto; max-width: 920px; padding: 27px 30px; display: grid; grid-template-columns: 155px 1fr; gap: 18px 32px; border: 1px solid var(--desk-line-strong); background: rgba(255,255,255,.3); }
+.architectureBoundary p { margin: 0; color: #71828b; font: 7px/1.5 var(--mono); letter-spacing: .07em; }
+.architectureBoundary strong { color: #53616a; font-size: 11px; line-height: 1.7; font-weight: 500; }
 .deskFaq { max-width: 880px; margin: 55px 0 0 auto; }
 .deskFaq details { border-top: 1px solid var(--desk-line-strong); }
 .deskFaq details:last-child { border-bottom: 1px solid var(--desk-line-strong); }
@@ -209,6 +229,7 @@
 .requestButton small { grid-column: 1; color: #7892a0; font: 7px/1 var(--mono); letter-spacing: .08em; }
 .requestButton strong { grid-column: 1; margin-top: 15px; font-size: 16px; font-weight: 600; }
 .requestButton svg { grid-column: 2; grid-row: 1 / span 2; color: #9eb6c1; }
+.proofLinks { display: grid; gap: 12px; }
 
 .boundary { padding: 34px max(32px,calc((100vw - 1200px)/2)); display: grid; grid-template-columns: 260px 1fr; gap: 44px; color: #7c898f; background: #0d1319; border-top: 1px solid #29343c; }
 .boundary p { margin: 0; font: 7px/1.5 var(--mono); letter-spacing: .06em; }
@@ -227,6 +248,9 @@
   .shellGrid > article:nth-child(2) { border-right: 0; }
   .shellGrid > article:last-child { grid-column: 1 / -1; min-height: 330px; border-top: 1px solid #35414a; }
   .request { gap: 55px; }
+  .valueGrid { grid-template-columns: 1fr 1fr; }
+  .engineTopology { grid-template-columns: 1fr; gap: 12px; }
+  .engineTopology > i { transform: rotate(90deg); min-height: 20px; }
 }
 
 @media (max-width: 780px) {
@@ -263,6 +287,7 @@
   .valueGrid { grid-template-columns: 1fr; margin-top: 44px; }
   .valueGrid article { min-height: 280px; }
   .valueGrid h3 { margin-top: 54px; }
+  .engineTopology article { min-height: 245px; }
   .workspace { padding: 90px 18px; }
   .productShell { margin-top: 45px; }
   .shellTabs { gap: 22px; overflow-x: auto; }
@@ -283,6 +308,10 @@
   .pilotGrid article:last-child { border-bottom: 0; }
   .pilotGrid p { margin-top: 36px; }
   .deskFaq { margin-top: 46px; }
+  .architectureGrid { grid-template-columns: 1fr; margin-top: 42px; }
+  .architectureGrid article { min-height: 128px; }
+  .architectureBoundary { grid-template-columns: 1fr; gap: 10px; }
+  .architectureBoundary strong + p { margin-top: 14px; }
   .request { padding: 88px 18px; grid-template-columns: 1fr; gap: 48px; }
   .requestButton { min-height: 112px; }
   .boundary { padding: 30px 20px; grid-template-columns: 1fr; gap: 14px; }

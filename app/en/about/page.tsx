@@ -3,7 +3,7 @@ import AboutPreview from "../../about/about-preview";
 
 export const metadata: Metadata = {
   title: "About Lunartulip Lab",
-  description: "Lunartulip Lab is an AI-native research-systems lab for institutional active management across global AI technology public equities.",
+  description: "Lunartulip Lab is an AI-native independent research institution combining discretionary fundamental and systematic quantitative research across global AI technology equities.",
   alternates: {
     canonical: "/en/about",
     languages: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "/en/about",
     title: "About Lunartulip Lab",
-    description: "Institutional AI-native research systems, the Always-On Research Desk and a long-term AI-native Fund direction.",
+    description: "Independent global AI technology equity research combining discretionary fundamental insight with systematic quantitative validation.",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Lunartulip Lab" }],
   },
 };
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  "@id": "https://lunartuliplab.com/about#page",
+  "@id": "https://lunartuliplab.com/en/about#page",
   url: "https://lunartuliplab.com/en/about",
   name: "About Lunartulip Lab",
   inLanguage: "en",
