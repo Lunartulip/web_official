@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { institutionalMailto } from "../../lib/contact";
+import { INSTITUTIONAL_EMAIL, institutionalMailto } from "../../lib/contact";
 import styles from "./workshop.module.css";
 
 type Language = "cn" | "en";
@@ -204,7 +204,7 @@ export default function WorkshopPreview({ initialLanguage = "cn" }: { initialLan
       <footer className={styles.footer}>
         <Link className={styles.brand} href={isCn ? "/" : "/en"}><Image src="/lunartulip-silver-emblem.png" width={29} height={32} alt="" aria-hidden="true" /><span>LUNARTULIP LAB</span></Link>
         <p>{isCn ? "机构投研系统部署 · 中国及全球" : "Institutional research-system deployment · China and global"}</p>
-        <a href={inquiry}>t.stephanie@lunartuliplab.com</a>
+        <a href={inquiry}>{INSTITUTIONAL_EMAIL}</a>
       </footer>
     </main>
   );

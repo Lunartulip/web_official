@@ -1,4 +1,4 @@
-export const INSTITUTIONAL_EMAIL = "t.stephanie@lunartuliplab.com";
+export const INSTITUTIONAL_EMAIL = "chief@lunartuliplab.com";
 
 export function institutionalMailto(input: {
   source: string;

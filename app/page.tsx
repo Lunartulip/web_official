@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { institutionalMailto } from "../lib/contact";
+import { INSTITUTIONAL_EMAIL, institutionalMailto } from "../lib/contact";
 
 type Language = "cn" | "en";
 
@@ -918,7 +918,7 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
         </div>
         <a className="contact-email" href={institutionalMailto({ source: "HOME_CONTACT", topic: language === "cn" ? "机构合作咨询" : "Institutional Inquiry", language })}>
           <small>{language === "cn" ? "海内外机构合作与研究交流" : "China & global institutional partnerships"}</small>
-          t.stephanie@lunartuliplab.com <span aria-hidden="true"><ArrowUpRightIcon /></span>
+          {INSTITUTIONAL_EMAIL} <span aria-hidden="true"><ArrowUpRightIcon /></span>
         </a>
       </section>
 
@@ -926,7 +926,7 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
         <div className="footer-main">
           <a className="brand footer-brand" href="#top"><BrandMark />LUNARTULIP LAB</a>
           <div className="footer-contact">
-            <p><a href={institutionalMailto({ source: "HOME_FOOTER", topic: language === "cn" ? "官网联系" : "Website Contact", language })}>t.stephanie@lunartuliplab.com</a></p>
+            <p><a href={institutionalMailto({ source: "HOME_FOOTER", topic: language === "cn" ? "官网联系" : "Website Contact", language })}>{INSTITUTIONAL_EMAIL}</a></p>
             <p className="footer-links">
               <Link href={language === "en" ? "/en/about" : "/about"}>{language === "cn" ? "关于我们" : "About"}</Link>
               <Link href={language === "en" ? "/en/deep-dive" : "/deep-dive"}>Deep Dive</Link>

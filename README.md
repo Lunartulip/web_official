@@ -9,7 +9,7 @@ Official bilingual website for Lunartulip Lab, an AI-native independent public-e
 - Discretionary fundamental and systematic quantitative research
 - Deep Dives, Authority Ledger and Research Desk interface samples
 - Research methods, workflow interactions and Research Notes taxonomy
-- Official contact entry: `t.stephanie@lunartuliplab.com`
+- Official contact entry: `chief@lunartuliplab.com`
 
 This repository contains only the public website. It intentionally excludes internal research data, strategy code, client materials, trading logs, credentials, and private LunarTulip Lab assets.
 
@@ -70,4 +70,4 @@ Never commit:
 
 ## Contact
 
-`t.stephanie@lunartuliplab.com`
+`chief@lunartuliplab.com`

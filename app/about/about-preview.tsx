@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { institutionalMailto } from "../../lib/contact";
+import { INSTITUTIONAL_EMAIL, institutionalMailto } from "../../lib/contact";
 import styles from "./about.module.css";
 
 type Language = "cn" | "en";
@@ -96,7 +96,7 @@ export default function AboutPreview({ initialLanguage = "cn" }: { initialLangua
 
       <section className={styles.contact}>
         <div><p>CHINA & GLOBAL RESEARCH EXCHANGE</p><h2>{isCn ? "从一个具体研究问题开始。" : "Start with one specific research question."}</h2></div>
-        <a href={inquiry}>t.stephanie@lunartuliplab.com <ArrowIcon /></a>
+        <a href={inquiry}>{INSTITUTIONAL_EMAIL} <ArrowIcon /></a>
       </section>
     </main>
   );

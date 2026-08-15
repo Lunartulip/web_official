@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
+import { INSTITUTIONAL_EMAIL } from "@/lib/contact";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -82,7 +83,7 @@ const structuredData = {
         "@id": "https://lunartuliplab.com/#logo",
         url: "https://lunartuliplab.com/lunartulip-silver-emblem.png",
       },
-      email: "t.stephanie@lunartuliplab.com",
+      email: INSTITUTIONAL_EMAIL,
       description: "AI-native independent public-equities research across global AI technology markets, combining discretionary fundamental research and systematic quantitative research.",
       knowsAbout: [
         "AI technology public equities",
@@ -100,7 +101,7 @@ const structuredData = {
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "institutional research exchange",
-        email: "t.stephanie@lunartuliplab.com",
+        email: INSTITUTIONAL_EMAIL,
         availableLanguage: ["Chinese", "English"],
       },
       sameAs: ["https://github.com/Lunartulip"],

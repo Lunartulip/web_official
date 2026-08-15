@@ -53,7 +53,7 @@ test("keeps language selection persistent and accessible", () => {
 
 test("publishes the official contact and canonical domain", () => {
   assert.match(pageSource, /institutionalMailto/);
-  assert.match(contactSource, /t\.stephanie@lunartuliplab\.com/);
+  assert.match(contactSource, /chief@lunartuliplab\.com/);
   assert.match(pageSource, /微信公众号/);
   assert.match(pageSource, /小红书/);
   assert.match(pageSource, /WeChat Official Account/);

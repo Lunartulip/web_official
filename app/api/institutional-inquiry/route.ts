@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { INSTITUTIONAL_EMAIL } from "@/lib/contact";
 import {
   consumeInquiryRateLimit,
   isSameOrigin,
@@ -54,8 +55,8 @@ export async function POST(request: Request) {
     console.error("Institutional inquiry delivery failed.", error);
     const message =
       responseLanguage === "zh"
-        ? "暂时无法发送。请稍后重试，或直接发送邮件至 t.stephanie@lunartuliplab.com。"
-        : "Delivery is temporarily unavailable. Please try again or email t.stephanie@lunartuliplab.com.";
+        ? `暂时无法发送。请稍后重试，或直接发送邮件至 ${INSTITUTIONAL_EMAIL}。`
+        : `Delivery is temporarily unavailable. Please try again or email ${INSTITUTIONAL_EMAIL}.`;
     return response(wantsJson, 503, message, responseLanguage);
   }
 }
@@ -85,7 +86,7 @@ function response(
 <html lang="${language === "zh" ? "zh-CN" : "en"}">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title}</title>
 <style>body{margin:0;background:#080b0f;color:#dce2e8;font:16px/1.7 system-ui,sans-serif}main{max-width:680px;margin:12vh auto;padding:40px;border:1px solid #34404b;background:#10151b}h1{font-weight:500}a{color:#b9d8ed}p{color:#aeb8c2}</style></head>
-<body><main><h1>${title}</h1><p>${safeMessage}</p><p><a href="${returnPath}">${language === "zh" ? "返回机构入口" : "Return to Institutional Access"}</a> · <a href="mailto:t.stephanie@lunartuliplab.com">${language === "zh" ? "直接发送邮件" : "Email directly"}</a></p></main></body>
+<body><main><h1>${title}</h1><p>${safeMessage}</p><p><a href="${returnPath}">${language === "zh" ? "返回机构入口" : "Return to Institutional Access"}</a> · <a href="mailto:${INSTITUTIONAL_EMAIL}">${language === "zh" ? "直接发送邮件" : "Email directly"}</a></p></main></body>
 </html>`;
   return new NextResponse(html, {
     status,

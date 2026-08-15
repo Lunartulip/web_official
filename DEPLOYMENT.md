@@ -60,7 +60,7 @@ SMTP_SECURE=true
 SMTP_USER=enterprise-mailbox@example.com
 SMTP_PASSWORD=REPLACE_WITH_SECRET
 SMTP_FROM=Lunartulip Lab <enterprise-mailbox@example.com>
-SMTP_TO=t.stephanie@lunartuliplab.com
+SMTP_TO=chief@lunartuliplab.com
 ```
 
 Do not commit this file, paste it into deployment logs, or place the password directly in the systemd unit.
@@ -192,7 +192,7 @@ Check all of the following:
 - Capability Map and Workflow controls
 - desktop and mobile layouts
 - logo and image loading
-- `mailto:t.stephanie@lunartuliplab.com`
+- `mailto:chief@lunartuliplab.com`
 - email sending and receiving remain healthy after DNS changes
 - Chinese and English Institutional Access pages show all four inquiry routes
 - Diagnostic pricing displays `¥100,000` and `US$15,000` as starting prices
