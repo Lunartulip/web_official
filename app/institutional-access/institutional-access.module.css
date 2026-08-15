@@ -82,10 +82,10 @@
 }
 
 .hero h1 {
-  max-width: 1060px;
-  margin: 25px 0 82px;
-  font: 300 clamp(48px, 7.4vw, 108px)/0.98 Georgia, "Times New Roman", serif;
-  letter-spacing: -0.045em;
+  max-width: 980px;
+  margin: 32px 0 94px;
+  font: 300 clamp(46px, 6.4vw, 92px)/1.08 Georgia, "Times New Roman", serif;
+  letter-spacing: -0.035em;
 }
 
 .hero h1 span {
