@@ -42,7 +42,30 @@ npm ci
 npm run build:server
 ```
 
-## 4. Create a systemd service
+## 4. Configure SMTP secrets
+
+The institutional inquiry endpoint sends through the existing enterprise mailbox. Keep its credentials outside Git and make the environment file readable only by root:
+
+```bash
+sudo install -m 600 -o root -g root /dev/null /etc/lunartulip-web.env
+sudoedit /etc/lunartulip-web.env
+```
+
+Set every variable below. Use the values supplied by the enterprise-email provider; `SMTP_SECURE=true` is normally used with port `465`, while STARTTLS on port `587` normally uses `false`.
+
+```dotenv
+SMTP_HOST=smtp.example.com
+SMTP_PORT=465
+SMTP_SECURE=true
+SMTP_USER=enterprise-mailbox@example.com
+SMTP_PASSWORD=REPLACE_WITH_SECRET
+SMTP_FROM=Lunartulip Lab <enterprise-mailbox@example.com>
+SMTP_TO=t.stephanie@lunartuliplab.com
+```
+
+Do not commit this file, paste it into deployment logs, or place the password directly in the systemd unit.
+
+## 5. Create a systemd service
 
 Find the absolute npm path:
 
@@ -63,6 +86,7 @@ User=YOUR_LINUX_USER
 WorkingDirectory=/srv/lunartulip/web_official
 Environment=NODE_ENV=production
 Environment=PORT=3000
+EnvironmentFile=/etc/lunartulip-web.env
 ExecStart=/usr/bin/npm run start:server
 Restart=always
 RestartSec=5
@@ -85,7 +109,7 @@ Verify locally on the server:
 curl -I http://127.0.0.1:3000
 ```
 
-## 5. Configure Nginx
+## 6. Configure Nginx
 
 Create `/etc/nginx/sites-available/lunartulip`:
 
@@ -122,7 +146,7 @@ sudo nginx -t
 sudo systemctl reload nginx
 ```
 
-## 6. HTTPS
+## 7. HTTPS
 
 Wait until both DNS records resolve to the Singapore server, then run:
 
@@ -133,7 +157,7 @@ sudo certbot renew --dry-run
 
 Choose the HTTPS redirect when prompted.
 
-## 7. Firewall
+## 8. Firewall
 
 In the Alibaba Cloud ECS security group, allow inbound TCP `80` and `443` from `0.0.0.0/0`. Keep SSH `22` restricted to trusted administrator IPs whenever possible. The cloud security group applies before UFW, so both layers must permit web traffic.
 
@@ -147,7 +171,7 @@ sudo ufw status
 
 Do not expose port `3000` publicly; Nginx should be the public entry point.
 
-## 8. Updating the website
+## 9. Updating the website
 
 ```bash
 cd /srv/lunartulip/web_official
@@ -158,7 +182,7 @@ sudo systemctl restart lunartulip-web
 sudo systemctl status lunartulip-web --no-pager
 ```
 
-## 9. Launch verification
+## 10. Launch verification
 
 Check all of the following:
 
@@ -170,6 +194,28 @@ Check all of the following:
 - logo and image loading
 - `mailto:t.stephanie@lunartuliplab.com`
 - email sending and receiving remain healthy after DNS changes
+- Chinese and English Institutional Access pages show all four inquiry routes
+- Diagnostic pricing displays `¥100,000` and `US$15,000` as starting prices
+- a successful structured inquiry arrives at `SMTP_TO`, and its subject/body contain exactly one submitted `source` and `intent`
+- Reply-To on the received inquiry is the form submitter's email
+- validation errors, SMTP delivery failures and the no-JavaScript response are readable and retain the direct-email fallback
+- submitting an empty honeypot succeeds, while a populated `companyWebsite` field is rejected
+- cross-origin POST requests are rejected with HTTP `403`; repeated requests exceed the single-instance limit with HTTP `429`
+
+After HTTPS is active, test the endpoint from the server with the production origin (use a real test inbox and a non-sensitive research question):
+
+```bash
+curl -i 'https://lunartuliplab.com/api/institutional-inquiry' \
+  -H 'Origin: https://lunartuliplab.com' \
+  -H 'Content-Type: application/json' \
+  --data '{"source":"institutional_access","intent":"sample_request","language":"en","pagePath":"/en/institutional-access","organization":"Launch Test Institution","role":"Research Operations","name":"Launch Test","email":"YOUR_TEST_EMAIL","researchQuestion":"Please provide a representative institutional sample.","timeline":"Within two weeks","companyWebsite":""}'
+```
+
+Expect HTTP `200` and confirm delivery. Then inspect service logs without exposing environment values:
+
+```bash
+sudo journalctl -u lunartulip-web -n 100 --no-pager
+```
 
 ## Rollback
 

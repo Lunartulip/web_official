@@ -63,10 +63,10 @@ const deskCapabilities = [
 ];
 
 const engagementTopics = [
-  { cn: "全球 AI 科技权益", en: "Global AI Technology Equities", detailCn: "围绕公司、产业链与价值捕获交流研究问题", detailEn: "Discuss company, value-chain and value-capture research questions", subject: "Global AI Technology Equity Research" },
-  { cn: "主观基本面研究", en: "Discretionary Fundamental Research", detailCn: "讨论产业因果、公司利润、估值与预期差", detailEn: "Discuss industry causality, earnings, valuation and expectation gaps", subject: "Discretionary Fundamental Research" },
-  { cn: "系统化量化研究", en: "Systematic Quantitative Research", detailCn: "讨论 ML 策略、组合配置、验证方法与结果复盘", detailEn: "Discuss ML strategies, portfolio allocation, validation methods and outcome review", subject: "Systematic Quantitative Research" },
-  { cn: "机构研究交流", en: "Institutional Research Exchange", detailCn: "从一个具体研究问题与清晰边界开始", detailEn: "Begin with one specific research question and explicit boundaries", subject: "Institutional Research Exchange" },
+  { cn: "索取机构样章", en: "Request an institutional sample", detailCn: "先审阅研究密度、证据纪律与交付标准", detailEn: "Evaluate analytical density, evidence discipline and delivery quality", intent: "sample_request" },
+  { cn: "申请 Research Access", en: "Apply for Research Access", detailCn: "机构 × Coverage Track × 固定周期的持续研究", detailEn: "Ongoing research by institution × Coverage Track × fixed term", intent: "research_access" },
+  { cn: "提交研究 Mandate", en: "Submit a research mandate", detailCn: "仅限既有 coverage 与长期研究主线", detailEn: "Scoped to existing coverage and long-horizon research threads", intent: "commissioned_mandate" },
+  { cn: "讨论 6-Session Diagnostic", en: "Discuss the 6-Session Diagnostic", detailCn: "诊断并共同设计 AI-native 投研系统", detailEn: "Diagnose and co-design an AI-native research system", intent: "research_system_diagnostic" },
 ];
 
 const collaborationLanes = [
@@ -400,7 +400,7 @@ function LoopIcon() {
 }
 
 export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Language }) {
-  const [language, setLanguage] = useState<Language>(initialLanguage);
+  const language = initialLanguage;
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("#top");
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -409,23 +409,10 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
   const capability =
     capabilities.find((item) => item.id === activeCapability) ?? capabilities[0];
   const tx = (value: string) => language === "en" ? (en[value] ?? value) : value;
-  const selectLanguage = (nextLanguage: Language) => {
-    setLanguage(nextLanguage);
-    window.localStorage.setItem("lunartulip-language", nextLanguage);
-  };
   const showNextCapability = () => {
     const index = capabilities.findIndex((item) => item.id === activeCapability);
     setActiveCapability(capabilities[(index + 1) % capabilities.length].id);
   };
-
-  useEffect(() => {
-    if (initialLanguage === "en") return;
-    const savedLanguage = window.localStorage.getItem("lunartulip-language");
-    if (savedLanguage === "cn" || savedLanguage === "en") {
-      const frame = window.requestAnimationFrame(() => setLanguage(savedLanguage));
-      return () => window.cancelAnimationFrame(frame);
-    }
-  }, [initialLanguage]);
 
   useEffect(() => {
     document.documentElement.lang = language === "cn" ? "zh-CN" : "en";
@@ -488,9 +475,9 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
 
         <div className="header-tools">
         <div className="language-switch" aria-label="Language selector">
-          <button type="button" className={language === "cn" ? "active" : ""} onClick={() => selectLanguage("cn")} aria-pressed={language === "cn"}>CN</button>
+          <Link href="/" className={language === "cn" ? "active" : ""} hrefLang="zh-CN" aria-current={language === "cn" ? "page" : undefined} onClick={() => window.localStorage.setItem("lunartulip-language", "cn")}>CN</Link>
           <span>/</span>
-          <button type="button" className={language === "en" ? "active" : ""} onClick={() => selectLanguage("en")} aria-pressed={language === "en"}>EN</button>
+          <Link href="/en" className={language === "en" ? "active" : ""} hrefLang="en" aria-current={language === "en" ? "page" : undefined} onClick={() => window.localStorage.setItem("lunartulip-language", "en")}>EN</Link>
         </div>
         <div className="system-status" aria-label={language === "cn" ? "全球 AI 科技权益独立研究" : "Independent global AI technology equity research"}>
           <span aria-hidden="true" />
@@ -921,12 +908,12 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
         <p>{language === "cn" ? "请介绍您的机构背景、关注市场与具体研究问题，我们将从最适合的研究方式开始交流。" : "Tell us about your institution, market focus and a specific research question, and we will begin with the most relevant research format."}</p>
         <div className="engagement-grid">
           {engagementTopics.map((topic, index) => (
-            <a key={topic.subject} href={institutionalMailto({ source: "HOME_ENGAGEMENT", topic: topic.subject, language })}>
+            <Link key={topic.intent} href={`${language === "en" ? "/en" : ""}/institutional-access#intent-${topic.intent}`}>
               <small>0{index + 1}</small>
               <strong>{language === "cn" ? topic.cn : topic.en}</strong>
               <span>{language === "cn" ? topic.detailCn : topic.detailEn}</span>
               <i aria-hidden="true"><ArrowUpRightIcon /></i>
-            </a>
+            </Link>
           ))}
         </div>
         <a className="contact-email" href={institutionalMailto({ source: "HOME_CONTACT", topic: language === "cn" ? "机构合作咨询" : "Institutional Inquiry", language })}>

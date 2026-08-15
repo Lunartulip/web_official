@@ -127,7 +127,8 @@ main {
   letter-spacing: .08em;
 }
 
-.language-switch button {
+.language-switch button,
+.language-switch a {
   padding: 5px 2px;
   border: 0;
   background: transparent;
@@ -136,8 +137,10 @@ main {
   cursor: pointer;
 }
 
-.language-switch button.active { color: var(--ink); font-weight: 700; }
-.language-switch button:hover { color: var(--ink); }
+.language-switch button.active,
+.language-switch a.active { color: var(--ink); font-weight: 700; }
+.language-switch button:hover,
+.language-switch a:hover { color: var(--ink); }
 .language-switch span { color: #c2c8cc; }
 
 .desktop-nav a {
