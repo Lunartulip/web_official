@@ -1,9 +1,13 @@
 import type { MetadataRoute } from "next";
 import { getAllNotes } from "@/lib/notes";
-import { deepDives } from "@/lib/deep-dives";
+import { researchObjects } from "@/lib/research-objects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const notes = getAllNotes();
+  const latestResearchDate = researchObjects
+    .map((item) => item.versions.at(-1)?.date ?? item.publishedAt)
+    .sort()
+    .at(-1) ?? "2026-08-15";
 
   return [
     {
@@ -26,9 +30,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: "https://lunartuliplab.com/deep-dive",
-      lastModified: new Date("2026-08-08T00:00:00+08:00"),
+      lastModified: new Date(`${latestResearchDate}T00:00:00+08:00`),
       changeFrequency: "monthly",
       priority: 0.9,
+      alternates: {
+        languages: {
+          "zh-CN": "https://lunartuliplab.com/deep-dive",
+          en: "https://lunartuliplab.com/en/deep-dive",
+        },
+      },
     },
     {
       url: "https://lunartuliplab.com/authority-ledger",
@@ -54,20 +64,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: index === 0 ? 0.9 : 0.75,
     })),
-    ...deepDives.flatMap((item) => [
+    ...researchObjects.flatMap((item) => {
+      const modifiedAt = item.versions.at(-1)?.date ?? item.publishedAt;
+      return [
       {
         url: `https://lunartuliplab.com/deep-dive/${item.slug}`,
-        lastModified: new Date("2026-08-08T00:00:00+08:00"),
+        lastModified: new Date(`${modifiedAt}T00:00:00+08:00`),
         changeFrequency: "monthly" as const,
         priority: 0.8,
+        alternates: {
+          languages: {
+            "zh-CN": `https://lunartuliplab.com/deep-dive/${item.slug}`,
+            en: `https://lunartuliplab.com/en/deep-dive/${item.slug}`,
+          },
+        },
       },
       {
         url: `https://lunartuliplab.com/en/deep-dive/${item.slug}`,
-        lastModified: new Date("2026-08-08T00:00:00+08:00"),
+        lastModified: new Date(`${modifiedAt}T00:00:00+08:00`),
         changeFrequency: "monthly" as const,
         priority: 0.7,
+        alternates: {
+          languages: {
+            "zh-CN": `https://lunartuliplab.com/deep-dive/${item.slug}`,
+            en: `https://lunartuliplab.com/en/deep-dive/${item.slug}`,
+          },
+        },
       },
-    ]),
+    ];
+    }),
     ...notes.map((note) => ({
       url: `https://lunartuliplab.com/notes/${note.slug}`,
       lastModified: new Date(`${note.updatedAt ?? note.publishedAt}T00:00:00+08:00`),

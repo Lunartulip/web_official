@@ -1,10 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { deepDives } from "@/lib/deep-dives";
+import { researchObjects } from "@/lib/research-objects";
 import styles from "../proof.module.css";
 
 export default function DeepDiveIndex({ language = "cn" }: { language?: "cn" | "en" }) {
   const isCn = language === "cn";
+  const locale = isCn ? "zh-CN" : "en";
+  const companyStudies = researchObjects.filter((item) => item.kind === "company-deep-dive");
+  const themeStudies = researchObjects.filter((item) => item.kind === "theme-study");
 
   return (
     <main className={styles.page}>
@@ -29,16 +32,33 @@ export default function DeepDiveIndex({ language = "cn" }: { language?: "cn" | "
 
       <section className={styles.section}>
         <div className={styles.sectionHead}>
-          <div><p className={styles.sectionLabel}>VERSIONED RESEARCH / 02</p><h2>{isCn ? "每篇研究，都有明确问题和更新路径。" : "Every research object has a clear question and update path."}</h2></div>
-          <p className={styles.lead}>{isCn ? "判断与证据被固定在明确的 as-of date 上；出现更正时，同一页面更新版本与更正记录。" : "Claims and evidence are fixed to an explicit as-of date. When a correction occurs, the same page advances its version and update history."}</p>
+          <div><p className={styles.sectionLabel}>COMPANY DEEP DIVES / 03</p><h2>{isCn ? "公司研究：从财务事实走向可证伪的判断。" : "Company research that moves from financial facts to falsifiable judgment."}</h2></div>
+          <p className={styles.lead}>{isCn ? "每篇研究固定 as-of date、Claim IDs、Evidence Ledger、估值情景与前瞻证伪条件。更新发生在同一研究对象上，不用后见数据覆盖原始判断。" : "Each object fixes its as-of date, Claim IDs, Evidence Ledger, valuation scenarios and forward falsifiers. New evidence advances the version without overwriting the original information set."}</p>
         </div>
         <div className={styles.grid}>
-          {deepDives.map((item) => (
+          {companyStudies.map((item) => (
             <article className={styles.card} key={item.slug}>
-              <p className={styles.meta}>{item.tickers.join(" · ")} / AS OF {item.publishedAt}</p>
-              <h3>{isCn ? item.titleCn : item.titleEn}</h3>
-              <p>{isCn ? item.standfirstCn : item.standfirstEn}</p>
+              <p className={styles.meta}>{item.tickers.join(" · ")} / {item.id} / AS OF {item.asOf}</p>
+              <h3>{item.renderings[locale].title}</h3>
+              <p>{item.renderings[locale].standfirst}</p>
               <Link href={`${isCn ? "" : "/en"}/deep-dive/${item.slug}`}>{isCn ? "阅读研究 →" : "Read the research →"}</Link>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <div className={styles.sectionHead}>
+          <div><p className={styles.sectionLabel}>THEME STUDIES / 01</p><h2>{isCn ? "横截面研究：比较不同价值捕获路径。" : "Cross-sectional research across distinct value-capture paths."}</h2></div>
+          <p className={styles.lead}>{isCn ? "Theme Study 用共同问题比较多家公司，并加入控制组，检验产业叙事能否转化为可归因的经济价值。" : "Theme Studies test one shared question across companies, using control cases to distinguish industry narrative from attributable economic value."}</p>
+        </div>
+        <div className={styles.grid}>
+          {themeStudies.map((item) => (
+            <article className={`${styles.card} ${styles.themeCard}`} key={item.slug}>
+              <p className={styles.meta}>{item.tickers.join(" · ")} / {item.id} / AS OF {item.asOf}</p>
+              <h3>{item.renderings[locale].title}</h3>
+              <p>{item.renderings[locale].standfirst}</p>
+              <Link href={`${isCn ? "" : "/en"}/deep-dive/${item.slug}`}>{isCn ? "阅读主题研究 →" : "Read the theme study →"}</Link>
             </article>
           ))}
         </div>

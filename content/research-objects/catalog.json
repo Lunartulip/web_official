@@ -13,8 +13,8 @@
         "id": "CL-PLTR-001",
         "type": "Fact",
         "text": {
-          "zh-CN": "Palantir 2026 年第二季度收入为 19.35464 亿美元，同比增长 93%；美国商业收入为 7.64 亿美元，同比增长 149%。",
-          "en": "Palantir reported Q2 2026 revenue of $1.935464 billion, up 93% year over year, with U.S. commercial revenue of $764 million, up 149%."
+          "zh-CN": "Palantir 2026 年第二季度收入 19.35464 亿美元，同比增长 93%；其中美国商业收入 7.64 亿美元，同比增长 149%。",
+          "en": "Palantir reported Q2 2026 revenue of $1.935464 billion, up 93% year over year, including U.S. commercial revenue of $764 million, up 149%."
         },
         "evidenceIds": ["EV-PLTR-001"]
       },
@@ -22,8 +22,8 @@
         "id": "CL-PLTR-002",
         "type": "Fact",
         "text": {
-          "zh-CN": "美国商业 TCV bookings 为 21.32 亿美元，同比增长 153%；公司将 2026 年收入指引上调至 81.50–81.58 亿美元。",
-          "en": "U.S. commercial TCV bookings reached $2.132 billion, up 153%, while FY2026 revenue guidance rose to $8.150–8.158 billion."
+          "zh-CN": "美国商业 TCV bookings 为 21.32 亿美元，同比增长 153%；公司同时把 2026 年收入指引上调至 81.50–81.58 亿美元。TCV 计量的是合同承诺总额。",
+          "en": "U.S. commercial TCV bookings reached $2.132 billion, up 153%, and FY2026 revenue guidance was raised to $8.150–8.158 billion. TCV measures total contracted commitment."
         },
         "evidenceIds": ["EV-PLTR-001"]
       },
@@ -31,8 +31,8 @@
         "id": "CL-PLTR-003",
         "type": "Derived",
         "text": {
-          "zh-CN": "美国商业收入已相当于美国政府收入的约 94%，商业预算正在成为第二条规模化增长曲线。",
-          "en": "U.S. commercial revenue reached roughly 94% of U.S. government revenue, making commercial budgets a second growth engine at scale."
+          "zh-CN": "按当季披露数计算，美国商业收入相当于美国政府收入的约 94%（7.64 亿 / 8.09 亿），商业预算已经构成第二条规模化收入来源。",
+          "en": "On the quarter's disclosed figures, U.S. commercial revenue equals roughly 94% of U.S. government revenue ($764m / $809m), making commercial budgets a second revenue base at scale."
         },
         "evidenceIds": ["EV-PLTR-001"]
       },
@@ -40,8 +40,8 @@
         "id": "CL-PLTR-004",
         "type": "Hypothesis",
         "text": {
-          "zh-CN": "若 bookings、TCV 与确认收入继续同步，企业客户可能已把 AIP 从试验预算迁入核心经营预算，足以延长高增长久期。",
-          "en": "If bookings, TCV and recognized revenue remain aligned, enterprise customers may be moving AIP from pilot spend into core operating budgets, extending the duration of elevated growth."
+          "zh-CN": "如果 bookings、TCV 与确认收入继续同步，说明企业客户已把 AIP 从试验预算迁进核心经营预算，高增长的久期会比单季增速所暗示的更长。公司没有按预算类别披露收入，这一条目前只能作为假设。",
+          "en": "If bookings, TCV and recognized revenue keep moving together, enterprise customers have shifted AIP from pilot spend into the core operating plan, and the duration of elevated growth would run longer than a single quarter's rate implies. Palantir discloses no revenue split by budget category, so this remains a hypothesis."
         },
         "evidenceIds": ["EV-PLTR-001", "EV-PLTR-002"]
       },
@@ -49,8 +49,8 @@
         "id": "CL-PLTR-005",
         "type": "Inference",
         "text": {
-          "zh-CN": "合同指标若先于收入明显减速，预算迁移命题会弱化，高 forward-sales 定价的容错空间也会迅速收窄。",
-          "en": "A material slowdown in contract indicators ahead of revenue would weaken the budget-migration thesis and sharply reduce the tolerance embedded in a high forward-sales valuation."
+          "zh-CN": "合同指标若明显领先收入减速，预算迁移这条命题会先被削弱，而按 forward sales 定价留下的容错空间会同时收窄。",
+          "en": "If contract indicators decelerate materially ahead of revenue, the budget-migration thesis weakens first, and the tolerance embedded in a forward-sales valuation narrows at the same time."
         },
         "evidenceIds": ["EV-PLTR-001", "EV-PLTR-003"]
       }
@@ -127,7 +127,7 @@
         "evidenceIds": ["EV-PLTR-001"]
       },
       {
-        "label": {"zh-CN": "FY2026 指引中点", "en": "FY2026 guidance midpoint"},
+        "label": {"zh-CN": "FY2026 收入指引中点", "en": "FY2026 revenue guidance midpoint"},
         "period": "2026-FY",
         "value": 8154,
         "unit": "USDm",
@@ -137,7 +137,7 @@
     "valuationScenarios": [
       {
         "id": "VAL-PLTR-BASE",
-        "label": {"zh-CN": "基准延续", "en": "Base continuation"},
+        "label": {"zh-CN": "增长延续", "en": "Growth continues"},
         "revenueBaseUsdM": 8154,
         "revenueGrowthPct": 45,
         "forwardRevenueUsdM": 11823.3,
@@ -145,13 +145,13 @@
         "impliedEnterpriseValueUsdM": 283759.2,
         "calculation": "8154 * 1.45 = 11823.3; 11823.3 * 24 = 283759.2",
         "interpretation": {
-          "zh-CN": "用高增长与显著回落后的倍数做敏感性测试；结果是企业价值情景，不是目标价。",
-          "en": "A sensitivity case pairing high growth with a materially lower multiple; the output is enterprise value, not a price target."
+          "zh-CN": "以指引中点为基数，假设 45% 的远期增长和 24 倍 sales multiple，输出企业价值。当日 observed multiple 未经核验，24 倍是设定的假设，不构成对现价的比较。",
+          "en": "Takes the guidance midpoint, assumes 45% forward growth and a 24× sales multiple, and outputs enterprise value. With no verified point-in-time multiple, 24× is an assumption rather than a comparison against the tape."
         }
       },
       {
         "id": "VAL-PLTR-BEAR",
-        "label": {"zh-CN": "增长降档", "en": "Growth reset"},
+        "label": {"zh-CN": "增长降档", "en": "Growth resets"},
         "revenueBaseUsdM": 8154,
         "revenueGrowthPct": 25,
         "forwardRevenueUsdM": 10192.5,
@@ -159,8 +159,8 @@
         "impliedEnterpriseValueUsdM": 142695,
         "calculation": "8154 * 1.25 = 10192.5; 10192.5 * 14 = 142695",
         "interpretation": {
-          "zh-CN": "展示合同增速降档时的估值压缩风险，不映射每股价值。",
-          "en": "Frames multiple compression if contract growth resets, without translating the result into per-share value."
+          "zh-CN": "增长退到 25%、倍数退到 14 倍时，企业价值约为基准情景的一半。它说明定价对增长和倍数同时敏感，不映射每股价值。",
+          "en": "At 25% growth and a 14× multiple, enterprise value lands near half the base case. The point is joint sensitivity to growth and multiple; nothing here maps to per-share value."
         }
       }
     ],
@@ -175,8 +175,8 @@
         "horizon": "any of the next two reported quarters",
         "claimIds": ["CL-PLTR-004"],
         "rationale": {
-          "zh-CN": "若增速在两个季度内跌破 60%，核心预算迁移不足以支撑当前增长久期。",
-          "en": "A drop below 60% within two quarters would indicate that core-budget migration is not sustaining the assumed growth duration."
+          "zh-CN": "美国商业增速在两个季度内跌到 60% 以下，意味着核心预算的迁移速度撑不住当前假设的增长久期。60% 仍是很高的绝对增速，把线画在这里是为了让破位足够明确。",
+          "en": "U.S. commercial growth below 60% within two quarters would mean core-budget migration is not sustaining the assumed growth duration. Sixty percent is still a high absolute rate; the line sits there so that a break has to be unambiguous."
         }
       },
       {
@@ -188,8 +188,8 @@
         "horizon": "any of the next two reported quarters",
         "claimIds": ["CL-PLTR-004"],
         "rationale": {
-          "zh-CN": "TCV 增速先跌破 50% 会使合同领先指标与收入脱节。",
-          "en": "TCV growth below 50% would break the expected alignment between leading contract indicators and revenue."
+          "zh-CN": "TCV 是领先序列。它先跌破 50%，合同与确认收入的同步关系就断了，而这条同步关系是预算迁移命题的全部观察基础。",
+          "en": "TCV is the leading series. If it breaks below 50% first, the alignment between contracts and recognized revenue is gone, and that alignment is the entire observable basis for the budget-migration thesis."
         }
       }
     ],
@@ -198,16 +198,16 @@
         "version": "1.0.0",
         "date": "2026-08-05",
         "diff": {
-          "zh-CN": "原始时点判断：PLTR 是 AI 应用商业化的强正向样本。",
-          "en": "Original point-in-time view: PLTR was a strong positive read-through for AI application monetization."
+          "zh-CN": "原始时点判断：把 PLTR 读作 AI 应用层商业化的强正向样本。",
+          "en": "Original point-in-time view: PLTR read as a strong positive sample for AI application-layer monetization."
         }
       },
       {
         "version": "2.0.0",
         "date": "2026-08-15",
         "diff": {
-          "zh-CN": "删除错误的 10–12 倍 P/S、技术价位、仓位与 HYP 编号；改用第一方证据、可复算情景和量化证伪条件。",
-          "en": "Removed the erroneous 10–12x sales multiple, technical levels, position sizing and HYP identifier; added primary evidence, reproducible scenarios and quantitative falsifiers."
+          "zh-CN": "删掉错误的 10–12 倍 P/S、技术价位、仓位与 HYP 编号，换成第一方证据、可复算的情景算术和量化证伪条件。",
+          "en": "Removed the erroneous 10–12× sales multiple, technical levels, position sizing and the HYP identifier, replacing them with primary evidence, reproducible scenario arithmetic and quantitative falsifiers."
         }
       }
     ],
@@ -215,19 +215,19 @@
       "zh-CN": {
         "locale": "zh-CN",
         "siblingLocale": "en",
-        "title": "Palantir：商业预算迁移能否支撑高 forward sales",
-        "question": "美国商业客户是否已把 AIP 从试验预算迁入核心经营预算？",
-        "standfirst": "Q2 数据确认商业收入、TCV 与利润同步加速。真正需要验证的是，这轮增长能否从项目爆发延长为预算制度变化。",
-        "whyItMatters": "上游 AI 支出已经容易观察，应用层能否持续拿到企业核心预算仍是稀缺证据。PLTR 提供了清晰样本，也把估值风险推到研究中心。",
-        "consensus": "市场已看到美国商业收入增长 149%、TCV bookings 增长 153%，以及全年指引上调。",
-        "differentiated": "后续信息增量来自合同指标与确认收入的同步程度，以及商业收入能否持续逼近并超过政府收入。",
-        "valuation": "估值只做企业价值敏感性。输入为公司收入指引、增长假设和 sales multiple；不使用未经许可行情，也不给目标价。",
-        "update": "v2.0 保留 2026-08-05 判断时点，纠正原报告的 P/S 算术和交易性内容。",
+        "title": "Palantir：149% 的商业增速属于哪一类预算",
+        "question": "美国商业客户把 AIP 记在创新预算里，还是记在核心经营预算里？",
+        "standfirst": "Q2 的商业收入、TCV 与利润同时加速，这一点没有争议。还需要验证的是这笔支出的预算归属：创新预算会随周期收缩，核心经营预算会被保住。",
+        "whyItMatters": "上游算力支出早就能从几家公司的资本开支里读出来，应用层能不能反复拿到企业的经营预算，公开证据一直很薄。Palantir 是少数把这条链条两端都披露出来的样本：合同签了多少，收入确认了多少。它的定价方式又把增长久期推到研究中心。一家按 forward sales 定价的公司，容错来自增长还能持续多久；单季增速再高，也只解释其中一部分。",
+        "consensus": "美国商业收入增长 149%、TCV bookings 增长 153%、全年指引再次上调，这些已经在价格里。",
+        "differentiated": "增量信息来自三条序列能否继续同步：TCV bookings、确认收入、全年指引。TCV 记的是承诺额，多年期合同和签约时点都能让它单独走高，只有确认收入跟着走，采购和收入确认这两道关口才算真正穿过。第二个观察点是商业收入相对政府收入的位置，Q2 已经到约 94%，越过去意味着这家公司的收入结构被重写一次。",
+        "valuation": "估值只做企业价值敏感性。基数取公司自己的全年收入指引，增长和 sales multiple 都写进算式，读者可以重算。2026-08-05 当日经许可的企业价值和完全稀释股数不在手上，所以这里不陈述当日 forward P/S，也不给每股结论。",
+        "update": "v2.0 保留 2026-08-05 的判断时点，修掉原稿的 P/S 算术，删除技术价位、仓位和其余交易性表述。",
         "evidenceClaimIds": ["CL-PLTR-001", "CL-PLTR-002", "CL-PLTR-003"],
         "causalChain": [
-          {"title": "AIP 进入真实流程", "body": "Ontology 把数据、权限和动作接进业务流程。", "claimIds": ["CL-PLTR-004"]},
-          {"title": "试验转为预算", "body": "TCV、bookings 与收入同步，才说明采用穿过了采购与收入确认。", "claimIds": ["CL-PLTR-002", "CL-PLTR-004"]},
-          {"title": "增长久期接受检验", "body": "领先合同指标若先减速，高增长久期就要下修。", "claimIds": ["CL-PLTR-005"]}
+          {"title": "AIP 接进业务流程", "body": "Ontology 把数据、权限和动作放到同一层，模型输出落在具体决策上。", "claimIds": ["CL-PLTR-004"]},
+          {"title": "预算类别改变", "body": "TCV、bookings 与确认收入同步，才说明这笔钱通过了采购和收入确认。", "claimIds": ["CL-PLTR-002", "CL-PLTR-004"]},
+          {"title": "久期接受检验", "body": "领先的合同指标一旦先减速，增长久期假设就要下修。", "claimIds": ["CL-PLTR-005"]}
         ],
         "riskClaimIds": ["CL-PLTR-005"],
         "forwardTestIds": ["FAL-PLTR-001", "FAL-PLTR-002"]
@@ -235,19 +235,19 @@
       "en": {
         "locale": "en",
         "siblingLocale": "zh-CN",
-        "title": "Palantir: Can commercial budget migration support high forward sales?",
-        "question": "Has AIP moved from pilot spend into the enterprise operating budget?",
-        "standfirst": "Q2 established simultaneous acceleration in commercial revenue, TCV and profit. The investable question is whether a burst of projects is becoming a durable budget category.",
-        "whyItMatters": "Upstream AI spend is visible; repeatable capture of core enterprise budgets remains scarce. PLTR supplies unusually clean evidence, while putting valuation duration at the center of the debate.",
-        "consensus": "The market has absorbed 149% U.S. commercial growth, 153% TCV-bookings growth and another guidance increase.",
-        "differentiated": "The next information gain comes from alignment between contract metrics and recognized revenue, plus whether commercial revenue can overtake government revenue.",
-        "valuation": "Valuation is limited to enterprise-value sensitivities using disclosed guidance, explicit growth assumptions and sales multiples. There is no target price.",
-        "update": "Version 2.0 preserves the August 5 information set while correcting the original sales-multiple arithmetic and removing trading content.",
+        "title": "Palantir: Which budget line is funding 149% commercial growth?",
+        "question": "Are U.S. commercial customers funding AIP from innovation budgets or from the core operating plan?",
+        "standfirst": "Commercial revenue, TCV and margin accelerated together in Q2, and that much is settled. What still needs proving is where the money sits. Innovation budgets get cut in a downturn. Operating budgets get defended.",
+        "whyItMatters": "Capital-expenditure disclosure long ago made upstream AI spend easy to observe. Evidence that the application layer can repeatedly win enterprise operating budgets is far thinner. Palantir is unusual in disclosing both ends of that chain: what was contracted and what was recognized. It also prices off forward sales, which puts duration at the center of the work. For a company valued that way, the margin for error lives in how long growth lasts, and a single quarter's rate explains only part of it.",
+        "consensus": "149% U.S. commercial growth, 153% TCV-bookings growth and another guidance raise are already in the price.",
+        "differentiated": "The information gain comes from whether three series keep moving together: TCV bookings, recognized revenue and full-year guidance. TCV records committed value, and multi-year terms or signing timing can lift it on their own. Recognition is what confirms the spend cleared both procurement and the revenue standard. The second marker is commercial revenue against government revenue, already near 94% in Q2. Crossing it would rewrite the company's revenue mix.",
+        "valuation": "Valuation here stops at enterprise-value sensitivity. The base is the company's own full-year guidance, with growth and the sales multiple written into arithmetic a reader can rebuild. Licensed point-in-time enterprise value and fully diluted share count for August 5 were not available, so no observed forward-sales multiple and no per-share conclusion appear.",
+        "update": "Version 2.0 keeps the August 5 information set, corrects the sales-multiple arithmetic in the original draft and strips out technical levels, sizing and the remaining trading content.",
         "evidenceClaimIds": ["CL-PLTR-001", "CL-PLTR-002", "CL-PLTR-003"],
         "causalChain": [
-          {"title": "AIP enters production workflows", "body": "Ontology connects data, permissions and actions inside operating processes.", "claimIds": ["CL-PLTR-004"]},
-          {"title": "Pilots become budget", "body": "TCV, bookings and revenue must move together before adoption counts as monetization.", "claimIds": ["CL-PLTR-002", "CL-PLTR-004"]},
-          {"title": "Duration gets tested", "body": "If leading contract indicators slow first, the growth-duration assumption must reset.", "claimIds": ["CL-PLTR-005"]}
+          {"title": "AIP lands inside the workflow", "body": "Ontology puts data, permissions and actions in one layer, so model output attaches to a specific decision.", "claimIds": ["CL-PLTR-004"]},
+          {"title": "The budget line changes", "body": "Only when TCV, bookings and recognized revenue move together has the spend cleared procurement and recognition.", "claimIds": ["CL-PLTR-002", "CL-PLTR-004"]},
+          {"title": "Duration gets tested", "body": "If the leading contract indicators slow first, the growth-duration assumption has to come down.", "claimIds": ["CL-PLTR-005"]}
         ],
         "riskClaimIds": ["CL-PLTR-005"],
         "forwardTestIds": ["FAL-PLTR-001", "FAL-PLTR-002"]
@@ -255,8 +255,8 @@
     },
     "dataGaps": [
       {
-        "zh-CN": "缺少经许可的 2026-08-05 point-in-time 企业价值与完全稀释股数，因此不陈述当日 forward P/S 或每股价值。",
-        "en": "Licensed point-in-time enterprise value and fully diluted share count for August 5 are unavailable, so the object does not state an observed forward-sales multiple or per-share value."
+        "zh-CN": "2026-08-05 当日经许可的 point-in-time 企业价值和完全稀释股数不可得，因此本对象不陈述当日 forward P/S，也不给每股价值；情景里的 sales multiple 都是外生假设。",
+        "en": "Licensed point-in-time enterprise value and fully diluted share count for August 5 were unavailable, so the object states no observed forward-sales multiple and no per-share value. Every sales multiple in the scenarios is an exogenous assumption."
       }
     ]
   },
@@ -274,8 +274,8 @@
         "id": "CL-NET-001",
         "type": "Fact",
         "text": {
-          "zh-CN": "Cloudflare Q2 2026 收入为 6.961 亿美元，同比增长 36%；current RPO 同比增长 35%。",
-          "en": "Cloudflare reported Q2 2026 revenue of $696.1 million, up 36%, with current RPO also up 35%."
+          "zh-CN": "Cloudflare 2026 年第二季度收入 6.961 亿美元，同比增长 36%；current RPO 同比增长 35%。",
+          "en": "Cloudflare reported Q2 2026 revenue of $696.1 million, up 36%, with current RPO up 35%."
         },
         "evidenceIds": ["EV-NET-001"]
       },
@@ -283,8 +283,8 @@
         "id": "CL-NET-002",
         "type": "Fact",
         "text": {
-          "zh-CN": "截至 2026 年 6 月，年化收入超过 10 万美元的大客户为 4,698 家；Q2 自由现金流为 5,640 万美元，利润率 8%。",
-          "en": "Cloudflare ended June with 4,698 customers above $100,000 in annualized revenue and generated $56.4 million of Q2 free cash flow, an 8% margin."
+          "zh-CN": "截至 2026 年 6 月末，年化收入超过 10 万美元的大客户 4,698 家；当季自由现金流 5,640 万美元，对应 8% 的自由现金流率。",
+          "en": "At the end of June 2026 Cloudflare had 4,698 customers above $100,000 in annualized revenue, and generated $56.4 million of free cash flow in the quarter, an 8% margin."
         },
         "evidenceIds": ["EV-NET-001", "EV-NET-002"]
       },
@@ -292,8 +292,8 @@
         "id": "CL-NET-003",
         "type": "Fact",
         "text": {
-          "zh-CN": "公司 Investor Day 披露，2025-06-01 至 2026-05-31，Cloudflare 网络上的日均 AI agent 请求量增长超过 1,700%。",
-          "en": "At Investor Day, Cloudflare disclosed more than 1,700% growth in daily AI-agent requests on its network from June 1, 2025 through May 31, 2026."
+          "zh-CN": "公司在 2026 Investor Day 披露，2025-06-01 至 2026-05-31 期间，其网络上的日均 AI agent 请求量增长超过 1,700%。这是使用量指标，公司未同时给出对应的收入口径。",
+          "en": "At its 2026 Investor Day, Cloudflare disclosed growth of more than 1,700% in daily AI-agent requests across its network between June 1, 2025 and May 31, 2026. This is a usage metric, disclosed without any accompanying revenue bridge."
         },
         "evidenceIds": ["EV-NET-003"]
       },
@@ -301,8 +301,8 @@
         "id": "CL-NET-004",
         "type": "Hypothesis",
         "text": {
-          "zh-CN": "NET 的核心变量是 monetization density：一次 agent 动作穿过 Workers、网络、安全和身份等收费层的数量，比请求量本身更接近收入价值。",
-          "en": "NET's key variable is monetization density: the number of paid Workers, network, security and identity layers touched by an agent action should matter more than raw request growth."
+          "zh-CN": "决定 NET 收入的变量是 monetization density：一次 agent 动作穿过 Workers、网络、安全和身份等收费层的数量，比请求总量更接近收入。公司不披露 attach rate，这一条只能借财务序列间接检验。",
+          "en": "The variable that should drive NET's revenue is monetization density: the count of paid Workers, network, security and identity layers a single agent action touches sits closer to revenue than aggregate request volume. Cloudflare discloses no attach rate, so the hypothesis can only be tested indirectly through the financial series."
         },
         "evidenceIds": ["EV-NET-001", "EV-NET-003"]
       },
@@ -310,8 +310,8 @@
         "id": "CL-NET-005",
         "type": "Inference",
         "text": {
-          "zh-CN": "若 agent 请求继续高速增长，而收入、current RPO 和自由现金流率没有同步改善，流量可能主要停留在低价或未收费层。",
-          "en": "If agent requests keep compounding without corresponding gains in revenue, current RPO and free-cash-flow margin, much of the traffic may remain in low-priced or unmetered layers."
+          "zh-CN": "agent 请求继续高速增长、而收入、current RPO 与自由现金流率没有同步改善，说明大部分机器流量停在低价或未计费的层里。",
+          "en": "If agent requests keep compounding while revenue, current RPO and free-cash-flow margin fail to improve alongside them, most of the machine traffic is sitting in low-priced or unmetered layers."
         },
         "evidenceIds": ["EV-NET-001", "EV-NET-003"]
       }
@@ -375,7 +375,7 @@
         "evidenceIds": ["EV-NET-001"]
       },
       {
-        "label": {"zh-CN": "同比收入增速", "en": "Year-over-year revenue growth"},
+        "label": {"zh-CN": "收入同比增速", "en": "Revenue growth (YoY)"},
         "period": "2026-Q2",
         "value": 36,
         "unit": "percent",
@@ -389,7 +389,7 @@
         "evidenceIds": ["EV-NET-001"]
       },
       {
-        "label": {"zh-CN": "大客户数", "en": "Large customers"},
+        "label": {"zh-CN": "大客户数（>$100k ARR）", "en": "Large customers (>$100k ARR)"},
         "period": "2026-Q2",
         "value": 4698,
         "unit": "count",
@@ -399,7 +399,7 @@
     "valuationScenarios": [
       {
         "id": "VAL-NET-BASE",
-        "label": {"zh-CN": "密度改善", "en": "Density improves"},
+        "label": {"zh-CN": "收费密度上升", "en": "Density rises"},
         "revenueBaseUsdM": 2784.4,
         "revenueGrowthPct": 32,
         "forwardRevenueUsdM": 3675.408,
@@ -407,13 +407,13 @@
         "impliedEnterpriseValueUsdM": 73508.16,
         "calculation": "696.1 * 4 = 2784.4; 2784.4 * 1.32 = 3675.408; 3675.408 * 20 = 73508.16",
         "interpretation": {
-          "zh-CN": "以 Q2 年化收入作简化基数，测试收费密度兑现时的企业价值；不等同公司指引。",
-          "en": "Uses annualized Q2 revenue as a simplified base to test a density-improvement case; it is not company guidance."
+          "zh-CN": "以 Q2 年化后的 27.844 亿美元为基数，假设 32% 增长和 20 倍 sales multiple。它测的是收费密度改善这一种状态，与公司指引无关。",
+          "en": "Uses the annualized $2,784.4 million base with 32% growth and a 20× sales multiple. It tests one state of the world, density improving, and carries no relation to company guidance."
         }
       },
       {
         "id": "VAL-NET-BEAR",
-        "label": {"zh-CN": "流量未变现", "en": "Traffic fails to monetize"},
+        "label": {"zh-CN": "流量没有变现", "en": "Traffic does not monetize"},
         "revenueBaseUsdM": 2784.4,
         "revenueGrowthPct": 20,
         "forwardRevenueUsdM": 3341.28,
@@ -421,8 +421,8 @@
         "impliedEnterpriseValueUsdM": 40095.36,
         "calculation": "696.1 * 4 = 2784.4; 2784.4 * 1.20 = 3341.28; 3341.28 * 12 = 40095.36",
         "interpretation": {
-          "zh-CN": "请求量与财务指标脱节时的压缩情景，不输出每股目标。",
-          "en": "A compression case for divergence between request growth and financial output, with no per-share target."
+          "zh-CN": "增长退到 20%、倍数退到 12 倍，企业价值只剩基准情景的约 55%。请求量与财务序列一旦脱节，增长和倍数会同时降档。",
+          "en": "At 20% growth and a 12× multiple, enterprise value falls to roughly 55% of the base case. Once request volume and the financial series diverge, growth and the multiple reset together."
         }
       }
     ],
@@ -437,8 +437,8 @@
         "horizon": "any of the next two reported quarters",
         "claimIds": ["CL-NET-004"],
         "rationale": {
-          "zh-CN": "请求量爆发后收入增速跌破 25%，说明收费密度没有形成足够传导。",
-          "en": "Revenue growth below 25% after the request surge would show inadequate transmission into monetization density."
+          "zh-CN": "请求量出现 1,700% 的增长之后，收入增速反而跌到 25% 以下，说明收费密度没有形成传导。25% 的选点低于当前的 36%，留出正常波动空间。",
+          "en": "Revenue growth below 25% after a 1,700% surge in requests would show that monetization density is not transmitting. The threshold sits under the current 36% to leave room for ordinary variation."
         }
       },
       {
@@ -450,8 +450,8 @@
         "horizon": "any of the next two reported quarters",
         "claimIds": ["CL-NET-004"],
         "rationale": {
-          "zh-CN": "current RPO 跌破 25% 会削弱收费层扩展进入合同余额的证据。",
-          "en": "Current-RPO growth below 25% would weaken evidence that additional paid layers are entering contracted backlog."
+          "zh-CN": "current RPO 记录已签约、预计在一年内确认的部分。它跌破 25%，说明新增的收费层没有进到合同里，密度改善也就缺少前瞻证据。",
+          "en": "Current RPO records contracted revenue expected within a year. Below 25%, additional paid layers are not entering contracts, and the density case loses its forward evidence."
         }
       }
     ],
@@ -460,8 +460,8 @@
         "version": "1.0.0",
         "date": "2026-08-15",
         "diff": {
-          "zh-CN": "从原 NET+TEAM 合并页拆出公司对象；删除 66% option premium、技术价位和仓位建议。",
-          "en": "Split NET into a canonical company object and removed the unsupported 66% option-premium estimate, technical levels and sizing guidance."
+          "zh-CN": "从原 NET+TEAM 合并页拆出独立公司对象，删除无来源的 66% option premium、技术价位和仓位建议。",
+          "en": "Split out of the combined NET+TEAM page as a standalone company object, with the unsourced 66% option-premium estimate, technical levels and sizing guidance removed."
         }
       }
     ],
@@ -469,19 +469,19 @@
       "zh-CN": {
         "locale": "zh-CN",
         "siblingLocale": "en",
-        "title": "Cloudflare：monetization density 才是 Agent 流量的收入桥",
-        "question": "机器请求增长能否穿过更多收费层，并进入合同与现金流？",
-        "standfirst": "1,700% 的请求增速证明流量存在，尚未证明单位机器活动更值钱。研究重点应落在收费层密度。",
-        "whyItMatters": "Agent 会制造远高于人类访问的调用频次。Cloudflare 若能在同一动作上叠加执行、安全、身份与网络收费，收入可以慢于流量却快于客户数。",
-        "consensus": "市场看到了 36% 收入增长、35% current RPO 增长和 1,700% 的 AI agent 请求增速。",
-        "differentiated": "要跟踪请求穿过多少收费产品，以及这些产品是否拉动合同余额和自由现金流率。",
-        "valuation": "估值用 Q2 年化收入构建企业价值情景。它是敏感性分析，不是公司指引或目标价。",
-        "update": "首版公司对象保留 2026-08-07 信息集，并将未核验的 option premium 从事实层删除。",
+        "title": "Cloudflare：1,700% 的 agent 请求，值多少钱",
+        "question": "机器请求的增长能不能穿过更多收费层，并在合同余额和现金流里留下痕迹？",
+        "standfirst": "1,700% 证明流量确实来了。它没有说明单位机器活动值多少钱：公司没有披露对应收入，没有给付费请求占比，也没有给跨产品 attach rate。需要跟踪的量是 monetization density（收费密度）。",
+        "whyItMatters": "一个 agent 完成任务会反复调用工具、抓取页面、重新验证身份，调用频次远高于人类会话。这对 Cloudflare 是双向的。请求量可以在几乎不收费的层里增长，也可以在同一个动作上叠加 Workers 执行、安全检查、身份校验和网络转发。前一种状态下，流量曲线好看而收入曲线不动；后一种状态下，收入可以慢于流量、快于客户数。区分这两种状态要靠财务序列，公开的使用量指标做不到。",
+        "consensus": "36% 的收入增长、35% 的 current RPO 增长和 1,700% 的 AI agent 请求增速，市场都已经看到。",
+        "differentiated": "把 1,700% 换成一个可以被证伪的问题：一次 agent 动作平均穿过几个收费产品，这个数字在变大还是变小。公开数据只能间接回答，可用的是收入增速、current RPO 增速、8% 的自由现金流率和 4,698 家大客户，四条序列同时改善才构成密度上升的证据。如果请求量继续翻倍而这四条不动，结论就是机器流量停在了低价或未计费的层里。",
+        "valuation": "情景用 Q2 收入年化后作基数（696.1 × 4），把增长和倍数都写成算式。年化单季会忽略季节性和公司自己的全年节奏，所以它是敏感性，不是指引，也不含每股结论。",
+        "update": "首版公司对象保留 2026-08-07 的信息集。原稿里 66% 的 option premium 找不到可核验来源，已从事实层删除，技术价位和仓位内容一并移除。",
         "evidenceClaimIds": ["CL-NET-001", "CL-NET-002", "CL-NET-003"],
         "causalChain": [
-          {"title": "Agent 放大机器调用", "body": "一次任务可以产生多次请求和工具调用。", "claimIds": ["CL-NET-003"]},
-          {"title": "调用穿过收费层", "body": "Workers、安全、身份和网络产品决定单位活动收入。", "claimIds": ["CL-NET-004"]},
-          {"title": "合同和现金流验收", "body": "RPO 与自由现金流率需跟上流量。", "claimIds": ["CL-NET-001", "CL-NET-005"]}
+          {"title": "一个任务放大成很多请求", "body": "agent 反复调用工具和抓取，机器调用量与人类会话脱钩。", "claimIds": ["CL-NET-003"]},
+          {"title": "调用穿过几个收费层", "body": "Workers、安全、身份和网络产品决定单位活动的收入。", "claimIds": ["CL-NET-004"]},
+          {"title": "合同和现金流验收", "body": "current RPO 与自由现金流率必须跟上流量，否则密度只是叙事。", "claimIds": ["CL-NET-001", "CL-NET-005"]}
         ],
         "riskClaimIds": ["CL-NET-005"],
         "forwardTestIds": ["FAL-NET-001", "FAL-NET-002"]
@@ -489,19 +489,19 @@
       "en": {
         "locale": "en",
         "siblingLocale": "zh-CN",
-        "title": "Cloudflare: Monetization density is the bridge from agent traffic to revenue",
-        "question": "Can machine-request growth cross more paid layers and show up in contracts and cash flow?",
-        "standfirst": "A 1,700% increase establishes that the traffic exists. It says nothing yet about revenue per machine action. The underwriting variable is monetization density.",
-        "whyItMatters": "Agents can generate far more calls than human browsing. If Cloudflare attaches compute, security, identity and network charges to the same action, revenue can outgrow customers even while trailing raw traffic.",
-        "consensus": "The visible numbers are 36% revenue growth, 35% current-RPO growth and 1,700% growth in AI-agent requests.",
-        "differentiated": "Track how many paid products each action touches and whether that attach rate lifts contracted backlog and free-cash-flow margin.",
-        "valuation": "The scenarios annualize Q2 revenue and apply explicit growth and multiple assumptions. They are sensitivity cases, not guidance or target prices.",
-        "update": "The first canonical company edition preserves the August 7 information set and removes the unverified option-premium estimate from the fact layer.",
+        "title": "Cloudflare: What is 1,700% growth in agent requests worth?",
+        "question": "Can machine-request growth cross more paid layers and register in contracted backlog and cash flow?",
+        "standfirst": "The 1,700% figure establishes that the traffic arrived. It says nothing about revenue per machine action: Cloudflare discloses no attributable revenue, no paid-request mix and no cross-product attach rate. The variable to underwrite is monetization density.",
+        "whyItMatters": "An agent finishing a task calls tools, fetches pages and re-authenticates far more often than a human session would. That cuts two ways for Cloudflare. Machine requests can compound inside layers that are barely priced, or the same action can pick up Workers compute, a security check, an identity verification and network egress. In the first state the traffic chart moves and the revenue line does not. In the second, revenue can trail raw traffic while running well ahead of customer count. Only the financial series separates the two; the published usage metric cannot.",
+        "consensus": "36% revenue growth, 35% current-RPO growth and 1,700% growth in AI-agent requests are all visible.",
+        "differentiated": "Restate the 1,700% as something falsifiable: how many paid products the average agent action touches, and whether that count is rising. The public data answers only indirectly. What is available is revenue growth, current-RPO growth, an 8% free-cash-flow margin and 4,698 large customers, and those four have to improve together before density counts as evidence. If requests keep doubling while the four sit still, the traffic is landing in layers that are cheap or unmetered.",
+        "valuation": "The scenarios annualize Q2 revenue as a base (696.1 × 4) and put growth and multiple into explicit arithmetic. Annualizing a single quarter ignores seasonality and the company's own full-year cadence, which is why the output is a sensitivity rather than guidance, and why no per-share conclusion follows.",
+        "update": "This first canonical company edition preserves the August 7 information set. The 66% option-premium figure in the original draft had no verifiable source and has been removed from the fact layer, along with technical levels and sizing content.",
         "evidenceClaimIds": ["CL-NET-001", "CL-NET-002", "CL-NET-003"],
         "causalChain": [
-          {"title": "Agents multiply machine calls", "body": "A single task can create repeated requests and tool invocations.", "claimIds": ["CL-NET-003"]},
-          {"title": "Calls cross paid layers", "body": "Workers, security, identity and network products determine revenue per action.", "claimIds": ["CL-NET-004"]},
-          {"title": "Contracts and cash settle the debate", "body": "RPO and free-cash-flow margin need to follow the traffic.", "claimIds": ["CL-NET-001", "CL-NET-005"]}
+          {"title": "One task becomes many requests", "body": "Agents call tools and fetch repeatedly, decoupling machine call volume from human sessions.", "claimIds": ["CL-NET-003"]},
+          {"title": "Calls cross paid layers", "body": "Workers, security, identity and network products set the revenue earned per action.", "claimIds": ["CL-NET-004"]},
+          {"title": "Contracts and cash settle it", "body": "Current RPO and free-cash-flow margin have to follow the traffic, or density stays a story.", "claimIds": ["CL-NET-001", "CL-NET-005"]}
         ],
         "riskClaimIds": ["CL-NET-005"],
         "forwardTestIds": ["FAL-NET-001", "FAL-NET-002"]
@@ -509,8 +509,8 @@
     },
     "dataGaps": [
       {
-        "zh-CN": "公司未披露 AI agent 请求对应的收入、付费请求占比或跨产品 attach rate。",
-        "en": "Cloudflare does not disclose revenue attributable to AI-agent requests, the paid-request mix or cross-product attach rate."
+        "zh-CN": "公司没有披露 AI agent 请求对应的收入和付费请求占比，也没有给跨产品 attach rate，因此 monetization density 只能通过收入、current RPO 和自由现金流率间接推断。",
+        "en": "Cloudflare discloses no revenue attributable to AI-agent requests, no paid-request mix and no cross-product attach rate, so monetization density can only be inferred indirectly from revenue, current RPO and free-cash-flow margin."
       }
     ]
   },
@@ -528,8 +528,8 @@
         "id": "CL-TEAM-001",
         "type": "Fact",
         "text": {
-          "zh-CN": "Atlassian FY2026 Q4 收入为 17.66469 亿美元，同比增长约 28%；全年收入为 65.72308 亿美元，同比增长 26%。",
-          "en": "Atlassian reported FY2026 Q4 revenue of $1.766469 billion, up roughly 28%, and full-year revenue of $6.572308 billion, up 26%."
+          "zh-CN": "Atlassian FY2026 第四财季收入 17.66469 亿美元，同比增长约 28%；全年收入 65.72308 亿美元，同比增长 26%。",
+          "en": "Atlassian reported FY2026 fourth-quarter revenue of $1.766469 billion, up roughly 28%, and full-year revenue of $6.572308 billion, up 26%."
         },
         "evidenceIds": ["EV-TEAM-001"]
       },
@@ -537,8 +537,8 @@
         "id": "CL-TEAM-002",
         "type": "Fact",
         "text": {
-          "zh-CN": "截至 2026-06-30，Subscription ARR 为 66.06 亿美元，同比增长 23%。",
-          "en": "Subscription ARR reached $6.606 billion at June 30, 2026, up 23%."
+          "zh-CN": "截至 2026 年 6 月 30 日，Subscription ARR 为 66.06 亿美元，同比增长 23%。",
+          "en": "Subscription ARR stood at $6.606 billion as of June 30, 2026, up 23%."
         },
         "evidenceIds": ["EV-TEAM-001"]
       },
@@ -546,8 +546,8 @@
         "id": "CL-TEAM-003",
         "type": "Fact",
         "text": {
-          "zh-CN": "Atlassian 在 SEC 披露中把产品组合描述为互联应用、AI agents 与 Collections，并称其共享 Cloud Platform 与数据模型。",
-          "en": "In its SEC disclosure, Atlassian describes a portfolio of connected apps, AI agents and Collections built on a shared Cloud Platform and data model."
+          "zh-CN": "Atlassian 在 SEC 文件中把产品组合描述为互联应用、AI agents 与 Collections，并说明它们共享同一套 Cloud Platform 和数据模型。这是架构描述，公司没有给出对应的定价或收入拆分。",
+          "en": "In its SEC disclosure Atlassian describes the portfolio as connected apps, AI agents and Collections sharing one Cloud Platform and data model. That is an architecture description; no corresponding pricing or revenue split is provided."
         },
         "evidenceIds": ["EV-TEAM-002"]
       },
@@ -555,8 +555,8 @@
         "id": "CL-TEAM-004",
         "type": "Hypothesis",
         "text": {
-          "zh-CN": "AI coding 可能减少部分人类席位，同时制造更多任务、评审、依赖和治理对象；TEAM 的增长函数可能从 seat 数扩展到 workflow density 与组织上下文。",
-          "en": "AI coding may reduce some human seats while creating more tasks, reviews, dependencies and governance objects, expanding TEAM's growth function from seat count toward workflow density and organizational context."
+          "zh-CN": "AI coding 可能减少一部分人类席位，同时制造更多任务、评审、依赖和治理对象，TEAM 的增长函数因此可能从 seat 数扩展到 workflow density 与组织上下文。公司未披露 agent 活动量或上下文收费口径，这一条无法从外部直接检验。",
+          "en": "AI coding may reduce some human seats while creating more tasks, reviews, dependencies and governance objects, so TEAM's growth function could broaden from seat count toward workflow density and organizational context. Atlassian discloses no agent-activity volume or context-pricing basis, which leaves the hypothesis untestable from outside."
         },
         "evidenceIds": ["EV-TEAM-001", "EV-TEAM-002"]
       },
@@ -564,10 +564,19 @@
         "id": "CL-TEAM-005",
         "type": "Inference",
         "text": {
-          "zh-CN": "若 Subscription ARR 持续低于收入增长，且公司不披露 agent 活动或上下文收费指标，seat compression 可能快于新计费单位形成。",
-          "en": "If subscription ARR continues to lag revenue growth and Atlassian does not disclose agent-activity or context-monetization metrics, seat compression may be arriving faster than a new billing unit."
+          "zh-CN": "管理层给出的 Rovo 分组对比没有落到收费口径上，agent 活动量、Rovo 的付费口径和上下文对应收入仍未披露。若 Subscription ARR 增速继续落在收入增速之下，而可核验的证据只有这类分组相关性，最合理的解读仍是席位压缩快于新计费单位的形成。",
+          "en": "The Rovo cohort comparison management supplied does not reach a billing basis: agent-activity volume, a paid-usage basis for Rovo and context-attributable revenue all remain undisclosed. If subscription ARR keeps running below revenue growth while cohort correlation stays the only verifiable evidence, the most reasonable reading is still that seat compression is arriving faster than a new billing unit."
         },
         "evidenceIds": ["EV-TEAM-001", "EV-TEAM-003"]
+      },
+      {
+        "id": "CL-TEAM-006",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "Atlassian 在 FY2026 Q4 股东信中披露，采用 Rovo 的客户 ARR 增速持续超过未采用客户的 2 倍。公司没有给出分组定义、样本构建和调整方法，披露的是两组客户之间的同期相关性，不是 Rovo 自身的收入或因果增量。",
+          "en": "In its FY2026 Q4 shareholder letter, Atlassian disclosed that Rovo adopters continue to grow ARR more than twice as fast as non-adopters. No cohort definition, sample construction or adjustment was provided. What is disclosed is a contemporaneous correlation between two groups of customers, not revenue from Rovo or a causal increment."
+        },
+        "evidenceIds": ["EV-TEAM-003"]
       }
     ],
     "evidence": [
@@ -605,18 +614,19 @@
       },
       {
         "id": "EV-TEAM-003",
-        "title": "Rovo cohort metric verification gap",
+        "title": "Atlassian FY2026 Q4 shareholder letter — Rovo adopter cohort metric",
         "source": {
-          "publisher": "LunarTulip Research",
-          "document": "No first-party source located for the claim that Rovo users expand ARR at 2x non-users"
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1650372/000165037226000031/teamq42026shareholderlet.htm",
+          "document": "FY2026 Q4 shareholder letter, Exhibit 99.2"
         },
-        "sourceDate": "2026-08-07",
-        "dataAsOf": "2026-08-07",
+        "sourceDate": "2026-08-06",
+        "dataAsOf": "2026-06-30",
         "calculation": null,
-        "confidence": "low",
-        "counterevidence": "The original report may conflate cohort correlation with product-level monetization.",
+        "confidence": "high",
+        "counterevidence": "Atlassian did not disclose cohort definitions, sample construction or controls; faster ARR growth among adopters may reflect selection bias and does not isolate Rovo's causal contribution.",
         "lastVerified": "2026-08-15",
-        "role": "supporting"
+        "role": "primary"
       }
     ],
     "financialBridge": [
@@ -642,7 +652,7 @@
         "evidenceIds": ["EV-TEAM-001"]
       },
       {
-        "label": {"zh-CN": "Subscription ARR 增速", "en": "Subscription ARR growth"},
+        "label": {"zh-CN": "Subscription ARR 同比增速", "en": "Subscription ARR growth (YoY)"},
         "period": "2026-06-30",
         "value": 23,
         "unit": "percent",
@@ -652,7 +662,7 @@
     "valuationScenarios": [
       {
         "id": "VAL-TEAM-BASE",
-        "label": {"zh-CN": "工作流密度变现", "en": "Workflow density monetizes"},
+        "label": {"zh-CN": "上下文形成计费单位", "en": "Context becomes billable"},
         "revenueBaseUsdM": 6572.308,
         "revenueGrowthPct": 22,
         "forwardRevenueUsdM": 8018.21576,
@@ -660,13 +670,13 @@
         "impliedEnterpriseValueUsdM": 64145.72608,
         "calculation": "6572.308 * 1.22 = 8018.21576; 8018.21576 * 8 = 64145.72608",
         "interpretation": {
-          "zh-CN": "测试组织上下文形成新收费单位时的企业价值，不含目标价。",
-          "en": "Tests an enterprise-value case in which organizational context becomes a new billing unit; no target price is implied."
+          "zh-CN": "假设组织上下文变成新的收费对象，全年收入按 22% 增长、以 8 倍 sales multiple 计价。这是敏感性输出。公司披露的 Rovo 分组对比方向一致，但没有给出能支撑这条路径的收入分项。",
+          "en": "Assumes organizational context becomes a billable object, with full-year revenue growing 22% at an 8× sales multiple. The figure is a sensitivity output. Atlassian's Rovo cohort comparison points the same way, but supplies no revenue line item that would support the path."
         }
       },
       {
         "id": "VAL-TEAM-BEAR",
-        "label": {"zh-CN": "Seat 压缩占上风", "en": "Seat compression dominates"},
+        "label": {"zh-CN": "席位压缩占上风", "en": "Seat compression wins"},
         "revenueBaseUsdM": 6572.308,
         "revenueGrowthPct": 12,
         "forwardRevenueUsdM": 7360.98496,
@@ -674,8 +684,8 @@
         "impliedEnterpriseValueUsdM": 36804.9248,
         "calculation": "6572.308 * 1.12 = 7360.98496; 7360.98496 * 5 = 36804.9248",
         "interpretation": {
-          "zh-CN": "若人类席位减少快于 agent 与上下文收费形成，收入和倍数同时降档。",
-          "en": "If human-seat contraction outruns agent and context monetization, both growth and the sales multiple reset."
+          "zh-CN": "人类席位减少快于 agent 与上下文收费形成时，增长退到 12%、倍数退到 5 倍，企业价值约为基准情景的 57%。",
+          "en": "If human seats contract faster than agent and context monetization forms, growth falls to 12% and the multiple to 5×, leaving enterprise value near 57% of the base case."
         }
       }
     ],
@@ -690,8 +700,8 @@
         "horizon": "any of the next two reported quarters",
         "claimIds": ["CL-TEAM-004"],
         "rationale": {
-          "zh-CN": "ARR 增速跌破 15% 表明 workflow 扩张尚未抵消 seat 与成熟 SaaS 压力。",
-          "en": "ARR growth below 15% would show that workflow expansion is not offsetting seat and mature-SaaS pressure."
+          "zh-CN": "Subscription ARR 比确认收入更接近经常性口径，受迁移时点的影响更小。它跌破 15%，说明 workflow 扩张没有抵消席位压力和成熟 SaaS 的自然减速。",
+          "en": "Subscription ARR sits closer to a recurring measure than recognized revenue and is less exposed to migration timing. Below 15%, workflow expansion is not offsetting seat pressure and the natural deceleration of a mature SaaS base."
         }
       },
       {
@@ -703,8 +713,8 @@
         "horizon": "any of the next two reported quarters",
         "claimIds": ["CL-TEAM-004"],
         "rationale": {
-          "zh-CN": "Cloud 增速跌破 18% 会削弱共享数据模型带来新价值捕获的判断。",
-          "en": "Cloud growth below 18% would weaken the case that the shared data model is creating incremental value capture."
+          "zh-CN": "Cloud 是共享数据模型和 AI agents 实际运行的地方。Cloud 增速跌破 18%，共享上下文带来增量价值捕获这条判断就失去了承载它的收入线。",
+          "en": "Cloud is where the shared data model and the AI agents actually run. Cloud growth below 18% would leave the shared-context argument without a revenue line to carry it."
         }
       }
     ],
@@ -713,8 +723,8 @@
         "version": "1.0.0",
         "date": "2026-08-15",
         "diff": {
-          "zh-CN": "从原合并页拆出 TEAM 对象；删除 short squeeze 精确贡献、技术价位和仓位内容，将 Rovo 2x 标为未核验缺口。",
-          "en": "Split TEAM into a canonical company object; removed the precise short-squeeze attribution, technical levels and sizing content, and marked the Rovo 2x cohort claim as unverified."
+          "zh-CN": "从原合并页拆出独立对象，删除对 short squeeze 贡献的精确归因、技术价位与仓位内容。Rovo 采用组 ARR 增速 2 倍已核到 FY2026 Q4 股东信，改记为管理层披露的 cohort 相关性，方法未披露和选择偏差两项限制保留。",
+          "en": "Split out of the combined page as a standalone object, with the precise short-squeeze attribution, technical levels and sizing content removed. The Rovo 2× ARR-growth figure was traced to the FY2026 Q4 shareholder letter and is now recorded as a management-disclosed cohort correlation, with the undisclosed-method and selection-bias limitations retained."
         }
       }
     ],
@@ -722,19 +732,19 @@
       "zh-CN": {
         "locale": "zh-CN",
         "siblingLocale": "en",
-        "title": "Atlassian：workflow density 能否成为新的收费基础",
-        "question": "AI 减少人类 seat 后，组织上下文和协同对象能否补上收入？",
-        "standfirst": "TEAM 已有共享数据模型与跨产品工作流。接下来要看的，是 agent 是否制造可收费的任务、依赖和治理，而不只是带来更多 AI 使用。",
-        "whyItMatters": "传统协作软件按人头收费。AI coding 让席位承压，却也增加机器生成的工作状态。能否把这些状态变成新计费单位，决定 TEAM 的增长制度。",
-        "consensus": "FY2026 收入增长 26%，Subscription ARR 增长 23%，产品组合正围绕共享平台和 AI agents 重构。",
-        "differentiated": "收入函数可能从人类 seat 扩展到 workflow density、agent 活动和组织上下文；目前公司还没有给出足够的分项指标。",
-        "valuation": "场景以 FY2026 收入为基数，分别测试上下文变现和 seat 压缩；只输出企业价值敏感性。",
-        "update": "首版对象保留 2026-08-07 信息集。原报告的 squeeze 贡献和 Rovo 2x 相关性不再作为已核验事实。",
-        "evidenceClaimIds": ["CL-TEAM-001", "CL-TEAM-002", "CL-TEAM-003"],
+        "title": "Atlassian：AI 写代码之后，按什么收费",
+        "question": "人类 seat 承压之后，机器生成的任务、依赖和治理对象能不能变成新的计费单位？",
+        "standfirst": "FY2026 收入增长 26%，Subscription ARR 增长 23%。ARR 慢于收入这一点值得追问：协作软件的计费单位一直是人头，而 AI coding 同时压缩人头、制造工作状态。",
+        "whyItMatters": "协作软件二十年来的收入函数是席位数乘单价。AI coding 从两端同时动它：一端可能减少需要账号的工程师，另一端制造更多 pull request、评审、依赖关系和需要留痕的决策。这些机器生成的工作状态如果能变成收费对象，TEAM 的增长制度会换一次；如果不能，席位压缩会直接落在 ARR 上。管理层目前给出的分组对比停在客户层面，还没有落到能分开这两种结果的收费口径上。",
+        "consensus": "FY2026 收入增长 26%、Subscription ARR 增长 23%，股东信里还有一条 Rovo 采用客户 ARR 增速超过未采用客户 2 倍；产品组合正在围绕共享 Cloud Platform、AI agents 和 Collections 重组。",
+        "differentiated": "收入函数可能从人类 seat 扩到 workflow density（工作流密度）和组织上下文。管理层给出的唯一客户级证据，是 Rovo 采用组的 ARR 增速超过未采用组 2 倍，方向站在这条路径一边，但它承担不了结论：分组定义、样本构建和控制变量都没有披露，而采用顺序本身就有偏，企业软件里最先上新功能的，通常是预算和人员都在扩张的账户。口径上它衡量的是账户整体 ARR，账户扩张也可能来自席位、版本升级或 Cloud 迁移，与 Rovo 自身的收入并不是一回事。真正能推进判断的替代指标还是 Subscription ARR 和 Cloud 收入增速。算术上要提醒一句：26% 是全年收入增速，23% 是时点 ARR 增速，口径不同，单期差值说明不了什么，方向持续偏离才说明问题。",
+        "valuation": "两个情景都以 FY2026 的 65.72308 亿美元收入为基数，一个假设上下文变现成立，一个假设席位压缩占上风，只输出企业价值敏感性。倍数假设设在 8 倍和 5 倍，比另外两个对象低，因为基数是一家全年增速 26% 的成熟 SaaS；它们仍然是外生假设。",
+        "update": "首版对象保留 2026-08-07 的信息集，原稿对 short squeeze 贡献的精确归因已删除。Rovo 采用组 ARR 增速 2 倍这一条已定位到第一方来源，出自 FY2026 Q4 股东信（SEC Exhibit 99.2），现在以 Fact 进入证据层。分组口径和计算方法仍未披露，选择偏差限制留在数据缺口里。",
+        "evidenceClaimIds": ["CL-TEAM-001", "CL-TEAM-002", "CL-TEAM-003", "CL-TEAM-006"],
         "causalChain": [
-          {"title": "Agent 增加工作状态", "body": "更多代码和内容会带来任务、评审与治理。", "claimIds": ["CL-TEAM-004"]},
-          {"title": "共享上下文降低迁移性", "body": "应用、agents 和 Collections 使用共同平台与数据模型。", "claimIds": ["CL-TEAM-003"]},
-          {"title": "ARR 检验收费能力", "body": "Subscription ARR 必须证明新增对象能抵消 seat 压力。", "claimIds": ["CL-TEAM-002", "CL-TEAM-005"]}
+          {"title": "agent 制造工作状态", "body": "更多代码和内容带来任务、评审和需要留痕的决策。", "claimIds": ["CL-TEAM-004"]},
+          {"title": "共享上下文提高迁移成本", "body": "应用、agents 和 Collections 跑在同一个平台与数据模型上。", "claimIds": ["CL-TEAM-003"]},
+          {"title": "ARR 给出答案", "body": "Subscription ARR 决定新增对象是否抵消了席位压力，分组对比替代不了这条总量序列。", "claimIds": ["CL-TEAM-002", "CL-TEAM-005"]}
         ],
         "riskClaimIds": ["CL-TEAM-005"],
         "forwardTestIds": ["FAL-TEAM-001", "FAL-TEAM-002"]
@@ -742,19 +752,19 @@
       "en": {
         "locale": "en",
         "siblingLocale": "zh-CN",
-        "title": "Atlassian: Can workflow density become a new billing base?",
-        "question": "If AI reduces human seats, can organizational context and coordination objects replace the lost economics?",
-        "standfirst": "TEAM already owns a shared data model and cross-product workflows. The next test is whether agents create billable tasks, dependencies and governance—not merely more AI usage.",
-        "whyItMatters": "Collaboration software has historically monetized headcount. AI coding pressures seats while generating machine-created work state. TEAM's next growth regime depends on turning that state into a billing unit.",
-        "consensus": "FY2026 revenue grew 26%, subscription ARR grew 23%, and the portfolio is being rebuilt around a shared platform and AI agents.",
-        "differentiated": "The revenue function could broaden from human seats to workflow density, agent activity and organizational context. Management has not yet supplied enough disaggregated metrics to prove it.",
-        "valuation": "The scenarios start with FY2026 revenue and test context monetization against seat compression. Outputs are enterprise-value sensitivities only.",
-        "update": "This first canonical edition preserves the August 7 information set. The original squeeze attribution and Rovo 2x correlation are no longer treated as verified facts.",
-        "evidenceClaimIds": ["CL-TEAM-001", "CL-TEAM-002", "CL-TEAM-003"],
+        "title": "Atlassian: When AI writes the code, what do you bill for?",
+        "question": "As human seats come under pressure, can machine-created tasks, dependencies and governance objects become a billing unit?",
+        "standfirst": "FY2026 revenue grew 26%; subscription ARR grew 23%. That gap is worth interrogating. Collaboration software has always billed headcount, and AI coding compresses headcount while manufacturing work state.",
+        "whyItMatters": "For two decades the revenue function in collaboration software has been seats times price. AI coding pushes on both sides of it. Fewer engineers may need a licence, while pull requests, reviews, dependency chains and decisions that need an audit trail all multiply. If that machine-created work state becomes billable, TEAM's growth regime changes. If it does not, seat compression lands directly in ARR. The cohort comparison management has published stops at the account level and does not yet reach a billing basis that would separate the two outcomes.",
+        "consensus": "FY2026 revenue up 26%, subscription ARR up 23%, a shareholder-letter datapoint that Rovo adopters grow ARR more than twice as fast as non-adopters, and a portfolio being reorganized around a shared Cloud Platform, AI agents and Collections.",
+        "differentiated": "The revenue function may broaden from human seats toward workflow density and organizational context. The only customer-level evidence management has offered is that Rovo adopters grow ARR more than twice as fast as non-adopters. The direction favours the path, but the datapoint cannot carry the conclusion: no cohort definition, no sample construction, no controls, and adoption order is itself biased, because the accounts that take new functionality first are usually the ones already adding budget and headcount. The measure is account-level ARR, and an expanding account may be expanding on seats, edition upgrades or cloud migration rather than on Rovo. The proxies that actually move the judgment remain subscription ARR and cloud revenue growth. One caution on the arithmetic: 26% is a full-year revenue rate and 23% is a point-in-time ARR rate. A single-period gap between them proves little, while a persistent divergence would.",
+        "valuation": "Both scenarios start from FY2026 revenue of $6,572.308 million, one assuming context monetization works and one assuming seat compression wins, and output enterprise-value sensitivity only. The multiples are set at 8× and 5×, lower than in the other two objects because the base is a mature SaaS business growing 26%. They remain exogenous assumptions.",
+        "update": "This first canonical edition preserves the August 7 information set, and the original draft's precise attribution of a short squeeze has been removed. The Rovo 2× cohort figure has since been traced to a first-party source, the FY2026 Q4 shareholder letter filed as Exhibit 99.2, and now enters the evidence layer as a fact. The cohort basis and calculation remain undisclosed, and the selection-bias limitation stays in the data gaps.",
+        "evidenceClaimIds": ["CL-TEAM-001", "CL-TEAM-002", "CL-TEAM-003", "CL-TEAM-006"],
         "causalChain": [
-          {"title": "Agents create work state", "body": "More code and content produce tasks, reviews and governance.", "claimIds": ["CL-TEAM-004"]},
-          {"title": "Shared context raises switching friction", "body": "Apps, agents and Collections run on a common platform and data model.", "claimIds": ["CL-TEAM-003"]},
-          {"title": "ARR settles monetization", "body": "Subscription ARR must show that new objects can offset seat pressure.", "claimIds": ["CL-TEAM-002", "CL-TEAM-005"]}
+          {"title": "Agents manufacture work state", "body": "More code and content produce tasks, reviews and decisions that need a record.", "claimIds": ["CL-TEAM-004"]},
+          {"title": "Shared context raises switching cost", "body": "Apps, agents and Collections run on one platform and one data model.", "claimIds": ["CL-TEAM-003"]},
+          {"title": "ARR gives the answer", "body": "Subscription ARR decides whether the new objects offset seat pressure; a cohort comparison cannot stand in for the aggregate series.", "claimIds": ["CL-TEAM-002", "CL-TEAM-005"]}
         ],
         "riskClaimIds": ["CL-TEAM-005"],
         "forwardTestIds": ["FAL-TEAM-001", "FAL-TEAM-002"]
@@ -762,12 +772,12 @@
     },
     "dataGaps": [
       {
-        "zh-CN": "未在公司 IR 或 SEC 文件中找到“Rovo 用户 ARR 扩张为非用户 2 倍”的可核验定义、样本和计算。",
-        "en": "No company IR or SEC source was located that defines the sample and calculation behind the claim that Rovo users expand ARR at twice the rate of non-users."
+        "zh-CN": "FY2026 Q4 股东信披露 Rovo 采用客户的 ARR 增速超过未采用客户的 2 倍，但没有给出分组定义、样本构建和调整方法。采用 Rovo 的账户很可能本来就在扩张，这种同期分组对比分不开选择偏差；口径上它衡量的也是账户整体 ARR，不是 Rovo 自身的收入。要把它升级为因果证据，需要分组阈值与时点、可比对照组，以及 Rovo 的收入或付费口径。",
+        "en": "The FY2026 Q4 shareholder letter discloses that Rovo adopters grow ARR more than twice as fast as non-adopters, without cohort definitions, sample construction or adjustments. Accounts adopting Rovo are plausibly the ones already expanding, so a contemporaneous cohort comparison cannot separate selection bias, and the measure captures total account ARR rather than revenue from Rovo itself. Upgrading it to causal evidence would require the adoption threshold and timing, a matched control group, and either Rovo revenue or a disclosed paid-usage basis."
       },
       {
-        "zh-CN": "公司尚未披露 agent 活动、workflow objects 或组织上下文对应的独立收入。",
-        "en": "Atlassian does not yet disclose standalone revenue tied to agent activity, workflow objects or organizational context."
+        "zh-CN": "公司尚未披露 agent 活动、workflow objects 或组织上下文对应的独立收入，也没有给 Rovo 的付费口径。",
+        "en": "Atlassian does not yet disclose standalone revenue tied to agent activity, workflow objects or organizational context, nor any paid-usage basis for Rovo."
       }
     ]
   },
@@ -785,8 +795,8 @@
         "id": "CL-THEME-001",
         "type": "Derived",
         "text": {
-          "zh-CN": "PLTR、NET 与 TEAM 分别提供商业预算、机器流量收费层和组织上下文三种价值捕获路径。",
-          "en": "PLTR, NET and TEAM expose three distinct capture paths: commercial budgets, paid machine-traffic layers and organizational context."
+          "zh-CN": "PLTR、NET 与 TEAM 各自对应一条价值捕获路径：企业商业预算、机器流量穿过的收费层、组织协同上下文。三条路径的证据成熟度并不相同。",
+          "en": "PLTR, NET and TEAM each correspond to one capture path: commercial budgets, paid layers crossed by machine traffic, and organizational coordination context. The evidence behind the three is at different stages of maturity."
         },
         "evidenceIds": ["EV-THEME-001", "EV-THEME-002", "EV-THEME-003"]
       },
@@ -794,8 +804,8 @@
         "id": "CL-THEME-002",
         "type": "Fact",
         "text": {
-          "zh-CN": "控制组中，DDOG Q2 2026 收入为 11.21454 亿美元，同比增长 36%，自由现金流为 2.79 亿美元。",
-          "en": "In the control group, DDOG reported Q2 2026 revenue of $1.121454 billion, up 36%, and free cash flow of $279 million."
+          "zh-CN": "控制组中，DDOG 2026 年第二季度收入 11.21454 亿美元，同比增长 36%，自由现金流 2.79 亿美元。",
+          "en": "In the control group, DDOG reported Q2 2026 revenue of $1.121454 billion, up 36%, with free cash flow of $279 million."
         },
         "evidenceIds": ["EV-THEME-004"]
       },
@@ -803,8 +813,8 @@
         "id": "CL-THEME-003",
         "type": "Fact",
         "text": {
-          "zh-CN": "另一控制组 APP Q2 2026 收入为 19.24 亿美元，同比增长 53%，调整后 EBITDA 为 16.14 亿美元。",
-          "en": "The second control, APP, reported Q2 2026 revenue of $1.924 billion, up 53%, and adjusted EBITDA of $1.614 billion."
+          "zh-CN": "另一控制组 APP 2026 年第二季度收入 19.24 亿美元，同比增长 53%，调整后 EBITDA 16.14 亿美元。调整后 EBITDA 是非 GAAP 指标。",
+          "en": "The second control, APP, reported Q2 2026 revenue of $1.924 billion, up 53%, and adjusted EBITDA of $1.614 billion. Adjusted EBITDA is a non-GAAP measure."
         },
         "evidenceIds": ["EV-THEME-005"]
       },
@@ -812,8 +822,8 @@
         "id": "CL-THEME-004",
         "type": "Hypothesis",
         "text": {
-          "zh-CN": "AI usage 只有穿过可识别的收费单位，并在收入、合同余额或现金流中留下痕迹，才构成可持续 value capture。",
-          "en": "AI usage becomes durable value capture only when it crosses an identifiable billing unit and leaves evidence in revenue, contracted backlog or cash flow."
+          "zh-CN": "AI usage 只有穿过一个客户认可的收费单位，并在收入、合同余额或现金流里留下痕迹，才构成可持续的 value capture。五家公司都没有按统一口径披露 AI 收入，这一条只能用间接指标检验。",
+          "en": "AI usage becomes durable value capture only when it crosses a billing unit the customer accepts and leaves a trace in revenue, contracted backlog or cash flow. None of the five companies discloses AI revenue on a common basis, so the proposition can only be tested through indirect measures."
         },
         "evidenceIds": ["EV-THEME-001", "EV-THEME-002", "EV-THEME-003", "EV-THEME-004", "EV-THEME-005"]
       },
@@ -821,8 +831,8 @@
         "id": "CL-THEME-005",
         "type": "Inference",
         "text": {
-          "zh-CN": "DDOG 与 APP 说明 AI 相关增长可以伴随较强现金转化；若核心组只报告 adoption 或流量，却不能接近控制组的财务传导，主题判断应降级。",
-          "en": "DDOG and APP show that AI-related growth can coexist with strong cash conversion. If the core cohort reports adoption or traffic without comparable financial transmission, the theme should be downgraded."
+          "zh-CN": "DDOG 与 APP 说明与 AI 相关的增长可以同时完成较强的现金转化。核心组若长期只报告 adoption 或流量、财务传导达不到控制组的水平，主题判断应当降级为个股逻辑。",
+          "en": "DDOG and APP show that AI-linked growth can coexist with strong cash conversion. If the core cohort keeps reporting adoption or traffic while its financial transmission stays short of the controls, the theme should be downgraded to company-specific logic."
         },
         "evidenceIds": ["EV-THEME-004", "EV-THEME-005"]
       }
@@ -929,14 +939,14 @@
         "evidenceIds": ["EV-THEME-003"]
       },
       {
-        "label": {"zh-CN": "DDOG Q2 自由现金流", "en": "DDOG Q2 free cash flow"},
+        "label": {"zh-CN": "DDOG Q2 自由现金流（控制组）", "en": "DDOG Q2 free cash flow (control)"},
         "period": "2026-Q2",
         "value": 279,
         "unit": "USDm",
         "evidenceIds": ["EV-THEME-004"]
       },
       {
-        "label": {"zh-CN": "APP Q2 调整后 EBITDA", "en": "APP Q2 adjusted EBITDA"},
+        "label": {"zh-CN": "APP Q2 调整后 EBITDA（控制组）", "en": "APP Q2 adjusted EBITDA (control)"},
         "period": "2026-Q2",
         "value": 1614,
         "unit": "USDm",
@@ -954,13 +964,13 @@
         "impliedEnterpriseValueUsdM": 1560,
         "calculation": "Normalized cohort revenue index: 100 * 1.30 = 130; 130 * 12 = 1560",
         "interpretation": {
-          "zh-CN": "标准化指数用于比较增长与倍数，不代表五家公司市值之和。",
-          "en": "A normalized index for comparing growth and multiple assumptions; it is not the combined value of the five companies."
+          "zh-CN": "标准化指数：基数 100，增长 30%，12 倍 sales multiple。它只用于比较两种制度，既不代表五家公司的市值之和，也不对应其中任何一家。",
+          "en": "A normalized index: base 100, 30% growth, a 12× sales multiple. It exists to compare two regimes, and represents neither the combined value of the five companies nor any one of them."
         }
       },
       {
         "id": "VAL-THEME-USAGE",
-        "label": {"zh-CN": "使用量停留在 adoption", "en": "Usage remains adoption"},
+        "label": {"zh-CN": "使用量停在 adoption", "en": "Usage stays adoption"},
         "revenueBaseUsdM": 100,
         "revenueGrowthPct": 15,
         "forwardRevenueUsdM": 115,
@@ -968,8 +978,8 @@
         "impliedEnterpriseValueUsdM": 805,
         "calculation": "Normalized cohort revenue index: 100 * 1.15 = 115; 115 * 7 = 805",
         "interpretation": {
-          "zh-CN": "当使用量无法穿过收费单位时，增长和估值制度同时回落。",
-          "en": "When usage does not cross a billing unit, both growth and the valuation regime reset."
+          "zh-CN": "增长 15%、7 倍倍数。使用量没有穿过收费单位时，增长和倍数一起降档，指数落到另一种情景的约 52%。",
+          "en": "15% growth at a 7× multiple. When usage does not cross a billing unit, growth and the multiple reset together, leaving the index near 52% of the other case."
         }
       }
     ],
@@ -984,8 +994,8 @@
         "horizon": "next two common reporting cycles",
         "claimIds": ["CL-THEME-004"],
         "rationale": {
-          "zh-CN": "PLTR、NET、TEAM 收入增速中位数跌破 20%，说明价值捕获没有横向扩散。",
-          "en": "Median growth below 20% across PLTR, NET and TEAM would show that capture is not broadening."
+          "zh-CN": "口径取中位数，这样 PLTR 的高增速无法单独抬高整组读数。PLTR、NET、TEAM 的收入增速中位数跌到 20% 以下，说明价值捕获没有横向扩散。",
+          "en": "The median is used instead of the mean so that PLTR's rate cannot lift the cohort on its own. A median below 20% across PLTR, NET and TEAM would show that capture is not broadening."
         }
       },
       {
@@ -997,8 +1007,8 @@
         "horizon": "next two common reporting cycles",
         "claimIds": ["CL-THEME-004"],
         "rationale": {
-          "zh-CN": "五家公司中少于三家改善收入增速、合同指标或现金转化，主题会退回个股逻辑。",
-          "en": "If fewer than three of five companies improve revenue growth, contract indicators or cash conversion, the theme collapses back into company-specific stories."
+          "zh-CN": "五家里少于三家在收入增速、合同指标或现金转化上出现改善，横截面就失去了统计含量，主题退回个股逻辑。",
+          "en": "If fewer than three of the five improve on revenue growth, contract indicators or cash conversion, the cross-section loses whatever statistical content it had and the theme reverts to company-specific stories."
         }
       }
     ],
@@ -1007,16 +1017,16 @@
         "version": "1.0.0",
         "date": "2026-08-07",
         "diff": {
-          "zh-CN": "原页面合并 NET 与 TEAM，讨论 AI 应用商业化扩散。",
-          "en": "The original page combined NET and TEAM as evidence of broader AI application monetization."
+          "zh-CN": "原页面把 NET 与 TEAM 合并，讨论 AI 应用商业化的扩散。",
+          "en": "The original page combined NET and TEAM to argue that AI application monetization was broadening."
         }
       },
       {
         "version": "2.0.0",
         "date": "2026-08-15",
         "diff": {
-          "zh-CN": "原 slug 升级为 Theme Study，加入 PLTR、NET、TEAM 核心组和 DDOG、APP 控制组，移除技术面与仓位内容。",
-          "en": "Upgraded the original slug to a Theme Study with PLTR, NET and TEAM as the core cohort and DDOG and APP as controls; removed technical and positioning content."
+          "zh-CN": "升级为 Theme Study：核心组 PLTR、NET、TEAM，控制组 DDOG、APP，并移除技术面与仓位内容。",
+          "en": "Upgraded to a Theme Study with PLTR, NET and TEAM as the core cohort and DDOG and APP as controls, and with technical and positioning content removed."
         }
       }
     ],
@@ -1024,19 +1034,19 @@
       "zh-CN": {
         "locale": "zh-CN",
         "siblingLocale": "en",
-        "title": "AI usage 到 value capture：五家公司横截面检验",
-        "question": "使用量增长何时能成为可持续收入、合同与现金流？",
-        "standfirst": "PLTR、NET、TEAM 给出三条收费路径，DDOG 与 APP 提供财务控制组。主题成立需要多家公司把使用量变成可核验的财务传导。",
-        "whyItMatters": "AI adoption 指标很容易增长，收费单位更难建立。横截面比较可以把公司特有的爆发与真正的产业扩散分开。",
-        "consensus": "市场已经接受 AI 使用量快速增长，也看到了多家公司收入提速。",
-        "differentiated": "研究单位应从 adoption 切到预算、收费层、workflow objects 和现金转化，并要求核心组接近控制组的财务质量。",
-        "valuation": "主题估值使用标准化收入指数，只比较增长和倍数制度，不合成市值，也不给目标价。",
-        "update": "v2.0 保留 2026-08-07 时点，把原 NET+TEAM 页面升级为含两个控制组的 Theme Study。",
+        "title": "从 AI usage 到 value capture：五家公司的横截面检验",
+        "question": "使用量增长在什么条件下会变成可归因的收入、合同余额和现金流？",
+        "standfirst": "PLTR、NET、TEAM 停在同一条路径的三个位置：预算已经确认、收费单位待验证、计费口径本身受质疑。DDOG 与 APP 作为控制组，给出传导完成之后财务上该长什么样。",
+        "whyItMatters": "adoption 指标几乎可以自动上涨：请求数、活跃用户、模型调用量都随部署扩大而增加，报出来不需要客户多付一分钱。收费单位是另一回事，它要求客户接受一个新的计量对象，并在合同或账单上认下来。把五家公司放在同一个问题下比较，能把公司特有的爆发和产业层面的扩散分开。单看 PLTR，很难判断 149% 是产业信号还是一家公司的合同周期；把 NET 和 TEAM 摆在旁边，路径差异就出来了。",
+        "consensus": "AI 使用量在快速增长，多家公司收入提速，这些都已经被接受。",
+        "differentiated": "把分析单位从 adoption 换成收费单位和财务收货点：预算（PLTR）、单次动作穿过的收费层（NET）、协同与治理对象（TEAM）。三者的证据走到的距离不同，PLTR 的合同与确认收入已经同步，NET 手上只有使用量，TEAM 连计费口径都还在变化。控制组给出对照的量级：DDOG 当季 11.21454 亿美元收入对应 2.79 亿美元自由现金流，APP 19.24 亿美元收入对应 16.14 亿美元调整后 EBITDA。两家都在增长的同时完成了现金转化，也都没有披露可归因于 AI 的收入。核心组要么走到类似的财务质量，要么这个主题退回三个独立的公司故事。",
+        "valuation": "主题层用标准化收入指数（基数 100）比较增长和倍数两种制度，不合成五家公司的市值，也不对任何一家给估值结论。指数的用途只有一个：30% 增长配 12 倍，与 15% 增长配 7 倍之间差了接近一倍，说明制度切换的代价来自增长和倍数同时移动。",
+        "update": "v2.0 保留 2026-08-07 的时点，把原来的 NET+TEAM 合并页升级为含两个控制组的 Theme Study，并移除技术面和仓位内容。",
         "evidenceClaimIds": ["CL-THEME-001", "CL-THEME-002", "CL-THEME-003"],
         "causalChain": [
-          {"title": "Usage 进入业务流程", "body": "预算、机器调用和工作对象是三种可观察入口。", "claimIds": ["CL-THEME-001"]},
-          {"title": "收费单位形成", "body": "企业需要为决策、执行层或组织上下文付费。", "claimIds": ["CL-THEME-004"]},
-          {"title": "财务报表验收", "body": "收入、合同余额和现金转化决定价值是否真正被捕获。", "claimIds": ["CL-THEME-002", "CL-THEME-003", "CL-THEME-005"]}
+          {"title": "使用量进入生产环境", "body": "预算审批、机器调用和工作对象是三个可观察的入口。", "claimIds": ["CL-THEME-001"]},
+          {"title": "收费单位被客户接受", "body": "客户要为决策、单次动作或组织上下文签下一个计量口径。", "claimIds": ["CL-THEME-004"]},
+          {"title": "财务报表给出裁决", "body": "收入、合同余额和现金转化决定价值是否真的被捕获。", "claimIds": ["CL-THEME-002", "CL-THEME-003", "CL-THEME-005"]}
         ],
         "riskClaimIds": ["CL-THEME-005"],
         "forwardTestIds": ["FAL-THEME-001", "FAL-THEME-002"]
@@ -1044,19 +1054,19 @@
       "en": {
         "locale": "en",
         "siblingLocale": "zh-CN",
-        "title": "From AI usage to value capture: A five-company cross-sectional test",
-        "question": "When does usage growth become durable revenue, contracted backlog and cash flow?",
-        "standfirst": "PLTR, NET and TEAM offer three billing paths; DDOG and APP provide financial controls. The theme requires multiple companies to turn usage into observable financial transmission.",
-        "whyItMatters": "AI adoption metrics can rise almost by construction. Billing units are harder. A cross-sectional frame separates company-specific breakouts from genuine industry diffusion.",
-        "consensus": "Investors already accept rapid AI-usage growth and have seen revenue acceleration across several companies.",
-        "differentiated": "Move the unit of analysis from adoption to budgets, paid layers, workflow objects and cash conversion, then hold the core cohort against the financial quality of the controls.",
-        "valuation": "Theme valuation uses a normalized revenue index to compare growth and multiple regimes. It neither aggregates market values nor produces target prices.",
-        "update": "Version 2.0 preserves the August 7 information set and upgrades the original NET+TEAM page into a Theme Study with two controls.",
+        "title": "From AI usage to value capture: a five-company cross-section",
+        "question": "Under what conditions does usage growth become attributable revenue, contracted backlog and cash flow?",
+        "standfirst": "PLTR, NET and TEAM sit at three points on the same path: budget confirmed, billing unit unproven, billing basis itself in question. DDOG and APP serve as controls, showing what completed transmission looks like in the financials.",
+        "whyItMatters": "Adoption metrics can rise almost mechanically. Requests, active users and model calls all grow as deployment widens, and reporting them costs the customer nothing. A billing unit is a different matter: it requires the customer to accept a new unit of measurement and sign for it. Holding five companies against one question separates company-specific breakouts from industry diffusion. On its own, 149% at PLTR could be an industry signal or one company's contract cycle. Placed next to NET and TEAM, the difference in path becomes legible.",
+        "consensus": "Rapid AI-usage growth and revenue acceleration at several companies are already accepted.",
+        "differentiated": "Move the unit of analysis from adoption to the billing unit and the point of financial receipt: budgets at PLTR, paid layers crossed per action at NET, coordination and governance objects at TEAM. The evidence has travelled different distances. PLTR's contracts and recognized revenue already move together, NET has usage only, and at TEAM the billing basis itself is still shifting. The controls set the comparison: DDOG turned $1,121.454 million of quarterly revenue into $279 million of free cash flow, and APP turned $1,924 million into $1,614 million of adjusted EBITDA. Both grew while converting to cash, and neither disclosed AI-attributable revenue. The core cohort either reaches comparable financial quality or the theme reduces to three separate company stories.",
+        "valuation": "The theme layer uses a normalized revenue index based at 100 to compare two regimes of growth and multiple, without aggregating market values or reaching a valuation conclusion on any single name. The index does one job: 30% growth at 12× sits close to twice 15% growth at 7×, which shows the cost of a regime change comes from growth and the multiple moving at once.",
+        "update": "Version 2.0 preserves the August 7 information set, upgrades the original NET+TEAM page into a Theme Study with two controls, and removes technical and positioning content.",
         "evidenceClaimIds": ["CL-THEME-001", "CL-THEME-002", "CL-THEME-003"],
         "causalChain": [
-          {"title": "Usage enters production", "body": "Budgets, machine calls and work objects provide three observable entry points.", "claimIds": ["CL-THEME-001"]},
-          {"title": "A billing unit forms", "body": "Customers pay for decisions, execution layers or organizational context.", "claimIds": ["CL-THEME-004"]},
-          {"title": "Financials settle capture", "body": "Revenue, backlog and cash conversion determine whether value was actually captured.", "claimIds": ["CL-THEME-002", "CL-THEME-003", "CL-THEME-005"]}
+          {"title": "Usage reaches production", "body": "Budget approval, machine calls and work objects are three observable entry points.", "claimIds": ["CL-THEME-001"]},
+          {"title": "A billing unit gets accepted", "body": "The customer signs for a unit of measurement: a decision, an action, or a piece of organizational context.", "claimIds": ["CL-THEME-004"]},
+          {"title": "The financials rule on it", "body": "Revenue, backlog and cash conversion decide whether the value was actually captured.", "claimIds": ["CL-THEME-002", "CL-THEME-003", "CL-THEME-005"]}
         ],
         "riskClaimIds": ["CL-THEME-005"],
         "forwardTestIds": ["FAL-THEME-001", "FAL-THEME-002"]
@@ -1064,12 +1074,12 @@
     },
     "dataGaps": [
       {
-        "zh-CN": "五家公司没有统一口径的 AI 收入披露，因此主题研究使用各自最接近价值捕获的财务指标。",
-        "en": "The five companies do not disclose AI revenue on a common basis, so the study uses the closest company-specific financial proxy for capture."
+        "zh-CN": "五家公司没有按统一口径披露 AI 相关收入，因此本研究对每家使用最接近价值捕获的自有财务指标，横向可比性也因此受限。",
+        "en": "The five companies do not disclose AI-related revenue on a common basis, so the study uses each company's closest own-financial proxy for capture, and cross-sectional comparability is limited accordingly."
       },
       {
-        "zh-CN": "DDOG 与 APP 是机制控制组，不是业务模式或估值可比公司。",
-        "en": "DDOG and APP are mechanism controls, not direct business-model or valuation comparables."
+        "zh-CN": "DDOG 与 APP 只作为传导机制的控制组，不构成业务模式或估值可比公司；APP 的广告模式与企业软件的收费逻辑差别很大。",
+        "en": "DDOG and APP are controls for the transmission mechanism, not business-model or valuation comparables. APP's advertising model prices very differently from enterprise software."
       }
     ]
   }

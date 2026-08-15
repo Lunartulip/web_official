@@ -146,6 +146,7 @@
 .actionCard,
 .actionCardActive {
   position: relative;
+  scroll-margin-top: 96px;
   min-height: 410px;
   padding: clamp(28px, 4vw, 52px);
   border-right: 1px solid var(--line);

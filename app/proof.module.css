@@ -439,6 +439,217 @@
   letter-spacing: 0.08em;
 }
 
+.articleTools {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.languageSibling {
+  color: #d7dce6;
+  font-size: 0.67rem;
+  letter-spacing: 0.11em;
+  text-decoration: none;
+}
+
+.themeCard {
+  min-height: 330px;
+  background:
+    linear-gradient(145deg, rgba(32, 39, 52, 0.96), rgba(13, 16, 22, 0.98)),
+    rgba(14, 17, 23, 0.94);
+}
+
+.bridgeTable {
+  margin-top: 2.5rem;
+  border-top: 1px solid rgba(210, 216, 231, 0.17);
+}
+
+.bridgeTable > div {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr) auto;
+  gap: 1.5rem;
+  align-items: baseline;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid rgba(210, 216, 231, 0.13);
+}
+
+.bridgeTable span,
+.bridgeTable strong,
+.bridgeTable b {
+  font-size: 0.76rem;
+  line-height: 1.6;
+}
+
+.bridgeTable span {
+  color: #7f899b;
+  letter-spacing: 0.09em;
+}
+
+.bridgeTable strong {
+  color: #c2c8d3;
+  font-weight: 500;
+}
+
+.bridgeTable b {
+  color: #eef0f5;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+.claimList {
+  display: grid;
+  gap: 1px;
+  margin-top: 2.5rem;
+  border: 1px solid rgba(210, 216, 231, 0.16);
+  background: rgba(210, 216, 231, 0.16);
+}
+
+.claimList > div {
+  padding: clamp(1.4rem, 3vw, 2.2rem);
+  background: rgba(14, 17, 23, 0.98);
+}
+
+.claimList > div > p:not(.claimMeta) {
+  margin: 1rem 0 0;
+  color: #d2d6df;
+}
+
+.claimList small,
+.causalChain small,
+.forwardGrid span {
+  display: block;
+  margin-top: 1rem;
+  color: #778195;
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+}
+
+.claimMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 !important;
+  color: #7f899c !important;
+  font-size: 0.66rem !important;
+  letter-spacing: 0.1em;
+  line-height: 1.5 !important;
+  text-transform: uppercase;
+}
+
+.claimMeta span {
+  color: #c6cedc;
+}
+
+.valuationGrid,
+.sourceList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.scenarioCard,
+.sourceCard {
+  padding: clamp(1.4rem, 3vw, 2.2rem);
+  border: 1px solid rgba(210, 216, 231, 0.16);
+  background: rgba(14, 17, 23, 0.96);
+}
+
+.scenarioMetric {
+  display: grid;
+  gap: 1rem;
+  margin: 1.7rem 0;
+}
+
+.scenarioMetric > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid rgba(210, 216, 231, 0.11);
+}
+
+.scenarioMetric small {
+  color: #7f899b;
+  font-size: 0.62rem;
+  letter-spacing: 0.09em;
+}
+
+.scenarioMetric strong {
+  color: #e2e6ed;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.scenarioCard code,
+.sourceCard code {
+  display: block;
+  margin-top: 1rem;
+  color: #8e98aa;
+  font-size: 0.66rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.sourceCard h3 {
+  margin: 1.2rem 0 0;
+  color: #edf0f5;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.sourceCard p {
+  margin: 0.9rem 0 0;
+  font-size: 0.88rem;
+}
+
+.sourceCard a {
+  display: inline-block;
+  margin-top: 1.2rem;
+  color: #cbd4e4;
+  font-size: 0.68rem;
+  letter-spacing: 0.09em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.versionList {
+  margin-top: 2.5rem;
+  border-top: 1px solid rgba(210, 216, 231, 0.16);
+}
+
+.versionList > div {
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  gap: 2rem;
+  padding: 1.3rem 0;
+  border-bottom: 1px solid rgba(210, 216, 231, 0.12);
+}
+
+.versionList span {
+  color: #8c96a8;
+  font-size: 0.68rem;
+  letter-spacing: 0.09em;
+}
+
+.versionList p {
+  margin: 0 !important;
+}
+
+.dataGaps {
+  margin-top: 2.5rem;
+  padding: 1.5rem 1.5rem 1.5rem 2.8rem !important;
+  border: 1px solid rgba(210, 216, 231, 0.14);
+  background: rgba(187, 197, 217, 0.04);
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -468,7 +679,9 @@
   }
 
   .baselineGrid,
-  .causalChain {
+  .causalChain,
+  .valuationGrid,
+  .sourceList {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -497,8 +710,41 @@
   .baselineGrid,
   .perspectiveGrid,
   .causalChain,
-  .forwardGrid {
+  .forwardGrid,
+  .valuationGrid,
+  .sourceList {
     grid-template-columns: 1fr;
+  }
+
+  .articleTools {
+    gap: 0.7rem;
+  }
+
+  .articleTools .back {
+    display: none;
+  }
+
+  .header .brand {
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+  }
+
+  .languageSibling {
+    font-size: 0.59rem;
+  }
+
+  .bridgeTable > div {
+    grid-template-columns: 1fr auto;
+    gap: 0.35rem 1rem;
+  }
+
+  .bridgeTable span {
+    grid-column: 1 / -1;
+  }
+
+  .versionList > div {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
   }
 
   .hero h1 {

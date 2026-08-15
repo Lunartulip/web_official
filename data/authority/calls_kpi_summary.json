@@ -1,8 +1,8 @@
 {
   "source": "workspace/ai-team/shared/state/scorecard/calls_ledger.csv + calls_outcomes.csv",
-  "generated_at": "2026-08-13",
+  "generated_at": "2026-08-16",
   "generator": "scripts/calls_kpi_summary.py",
-  "as_of": "2026-08-03",
+  "as_of": "2026-08-13",
   "cohorts": {
     "backfill": {
       "total_calls": 77,
@@ -36,10 +36,10 @@
       }
     },
     "desk_discipline": {
-      "total_calls": 0,
-      "settled": 0,
+      "total_calls": 11,
+      "settled": 1,
       "invalidated": 0,
-      "tracking": 0,
+      "tracking": 10,
       "pending_director_judgment": 0,
       "universe_ew": {
         "settled": 0,
@@ -68,7 +68,7 @@
     }
   },
   "first_call_date": "2026-03-30",
-  "evidence_link_rate": 1,
+  "evidence_link_rate": 1.0,
   "windows": {
     "d30": {
       "window_start": "2026-07-05",

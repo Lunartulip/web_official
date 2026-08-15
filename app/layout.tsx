@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -119,13 +120,14 @@ const structuredData = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = (await headers()).get("x-lunartulip-locale") === "en" ? "en" : "zh-CN";
   return (
-    <html lang="zh-CN">
+    <html lang={locale}>
       <body>
         {children}
         <script

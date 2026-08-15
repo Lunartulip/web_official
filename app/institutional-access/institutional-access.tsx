@@ -75,8 +75,16 @@ export default function InstitutionalAccess({ language = "cn" }: { language?: "c
   });
 
   useEffect(() => {
-    const requestedIntent = window.location.hash.replace("#intent-", "") as InquiryIntent;
-    if (actions.some((action) => action.intent === requestedIntent)) setIntent(requestedIntent);
+    const applyHashIntent = () => {
+      const requestedIntent = window.location.hash.replace("#intent-", "") as InquiryIntent;
+      if (actions.some((action) => action.intent === requestedIntent)) setIntent(requestedIntent);
+    };
+    const frame = window.requestAnimationFrame(applyHashIntent);
+    window.addEventListener("hashchange", applyHashIntent);
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.removeEventListener("hashchange", applyHashIntent);
+    };
   }, []);
 
   function chooseIntent(nextIntent: InquiryIntent) {

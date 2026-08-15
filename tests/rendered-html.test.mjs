@@ -14,7 +14,9 @@ const englishAboutSource = await readFile(new URL("../app/en/about/page.tsx", im
 const deepDiveIndexSource = await readFile(new URL("../app/deep-dive/deep-dive-index.tsx", import.meta.url), "utf8");
 const deepDiveArticleSource = await readFile(new URL("../app/deep-dive/deep-dive-article.tsx", import.meta.url), "utf8");
 const deepDivePageSource = await readFile(new URL("../app/deep-dive/[slug]/page.tsx", import.meta.url), "utf8");
-const deepDiveDataSource = await readFile(new URL("../lib/deep-dives.ts", import.meta.url), "utf8");
+const researchCatalogSource = await readFile(new URL("../content/research-objects/catalog.json", import.meta.url), "utf8");
+const researchTypesSource = await readFile(new URL("../lib/research-objects/types.ts", import.meta.url), "utf8");
+const researchValidatorSource = await readFile(new URL("../scripts/validate-research-objects.mjs", import.meta.url), "utf8");
 const authorityPageSource = await readFile(new URL("../app/authority-ledger/page.tsx", import.meta.url), "utf8");
 const authorityViewSource = await readFile(new URL("../app/authority-ledger/authority-ledger.tsx", import.meta.url), "utf8");
 const authorityDataSource = await readFile(new URL("../data/authority/calls_kpi_summary.json", import.meta.url), "utf8");
@@ -29,6 +31,10 @@ const selfDrivingNoteSource = await readFile(new URL("../content/notes/self-driv
 const tradingLabNoteSource = await readFile(new URL("../content/notes/trading-like-pm-lab-notes.md", import.meta.url), "utf8");
 const sitemapSource = await readFile(new URL("../app/sitemap.ts", import.meta.url), "utf8");
 const contactSource = await readFile(new URL("../lib/contact.ts", import.meta.url), "utf8");
+const inquiryApiSource = await readFile(new URL("../app/api/institutional-inquiry/route.ts", import.meta.url), "utf8");
+const inquirySource = await readFile(new URL("../lib/institutional-inquiry.ts", import.meta.url), "utf8");
+const englishResearchFeedSource = await readFile(new URL("../app/en/deep-dive/feed.xml/route.ts", import.meta.url), "utf8");
+const proxySource = await readFile(new URL("../proxy.ts", import.meta.url), "utf8");
 
 test("defines every public navigation section", () => {
   for (const id of ["top", "research", "philosophy", "capabilities", "workflow", "direction", "practice", "notes", "contact"]) {
@@ -39,7 +45,10 @@ test("defines every public navigation section", () => {
 test("keeps language selection persistent and accessible", () => {
   assert.match(pageSource, /lunartulip-language/);
   assert.match(pageSource, /document\.documentElement\.lang/);
-  assert.match(pageSource, /aria-pressed=/);
+  assert.match(pageSource, /hrefLang="zh-CN"/);
+  assert.match(pageSource, /hrefLang="en"/);
+  assert.match(pageSource, /aria-current=/);
+  assert.match(proxySource, /x-lunartulip-locale/);
 });
 
 test("publishes the official contact and canonical domain", () => {
@@ -79,36 +88,45 @@ test("publishes two research engines and proof surfaces instead of a product lad
   assert.doesNotMatch(pageSource, /href: "\/workshop"|href: "\/desk"|¥100,000 起|US\$15,000|B2B 受邀付费试点/);
 });
 
-test("publishes two versioned Deep Dive research objects", () => {
+test("publishes canonical versioned Deep Dive research objects", () => {
   for (const term of [
     "palantir-ai-application-commercialization-2026q2",
+    "cloudflare-monetization-density-2026q2",
+    "atlassian-workflow-density-context-monetization-2026fy",
     "cloudflare-atlassian-ai-application-commercialization-2026q2",
-    "2026-08-08 corrected",
-    "VERSIONED RESEARCH",
-    "UPDATE HISTORY",
+    "RO-COMP-PLTR-001",
+    "RO-COMP-NET-001",
+    "RO-COMP-TEAM-001",
+    "RO-THEME-AI-VALUE-001",
   ]) {
-    assert.match(deepDiveDataSource + deepDiveArticleSource, new RegExp(term));
+    assert.match(researchCatalogSource, new RegExp(term));
   }
-  assert.match(deepDiveIndexSource, /每篇研究，都有明确问题和更新路径/);
+  assert.match(deepDiveIndexSource, /COMPANY DEEP DIVES/);
+  assert.match(deepDiveIndexSource, /THEME STUDIES/);
   for (const term of [
     "市场共识",
     "差异化判断",
     "价值如何一步步穿过收入表",
-    "未来一至两个季度，市场会验收什么",
+    "什么会证明这套判断正在失效",
     "monetization density",
-    "agent coordination / context",
+    "Claim IDs",
+    "EVIDENCE LEDGER",
   ]) {
-    assert.match(deepDiveDataSource + deepDiveArticleSource, new RegExp(term));
+    assert.match(researchCatalogSource + deepDiveArticleSource + deepDiveIndexSource, new RegExp(term));
   }
   assert.match(deepDivePageSource, /"@type": "ScholarlyArticle"/);
-  assert.match(deepDivePageSource, /dateModified: "2026-08-08"/);
-  assert.doesNotMatch(deepDiveDataSource, /成交价|建仓纪律|回调至 \$|介入时点|目标价位/);
-  assert.doesNotMatch(deepDiveDataSource, /DESK_DEEP_DIVE|HYP010|deepdive\.md|外发闸门|approved/i);
+  assert.match(deepDivePageSource, /identifier: item\.id/);
+  assert.match(deepDivePageSource, /citation:/);
+  assert.match(deepDivePageSource, /dateModified: modifiedAt/);
+  assert.match(researchTypesSource, /ClaimType = "Fact" \| "Derived" \| "Inference" \| "Hypothesis"/);
+  assert.match(researchValidatorSource, /locale claim parity failed/);
+  assert.doesNotMatch(researchCatalogSource, /成交价|建仓纪律|回调至 \$|介入时点|目标价位/);
+  assert.doesNotMatch(researchCatalogSource, /DESK_DEEP_DIVE|HYP010|deepdive\.md|外发闸门|approved/i);
 });
 
 test("renders the Authority Ledger from a generated data projection with visible methodology", () => {
   for (const term of [
-    '"as_of": "2026-08-03"',
+    '"as_of": "\\d{4}-\\d{2}-\\d{2}"',
     '"settled": 46',
     '"hit_rate": 0.4516',
     '"win_loss_ratio_hm_only": 1.56',
@@ -180,16 +198,40 @@ test("separates the current mandate from the long-term buy-side vision", () => {
 
 test("presents institutional access as visitor-oriented research formats", () => {
   for (const term of [
-    "研究样章与结果记录",
-    "交易日研究简报",
-    "公司与产业深度研究",
-    "双引擎研究系统方法",
-    "选择适合团队的研究入口",
+    "索取机构样章",
+    "申请 Institutional Research Access",
+    "Commissioned Deep Dive / Theme Mandate",
+    "6-Session AI-native Research System Diagnostic",
+    "¥100,000 起 / US$15,000 起",
   ]) {
     assert.match(accessPageSource, new RegExp(term.replace("$", "\\$")));
   }
-  assert.match(accessPageSource, /具体范围、频率与信息边界根据研究目标共同确认/);
+  assert.match(accessPageSource, /机构 × Coverage Track × 固定周期/);
+  assert.match(accessPageSource, /不要提交持仓、交易凭证、账户信息/);
   assert.doesNotMatch(accessPageSource, /¥1,200|RMB 1,200|L1 \/ MEMBER|≥L2 \/ NOT OPEN|INTERNAL \/ NEVER SOLD|checkout|credit card|payment provider/i);
+});
+
+test("ships a validated, attributed SMTP institutional inquiry flow", () => {
+  for (const term of ["sample_request", "research_access", "commissioned_mandate", "research_system_diagnostic"]) {
+    assert.match(inquirySource + accessPageSource, new RegExp(term));
+  }
+  for (const field of ["organization", "role", "name", "email", "researchQuestion", "timeline"]) {
+    assert.match(accessPageSource, new RegExp(`name=["']${field}["']`));
+  }
+  assert.match(inquiryApiSource, /consumeInquiryRateLimit/);
+  assert.match(inquiryApiSource, /isSameOrigin/);
+  assert.match(inquirySource, /companyWebsite/);
+  assert.match(inquirySource, /nodemailer\.createTransport/);
+  assert.match(inquirySource, /SMTP_HOST/);
+  assert.doesNotMatch(inquirySource, /SMTP_PASSWORD\s*=\s*["'][^"']+["']/);
+});
+
+test("publishes bilingual research discovery infrastructure", () => {
+  assert.match(englishResearchFeedSource, /application\/rss\+xml/);
+  assert.match(englishResearchFeedSource, /item\.id}@\$\{item\.version/);
+  assert.match(sitemapSource, /researchObjects/);
+  assert.match(sitemapSource, /alternates:/);
+  assert.match(deepDiveArticleSource, /hrefLang=/);
 });
 
 test("publishes machine-readable research topic clusters", () => {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { researchObjects } from "@/lib/research-objects";
 import DeepDiveIndex from "./deep-dive-index";
 
 export const metadata: Metadata = {
@@ -18,5 +19,27 @@ export const metadata: Metadata = {
 };
 
 export default function DeepDivePage() {
-  return <DeepDiveIndex />;
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://lunartuliplab.com/deep-dive#collection",
+    name: "Lunartulip Deep Dive",
+    inLanguage: "zh-CN",
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: researchObjects.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `https://lunartuliplab.com/deep-dive/${item.slug}`,
+        name: item.renderings["zh-CN"].title,
+      })),
+    },
+    publisher: { "@id": "https://lunartuliplab.com/#organization" },
+  };
+  return (
+    <>
+      <DeepDiveIndex />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+    </>
+  );
 }

@@ -39,6 +39,18 @@ The default scripts use the standard Next.js runtime and work on Windows, macOS 
 
 For the Singapore-server migration, Nginx, HTTPS, DNS and service setup, see [DEPLOYMENT.md](./DEPLOYMENT.md).
 
+## Authority Ledger snapshot contract
+
+The public Authority Ledger reads `data/authority/calls_kpi_summary.json` at build time. Its upstream source remains the private canonical calls ledger; only the aggregate public snapshot belongs in this repository.
+
+For every snapshot refresh:
+
+1. replace the JSON through the upstream reconciliation workflow;
+2. run `npm run validate:authority`;
+3. commit the snapshot and trigger a production build/deploy.
+
+Updating the JSON without rebuilding does not change the live website. The validator checks source identity, cohort totals, outcome arithmetic, directional hit rates, payoff ratios and curve chronology before publication.
+
 ## Main source files
 
 - `app/page.tsx` — page content and interactions
