@@ -1233,6 +1233,12 @@ footer a:focus-visible { outline-color: var(--blue-bright); outline-offset: 2px;
 .research-header-link:hover,
 .article-back:hover { color: var(--ink); }
 
+.research-header-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
 .notes-archive-hero {
   width: min(100% - 64px, 1180px);
   margin: 0 auto;

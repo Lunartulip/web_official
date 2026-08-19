@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description: "Lunartulip Lab 关于主观基本面研究、系统化量化研究、AI-native investing、量化基本面与投资决策系统的公开方法研究档案。",
   alternates: {
     canonical: "/notes",
+    languages: { "zh-CN": "/notes", en: "/en/notes" },
   },
   openGraph: {
     title: "研究手札 | Lunartulip Lab",
@@ -36,7 +37,10 @@ export default function NotesPage() {
           <Image className="brand-mark-image" src="/lunartulip-silver-emblem.png" alt="" width={34} height={38} />
           LUNARTULIP LAB
         </Link>
-        <Link className="research-header-link" href="/#notes">返回官网</Link>
+        <nav className="research-header-nav">
+          <Link className="research-header-link" href="/en/notes" hrefLang="en">EN</Link>
+          <Link className="research-header-link" href="/#notes">返回官网</Link>
+        </nav>
       </header>
 
       <section className="notes-archive-hero">

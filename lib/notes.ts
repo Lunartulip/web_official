@@ -2,6 +2,8 @@ import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import matter from "gray-matter";
 
+export type NoteLocale = "zh-CN" | "en";
+
 export type NoteMeta = {
   title: string;
   summary: string;
@@ -12,6 +14,7 @@ export type NoteMeta = {
   notionId: string;
   sourceChannel: string;
   sourceTitle: string;
+  locale: NoteLocale;
 };
 
 export type Note = NoteMeta & {
@@ -42,6 +45,7 @@ function readNote(filename: string): Note {
     ...data,
     publishedAt: normalizeDate(data.publishedAt),
     updatedAt: data.updatedAt ? normalizeDate(data.updatedAt) : undefined,
+    locale: data.locale === "en" ? "en" : "zh-CN",
   } as NoteMeta;
 
   for (const field of requiredFields) {
@@ -61,19 +65,20 @@ function readNote(filename: string): Note {
   return { ...metadata, content: content.trim() };
 }
 
-export function getAllNotes(): Note[] {
+export function getAllNotes(locale: NoteLocale = "zh-CN"): Note[] {
   return readdirSync(notesDirectory)
     .filter((filename) => filename.endsWith(".md"))
     .map(readNote)
+    .filter((note) => note.locale === locale)
     .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 }
 
-export function getNoteBySlug(slug: string): Note | undefined {
-  return getAllNotes().find((note) => note.slug === slug);
+export function getNoteBySlug(slug: string, locale: NoteLocale = "zh-CN"): Note | undefined {
+  return getAllNotes(locale).find((note) => note.slug === slug);
 }
 
-export function formatNoteDate(date: string) {
-  return new Intl.DateTimeFormat("zh-CN", {
+export function formatNoteDate(date: string, locale: NoteLocale = "zh-CN") {
+  return new Intl.DateTimeFormat(locale === "en" ? "en-US" : "zh-CN", {
     year: "numeric",
     month: "long",
     day: "numeric",

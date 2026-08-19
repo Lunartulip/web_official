@@ -27,6 +27,10 @@ const englishAccessSource = await readFile(new URL("../app/en/institutional-acce
 const englishDeskSource = await readFile(new URL("../app/en/desk/page.tsx", import.meta.url), "utf8");
 const notesIndexSource = await readFile(new URL("../app/notes/page.tsx", import.meta.url), "utf8");
 const notePageSource = await readFile(new URL("../app/notes/[slug]/page.tsx", import.meta.url), "utf8");
+const englishNotesIndexSource = await readFile(new URL("../app/en/notes/page.tsx", import.meta.url), "utf8");
+const englishNotePageSource = await readFile(new URL("../app/en/notes/[slug]/page.tsx", import.meta.url), "utf8");
+const decisionAttributionNoteSource = await readFile(new URL("../content/notes/decision-attribution-after-self-driving-portfolio.md", import.meta.url), "utf8");
+const englishDecisionAttributionNoteSource = await readFile(new URL("../content/notes/decision-attribution-after-self-driving-portfolio.en.md", import.meta.url), "utf8");
 const selfDrivingNoteSource = await readFile(new URL("../content/notes/self-driving-portfolio-ai-investing.md", import.meta.url), "utf8");
 const tradingLabNoteSource = await readFile(new URL("../content/notes/trading-like-pm-lab-notes.md", import.meta.url), "utf8");
 const sitemapSource = await readFile(new URL("../app/sitemap.ts", import.meta.url), "utf8");
@@ -266,13 +270,25 @@ test("ships the LunarTulip brand artwork", async () => {
   assert.ok(favicon.size > 100);
 });
 
-test("publishes all thirteen research notes from the homepage", async () => {
+test("publishes fourteen Chinese research notes and one English edition", async () => {
   const noteFiles = (await readdir(new URL("../content/notes/", import.meta.url))).filter((file) => file.endsWith(".md"));
-  assert.equal(noteFiles.length, 13);
-  for (const file of noteFiles) {
-    const slug = file.replace(/\.md$/, "");
+  assert.equal(noteFiles.length, 15);
+  const slugs = new Set(noteFiles.map((file) => file.replace(/\.en\.md$|\.md$/, "")));
+  assert.equal(slugs.size, 14);
+  for (const slug of slugs) {
     assert.match(pageSource, new RegExp(slug));
   }
+});
+
+test("publishes the decision-attribution note as a claim-parity bilingual first release", () => {
+  assert.match(decisionAttributionNoteSource, /盈亏不是经验/);
+  assert.match(decisionAttributionNoteSource, /sourceChannel: [\"']?Lunartulip Lab 官网/);
+  assert.match(englishDecisionAttributionNoteSource, /P&L Is Not Experience/);
+  assert.match(englishDecisionAttributionNoteSource, /locale: en/);
+  assert.match(englishNotesIndexSource, /getAllNotes\("en"\)/);
+  assert.match(englishNotePageSource, /translationOfWork/);
+  assert.match(notePageSource, /workTranslation/);
+  assert.match(sitemapSource, /englishNotes/);
 });
 
 test("publishes the Self-Driving Portfolio note with explicit long-term vision", () => {

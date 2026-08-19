@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { INSTITUTIONAL_EMAIL, institutionalMailto } from "../../../lib/contact";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { INSTITUTIONAL_EMAIL, institutionalMailto } from "@/lib/contact";
 import { formatNoteDate, getAllNotes, getNoteBySlug } from "@/lib/notes";
 
 type NotePageProps = {
@@ -14,33 +14,35 @@ type NotePageProps = {
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return getAllNotes().map(({ slug }) => ({ slug }));
+  return getAllNotes("en").map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: NotePageProps): Promise<Metadata> {
   const { slug } = await params;
-  const note = getNoteBySlug(slug);
+  const note = getNoteBySlug(slug, "en");
   if (!note) return {};
-  const hasEnglishVersion = Boolean(getNoteBySlug(slug, "en"));
 
   return {
     title: note.title,
     description: note.summary,
     alternates: {
-      canonical: `/notes/${note.slug}`,
-      languages: hasEnglishVersion
-        ? { "zh-CN": `/notes/${note.slug}`, en: `/en/notes/${note.slug}` }
-        : { "zh-CN": `/notes/${note.slug}` },
+      canonical: `/en/notes/${note.slug}`,
+      languages: {
+        "zh-CN": `/notes/${note.slug}`,
+        en: `/en/notes/${note.slug}`,
+      },
     },
     openGraph: {
       title: note.title,
       description: note.summary,
       type: "article",
-      url: `/notes/${note.slug}`,
+      url: `/en/notes/${note.slug}`,
       publishedTime: note.publishedAt,
       modifiedTime: note.updatedAt ?? note.publishedAt,
       authors: ["Lunartulip Lab"],
-      tags: [note.category, "AI-native research", "buy-side decision systems"],
+      tags: [note.category, "AI-native investing", "buy-side decision systems"],
+      locale: "en_US",
+      alternateLocale: ["zh_CN"],
     },
     twitter: {
       card: "summary_large_image",
@@ -50,13 +52,12 @@ export async function generateMetadata({ params }: NotePageProps): Promise<Metad
   };
 }
 
-export default async function NotePage({ params }: NotePageProps) {
+export default async function EnglishNotePage({ params }: NotePageProps) {
   const { slug } = await params;
-  const note = getNoteBySlug(slug);
+  const note = getNoteBySlug(slug, "en");
   if (!note) notFound();
-  const englishNote = getNoteBySlug(slug, "en");
 
-  const relatedNotes = getAllNotes()
+  const relatedNotes = getAllNotes("en")
     .filter((item) => item.category === note.category && item.slug !== note.slug)
     .slice(0, 2);
   const articleSchema = {
@@ -66,15 +67,13 @@ export default async function NotePage({ params }: NotePageProps) {
     description: note.summary,
     datePublished: note.publishedAt,
     dateModified: note.updatedAt ?? note.publishedAt,
-    inLanguage: "zh-CN",
-    mainEntityOfPage: `https://lunartuliplab.com/notes/${note.slug}`,
-    ...(englishNote && {
-      workTranslation: {
-        "@type": "Article",
-        inLanguage: "en",
-        url: `https://lunartuliplab.com/en/notes/${note.slug}`,
-      },
-    }),
+    inLanguage: "en",
+    mainEntityOfPage: `https://lunartuliplab.com/en/notes/${note.slug}`,
+    translationOfWork: {
+      "@type": "Article",
+      inLanguage: "zh-CN",
+      url: `https://lunartuliplab.com/notes/${note.slug}`,
+    },
     author: {
       "@type": "Organization",
       name: "Lunartulip Lab",
@@ -98,27 +97,27 @@ export default async function NotePage({ params }: NotePageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, "\\u003c") }}
       />
       <header className="research-header">
-        <Link className="brand" href="/">
+        <Link className="brand" href="/en">
           <Image className="brand-mark-image" src="/lunartulip-silver-emblem.png" alt="" width={34} height={38} />
           LUNARTULIP LAB
         </Link>
         <nav className="research-header-nav">
-          {englishNote && <Link className="research-header-link" href={`/en/notes/${note.slug}`} hrefLang="en">EN</Link>}
-          <Link className="research-header-link" href="/notes">全部手札</Link>
+          <Link className="research-header-link" href={`/notes/${note.slug}`} hrefLang="zh-CN">中文</Link>
+          <Link className="research-header-link" href="/en/notes">All notes</Link>
         </nav>
       </header>
 
       <article className="research-article">
         <header className="article-heading">
-          <Link className="article-back" href="/notes">← RESEARCH NOTES</Link>
+          <Link className="article-back" href="/en/notes">← RESEARCH NOTES</Link>
           <p className="article-category">{note.category}</p>
           <h1>{note.title}</h1>
           <p className="article-deck">{note.summary}</p>
           <div className="article-byline">
             <span>LUNARTULIP LAB</span>
-            <time dateTime={note.publishedAt}>{formatNoteDate(note.publishedAt)}</time>
-            {note.updatedAt && <span>更新于 {formatNoteDate(note.updatedAt)}</span>}
-            <span>首发于{note.sourceChannel}</span>
+            <time dateTime={note.publishedAt}>{formatNoteDate(note.publishedAt, "en")}</time>
+            {note.updatedAt && <span>Updated {formatNoteDate(note.updatedAt, "en")}</span>}
+            <span>First published on {note.sourceChannel}</span>
           </div>
         </header>
 
@@ -126,19 +125,19 @@ export default async function NotePage({ params }: NotePageProps) {
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{note.content}</ReactMarkdown>
         </div>
 
-        <aside className="research-disclaimer" aria-label="研究声明">
-          <strong>研究声明</strong>
-          <p>本文仅供研究交流与方法论讨论，不构成任何投资建议、投资咨询、收益承诺或交易依据。市场有风险，决策需独立审慎。</p>
+        <aside className="research-disclaimer" aria-label="Research disclaimer">
+          <strong>Research disclaimer</strong>
+          <p>This article is for research and methodological discussion only. It is not investment advice, investment consulting, a promise of returns or a basis for trading decisions.</p>
         </aside>
       </article>
 
       {relatedNotes.length > 0 && (
         <section className="related-notes" aria-labelledby="related-notes-title">
           <p className="section-index">CONTINUE READING</p>
-          <h2 id="related-notes-title">继续阅读</h2>
+          <h2 id="related-notes-title">Continue reading</h2>
           <div>
             {relatedNotes.map((item) => (
-              <Link href={`/notes/${item.slug}`} key={item.slug}>
+              <Link href={`/en/notes/${item.slug}`} key={item.slug}>
                 <small>{item.category}</small>
                 <strong>{item.title}</strong>
                 <span aria-hidden="true">↗</span>
@@ -149,8 +148,8 @@ export default async function NotePage({ params }: NotePageProps) {
       )}
 
       <footer className="research-footer">
-        <Link className="brand footer-brand" href="/">LUNARTULIP LAB</Link>
-        <a href={institutionalMailto({ source: "NOTE_DETAIL", topic: note.title })}>{INSTITUTIONAL_EMAIL}</a>
+        <Link className="brand footer-brand" href="/en">LUNARTULIP LAB</Link>
+        <a href={institutionalMailto({ source: "NOTE_DETAIL_EN", topic: note.title, language: "en" })}>{INSTITUTIONAL_EMAIL}</a>
         <p>© 2026 LUNARTULIP LAB</p>
       </footer>
     </main>

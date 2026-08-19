@@ -176,18 +176,20 @@ const noteColumns = [
     title: "买方决策系统",
     titleEn: "Decision Systems",
     notes: [
+      "盈亏不是经验：Self-Driving Portfolio 之后，AI 投资还缺一层决策归因",
       "Self-Driving Portfolio：AI 投研的真正终点",
       "如果量化基金有因子库，主动管理也该有假设库",
       "AI 买方决策的第一道分水岭：谁来验收",
       "AI 投研越多，为什么买方决策反而更难？",
     ],
     notesEn: [
+      "P&L Is Not Experience: The Missing Decision-Attribution Layer",
       "Self-Driving Portfolio: The Real Destination of AI Investing",
       "If Quant Funds Have Factor Libraries, Active Managers Need Thesis Libraries",
       "The First Divide in AI Buy-Side Decisions: Who Validates the Output?",
       "Why More AI Research Can Make Buy-Side Decisions Harder",
     ],
-    slugs: ["self-driving-portfolio-ai-investing", "active-management-hypothesis-library", "who-validates-ai-output", "more-ai-research-harder-decisions"],
+    slugs: ["decision-attribution-after-self-driving-portfolio", "self-driving-portfolio-ai-investing", "active-management-hypothesis-library", "who-validates-ai-output", "more-ai-research-harder-decisions"],
   },
   {
     code: "COLUMN / 03",
@@ -826,7 +828,7 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
                 : "Institutions and professional investors can first evaluate our research quality through published work, version histories, corrections and outcome records. Over time, both engines will remain accountable to real capital outcomes; any future asset-management activity will operate separately under the appropriate entity, qualifications and compliance framework."}
             </p>
             <div className="vision-links">
-              <Link href="/notes/self-driving-portfolio-ai-investing">{language === "cn" ? "阅读长期组织形态" : "Read the long-term operating thesis"}<ArrowRightIcon /></Link>
+              <Link href={language === "cn" ? "/notes/decision-attribution-after-self-driving-portfolio" : "/en/notes/decision-attribution-after-self-driving-portfolio"}>{language === "cn" ? "阅读决策归因研究" : "Read the decision-attribution research"}<ArrowRightIcon /></Link>
               <Link href="/notes/trading-like-pm-lab-notes">{language === "cn" ? "查看系统生长手记" : "Read the system field notes"}<ArrowRightIcon /></Link>
             </div>
           </div>
@@ -889,7 +891,13 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
             <article className="notes-column" key={column.code}>
               <p className="card-index">{column.code}</p>
               <h3>{language === "cn" ? column.title : column.titleEn}</h3>
-              <ol>{(language === "cn" ? column.notes : column.notesEn).map((note, index) => <li key={note}><span>0{index + 1}</span><Link href={`/notes/${column.slugs[index]}`}><p>{note}</p></Link><i aria-hidden="true">↗</i></li>)}</ol>
+              <ol>{(language === "cn" ? column.notes : column.notesEn).map((note, index) => {
+                const slug = column.slugs[index];
+                const href = language === "en" && slug === "decision-attribution-after-self-driving-portfolio"
+                  ? `/en/notes/${slug}`
+                  : `/notes/${slug}`;
+                return <li key={note}><span>0{index + 1}</span><Link href={href}><p>{note}</p></Link><i aria-hidden="true">↗</i></li>;
+              })}</ol>
               <a className="notes-contact" href={institutionalMailto({ source: "HOME_NOTE_COLUMN", topic: language === "cn" ? column.title : column.titleEn, language })}>
                 {language === "cn" ? "交流这一研究方向" : "Discuss this research area"} <span aria-hidden="true"><ArrowUpRightIcon /></span>
               </a>
