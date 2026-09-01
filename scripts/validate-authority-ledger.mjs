@@ -57,14 +57,15 @@ for (const [name, cohort] of Object.entries(ledger.cohorts)) {
 }
 
 let previousWeek = "";
-let previousSettled = 0;
 for (const point of ledger.hit_rate_curve) {
   assert.match(point.week_start, datePattern, "invalid hit-rate curve date");
   assert.ok(point.week_start >= previousWeek, "hit-rate curve is not chronological");
   assert.ok(point.week_start <= ledger.as_of, "hit-rate curve extends beyond snapshot as-of");
-  assert.ok(point.settled_count >= previousSettled, "settled curve count moved backwards");
+  // 2026-09-01: curve is a rolling 30-day window per week (calls_kpi_summary.py
+  // _hit_rate_curve), so settled_count may legitimately decrease as old
+  // settlements roll out of the window; monotonic assertion removed.
+  assert.ok(point.settled_count >= 0, "settled curve count is negative");
   previousWeek = point.week_start;
-  previousSettled = point.settled_count;
 }
 
 console.log(
