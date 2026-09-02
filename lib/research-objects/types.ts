@@ -41,17 +41,24 @@ export interface FinancialBridgeRow {
   period: string;
   value: number;
   unit: "USDm" | "percent" | "count";
+  displayValue?: LocalizedText;
   evidenceIds: `EV-${string}`[];
+}
+
+export interface ValuationMetric {
+  label: LocalizedText;
+  value: LocalizedText;
 }
 
 export interface ValuationScenario {
   id: string;
   label: LocalizedText;
-  revenueBaseUsdM: number;
-  revenueGrowthPct: number;
-  forwardRevenueUsdM: number;
-  salesMultiple: number;
-  impliedEnterpriseValueUsdM: number;
+  revenueBaseUsdM?: number;
+  revenueGrowthPct?: number;
+  forwardRevenueUsdM?: number;
+  salesMultiple?: number;
+  impliedEnterpriseValueUsdM?: number;
+  metrics?: ValuationMetric[];
   calculation: string;
   interpretation: LocalizedText;
 }
@@ -80,6 +87,7 @@ export interface LocaleRendering {
   update: string;
   evidenceClaimIds: `CL-${string}`[];
   causalChain: Array<{ title: string; body: string; claimIds: `CL-${string}`[] }>;
+  narrativeSections?: Array<{ id: string; title: string; body: string }>;
   riskClaimIds: `CL-${string}`[];
   forwardTestIds: string[];
 }

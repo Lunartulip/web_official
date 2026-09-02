@@ -3,6 +3,10 @@ import Link from "next/link";
 import { researchObjects } from "@/lib/research-objects";
 import styles from "../proof.module.css";
 
+function coverageLabel(tickers: string[]) {
+  return tickers.length > 5 ? `${tickers.slice(0, 5).join(" · ")} + ${tickers.length - 5}` : tickers.join(" · ");
+}
+
 export default function DeepDiveIndex({ language = "cn" }: { language?: "cn" | "en" }) {
   const isCn = language === "cn";
   const locale = isCn ? "zh-CN" : "en";
@@ -21,7 +25,7 @@ export default function DeepDiveIndex({ language = "cn" }: { language?: "cn" | "
 
       <section className={styles.hero}>
         <div>
-          <p className={styles.kicker}>RESEARCH NOTES / LUNARTULIP DEEP DIVE</p>
+          <p className={styles.kicker}>CANONICAL RESEARCH / LUNARTULIP DEEP DIVE</p>
           <h1>{isCn ? <>从研究问题出发，<br /><span>跟踪判断如何被证据更新。</span></> : <>Begin with the research question.<br /><span>Follow how evidence updates judgment.</span></>}</h1>
         </div>
         <aside className={styles.heroAside}>
@@ -32,13 +36,13 @@ export default function DeepDiveIndex({ language = "cn" }: { language?: "cn" | "
 
       <section className={styles.section}>
         <div className={styles.sectionHead}>
-          <div><p className={styles.sectionLabel}>COMPANY DEEP DIVES / 03</p><h2>{isCn ? "公司研究：从财务事实走向可证伪的判断。" : "Company research that moves from financial facts to falsifiable judgment."}</h2></div>
+          <div><p className={styles.sectionLabel}>COMPANY DEEP DIVES / {String(companyStudies.length).padStart(2, "0")}</p><h2>{isCn ? "公司研究：从财务事实走向可证伪的判断。" : "Company research that moves from financial facts to falsifiable judgment."}</h2></div>
           <p className={styles.lead}>{isCn ? "每篇研究固定 as-of date、Claim IDs、Evidence Ledger、估值情景与前瞻证伪条件。更新发生在同一研究对象上，不用后见数据覆盖原始判断。" : "Each object fixes its as-of date, Claim IDs, Evidence Ledger, valuation scenarios and forward falsifiers. New evidence advances the version without overwriting the original information set."}</p>
         </div>
         <div className={styles.grid}>
           {companyStudies.map((item) => (
             <article className={styles.card} key={item.slug}>
-              <p className={styles.meta}>{item.tickers.join(" · ")} / {item.id} / AS OF {item.asOf}</p>
+              <p className={styles.meta}>{coverageLabel(item.tickers)} / {item.id} / AS OF {item.asOf}</p>
               <h3>{item.renderings[locale].title}</h3>
               <p>{item.renderings[locale].standfirst}</p>
               <Link href={`${isCn ? "" : "/en"}/deep-dive/${item.slug}`}>{isCn ? "阅读研究 →" : "Read the research →"}</Link>
@@ -49,13 +53,13 @@ export default function DeepDiveIndex({ language = "cn" }: { language?: "cn" | "
 
       <section className={styles.section}>
         <div className={styles.sectionHead}>
-          <div><p className={styles.sectionLabel}>THEME STUDIES / 01</p><h2>{isCn ? "横截面研究：比较不同价值捕获路径。" : "Cross-sectional research across distinct value-capture paths."}</h2></div>
+          <div><p className={styles.sectionLabel}>THEME STUDIES / {String(themeStudies.length).padStart(2, "0")}</p><h2>{isCn ? "横截面研究：比较不同价值捕获路径。" : "Cross-sectional research across distinct value-capture paths."}</h2></div>
           <p className={styles.lead}>{isCn ? "Theme Study 用共同问题比较多家公司，并加入控制组，检验产业叙事能否转化为可归因的经济价值。" : "Theme Studies test one shared question across companies, using control cases to distinguish industry narrative from attributable economic value."}</p>
         </div>
         <div className={styles.grid}>
           {themeStudies.map((item) => (
             <article className={`${styles.card} ${styles.themeCard}`} key={item.slug}>
-              <p className={styles.meta}>{item.tickers.join(" · ")} / {item.id} / AS OF {item.asOf}</p>
+              <p className={styles.meta}>{coverageLabel(item.tickers)} / {item.id} / AS OF {item.asOf}</p>
               <h3>{item.renderings[locale].title}</h3>
               <p>{item.renderings[locale].standfirst}</p>
               <Link href={`${isCn ? "" : "/en"}/deep-dive/${item.slug}`}>{isCn ? "阅读主题研究 →" : "Read the theme study →"}</Link>

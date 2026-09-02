@@ -20,6 +20,7 @@ const researchValidatorSource = await readFile(new URL("../scripts/validate-rese
 const authorityPageSource = await readFile(new URL("../app/authority-ledger/page.tsx", import.meta.url), "utf8");
 const authorityViewSource = await readFile(new URL("../app/authority-ledger/authority-ledger.tsx", import.meta.url), "utf8");
 const authorityDataSource = await readFile(new URL("../data/authority/calls_kpi_summary.json", import.meta.url), "utf8");
+const authorityData = JSON.parse(authorityDataSource);
 const accessPageSource = await readFile(new URL("../app/institutional-access/institutional-access.tsx", import.meta.url), "utf8");
 const englishDeepDiveSource = await readFile(new URL("../app/en/deep-dive/page.tsx", import.meta.url), "utf8");
 const englishAuthoritySource = await readFile(new URL("../app/en/authority-ledger/page.tsx", import.meta.url), "utf8");
@@ -39,6 +40,12 @@ const inquiryApiSource = await readFile(new URL("../app/api/institutional-inquir
 const inquirySource = await readFile(new URL("../lib/institutional-inquiry.ts", import.meta.url), "utf8");
 const englishResearchFeedSource = await readFile(new URL("../app/en/deep-dive/feed.xml/route.ts", import.meta.url), "utf8");
 const proxySource = await readFile(new URL("../proxy.ts", import.meta.url), "utf8");
+const englishDeepDivePageSource = await readFile(new URL("../app/en/deep-dive/[slug]/page.tsx", import.meta.url), "utf8");
+const editorialLoaderSource = await readFile(new URL("../lib/editorial-deep-dives.ts", import.meta.url), "utf8");
+const editorialRouteSource = await readFile(new URL("../app/deep-dive/global-ai-hardware-profit-pools-2026-09/route.ts", import.meta.url), "utf8");
+const englishEditorialRouteSource = await readFile(new URL("../app/en/deep-dive/global-ai-hardware-profit-pools-2026-09/route.ts", import.meta.url), "utf8");
+const editorialHtmlCn = await readFile(new URL("../content/editorial-deep-dives/global-ai-hardware-profit-pools-2026-09.zh.html", import.meta.url), "utf8");
+const editorialHtmlEn = await readFile(new URL("../content/editorial-deep-dives/global-ai-hardware-profit-pools-2026-09.en.html", import.meta.url), "utf8");
 
 test("defines every public navigation section", () => {
   for (const id of ["top", "research", "philosophy", "capabilities", "workflow", "direction", "practice", "notes", "contact"]) {
@@ -102,6 +109,8 @@ test("publishes canonical versioned Deep Dive research objects", () => {
     "RO-COMP-NET-001",
     "RO-COMP-TEAM-001",
     "RO-THEME-AI-VALUE-001",
+    "global-ai-hardware-profit-pools-2026-09",
+    "RO-THEME-AI-HARDWARE-001",
   ]) {
     assert.match(researchCatalogSource, new RegExp(term));
   }
@@ -123,21 +132,150 @@ test("publishes canonical versioned Deep Dive research objects", () => {
   assert.match(deepDivePageSource, /citation:/);
   assert.match(deepDivePageSource, /dateModified: modifiedAt/);
   assert.match(researchTypesSource, /ClaimType = "Fact" \| "Derived" \| "Inference" \| "Hypothesis"/);
+  assert.match(researchTypesSource, /narrativeSections\?/);
+  assert.match(researchTypesSource, /metrics\?: ValuationMetric\[\]/);
+  assert.match(deepDiveArticleSource, /FULL ANALYSIS \/ POINT-IN-TIME RECORD/);
   assert.match(researchValidatorSource, /locale claim parity failed/);
   assert.doesNotMatch(researchCatalogSource, /成交价|建仓纪律|回调至 \$|介入时点|目标价位/);
+  assert.doesNotMatch(researchCatalogSource, /中际旭创.{0,12}跌停|Micron.{0,30}6\.2|155\.03|再涨十倍|十倍股所需/);
   assert.doesNotMatch(researchCatalogSource, /DESK_DEEP_DIVE|HYP010|deepdive\.md|外发闸门|approved/i);
 });
 
-test("renders the Authority Ledger from a generated data projection with visible methodology", () => {
-  for (const term of [
-    '"as_of": "\\d{4}-\\d{2}-\\d{2}"',
-    '"settled": 46',
-    '"hit_rate": 0.4516',
-    '"win_loss_ratio_hm_only": 1.56',
-    '"evidence_link_rate": 1',
-  ]) {
-    assert.match(authorityDataSource, new RegExp(term));
+test("serves the AI hardware theme study from reviewed editorial HTML on explicit static routes", () => {
+  for (const source of [editorialRouteSource, englishEditorialRouteSource]) {
+    assert.match(source, /export const dynamic = "force-static"/);
+    assert.match(source, /readEditorialDeepDive\("global-ai-hardware-profit-pools-2026-09"/);
+    assert.match(source, /editorialDeepDiveResponse/);
   }
+  assert.match(editorialRouteSource, /"global-ai-hardware-profit-pools-2026-09", "zh"/);
+  assert.match(englishEditorialRouteSource, /"global-ai-hardware-profit-pools-2026-09", "en"/);
+  assert.match(editorialLoaderSource, /"Content-Type": "text\/html; charset=utf-8"/);
+  assert.match(editorialLoaderSource, /editorialDeepDiveSlugs = \["global-ai-hardware-profit-pools-2026-09"\]/);
+  for (const source of [deepDivePageSource, englishDeepDivePageSource]) {
+    assert.match(source, /filter\(\(\{ slug \}\) => !isEditorialDeepDive\(slug\)\)/);
+  }
+  for (const html of [editorialHtmlCn, editorialHtmlEn]) {
+    assert.match(html, /^<!doctype html>/);
+    assert.match(html, /<meta charset="utf-8">/);
+    assert.match(html, /hreflang="zh-CN" href="https:\/\/lunartuliplab\.com\/deep-dive\/global-ai-hardware-profit-pools-2026-09"/);
+    assert.match(html, /hreflang="en" href="https:\/\/lunartuliplab\.com\/en\/deep-dive\/global-ai-hardware-profit-pools-2026-09"/);
+    assert.match(html, /hreflang="x-default"/);
+    assert.match(html, /<meta property="og:type" content="article">/);
+    assert.match(html, /"@type": "Article"/);
+    assert.match(html, /"identifier": "RO-THEME-AI-HARDWARE-001"/);
+    assert.match(html, /"version": "1\.0\.0"/);
+    assert.match(html, /Lunartulip Lab/);
+    // Reviewed visual structure carried over verbatim.
+    for (const marker of ["class=\"shell mast\"", "class=\"mast-nav\"", "class=\"hero-art\"", "class=\"orbit-label ol-1\"", "class=\"decision-wrap\"", "class=\"shell tension\"", "class=\"method-note\""]) {
+      assert.ok(html.includes(marker), `editorial HTML lost ${marker}`);
+    }
+  }
+  assert.match(editorialHtmlCn, /<html lang="zh-CN">/);
+  assert.match(editorialHtmlCn, /rel="canonical" href="https:\/\/lunartuliplab\.com\/deep-dive\/global-ai-hardware-profit-pools-2026-09"/);
+  assert.match(editorialHtmlCn, /主线在换手？/);
+  assert.match(editorialHtmlEn, /<html lang="en">/);
+  assert.match(editorialHtmlEn, /rel="canonical" href="https:\/\/lunartuliplab\.com\/en\/deep-dive\/global-ai-hardware-profit-pools-2026-09"/);
+  assert.match(editorialHtmlEn, /Is the baton really changing hands\?/);
+  // Language siblings and the Deep Dive index stay reachable from the mast.
+  assert.match(editorialHtmlCn, /href="\/deep-dive">Deep Dive Index/);
+  assert.match(editorialHtmlCn, /href="\/en\/deep-dive\/global-ai-hardware-profit-pools-2026-09"/);
+  assert.match(editorialHtmlEn, /href="\/en\/deep-dive">Deep Dive Index/);
+  assert.match(editorialHtmlEn, /href="\/deep-dive\/global-ai-hardware-profit-pools-2026-09"/);
+});
+
+test("keeps the AI hardware study inside its audited factual boundaries", () => {
+  // Seeking Alpha is a dated third-party consensus snapshot, never company guidance.
+  assert.match(editorialHtmlCn, /https:\/\/seekingalpha\.com\/symbol\/MU\/earnings\/revisions/);
+  assert.match(editorialHtmlEn, /https:\/\/seekingalpha\.com\/symbol\/MU\/earnings\/revisions/);
+  assert.match(editorialHtmlCn, /第三方一致预期快照/);
+  assert.match(editorialHtmlCn, /抓取日期 2026-09-01/);
+  assert.match(editorialHtmlCn, /不是公司指引/);
+  assert.match(editorialHtmlEn, /third-party consensus snapshot/);
+  assert.match(editorialHtmlEn, /captured (from Seeking Alpha )?on 2026-09-01/);
+  assert.match(editorialHtmlEn, /not company guidance/);
+  assert.match(researchCatalogSource, /EV-HWX-CONSENSUS/);
+  assert.match(researchCatalogSource, /vendor-aggregated sell-side consensus/);
+  // Spot quotes are quotes, not demand confirmation.
+  assert.match(editorialHtmlCn, /这些都是报价序列/);
+  assert.match(editorialHtmlEn, /these are quoted-price series/);
+  // NVIDIA: forward commitments, principally memory, not paid procurement.
+  assert.match(editorialHtmlCn, /未来供应与产能承诺（supply and capacity commitments）/);
+  assert.match(editorialHtmlCn, /不是已付款采购/);
+  assert.match(editorialHtmlEn, /supply and capacity commitments/);
+  assert.match(editorialHtmlEn, /not paid-for procurement/);
+  // Corrected market and growth readings.
+  assert.match(editorialHtmlCn, /中报后首日下跌 7\.72%/);
+  assert.match(editorialHtmlEn, /fell 7\.72% on the first session/);
+  assert.match(editorialHtmlCn, /同比 \+86\.4%/);
+  assert.match(editorialHtmlEn, /\+86\.4% YoY|86\.4% year over year/);
+  // CXMT stays an unconfirmed press report with no derived price impact.
+  assert.match(editorialHtmlCn, /未获公司确认，本文不据此推导任何价格或份额影响/);
+  assert.match(editorialHtmlEn, /not company-confirmed, and we draw no pricing, share or supply-demand inference/);
+  // The ten-times case is an author scenario, dated, with stated multiples.
+  assert.match(editorialHtmlCn, /作者设定的情景反向检验，不是预测/);
+  assert.match(editorialHtmlEn, /author-defined scenario back-test/);
+  assert.match(editorialHtmlCn, /2026-09-01 收盘快照/);
+  assert.match(editorialHtmlEn, /2026-09-01 close snapshot/);
+  // The odds table is labelled research judgment.
+  assert.match(editorialHtmlCn, /研究判断表（非事实陈述）/);
+  assert.match(editorialHtmlEn, /Research judgment table \(not factual assertion\)/);
+  // Forbidden across both editorial pages: trading instruction, entry discipline, price targets.
+  for (const html of [editorialHtmlCn, editorialHtmlEn]) {
+    assert.doesNotMatch(html, /跌停|目标价|建仓|加仓|减仓|止损|买入时点|卖出时点/);
+    assert.doesNotMatch(html, /price target|target price|entry point|stop loss|buy rating|sell rating/i);
+    assert.doesNotMatch(html, /LunarTulip Research<|再涨十倍/);
+  }
+});
+
+test("indexes the AI hardware theme study through the companion research object", () => {
+  for (const id of [
+    "RO-THEME-AI-HARDWARE-001",
+    "CL-HWX-001",
+    "CL-HWX-025",
+    "EV-HWX-TRENDFORCE",
+    "EV-HWX-MOTIE",
+    "EV-HWX-NVDA",
+    "EV-HWX-HUMANOID-GAP",
+    "VAL-HWX-MODULE-CN",
+    "FAL-HWX-001",
+    "FAL-HWX-006",
+  ]) {
+    assert.match(researchCatalogSource, new RegExp(id));
+  }
+  const catalog = JSON.parse(researchCatalogSource);
+  const study = catalog.find((item) => item.id === "RO-THEME-AI-HARDWARE-001");
+  assert.ok(study, "companion research object missing from the catalog");
+  assert.equal(study.slug, "global-ai-hardware-profit-pools-2026-09");
+  assert.equal(study.kind, "theme-study");
+  assert.equal(study.publishedAt, "2026-09-02");
+  assert.equal(study.asOf, "2026-09-01");
+  assert.equal(study.version, "1.0.0");
+  assert.ok(study.claims.length >= 20);
+  assert.ok(study.evidence.length >= 15);
+  assert.ok(study.financialBridge.some((row) => row.displayValue?.["zh-CN"] && row.displayValue?.en));
+  assert.ok(study.valuationScenarios.every((scenario) => scenario.metrics?.length >= 2));
+  assert.ok(study.falsifiers.length >= 2);
+  assert.ok(study.falsifiers.every((test) => test.claimIds.length > 0 && Number.isFinite(test.threshold)));
+  assert.ok(study.dataGaps.length >= 4);
+  // The companion object indexes the study; it is not the source of the page body.
+  assert.equal(study.renderings["zh-CN"].narrativeSections, undefined);
+  assert.equal(study.renderings.en.narrativeSections, undefined);
+  assert.match(study.sourceLabel, /Global AI hardware profit-pool cross-section/);
+  // Unstable or unconfirmed inputs stay out of the fact layer.
+  const factText = study.claims.filter((claim) => claim.type === "Fact").map((claim) => JSON.stringify(claim.text)).join("\n");
+  assert.doesNotMatch(factText, /Seeking Alpha|CXMT|52-week|52 周|市值/);
+  const gaps = JSON.stringify(study.dataGaps);
+  assert.match(gaps, /Seeking Alpha/);
+  assert.match(gaps, /CXMT/);
+});
+
+test("renders the Authority Ledger from a generated data projection with visible methodology", () => {
+  assert.match(authorityData.as_of, /^\d{4}-\d{2}-\d{2}$/);
+  assert.match(authorityData.generated_at, /^\d{4}-\d{2}-\d{2}$/);
+  assert.ok(authorityData.cohorts.backfill.settled > 0);
+  assert.ok(authorityData.cohorts.backfill.universe_ew.hit_rate >= 0 && authorityData.cohorts.backfill.universe_ew.hit_rate <= 1);
+  assert.ok(authorityData.cohorts.backfill.csi500.win_loss_ratio_hm_only > 0);
+  assert.equal(authorityData.evidence_link_rate, 1);
   assert.match(authorityPageSource, /"@type": "Dataset"/);
   assert.match(englishAuthoritySource, /"@type": "Dataset"/);
   assert.match(authorityViewSource, /当前已裁决样本来自历史重构区间/);

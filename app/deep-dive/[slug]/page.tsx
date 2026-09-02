@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { isEditorialDeepDive } from "@/lib/editorial-deep-dives";
 import { getResearchObject, researchObjects } from "@/lib/research-objects";
 import DeepDiveArticle from "../deep-dive-article";
 
@@ -8,7 +9,8 @@ type Props = { params: Promise<{ slug: string }> };
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return researchObjects.map(({ slug }) => ({ slug }));
+  // Editorial Deep Dives are served by an explicit static HTML route at the same path.
+  return researchObjects.filter(({ slug }) => !isEditorialDeepDive(slug)).map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

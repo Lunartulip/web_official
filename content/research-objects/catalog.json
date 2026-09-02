@@ -1082,5 +1082,1024 @@
         "en": "DDOG and APP are controls for the transmission mechanism, not business-model or valuation comparables. APP's advertising model prices very differently from enterprise software."
       }
     ]
+  },
+  {
+    "id": "RO-THEME-AI-HARDWARE-001",
+    "slug": "global-ai-hardware-profit-pools-2026-09",
+    "kind": "theme-study",
+    "tickers": ["000660.KS", "MU", "005930.KS", "285A.T", "SNDK", "001309.SZ", "301308.SZ", "300308.SZ", "300502.SZ", "300394.SZ", "LITE", "COHR", "AAOI"],
+    "publishedAt": "2026-09-02",
+    "asOf": "2026-09-01",
+    "version": "1.0.0",
+    "sourceLabel": "全球 AI 硬件利润池横截面研究（存储 · 光模块 · 人形机器人）· 2026-09-02 版｜Global AI hardware profit-pool cross-section (memory · optics · humanoid robotics) · 2026-09-02 edition",
+    "claims": [
+      {
+        "id": "CL-HWX-001",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "2026-09-01 TrendForce 的 DDR5 16Gb 现货均价为 54.083 美元，当日上涨 0.31%；2026-08-24 更新的 DDR5 32GB RDIMM 模组均价周涨 4.06%；2026-08-17 当周中国市场 DDR5 16Gb 与 24Gb 报价周涨 14.29%。以上均为报价序列，同期成交量与需求确认仍然偏弱。",
+          "en": "On 2026-09-01 the TrendForce DDR5 16Gb spot average was $54.083, up 0.31% on the day; the DDR5 32GB RDIMM module average updated 2026-08-24 rose 4.06% week on week; and in the week of 2026-08-17 China-market DDR5 16Gb and 24Gb quotes rose 14.29% week on week. All of these are quoted-price series, and transaction volume and demand confirmation over the same period remained weak."
+        },
+        "evidenceIds": ["EV-HWX-TRENDFORCE"]
+      },
+      {
+        "id": "CL-HWX-002",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "韩国产业通商资源部披露的 DDR5 16Gb 月度固定价从 2026 年 4 月的 35.0 美元升至 8 月的 46.5 美元，其中 7 月环比 +12.5%、8 月环比 +3.3%；NAND 128Gb 固定价月涨幅从 5 月的 9.5% 降至 8 月的 1.3%。同一份数据显示韩国 2026 年 8 月半导体出口 466.5 亿美元，同比增长 209%。",
+          "en": "Korea's Ministry of Trade, Industry and Energy reports the DDR5 16Gb monthly fixed price rising from $35.0 in April 2026 to $46.5 in August, with month-on-month increases of 12.5% in July and 3.3% in August. The monthly increase in NAND 128Gb fixed prices fell from 9.5% in May to 1.3% in August. The same release shows Korean semiconductor exports of $46.65 billion in August 2026, up 209% year over year."
+        },
+        "evidenceIds": ["EV-HWX-MOTIE"]
+      },
+      {
+        "id": "CL-HWX-003",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "现货报价与月度固定价方向相同、加速度相反：现货二阶导向上，合约价二阶导向下（7 月 +12.5% → 8 月 +3.3%）。把两条线合并成单一“存储涨价”指标，会同时高估模组利润的持续时间并低估上游原厂的定价能力。",
+          "en": "Spot quotes and monthly fixed prices move in the same direction with opposite acceleration: the second derivative of spot is rising while the second derivative of contract prices is falling (+12.5% in July to +3.3% in August). Collapsing the two into a single 'memory prices are up' indicator overstates the duration of module profit and understates upstream pricing power at the same time."
+        },
+        "evidenceIds": ["EV-HWX-TRENDFORCE", "EV-HWX-MOTIE"]
+      },
+      {
+        "id": "CL-HWX-004",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "NVIDIA FY27Q2 收入 962 亿美元，其中数据中心收入 890 亿美元；公司披露的未来供应与产能承诺（supply and capacity commitments）从上一季的 1190 亿美元提高到 2790 亿美元，并说明主要涉及存储采购。该金额是未来承诺义务，不是已付款采购，条款上部分可调整或可延期，也不等于任一供应商的确定性收入。",
+          "en": "NVIDIA reported FY27Q2 revenue of $96.2 billion, including $89.0 billion of data-centre revenue, and disclosed future supply and capacity commitments rising from $119.0 billion in the prior quarter to $279.0 billion, noting they relate principally to memory procurement. The figure is a forward commitment obligation rather than paid procurement, parts of it are adjustable or deferrable under their terms, and it does not equate to contracted revenue for any single supplier."
+        },
+        "evidenceIds": ["EV-HWX-NVDA"]
+      },
+      {
+        "id": "CL-HWX-005",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "SK 海力士 2026 年第二季度收入 79.3 万亿韩元，环比增长 51%；营业利润 60.5 万亿韩元，营业利润率 76%，营业利润同比增长 557%。当季 93.9 万亿韩元净利润中约 63.3 万亿来自投资资产收益。公司同时披露 HBM4 已量产出货、321 层 NAND 年底计划升至韩国本土产能约一半、净现金 69.4 万亿韩元。",
+          "en": "SK hynix reported Q2 2026 revenue of KRW 79.3 trillion, up 51% sequentially, with operating profit of KRW 60.5 trillion at a 76% margin and operating profit up 557% year over year. Roughly KRW 63.3 trillion of the KRW 93.9 trillion in net income came from gains on investment assets. The company also disclosed volume shipments of HBM4, a plan to lift 321-layer NAND to about half of Korean domestic capacity by year-end, and net cash of KRW 69.4 trillion."
+        },
+        "evidenceIds": ["EV-HWX-SKHYNIX", "EV-HWX-REUTERS-SKH"]
+      },
+      {
+        "id": "CL-HWX-006",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "美光 FY2026 第三财季收入 414.6 亿美元，环比增长 73.7%；GAAP 营业利润 333.2 亿美元，营业利润率 80.4%；经营现金流 253.9 亿美元。Cloud Memory 与 Core Data Center 两个业务单元当季营业利润率分别为 78% 和 83%；公司 FQ4 指引为收入 500 亿美元、毛利率约 86%。",
+          "en": "Micron reported fiscal 2026 third-quarter revenue of $41.46 billion, up 73.7% sequentially, with GAAP operating profit of $33.32 billion at an 80.4% margin and operating cash flow of $25.39 billion. The Cloud Memory and Core Data Center units posted quarterly operating margins of 78% and 83%, and FQ4 guidance calls for $50.0 billion of revenue at roughly 86% gross margin."
+        },
+        "evidenceIds": ["EV-HWX-MU"]
+      },
+      {
+        "id": "CL-HWX-007",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "三星电子 2026 年第二季度总收入 171.5 万亿韩元；半导体（DS）部门收入 127.5 万亿韩元、营业利润 89.2 万亿韩元。集团口径包含手机、显示与代工等非存储业务。",
+          "en": "Samsung Electronics reported Q2 2026 group revenue of KRW 171.5 trillion, with the Device Solutions segment contributing KRW 127.5 trillion of revenue and KRW 89.2 trillion of operating profit. The group basis includes handsets, displays and foundry alongside memory."
+        },
+        "evidenceIds": ["EV-HWX-SAMSUNG"]
+      },
+      {
+        "id": "CL-HWX-008",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "Kioxia FY2026 第一财季收入 1.767 万亿日元，环比增长 76.2%；非 GAAP 营业利润 1.326 万亿日元，非 GAAP 营业利润率 75%。非 GAAP 口径由公司定义，与 GAAP 结果不同。",
+          "en": "Kioxia reported fiscal 2026 first-quarter revenue of JPY 1.767 trillion, up 76.2% sequentially, with non-GAAP operating profit of JPY 1.326 trillion at a 75% non-GAAP operating margin. The non-GAAP basis is company-defined and differs from the GAAP result."
+        },
+        "evidenceIds": ["EV-HWX-KIOXIA"]
+      },
+      {
+        "id": "CL-HWX-009",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "SanDisk FY2026 第四财季收入 89.7 亿美元，环比增长 51%，其中约三分之二来自价格；数据中心收入环比增长 103%；GAAP 营业利润 70.4 亿美元。",
+          "en": "SanDisk reported fiscal 2026 fourth-quarter revenue of $8.97 billion, up 51% sequentially with roughly two-thirds of the increase from price, data-centre revenue up 103% sequentially, and GAAP operating profit of $7.04 billion."
+        },
+        "evidenceIds": ["EV-HWX-SNDK"]
+      },
+      {
+        "id": "CL-HWX-010",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "德明利 2026 年上半年收入 169.1 亿元，同比增长 311.6%；归母净利润 60.2 亿元，综合毛利率 47.1%；同期经营活动现金流 -67.4 亿元，存货 214.1 亿元，占总资产 65.0%。",
+          "en": "Demingli reported first-half 2026 revenue of RMB 16.91 billion, up 311.6% year over year, with attributable net profit of RMB 6.02 billion at a 47.1% blended gross margin. Operating cash flow was RMB -6.74 billion and inventory stood at RMB 21.41 billion, or 65.0% of total assets."
+        },
+        "evidenceIds": ["EV-HWX-DEMINGLI"]
+      },
+      {
+        "id": "CL-HWX-011",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "江波龙 2026 年上半年收入 240.9 亿元，同比增长 136.3%；归母净利润 105.8 亿元；同期经营活动现金流 -31.5 亿元，存货 257.8 亿元，占总资产 60.1%。",
+          "en": "Longsys reported first-half 2026 revenue of RMB 24.09 billion, up 136.3% year over year, with attributable net profit of RMB 10.58 billion. Operating cash flow was RMB -3.15 billion and inventory stood at RMB 25.78 billion, or 60.1% of total assets."
+        },
+        "evidenceIds": ["EV-HWX-LONGSYS"]
+      },
+      {
+        "id": "CL-HWX-012",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "中际旭创 2026 年上半年收入 417.8 亿元，同比增长 182.5%；归母净利润 136.5 亿元，同比增长 241.7%；上半年经营活动现金流与归母净利润之比为 0.13。",
+          "en": "Innolight reported first-half 2026 revenue of RMB 41.78 billion, up 182.5% year over year, and attributable net profit of RMB 13.65 billion, up 241.7%. First-half operating cash flow equalled 0.13 times attributable net profit."
+        },
+        "evidenceIds": ["EV-HWX-INNOLIGHT"]
+      },
+      {
+        "id": "CL-HWX-013",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "新易盛 2026 年上半年收入 209.1 亿元，同比增长 100.3%；归母净利润 75.3 亿元，同比增长 91.0%；上半年经营活动现金流与归母净利润之比为 0.21。",
+          "en": "Eoptolink reported first-half 2026 revenue of RMB 20.91 billion, up 100.3% year over year, and attributable net profit of RMB 7.53 billion, up 91.0%. First-half operating cash flow equalled 0.21 times attributable net profit."
+        },
+        "evidenceIds": ["EV-HWX-EOPTOLINK"]
+      },
+      {
+        "id": "CL-HWX-014",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "天孚通信 2026 年上半年收入 28.3 亿元，同比增长 15.2%；归母净利润 12.0 亿元，同比增长 33.9%；上半年经营活动现金流与归母净利润之比为 0.83。",
+          "en": "T&S Communications reported first-half 2026 revenue of RMB 2.83 billion, up 15.2% year over year, and attributable net profit of RMB 1.20 billion, up 33.9%. First-half operating cash flow equalled 0.83 times attributable net profit."
+        },
+        "evidenceIds": ["EV-HWX-TFC"]
+      },
+      {
+        "id": "CL-HWX-015",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "Lumentum FY2026 第四财季收入 10.06 亿美元，同比增长 109.3%；非 GAAP 营业利润率 36.6%，下一季非 GAAP 营业利润率指引 39.5%—40.5%，下一季收入指引中值约 12.5 亿美元。公司 GAAP 净利润受一次性、非现金债务清偿损失影响，因此经营比较采用其披露的非 GAAP 口径。",
+          "en": "Lumentum reported fiscal 2026 fourth-quarter revenue of $1.006 billion, up 109.3% year over year, with a 36.6% non-GAAP operating margin, next-quarter non-GAAP operating margin guidance of 39.5%–40.5% and a next-quarter revenue guidance midpoint near $1.25 billion. GAAP net income is affected by a one-time, non-cash loss on debt extinguishment, so operating comparisons use the company's disclosed non-GAAP basis."
+        },
+        "evidenceIds": ["EV-HWX-LUMENTUM"]
+      },
+      {
+        "id": "CL-HWX-016",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "Coherent FY2026 第四财季收入 20.46 亿美元，同比增长 33.8%，数据中心与通信业务同比增长 58.6%；非 GAAP 营业利润率 21.8%。全财年经营活动现金流 7,950 万美元，资本开支 11.03 亿美元，存货从 14.38 亿美元升至 25.81 亿美元；下一季收入指引中值约 23 亿美元。",
+          "en": "Coherent reported fiscal 2026 fourth-quarter revenue of $2.046 billion, up 33.8% year over year, with datacom and communications up 58.6% and a 21.8% non-GAAP operating margin. Full-year operating cash flow was $79.5 million against capex of $1.103 billion, inventory rose from $1.438 billion to $2.581 billion, and the next-quarter revenue guidance midpoint is near $2.3 billion."
+        },
+        "evidenceIds": ["EV-HWX-COHERENT"]
+      },
+      {
+        "id": "CL-HWX-017",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "AAOI 2026 年第二季度收入 1.92 亿美元，同比增长约 86.4%；第三季度收入指引中值约 2.73 亿美元。当季非 GAAP 转为盈利 550 万美元，GAAP 口径仍为亏损。",
+          "en": "AAOI reported second-quarter 2026 revenue of $192 million, up roughly 86.4% year over year, and guided to a third-quarter revenue midpoint near $273 million. The quarter produced $5.5 million of non-GAAP profit while remaining loss-making on a GAAP basis."
+        },
+        "evidenceIds": ["EV-HWX-AAOI"]
+      },
+      {
+        "id": "CL-HWX-018",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "按各自指引中值计算，Lumentum、Coherent 与 AAOI 下一财季收入分别对应约 24%、12% 和 42% 的环比增长（12.5/10.06、23/20.46、2.73/1.92）。三家同时给出环比增长指引，说明光模块的需求斜率在 2026-09-01 时点尚未转向。",
+          "en": "On their own guidance midpoints, Lumentum, Coherent and AAOI imply roughly 24%, 12% and 42% sequential revenue growth for the coming fiscal quarter (12.5/10.06, 23/20.46, 2.73/1.92). All three guiding to sequential growth indicates the optics demand slope had not turned as of 2026-09-01."
+        },
+        "evidenceIds": ["EV-HWX-LUMENTUM", "EV-HWX-COHERENT", "EV-HWX-AAOI"]
+      },
+      {
+        "id": "CL-HWX-019",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "本对象使用的“峰值盈利年化倍数”为市值除以最近季度（或半年）利润的简单年化，属于 2026-09-01 收盘时点的快照筛查，不是 forward PE，也不是价格结论。美国公司的年化倍数分母是非 GAAP 净利润，与并列的非 GAAP 营业利润率是两条不同口径，不可互换；中国公司使用归母净利润。市值与 52 周回撤未与完全稀释股数逐一核对，因此不进入事实层。",
+          "en": "The peak-earnings annualised multiples used in this object divide market capitalisation by a simple annualisation of the latest quarterly (or half-year) profit. They are point-in-time screens at the 2026-09-01 close, not forward P/E and not price conclusions. For the U.S. names the denominator is non-GAAP net income, which is a different basis from the non-GAAP operating margin quoted alongside it and cannot be substituted for it; the Chinese names use attributable net profit. Market capitalisations and 52-week drawdowns were not reconciled to fully diluted share counts and therefore stay out of the fact layer."
+        },
+        "evidenceIds": ["EV-HWX-MARKET", "EV-HWX-MU", "EV-HWX-KIOXIA", "EV-HWX-SNDK"]
+      },
+      {
+        "id": "CL-HWX-020",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "全球存储链可以拆成三层性质不同的利润：约束所有者（SK 海力士、美光、三星，拥有 HBM、服务器 DRAM 与企业级 NAND 的产能、工艺与客户认证）、NAND 周期弹性（Kioxia、SanDisk，直接暴露于 NAND 价格与数据中心 SSD）、库存价差（德明利、江波龙，利润大量来自低成本库存与成品售价之间的价差）。三层可以同时受益，证伪条件完全不同。",
+          "en": "The global memory chain separates into three profit layers of different character: constraint owners (SK hynix, Micron, Samsung, holding the capacity, process and customer qualification behind HBM, server DRAM and enterprise NAND); NAND cycle elasticity (Kioxia and SanDisk, directly exposed to NAND pricing and data-centre SSD); and inventory spread (Demingli and Longsys, where much of the profit sits between low-cost inventory and realised selling prices). All three can benefit at once, and their falsification conditions are entirely different."
+        },
+        "evidenceIds": ["EV-HWX-SKHYNIX", "EV-HWX-MU", "EV-HWX-SAMSUNG", "EV-HWX-KIOXIA", "EV-HWX-SNDK", "EV-HWX-DEMINGLI", "EV-HWX-LONGSYS"]
+      },
+      {
+        "id": "CL-HWX-021",
+        "type": "Hypothesis",
+        "text": {
+          "zh-CN": "同一轮 AI 资本开支内部，结构性利润会优先并持续留在约束所有者手里，因为供给紧张最先进入它们的 ASP、毛利与现金流。9—11 月的核心变量因此是利润能否继续留在资产负债表更干净、客户锁定更强的公司。各公司未按统一口径披露 HBM 或企业级产品的分部利润，这一条只能用营业利润率、现金转化与合约价加速度间接检验。",
+          "en": "Within one AI capex cycle, structural profit should accrue first and persist with the constraint owners, because tight supply reaches their ASPs, gross margin and cash flow before anyone else's. The core variable from September to November is therefore whether profit keeps landing with the companies carrying cleaner balance sheets and tighter customer lock-in. None of these companies discloses segment profit for HBM or enterprise product on a common basis, so the proposition can only be tested indirectly through operating margin, cash conversion and the acceleration of contract prices."
+        },
+        "evidenceIds": ["EV-HWX-SKHYNIX", "EV-HWX-MU", "EV-HWX-MOTIE", "EV-HWX-NVDA"]
+      },
+      {
+        "id": "CL-HWX-022",
+        "type": "Inference",
+        "text": {
+          "zh-CN": "德明利与江波龙 7—8 倍的静态年化倍数，分母含有低成本库存、急涨 ASP 与较低减值计提共同形成的峰值利润。若 Q3 毛利率继续下滑、经营现金流继续净流出、存货占资产与周转继续恶化，表面低 PE 只是周期分母过高，而不是估值折价。",
+          "en": "The 7–8x static annualised multiples at Demingli and Longsys rest on a denominator containing peak profit formed jointly by low-cost inventory, sharply rising ASPs and light impairment. If Q3 gross margin keeps falling, operating cash flow keeps running negative and inventory-to-assets and turnover keep deteriorating, the apparent low P/E is an inflated cyclical denominator rather than a valuation discount."
+        },
+        "evidenceIds": ["EV-HWX-DEMINGLI", "EV-HWX-LONGSYS", "EV-HWX-MOTIE"]
+      },
+      {
+        "id": "CL-HWX-023",
+        "type": "Inference",
+        "text": {
+          "zh-CN": "光模块的估值分水岭已经从增长转向现金转化。中际旭创与新易盛上半年 CFO ÷ 归母净利润只有 0.13 与 0.21，天孚通信为 0.83；Coherent 全年经营现金流 7,950 万美元对应 11.03 亿美元资本开支。在 30—100 倍以上的 run-rate 要求下，现金回收延迟会迅速放大估值波动。",
+          "en": "The valuation dividing line in optics has moved from growth to cash conversion. First-half operating cash flow covered only 0.13 and 0.21 of attributable net profit at Innolight and Eoptolink against 0.83 at T&S Communications, and Coherent generated $79.5 million of full-year operating cash flow against $1.103 billion of capex. Against run-rate multiples of 30x to 100x and above, delayed cash recovery amplifies valuation volatility quickly."
+        },
+        "evidenceIds": ["EV-HWX-INNOLIGHT", "EV-HWX-EOPTOLINK", "EV-HWX-TFC", "EV-HWX-COHERENT"]
+      },
+      {
+        "id": "CL-HWX-024",
+        "type": "Inference",
+        "text": {
+          "zh-CN": "人形机器人在全球公共市场缺少可与 HBM、1.6T 光模块并列的盈利载体：领先整机公司多数未上市或被大型集团包裹，上市零部件公司很少单列人形机器人收入。在公告级订单、单列收入与毛利率同时出现之前，它只能作为长期技术期权，不能进入同口径的利润池比较。",
+          "en": "Humanoid robotics lacks a profit vehicle in global public markets comparable to HBM or 1.6T optics: most leading whole-machine developers are private or held inside large groups, and listed component suppliers rarely disclose humanoid revenue as a separate line. Until announcement-grade orders, separately disclosed revenue and gross margin appear together, it remains a long-dated technology option rather than a member of a like-for-like profit-pool comparison."
+        },
+        "evidenceIds": ["EV-HWX-HUMANOID-GAP"]
+      },
+      {
+        "id": "CL-HWX-025",
+        "type": "Inference",
+        "text": {
+          "zh-CN": "反方情景是超额利润率被供给侧正常化拉低：长期协议提高需求可见度的同时限制现货上涨对原厂 ASP 的额外弹性，2027 年新增产能进一步压缩价差。此外有媒体报道称中国厂商 CXMT 已开始小批量生产 HBM3E，该报道未获公司确认，本对象不据此推导任何价格或份额影响，仅记为待验证的供给侧风险。",
+          "en": "The bear case is supply-side normalisation compressing excess margin: long-term agreements raise demand visibility while capping the incremental ASP elasticity manufacturers capture from rising spot, and 2027 capacity additions narrow the spread further. Separately, press reporting states that Chinese manufacturer CXMT has begun small-volume production of HBM3E. That report is not company-confirmed, no pricing or share effect is inferred from it here, and it is recorded only as an unverified supply-side risk."
+        },
+        "evidenceIds": ["EV-HWX-SKHYNIX", "EV-HWX-SAMSUNG", "EV-HWX-MOTIE"]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "EV-HWX-TRENDFORCE",
+        "title": "TrendForce DRAM spot and module quotes",
+        "source": {
+          "publisher": "TrendForce",
+          "url": "https://www.trendforce.com/price/dram/dram_spot",
+          "document": "DRAM spot price board and 2026-08-17 channel price update"
+        },
+        "sourceDate": "2026-09-01",
+        "dataAsOf": "2026-09-01",
+        "calculation": null,
+        "confidence": "medium",
+        "counterevidence": "These are quoted prices rather than confirmed transactions. Volume and demand confirmation stayed weak through this leg, so rising quotes cannot be read as verified demand.",
+        "lastVerified": "2026-09-02",
+        "role": "primary"
+      },
+      {
+        "id": "EV-HWX-MOTIE",
+        "title": "Korea August 2026 export release with DRAM and NAND fixed prices",
+        "source": {
+          "publisher": "Ministry of Trade, Industry and Energy, Republic of Korea",
+          "url": "https://www.motir.go.kr/kor/article/ATCL3f49a5a8c/172145/view",
+          "document": "2026 年 8 월 수출입 동향 / August 2026 trade release"
+        },
+        "sourceDate": "2026-09-01",
+        "dataAsOf": "2026-08-31",
+        "calculation": "Fixed-price deceleration: July +12.5% MoM, August +3.3% MoM on DDR5 16Gb; NAND 128Gb +9.5% MoM in May to +1.3% MoM in August.",
+        "confidence": "high",
+        "counterevidence": "Aggregate export value mixes logic, memory and packaging, and monthly fixed prices are a reference series rather than every manufacturer's realised ASP.",
+        "lastVerified": "2026-09-02",
+        "role": "primary"
+      },
+      {
+        "id": "EV-HWX-NVDA",
+        "title": "NVIDIA FY2027 Q2 CFO commentary",
+        "source": {
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27cfocommentary.htm",
+          "document": "FY27Q2 CFO Commentary"
+        },
+        "sourceDate": "2026-08-26",
+        "dataAsOf": "2026-07-26",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "Supply and capacity commitments are forward obligations that are partly adjustable or deferrable. They are neither paid procurement nor a locked demand schedule for any individual memory supplier.",
+        "lastVerified": "2026-09-02",
+        "role": "primary"
+      },
+      {
+        "id": "EV-HWX-SKHYNIX",
+        "title": "SK hynix Q2 2026 business results",
+        "source": {
+          "publisher": "SK hynix Investor Relations",
+          "url": "https://news.skhynix.com/en/q2-2026-business-results/",
+          "document": "Q2 2026 business results"
+        },
+        "sourceDate": "2026-07-28",
+        "dataAsOf": "2026-06-30",
+        "calculation": "Operating margin = KRW 60.5tn / KRW 79.3tn = 76.3%",
+        "confidence": "high",
+        "counterevidence": "Net income includes roughly KRW 63.3tn of gains on investment assets, so any net-income-based multiple is distorted and only operating profit describes the operating business.",
+        "lastVerified": "2026-09-02",
+        "role": "primary"
+      },
+      {
+        "id": "EV-HWX-MU",
+        "title": "Micron fiscal 2026 third-quarter results",
+        "source": {
+          "publisher": "Micron Technology Investor Relations",
+          "url": "https://www.globenewswire.com/news-release/2026/06/24/3317151/14450/en/micron-technology-inc-reports-record-results-for-the-third-quarter-of-fiscal-2026.html",
+          "document": "FQ3 FY2026 earnings release"
+        },
+        "sourceDate": "2026-06-24",
+        "dataAsOf": "2026-05-28",
+        "calculation": "GAAP operating margin = $33.32bn / $41.46bn = 80.4%",
+        "confidence": "high",
+        "counterevidence": "Margins of this level reflect an unusually tight pricing environment; guidance of roughly 86% gross margin has not yet been tested by a reported quarter.",
+        "lastVerified": "2026-09-02",
+        "role": "primary"
+      },
+      {
+        "id": "EV-HWX-SAMSUNG",
+        "title": "Samsung Electronics Q2 2026 results",
+        "source": {
+          "publisher": "Samsung Electronics Newsroom",
+          "url": "https://news.samsung.com/global/samsung-electronics-announces-second-quarter-2026-results",
+          "document": "Q2 2026 results announcement"
+        },
+        "sourceDate": "2026-07-31",
+        "dataAsOf": "2026-06-30",
+        "calculation": "DS operating margin = KRW 89.2tn / KRW 127.5tn = 70.0%",
+        "confidence": "high",
+        "counterevidence": "Group results blend handsets, displays and foundry with memory, so the consolidated multiple is not comparable with a pure-play memory manufacturer.",
+        "lastVerified": "2026-09-02",
+        "role": "primary"
+      },
+      {
+        "id": "EV-HWX-REUTERS-SKH",
+        "title": "Reuters report on SK hynix Q2 profit and the market reaction",
+        "source": {
+          "publisher": "Reuters",
+          "url": "https://www.reuters.com/world/asia-pacific/sk-hynix-q2-profit-jumps-557-ai-chip-demand-misses-forecasts-2026-07-28/",
+          "document": "SK hynix Q2 profit jumps 557% on AI chip demand, misses forecasts"
+        },
+        "sourceDate": "2026-07-28",
+        "dataAsOf": "2026-06-30",
+        "calculation": null,
+        "confidence": "medium",
+        "counterevidence": "Press reporting of a single-session market reaction is not a first-party disclosure and does not establish a durable change in fundamentals.",
+        "lastVerified": "2026-09-02",
+        "role": "supporting"
+      },
+      {
+        "id": "EV-HWX-KIOXIA",
+        "title": "Kioxia Holdings FY2026 Q1 results presentation",
+        "source": {
+          "publisher": "Kioxia Holdings Investor Relations",
+          "url": "https://www.kioxia-holdings.com/en-jp/ir/library/presentation.html",
+          "document": "FY2026 Q1 results presentation"
+        },
+        "sourceDate": "2026-08-07",
+        "dataAsOf": "2026-06-30",
+        "calculation": "Non-GAAP operating margin = JPY 1.326tn / JPY 1.767tn = 75.0%",
+        "confidence": "medium",
+        "counterevidence": "The operating profit cited is a company-defined non-GAAP measure and is not directly comparable with SanDisk's GAAP operating profit.",
+        "lastVerified": "2026-09-02",
+        "role": "primary"
+      },
+      {
+        "id": "EV-HWX-SNDK",
+        "title": "SanDisk fiscal 2026 fourth-quarter results",
+        "source": {
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/2023554/000162828026053346/sndkq4-26ex991xpressrelease.htm",
+          "document": "Exhibit 99.1, FQ4 FY2026 press release"
+        },
+        "sourceDate": "2026-08-05",
+        "dataAsOf": "2026-07-03",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "About two-thirds of the sequential revenue increase came from price, so the same operating leverage works in reverse on any NAND ASP inflection.",
+        "lastVerified": "2026-09-02",
+        "role": "primary"
+      },
+      {
+        "id": "EV-HWX-DEMINGLI",
+        "title": "德明利 2026 年半年度报告 / Demingli 2026 interim report",
+        "source": {
+          "publisher": "巨潮资讯网 CNINFO（中国证监会指定信息披露平台）",
+          "url": "https://www.cninfo.com.cn/new/fulltextSearch?keyWord=%E5%BE%B7%E6%98%8E%E5%88%A9",
+          "document": "深圳市德明利技术股份有限公司 2026 年半年度报告（001309.SZ）"
+        },
+        "sourceDate": "2026-08-28",
+        "dataAsOf": "2026-06-30",
+        "calculation": "Operating cash flow / attributable net profit = -6.74 / 6.02 = -1.12; inventory share of total assets = 65.0%",
+        "confidence": "high",
+        "counterevidence": "Reported profit embeds inventory revaluation gains; the interim report does not separate spread-driven profit from operating profit on a sustainable product basis.",
+        "lastVerified": "2026-09-02",
+        "role": "primary"
+      },
+      {
+        "id": "EV-HWX-LONGSYS",
+        "title": "江波龙 2026 年半年度报告 / Longsys 2026 interim report",
+        "source": {
+          "publisher": "巨潮资讯网 CNINFO（中国证监会指定信息披露平台）",
+          "url": "https://www.cninfo.com.cn/new/fulltextSearch?keyWord=%E6%B1%9F%E6%B3%A2%E9%BE%99",
+          "document": "深圳市江波龙电子股份有限公司 2026 年半年度报告（301308.SZ）"
+        },
+        "sourceDate": "2026-08-28",
+        "dataAsOf": "2026-06-30",
+        "calculation": "Operating cash flow / attributable net profit = -3.15 / 10.58 = -0.30; inventory share of total assets = 60.1%",
+        "confidence": "high",
+        "counterevidence": "The same inventory-spread caveat applies, and enterprise-grade product revenue is not disclosed separately from consumer inventory gains.",
+        "lastVerified": "2026-09-02",
+        "role": "primary"
+      },
+      {
+        "id": "EV-HWX-INNOLIGHT",
+        "title": "中际旭创 2026 年半年度报告 / Innolight 2026 interim report",
+        "source": {
+          "publisher": "巨潮资讯网 CNINFO（中国证监会指定信息披露平台）",
+          "url": "https://static.cninfo.com.cn/finalpage/2026-08-22/1225491752.PDF",
+          "document": "中际旭创股份有限公司 2026 年半年度报告（300308.SZ）"
+        },
+        "sourceDate": "2026-08-22",
+        "dataAsOf": "2026-06-30",
+        "calculation": "Operating cash flow / attributable net profit = 0.13",
+        "confidence": "high",
+        "counterevidence": "Revenue and profit growth do not settle profit quality while cash conversion stays near 0.13; prepayments, inventory build and customer concentration are not resolved by the interim report.",
+        "lastVerified": "2026-09-02",
+        "role": "primary"
+      },
+      {
+        "id": "EV-HWX-EOPTOLINK",
+        "title": "新易盛 2026 年半年度报告 / Eoptolink 2026 interim report",
+        "source": {
+          "publisher": "巨潮资讯网 CNINFO（中国证监会指定信息披露平台）",
+          "url": "https://www.cninfo.com.cn/new/fulltextSearch?keyWord=%E6%96%B0%E6%98%93%E7%9B%9B",
+          "document": "新易盛股份有限公司 2026 年半年度报告（300502.SZ）"
+        },
+        "sourceDate": "2026-08-28",
+        "dataAsOf": "2026-06-30",
+        "calculation": "Operating cash flow / attributable net profit = 0.21",
+        "confidence": "high",
+        "counterevidence": "Attributable net profit grew more slowly than revenue, and the cash-conversion ratio remains well below the peer high in the same cohort.",
+        "lastVerified": "2026-09-02",
+        "role": "primary"
+      },
+      {
+        "id": "EV-HWX-TFC",
+        "title": "天孚通信 2026 年半年度报告 / T&S Communications 2026 interim report",
+        "source": {
+          "publisher": "巨潮资讯网 CNINFO（中国证监会指定信息披露平台）",
+          "url": "https://www.cninfo.com.cn/new/fulltextSearch?keyWord=%E5%A4%A9%E5%AD%9A%E9%80%9A%E4%BF%A1",
+          "document": "苏州天孚光通信股份有限公司 2026 年半年度报告（300394.SZ）"
+        },
+        "sourceDate": "2026-08-28",
+        "dataAsOf": "2026-06-30",
+        "calculation": "Operating cash flow / attributable net profit = 0.83",
+        "confidence": "high",
+        "counterevidence": "The strongest cash conversion in the cohort comes with the slowest revenue growth, so cash quality alone does not establish an attractive entry basis.",
+        "lastVerified": "2026-09-02",
+        "role": "primary"
+      },
+      {
+        "id": "EV-HWX-LUMENTUM",
+        "title": "Lumentum fiscal 2026 fourth-quarter and full-year results",
+        "source": {
+          "publisher": "Lumentum Investor Relations",
+          "url": "https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-Fourth-Quarter-and-Full-Fiscal-Year-2026-Results/default.aspx",
+          "document": "FQ4 and FY2026 results release"
+        },
+        "sourceDate": "2026-08-11",
+        "dataAsOf": "2026-06-27",
+        "calculation": "Guidance midpoint sequential growth = 12.5 / 10.06 - 1 = 24.3%",
+        "confidence": "high",
+        "counterevidence": "GAAP net income is distorted by a one-time, non-cash loss on debt extinguishment, so GAAP and non-GAAP results diverge sharply and cannot be mixed in one multiple.",
+        "lastVerified": "2026-09-02",
+        "role": "primary"
+      },
+      {
+        "id": "EV-HWX-COHERENT",
+        "title": "Coherent fiscal 2026 fourth-quarter results",
+        "source": {
+          "publisher": "Coherent Corp. Investor Relations",
+          "url": "https://www.coherent.com/content/dam/coherent/site/en/documents/investors/financial-releases/2026/august-12/earnings-release-fy26-q4.pdf",
+          "document": "FY26 Q4 earnings release"
+        },
+        "sourceDate": "2026-08-12",
+        "dataAsOf": "2026-06-30",
+        "calculation": "Guidance midpoint sequential growth = 23 / 20.46 - 1 = 12.4%; full-year operating cash flow $79.5m against $1,103m of capex",
+        "confidence": "high",
+        "counterevidence": "Free cash flow was deeply negative for the year, and the inventory build from $1.438bn to $2.581bn precedes any confirmation of customer acceptance.",
+        "lastVerified": "2026-09-02",
+        "role": "primary"
+      },
+      {
+        "id": "EV-HWX-AAOI",
+        "title": "Applied Optoelectronics second-quarter 2026 results",
+        "source": {
+          "publisher": "Applied Optoelectronics Investor Relations",
+          "url": "https://investors.ao-inc.com/news-releases/news-release-details/applied-optoelectronics-reports-second-quarter-2026-results",
+          "document": "Q2 2026 earnings release"
+        },
+        "sourceDate": "2026-08-06",
+        "dataAsOf": "2026-06-30",
+        "calculation": "Guidance midpoint sequential growth = 2.73 / 1.92 - 1 = 42.2%",
+        "confidence": "high",
+        "counterevidence": "The company remains loss-making on GAAP and the non-GAAP profit base is small, so earnings multiples carry no explanatory value and execution and financing risk stay elevated.",
+        "lastVerified": "2026-09-02",
+        "role": "primary"
+      },
+      {
+        "id": "EV-HWX-MARKET",
+        "title": "Point-in-time market snapshot, 2026-09-01 close",
+        "source": {
+          "publisher": "Google Finance, MarketWatch and exchange closing data",
+          "url": "https://www.google.com/finance/quote/MU%3ANASDAQ",
+          "document": "Screen quotes and market capitalisations captured at the 2026-09-01 close"
+        },
+        "sourceDate": "2026-09-01",
+        "dataAsOf": "2026-09-01",
+        "calculation": "Peak-earnings screen = market capitalisation / (latest-quarter net income x 4); H1 screen = market capitalisation / (H1 attributable net profit x 2)",
+        "confidence": "low",
+        "counterevidence": "These are screen quotes rather than a licensed point-in-time tape, and were not reconciled to fully diluted share counts, so every market capitalisation, screen P/E and 52-week drawdown here is approximate and stays out of the fact layer.",
+        "lastVerified": "2026-09-02",
+        "role": "supporting"
+      },
+      {
+        "id": "EV-HWX-CONSENSUS",
+        "title": "Third-party sell-side consensus snapshot for MU",
+        "source": {
+          "publisher": "Seeking Alpha",
+          "url": "https://seekingalpha.com/symbol/MU/earnings/revisions",
+          "document": "MU earnings estimates and revisions, captured 2026-09-01"
+        },
+        "sourceDate": "2026-09-01",
+        "dataAsOf": "2026-09-01",
+        "calculation": "Forward screen = 2026-09-01 price / vendor-aggregated FY2027 consensus EPS. The specific consensus figures are presented in the canonical editorial page only.",
+        "confidence": "low",
+        "counterevidence": "A vendor-aggregated sell-side consensus is not company guidance, moves with every print and revision, and differs across vendors on fiscal-year alignment and GAAP versus non-GAAP treatment. It is therefore excluded from the fact layer of this object.",
+        "lastVerified": "2026-09-02",
+        "role": "supporting"
+      },
+      {
+        "id": "EV-HWX-HUMANOID-GAP",
+        "title": "Humanoid robotics segment-disclosure gap in global public markets",
+        "source": {
+          "publisher": "Lunartulip Research",
+          "document": "Disclosure survey: no listed component supplier in the reviewed sample reports separately disclosed humanoid robotics revenue or gross margin"
+        },
+        "sourceDate": "2026-09-01",
+        "dataAsOf": "2026-09-01",
+        "calculation": null,
+        "confidence": "low",
+        "counterevidence": "Absence of segment disclosure is not evidence that the business is absent; a company could be shipping meaningful volume without breaking it out, and private whole-machine developers are invisible to this survey entirely.",
+        "lastVerified": "2026-09-02",
+        "role": "supporting"
+      }
+    ],
+    "financialBridge": [
+      {
+        "label": {"zh-CN": "韩国半导体出口（2026 年 8 月）", "en": "Korean semiconductor exports (August 2026)"},
+        "period": "2026-08",
+        "value": 46650,
+        "unit": "USDm",
+        "displayValue": {"zh-CN": "466.5 亿美元，同比 +209%", "en": "$46.65bn, +209% YoY"},
+        "evidenceIds": ["EV-HWX-MOTIE"]
+      },
+      {
+        "label": {"zh-CN": "DDR5 16Gb 月度固定价环比（7 月）", "en": "DDR5 16Gb fixed price, MoM (July)"},
+        "period": "2026-07",
+        "value": 12.5,
+        "unit": "percent",
+        "evidenceIds": ["EV-HWX-MOTIE"]
+      },
+      {
+        "label": {"zh-CN": "DDR5 16Gb 月度固定价环比（8 月）", "en": "DDR5 16Gb fixed price, MoM (August)"},
+        "period": "2026-08",
+        "value": 3.3,
+        "unit": "percent",
+        "displayValue": {"zh-CN": "+3.3%（固定价 46.5 美元，4 月为 35.0 美元）", "en": "+3.3% (fixed price $46.5, from $35.0 in April)"},
+        "evidenceIds": ["EV-HWX-MOTIE"]
+      },
+      {
+        "label": {"zh-CN": "NAND 128Gb 月度固定价环比（8 月）", "en": "NAND 128Gb fixed price, MoM (August)"},
+        "period": "2026-08",
+        "value": 1.3,
+        "unit": "percent",
+        "displayValue": {"zh-CN": "+1.3%（5 月为 +9.5%）", "en": "+1.3% (from +9.5% in May)"},
+        "evidenceIds": ["EV-HWX-MOTIE"]
+      },
+      {
+        "label": {"zh-CN": "DDR5 16Gb 现货均价当日涨幅", "en": "DDR5 16Gb spot average, daily change"},
+        "period": "2026-09-01",
+        "value": 0.31,
+        "unit": "percent",
+        "displayValue": {"zh-CN": "+0.31%（均价 54.083 美元，报价口径）", "en": "+0.31% (average $54.083, quoted basis)"},
+        "evidenceIds": ["EV-HWX-TRENDFORCE"]
+      },
+      {
+        "label": {"zh-CN": "NVIDIA 未来供应与产能承诺", "en": "NVIDIA forward supply and capacity commitments"},
+        "period": "2026-FY27Q2",
+        "value": 279000,
+        "unit": "USDm",
+        "displayValue": {"zh-CN": "2,790 亿美元（上一季 1,190 亿美元）· 承诺义务，非已付款采购", "en": "$279bn (from $119bn) · commitment obligation, not paid procurement"},
+        "evidenceIds": ["EV-HWX-NVDA"]
+      },
+      {
+        "label": {"zh-CN": "SK 海力士 Q2 营业利润率", "en": "SK hynix Q2 operating margin"},
+        "period": "2026-Q2",
+        "value": 76,
+        "unit": "percent",
+        "displayValue": {"zh-CN": "76%（营业利润 60.5 万亿韩元 ÷ 收入 79.3 万亿韩元）", "en": "76% (KRW 60.5tn operating profit / KRW 79.3tn revenue)"},
+        "evidenceIds": ["EV-HWX-SKHYNIX"]
+      },
+      {
+        "label": {"zh-CN": "美光 FQ3 GAAP 营业利润率", "en": "Micron FQ3 GAAP operating margin"},
+        "period": "2026-FQ3",
+        "value": 80.4,
+        "unit": "percent",
+        "displayValue": {"zh-CN": "80.4%（营业利润 333.2 亿美元 ÷ 收入 414.6 亿美元）", "en": "80.4% ($33.32bn operating profit / $41.46bn revenue)"},
+        "evidenceIds": ["EV-HWX-MU"]
+      },
+      {
+        "label": {"zh-CN": "美光 FQ3 经营现金流", "en": "Micron FQ3 operating cash flow"},
+        "period": "2026-FQ3",
+        "value": 25390,
+        "unit": "USDm",
+        "displayValue": {"zh-CN": "253.9 亿美元", "en": "$25.39bn"},
+        "evidenceIds": ["EV-HWX-MU"]
+      },
+      {
+        "label": {"zh-CN": "三星 DS 部门 Q2 营业利润率", "en": "Samsung DS Q2 operating margin"},
+        "period": "2026-Q2",
+        "value": 70,
+        "unit": "percent",
+        "displayValue": {"zh-CN": "约 70%（营业利润 89.2 万亿韩元 ÷ 收入 127.5 万亿韩元）", "en": "About 70% (KRW 89.2tn / KRW 127.5tn)"},
+        "evidenceIds": ["EV-HWX-SAMSUNG"]
+      },
+      {
+        "label": {"zh-CN": "Kioxia FY26Q1 非 GAAP 营业利润率", "en": "Kioxia FY26Q1 non-GAAP operating margin"},
+        "period": "2026-FY26Q1",
+        "value": 75,
+        "unit": "percent",
+        "displayValue": {"zh-CN": "75%（非 GAAP 营业利润 1.326 万亿日元 ÷ 收入 1.767 万亿日元）", "en": "75% (JPY 1.326tn non-GAAP operating profit / JPY 1.767tn revenue)"},
+        "evidenceIds": ["EV-HWX-KIOXIA"]
+      },
+      {
+        "label": {"zh-CN": "SanDisk FQ4 收入", "en": "SanDisk FQ4 revenue"},
+        "period": "2026-FQ4",
+        "value": 8970,
+        "unit": "USDm",
+        "displayValue": {"zh-CN": "89.7 亿美元（环比 +51%，约三分之二来自价格）", "en": "$8.97bn (+51% QoQ, about two-thirds from price)"},
+        "evidenceIds": ["EV-HWX-SNDK"]
+      },
+      {
+        "label": {"zh-CN": "SanDisk FQ4 数据中心收入环比", "en": "SanDisk FQ4 data-centre revenue, QoQ"},
+        "period": "2026-FQ4",
+        "value": 103,
+        "unit": "percent",
+        "evidenceIds": ["EV-HWX-SNDK"]
+      },
+      {
+        "label": {"zh-CN": "德明利 H1 经营现金流 ÷ 归母净利润", "en": "Demingli H1 operating cash flow ÷ net profit"},
+        "period": "2026-H1",
+        "value": -112,
+        "unit": "percent",
+        "displayValue": {"zh-CN": "-1.12×（经营现金流 -67.4 亿元 ÷ 归母净利润 60.2 亿元）", "en": "-1.12x (RMB -6.74bn / RMB 6.02bn)"},
+        "evidenceIds": ["EV-HWX-DEMINGLI"]
+      },
+      {
+        "label": {"zh-CN": "德明利 H1 存货占总资产", "en": "Demingli H1 inventory as share of total assets"},
+        "period": "2026-H1",
+        "value": 65,
+        "unit": "percent",
+        "displayValue": {"zh-CN": "65.0%（存货 214.1 亿元）", "en": "65.0% (inventory RMB 21.41bn)"},
+        "evidenceIds": ["EV-HWX-DEMINGLI"]
+      },
+      {
+        "label": {"zh-CN": "江波龙 H1 经营现金流 ÷ 归母净利润", "en": "Longsys H1 operating cash flow ÷ net profit"},
+        "period": "2026-H1",
+        "value": -29.8,
+        "unit": "percent",
+        "displayValue": {"zh-CN": "-0.30×（经营现金流 -31.5 亿元 ÷ 归母净利润 105.8 亿元）", "en": "-0.30x (RMB -3.15bn / RMB 10.58bn)"},
+        "evidenceIds": ["EV-HWX-LONGSYS"]
+      },
+      {
+        "label": {"zh-CN": "江波龙 H1 存货占总资产", "en": "Longsys H1 inventory as share of total assets"},
+        "period": "2026-H1",
+        "value": 60.1,
+        "unit": "percent",
+        "displayValue": {"zh-CN": "60.1%（存货 257.8 亿元）", "en": "60.1% (inventory RMB 25.78bn)"},
+        "evidenceIds": ["EV-HWX-LONGSYS"]
+      },
+      {
+        "label": {"zh-CN": "中际旭创 H1 CFO ÷ 归母净利润", "en": "Innolight H1 CFO ÷ attributable net profit"},
+        "period": "2026-H1",
+        "value": 13,
+        "unit": "percent",
+        "displayValue": {"zh-CN": "0.13×", "en": "0.13x"},
+        "evidenceIds": ["EV-HWX-INNOLIGHT"]
+      },
+      {
+        "label": {"zh-CN": "新易盛 H1 CFO ÷ 归母净利润", "en": "Eoptolink H1 CFO ÷ attributable net profit"},
+        "period": "2026-H1",
+        "value": 21,
+        "unit": "percent",
+        "displayValue": {"zh-CN": "0.21×", "en": "0.21x"},
+        "evidenceIds": ["EV-HWX-EOPTOLINK"]
+      },
+      {
+        "label": {"zh-CN": "天孚通信 H1 CFO ÷ 归母净利润", "en": "T&S Communications H1 CFO ÷ attributable net profit"},
+        "period": "2026-H1",
+        "value": 83,
+        "unit": "percent",
+        "displayValue": {"zh-CN": "0.83×", "en": "0.83x"},
+        "evidenceIds": ["EV-HWX-TFC"]
+      },
+      {
+        "label": {"zh-CN": "Lumentum FQ4 非 GAAP 营业利润率", "en": "Lumentum FQ4 non-GAAP operating margin"},
+        "period": "2026-FQ4",
+        "value": 36.6,
+        "unit": "percent",
+        "displayValue": {"zh-CN": "36.6%（下一季指引 39.5%—40.5%）", "en": "36.6% (guided to 39.5%–40.5%)"},
+        "evidenceIds": ["EV-HWX-LUMENTUM"]
+      },
+      {
+        "label": {"zh-CN": "Coherent FY2026 经营现金流", "en": "Coherent FY2026 operating cash flow"},
+        "period": "2026-FY",
+        "value": 79.5,
+        "unit": "USDm",
+        "displayValue": {"zh-CN": "7,950 万美元（同期资本开支 11.03 亿美元）", "en": "$79.5m (against $1,103m of capex)"},
+        "evidenceIds": ["EV-HWX-COHERENT"]
+      },
+      {
+        "label": {"zh-CN": "AAOI Q2 收入", "en": "AAOI Q2 revenue"},
+        "period": "2026-Q2",
+        "value": 192,
+        "unit": "USDm",
+        "displayValue": {"zh-CN": "1.92 亿美元（同比约 +86.4%）", "en": "$192m (about +86.4% YoY)"},
+        "evidenceIds": ["EV-HWX-AAOI"]
+      }
+    ],
+    "valuationScenarios": [
+      {
+        "id": "VAL-HWX-CONSTRAINT",
+        "label": {"zh-CN": "约束所有者：峰值盈利快筛", "en": "Constraint owners: peak-earnings screen"},
+        "metrics": [
+          {
+            "label": {"zh-CN": "峰值盈利年化倍数（美光）", "en": "Peak-earnings annualised multiple (Micron)"},
+            "value": {"zh-CN": "约 9.5×（市值 ÷ 最近季度 GAAP 净利润 × 4）", "en": "About 9.5x (market cap ÷ latest-quarter GAAP net income x 4)"}
+          },
+          {
+            "label": {"zh-CN": "行情端 TTM 市盈率", "en": "Screen TTM P/E"},
+            "value": {"zh-CN": "SK 海力士约 7.2×（分母含约 63.3 万亿韩元投资收益）；美光 21.1×；三星集团约 11.2×", "en": "SK hynix about 7.2x (denominator includes roughly KRW 63.3tn of investment gains); Micron 21.1x; Samsung group about 11.2x"}
+          },
+          {
+            "label": {"zh-CN": "较 52 周高点回撤", "en": "Drawdown from 52-week high"},
+            "value": {"zh-CN": "SK 海力士约 -43%；美光约 -26%；三星约 -33%", "en": "SK hynix about -43%; Micron about -26%; Samsung about -33%"}
+          },
+          {
+            "label": {"zh-CN": "口径限制", "en": "Basis limitation"},
+            "value": {"zh-CN": "2026-09-01 收盘快照；不是 forward PE，也不是价格结论", "en": "2026-09-01 close snapshot; not a forward P/E and not a price conclusion"}
+          }
+        ],
+        "calculation": "Micron peak-earnings screen = market capitalisation / (latest-quarter GAAP net income x 4). Screen P/Es use trailing twelve-month reported net income without normalisation. All inputs captured at the 2026-09-01 close and not reconciled to fully diluted share counts.",
+        "interpretation": {
+          "zh-CN": "个位数的峰值盈利快筛与十倍出头的行情市盈率，说明市场已经在计入利润显著正常化。这一组的研究问题因此是正常化之后的利润底部有多高，而不是当前倍数看起来是否便宜。三家公司会计口径、业务纯度与货币都不同，四个指标并列只用于观察市场已经计入多少，不构成跨市场可比估值。",
+          "en": "Single-digit peak-earnings screens alongside low-twenties trailing P/Es show the market already embedding a substantial normalisation of profit. The research question for this group is therefore how high the floor sits after normalisation, not whether today's multiple looks cheap. Accounting basis, business purity and currency all differ across the three names, so these metrics sit side by side to show what is priced in, not to supply a comparable cross-market valuation."
+        }
+      },
+      {
+        "id": "VAL-HWX-NAND",
+        "label": {"zh-CN": "NAND 周期弹性：Kioxia / SanDisk", "en": "NAND cycle elasticity: Kioxia / SanDisk"},
+        "metrics": [
+          {
+            "label": {"zh-CN": "峰值盈利年化倍数", "en": "Peak-earnings annualised multiple"},
+            "value": {"zh-CN": "Kioxia 约 7.9×（非 GAAP 口径）；SanDisk 约 8.7×（GAAP 口径）", "en": "Kioxia about 7.9x (non-GAAP basis); SanDisk about 8.7x (GAAP basis)"}
+          },
+          {
+            "label": {"zh-CN": "较 52 周高点回撤", "en": "Drawdown from 52-week high"},
+            "value": {"zh-CN": "Kioxia 约 -55%；SanDisk 约 -35%", "en": "Kioxia about -55%; SanDisk about -35%"}
+          },
+          {
+            "label": {"zh-CN": "利润来源", "en": "Source of profit"},
+            "value": {"zh-CN": "SanDisk 环比增长中约三分之二来自价格；数据中心收入环比 +103%", "en": "About two-thirds of SanDisk's sequential growth came from price; data-centre revenue +103% QoQ"}
+          },
+          {
+            "label": {"zh-CN": "口径限制", "en": "Basis limitation"},
+            "value": {"zh-CN": "两个分母的会计口径不同，不能直接相互比较", "en": "The two denominators sit on different accounting bases and are not directly comparable"}
+          }
+        ],
+        "calculation": "Screen = market capitalisation / (latest-quarter net income x 4), using Kioxia's company-defined non-GAAP net income and SanDisk's GAAP net income. Market data captured at the 2026-09-01 close.",
+        "interpretation": {
+          "zh-CN": "这两家的低倍数建立在极高的 NAND 价格与利润率之上，分母的周期位置比倍数本身更重要。NAND 每一次 ASP 反转，利润弹性都会双向工作；SanDisk 财报后的下跌说明高增长已经被计入。它们衡量的是周期弹性，与约束所有权是两类不同的研究对象。",
+          "en": "The low multiples here rest on extreme NAND pricing and margins, so where the denominator sits in the cycle matters more than the multiple itself. Every NAND ASP inflection works in both directions on profit, and SanDisk's post-print decline shows the growth is already in the price. These names measure cycle elasticity, which is a different research object from constraint ownership."
+        }
+      },
+      {
+        "id": "VAL-HWX-MODULE-CN",
+        "label": {"zh-CN": "中国存储模组：静态倍数与情景反向检验", "en": "Chinese memory modules: static multiple and scenario back-test"},
+        "metrics": [
+          {
+            "label": {"zh-CN": "静态年化倍数", "en": "Static annualised multiple"},
+            "value": {"zh-CN": "德明利约 7.9×；江波龙约 7.1×（市值 ÷ H1 归母净利润 × 2）", "en": "Demingli about 7.9x; Longsys about 7.1x (market cap ÷ H1 attributable net profit x 2)"}
+          },
+          {
+            "label": {"zh-CN": "现金与库存质量", "en": "Cash and inventory quality"},
+            "value": {"zh-CN": "CFO ÷ 净利润 -1.12× / -0.30×；存货占总资产 65.0% / 60.1%", "en": "CFO ÷ net profit of -1.12x / -0.30x; inventory at 65.0% / 60.1% of total assets"}
+          },
+          {
+            "label": {"zh-CN": "作者情景假设：市值升至 2026-09-01 快照的十倍", "en": "Author scenario: market cap rises to ten times the 2026-09-01 snapshot"},
+            "value": {"zh-CN": "德明利在 20× 下需约 474 亿元、25× 下需约 379 亿元可持续年利润；江波龙对应约 750 亿元与约 600 亿元", "en": "Demingli would need about RMB 47.4bn of sustainable annual profit at 20x and about RMB 37.9bn at 25x; Longsys about RMB 75bn and about RMB 60bn"}
+          },
+          {
+            "label": {"zh-CN": "情景性质", "en": "Nature of the scenario"},
+            "value": {"zh-CN": "作者设定的反向检验，不是预测、不是价格结论，也不含任何交易含义", "en": "An author-defined back-test: not a forecast, not a price conclusion, and carrying no trading implication"}
+          }
+        ],
+        "calculation": "Static multiple: 94.8 / (6.02 x 2) = 7.9x; 150 / (10.58 x 2) = 7.1x (RMB bn, 2026-09-01 close). Scenario back-test: 94.8 x 10 = 948; 948 / 20 = 47.4; 948 / 25 = 37.9; 150 x 10 = 1500; 1500 / 20 = 75; 1500 / 25 = 60. Required profit of RMB 47.4bn is about four times the annualised H1 base of RMB 12.04bn.",
+        "interpretation": {
+          "zh-CN": "这组算术只回答一个问题：当前的静态低倍数需要多大幅度的盈利结构变化才能被延续，而不是判断它会不会发生。所需利润量级需要企业级产品份额、主控能力、客户粘性与现金回收同时扩张，现货报价脉冲只能提供其中一段。分母中已包含低成本库存、急涨 ASP 与较低减值计提共同形成的峰值利润，因此表面便宜与安全边际不是一回事。",
+          "en": "This arithmetic answers one question: how much would the earnings structure have to change for today's low static multiple to be sustained. It is not a judgment on whether that happens. Profit of the required magnitude needs enterprise product share, controller capability, customer stickiness and cash recovery to expand together, and a spot-quote impulse supplies only part of the distance. The denominator already contains peak profit formed by cheap inventory, sharply rising ASPs and light impairment, so apparent cheapness and margin of safety are not the same thing."
+        }
+      },
+      {
+        "id": "VAL-HWX-OPTICS",
+        "label": {"zh-CN": "光模块：增长要求与现金转化", "en": "Optics: growth demanded versus cash conversion"},
+        "metrics": [
+          {
+            "label": {"zh-CN": "中国三家 H1 净利润年化倍数", "en": "Annualised H1 net profit multiple, Chinese names"},
+            "value": {"zh-CN": "中际旭创约 37×；新易盛约 37×；天孚通信约 119×", "en": "Innolight about 37x; Eoptolink about 37x; T&S Communications about 119x"}
+          },
+          {
+            "label": {"zh-CN": "美国两家最近季度非 GAAP 净利润年化倍数", "en": "Annualised latest-quarter non-GAAP net income multiple, U.S. names"},
+            "value": {"zh-CN": "Lumentum 约 64×；Coherent 约 38×（分母为非 GAAP 净利润，不是营业利润率）", "en": "Lumentum about 64x; Coherent about 38x (denominator is non-GAAP net income, not operating margin)"}
+          },
+          {
+            "label": {"zh-CN": "现金转化", "en": "Cash conversion"},
+            "value": {"zh-CN": "H1 CFO ÷ 净利润 0.13 / 0.21 / 0.83；Coherent 全年 CFO 7,950 万美元对应资本开支 11.03 亿美元", "en": "H1 CFO ÷ net profit of 0.13 / 0.21 / 0.83; Coherent's $79.5m of full-year CFO against $1,103m of capex"}
+          },
+          {
+            "label": {"zh-CN": "AAOI", "en": "AAOI"},
+            "value": {"zh-CN": "非 GAAP 盈利 550 万美元、GAAP 仍亏损，盈利基数过小，PE 不具解释力", "en": "$5.5m of non-GAAP profit and still loss-making on GAAP; the base is too small for P/E to carry meaning"}
+          }
+        ],
+        "calculation": "Innolight: 10100 / (136.5 x 2) = 37.0x; Eoptolink: 5600 / (75.3 x 2) = 37.2x; T&S: 2870 / (12.0 x 2) = 119.6x (RMB 100m units, 2026-09-01 close). U.S. multiples divide market capitalisation by four times latest-quarter non-GAAP net income as disclosed by each company.",
+        "interpretation": {
+          "zh-CN": "六家公司的产品结构、会计口径与资本强度都不同，把它们压成一个市盈率排名会抹掉全部有效信息。有意义的读法是把估值要求与现金转化放在一起：30—100 倍以上的 run-rate 要求，配 0.13—0.21 的现金转化，意味着利润质量的验证窗口很窄。天孚通信提供了同业里的现金上限参照，代价是最慢的增长与最高的估值基数。",
+          "en": "Product mix, accounting basis and capital intensity differ across all six names, and compressing them into one P/E ranking erases every piece of useful information. The productive reading pairs the valuation demanded with the cash actually converted: run-rate multiples of 30x to 100x and above against 0.13 to 0.21 cash conversion leaves a narrow window to validate profit quality. T&S Communications sets the cash-conversion ceiling within the cohort, at the cost of the slowest growth and the highest valuation base."
+        }
+      }
+    ],
+    "counterevidenceClaimIds": ["CL-HWX-022", "CL-HWX-023", "CL-HWX-024", "CL-HWX-025"],
+    "falsifiers": [
+      {
+        "id": "FAL-HWX-001",
+        "metric": "DDR5 16Gb monthly fixed price, month-on-month change",
+        "operator": "<",
+        "threshold": 0,
+        "unit": "percent",
+        "horizon": "any monthly fixed-price release from September to November 2026",
+        "claimIds": ["CL-HWX-003", "CL-HWX-021"],
+        "rationale": {
+          "zh-CN": "月度固定价的环比涨幅已经从 7 月的 12.5% 降到 8 月的 3.3%。一旦转负，上游 ASP 的加速度就不只是见顶，而是进入回落，约束所有权优先获得结构性利润这条前提会被直接削弱。阈值取 0 而不是某个正数，是为了让破位不依赖对减速幅度的主观判断。",
+          "en": "The month-on-month increase in fixed prices has already fallen from 12.5% in July to 3.3% in August. Turning negative would mean upstream ASP acceleration has not merely peaked but reversed, which directly weakens the premise that constraint ownership captures structural profit first. The threshold sits at zero rather than at some positive rate so that a break does not depend on a subjective view of how much deceleration counts."
+        }
+      },
+      {
+        "id": "FAL-HWX-002",
+        "metric": "Micron reported GAAP gross margin, FQ4 FY2026",
+        "operator": "<",
+        "threshold": 80,
+        "unit": "percent",
+        "horizon": "the FQ4 FY2026 result reported in September 2026",
+        "claimIds": ["CL-HWX-006", "CL-HWX-021"],
+        "rationale": {
+          "zh-CN": "公司自己的 FQ4 指引是约 86% 毛利率。阈值设在 80% 而不是 86%，留出约 6 个百分点的缓冲，避免把正常的指引偏差当成破位；真的跌到 80% 以下，意味着 ASP 或产品组合的兑现明显低于公司口径，约束所有者的定价能力需要重估。",
+          "en": "The company's own FQ4 guidance is roughly 86% gross margin. The threshold sits at 80% rather than 86% to leave about six points of buffer, so ordinary variance against guidance is not mistaken for a break. An actual print below 80% would mean ASP or mix is converting materially below the company's own basis, and the pricing power of the constraint owners would need to be reassessed."
+        }
+      },
+      {
+        "id": "FAL-HWX-003",
+        "metric": "Number of Demingli and Longsys simultaneously improving on Q3 gross margin, operating cash flow and inventory-to-total-assets",
+        "operator": "<",
+        "threshold": 2,
+        "unit": "count",
+        "horizon": "the Q3 2026 reports filed in October 2026",
+        "claimIds": ["CL-HWX-010", "CL-HWX-011", "CL-HWX-022"],
+        "rationale": {
+          "zh-CN": "这两家公司的研究框架要求四项信号同时出现，其中三项可以在三季报里直接读出：毛利率不再下滑、经营现金流净流出明显收窄、存货占资产与周转不再恶化。两家都做不到，说明利润仍然由库存价差而不是经营质量驱动，7—8 倍的静态倍数只是周期分母过高。",
+          "en": "The research framework for these two requires four signals to appear together, and three of them read directly off the Q3 report: gross margin stops falling, negative operating cash flow narrows materially, and inventory-to-assets and turnover stop deteriorating. If neither company clears all three, profit is still driven by the inventory spread rather than operating quality, and the 7–8x static multiple is an inflated cyclical denominator."
+        }
+      },
+      {
+        "id": "FAL-HWX-004",
+        "metric": "Innolight and Eoptolink full-year 2026 operating cash flow ÷ attributable net profit",
+        "operator": "<",
+        "threshold": 0.4,
+        "unit": "multiple",
+        "horizon": "the FY2026 annual reports",
+        "claimIds": ["CL-HWX-012", "CL-HWX-013", "CL-HWX-023"],
+        "rationale": {
+          "zh-CN": "上半年读数是 0.13 与 0.21，同业的天孚通信为 0.83，两端给出了区间。全年仍低于 0.4，说明利润没有转成现金，而不是半年度的时点扰动；在 30—100 倍以上的 run-rate 要求下，这足以推翻“盈利兑现最靠前”的定位。阈值取两端之间而非贴近上半年读数，避免把季节性回款当成结构性改善。",
+          "en": "The first-half readings were 0.13 and 0.21 against 0.83 at peer T&S Communications, which brackets the range. Staying below 0.4 for the full year would show profit is not converting to cash rather than reflecting half-year timing, and against run-rate multiples of 30x to 100x and above that is enough to overturn the ranking as furthest along on earnings conversion. The threshold sits between the two ends rather than close to the half-year reading, so that seasonal collections are not mistaken for structural improvement."
+        }
+      },
+      {
+        "id": "FAL-HWX-005",
+        "metric": "Number of Lumentum, Coherent and AAOI reporting next-quarter revenue at or above their own guidance midpoint",
+        "operator": "<",
+        "threshold": 2,
+        "unit": "count",
+        "horizon": "the fiscal quarters reported from October to November 2026",
+        "claimIds": ["CL-HWX-018"],
+        "rationale": {
+          "zh-CN": "三家给出的指引中值分别对应约 24%、12% 和 42% 的环比增长，这是需求斜率仍在的全部公开依据。三家里少于两家达到自己的中值，说明斜率证据退回单公司层面，不能再支撑一个横截面判断。用公司自己的中值而不是外部一致预期作阈值，是为了让检验只依赖一手披露。",
+          "en": "The three guidance midpoints imply roughly 24%, 12% and 42% sequential growth, and that is the entire public basis for saying the demand slope is intact. Fewer than two of three clearing their own midpoint would push the evidence back to single-company stories and out of cross-sectional reach. The test uses each company's own midpoint rather than external consensus so that it depends only on first-party disclosure."
+        }
+      },
+      {
+        "id": "FAL-HWX-006",
+        "metric": "Number of listed humanoid robotics component suppliers in the reviewed sample disclosing separate humanoid revenue and gross margin",
+        "operator": "<",
+        "threshold": 1,
+        "unit": "count",
+        "horizon": "the Q3 2026 reports filed in October 2026",
+        "claimIds": ["CL-HWX-024"],
+        "rationale": {
+          "zh-CN": "单列收入与毛利率是把人形机器人从叙事升级为利润池的最低门槛，低于这个门槛就没有可比的财务对象。阈值取 1 而不是更高，是因为当前样本中的家数为零，任何一家开始单列都足以让判断进入修订。",
+          "en": "Separately disclosed revenue and gross margin are the minimum threshold for moving humanoid robotics from narrative to profit pool; below it there is no comparable financial object at all. The threshold is one rather than something higher because the current count in the sample is zero, so a single company beginning to break the line out is enough to put the judgment into revision."
+        }
+      }
+    ],
+    "versions": [
+      {
+        "version": "1.0.0",
+        "date": "2026-09-02",
+        "diff": {
+          "zh-CN": "首版伴生研究对象，与人工审阅的中英文 canonical 展示稿一同发布。相对原稿的编辑处理：TrendForce 现货改记为报价序列并加注成交与需求确认偏弱；NVIDIA 2,790 亿美元统一表述为未来供应与产能承诺，不再暗示已付款采购或绝对需求锁定；中际旭创财报后的市场反应改为下跌 7.72%；AAOI 同比修正为约 86.4%；美国公司的年化倍数分母明确为非 GAAP 净利润，与非 GAAP 营业利润率分列；市值、市盈率与 52 周回撤统一标注 2026-09-01 快照且不进入事实层；第三方一致预期与 CXMT 相关报道移出 claim 层，分别记入证据台账与数据缺口；十倍路径改写为标注日期与 20×/25× 假设的作者情景反向检验；赔率表整体标注为研究判断。",
+          "en": "First companion research object, published alongside the human-reviewed Chinese and English canonical pages. Editorial handling relative to the source drafts: TrendForce spot is recorded as a quoted-price series with an explicit note that volume and demand confirmation stayed weak; NVIDIA's $279bn is stated consistently as forward supply and capacity commitments rather than paid procurement or a locked demand schedule; the Innolight post-print market reaction is recorded as a 7.72% decline; AAOI's year-over-year growth is corrected to about 86.4%; the denominator of the U.S. annualised multiples is stated explicitly as non-GAAP net income and kept separate from non-GAAP operating margin; market capitalisations, screen P/Es and 52-week drawdowns are labelled as a 2026-09-01 snapshot and excluded from the fact layer; the third-party consensus snapshot and the CXMT report are moved out of the claim layer into the evidence ledger and data gaps respectively; the ten-times path is rewritten as a dated author scenario back-test with explicit 20x and 25x assumptions; and the odds table is labelled as research judgment throughout."
+        }
+      }
+    ],
+    "renderings": {
+      "zh-CN": {
+        "locale": "zh-CN",
+        "siblingLocale": "en",
+        "title": "主线在换手？全球财报季后，存储与光模块的赔率重排",
+        "question": "同一轮 AI 资本开支里，利润正在留在哪一层，什么条件下会转移？",
+        "standfirst": "现货二阶导向上，合约价二阶导向下。存储的结构性利润先进入约束所有者，NAND 放大周期，中国模组放大库存时点；光模块的报表仍强，容错率已经变低。“存储接棒、光模块交棒”过于整齐，全球财报没有给出这样的画面。",
+        "whyItMatters": "把六个环节放进同一个截面，是因为它们共用一轮资本开支，却不共用同一段利润。HBM、服务器 DRAM 与企业级 NAND 的产能、工艺和客户认证集中在少数几家原厂，供给紧张最先进入它们的 ASP、毛利与现金流；NAND 的价格弹性更大，利润在 ASP 反转时双向工作；中国模组把低成本库存与成品售价之间的价差完整写进利润表，也把备货压力写进现金流量表。光模块是另一条线：收入与利润仍在兑现，现金转化却出现 0.13 到 0.83 的巨大分散。分层之后，同一个“AI 硬件”标签下会出现完全不同的证伪条件，这正是横截面研究要解决的问题。",
+        "consensus": "存储涨价、AI 资本开支强劲、光模块高增长，这些已经被普遍接受；SK 海力士与美光较 52 周高点的回撤、中际旭创财报后的下跌，也已经反映在价格里。",
+        "differentiated": "增量来自三次拆分。第一，把“存储涨价”拆成现货报价与月度固定价两条二阶导：现货加速而合约涨幅从 12.5% 收窄到 3.3%，同比利润仍高，环比加速度却会先见顶。第二，把“存储链”拆成约束所有者、NAND 周期弹性与库存价差三层，它们可以同时上涨，证伪条件完全不同。第三，把“光模块板块”拆成盈利兑现与现金转化两个维度：0.13、0.21 与 0.83 的现金转化差异，配上 30—100 倍以上的 run-rate 要求，比板块标签更能解释后续的估值波动。需求侧的口径同样要拆：NVIDIA 的 2,790 亿美元是未来供应与产能承诺，不是已付款采购。",
+        "valuation": "估值只做跨市场、跨币种、跨会计口径的周期筛查，不合成统一的美元收入或企业价值情景。四组情景分别覆盖约束所有者、NAND 弹性、中国模组与光模块，全部以 2026-09-01 收盘快照为时点。文中的峰值盈利年化倍数是市值除以最近季度或半年利润的简单年化，不是 forward PE，也不构成价格结论；美国公司的年化倍数分母是非 GAAP 净利润，与并列的非 GAAP 营业利润率不可互换。模组的十倍情景是作者设定的反向检验，用来回答“需要多大的盈利结构变化”，不是预测。",
+        "update": "v1.0 与人工审阅的中英文 canonical 展示稿同时发布，本对象只承担索引、证据台账、财务桥、估值情景、量化证伪与版本记录，不作为页面正文来源。相对原稿的主要修正见版本说明：报价与成交的区分、NVIDIA 承诺口径、中际旭创市场反应、AAOI 同比、非 GAAP 分母、快照标注，以及一致预期与 CXMT 报道的降级处理。",
+        "evidenceClaimIds": ["CL-HWX-001", "CL-HWX-002", "CL-HWX-003", "CL-HWX-004", "CL-HWX-005", "CL-HWX-006", "CL-HWX-007", "CL-HWX-008", "CL-HWX-009", "CL-HWX-010", "CL-HWX-011", "CL-HWX-012", "CL-HWX-013", "CL-HWX-014", "CL-HWX-015", "CL-HWX-016", "CL-HWX-017", "CL-HWX-018", "CL-HWX-019", "CL-HWX-020"],
+        "causalChain": [
+          {"title": "两条价格线的加速度分叉", "body": "现货报价重新加速，月度固定价的环比涨幅从 12.5% 收窄到 3.3%，同一轮涨价里出现两种斜率。", "claimIds": ["CL-HWX-001", "CL-HWX-002", "CL-HWX-003"]},
+          {"title": "结构性利润先落在约束所有者", "body": "产能、工艺与客户认证集中在上游，供给紧张最先进入 SK 海力士与美光的 ASP、毛利与现金流。", "claimIds": ["CL-HWX-005", "CL-HWX-006", "CL-HWX-021"]},
+          {"title": "弹性层放大周期与库存时点", "body": "Kioxia、SanDisk 承接 NAND 价格弹性；德明利、江波龙的利润来自库存价差，现金流与存货决定它能留多久。", "claimIds": ["CL-HWX-008", "CL-HWX-009", "CL-HWX-010", "CL-HWX-011", "CL-HWX-022"]},
+          {"title": "光模块的门槛从增长换成现金", "body": "六家公司同时给出强劲收入或指引，分化落在现金转化、资本开支与产能兑现上。", "claimIds": ["CL-HWX-012", "CL-HWX-016", "CL-HWX-018", "CL-HWX-023"]},
+          {"title": "证据边界决定利润池排序", "body": "人形机器人尚无单列收入可比，供给正常化与未确认的第三方报道构成主要反向情景。", "claimIds": ["CL-HWX-024", "CL-HWX-025"]}
+        ],
+        "riskClaimIds": ["CL-HWX-022", "CL-HWX-023", "CL-HWX-024", "CL-HWX-025"],
+        "forwardTestIds": ["FAL-HWX-001", "FAL-HWX-002", "FAL-HWX-003", "FAL-HWX-004", "FAL-HWX-005", "FAL-HWX-006"]
+      },
+      "en": {
+        "locale": "en",
+        "siblingLocale": "zh-CN",
+        "title": "Is the baton really changing hands? Repricing memory and optics after a global reporting season",
+        "question": "Within one AI capex cycle, which layer is keeping the profit, and what would move it?",
+        "standfirst": "The second derivative of spot is rising while the second derivative of contract prices is falling. Structural memory profit lands first with the constraint owners, NAND amplifies the cycle, and the Chinese module makers amplify inventory timing. In optics the reported numbers are still strong and the margin for error has thinned. The tidy version — memory takes the baton, optics hands it over — is not what the global reporting season produced.",
+        "whyItMatters": "These six nodes belong in one cross-section because they share a capex cycle without sharing the same dollar of profit. Capacity, process and customer qualification for HBM, server DRAM and enterprise NAND sit with a handful of manufacturers, so tight supply reaches their ASPs, gross margin and cash flow first. NAND carries more price elasticity, and that elasticity works in both directions on any ASP inflection. The Chinese module makers write the spread between low-cost inventory and realised prices straight into the income statement, and the cost of building that inventory into the cash-flow statement. Optics is a separate line entirely: revenue and profit keep converting while cash conversion disperses from 0.13 to 0.83. Once the layers are separated, one 'AI hardware' label turns out to contain completely different falsification conditions, which is the problem a cross-section exists to solve.",
+        "consensus": "Rising memory prices, strong AI capex and high optics growth are all widely accepted, and the drawdowns at SK hynix and Micron from their 52-week highs, along with Innolight's post-print decline, are already in the price.",
+        "differentiated": "The information gain comes from three separations. First, split 'memory prices are up' into spot quotes and monthly fixed prices: spot is re-accelerating while contract increases narrowed from 12.5% to 3.3%, so year-over-year profit can stay high while sequential acceleration peaks first. Second, split the memory chain into constraint owners, NAND cycle elasticity and inventory spread; all three can rise together and none shares a falsification condition with the others. Third, split the optics sector into earnings conversion and cash conversion: the gap between 0.13, 0.21 and 0.83, set against run-rate multiples of 30x to 100x and above, explains subsequent valuation volatility far better than the sector label. The demand side needs the same discipline: NVIDIA's $279 billion is a forward supply and capacity commitment, not paid procurement.",
+        "valuation": "Valuation here is a cycle screen across markets, currencies and accounting bases, with no synthetic common-currency revenue or enterprise-value scenario. Four scenarios cover the constraint owners, NAND elasticity, the Chinese module makers and optics, all struck at the 2026-09-01 close. The peak-earnings annualised multiples divide market capitalisation by a simple annualisation of the latest quarterly or half-year profit; they are not forward P/E and not price conclusions. For the U.S. names the denominator is non-GAAP net income and cannot be exchanged with the non-GAAP operating margin quoted alongside it. The ten-times module scenario is an author-defined back-test answering how much the earnings structure would have to change, not a forecast.",
+        "update": "Version 1.0 ships alongside the human-reviewed Chinese and English canonical pages. This object carries the index entry, evidence ledger, financial bridge, valuation scenarios, quantitative falsifiers and version history; it is not the source of the page body. The principal corrections against the source drafts are listed in the version note: separating quotes from transactions, restating the NVIDIA commitment basis, recording the Innolight market reaction, correcting AAOI's year-over-year rate, naming the non-GAAP denominator, labelling the market snapshot, and demoting the consensus snapshot and the CXMT report out of the claim layer.",
+        "evidenceClaimIds": ["CL-HWX-001", "CL-HWX-002", "CL-HWX-003", "CL-HWX-004", "CL-HWX-005", "CL-HWX-006", "CL-HWX-007", "CL-HWX-008", "CL-HWX-009", "CL-HWX-010", "CL-HWX-011", "CL-HWX-012", "CL-HWX-013", "CL-HWX-014", "CL-HWX-015", "CL-HWX-016", "CL-HWX-017", "CL-HWX-018", "CL-HWX-019", "CL-HWX-020"],
+        "causalChain": [
+          {"title": "Two price lines, opposite acceleration", "body": "Spot quotes re-accelerate while month-on-month fixed-price increases narrow from 12.5% to 3.3%, producing two slopes inside one upcycle.", "claimIds": ["CL-HWX-001", "CL-HWX-002", "CL-HWX-003"]},
+          {"title": "Structural profit lands with the constraint owners", "body": "Capacity, process and qualification sit upstream, so tight supply reaches SK hynix and Micron's ASPs, margin and cash flow first.", "claimIds": ["CL-HWX-005", "CL-HWX-006", "CL-HWX-021"]},
+          {"title": "The elastic layer amplifies cycle and timing", "body": "Kioxia and SanDisk carry NAND price elasticity; Demingli and Longsys earn on the inventory spread, and cash flow and inventory decide how long it stays.", "claimIds": ["CL-HWX-008", "CL-HWX-009", "CL-HWX-010", "CL-HWX-011", "CL-HWX-022"]},
+          {"title": "In optics the gate moves from growth to cash", "body": "All six names posted strong revenue or guidance; the dispersion sits in cash conversion, capex and capacity execution.", "claimIds": ["CL-HWX-012", "CL-HWX-016", "CL-HWX-018", "CL-HWX-023"]},
+          {"title": "Evidence boundaries rank the profit pools", "body": "Humanoid robotics has no separately disclosed revenue to compare, while supply normalisation and an unconfirmed third-party report frame the bear case.", "claimIds": ["CL-HWX-024", "CL-HWX-025"]}
+        ],
+        "riskClaimIds": ["CL-HWX-022", "CL-HWX-023", "CL-HWX-024", "CL-HWX-025"],
+        "forwardTestIds": ["FAL-HWX-001", "FAL-HWX-002", "FAL-HWX-003", "FAL-HWX-004", "FAL-HWX-005", "FAL-HWX-006"]
+      }
+    },
+    "dataGaps": [
+      {
+        "zh-CN": "跨市场口径不统一：会计准则、财季与货币各不相同，本对象因此不构造统一美元收入或企业价值情景，估值只以各自口径的峰值盈利快筛呈现。非日历财季公司（美光、SanDisk、Lumentum、Kioxia）的 dataAsOf 按各自披露的财季惯例记录，A 股半年报的披露日未逐一核对。",
+        "en": "Cross-market bases do not align: accounting standards, fiscal calendars and currencies all differ, so this object builds no common-currency revenue or enterprise-value scenario and presents valuation only as peak-earnings screens on each company's own basis. For the non-calendar reporters (Micron, SanDisk, Lumentum, Kioxia) dataAsOf follows each company's disclosed fiscal calendar, and the exact filing dates of the A-share interim reports were not individually reconciled."
+      },
+      {
+        "zh-CN": "行情与市值来自 Google Finance、MarketWatch 与 2026-09-01 交易所收盘数据，未与完全稀释股数逐一核对。因此市值、行情端市盈率与 52 周回撤都是近似快照，不进入事实层，也不用于正式估值。",
+        "en": "Prices and market capitalisations come from Google Finance, MarketWatch and exchange closing data for 2026-09-01, and were not reconciled to fully diluted share counts. Market capitalisations, screen P/Es and 52-week drawdowns are therefore approximate snapshots, excluded from the fact layer and not used for formal valuation."
+      },
+      {
+        "zh-CN": "峰值盈利年化倍数的分母含峰值 ASP、低成本库存与较低减值计提；SK 海力士的 TTM 分母包含约 63.3 万亿韩元投资资产收益；三星是多业务集团。这些倍数都不是 forward PE，也不是价格结论。",
+        "en": "The denominators of the peak-earnings annualised multiples embed peak ASPs, low-cost inventory and light impairment. SK hynix's trailing denominator includes roughly KRW 63.3tn of gains on investment assets, and Samsung remains a multi-business group. None of these multiples is a forward P/E or a price conclusion."
+      },
+      {
+        "zh-CN": "第三方一致预期：美光的前瞻市盈率与 FY2027 一致预期每股收益取自 Seeking Alpha，抓取日期 2026-09-01，具体数字仅在 canonical 展示稿中呈现。它是数据商汇总的卖方一致预期快照，不是公司指引，会随每次财报与修正移动，不同数据商在财年口径与 GAAP/非 GAAP 处理上的差异也会改变结果，因此不进入本对象的 claim 层。",
+        "en": "Third-party consensus: the forward earnings screen and FY2027 consensus EPS for Micron come from Seeking Alpha, captured on 2026-09-01, and the specific figures appear only in the canonical editorial page. It is a vendor-aggregated sell-side consensus snapshot rather than company guidance, moves with every print and revision, and changes across vendors with fiscal-year alignment and GAAP versus non-GAAP treatment, so it stays out of this object's claim layer."
+      },
+      {
+        "zh-CN": "CXMT 小批量生产 HBM3E 的说法来自媒体援引知情人士的报道，未获公司确认。本对象不据此推导价格、份额或供需影响，只作为 2027 年供给侧的待验证风险记录，等待公司或监管层面的一手披露。",
+        "en": "The report that CXMT has begun small-volume production of HBM3E comes from press reporting citing people familiar with the matter and is not company-confirmed. No pricing, share or supply-demand effect is inferred from it here; it is recorded only as an unverified 2027 supply-side risk pending first-party company or regulatory disclosure."
+      },
+      {
+        "zh-CN": "人形机器人：原稿提到的中国零部件与整机样本公司，本对象未逐一绑定一手披露链接，因此不进入 claim 层，只保留“样本内无公司单列人形机器人收入与毛利率”这一结构性判断，并作为待补证据处理。",
+        "en": "Humanoid robotics: the Chinese component and whole-machine sample companies referenced in the source drafts are not individually bound to first-party disclosure links here, so they stay out of the claim layer. Only the structural finding — that no company in the reviewed sample discloses humanoid revenue and gross margin separately — is retained, with the underlying datapoints treated as evidence still to be sourced."
+      },
+      {
+        "zh-CN": "口径分离尚未闭合：中国公司使用归母净利润，美国公司的年化倍数使用非 GAAP 净利润，而非 GAAP 营业利润率是第三条口径。要把六家光模块公司放进严格可比的估值框架，需要统一正常化利润、净现金、税率与股份数，本对象没有做这一步。",
+        "en": "The basis separation is not closed: the Chinese names use attributable net profit, the U.S. annualised multiples use non-GAAP net income, and non-GAAP operating margin is a third basis. Placing all six optics names in a strictly comparable valuation framework would require normalising profit, net cash, tax rate and share count, and this object does not take that step."
+      }
+    ]
   }
 ]

@@ -88,6 +88,9 @@ for (const object of objects) {
     assert.ok(Number.isFinite(row.value), `${prefix} financial bridge value must be numeric`);
     for (const locale of locales) {
       assert.ok(row.label?.[locale]?.trim(), `${prefix} financial bridge row missing ${locale} label`);
+      if (row.displayValue) {
+        assert.ok(row.displayValue[locale]?.trim(), `${prefix} financial bridge row missing ${locale} display value`);
+      }
     }
     assert.ok(row.evidenceIds.length > 0, `${prefix} financial bridge row needs evidence`);
     for (const id of row.evidenceIds) {
@@ -97,10 +100,23 @@ for (const object of objects) {
 
   assert.ok(object.valuationScenarios.length >= 2, `${prefix} requires at least two valuation scenarios`);
   for (const scenario of object.valuationScenarios) {
-    const expectedRevenue = scenario.revenueBaseUsdM * (1 + scenario.revenueGrowthPct / 100);
-    const expectedValue = scenario.forwardRevenueUsdM * scenario.salesMultiple;
-    assert.ok(Math.abs(expectedRevenue - scenario.forwardRevenueUsdM) < 0.001, `${prefix} ${scenario.id} forward revenue does not recalculate`);
-    assert.ok(Math.abs(expectedValue - scenario.impliedEnterpriseValueUsdM) < 0.001, `${prefix} ${scenario.id} enterprise value does not recalculate`);
+    if (scenario.metrics) {
+      assert.ok(scenario.metrics.length >= 2, `${prefix} ${scenario.id} needs at least two valuation metrics`);
+      for (const metric of scenario.metrics) {
+        for (const locale of locales) {
+          assert.ok(metric.label?.[locale]?.trim(), `${prefix} ${scenario.id} metric missing ${locale} label`);
+          assert.ok(metric.value?.[locale]?.trim(), `${prefix} ${scenario.id} metric missing ${locale} value`);
+        }
+      }
+    } else {
+      for (const field of ["revenueBaseUsdM", "revenueGrowthPct", "forwardRevenueUsdM", "salesMultiple", "impliedEnterpriseValueUsdM"]) {
+        assert.ok(Number.isFinite(scenario[field]), `${prefix} ${scenario.id} missing ${field}`);
+      }
+      const expectedRevenue = scenario.revenueBaseUsdM * (1 + scenario.revenueGrowthPct / 100);
+      const expectedValue = scenario.forwardRevenueUsdM * scenario.salesMultiple;
+      assert.ok(Math.abs(expectedRevenue - scenario.forwardRevenueUsdM) < 0.001, `${prefix} ${scenario.id} forward revenue does not recalculate`);
+      assert.ok(Math.abs(expectedValue - scenario.impliedEnterpriseValueUsdM) < 0.001, `${prefix} ${scenario.id} enterprise value does not recalculate`);
+    }
     assert.ok(scenario.calculation?.trim(), `${prefix} ${scenario.id} missing calculation`);
     const scenarioText = JSON.stringify(scenario).toLowerCase();
     assert.doesNotMatch(scenarioText, /target price\s*[:=]\s*\$?\d|目标价\s*[:：=]\s*\d/, `${prefix} ${scenario.id} must not publish a target price`);
@@ -173,6 +189,16 @@ for (const object of objects) {
   assert.equal(zh.causalChain.length, en.causalChain.length, `${prefix} locale causal-chain parity failed`);
   for (let index = 0; index < zh.causalChain.length; index += 1) {
     assert.deepEqual(zh.causalChain[index].claimIds, en.causalChain[index].claimIds, `${prefix} locale causal claim parity failed at step ${index + 1}`);
+  }
+  if (zh.narrativeSections || en.narrativeSections) {
+    assert.equal(zh.narrativeSections?.length, en.narrativeSections?.length, `${prefix} locale narrative-section parity failed`);
+    for (let index = 0; index < zh.narrativeSections.length; index += 1) {
+      const zhSection = zh.narrativeSections[index];
+      const enSection = en.narrativeSections[index];
+      assert.ok(zhSection.id?.trim() && zhSection.title?.trim() && zhSection.body?.trim(), `${prefix} zh-CN narrative section ${index + 1} is incomplete`);
+      assert.ok(enSection.id?.trim() && enSection.title?.trim() && enSection.body?.trim(), `${prefix} en narrative section ${index + 1} is incomplete`);
+      assert.equal(zhSection.id, enSection.id, `${prefix} locale narrative section ID mismatch at ${index + 1}`);
+    }
   }
 }
 

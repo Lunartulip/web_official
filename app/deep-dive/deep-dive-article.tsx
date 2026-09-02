@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import type { ResearchObject, ResearchLocale } from "@/lib/research-objects";
 import styles from "../proof.module.css";
 
@@ -7,6 +9,10 @@ function formatValue(value: number, unit: "USDm" | "percent" | "count", locale: 
   if (unit === "percent") return `${value.toLocaleString(locale)}%`;
   if (unit === "count") return value.toLocaleString(locale);
   return `$${value.toLocaleString(locale, { maximumFractionDigits: 1 })}m`;
+}
+
+function coverageLabel(tickers: string[]) {
+  return tickers.length > 5 ? `${tickers.slice(0, 5).join(" + ")} + ${tickers.length - 5}` : tickers.join(" + ");
 }
 
 export default function DeepDiveArticle({ item, language = "cn" }: { item: ResearchObject; language?: "cn" | "en" }) {
@@ -36,7 +42,7 @@ export default function DeepDiveArticle({ item, language = "cn" }: { item: Resea
 
       <section className={styles.hero}>
         <div>
-          <p className={styles.kicker}>{item.tickers.join(" + ")} / {item.kind.replaceAll("-", " ").toUpperCase()}</p>
+          <p className={styles.kicker}>{coverageLabel(item.tickers)} / {item.kind.replaceAll("-", " ").toUpperCase()}</p>
           <h1>{rendering.title}</h1>
           <div className={styles.metaRow}>
             <span>AS OF {item.asOf}</span>
@@ -72,7 +78,7 @@ export default function DeepDiveArticle({ item, language = "cn" }: { item: Resea
                 <div key={`${row.period}-${row.label.en}`}>
                   <span>{row.period}</span>
                   <strong>{row.label[locale]}</strong>
-                  <b>{formatValue(row.value, row.unit, locale)}</b>
+                  <b>{row.displayValue?.[locale] ?? formatValue(row.value, row.unit, locale)}</b>
                 </div>
               ))}
             </div>
@@ -86,6 +92,21 @@ export default function DeepDiveArticle({ item, language = "cn" }: { item: Resea
               ))}
             </div>
           </section>
+
+          {rendering.narrativeSections?.length ? (
+            <section className={styles.articleSection}>
+              <p className={styles.sectionLabel}>FULL ANALYSIS / POINT-IN-TIME RECORD</p>
+              <h2>{isCn ? "完整研究论证。" : "The full research argument."}</h2>
+              <div className={styles.narrative}>
+                {rendering.narrativeSections.map((section) => (
+                  <section id={section.id} key={section.id}>
+                    <h3>{section.title}</h3>
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>{section.body}</ReactMarkdown>
+                  </section>
+                ))}
+              </div>
+            </section>
+          ) : null}
 
           <section className={styles.articleSection}>
             <p className={styles.sectionLabel}>CONSENSUS → EXPECTATION GAP</p>
@@ -125,11 +146,19 @@ export default function DeepDiveArticle({ item, language = "cn" }: { item: Resea
               {item.valuationScenarios.map((scenario) => (
                 <div className={styles.scenarioCard} key={scenario.id}>
                   <p className={styles.claimMeta}><span>{scenario.label[locale]}</span>{scenario.id}</p>
-                  <div className={styles.scenarioMetric}>
-                    <div><small>{isCn ? "远期收入" : "FORWARD REVENUE"}</small><strong>${scenario.forwardRevenueUsdM.toLocaleString(locale)}m</strong></div>
-                    <div><small>{isCn ? "销售倍数" : "SALES MULTIPLE"}</small><strong>{scenario.salesMultiple}×</strong></div>
-                    <div><small>{isCn ? "隐含企业价值" : "IMPLIED EV"}</small><strong>${scenario.impliedEnterpriseValueUsdM.toLocaleString(locale)}m</strong></div>
-                  </div>
+                  {scenario.metrics?.length ? (
+                    <div className={styles.scenarioMetric}>
+                      {scenario.metrics.map((metric) => (
+                        <div key={metric.label.en}><small>{metric.label[locale]}</small><strong>{metric.value[locale]}</strong></div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className={styles.scenarioMetric}>
+                      <div><small>{isCn ? "远期收入" : "FORWARD REVENUE"}</small><strong>${scenario.forwardRevenueUsdM?.toLocaleString(locale)}m</strong></div>
+                      <div><small>{isCn ? "销售倍数" : "SALES MULTIPLE"}</small><strong>{scenario.salesMultiple}×</strong></div>
+                      <div><small>{isCn ? "隐含企业价值" : "IMPLIED EV"}</small><strong>${scenario.impliedEnterpriseValueUsdM?.toLocaleString(locale)}m</strong></div>
+                    </div>
+                  )}
                   <p>{scenario.interpretation[locale]}</p>
                   <code>{scenario.calculation}</code>
                 </div>
