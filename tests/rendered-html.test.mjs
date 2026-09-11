@@ -46,6 +46,15 @@ const editorialRouteSource = await readFile(new URL("../app/deep-dive/global-ai-
 const englishEditorialRouteSource = await readFile(new URL("../app/en/deep-dive/global-ai-hardware-profit-pools-2026-09/route.ts", import.meta.url), "utf8");
 const editorialHtmlCn = await readFile(new URL("../content/editorial-deep-dives/global-ai-hardware-profit-pools-2026-09.zh.html", import.meta.url), "utf8");
 const editorialHtmlEn = await readFile(new URL("../content/editorial-deep-dives/global-ai-hardware-profit-pools-2026-09.en.html", import.meta.url), "utf8");
+const memorySeriesSlugs = [
+  "hbm-memory-cash-capture-alpha-2026-09",
+  "micron-hbm-capital-cycle-2026-09",
+  "sandisk-nand-capital-cycle-2026-09",
+];
+const memorySeriesPages = await Promise.all(memorySeriesSlugs.flatMap((slug) => [
+  readFile(new URL(`../content/editorial-deep-dives/${slug}.zh.html`, import.meta.url), "utf8"),
+  readFile(new URL(`../content/editorial-deep-dives/${slug}.en.html`, import.meta.url), "utf8"),
+]));
 
 test("defines every public navigation section", () => {
   for (const id of ["top", "research", "philosophy", "capabilities", "workflow", "direction", "practice", "notes", "contact"]) {
@@ -150,7 +159,9 @@ test("serves the AI hardware theme study from reviewed editorial HTML on explici
   assert.match(editorialRouteSource, /"global-ai-hardware-profit-pools-2026-09", "zh"/);
   assert.match(englishEditorialRouteSource, /"global-ai-hardware-profit-pools-2026-09", "en"/);
   assert.match(editorialLoaderSource, /"Content-Type": "text\/html; charset=utf-8"/);
-  assert.match(editorialLoaderSource, /editorialDeepDiveSlugs = \["global-ai-hardware-profit-pools-2026-09"\]/);
+  for (const slug of ["global-ai-hardware-profit-pools-2026-09", ...memorySeriesSlugs]) {
+    assert.match(editorialLoaderSource, new RegExp(`"${slug}"`));
+  }
   for (const source of [deepDivePageSource, englishDeepDivePageSource]) {
     assert.match(source, /filter\(\(\{ slug \}\) => !isEditorialDeepDive\(slug\)\)/);
   }
@@ -181,6 +192,32 @@ test("serves the AI hardware theme study from reviewed editorial HTML on explici
   assert.match(editorialHtmlCn, /href="\/en\/deep-dive\/global-ai-hardware-profit-pools-2026-09"/);
   assert.match(editorialHtmlEn, /href="\/en\/deep-dive">Deep Dive Index/);
   assert.match(editorialHtmlEn, /href="\/deep-dive\/global-ai-hardware-profit-pools-2026-09"/);
+});
+
+test("publishes the bilingual memory capital-cycle series without Desk dependencies", () => {
+  for (const [index, slug] of memorySeriesSlugs.entries()) {
+    const zh = memorySeriesPages[index * 2];
+    const en = memorySeriesPages[index * 2 + 1];
+    for (const html of [zh, en]) {
+      assert.match(html, /^<!doctype html>/);
+      assert.match(html, /MEMORY CAPITAL-CYCLE SERIES|存储资本周期三篇系列/);
+      for (const siblingSlug of memorySeriesSlugs) {
+        assert.match(html, new RegExp(`/deep-dive/${siblingSlug}`));
+      }
+      assert.doesNotMatch(html, /desk\.lunartuliplab\.com|\/external\/|workspace\/ai-team|workspace\/decision_core/i);
+    }
+    assert.match(zh, new RegExp(`rel="canonical" href="https://lunartuliplab\\.com/deep-dive/${slug}"`));
+    assert.match(en, new RegExp(`rel="canonical" href="https://lunartuliplab\\.com/en/deep-dive/${slug}"`));
+    assert.match(zh, /<html lang="zh-CN">/);
+    assert.match(en, /<html lang="en">/);
+  }
+  for (const hbm of memorySeriesPages.slice(0, 2)) {
+    assert.match(hbm, /data:image\/png;base64,/);
+    assert.match(hbm, /class="flow-figure"/);
+  }
+  assert.match(researchCatalogSource, /"id": "RO-THEME-MEMORY-CASH-CAPTURE-001"/);
+  assert.match(researchCatalogSource, /"id": "RO-COMP-MU-CAPITAL-CYCLE-001"/);
+  assert.match(researchCatalogSource, /"id": "RO-COMP-SNDK-CAPITAL-CYCLE-001"/);
 });
 
 test("keeps the AI hardware study inside its audited factual boundaries", () => {

@@ -2101,5 +2101,534 @@
         "en": "The basis separation is not closed: the Chinese names use attributable net profit, the U.S. annualised multiples use non-GAAP net income, and non-GAAP operating margin is a third basis. Placing all six optics names in a strictly comparable valuation framework would require normalising profit, net cash, tax rate and share count, and this object does not take that step."
       }
     ]
+  },
+  {
+    "id": "RO-THEME-MEMORY-CASH-CAPTURE-001",
+    "slug": "hbm-memory-cash-capture-alpha-2026-09",
+    "kind": "theme-study",
+    "tickers": ["MU", "000660.KS", "005930.KS", "SNDK", "285A.T"],
+    "publishedAt": "2026-09-10",
+    "asOf": "2026-09-10",
+    "version": "1.0.0",
+    "sourceLabel": "Memory capital-cycle series I · HBM revenue-to-cash-capture gap · 2026-09-10 edition",
+    "claims": [
+      {
+        "id": "CL-MEMTH-001",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "SanDisk FY2026 经营现金流为 116.71 亿美元，购置固定资产为 1.77 亿美元，公司列示自由现金流为 114.94 亿美元；同期收入为 202.48 亿美元。",
+          "en": "SanDisk reported FY2026 operating cash flow of $11.671 billion, purchases of property, plant and equipment of $177 million, company-presented free cash flow of $11.494 billion, and revenue of $20.248 billion."
+        },
+        "evidenceIds": ["EV-MEMTH-SNDK"]
+      },
+      {
+        "id": "CL-MEMTH-002",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "报告自由现金流率为 56.77%；再扣除 2.75 亿美元合资企业净出资及 24.76 亿美元新商业模式相关现金影响后，调整后自由现金流为 87.43 亿美元，对应收入的 43.18%，两种口径相差 13.59 个百分点。",
+          "en": "Reported free-cash-flow margin was 56.77%. After a further $275 million of net joint-venture contributions and $2.476 billion of cash effects related to the new business model, adjusted free cash flow was $8.743 billion, or 43.18% of revenue, a gap of 13.59 percentage points."
+        },
+        "evidenceIds": ["EV-MEMTH-SNDK"]
+      },
+      {
+        "id": "CL-MEMTH-003",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "美光披露 HBM4 12-high 量产爬坡速度约为 HBM3E 12-high 的两倍，累计 HBM4 出货收入超过 10 亿美元；SK 海力士披露 HBM4 已开始批量出货，三星披露 HBM4 销售扩大并送出 HBM4E 样品。",
+          "en": "Micron disclosed that its HBM4 12-high production ramp was running at roughly twice the pace of HBM3E 12-high and that cumulative HBM4 shipment revenue had exceeded $1 billion. SK hynix reported volume HBM4 shipments, while Samsung reported expanding HBM4 sales and HBM4E samples delivered to major customers."
+        },
+        "evidenceIds": ["EV-MEMTH-MU", "EV-MEMTH-SKH", "EV-MEMTH-SAMSUNG"]
+      },
+      {
+        "id": "CL-MEMTH-004",
+        "type": "Hypothesis",
+        "text": {
+          "zh-CN": "下一段可重复验证的 HBM Alpha 更可能来自“产品收入—调整后现金捕获差”：产品收入增长、现金转换稳定且合格供给到达偏慢，支持更高周期底部；收入与利润增长但调整后现金转换走弱，则提示盈利质量先于标题利润见顶。",
+          "en": "The next repeatably testable HBM alpha may sit in the product-revenue-to-adjusted-cash-capture gap. Rising product revenue, stable cash conversion and slow qualified supply would support a higher cycle floor; rising revenue and profit alongside weakening adjusted cash conversion would signal earnings quality peaking ahead of headline profit."
+        },
+        "evidenceIds": ["EV-MEMTH-SNDK", "EV-MEMTH-MU", "EV-MEMTH-SKH", "EV-MEMTH-SAMSUNG"]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "EV-MEMTH-SNDK",
+        "title": "SanDisk FY2026 Results and Form 10-K",
+        "source": {"publisher": "SanDisk Investor Relations", "url": "https://investor.sandisk.com/node/8136/pdf", "document": "FY2026 Results"},
+        "sourceDate": "2026-08-05",
+        "dataAsOf": "2026-07-03",
+        "calculation": "11494 / 20248 = 56.77%; (11494 - 275 - 2476) / 20248 = 43.18%.",
+        "confidence": "high",
+        "counterevidence": "SanDisk is a NAND-cycle control, not an HBM producer; the bridge demonstrates method rather than HBM product economics.",
+        "lastVerified": "2026-09-10",
+        "role": "primary"
+      },
+      {
+        "id": "EV-MEMTH-MU",
+        "title": "Micron FY2026 Q3 prepared remarks and Form 10-Q",
+        "source": {"publisher": "Micron Investor Relations", "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf", "document": "FY2026 Q3 prepared remarks"},
+        "sourceDate": "2026-06-24",
+        "dataAsOf": "2026-05-28",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "Micron does not disclose a complete standalone HBM profit and cash-flow bridge.",
+        "lastVerified": "2026-09-10",
+        "role": "primary"
+      },
+      {
+        "id": "EV-MEMTH-SKH",
+        "title": "SK hynix Q2 2026 business results",
+        "source": {"publisher": "SK hynix Newsroom", "url": "https://news.skhynix.com/en/q2-2026-business-results/", "document": "Q2 2026 business results"},
+        "sourceDate": "2026-07-30",
+        "dataAsOf": "2026-06-30",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "Company-level profit includes memory products beyond HBM.",
+        "lastVerified": "2026-09-10",
+        "role": "primary"
+      },
+      {
+        "id": "EV-MEMTH-SAMSUNG",
+        "title": "Samsung Electronics Q2 2026 results",
+        "source": {"publisher": "Samsung Newsroom", "url": "https://news.samsung.com/global/samsung-electronics-announces-second-quarter-2026-results", "document": "Q2 2026 results"},
+        "sourceDate": "2026-07-30",
+        "dataAsOf": "2026-06-30",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "Device Solutions combines memory, foundry and System LSI; HBM profit is not separately disclosed.",
+        "lastVerified": "2026-09-10",
+        "role": "primary"
+      }
+    ],
+    "financialBridge": [
+      {"label": {"zh-CN": "SanDisk FY2026 收入", "en": "SanDisk FY2026 revenue"}, "period": "2026-FY", "value": 20248, "unit": "USDm", "evidenceIds": ["EV-MEMTH-SNDK"]},
+      {"label": {"zh-CN": "报告自由现金流", "en": "Reported free cash flow"}, "period": "2026-FY", "value": 11494, "unit": "USDm", "evidenceIds": ["EV-MEMTH-SNDK"]},
+      {"label": {"zh-CN": "调整后自由现金流", "en": "Adjusted free cash flow"}, "period": "2026-FY", "value": 8743, "unit": "USDm", "evidenceIds": ["EV-MEMTH-SNDK"]},
+      {"label": {"zh-CN": "报告与调整后 FCF 率差", "en": "Reported-to-adjusted FCF-margin gap"}, "period": "2026-FY", "value": 13.59, "unit": "percent", "evidenceIds": ["EV-MEMTH-SNDK"]}
+    ],
+    "valuationScenarios": [
+      {
+        "id": "VAL-MEMTH-CASH-CAPTURE",
+        "label": {"zh-CN": "现金捕获差压力测试", "en": "Cash-capture-gap stress test"},
+        "metrics": [
+          {"label": {"zh-CN": "报告 FCF 率", "en": "Reported FCF margin"}, "value": {"zh-CN": "56.77%", "en": "56.77%"}},
+          {"label": {"zh-CN": "调整后 FCF 率", "en": "Adjusted FCF margin"}, "value": {"zh-CN": "43.18%", "en": "43.18%"}}
+        ],
+        "calculation": "(11671 - 177) / 20248; (11671 - 177 - 275 - 2476) / 20248.",
+        "interpretation": {
+          "zh-CN": "两种口径都可复算，但回答不同问题；差距的连续变化比任一单期绝对值更适合作为因子。",
+          "en": "Both bases are reproducible but answer different questions. The sequential change in the gap is a better factor candidate than either one-period level."
+        }
+      },
+      {
+        "id": "VAL-MEMTH-DURATION",
+        "label": {"zh-CN": "竞争优势期分叉", "en": "Competitive-duration fork"},
+        "metrics": [
+          {"label": {"zh-CN": "正向条件", "en": "Positive condition"}, "value": {"zh-CN": "现金差收窄", "en": "Cash gap narrows"}},
+          {"label": {"zh-CN": "反向条件", "en": "Negative condition"}, "value": {"zh-CN": "有效供给加速", "en": "Qualified supply accelerates"}}
+        ],
+        "calculation": "Scenario classification; no per-share valuation is produced.",
+        "interpretation": {
+          "zh-CN": "产品收入与调整后现金转换同向、而合格供给偏慢时，竞争优势期可延长；反之应缩短。",
+          "en": "Competitive duration can extend when product revenue and adjusted cash conversion rise together while qualified supply stays slow; the reverse combination shortens it."
+        }
+      }
+    ],
+    "counterevidenceClaimIds": ["CL-MEMTH-004"],
+    "falsifiers": [
+      {
+        "id": "FAL-MEMTH-001",
+        "metric": "Adjusted cash-conversion direction while HBM product revenue grows",
+        "operator": "<",
+        "threshold": 0,
+        "unit": "percent",
+        "horizon": "each of the next two reporting cycles",
+        "claimIds": ["CL-MEMTH-004"],
+        "rationale": {
+          "zh-CN": "若 HBM 产品收入增长时调整后现金转换连续环比下降，收入—现金捕获差扩大，结构性重估假设应降级。",
+          "en": "If adjusted cash conversion falls sequentially while HBM product revenue rises, the gap is widening and the structural rerating hypothesis should be downgraded."
+        }
+      },
+      {
+        "id": "FAL-MEMTH-002",
+        "metric": "Supplier programs advancing from plan to qualified sellable output",
+        "operator": ">=",
+        "threshold": 2,
+        "unit": "count",
+        "horizon": "each of the next two reporting cycles",
+        "claimIds": ["CL-MEMTH-004"],
+        "rationale": {
+          "zh-CN": "若同一观察窗内至少两个供应项目跨入认证后的可售产出，供给斜率快于当前假设，竞争优势期应缩短。",
+          "en": "If at least two supplier programmes reach post-qualification sellable output in the same observation window, supply is arriving faster than assumed and competitive duration should shorten."
+        }
+      }
+    ],
+    "versions": [
+      {"version": "1.0.0", "date": "2026-09-10", "diff": {"zh-CN": "首版双语 canonical 研究对象；保留现金桥图与四层因果图，并与 MU、SNDK 资本周期姊妹篇组成三篇系列。", "en": "First bilingual canonical object, retaining the cash bridge and four-layer causal diagram and forming a three-part series with the MU and SNDK capital-cycle studies."}}
+    ],
+    "renderings": {
+      "zh-CN": {
+        "locale": "zh-CN",
+        "siblingLocale": "en",
+        "title": "HBM 传统周期估值是否会被打破：下一段 Alpha 可能藏在“收入—现金捕获差”里",
+        "question": "HBM 的合同化究竟抬高了周期底部，还是高利润正在通过资本开支制造下一轮供给？",
+        "standfirst": "需求、价格、良率与产能已经进入共识区。下一段更可验证的预期差，是产品收入增长能否在剔除客户资金、合资出资与新增产能投资后留下可重复现金。",
+        "whyItMatters": "收入、利润与现金捕获并不天然同步。把有效供给、产品商业化、财务归属与现金桥串成同一时点序列，才能区分结构性利润底盘与周期尖峰。",
+        "consensus": "AI 存储需求、HBM4 放量和长期协议提高收入可见度已经被市场广泛接受。",
+        "differentiated": "研究重点从需求总量转向收入—现金捕获差，以及高利润诱发资本开支、制程迁移与新进入者的二阶供给反馈。",
+        "valuation": "估值不依赖单点收入增速或毛利率，而拆成归属清晰的产品收入、调整后现金转换与竞争优势期。SanDisk 现金桥是方法对照，不是 HBM 产品利润替代值。",
+        "update": "v1.0 保留中文原稿的两个图表和全部研究判断，新增 claim-parity 英文版、伴生证据台账与系列导航。",
+        "evidenceClaimIds": ["CL-MEMTH-001", "CL-MEMTH-002", "CL-MEMTH-003"],
+        "causalChain": [
+          {"title": "有效供给", "body": "计划先经过设备、投产、认证和良率，才成为可售产出。", "claimIds": ["CL-MEMTH-003"]},
+          {"title": "财务归属", "body": "产品收入必须与分部及公司现金流桥接，不能把公司利润直接等同 HBM 单品利润。", "claimIds": ["CL-MEMTH-001", "CL-MEMTH-004"]},
+          {"title": "连续验证", "body": "收入增长与调整后现金转换同向才提高盈利上修质量。", "claimIds": ["CL-MEMTH-002", "CL-MEMTH-004"]}
+        ],
+        "riskClaimIds": ["CL-MEMTH-002"],
+        "forwardTestIds": ["FAL-MEMTH-001", "FAL-MEMTH-002"]
+      },
+      "en": {
+        "locale": "en",
+        "siblingLocale": "zh-CN",
+        "title": "Can HBM break the traditional cycle valuation? The next alpha may sit in the revenue-to-cash capture gap",
+        "question": "Has HBM contracting raised the cycle floor, or are peak profits financing the next supply wave?",
+        "standfirst": "Demand, pricing, yield and capacity are already crowded debates. The more testable expectations gap is whether product-revenue growth still leaves repeatable cash after customer funding, joint-venture contributions and new capacity investment.",
+        "whyItMatters": "Revenue, profit and cash capture do not move together by construction. Effective supply, product commercialisation, financial attribution and the cash bridge have to sit in one point-in-time series to separate a structural earnings floor from a cyclical peak.",
+        "consensus": "AI-memory demand, the HBM4 ramp and long-term agreements improving revenue visibility are widely accepted.",
+        "differentiated": "The work moves from aggregate demand to the revenue-to-cash capture gap and to the second-order supply response induced by high profit: capex, process migration and new entrants.",
+        "valuation": "Valuation is decomposed into attributable product revenue, adjusted cash conversion and competitive-advantage period rather than a single revenue-growth or gross-margin point. The SanDisk bridge is a methodological control, not a proxy for HBM product profit.",
+        "update": "Version 1.0 preserves both figures and every research judgment in the Chinese source, adding a claim-parity English edition, companion evidence ledger and series navigation.",
+        "evidenceClaimIds": ["CL-MEMTH-001", "CL-MEMTH-002", "CL-MEMTH-003"],
+        "causalChain": [
+          {"title": "Effective supply", "body": "Plans must pass through equipment, production, qualification and yield before becoming sellable output.", "claimIds": ["CL-MEMTH-003"]},
+          {"title": "Financial attribution", "body": "Product revenue must bridge into segment and company cash flow; company profit cannot stand in for standalone HBM economics.", "claimIds": ["CL-MEMTH-001", "CL-MEMTH-004"]},
+          {"title": "Continuous validation", "body": "Earnings revisions have higher quality only when revenue growth and adjusted cash conversion move together.", "claimIds": ["CL-MEMTH-002", "CL-MEMTH-004"]}
+        ],
+        "riskClaimIds": ["CL-MEMTH-002"],
+        "forwardTestIds": ["FAL-MEMTH-001", "FAL-MEMTH-002"]
+      }
+    },
+    "dataGaps": [
+      {"zh-CN": "主要 HBM 供应商尚未披露可与公司现金流完整桥接的 HBM 单品利润、资本开支与现金转换；因此本对象提出因子假设，不声称已经完成收益预测验证。", "en": "Major HBM suppliers do not yet disclose standalone HBM profit, capex and cash conversion that reconcile fully to company cash flow. The object therefore states a factor hypothesis rather than claiming completed return-prediction validation."}
+    ]
+  },
+  {
+    "id": "RO-COMP-MU-CAPITAL-CYCLE-001",
+    "slug": "micron-hbm-capital-cycle-2026-09",
+    "kind": "company-deep-dive",
+    "tickers": ["MU"],
+    "publishedAt": "2026-09-10",
+    "asOf": "2026-09-07",
+    "version": "1.0.0",
+    "sourceLabel": "Memory capital-cycle series II · Micron HBM capital cycle · 2026-09-07 information set",
+    "claims": [
+      {
+        "id": "CL-MUCC-001",
+        "type": "Fact",
+        "text": {"zh-CN": "美光 FQ3-26 营收 414.6 亿美元，同比增长约 346%；非 GAAP 毛利率 84.9%，FQ4 指引为营收 500 亿美元±10 亿美元、非 GAAP 毛利率约 86%。", "en": "Micron reported FQ3-26 revenue of $41.46 billion, up roughly 346% year over year, and a non-GAAP gross margin of 84.9%; FQ4 guidance called for revenue of $50.0 billion ± $1.0 billion and a non-GAAP gross margin of roughly 86%."},
+        "evidenceIds": ["EV-MUCC-Q3"]
+      },
+      {
+        "id": "CL-MUCC-002",
+        "type": "Fact",
+        "text": {"zh-CN": "美光披露 FY27 资本开支每季将高于 FQ4 约 100 亿美元的水平，过半增量用于洁净室建设。", "en": "Micron disclosed that FY27 capex would run above the roughly $10 billion FQ4 level in every quarter, with more than half of the increment allocated to cleanroom construction."},
+        "evidenceIds": ["EV-MUCC-Q3"]
+      },
+      {
+        "id": "CL-MUCC-003",
+        "type": "Derived",
+        "text": {"zh-CN": "在 WACC 9.5%、永续增速 3%、十年窗口及 EV 近似市值的简化反向 DCF 下，2026-09-04 快照隐含未来五年营收复合 21.57% 与稳态 FCF 利润率 28.99%；结果对取价与模型假设敏感。", "en": "Under a simplified reverse DCF using a 9.5% WACC, 3% terminal growth, a ten-year window and enterprise value approximated by market capitalisation, the 2026-09-04 snapshot implied 21.57% five-year revenue CAGR and a 28.99% steady FCF margin. The output is sensitive to the price date and model assumptions."},
+        "evidenceIds": ["EV-MUCC-MODEL"]
+      },
+      {
+        "id": "CL-MUCC-004",
+        "type": "Hypothesis",
+        "text": {"zh-CN": "HBM 合同化让存储“脱离周期”的命题，需要 2027 年 HBM4/4E 合约价、三家供应商 HBM 毛利率及 HBM 与商品 DRAM 联动性三项同时通过；研究稿对三项存活至 2028 的主观概率为约 25%。", "en": "The thesis that HBM contracting lets memory escape the cycle requires three tests to pass together: 2027 HBM4/4E contract prices, HBM gross margins across all three suppliers, and decoupling between HBM and commodity DRAM. The research note assigns a subjective probability of roughly 25% that all three survive through 2028."},
+        "evidenceIds": ["EV-MUCC-Q3", "EV-MUCC-MODEL"]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "EV-MUCC-Q3",
+        "title": "Micron FY2026 Q3 prepared remarks",
+        "source": {"publisher": "Micron Investor Relations", "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf", "document": "FY2026 Q3 prepared remarks"},
+        "sourceDate": "2026-06-24",
+        "dataAsOf": "2026-05-28",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "Guidance and capex plans are forward-looking and may be revised.",
+        "lastVerified": "2026-09-10",
+        "role": "primary"
+      },
+      {
+        "id": "EV-MUCC-MODEL",
+        "title": "Micron point-in-time research uniform and reverse-DCF-lite output",
+        "source": {"publisher": "LunarTulip Research", "document": "MU capital-cycle uniform · 2026-09-07"},
+        "sourceDate": "2026-09-07",
+        "dataAsOf": "2026-09-04",
+        "calculation": "WACC 9.5%; terminal growth 3%; ten-year window; EV approximated by market capitalisation before net cash/debt.",
+        "confidence": "medium",
+        "counterevidence": "The inverse problem is non-unique and point-in-time market inputs came from a third-party quote service.",
+        "lastVerified": "2026-09-10",
+        "role": "supporting"
+      }
+    ],
+    "financialBridge": [
+      {"label": {"zh-CN": "FQ3-26 营收", "en": "FQ3-26 revenue"}, "period": "2026-FQ3", "value": 41456, "unit": "USDm", "evidenceIds": ["EV-MUCC-Q3"]},
+      {"label": {"zh-CN": "FQ3-26 非 GAAP 毛利率", "en": "FQ3-26 non-GAAP gross margin"}, "period": "2026-FQ3", "value": 84.9, "unit": "percent", "evidenceIds": ["EV-MUCC-Q3"]},
+      {"label": {"zh-CN": "FQ4-26 营收指引中点", "en": "FQ4-26 revenue guidance midpoint"}, "period": "2026-FQ4", "value": 50000, "unit": "USDm", "evidenceIds": ["EV-MUCC-Q3"]}
+    ],
+    "valuationScenarios": [
+      {
+        "id": "VAL-MUCC-REVERSE-DCF",
+        "label": {"zh-CN": "市场隐含高原", "en": "Market-implied plateau"},
+        "metrics": [
+          {"label": {"zh-CN": "五年营收复合", "en": "Five-year revenue CAGR"}, "value": {"zh-CN": "21.57%", "en": "21.57%"}},
+          {"label": {"zh-CN": "稳态 FCF 利润率", "en": "Steady FCF margin"}, "value": {"zh-CN": "28.99%", "en": "28.99%"}}
+        ],
+        "calculation": "Reverse-DCF-lite v1 at the 2026-09-04 point-in-time quote; WACC 9.5%, terminal growth 3%, ten-year window.",
+        "interpretation": {"zh-CN": "这是用于读出市场要求的敏感性结果，不是内在价值或目标价。", "en": "This is a sensitivity reading of what the market requires, not intrinsic value or a price target."}
+      },
+      {
+        "id": "VAL-MUCC-PLATEAU-FORK",
+        "label": {"zh-CN": "高原化与均值回归", "en": "Plateau versus mean reversion"},
+        "metrics": [
+          {"label": {"zh-CN": "研究稿高原化概率", "en": "Research-note plateau probability"}, "value": {"zh-CN": "约 45%", "en": "about 45%"}},
+          {"label": {"zh-CN": "脱离周期概率", "en": "Escape-from-cycle probability"}, "value": {"zh-CN": "约 25%", "en": "about 25%"}}
+        ],
+        "calculation": "Author-assigned scenario weights in the 2026-09-07 information set; not statistical forecasts.",
+        "interpretation": {"zh-CN": "高原化允许需求不崩但利润率从尖峰收敛；概率是研究判断，不是历史频率。", "en": "The plateau case allows demand to hold while margin compresses from the peak. The probabilities are research judgments, not historical frequencies."}
+      }
+    ],
+    "counterevidenceClaimIds": ["CL-MUCC-004"],
+    "falsifiers": [
+      {
+        "id": "FAL-MUCC-001",
+        "metric": "2027 HBM4/4E contract-price YoY decline",
+        "operator": ">",
+        "threshold": 15,
+        "unit": "percent",
+        "horizon": "calendar 2027",
+        "claimIds": ["CL-MUCC-004"],
+        "rationale": {"zh-CN": "同比跌幅超过 15% 说明定制品价格竞争已经足以破坏“脱离周期”的第一项条件。", "en": "A year-over-year decline greater than 15% would mean custom-product price competition has broken the first condition of the escape-from-cycle thesis."}
+      },
+      {
+        "id": "FAL-MUCC-002",
+        "metric": "HBM gross margin across all three suppliers",
+        "operator": "<",
+        "threshold": 60,
+        "unit": "percent",
+        "horizon": "full-year 2027",
+        "claimIds": ["CL-MUCC-004"],
+        "rationale": {"zh-CN": "任一供应商全年 HBM 毛利率低于 60%，三项同时成立的命题即失效。", "en": "If any supplier's full-year HBM gross margin falls below 60%, the joint three-condition thesis fails."}
+      }
+    ],
+    "versions": [
+      {"version": "1.0.0", "date": "2026-09-10", "diff": {"zh-CN": "将 2026-09-07 Desk 原稿按原文上架为独立双语 canonical 页面，并保留时点制服、反向 DCF 边界、验证日历与姊妹篇关系。", "en": "Published the 2026-09-07 Desk source as an independent bilingual canonical page, retaining its point-in-time uniform, reverse-DCF boundaries, validation calendar and sibling relationship."}}
+    ],
+    "renderings": {
+      "zh-CN": {
+        "locale": "zh-CN",
+        "siblingLocale": "en",
+        "title": "报表在顶点，资本在涌入：美光的“脱离周期”命题进入可证伪窗口",
+        "question": "HBM 合同化能否抵消 2027—2028 年集中到达的供给响应？",
+        "standfirst": "短期涨价与分配制仍可能兑现，但决定周期是否被打破的变量不在下一份财报，而在资本开支转成合格供给后的价格、利润率与商品联动性。",
+        "whyItMatters": "记录利润正在诱发洁净室、制程迁移和新进入者投资。资本周期的物理时滞让短期紧缺与中期回报率回落可以同时成立。",
+        "consensus": "FQ3-26 的记录营收、毛利率与 FQ4 指引，以及 HBM 长期协议提高收入可见度，已经进入市场定价。",
+        "differentiated": "增量信息是四路供给响应及 2H27—2028 的集中到达窗；命题必须通过价格、毛利率和商品联动性三项测试。",
+        "valuation": "反向 DCF 只读出市场要求的约 20% 五年营收复合与约 30% 稳态 FCF 利润率，不把低前瞻市盈率直接等同低估。",
+        "update": "v1.0 基本原样保留 Desk 中文稿，新增 claim-parity 英文稿、公开官网 canonical、系列导航与伴生证据对象；不依赖或回链 Desk 私有 URL。",
+        "evidenceClaimIds": ["CL-MUCC-001", "CL-MUCC-002", "CL-MUCC-003"],
+        "causalChain": [
+          {"title": "涨价脉冲", "body": "收入增长主要由价格贡献，报表仍可能继续强。", "claimIds": ["CL-MUCC-001"]},
+          {"title": "资本响应", "body": "记录利润推动洁净室与行业产能投资。", "claimIds": ["CL-MUCC-002"]},
+          {"title": "2027—2028 裁决", "body": "价格、利润率和商品联动性共同决定命题是否存活。", "claimIds": ["CL-MUCC-004"]}
+        ],
+        "riskClaimIds": ["CL-MUCC-002"],
+        "forwardTestIds": ["FAL-MUCC-001", "FAL-MUCC-002"]
+      },
+      "en": {
+        "locale": "en",
+        "siblingLocale": "zh-CN",
+        "title": "Financials at the peak, capital flooding in: Micron's escape-from-cycle thesis enters a falsifiable window",
+        "question": "Can HBM contracting offset the supply response arriving in 2027–2028?",
+        "standfirst": "Near-term price and allocation dynamics can still deliver, but the variable that decides whether the cycle is broken is not the next print. It is what happens to price, margin and commodity linkage once capex becomes qualified supply.",
+        "whyItMatters": "Record profit is inducing cleanroom construction, process migration and entrant investment. Capital-cycle lead times allow near-term scarcity and medium-term return compression to coexist.",
+        "consensus": "Record FQ3-26 revenue and margin, FQ4 guidance and long-term HBM agreements improving visibility are already in the price.",
+        "differentiated": "The information gain is the four-way supply response and its concentrated 2H27–2028 arrival window. The thesis must pass contract-price, gross-margin and commodity-linkage tests together.",
+        "valuation": "The reverse DCF reads market requirements of roughly 20% five-year revenue CAGR and roughly 30% steady FCF margin; it does not equate a low forward P/E with undervaluation.",
+        "update": "Version 1.0 retains the Desk Chinese source substantially as written, adds a claim-parity English edition, public-site canonical, series navigation and companion evidence object, and carries no dependency on or link back to the private Desk URL.",
+        "evidenceClaimIds": ["CL-MUCC-001", "CL-MUCC-002", "CL-MUCC-003"],
+        "causalChain": [
+          {"title": "Price pulse", "body": "Price contributed most of the revenue increase, and reported results can remain strong.", "claimIds": ["CL-MUCC-001"]},
+          {"title": "Capital response", "body": "Record profit drives cleanroom and industry-capacity investment.", "claimIds": ["CL-MUCC-002"]},
+          {"title": "2027–2028 adjudication", "body": "Price, margin and commodity linkage jointly decide whether the thesis survives.", "claimIds": ["CL-MUCC-004"]}
+        ],
+        "riskClaimIds": ["CL-MUCC-002"],
+        "forwardTestIds": ["FAL-MUCC-001", "FAL-MUCC-002"]
+      }
+    },
+    "dataGaps": [
+      {"zh-CN": "美光尚未披露完整的 HBM 单品利润与现金流桥；2026-09-04 行情、市值和一致预期来自第三方快照，未与完全稀释股数及净现金逐项闭合。", "en": "Micron does not disclose a complete standalone HBM profit and cash-flow bridge. The 2026-09-04 quote, market capitalisation and consensus inputs are third-party snapshots not fully reconciled to diluted shares and net cash."}
+    ]
+  },
+  {
+    "id": "RO-COMP-SNDK-CAPITAL-CYCLE-001",
+    "slug": "sandisk-nand-capital-cycle-2026-09",
+    "kind": "company-deep-dive",
+    "tickers": ["SNDK"],
+    "publishedAt": "2026-09-10",
+    "asOf": "2026-09-07",
+    "version": "1.0.0",
+    "sourceLabel": "Memory capital-cycle series III · SanDisk NAND capital cycle · 2026-09-07 information set",
+    "claims": [
+      {
+        "id": "CL-SNDKCC-001",
+        "type": "Fact",
+        "text": {"zh-CN": "SanDisk FY2026 营收 202.48 亿美元，同比增长 175%；经营现金流 116.71 亿美元，购置固定资产 1.77 亿美元。", "en": "SanDisk reported FY2026 revenue of $20.248 billion, up 175% year over year, operating cash flow of $11.671 billion and purchases of property, plant and equipment of $177 million."},
+        "evidenceIds": ["EV-SNDKCC-10K"]
+      },
+      {
+        "id": "CL-SNDKCC-002",
+        "type": "Fact",
+        "text": {"zh-CN": "公司披露 10 份长期协议、8 家数据中心与 Edge 客户、最低定价下 939 亿美元预期收入、598 亿美元 RPO、12.42 亿美元合同负债及 15 亿美元客户保证金。", "en": "The company disclosed ten long-term agreements with eight datacentre and edge customers, $93.9 billion of expected revenue at floor pricing, $59.8 billion of RPO, $1.242 billion of contract liabilities and $1.5 billion of customer deposits."},
+        "evidenceIds": ["EV-SNDKCC-10K"]
+      },
+      {
+        "id": "CL-SNDKCC-003",
+        "type": "Derived",
+        "text": {"zh-CN": "报告 FCF 利润率约 56.77%；按研究稿口径剔除合资企业净出资与新商业模式现金影响后，调整后 FCF 利润率约 43.18%。两者均为周期时点口径，不应直接外推为永续利润率。", "en": "Reported FCF margin was roughly 56.77%; after removing net joint-venture contributions and cash effects related to the new business model on the research note's basis, adjusted FCF margin was roughly 43.18%. Both are cycle-point readings and should not be extrapolated directly as perpetuities."},
+        "evidenceIds": ["EV-SNDKCC-10K"]
+      },
+      {
+        "id": "CL-SNDKCC-004",
+        "type": "Hypothesis",
+        "text": {"zh-CN": "合同化真实抬高 NAND 周期下限，但能否成为年金取决于供给转松后客户是否继续按 floor 履约，以及 floor 对应毛利率是否足以支撑中期模型。", "en": "Contracting has genuinely raised the NAND-cycle floor, but whether it becomes an annuity depends on customers continuing to perform at the floor after supply loosens and on the floor gross margin being sufficient to support the medium-term model."},
+        "evidenceIds": ["EV-SNDKCC-10K", "EV-SNDKCC-MODEL"]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "EV-SNDKCC-10K",
+        "title": "SanDisk FY2026 results and Form 10-K",
+        "source": {"publisher": "SanDisk Investor Relations", "url": "https://investor.sandisk.com/static-files/47c2209d-7ef3-488d-b9f4-62d371ad8740", "document": "FY2026 Form 10-K"},
+        "sourceDate": "2026-08-17",
+        "dataAsOf": "2026-07-03",
+        "calculation": "(11671 - 177) / 20248 = 56.77%; (11494 - 275 - 2476) / 20248 = 43.18%.",
+        "confidence": "high",
+        "counterevidence": "Contract floors have not yet been tested through a NAND oversupply cycle, and floor gross margin is undisclosed.",
+        "lastVerified": "2026-09-10",
+        "role": "primary"
+      },
+      {
+        "id": "EV-SNDKCC-MODEL",
+        "title": "SanDisk point-in-time research uniform and reverse-DCF-lite output",
+        "source": {"publisher": "LunarTulip Research", "document": "SNDK capital-cycle uniform · 2026-09-07"},
+        "sourceDate": "2026-09-07",
+        "dataAsOf": "2026-09-04",
+        "calculation": "WACC 9.5%; terminal growth 3%; ten-year window; EV approximated by market capitalisation before net cash/debt.",
+        "confidence": "medium",
+        "counterevidence": "The inverse problem is non-unique and market inputs came from a third-party point-in-time quote service.",
+        "lastVerified": "2026-09-10",
+        "role": "supporting"
+      }
+    ],
+    "financialBridge": [
+      {"label": {"zh-CN": "FY2026 营收", "en": "FY2026 revenue"}, "period": "2026-FY", "value": 20248, "unit": "USDm", "evidenceIds": ["EV-SNDKCC-10K"]},
+      {"label": {"zh-CN": "报告自由现金流", "en": "Reported free cash flow"}, "period": "2026-FY", "value": 11494, "unit": "USDm", "evidenceIds": ["EV-SNDKCC-10K"]},
+      {"label": {"zh-CN": "调整后自由现金流", "en": "Adjusted free cash flow"}, "period": "2026-FY", "value": 8743, "unit": "USDm", "evidenceIds": ["EV-SNDKCC-10K"]}
+    ],
+    "valuationScenarios": [
+      {
+        "id": "VAL-SNDKCC-REVERSE-DCF",
+        "label": {"zh-CN": "利润率永久化压力测试", "en": "Margin-perpetuity stress test"},
+        "metrics": [
+          {"label": {"zh-CN": "隐含五年营收复合", "en": "Implied five-year revenue CAGR"}, "value": {"zh-CN": "8.98%", "en": "8.98%"}},
+          {"label": {"zh-CN": "隐含稳态 FCF 利润率", "en": "Implied steady FCF margin"}, "value": {"zh-CN": "56.77%", "en": "56.77%"}}
+        ],
+        "calculation": "Reverse-DCF-lite v1 at the 2026-09-04 point-in-time quote; WACC 9.5%, terminal growth 3%, ten-year window.",
+        "interpretation": {"zh-CN": "结果把现价的主要重量定位在利润率持续期，而非高营收复合；这是敏感性读数，不是目标价。", "en": "The output locates most of the market value in margin duration rather than high revenue compounding. It is a sensitivity reading, not a price target."}
+      },
+      {
+        "id": "VAL-SNDKCC-CASH-BASIS",
+        "label": {"zh-CN": "报告与调整后现金率", "en": "Reported versus adjusted cash margin"},
+        "metrics": [
+          {"label": {"zh-CN": "报告 FCF 率", "en": "Reported FCF margin"}, "value": {"zh-CN": "56.77%", "en": "56.77%"}},
+          {"label": {"zh-CN": "调整后 FCF 率", "en": "Adjusted FCF margin"}, "value": {"zh-CN": "43.18%", "en": "43.18%"}}
+        ],
+        "calculation": "(11671 - 177) / 20248; (11671 - 177 - 275 - 2476) / 20248.",
+        "interpretation": {"zh-CN": "现金率差显示合同资金与合资投入会改变周期尖峰的可重复性判断。", "en": "The cash-margin gap shows how contract funding and JV investment change the repeatability assessment at a cycle peak."}
+      }
+    ],
+    "counterevidenceClaimIds": ["CL-SNDKCC-004"],
+    "falsifiers": [
+      {
+        "id": "FAL-SNDKCC-001",
+        "metric": "4Q26 NAND contract-price change",
+        "operator": "<=",
+        "threshold": 0,
+        "unit": "percent",
+        "horizon": "October-November 2026",
+        "claimIds": ["CL-SNDKCC-004"],
+        "rationale": {"zh-CN": "合约价不再上涨，是供给纪律叙事第一根支柱断裂的高频信号。", "en": "A non-positive contract-price change is the high-frequency signal that the first pillar of the supply-discipline narrative has broken."}
+      },
+      {
+        "id": "FAL-SNDKCC-002",
+        "metric": "Disclosed floor gross margin",
+        "operator": "<",
+        "threshold": 40,
+        "unit": "percent",
+        "horizon": "upon first company disclosure",
+        "claimIds": ["CL-SNDKCC-004"],
+        "rationale": {"zh-CN": "floor 毛利率低于 40% 将直接削弱合同足以支撑 80% 中期毛利率目标的年金叙事。", "en": "A floor gross margin below 40% would directly weaken the claim that contracting can support the 80% medium-term gross-margin model as an annuity."}
+      }
+    ],
+    "versions": [
+      {"version": "1.0.0", "date": "2026-09-10", "diff": {"zh-CN": "将 2026-09-07 Desk 原稿按原文上架为独立双语 canonical 页面，并保留研究制服、现金口径桥、验证日历与 MU 姊妹篇关系。", "en": "Published the 2026-09-07 Desk source as an independent bilingual canonical page, retaining its research uniform, cash-basis bridge, validation calendar and MU sibling relationship."}}
+    ],
+    "renderings": {
+      "zh-CN": {
+        "locale": "zh-CN",
+        "siblingLocale": "en",
+        "title": "合同抬高的是下限，市场定价的是尖峰：SanDisk 与 NAND 资本周期的压力测试",
+        "question": "NAND 的 take-or-pay 合同抬高了周期底部，还是把尖峰现金流提前资本化？",
+        "standfirst": "合同化已经写进资产负债表，但 floor 尚未经历供给过剩压力测试。报告与调整后自由现金流之间的差距，是判断年金叙事能否成立的第一道桥。",
+        "whyItMatters": "NAND 玩家更多、制程迁移本身能形成隐性扩产，供给纪律比 DRAM 更脆弱。SanDisk 自身不扩晶圆的纪律无法约束整个行业。",
+        "consensus": "长期协议、RPO、客户保证金与 FY28—30 中期模型共同支持周期下限抬高，市场已经采信这部分方向。",
+        "differentiated": "现价主要要求尖峰 FCF 利润率长期化；2H27 供给转松、floor 毛利率及合同负债变化是更关键的裁决变量。",
+        "valuation": "反向 DCF 输出约 9% 五年营收复合与约 57% 稳态 FCF 利润率，说明定价重量集中在利润率永久化；报告口径与调整后约 43% 的现金率必须分开。",
+        "update": "v1.0 基本原样保留 Desk 中文稿，新增 claim-parity 英文稿、公开官网 canonical、系列导航与伴生证据对象；不依赖或回链 Desk 私有 URL。",
+        "evidenceClaimIds": ["CL-SNDKCC-001", "CL-SNDKCC-002", "CL-SNDKCC-003"],
+        "causalChain": [
+          {"title": "合同下限", "body": "RPO、最低收入与保证金提高收入可见度。", "claimIds": ["CL-SNDKCC-002"]},
+          {"title": "现金口径", "body": "预收、押金与合资现金使报告 FCF 高于调整后捕获。", "claimIds": ["CL-SNDKCC-003"]},
+          {"title": "过剩测试", "body": "供给转松后 floor 履约与毛利率才决定合同是否接近年金。", "claimIds": ["CL-SNDKCC-004"]}
+        ],
+        "riskClaimIds": ["CL-SNDKCC-003"],
+        "forwardTestIds": ["FAL-SNDKCC-001", "FAL-SNDKCC-002"]
+      },
+      "en": {
+        "locale": "en",
+        "siblingLocale": "zh-CN",
+        "title": "Contracts raise the floor; the market prices the peak: Stress-testing SanDisk and the NAND capital cycle",
+        "question": "Do NAND take-or-pay contracts raise the cycle floor, or capitalise peak cash flow in advance?",
+        "standfirst": "Contracting is already visible on the balance sheet, but the floor has not been stress-tested through oversupply. The gap between reported and adjusted free cash flow is the first bridge in judging whether the annuity narrative can hold.",
+        "whyItMatters": "NAND has more players, and process migration itself creates hidden supply. Industry discipline is more fragile than in DRAM, and SanDisk cannot impose its own wafer discipline on every supplier.",
+        "consensus": "Long-term agreements, RPO, customer deposits and the FY28–30 medium-term model support a higher cycle floor, and the market already accepts that direction.",
+        "differentiated": "The market primarily requires peak FCF margin to persist. The 2H27 supply window, floor gross margin and changes in contract liabilities are the more consequential adjudication variables.",
+        "valuation": "The reverse DCF produces roughly 9% five-year revenue CAGR and roughly 57% steady FCF margin, concentrating the valuation burden on margin perpetuity. Reported cash margin and the roughly 43% adjusted reading must remain separate.",
+        "update": "Version 1.0 retains the Desk Chinese source substantially as written, adds a claim-parity English edition, public-site canonical, series navigation and companion evidence object, and carries no dependency on or link back to the private Desk URL.",
+        "evidenceClaimIds": ["CL-SNDKCC-001", "CL-SNDKCC-002", "CL-SNDKCC-003"],
+        "causalChain": [
+          {"title": "Contract floor", "body": "RPO, minimum revenue and deposits improve revenue visibility.", "claimIds": ["CL-SNDKCC-002"]},
+          {"title": "Cash basis", "body": "Prepayments, deposits and JV cash make reported FCF exceed adjusted capture.", "claimIds": ["CL-SNDKCC-003"]},
+          {"title": "Oversupply test", "body": "Performance at the floor and floor gross margin after supply loosens decide whether the contracts resemble an annuity.", "claimIds": ["CL-SNDKCC-004"]}
+        ],
+        "riskClaimIds": ["CL-SNDKCC-003"],
+        "forwardTestIds": ["FAL-SNDKCC-001", "FAL-SNDKCC-002"]
+      }
+    },
+    "dataGaps": [
+      {"zh-CN": "公司尚未披露 floor 对应毛利率，take-or-pay 条款也未经历 NAND 供给过剩期；HBF 尚无客户认证、收入或定价，因此不进入本对象事实层。", "en": "The company has not disclosed gross margin at the floor, and the take-or-pay terms have not been tested through NAND oversupply. HBF has no disclosed customer qualification, revenue or pricing and therefore remains outside this object's fact layer."}
+    ]
   }
 ]

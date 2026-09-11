@@ -6,7 +6,12 @@ import path from "node:path";
  * DeepDiveArticle template. The research object in the catalog stays authoritative for the
  * index, sitemap, RSS and evidence ledger; the HTML file is the published surface.
  */
-export const editorialDeepDiveSlugs = ["global-ai-hardware-profit-pools-2026-09"] as const;
+export const editorialDeepDiveSlugs = [
+  "global-ai-hardware-profit-pools-2026-09",
+  "hbm-memory-cash-capture-alpha-2026-09",
+  "micron-hbm-capital-cycle-2026-09",
+  "sandisk-nand-capital-cycle-2026-09",
+] as const;
 
 export type EditorialDeepDiveSlug = (typeof editorialDeepDiveSlugs)[number];
 export type EditorialDeepDiveLocale = "zh" | "en";
