@@ -76,7 +76,7 @@ const structuredData = {
       "@type": "Organization",
       "@id": "https://lunartuliplab.com/#organization",
       name: "Lunartulip Lab",
-      alternateName: ["LunarTulip Lab", "Lunar Tulip Lab"],
+      alternateName: ["LunarTulip Lab", "Lunar Tulip Lab", "Lunartulip Research", "LunarTulip Research"],
       url: "https://lunartuliplab.com/",
       logo: {
         "@type": "ImageObject",
@@ -100,10 +100,48 @@ const structuredData = {
       ],
       contactPoint: {
         "@type": "ContactPoint",
-        contactType: "institutional research exchange",
+        contactType: "professional and institutional research access",
         email: INSTITUTIONAL_EMAIL,
         availableLanguage: ["Chinese", "English"],
       },
+      makesOffer: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Always-On Research Desk",
+            serviceType: "Continuous investment research",
+            url: "https://lunartuliplab.com/desk",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "AI-native Research Framework Workshop",
+            serviceType: "Institutional investment-research system workshop",
+            url: "https://lunartuliplab.com/workshop",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Machine-readable Research API",
+            serviceType: "Research data interface",
+            url: "https://lunartuliplab.com/institutional-access#intent-machine_readable_research",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Point-in-time Alternative Datasets",
+            serviceType: "Alternative data for systematic and quantamental research",
+            url: "https://lunartuliplab.com/institutional-access#intent-alternative_dataset",
+          },
+        },
+      ],
       sameAs: ["https://github.com/Lunartulip"],
     },
     {
@@ -115,6 +153,11 @@ const structuredData = {
       description: "Official website and public research archive of Lunartulip Lab.",
       publisher: {
         "@id": "https://lunartuliplab.com/#organization",
+      },
+      hasPart: {
+        "@type": "DataCatalog",
+        "@id": "https://lunartuliplab.com/research.json#catalog",
+        url: "https://lunartuliplab.com/research.json",
       },
       inLanguage: ["zh-CN", "en"],
     },

@@ -97,6 +97,7 @@ function UpRightIcon() {
 export default function WorkshopPreview({ initialLanguage = "cn" }: { initialLanguage?: Language }) {
   const [language, setLanguage] = useState<Language>(initialLanguage);
   const isCn = language === "cn";
+  const accessHref = `${isCn ? "" : "/en"}/institutional-access#intent-research_system_diagnostic`;
   const inquiry = institutionalMailto({
     source: "WORKSHOP_PAGE",
     topic: "6-Session Research System Workshop",
@@ -130,7 +131,7 @@ export default function WorkshopPreview({ initialLanguage = "cn" }: { initialLan
             <button type="button" className={isCn ? styles.active : ""} aria-pressed={isCn} onClick={() => selectLanguage("cn")}>中</button>
             <button type="button" className={!isCn ? styles.active : ""} aria-pressed={!isCn} onClick={() => selectLanguage("en")}>EN</button>
           </div>
-          <a className={styles.headerCta} href={inquiry}>{isCn ? "预约机构诊断" : "Book a diagnostic"} <UpRightIcon /></a>
+          <Link className={styles.headerCta} href={accessHref}>{isCn ? "预约机构诊断" : "Book a diagnostic"} <UpRightIcon /></Link>
         </div>
       </header>
 
@@ -144,7 +145,7 @@ export default function WorkshopPreview({ initialLanguage = "cn" }: { initialLan
               : "Six working sessions around one live investment-research context—from workflow diagnosis and thesis structure to agent workflows, risk gates, decision memory and a 90-day implementation roadmap."}
           </p>
           <div className={styles.actions}>
-            <a className={styles.primary} href={inquiry}>{isCn ? "讨论机构场景" : "Discuss your institutional context"} <UpRightIcon /></a>
+            <Link className={styles.primary} href={accessHref}>{isCn ? "讨论机构场景" : "Discuss your institutional context"} <UpRightIcon /></Link>
             <a className={styles.textLink} href="#sessions">{isCn ? "查看 6 个 Session" : "View the six sessions"} <ArrowIcon /></a>
           </div>
         </div>
@@ -198,7 +199,7 @@ export default function WorkshopPreview({ initialLanguage = "cn" }: { initialLan
 
       <section className={styles.request}>
         <div><p className={styles.eyebrow}>START WITH A REAL CONTEXT</p><h2>{isCn ? "先确认这一部署是否适合您的团队。" : "First confirm whether this deployment fits your team."}</h2><p>{isCn ? "请介绍机构类型、研究责任人、一个代表性场景与当前最希望解决的断点。首次邮件无需包含持仓或敏感数据。" : "Tell us your institution type, accountable research owner, one representative context and the current bottleneck. No holdings or sensitive data are needed in the first email."}</p></div>
-        <a href={inquiry}><small>{isCn ? "6-SESSION WORKSHOP" : "SIX-SESSION DEPLOYMENT"}</small><strong>{isCn ? "预约机构诊断" : "Book an institutional diagnostic"}</strong><UpRightIcon /></a>
+        <Link href={accessHref}><small>{isCn ? "6-SESSION WORKSHOP" : "SIX-SESSION DEPLOYMENT"}</small><strong>{isCn ? "预约机构诊断" : "Book an institutional diagnostic"}</strong><UpRightIcon /></Link>
       </section>
 
       <footer className={styles.footer}>

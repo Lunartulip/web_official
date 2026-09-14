@@ -22,6 +22,11 @@ export default function EnglishAuthorityLedgerPage() {
     temporalCoverage: `${ledger.first_call_date}/${ledger.as_of}`,
     creator: { "@id": "https://lunartuliplab.com/#organization" },
     measurementTechnique: "Directional hit rate with ±5% threshold; expired-flat excluded from the denominator; invalidated observations excluded.",
+    distribution: {
+      "@type": "DataDownload",
+      encodingFormat: "application/ld+json",
+      contentUrl: "https://lunartuliplab.com/authority-ledger/data.json",
+    },
     inLanguage: "en",
   };
 

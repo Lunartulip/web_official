@@ -63,7 +63,7 @@ export default async function DeepDiveDetailPage({ params }: Props) {
       "@type": "CreativeWork",
       identifier: claim.id,
       text: claim.text["zh-CN"],
-      additionalType: `https://lunartuliplab.com/research-claim/${claim.type.toLowerCase()}`,
+      genre: claim.type,
     })),
     isPartOf: { "@id": "https://lunartuliplab.com/#website" },
     author: { "@id": "https://lunartuliplab.com/#organization" },

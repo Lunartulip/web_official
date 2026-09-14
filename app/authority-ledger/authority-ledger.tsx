@@ -79,6 +79,18 @@ export default function AuthorityLedger({ language = "cn" }: { language?: "cn" |
         </div>
       </section>
 
+      <section className={styles.section}>
+        <div className={styles.sectionHead}>
+          <div><p className={styles.sectionLabel}>FROM OUTCOMES TO CONTINUOUS RESEARCH</p><h2>{isCn ? "继续查看判断如何形成、更新与交付。" : "Continue into how judgment is formed, updated and delivered."}</h2></div>
+          <p className={styles.lead}>{isCn ? "结局账本验证研究纪律；Deep Dive 展示公司与产业判断，Research Desk 展示持续更新能力，机器读快照支持复核聚合口径。" : "The outcome ledger tests research discipline; Deep Dives show company and industry judgment, the Research Desk shows continuous updating, and the machine-readable snapshot supports aggregate-method review."}</p>
+        </div>
+        <div className={styles.grid}>
+          <article className={styles.card}><p className={styles.meta}>CANONICAL RESEARCH</p><h3>Lunartulip Deep Dive</h3><p>{isCn ? "阅读带首发日期、更新记录、来源与证伪条件的双语研究对象。" : "Read bilingual research objects with publication dates, updates, sources and falsifiers."}</p><Link href={`${isCn ? "" : "/en"}/deep-dive`}>{isCn ? "查看研究档案 →" : "View the research archive →"}</Link></article>
+          <article className={styles.card}><p className={styles.meta}>CONTINUOUS RESEARCH</p><h3>Always-On Research Desk</h3><p>{isCn ? "查看变化识别、命题更新、组合约束与结果学习如何进入同一工作区。" : "See change detection, thesis updates, portfolio constraints and outcome learning in one workspace."}</p><Link href={`${isCn ? "" : "/en"}/desk`}>{isCn ? "查看 Research Desk →" : "Explore Research Desk →"}</Link></article>
+          <article className={styles.card}><p className={styles.meta}>MACHINE-READABLE</p><h3>{isCn ? "聚合 KPI 数据快照" : "Aggregate KPI data snapshot"}</h3><p>{isCn ? "以 JSON-LD 下载当前公开聚合口径、as-of 与生成时间。" : "Download the current public aggregate basis, as-of date and generation date as JSON-LD."}</p><a href="/authority-ledger/data.json">{isCn ? "打开数据 →" : "Open the data →"}</a></article>
+        </div>
+      </section>
+
       <footer className={styles.footer}><span>DATA AS OF {ledger.as_of}</span><span>{isCn ? "聚合研究记录，不构成投资建议" : "Aggregate research record, not investment advice"}</span></footer>
     </main>
   );

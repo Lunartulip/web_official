@@ -211,9 +211,38 @@ export default function DeskPreview({ initialLanguage = "cn" }: { initialLanguag
         </div>
       </section>
 
+      <section className={styles.values} aria-labelledby="desk-formats">
+        <div className={styles.sectionHeading}>
+          <div><p className={styles.eyebrow}>DELIVERY SURFACES / 02</p><h2 id="desk-formats">{isCn ? "同一研究状态，服务人、Agent 与系统化研究。" : "One research state, delivered to people, agents and systematic workflows."}</h2></div>
+          <p>{isCn ? "公开官网保留可引用的 canonical Research Objects；专业与机构客户可按 coverage 获得持续更新的人读版本、机器读接口或 point-in-time 研究数据。" : "The public site preserves citable canonical Research Objects. Professional and institutional clients can receive continuously updated human-readable research, machine-readable interfaces or point-in-time research data by coverage."}</p>
+        </div>
+        <div className={styles.valueGrid}>
+          <article>
+            <p>01 / HUMAN</p>
+            <h3>{isCn ? "人读 Research Desk" : "Human-readable Research Desk"}</h3>
+            <span>{isCn ? "State Change Brief、Coverage Review、Deep Dive、Research Models 与有限 Briefing。" : "State Change Briefs, Coverage Reviews, Deep Dives, Research Models and limited Briefings."}</span>
+          </article>
+          <article>
+            <p>02 / MACHINE</p>
+            <h3>{isCn ? "机器读 Research API" : "Machine-readable Research API"}</h3>
+            <span>{isCn ? "向内部 Agent 与知识库交付 Research Object、Claim、Evidence、版本和证伪条件。" : "Research Objects, claims, evidence, versions and falsifiers for internal agents and knowledge bases."}</span>
+          </article>
+          <article>
+            <p>03 / QUANT</p>
+            <h3>{isCn ? "Alternative Dataset" : "Alternative datasets"}</h3>
+            <span>{isCn ? "面向系统化与 quantamental 买方的 point-in-time 命题、事件、状态与因子候选数据。" : "Point-in-time thesis, event, state and candidate-factor data for systematic and quantamental buy-side teams."}</span>
+          </article>
+        </div>
+        <div className={styles.heroActions}>
+          <Link className={styles.primaryButton} href={`${isCn ? "" : "/en"}/institutional-access#intent-research_access`}>
+            {isCn ? "查看产品与合作方式" : "View products and access"} <ArrowIcon />
+          </Link>
+        </div>
+      </section>
+
       <section className={styles.workspace} id="workspace" aria-labelledby="workspace-title">
         <div className={styles.workspaceIntro}>
-          <p className={styles.eyebrow}>WORKSPACE IN PRACTICE / 02</p>
+          <p className={styles.eyebrow}>WORKSPACE IN PRACTICE / 03</p>
           <h2 id="workspace-title">{isCn ? "七个工作区，把研究状态转化为日常行动。" : "Seven workspaces turn research state into daily action."}</h2>
           <p>{isCn ? "Today、Change Ledger、Coverage、Hypotheses、Decision Memory、Briefs 与 System Pulse 分别承接优先级、变化、覆盖、命题、学习、输出和运行状态。以下为经过脱敏的实际界面。" : "Today, Change Ledger, Coverage, Hypotheses, Decision Memory, Briefs and System Pulse organize priorities, change, coverage, theses, learning, output and operating state. The interfaces below are sanitized views of the working product."}</p>
         </div>
@@ -247,7 +276,7 @@ export default function DeskPreview({ initialLanguage = "cn" }: { initialLanguag
 
       <section className={styles.loop} aria-labelledby="loop-title">
         <div>
-          <p className={styles.eyebrow}>OPERATING LOOP / 03</p>
+          <p className={styles.eyebrow}>OPERATING LOOP / 04</p>
           <h2 id="loop-title">{isCn ? "两台研究引擎，最终进入同一条学习回路。" : "Two research engines enter one learning loop."}</h2>
         </div>
         <div className={styles.loopTrack}>
@@ -264,7 +293,7 @@ export default function DeskPreview({ initialLanguage = "cn" }: { initialLanguag
 
       <section className={styles.pilot} id="architecture" aria-labelledby="pilot-title">
         <div className={styles.pilotIntro}>
-          <p className={styles.eyebrow}>NINE-LAYER ARCHITECTURE / 04</p>
+          <p className={styles.eyebrow}>NINE-LAYER ARCHITECTURE / 05</p>
           <h2 id="pilot-title">{isCn ? "从信息到反馈，看清判断如何形成、验证和更新。" : "See how judgment forms, gets tested and improves from information to feedback."}</h2>
           <p>{isCn ? "九层能力覆盖信息摄入、证据与产业因果、命题、策略发现、量化验证、组合约束、结果归因与 Decision Memory。每层标明主要研究引擎与运行方式，便于快速理解人的判断与系统纪律如何协作。" : "Nine layers cover information intake, evidence and industry causality, theses, strategy discovery, quantitative validation, portfolio constraints, outcome attribution and decision memory. Each layer identifies its primary engine and operating mode, making the division between human judgment and system discipline clear."}</p>
         </div>
@@ -288,7 +317,7 @@ export default function DeskPreview({ initialLanguage = "cn" }: { initialLanguag
 
       <section className={styles.request} id="request-demo" aria-labelledby="request-title">
         <div>
-          <p className={styles.eyebrow}>DEEPER VERIFICATION / 05</p>
+          <p className={styles.eyebrow}>DEEPER VERIFICATION / 06</p>
           <h2 id="request-title">{isCn ? "从研究作品开始，进一步了解系统方法。" : "Begin with the research, then explore the system behind it."}</h2>
           <p>{isCn ? "通过 Deep Dive 查看具体研究如何形成，通过 Authority Ledger 查看历史判断如何接受结果检验；机构团队也可以围绕一个明确研究问题，讨论适合自身场景的持续跟踪与研究协作方式。" : "Use Deep Dives to see how specific research is formed and the Authority Ledger to see how prior judgments meet outcomes. Institutional teams can also begin with one clear research question and discuss a suitable format for continuous monitoring and research exchange."}</p>
         </div>

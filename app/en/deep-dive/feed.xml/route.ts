@@ -17,7 +17,7 @@ function escapeXml(value: string) {
 
 export function GET() {
   const items = [...researchObjects]
-    .sort((a, b) => b.asOf.localeCompare(a.asOf))
+    .sort((a, b) => (b.versions.at(-1)?.date ?? b.publishedAt).localeCompare(a.versions.at(-1)?.date ?? a.publishedAt))
     .map((item) => {
       const rendering = item.renderings.en;
       const url = `https://lunartuliplab.com/en/deep-dive/${item.slug}`;

@@ -28,11 +28,20 @@ export default function EnglishDeepDivePage() {
     inLanguage: "en",
     mainEntity: {
       "@type": "ItemList",
-      itemListElement: researchObjects.map((item, index) => ({
+      itemListElement: [...researchObjects]
+        .sort((a, b) => (b.versions.at(-1)?.date ?? b.publishedAt).localeCompare(a.versions.at(-1)?.date ?? a.publishedAt))
+        .map((item, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        url: `https://lunartuliplab.com/en/deep-dive/${item.slug}`,
-        name: item.renderings.en.title,
+        item: {
+          "@type": "ScholarlyArticle",
+          "@id": `https://lunartuliplab.com/en/deep-dive/${item.slug}#article`,
+          url: `https://lunartuliplab.com/en/deep-dive/${item.slug}`,
+          headline: item.renderings.en.title,
+          datePublished: item.publishedAt,
+          dateModified: item.versions.at(-1)?.date ?? item.publishedAt,
+          about: item.tickers,
+        },
       })),
     },
     publisher: { "@id": "https://lunartuliplab.com/#organization" },

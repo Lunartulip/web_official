@@ -64,9 +64,11 @@ const deskCapabilities = [
 
 const engagementTopics = [
   { cn: "索取机构样章", en: "Request an institutional sample", detailCn: "先审阅研究密度、证据纪律与交付标准", detailEn: "Evaluate analytical density, evidence discipline and delivery quality", intent: "sample_request" },
-  { cn: "申请 Research Access", en: "Apply for Research Access", detailCn: "机构 × Coverage Track × 固定周期的持续研究", detailEn: "Ongoing research by institution × Coverage Track × fixed term", intent: "research_access" },
+  { cn: "申请 Always-On Research Desk", en: "Apply for Always-On Research Desk", detailCn: "专业投资者或机构 × Coverage Track × 固定周期的持续研究", detailEn: "Ongoing research by professional investor or institution × Coverage Track × fixed term", intent: "research_access" },
+  { cn: "讨论 Research API", en: "Discuss the Research API", detailCn: "把 Claim、Evidence、版本与证伪条件接入内部 Agent", detailEn: "Bring claims, evidence, versions and falsifiers into internal agents", intent: "machine_readable_research" },
+  { cn: "讨论 Alternative Dataset", en: "Discuss alternative datasets", detailCn: "面向 Quant 买方的 point-in-time 研究状态数据", detailEn: "Point-in-time research-state data for quant investors", intent: "alternative_dataset" },
   { cn: "提交研究 Mandate", en: "Submit a research mandate", detailCn: "仅限既有 coverage 与长期研究主线", detailEn: "Scoped to existing coverage and long-horizon research threads", intent: "commissioned_mandate" },
-  { cn: "讨论 6-Session Diagnostic", en: "Discuss the 6-Session Diagnostic", detailCn: "诊断并共同设计 AI-native 投研系统", detailEn: "Diagnose and co-design an AI-native research system", intent: "research_system_diagnostic" },
+  { cn: "讨论 6-Session Workshop", en: "Discuss the 6-Session Workshop", detailCn: "诊断并共同设计 AI-native 投研框架", detailEn: "Diagnose and co-design an AI-native research framework", intent: "research_system_diagnostic" },
 ];
 
 const collaborationLanes = [
@@ -105,8 +107,8 @@ const productOffers = [
     deliverablesEn: ["Timestamped thesis", "Key evidence and risk boundary", "Update history and corrections"],
     priceCn: "POINT-IN-TIME / VERSIONED",
     priceEn: "POINT-IN-TIME / VERSIONED",
-    noteCn: "目前公开两篇旗舰研究",
-    noteEn: "Two flagship research objects currently available",
+    noteCn: "持续更新的中英双语 canonical Research Objects",
+    noteEn: "Continuously updated bilingual canonical Research Objects",
     href: "/deep-dive",
     ctaCn: "查看 Deep Dive",
     ctaEn: "View Deep Dives",
@@ -134,23 +136,53 @@ const productOffers = [
 const practiceCases = [
   {
     code: "DEEP DIVE / PLTR",
-    title: "Palantir：AI 应用层商业化开始进入回报兑现",
-    titleEn: "Palantir: AI application commercialization begins to convert into returns",
-    thesis: "把美国商业收入加速作为 AI 基础设施投入向应用层收入传导的带时间戳验证点。",
-    thesisEn: "A timestamped test of whether AI infrastructure spending is transmitting into application-layer revenue.",
-    metric: "AS OF 2026-08-05",
+    title: "Palantir：商业化有硬数，定价零容错",
+    titleEn: "Palantir: hard commercialization evidence, zero valuation tolerance",
+    thesis: "用美国商业增速、合同价值、留存与现金闭环，对账「AI 主权」叙事与 65x TTM P/S。",
+    thesisEn: "Reconcile the AI-sovereignty narrative and 65x TTM P/S through US commercial growth, contract value, retention and cash conversion.",
+    metric: "PUBLISHED 2026-08-05 · UPDATED 2026-09-14",
     nodes: ["QUESTION", "EVIDENCE", "THESIS", "RISK", "UPDATE"],
     href: "/deep-dive/palantir-ai-application-commercialization-2026q2",
   },
   {
-    code: "DEEP DIVE / NET + TEAM",
-    title: "Cloudflare + Atlassian：AI 应用层验证从单点走向多点",
-    titleEn: "Cloudflare + Atlassian: AI application validation broadens beyond a single company",
-    thesis: "用机器流量基础设施与企业协作软件盈利拐点，检验 AI 应用层商业化是否正在扩散。",
-    thesisEn: "Test whether AI application commercialization is broadening through machine-traffic infrastructure and enterprise-software profitability.",
-    metric: "AS OF 2026-08-07",
+    code: "DEEP DIVE / NVDA",
+    title: "NVIDIA：超级周期的对账变量换位",
+    titleEn: "NVIDIA: the supercycle’s reconciliation variables have shifted",
+    thesis: "需求方向已被硬数验证，风险转向毛利率、供应承诺、担保集中度与应收账期。",
+    thesisEn: "Demand is validated by hard numbers; risk has shifted to margins, supply commitments, guarantee concentration and receivables.",
+    metric: "PUBLISHED 2026-09-14 · FY27Q2",
+    nodes: ["DEMAND", "COST", "BALANCE SHEET", "VALUATION", "TEST"],
+    href: "/deep-dive/nvidia-fy27q2-supercycle-2026-09",
+  },
+  {
+    code: "DEEP DIVE / SNOW",
+    title: "Snowflake：加速有硬数，AI 归因仍待金额化",
+    titleEn: "Snowflake: hard acceleration data, AI attribution still awaits dollars",
+    thesis: "把消费增速、AI 产品账户与反向 DCF 放在同一对账框架，区分事实、归因与市场隐含。",
+    thesisEn: "Reconcile consumption growth, AI-product accounts and reverse DCF while separating fact, attribution and market implication.",
+    metric: "PUBLISHED 2026-09-14 · FY27Q2",
+    nodes: ["CONSUMPTION", "AI", "REVERSE DCF", "RISK", "TEST"],
+    href: "/deep-dive/snowflake-agentic-data-cloud-2026-09",
+  },
+  {
+    code: "DEEP DIVE / NET",
+    title: "Cloudflare：机器流量过半之后，收入仍待金额化",
+    titleEn: "Cloudflare: machine traffic is over half; monetization still lacks dollars",
+    thesis: "区分业务加速、agentic 流量与没有财务条款的催化，等待 Q3 财报对账。",
+    thesisEn: "Separate business acceleration and agentic traffic from catalysts without financial terms, then reconcile at Q3.",
+    metric: "PUBLISHED 2026-08-07 · UPDATED 2026-09-14",
     nodes: ["QUESTION", "EVIDENCE", "THESIS", "RISK", "UPDATE"],
-    href: "/deep-dive/cloudflare-atlassian-ai-application-commercialization-2026q2",
+    href: "/deep-dive/cloudflare-monetization-density-2026q2",
+  },
+  {
+    code: "DEEP DIVE / TEAM",
+    title: "Atlassian：三重催化之后，还差 Rovo 金额口径",
+    titleEn: "Atlassian: after three catalysts, Rovo still lacks a dollar metric",
+    thesis: "将 beat、Cloud 加速与盈利拐点同 FY27 降速指引、FCF 和 Rovo 变现披露对账。",
+    thesisEn: "Reconcile the beat, Cloud acceleration and profit inflection with FY27 deceleration guidance, FCF and Rovo monetization disclosure.",
+    metric: "PUBLISHED 2026-08-07 · UPDATED 2026-09-14",
+    nodes: ["BEAT", "ROVO", "GUIDANCE", "CASH", "TEST"],
+    href: "/deep-dive/atlassian-workflow-density-context-monetization-2026fy",
   },
 ];
 
@@ -686,9 +718,9 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
         </div>
 
         <div className="enterprise-mode">
-          <div><small>INSTITUTIONAL RESEARCH ACCESS</small><strong>{language === "cn" ? "从公开研究开始，按问题与时效深入" : "Begin with public research, then go deeper by question and cadence"}</strong></div>
-          <p>{language === "cn" ? "机构与专业投资者可以先通过 Deep Dive、Authority Ledger 与 Research Desk 界面了解研究质量和工作方法，再围绕持续跟踪、深度研究问题或双引擎方法展开专业交流。" : "Institutions and professional investors can begin with Deep Dives, the Authority Ledger and the Research Desk interface, then explore continuous monitoring, a specific deep-research question or the dual-engine method."}</p>
-          <Link href={language === "en" ? "/en/institutional-access" : "/institutional-access"}>{language === "cn" ? "了解机构研究方式" : "Explore institutional research formats"} <ArrowRightIcon /></Link>
+          <div><small>PROFESSIONAL & INSTITUTIONAL ACCESS</small><strong>{language === "cn" ? "从公开研究开始，进入人读、机器读与系统部署" : "Begin with public research, then move into human, machine and system delivery"}</strong></div>
+          <p>{language === "cn" ? "通过 Deep Dive 与 Authority Ledger 验证研究质量后，可按 coverage 使用 Always-On Research Desk、机器读 Research API、Quant 买方 Alternative Dataset，或通过六次 Workshop 部署团队自身的投研框架。" : "After evaluating the research through Deep Dives and the Authority Ledger, move by coverage into Always-On Research Desk, the machine-readable Research API, alternative datasets for quant investors, or a six-session workshop that installs the team’s own research framework."}</p>
+          <Link href={language === "en" ? "/en/institutional-access" : "/institutional-access"}>{language === "cn" ? "查看产品与合作方式" : "Explore products and access"} <ArrowRightIcon /></Link>
         </div>
       </section>
 
@@ -836,8 +868,8 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
             <article>
               <small>RESEARCH ACCESS</small>
               <h3>{language === "cn" ? "先验证研究质量" : "Evaluate research quality first"}</h3>
-              <p>{language === "cn" ? "通过 Deep Dive、研究方法、更新记录与 Authority Ledger，评估研究深度、验证纪律和结果质量；如需持续跟踪或围绕具体研究问题深入，可进一步开展机构研究交流。" : "Use Deep Dives, research methods, update histories and the Authority Ledger to assess depth, validation discipline and outcome quality, then explore continuous monitoring or a specific research question through institutional exchange."}</p>
-              <Link href={language === "en" ? "/en/institutional-access" : "/institutional-access"}>{language === "cn" ? "了解机构研究方式" : "Explore institutional research formats"} <ArrowRightIcon /></Link>
+              <p>{language === "cn" ? "通过 Deep Dive、研究方法、更新记录与 Authority Ledger 评估研究质量；随后可选择人读 Research Desk、机器读 API、Alternative Dataset 或投研框架 Workshop。" : "Use Deep Dives, research methods, update histories and the Authority Ledger to assess quality, then choose the human-readable Research Desk, machine-readable API, alternative datasets or the research-framework workshop."}</p>
+              <Link href={language === "en" ? "/en/institutional-access" : "/institutional-access"}>{language === "cn" ? "查看研究产品与服务" : "Explore research products and services"} <ArrowRightIcon /></Link>
             </article>
             <article>
               <small>LONG-TERM DIRECTION</small>
@@ -857,7 +889,7 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
             <p className="section-index">DEEP RESEARCH / 06</p>
             <h2 id="practice-title">{language === "cn" ? "从具体公司和产业问题，看见研究深度。" : "See the depth of research through specific company and industry questions."}</h2>
           </div>
-          <p className="section-lead">{language === "cn" ? "两篇旗舰研究分别围绕具体公司与产业问题展开，完整保留研究问题、核心论点、关键证据、风险边界、as-of 日期与更新记录。" : "Two flagship research objects address specific company and industry questions, preserving the research question, core thesis, key evidence, risk boundary, as-of date and update history."}</p>
+          <p className="section-lead">{language === "cn" ? "持续更新的双语 Research Objects 围绕具体公司与产业问题展开，完整保留研究问题、核心论点、关键证据、风险边界、首发日期与更新记录。" : "Continuously updated bilingual Research Objects address specific company and industry questions while preserving the research question, core thesis, key evidence, risk boundary, original publication date and update history."}</p>
         </div>
         <div className="practice-grid">
           {practiceCases.map((item) => (
@@ -871,7 +903,7 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
               <div className="practice-copy">
                 <h3>{language === "cn" ? item.title : item.titleEn}</h3>
                 <p>{language === "cn" ? item.thesis : item.thesisEn}</p>
-                <Link href={language === "en" ? `/en${item.href}` : item.href}>{language === "cn" ? "阅读研究" : "Read the research"}<span><ArrowRightIcon /></span></Link>
+                <a href={language === "en" ? `/en${item.href}` : item.href}>{language === "cn" ? "阅读研究" : "Read the research"}<span><ArrowRightIcon /></span></a>
               </div>
             </article>
           ))}

@@ -30,16 +30,36 @@ const actions: Array<{
   {
     intent: "research_access",
     code: "02 / ACCESS",
-    titleCn: "申请 Institutional Research Access",
-    titleEn: "Apply for Institutional Research Access",
-    bodyCn: "购买单位为「机构 × Coverage Track × 固定周期」，不是个人订阅或无限制研究请求。",
-    bodyEn: "Purchased as institution × Coverage Track × fixed term—not an individual subscription or unlimited request queue.",
-    detailCn: "包含 State Change Brief、Coverage Review、Deep Dive、Research Models 与有限 Briefing。",
-    detailEn: "Includes State Change Briefs, Coverage Reviews, Deep Dives, Research Models and limited Briefings.",
+    titleCn: "申请 Always-On Research Desk",
+    titleEn: "Apply for Always-On Research Desk",
+    bodyCn: "购买单位为「专业投资者或机构 × Coverage Track × 固定周期」，提供持续更新的人读研究版本。",
+    bodyEn: "Purchased as professional investor or institution × Coverage Track × fixed term, with continuously updated human-readable research.",
+    detailCn: "包含 State Change Brief、Coverage Review、Deep Dive、Research Models 与有限 Briefing；不是无限制研究请求。",
+    detailEn: "Includes State Change Briefs, Coverage Reviews, Deep Dives, Research Models and limited Briefings—not an unlimited request queue.",
+  },
+  {
+    intent: "machine_readable_research",
+    code: "03 / API",
+    titleCn: "讨论机器可读 Research API",
+    titleEn: "Discuss the machine-readable Research API",
+    bodyCn: "把同一套 Research Object、Claim、Evidence、版本与证伪条件交付给内部 Agent、知识库或研究工作流。",
+    bodyEn: "Deliver the same Research Objects, claims, evidence, versions and falsifiers into internal agents, knowledge bases or research workflows.",
+    detailCn: "按 coverage、字段、更新频率与内部使用场景定义权限；不是公开行情 API。",
+    detailEn: "Access is scoped by coverage, fields, update frequency and internal use case; this is not a public market-data API.",
+  },
+  {
+    intent: "alternative_dataset",
+    code: "04 / DATA",
+    titleCn: "讨论 Quant 买方 Alternative Dataset",
+    titleEn: "Discuss alternative datasets for quant investors",
+    bodyCn: "面向系统化与 quantamental 买方，提供 point-in-time 的命题、事件、状态、因子候选与证据归属数据。",
+    bodyEn: "Point-in-time thesis, event, state, candidate-factor and evidence-attribution data for systematic and quantamental buy-side teams.",
+    detailCn: "先定义研究用途、历史覆盖、可回测口径、许可与数据权利边界，再评估交付。",
+    detailEn: "Research use, history, backtest basis, licensing and data-rights boundaries are defined before delivery is assessed.",
   },
   {
     intent: "commissioned_mandate",
-    code: "03 / MANDATE",
+    code: "05 / MANDATE",
     titleCn: "提交 Commissioned Deep Dive / Theme Mandate",
     titleEn: "Submit a Commissioned Deep Dive / Theme Mandate",
     bodyCn: "仅接受既有 coverage 与长期研究主线内、能够沉淀进持续研究系统的问题。",
@@ -49,9 +69,9 @@ const actions: Array<{
   },
   {
     intent: "research_system_diagnostic",
-    code: "04 / DIAGNOSTIC",
-    titleCn: "讨论 6-Session AI-native Research System Diagnostic",
-    titleEn: "Discuss the 6-Session AI-native Research System Diagnostic",
+    code: "06 / WORKSHOP",
+    titleCn: "讨论 6-Session AI-native 投研框架 Workshop",
+    titleEn: "Discuss the 6-Session AI-native Research Framework Workshop",
     bodyCn: "公开价格：人民币 ¥100,000 起 / US$15,000 起。六次工作会议用于诊断、架构设计与共同工作。",
     bodyEn: "Public starting price: ¥100,000 / US$15,000. Six working sessions cover diagnosis, architecture and collaborative work.",
     detailCn: "默认不含源码交付、代为实施或无限期支持；超出边界的工作另行定义。",
@@ -149,11 +169,11 @@ export default function InstitutionalAccess({ language = "cn" }: { language?: "c
       </header>
 
       <section className={styles.hero}>
-        <p className={styles.kicker}>INSTITUTIONAL RESEARCH ACCESS / 2026</p>
+        <p className={styles.kicker}>RESEARCH PRODUCTS & SERVICES / 2026</p>
         <h1>{isCn ? <>先选合作方式，<span>再提交研究问题。</span></> : <>Choose the engagement, <span>then bring the research question.</span></>}</h1>
         <div className={styles.heroFoot}>
-          <p>{isCn ? "页面列出四种合作方式及各自边界。双方先确认目标、coverage 与周期，再决定是否合作。" : "Four entry points with four explicit boundaries. We align on objective, coverage and term before any engagement."}</p>
-          <span>CN / EN · INSTITUTIONAL ONLY</span>
+          <p>{isCn ? "从公开研究样章、人读 Research Desk、机器读 API、Alternative Dataset 到投研框架 Workshop，页面列出六种合作方式及边界。" : "Six defined routes span public samples, the human-readable Research Desk, machine-readable API, alternative datasets and the research-framework workshop."}</p>
+          <span>CN / EN · PROFESSIONAL & INSTITUTIONAL</span>
         </div>
       </section>
 
@@ -183,7 +203,8 @@ export default function InstitutionalAccess({ language = "cn" }: { language?: "c
           <h2>{isCn ? "合作单位与工作边界" : "Delivery units and working boundaries, stated upfront."}</h2>
         </div>
         <dl>
-          <div><dt>RESEARCH ACCESS</dt><dd>{isCn ? "机构 × Coverage Track × 固定周期；交付状态变化、coverage 复核、深度研究、研究模型与有限 briefing。" : "Institution × Coverage Track × fixed term; state changes, coverage review, deep research, research models and limited briefings."}</dd></div>
+          <div><dt>RESEARCH DESK</dt><dd>{isCn ? "专业投资者或机构 × Coverage Track × 固定周期；交付状态变化、coverage 复核、深度研究、研究模型与有限 briefing。" : "Professional investor or institution × Coverage Track × fixed term; state changes, coverage review, deep research, research models and limited briefings."}</dd></div>
+          <div><dt>API / DATASET</dt><dd>{isCn ? "按 coverage、字段、历史、更新频率、许可与内部研究用途定义；不把未获权利的数据重新包装为产品。" : "Scoped by coverage, fields, history, update frequency, licensing and internal research use; data without appropriate rights is not repackaged as a product."}</dd></div>
           <div><dt>COMMISSIONED</dt><dd>{isCn ? "只接受既有 coverage 与长期主线内的命题，研究团队按既有能力圈接题。" : "Only within existing coverage and long-term threads; the research team is not positioned as an arbitrary-topic contractor."}</dd></div>
           <div><dt>DIAGNOSTIC</dt><dd>{isCn ? "六次会议覆盖现状诊断、目标架构与共同工作。源码、实施和持续支持不默认包含。" : "Six sessions span current-state diagnosis, target architecture and joint work. Code, implementation and ongoing support are excluded by default."}</dd></div>
         </dl>

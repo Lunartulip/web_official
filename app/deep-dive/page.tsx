@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/deep-dive",
     languages: { "zh-CN": "/deep-dive", en: "/en/deep-dive" },
+    types: { "application/rss+xml": "/deep-dive/feed.xml" },
   },
   openGraph: {
     type: "website",
@@ -27,11 +28,20 @@ export default function DeepDivePage() {
     inLanguage: "zh-CN",
     mainEntity: {
       "@type": "ItemList",
-      itemListElement: researchObjects.map((item, index) => ({
+      itemListElement: [...researchObjects]
+        .sort((a, b) => (b.versions.at(-1)?.date ?? b.publishedAt).localeCompare(a.versions.at(-1)?.date ?? a.publishedAt))
+        .map((item, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        url: `https://lunartuliplab.com/deep-dive/${item.slug}`,
-        name: item.renderings["zh-CN"].title,
+        item: {
+          "@type": "ScholarlyArticle",
+          "@id": `https://lunartuliplab.com/deep-dive/${item.slug}#article`,
+          url: `https://lunartuliplab.com/deep-dive/${item.slug}`,
+          headline: item.renderings["zh-CN"].title,
+          datePublished: item.publishedAt,
+          dateModified: item.versions.at(-1)?.date ?? item.publishedAt,
+          about: item.tickers,
+        },
       })),
     },
     publisher: { "@id": "https://lunartuliplab.com/#organization" },
