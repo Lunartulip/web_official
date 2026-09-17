@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ledger from "@/data/authority/calls_kpi_summary.json";
+import { publicResearchLicense, RESEARCH_USAGE_URL } from "@/lib/public-research";
 import AuthorityLedger from "./authority-ledger";
 
 export const metadata: Metadata = {
@@ -28,10 +29,13 @@ export default function AuthorityLedgerPage() {
     dateModified: ledger.generated_at,
     temporalCoverage: `${ledger.first_call_date}/${ledger.as_of}`,
     creator: { "@id": "https://lunartuliplab.com/#organization" },
+    license: publicResearchLicense,
+    usageInfo: RESEARCH_USAGE_URL,
+    isAccessibleForFree: true,
     measurementTechnique: "Directional hit rate with ±5% threshold; expired-flat excluded from the denominator; invalidated observations excluded.",
     distribution: {
       "@type": "DataDownload",
-      encodingFormat: "application/ld+json",
+      encodingFormat: "application/json",
       contentUrl: "https://lunartuliplab.com/authority-ledger/data.json",
     },
   };

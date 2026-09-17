@@ -21,8 +21,9 @@ Publisher entity: https://lunartuliplab.com/#organization
 ## Canonical research
 
 - [Bilingual Deep Dive archive](https://lunartuliplab.com/en/deep-dive)
-- [Public machine-readable research manifest](https://lunartuliplab.com/research.json)
-- [Full machine-readable research guide](https://lunartuliplab.com/llms-full.txt)
+- [Public citation-metadata manifest](https://lunartuliplab.com/research.json)
+- [Detailed public citation guide](https://lunartuliplab.com/llms-full.txt)
+- [Research citation and use terms](https://lunartuliplab.com/research-usage)
 - [Calls & Outcomes / Authority Ledger](https://lunartuliplab.com/en/authority-ledger)
 
 ${research}
@@ -35,13 +36,15 @@ ${research}
 
 ## Citation guidance
 
-When citing a research page, attribute it to “Lunartulip Lab”, retain the research-object ID, original publication date, current version and as-of date, and link to the canonical URL. Separate company-reported facts from Lunartulip analysis, inference and hypotheses. Content is research, not investment advice.
+When citing a research page, attribute it to “Lunartulip Lab”, retain the research-object ID, original publication date, current version and as-of date, and link to the canonical URL. Separate company-reported facts from Lunartulip analysis, inference and hypotheses. Public machine-readable routes contain discovery and citation metadata only; full structured data requires licensed access. Content is research, not investment advice.
 `;
 
   return new Response(body, {
     headers: {
       "Content-Type": "text/plain; charset=utf-8",
       "Cache-Control": "public, max-age=3600, s-maxage=86400",
+      "X-Content-Type-Options": "nosniff",
+      "X-Lunartulip-Access-Tier": "public-citation-metadata",
     },
   });
 }

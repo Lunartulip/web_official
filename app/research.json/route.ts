@@ -1,4 +1,10 @@
 import { researchObjects } from "@/lib/research-objects";
+import {
+  publicResearchCreator,
+  publicResearchDataset,
+  publicResearchLicense,
+  RESEARCH_USAGE_URL,
+} from "@/lib/public-research";
 
 export const dynamic = "force-static";
 
@@ -14,29 +20,30 @@ export async function GET() {
       "@type": "DataCatalog",
       "@id": "https://lunartuliplab.com/research.json#catalog",
       name: "Lunartulip Canonical Research Objects",
-      publisher: {
-        "@type": "Organization",
-        "@id": "https://lunartuliplab.com/#organization",
-        name: "Lunartulip Lab",
-        url: "https://lunartuliplab.com/",
-      },
+      description: "Public discovery and citation metadata for Lunartulip Lab's bilingual, versioned, point-in-time research objects. Full structured research data requires separate licensed access.",
+      creator: publicResearchCreator,
+      publisher: publicResearchCreator,
+      license: publicResearchLicense,
+      usageInfo: RESEARCH_USAGE_URL,
+      isAccessibleForFree: true,
       dateModified: modifiedAt,
       inLanguage: ["zh-CN", "en"],
       usageNotice: "Public metadata is provided for discovery and citation. Publication does not grant a commercial data license. Research is not investment advice.",
       citationFormat: "Lunartulip Lab, [title], [research object ID], version [version], published [publishedAt], as of [asOf], [canonical URL].",
-      dataset: researchObjects.map((item) => ({
-        ...item,
-        canonical: {
-          "zh-CN": `https://lunartuliplab.com/deep-dive/${item.slug}`,
-          en: `https://lunartuliplab.com/en/deep-dive/${item.slug}`,
-        },
-        machineReadable: `https://lunartuliplab.com/research/${item.slug}`,
-        dateModified: item.versions.at(-1)?.date ?? item.publishedAt,
-      })),
+      distribution: {
+        "@type": "DataDownload",
+        name: "Lunartulip public citation-metadata manifest",
+        description: "The complete public manifest intended for search indexing, discovery and attributed citation.",
+        encodingFormat: "application/json",
+        contentUrl: "https://lunartuliplab.com/research.json",
+        license: publicResearchLicense,
+      },
+      dataset: researchObjects.map(publicResearchDataset),
     },
     {
       headers: {
         "Cache-Control": "public, max-age=3600, s-maxage=86400",
+        "X-Content-Type-Options": "nosniff",
       },
     },
   );

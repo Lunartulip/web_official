@@ -97,6 +97,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.65,
     },
     {
+      url: "https://lunartuliplab.com/research-usage",
+      lastModified: new Date("2026-09-17T00:00:00+08:00"),
+      changeFrequency: "monthly",
+      priority: 0.55,
+    },
+    {
       url: "https://lunartuliplab.com/llms.txt",
       lastModified: new Date(`${latestResearchDate}T00:00:00+08:00`),
       changeFrequency: "weekly",

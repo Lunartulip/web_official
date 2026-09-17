@@ -59,11 +59,11 @@ export default function DeepDiveArticle({ item, language = "cn" }: { item: Resea
       <section className={styles.section}>
         <div className={styles.sectionHead}>
           <div><p className={styles.sectionLabel}>CONTINUE THE RESEARCH</p><h2>{isCn ? "从公开引用对象进入持续研究。" : "Move from the public citation object into continuous research."}</h2></div>
-          <p className={styles.lead}>{isCn ? "按用途选择人读工作区、机器读对象或专业与机构合作入口。" : "Choose the human-readable workspace, machine-readable object or professional and institutional access by use case."}</p>
+          <p className={styles.lead}>{isCn ? "按用途选择人读工作区、公开引用元数据或专业与机构合作入口。" : "Choose the human-readable workspace, public citation metadata or professional and institutional access by use case."}</p>
         </div>
         <div className={styles.grid}>
           <article className={styles.card}><p className={styles.meta}>HUMAN-READABLE</p><h3>Always-On Research Desk</h3><p>{isCn ? "持续跟踪状态变化、命题、证据与下一验证节点。" : "Continuously track state changes, theses, evidence and next validation points."}</p><Link href={`${isCn ? "" : "/en"}/desk`}>{isCn ? "查看 Research Desk →" : "Explore Research Desk →"}</Link></article>
-          <article className={styles.card}><p className={styles.meta}>MACHINE-READABLE</p><h3>Research Object JSON</h3><p>{isCn ? "读取本对象的 Claim、Evidence、版本、估值情景与证伪条件。" : "Read this object’s claims, evidence, versions, valuation scenarios and falsifiers."}</p><a href={`/research/${item.slug}`}>{isCn ? "打开机器读对象 →" : "Open machine-readable object →"}</a></article>
+          <article className={styles.card}><p className={styles.meta}>CITATION METADATA</p><h3>{isCn ? "公开引用元数据" : "Public citation metadata"}</h3><p>{isCn ? "读取对象 ID、标题、摘要、版本、日期与 canonical URL。" : "Read the object ID, title, abstract, version, dates and canonical URLs."}</p><a href={`/research/${item.slug}`}>{isCn ? "打开引用元数据 →" : "Open citation metadata →"}</a></article>
           <article className={styles.card}><p className={styles.meta}>PRODUCTS & SERVICES</p><h3>{isCn ? "专业与机构研究入口" : "Professional and institutional access"}</h3><p>{isCn ? "讨论 Research Desk、API、Alternative Dataset、Mandate 或 Workshop。" : "Discuss Research Desk, API, alternative datasets, mandates or the workshop."}</p><Link href={`${isCn ? "" : "/en"}/institutional-access`}>{isCn ? "查看合作方式 →" : "View access routes →"}</Link></article>
         </div>
       </section>

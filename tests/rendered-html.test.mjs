@@ -47,6 +47,8 @@ const llmsFullSource = await readFile(new URL("../app/llms-full.txt/route.ts", i
 const researchManifestSource = await readFile(new URL("../app/research.json/route.ts", import.meta.url), "utf8");
 const researchObjectApiSource = await readFile(new URL("../app/research/[slug]/route.ts", import.meta.url), "utf8");
 const authorityDataApiSource = await readFile(new URL("../app/authority-ledger/data.json/route.ts", import.meta.url), "utf8");
+const publicResearchSource = await readFile(new URL("../lib/public-research.ts", import.meta.url), "utf8");
+const researchUsageSource = await readFile(new URL("../app/research-usage/page.tsx", import.meta.url), "utf8");
 const proxySource = await readFile(new URL("../proxy.ts", import.meta.url), "utf8");
 const englishDeepDivePageSource = await readFile(new URL("../app/en/deep-dive/[slug]/page.tsx", import.meta.url), "utf8");
 const editorialLoaderSource = await readFile(new URL("../lib/editorial-deep-dives.ts", import.meta.url), "utf8");
@@ -197,6 +199,7 @@ test("serves the AI hardware theme study from reviewed editorial HTML on explici
     assert.match(html, /"identifier": "RO-THEME-AI-HARDWARE-001"/);
     assert.match(html, /"version": "1\.0\.0"/);
     assert.match(html, /Lunartulip Lab/);
+    assert.doesNotMatch(html, /LunarTulip Research|Lunartulip Research/);
     // Reviewed visual structure carried over verbatim.
     for (const marker of ["class=\"shell mast\"", "class=\"mast-nav\"", "class=\"hero-art\"", "class=\"orbit-label ol-1\"", "class=\"decision-wrap\"", "class=\"shell tension\"", "class=\"method-note\""]) {
       assert.ok(html.includes(marker), `editorial HTML lost ${marker}`);
@@ -228,6 +231,9 @@ test("publishes five refreshed company studies as bilingual editorial citation o
       assert.match(html, /article:modified_time/);
       assert.match(html, /PIT 与版本纪律|Point-in-time and version discipline/);
       assert.match(html, /Research API/);
+      assert.match(html, /公开引用元数据|Public citation metadata/);
+      assert.doesNotMatch(html, /机器读 Research Object|Machine-readable Research Object/);
+      assert.doesNotMatch(html, /LunarTulip Research|Lunartulip Research/);
       assert.doesNotMatch(html, /desk\.lunartuliplab\.com|\/external\/|workspace\/ai-team|workspace\/decision_core/i);
     }
     assert.match(zh, new RegExp(`rel="canonical" href="https://lunartuliplab\\.com/deep-dive/${slug}"`));
@@ -249,6 +255,7 @@ test("publishes the bilingual memory capital-cycle series without Desk dependenc
       for (const siblingSlug of memorySeriesSlugs) {
         assert.match(html, new RegExp(`/deep-dive/${siblingSlug}`));
       }
+      assert.doesNotMatch(html, /LunarTulip Research|Lunartulip Research/);
       assert.doesNotMatch(html, /desk\.lunartuliplab\.com|\/external\/|workspace\/ai-team|workspace\/decision_core/i);
     }
     assert.match(zh, new RegExp(`rel="canonical" href="https://lunartuliplab\\.com/deep-dive/${slug}"`));
@@ -477,6 +484,46 @@ test("publishes bilingual research discovery infrastructure", () => {
   assert.match(researchObjectApiSource, /generateStaticParams/);
   assert.match(authorityDataApiSource, /calls_kpi_summary\.json/);
   assert.match(sitemapSource, /research\/\$\{item\.slug\}/);
+});
+
+test("separates public citation metadata from licensed research data", () => {
+  for (const term of [
+    '"@type": "Dataset"',
+    "name:",
+    "description:",
+    "creator:",
+    "license:",
+    "isAccessibleForFree:",
+    "distribution:",
+    "publicSummary:",
+  ]) {
+    assert.match(publicResearchSource, new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+  assert.match(publicResearchSource, /research-usage/);
+  assert.match(researchManifestSource, /researchObjects\.map\(publicResearchDataset\)/);
+  assert.match(researchObjectApiSource, /publicResearchDataset\(item\)/);
+  assert.doesNotMatch(researchManifestSource, /\.\.\.item/);
+  assert.doesNotMatch(researchObjectApiSource, /researchObject:\s*item/);
+  assert.doesNotMatch(llmsFullSource, /item\.(claims|evidence|financialBridge|valuationScenarios|falsifiers|renderings\.en\.valuation)/);
+  for (const restrictedField of ["claims", "evidence", "financialBridge", "valuationScenarios", "falsifiers", "dataGaps"]) {
+    assert.doesNotMatch(publicResearchSource, new RegExp(`item\\.${restrictedField}`));
+  }
+  assert.match(publicResearchSource, /abstract: item\.renderings\.en\.standfirst/);
+  assert.match(publicResearchSource, /researchQuestion:/);
+  assert.doesNotMatch(publicResearchSource, /sameAs:/);
+  assert.match(publicResearchSource, /encodingFormat: "application\/json"/);
+  assert.match(researchManifestSource, /distribution:/);
+  assert.match(authorityDataApiSource, /measurementTechnique:/);
+  assert.match(authorityDataApiSource, /public aggregate projection/);
+  assert.doesNotMatch(authorityDataApiSource, /workspace\/ai-team/);
+  assert.match(researchUsageSource, /批量数据使用需要单独许可/);
+  assert.match(researchUsageSource, /Systematic extraction/);
+  assert.match(researchUsageSource, /Fetching a complete public manifest once is permitted/);
+  assert.match(researchUsageSource, /Third-party data/);
+  assert.match(researchUsageSource, /Chinese version controls/);
+  assert.match(sitemapSource, /lunartuliplab\.com\/research-usage/);
+  assert.match(deepDiveArticleSource, /公开引用元数据/);
+  assert.doesNotMatch(deepDiveArticleSource, /读取本对象的 Claim、Evidence/);
 });
 
 test("publishes machine-readable research topic clusters", () => {
