@@ -30,8 +30,8 @@ export function publicResearchDataset(item: ResearchObject) {
     description: item.renderings.en.standfirst,
     abstract: item.renderings.en.standfirst,
     researchQuestion: {
-      "zh-CN": item.renderings["zh-CN"].question,
       en: item.renderings.en.question,
+      "zh-CN": item.renderings["zh-CN"].question,
     },
     identifier: item.id,
     version: item.version,
@@ -43,22 +43,22 @@ export function publicResearchDataset(item: ResearchObject) {
     license: publicResearchLicense,
     usageInfo: RESEARCH_USAGE_URL,
     isAccessibleForFree: true,
-    inLanguage: ["zh-CN", "en"],
+    inLanguage: ["en", "zh-CN"],
     keywords: [...item.tickers, item.kind, "point-in-time research", "public equities"],
     url: machineReadableUrl,
     mainEntityOfPage: machineReadableUrl,
     subjectOf: [
       {
         "@type": "ScholarlyArticle",
-        name: item.renderings["zh-CN"].title,
-        inLanguage: "zh-CN",
-        url: canonicalZh,
-      },
-      {
-        "@type": "ScholarlyArticle",
         name: item.renderings.en.title,
         inLanguage: "en",
         url: canonicalEn,
+      },
+      {
+        "@type": "ScholarlyArticle",
+        name: item.renderings["zh-CN"].title,
+        inLanguage: "zh-CN",
+        url: canonicalZh,
       },
     ],
     isPartOf: {
@@ -74,7 +74,7 @@ export function publicResearchDataset(item: ResearchObject) {
       contentUrl: machineReadableUrl,
       license: publicResearchLicense,
     },
-    citation: [canonicalZh, canonicalEn],
+    citation: [canonicalEn, canonicalZh],
     publicSummary: {
       id: item.id,
       slug: item.slug,
@@ -85,16 +85,16 @@ export function publicResearchDataset(item: ResearchObject) {
       modifiedAt,
       version: item.version,
       canonical: {
-        "zh-CN": canonicalZh,
         en: canonicalEn,
+        "zh-CN": canonicalZh,
       },
       question: {
-        "zh-CN": item.renderings["zh-CN"].question,
         en: item.renderings.en.question,
+        "zh-CN": item.renderings["zh-CN"].question,
       },
       abstract: {
-        "zh-CN": item.renderings["zh-CN"].standfirst,
         en: item.renderings.en.standfirst,
+        "zh-CN": item.renderings["zh-CN"].standfirst,
       },
     },
   };

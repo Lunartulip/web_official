@@ -33,7 +33,14 @@ export default function DeepDiveIndex({ language = "cn" }: { language?: "cn" | "
           <Image src="/lunartulip-silver-emblem.png" width={29} height={32} alt="" aria-hidden="true" />
           LUNARTULIP LAB / DEEP DIVE
         </Link>
-        <Link className={styles.back} href={isCn ? "/" : "/en"}>{isCn ? "返回首页 ↗" : "Home ↗"}</Link>
+        <div className={styles.headerTools}>
+          <nav className={styles.localeNav} aria-label={isCn ? "语言选择" : "Language selection"}>
+            <Link className={!isCn ? styles.localeActive : undefined} href="/en/deep-dive" hrefLang="en" aria-current={!isCn ? "page" : undefined}>EN</Link>
+            <span>/</span>
+            <Link className={isCn ? styles.localeActive : undefined} href="/deep-dive" hrefLang="zh-CN" aria-current={isCn ? "page" : undefined}>CN</Link>
+          </nav>
+          <Link className={styles.back} href={isCn ? "/" : "/en"}>{isCn ? "返回首页 ↗" : "Home ↗"}</Link>
+        </div>
       </header>
 
       <section className={styles.hero}>

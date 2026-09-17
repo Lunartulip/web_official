@@ -59,6 +59,7 @@ const editorialHtmlEn = await readFile(new URL("../content/editorial-deep-dives/
 const alphaMapSlug = "the-projection-is-part-of-the-signal-001";
 const alphaMapIndexSource = await readFile(new URL("../app/alphamap/page.tsx", import.meta.url), "utf8");
 const englishAlphaMapIndexSource = await readFile(new URL("../app/en/alphamap/page.tsx", import.meta.url), "utf8");
+const alphaMapIndexComponentSource = await readFile(new URL("../app/alphamap/alphamap-index.tsx", import.meta.url), "utf8");
 const alphaMapRouteSource = await readFile(new URL(`../app/alphamap/${alphaMapSlug}/route.ts`, import.meta.url), "utf8");
 const englishAlphaMapRouteSource = await readFile(new URL(`../app/en/alphamap/${alphaMapSlug}/route.ts`, import.meta.url), "utf8");
 const alphaMapLoaderSource = await readFile(new URL("../lib/editorial-alphamap.ts", import.meta.url), "utf8");
@@ -385,8 +386,10 @@ test("publishes the first bilingual AlphaMap as a distinct public research serie
   assert.match(englishAlphaMapIndexSource, /canonical:\s*["']\/en\/alphamap["']/);
   for (const source of [alphaMapIndexSource, englishAlphaMapIndexSource]) {
     assert.match(source, /languages:/);
+    assert.match(source, /"x-default": "\/en\/alphamap"/);
     assert.match(source, /CollectionPage|CreativeWorkSeries/);
   }
+  assert.match(alphaMapIndexComponentSource, /href="\/en\/alphamap"[\s\S]*>EN<\/Link>[\s\S]*href="\/alphamap"[\s\S]*>CN<\/Link>/);
 
   for (const html of [alphaMapHtmlCn, alphaMapHtmlEn]) {
     assert.match(html, /^<!doctype html>/i);
@@ -430,7 +433,8 @@ test("routes AlphaMap discovery separately from Deep Dive and licensed data", ()
     assert.match(source, /collection.*alphamap|collection: "alphamap"/s);
   }
   assert.match(layoutSource, /"@type": \["CreativeWorkSeries", "CollectionPage"\]/);
-  assert.match(layoutSource, /lunartuliplab\.com\/alphamap#collection/);
+  assert.match(layoutSource, /lunartuliplab\.com\/en\/alphamap#collection/);
+  assert.match(sitemapSource, /"x-default": "https:\/\/lunartuliplab\.com\/en\/alphamap/);
   assert.match(pageSource, /PUBLIC RESEARCH SERIES \/ ALPHAMAP/);
   assert.match(pageSource, /受许可数据集按用途和许可单独交付/);
   assert.match(deepDiveIndexSource, /Continue with AlphaMap/);

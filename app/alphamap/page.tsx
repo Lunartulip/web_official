@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "固定图谱版本、样本和观察窗口，复核语义投影如何进入图分数与股票横截面诊断。",
   alternates: {
     canonical: "/alphamap",
-    languages: { "zh-CN": "/alphamap", en: "/en/alphamap" },
+    languages: { en: "/en/alphamap", "zh-CN": "/alphamap", "x-default": "/en/alphamap" },
   },
 };
 

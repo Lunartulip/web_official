@@ -73,8 +73,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
       alternates: {
         languages: {
-          "zh-CN": "https://lunartuliplab.com/alphamap",
           en: "https://lunartuliplab.com/en/alphamap",
+          "zh-CN": "https://lunartuliplab.com/alphamap",
+          "x-default": "https://lunartuliplab.com/en/alphamap",
         },
       },
     },
@@ -215,19 +216,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...alphaMapObjects.flatMap((item) => {
       const modifiedAt = item.versions.at(-1)?.date ?? item.publishedAt;
       const languages = {
-        "zh-CN": `https://lunartuliplab.com/alphamap/${item.slug}`,
         en: `https://lunartuliplab.com/en/alphamap/${item.slug}`,
+        "zh-CN": `https://lunartuliplab.com/alphamap/${item.slug}`,
+        "x-default": `https://lunartuliplab.com/en/alphamap/${item.slug}`,
       };
       return [
         {
-          url: languages["zh-CN"],
+          url: languages.en,
           lastModified: new Date(`${modifiedAt}T00:00:00+08:00`),
           changeFrequency: "monthly" as const,
           priority: 0.8,
           alternates: { languages },
         },
         {
-          url: languages.en,
+          url: languages["zh-CN"],
           lastModified: new Date(`${modifiedAt}T00:00:00+08:00`),
           changeFrequency: "monthly" as const,
           priority: 0.7,

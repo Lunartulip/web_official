@@ -509,9 +509,9 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
 
         <div className="header-tools">
         <div className="language-switch" aria-label="Language selector">
-          <Link href="/" className={language === "cn" ? "active" : ""} hrefLang="zh-CN" aria-current={language === "cn" ? "page" : undefined} onClick={() => window.localStorage.setItem("lunartulip-language", "cn")}>CN</Link>
-          <span>/</span>
           <Link href="/en" className={language === "en" ? "active" : ""} hrefLang="en" aria-current={language === "en" ? "page" : undefined} onClick={() => window.localStorage.setItem("lunartulip-language", "en")}>EN</Link>
+          <span>/</span>
+          <Link href="/" className={language === "cn" ? "active" : ""} hrefLang="zh-CN" aria-current={language === "cn" ? "page" : undefined} onClick={() => window.localStorage.setItem("lunartulip-language", "cn")}>CN</Link>
         </div>
         <div className="system-status" aria-label={language === "cn" ? "全球 AI 科技权益独立研究" : "Independent global AI technology equity research"}>
           <span aria-hidden="true" />

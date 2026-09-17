@@ -128,8 +128,8 @@ export default function WorkshopPreview({ initialLanguage = "cn" }: { initialLan
         </Link>
         <div className={styles.headerActions}>
           <div className={styles.language} aria-label={isCn ? "语言选择" : "Language selection"}>
-            <button type="button" className={isCn ? styles.active : ""} aria-pressed={isCn} onClick={() => selectLanguage("cn")}>中</button>
             <button type="button" className={!isCn ? styles.active : ""} aria-pressed={!isCn} onClick={() => selectLanguage("en")}>EN</button>
+            <button type="button" className={isCn ? styles.active : ""} aria-pressed={isCn} onClick={() => selectLanguage("cn")}>CN</button>
           </div>
           <Link className={styles.headerCta} href={accessHref}>{isCn ? "预约机构诊断" : "Book a diagnostic"} <UpRightIcon /></Link>
         </div>

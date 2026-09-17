@@ -173,7 +173,7 @@ export default function InstitutionalAccess({ language = "cn" }: { language?: "c
         <h1>{isCn ? <>先选合作方式，<span>再提交研究问题。</span></> : <>Choose the engagement, <span>then bring the research question.</span></>}</h1>
         <div className={styles.heroFoot}>
           <p>{isCn ? "从公开研究样章、人读 Research Desk、机器读 API、Alternative Dataset 到投研框架 Workshop，页面列出六种合作方式及边界。" : "Six defined routes span public samples, the human-readable Research Desk, machine-readable API, alternative datasets and the research-framework workshop."}</p>
-          <span>CN / EN · PROFESSIONAL & INSTITUTIONAL</span>
+          <span>EN / CN · PROFESSIONAL & INSTITUTIONAL</span>
         </div>
       </section>
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Dated graph vintages, samples and observation windows for auditing how semantic projections enter graph scores and stock diagnostics.",
   alternates: {
     canonical: "/en/alphamap",
-    languages: { "zh-CN": "/alphamap", en: "/en/alphamap" },
+    languages: { en: "/en/alphamap", "zh-CN": "/alphamap", "x-default": "/en/alphamap" },
   },
 };
 

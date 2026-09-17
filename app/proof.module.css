@@ -38,6 +38,35 @@
   letter-spacing: 0.08em;
 }
 
+.headerTools,
+.localeNav {
+  display: flex;
+  align-items: center;
+}
+
+.headerTools {
+  gap: 1.25rem;
+}
+
+.localeNav {
+  gap: 0.45rem;
+  color: #747c8c;
+  font-size: 0.69rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.localeNav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.localeNav a:hover,
+.localeNav a:focus-visible,
+.localeNav .localeActive {
+  color: #f2f2f4;
+}
+
 .hero,
 .section,
 .footer {
@@ -780,6 +809,14 @@
 
   .back {
     font-size: 0.62rem;
+  }
+
+  .headerTools {
+    gap: 0.75rem;
+  }
+
+  .headerTools .back {
+    display: none;
   }
 
   .hero {

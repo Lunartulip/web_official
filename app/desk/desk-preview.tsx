@@ -107,8 +107,8 @@ export default function DeskPreview({ initialLanguage = "cn" }: { initialLanguag
         </Link>
         <div className={styles.headerActions}>
           <div className={styles.language} aria-label={isCn ? "语言选择" : "Language selection"}>
-            <button type="button" className={isCn ? styles.active : ""} aria-pressed={isCn} onClick={() => selectLanguage("cn")}>中</button>
             <button type="button" className={!isCn ? styles.active : ""} aria-pressed={!isCn} onClick={() => selectLanguage("en")}>EN</button>
+            <button type="button" className={isCn ? styles.active : ""} aria-pressed={isCn} onClick={() => selectLanguage("cn")}>CN</button>
           </div>
           <Link className={styles.headerCta} href={isCn ? "/institutional-access" : "/en/institutional-access"}>
             {isCn ? "机构研究交流" : "Institutional research exchange"} <UpRightIcon />

@@ -164,14 +164,14 @@ const structuredData = {
         },
         {
           "@type": ["CreativeWorkSeries", "CollectionPage"],
-          "@id": "https://lunartuliplab.com/alphamap#collection",
+          "@id": "https://lunartuliplab.com/en/alphamap#collection",
           name: "Lunartulip AlphaMap",
-          url: "https://lunartuliplab.com/alphamap",
+          url: "https://lunartuliplab.com/en/alphamap",
           description: "A bilingual public research series mapping industry causality, value transmission and falsifiable hypotheses.",
-          inLanguage: ["zh-CN", "en"],
+          inLanguage: ["en", "zh-CN"],
         },
       ],
-      inLanguage: ["zh-CN", "en"],
+      inLanguage: ["en", "zh-CN"],
     },
   ],
 };
