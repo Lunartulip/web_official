@@ -1,28 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
 import { isEditorialDeepDive } from "@/lib/editorial-deep-dives";
-import { researchObjects } from "@/lib/research-objects";
+import { deepDiveResearchObjects } from "@/lib/research-objects";
 import styles from "../proof.module.css";
 
 function coverageLabel(tickers: string[]) {
   return tickers.length > 5 ? `${tickers.slice(0, 5).join(" · ")} + ${tickers.length - 5}` : tickers.join(" · ");
 }
 
-function modifiedDate(item: (typeof researchObjects)[number]) {
+function modifiedDate(item: (typeof deepDiveResearchObjects)[number]) {
   return item.versions.at(-1)?.date ?? item.publishedAt;
 }
 
-function newestFirst(a: (typeof researchObjects)[number], b: (typeof researchObjects)[number]) {
+function newestFirst(a: (typeof deepDiveResearchObjects)[number], b: (typeof deepDiveResearchObjects)[number]) {
   return modifiedDate(b).localeCompare(modifiedDate(a)) || b.publishedAt.localeCompare(a.publishedAt);
 }
 
 export default function DeepDiveIndex({ language = "cn" }: { language?: "cn" | "en" }) {
   const isCn = language === "cn";
   const locale = isCn ? "zh-CN" : "en";
-  const companyStudies = researchObjects
+  const companyStudies = deepDiveResearchObjects
     .filter((item) => item.kind === "company-deep-dive")
     .sort(newestFirst);
-  const themeStudies = researchObjects
+  const themeStudies = deepDiveResearchObjects
     .filter((item) => item.kind === "theme-study")
     .sort(newestFirst);
 
@@ -89,6 +89,14 @@ export default function DeepDiveIndex({ language = "cn" }: { language?: "cn" | "
         <div className={styles.policy}>
           <strong>{isCn ? "如何使用 Deep Dive" : "How to use the Deep Dives"}</strong>
           <p>{isCn ? "适合用于评估 Lunartulip 对公司、产业传导、预期差与风险边界的研究深度。内容保留判断时点与后续修正，帮助读者区分当时可得信息、原始论点和后来出现的新证据。" : "Use these Deep Dives to evaluate Lunartulip’s work on companies, industry transmission, expectation gaps and risk boundaries. Point-in-time context and later corrections help separate the original information set and thesis from evidence that emerged afterward."}</p>
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <div className={styles.policy}>
+          <strong>{isCn ? "继续阅读 AlphaMap" : "Continue with AlphaMap"}</strong>
+          <p>{isCn ? "AlphaMap 从产业因果、价值传导与关键连接出发，公开呈现可证伪的研究地图；它与公司、主题 Deep Dive 分列，不混入本页卡片。" : "AlphaMap starts from industry causality, value transmission and critical connections. Its public, falsifiable research maps remain separate from the company and theme cards on this page."}</p>
+          <Link href={`${isCn ? "" : "/en"}/alphamap`}>{isCn ? "打开 AlphaMap →" : "Explore AlphaMap →"}</Link>
         </div>
       </section>
 

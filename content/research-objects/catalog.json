@@ -3975,5 +3975,353 @@
         "en": "AI products have no standalone revenue disclosure; the reverse DCF base uses TTM total revenue rather than product-revenue guidance."
       }
     ]
+  },
+  {
+    "id": "RO-ALPHAMAP-001",
+    "slug": "the-projection-is-part-of-the-signal-001",
+    "kind": "alphamap-study",
+    "tickers": [],
+    "publishedAt": "2026-09-18",
+    "asOf": "2026-09-17",
+    "version": "1.0.0",
+    "sourceLabel": "AlphaMap Research Note #001 · reviewed edition",
+    "claims": [
+      {
+        "id": "CL-ALPHAMAP-001",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "研究图谱包含 39 家发行人，其中 26 只股票具备共同定价样本所需的归档控制数据；本次研究只使用 1 个历史图谱版本。",
+          "en": "The research graph contains 39 issuers, of which 26 stocks have the archived controls required for the common priced sample; the study uses one historical graph vintage."
+        },
+        "evidenceIds": ["EV-ALPHAMAP-001"]
+      },
+      {
+        "id": "CL-ALPHAMAP-002",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "在本次粗粒度角色投影中，weighted degree 对 39/39 个节点都与加权角色暴露计数完全一致。",
+          "en": "In this coarse role projection, weighted degree is exactly identical to the weighted role-exposure count for all 39 of 39 nodes."
+        },
+        "evidenceIds": ["EV-ALPHAMAP-002"]
+      },
+      {
+        "id": "CL-ALPHAMAP-003",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "39 个 Katz 分数中有 31 个可由组规模解释，另有 8 个节点构成例外。",
+          "en": "Group size explains 31 of 39 Katz scores, with an eight-node exception."
+        },
+        "evidenceIds": ["EV-ALPHAMAP-002"]
+      },
+      {
+        "id": "CL-ALPHAMAP-004",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "90.64% 与 96.84% 的 R² 只衡量样本内分数拟合，不是样本外收益解释力，也不是 alpha 估计。",
+          "en": "The R² values of 90.64% and 96.84% measure in-sample score fit only; they are neither out-of-sample return explanatory power nor alpha estimates."
+        },
+        "evidenceIds": ["EV-ALPHAMAP-003"]
+      },
+      {
+        "id": "CL-ALPHAMAP-005",
+        "type": "Inference",
+        "text": {
+          "zh-CN": "neutralized score 只表示对所列控制变量做了残差化，不等于市场、行业或因子中性的可交易组合。",
+          "en": "A neutralized score means residualization against the stated controls; it does not constitute a market-, industry-, or factor-neutral tradable portfolio."
+        },
+        "evidenceIds": ["EV-ALPHAMAP-003", "EV-ALPHAMAP-004"]
+      },
+      {
+        "id": "CL-ALPHAMAP-006",
+        "type": "Inference",
+        "text": {
+          "zh-CN": "单一图谱版本与结果发生后的回溯设计无法证明预测有效性；本研究是测量诊断，不是 alpha 验证。",
+          "en": "A single graph vintage and retrospective post-outcome design cannot establish predictive validity; this is a measurement diagnostic, not alpha validation."
+        },
+        "evidenceIds": ["EV-ALPHAMAP-001", "EV-ALPHAMAP-004"]
+      },
+      {
+        "id": "CL-ALPHAMAP-007",
+        "type": "Hypothesis",
+        "text": {
+          "zh-CN": "只有在预先冻结的多版本图谱、明确滞后和样本外窗口中，才能检验更丰富的语义关系是否提供超越组规模的增量信号。",
+          "en": "Only pre-frozen multi-vintage graphs with explicit lags and out-of-sample windows can test whether richer semantic relations add signal beyond group size."
+        },
+        "evidenceIds": ["EV-ALPHAMAP-004"]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "EV-ALPHAMAP-001",
+        "title": "AlphaMap historical graph and sample manifest",
+        "source": {
+          "publisher": "Lunartulip Lab",
+          "document": "AlphaMap Research Note #001 reviewed graph and sample manifest"
+        },
+        "sourceDate": "2026-09-08",
+        "dataAsOf": "2026-09-08",
+        "calculation": "39 graph issuers; 26 issuers in the common priced sample; one archived graph vintage.",
+        "confidence": "high",
+        "counterevidence": "One archived vintage cannot establish stability through time or prevent ontology choices from dominating the score.",
+        "lastVerified": "2026-09-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-ALPHAMAP-002",
+        "title": "Role-projection centrality diagnostic",
+        "source": {
+          "publisher": "Lunartulip Lab",
+          "document": "AlphaMap Research Note #001 centrality diagnostic"
+        },
+        "sourceDate": "2026-09-17",
+        "dataAsOf": "2026-09-08",
+        "calculation": "Compare weighted degree with role exposure count across 39 nodes; regress Katz score on group-size structure and inspect eight exceptions.",
+        "confidence": "high",
+        "counterevidence": "The identities are properties of this coarse projection and do not generalize to richer edge semantics.",
+        "lastVerified": "2026-09-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-ALPHAMAP-003",
+        "title": "In-sample score-fit controls",
+        "source": {
+          "publisher": "Lunartulip Lab",
+          "document": "AlphaMap Research Note #001 control regressions"
+        },
+        "sourceDate": "2026-09-17",
+        "dataAsOf": "2026-09-15",
+        "calculation": "Cross-sectional in-sample score fits report R² of 90.64% and 96.84%; residualized scores are descriptive controls only.",
+        "confidence": "medium",
+        "counterevidence": "High in-sample score fit does not measure return prediction and can reflect mechanical construction overlap.",
+        "lastVerified": "2026-09-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-ALPHAMAP-004",
+        "title": "Study design and portfolio-diagnostic boundary",
+        "source": {
+          "publisher": "Lunartulip Lab",
+          "document": "AlphaMap Research Note #001 methods and limitations"
+        },
+        "sourceDate": "2026-09-17",
+        "dataAsOf": "2026-09-17",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "A prospective, lagged, multi-vintage replication could produce different results.",
+        "lastVerified": "2026-09-17",
+        "role": "supporting"
+      }
+    ],
+    "versions": [
+      {
+        "version": "1.0.0",
+        "date": "2026-09-18",
+        "diff": {
+          "zh-CN": "首版：固定单一历史图谱的投影、样本内分数诊断和非 alpha 边界。",
+          "en": "Initial edition fixing the single-vintage projection, in-sample score diagnostics and non-alpha boundary."
+        }
+      }
+    ],
+    "renderings": {
+      "zh-CN": {
+        "locale": "zh-CN",
+        "siblingLocale": "en",
+        "title": "投影本身就是信号的一部分",
+        "question": "从产业语义投影出的图分数，究竟增加了信息，还是主要复述了标签与组规模？",
+        "standfirst": "一个从 AI 产业语义到股票横截面排序的探索性方法研究，先识别图谱构造写入分数的机械部分。",
+        "whyItMatters": "如果不先拆出投影恒等式与组规模效应，图中心性很容易被误读成独立的经济信号。",
+        "methodology": "在 2026-09-08 冻结图谱上计算全部 39 家发行人的图特征，再限制到 26 只共同定价样本；收益窗口为 2026-09-09 至 09-15，价格于 09-17 获取。设计为结果发生后的回溯诊断。",
+        "findings": "weighted degree 在 39/39 节点上等于加权角色暴露计数；Katz 有 31/39 可由组规模解释并有 8 个例外；90.64%/96.84% 只是样本内分数拟合。",
+        "limitations": "只有一个历史图谱版本，未做样本外预测验证。neutralized score 不等于中性组合，本文不声称 alpha、估值结论或交易可行性。",
+        "update": "首版发布于 2026-09-18，信息截至 2026-09-17。",
+        "evidenceClaimIds": ["CL-ALPHAMAP-001", "CL-ALPHAMAP-002", "CL-ALPHAMAP-003", "CL-ALPHAMAP-004", "CL-ALPHAMAP-005"],
+        "riskClaimIds": ["CL-ALPHAMAP-006", "CL-ALPHAMAP-007"]
+      },
+      "en": {
+        "locale": "en",
+        "siblingLocale": "zh-CN",
+        "title": "The Projection Is Part of the Signal",
+        "question": "Do graph scores projected from industry semantics add information, or mainly restate labels and group size?",
+        "standfirst": "An exploratory methods study from AI-industry semantics to cross-sectional stock rankings, beginning with the mechanical content written into scores by graph construction.",
+        "whyItMatters": "Without separating projection identities and group-size effects first, graph centrality can be mistaken for an independent economic signal.",
+        "methodology": "Compute graph features for all 39 issuers on the graph frozen September 8, 2026, then restrict to the 26-stock common priced sample. The return window is September 9–15 and prices were retrieved September 17. The design is retrospective and post-outcome.",
+        "findings": "Weighted degree equals weighted role exposure for 39/39 nodes; group size explains Katz for 31/39 with eight exceptions; 90.64%/96.84% are in-sample score fits only.",
+        "limitations": "There is one historical graph vintage and no out-of-sample predictive test. A neutralized score is not a neutral portfolio; this note makes no alpha, valuation or tradability claim.",
+        "update": "Initial edition published September 18, 2026, with information through September 17, 2026.",
+        "evidenceClaimIds": ["CL-ALPHAMAP-001", "CL-ALPHAMAP-002", "CL-ALPHAMAP-003", "CL-ALPHAMAP-004", "CL-ALPHAMAP-005"],
+        "riskClaimIds": ["CL-ALPHAMAP-006", "CL-ALPHAMAP-007"]
+      }
+    },
+    "temporalAnchors": [
+      {
+        "id": "TA-ALPHAMAP-GRAPH",
+        "type": "graph-vintage",
+        "date": "2026-09-08",
+        "retrospective": true,
+        "description": {
+          "zh-CN": "用于构造图特征的唯一历史图谱版本。",
+          "en": "The sole historical graph vintage used to construct graph features."
+        }
+      },
+      {
+        "id": "TA-ALPHAMAP-RETURN",
+        "type": "return-window",
+        "startDate": "2026-09-09",
+        "endDate": "2026-09-15",
+        "retrospective": true,
+        "description": {
+          "zh-CN": "探索性股票收益观察窗口。",
+          "en": "Exploratory stock-return observation window."
+        }
+      },
+      {
+        "id": "TA-ALPHAMAP-PRICE",
+        "type": "price-retrieval",
+        "date": "2026-09-17",
+        "retrospective": true,
+        "description": {
+          "zh-CN": "价格与控制数据的获取日期。",
+          "en": "Retrieval date for prices and controls."
+        }
+      }
+    ],
+    "studyDesign": {
+      "design": "retrospective-post-outcome",
+      "objective": {
+        "zh-CN": "识别图投影对股票分数的机械贡献，并建立后续前瞻研究基线。",
+        "en": "Identify the mechanical contribution of graph projection to stock scores and establish a baseline for later prospective research."
+      },
+      "projection": {
+        "zh-CN": "发行人—角色与发行人—主题成员关系被确定性地投影为公司同类关系。",
+        "en": "Issuer–role and issuer–theme memberships are deterministically projected into company peer relationships."
+      },
+      "outcome": {
+        "zh-CN": "结果发生后观察 2026-09-09 至 09-15 的横截面收益，只作诊断，不作预测验证。",
+        "en": "Cross-sectional returns for September 9–15 are observed after the outcome for diagnosis only, not predictive validation."
+      }
+    },
+    "sample": {
+      "graphIssuers": 39,
+      "pricedStocks": 26,
+      "historicalGraphVintages": 1,
+      "inclusion": {
+        "zh-CN": "图特征在 39 家全球发行人上计算；组合诊断限制在具备共同归档控制数据的 26 只股票。",
+        "en": "Graph features are computed over 39 global issuers; portfolio diagnostics are restricted to 26 stocks with common archived controls."
+      }
+    },
+    "diagnostics": [
+      {
+        "id": "DG-ALPHAMAP-WDEGREE",
+        "metric": "weighted-degree identity coverage",
+        "value": 39,
+        "unit": "count",
+        "scope": {
+          "zh-CN": "39 个图节点中的完全恒等节点数",
+          "en": "Nodes with exact identity out of 39 graph nodes"
+        },
+        "interpretation": {
+          "zh-CN": "weighted degree 在此投影中是暴露计数，不是独立发现。",
+          "en": "Weighted degree is an exposure count in this projection, not an independent discovery."
+        },
+        "evidenceIds": ["EV-ALPHAMAP-002"],
+        "claimIds": ["CL-ALPHAMAP-002"]
+      },
+      {
+        "id": "DG-ALPHAMAP-KATZ",
+        "metric": "Katz group-size coverage",
+        "value": 31,
+        "unit": "count",
+        "scope": {
+          "zh-CN": "39 个节点中由组规模解释的节点数；其余 8 个为例外",
+          "en": "Nodes explained by group size out of 39; the remaining eight are exceptions"
+        },
+        "interpretation": {
+          "zh-CN": "大多数 Katz 排序首先反映投影组规模。",
+          "en": "Most Katz rankings first reflect projected group size."
+        },
+        "evidenceIds": ["EV-ALPHAMAP-002"],
+        "claimIds": ["CL-ALPHAMAP-003"]
+      },
+      {
+        "id": "DG-ALPHAMAP-R2-A",
+        "metric": "in-sample score fit A",
+        "value": 90.64,
+        "unit": "percent",
+        "scope": {
+          "zh-CN": "样本内分数回归",
+          "en": "In-sample score regression"
+        },
+        "interpretation": {
+          "zh-CN": "仅为分数拟合，不是收益解释力。",
+          "en": "Score fit only, not return explanatory power."
+        },
+        "evidenceIds": ["EV-ALPHAMAP-003"],
+        "claimIds": ["CL-ALPHAMAP-004"]
+      },
+      {
+        "id": "DG-ALPHAMAP-R2-B",
+        "metric": "in-sample score fit B",
+        "value": 96.84,
+        "unit": "percent",
+        "scope": {
+          "zh-CN": "加入控制项的样本内分数回归",
+          "en": "Controlled in-sample score regression"
+        },
+        "interpretation": {
+          "zh-CN": "残差化分数不构成中性组合。",
+          "en": "A residualized score does not constitute a neutral portfolio."
+        },
+        "evidenceIds": ["EV-ALPHAMAP-003"],
+        "claimIds": ["CL-ALPHAMAP-004", "CL-ALPHAMAP-005"]
+      }
+    ],
+    "limitations": [
+      {
+        "id": "LM-ALPHAMAP-SINGLE-VINTAGE",
+        "text": {
+          "zh-CN": "只有一个历史图谱版本，无法检验图结构或分数关系的时序稳定性。",
+          "en": "Only one historical graph vintage is available, so temporal stability of graph structure or score relations cannot be tested."
+        },
+        "claimIds": ["CL-ALPHAMAP-006"]
+      },
+      {
+        "id": "LM-ALPHAMAP-NON-ALPHA",
+        "text": {
+          "zh-CN": "回溯、结果发生后的设计不构成 alpha 或样本外预测证据。",
+          "en": "The retrospective post-outcome design is not evidence of alpha or out-of-sample prediction."
+        },
+        "claimIds": ["CL-ALPHAMAP-006", "CL-ALPHAMAP-007"]
+      },
+      {
+        "id": "LM-ALPHAMAP-NEUTRALITY",
+        "text": {
+          "zh-CN": "neutralized score 不等于市场、行业、风格或风险中性的投资组合。",
+          "en": "A neutralized score is not a market-, industry-, style-, or risk-neutral portfolio."
+        },
+        "claimIds": ["CL-ALPHAMAP-005"]
+      }
+    ],
+    "artifacts": [
+      {
+        "id": "AR-ALPHAMAP-ARTICLE",
+        "label": {
+          "zh-CN": "审阅版方法研究",
+          "en": "Reviewed methods study"
+        },
+        "mediaType": "text/html",
+        "url": "/alphamap/the-projection-is-part-of-the-signal-001",
+        "evidenceIds": ["EV-ALPHAMAP-001", "EV-ALPHAMAP-002", "EV-ALPHAMAP-003", "EV-ALPHAMAP-004"]
+      },
+      {
+        "id": "AR-ALPHAMAP-METHODS",
+        "label": {
+          "zh-CN": "方法与参考资料",
+          "en": "Methods and references"
+        },
+        "mediaType": "text/html",
+        "url": "/alphamap/the-projection-is-part-of-the-signal-001#methods",
+        "evidenceIds": ["EV-ALPHAMAP-004"]
+      }
+    ]
   }
 ]

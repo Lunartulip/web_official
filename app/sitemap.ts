@@ -6,10 +6,16 @@ import { researchObjects } from "@/lib/research-objects";
 export default function sitemap(): MetadataRoute.Sitemap {
   const notes = getAllNotes();
   const englishNotes = getAllNotes("en");
+  const alphaMapObjects = researchObjects.filter((item) => String(item.kind) === "alphamap-study");
+  const deepDiveObjects = researchObjects.filter((item) => String(item.kind) !== "alphamap-study");
   const latestResearchDate = researchObjects
     .map((item) => item.versions.at(-1)?.date ?? item.publishedAt)
     .sort()
     .at(-1) ?? "2026-08-15";
+  const latestAlphaMapDate = alphaMapObjects
+    .map((item) => item.versions.at(-1)?.date ?? item.publishedAt)
+    .sort()
+    .at(-1) ?? latestResearchDate;
 
   return [
     {
@@ -57,6 +63,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
         languages: {
           "zh-CN": "https://lunartuliplab.com/deep-dive",
           en: "https://lunartuliplab.com/en/deep-dive",
+        },
+      },
+    },
+    {
+      url: "https://lunartuliplab.com/alphamap",
+      lastModified: new Date(`${latestAlphaMapDate}T00:00:00+08:00`),
+      changeFrequency: "weekly",
+      priority: 0.9,
+      alternates: {
+        languages: {
+          "zh-CN": "https://lunartuliplab.com/alphamap",
+          en: "https://lunartuliplab.com/en/alphamap",
         },
       },
     },
@@ -127,6 +145,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
+      url: "https://lunartuliplab.com/alphamap/feed.xml",
+      lastModified: new Date(`${latestAlphaMapDate}T00:00:00+08:00`),
+      changeFrequency: "weekly",
+      priority: 0.5,
+    },
+    {
+      url: "https://lunartuliplab.com/en/alphamap/feed.xml",
+      lastModified: new Date(`${latestAlphaMapDate}T00:00:00+08:00`),
+      changeFrequency: "weekly",
+      priority: 0.5,
+    },
+    {
       url: "https://lunartuliplab.com/authority-ledger/data.json",
       lastModified: new Date(`${authoritySummary.generated_at}T00:00:00+08:00`),
       changeFrequency: "weekly",
@@ -136,6 +166,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { path: "", modified: latestResearchDate },
       { path: "/about", modified: "2026-08-13" },
       { path: "/deep-dive", modified: latestResearchDate },
+      { path: "/alphamap", modified: latestAlphaMapDate },
       { path: "/authority-ledger", modified: authoritySummary.generated_at },
       { path: "/desk", modified: "2026-08-13" },
       { path: "/workshop", modified: "2026-09-14" },
@@ -143,10 +174,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ].map((entry, index) => ({
       url: `https://lunartuliplab.com/en${entry.path}`,
       lastModified: new Date(`${entry.modified}T00:00:00+08:00`),
-      changeFrequency: entry.path === "/deep-dive" ? "weekly" as const : "monthly" as const,
+      changeFrequency: entry.path === "/deep-dive" || entry.path === "/alphamap" ? "weekly" as const : "monthly" as const,
       priority: index === 0 ? 0.9 : 0.75,
     })),
-    ...researchObjects.flatMap((item) => {
+    ...deepDiveObjects.flatMap((item) => {
       const modifiedAt = item.versions.at(-1)?.date ?? item.publishedAt;
       return [
       {
@@ -180,6 +211,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.55,
       },
     ];
+    }),
+    ...alphaMapObjects.flatMap((item) => {
+      const modifiedAt = item.versions.at(-1)?.date ?? item.publishedAt;
+      const languages = {
+        "zh-CN": `https://lunartuliplab.com/alphamap/${item.slug}`,
+        en: `https://lunartuliplab.com/en/alphamap/${item.slug}`,
+      };
+      return [
+        {
+          url: languages["zh-CN"],
+          lastModified: new Date(`${modifiedAt}T00:00:00+08:00`),
+          changeFrequency: "monthly" as const,
+          priority: 0.8,
+          alternates: { languages },
+        },
+        {
+          url: languages.en,
+          lastModified: new Date(`${modifiedAt}T00:00:00+08:00`),
+          changeFrequency: "monthly" as const,
+          priority: 0.7,
+          alternates: { languages },
+        },
+        {
+          url: `https://lunartuliplab.com/research/${item.slug}`,
+          lastModified: new Date(`${modifiedAt}T00:00:00+08:00`),
+          changeFrequency: "monthly" as const,
+          priority: 0.55,
+        },
+      ];
     }),
     ...notes.flatMap((note) => {
       const englishNote = englishNotes.find((item) => item.slug === note.slug);

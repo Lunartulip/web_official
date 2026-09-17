@@ -214,7 +214,7 @@ export default function DeskPreview({ initialLanguage = "cn" }: { initialLanguag
       <section className={styles.values} aria-labelledby="desk-formats">
         <div className={styles.sectionHeading}>
           <div><p className={styles.eyebrow}>DELIVERY SURFACES / 02</p><h2 id="desk-formats">{isCn ? "同一研究状态，服务人、Agent 与系统化研究。" : "One research state, delivered to people, agents and systematic workflows."}</h2></div>
-          <p>{isCn ? "公开官网保留可引用的 canonical Research Objects；专业与机构客户可按 coverage 获得持续更新的人读版本、机器读接口或 point-in-time 研究数据。" : "The public site preserves citable canonical Research Objects. Professional and institutional clients can receive continuously updated human-readable research, machine-readable interfaces or point-in-time research data by coverage."}</p>
+          <p>{isCn ? "官网公开可引用的 AlphaMap 与 Deep Dive。专业与机构客户可按 coverage 获得持续更新的人读版本、受许可的 Research API 或 point-in-time Alternative Dataset。" : "The public site preserves citable AlphaMap and Deep Dive articles. Professional and institutional clients can receive continuously updated human-readable research, a licensed Research API or point-in-time alternative datasets by coverage."}</p>
         </div>
         <div className={styles.valueGrid}>
           <article>
@@ -319,9 +319,14 @@ export default function DeskPreview({ initialLanguage = "cn" }: { initialLanguag
         <div>
           <p className={styles.eyebrow}>DEEPER VERIFICATION / 06</p>
           <h2 id="request-title">{isCn ? "从研究作品开始，进一步了解系统方法。" : "Begin with the research, then explore the system behind it."}</h2>
-          <p>{isCn ? "通过 Deep Dive 查看具体研究如何形成，通过 Authority Ledger 查看历史判断如何接受结果检验；机构团队也可以围绕一个明确研究问题，讨论适合自身场景的持续跟踪与研究协作方式。" : "Use Deep Dives to see how specific research is formed and the Authority Ledger to see how prior judgments meet outcomes. Institutional teams can also begin with one clear research question and discuss a suitable format for continuous monitoring and research exchange."}</p>
+          <p>{isCn ? "先阅读公开 AlphaMap 样章或 Deep Dive，再按需要评估 Research Desk、受许可的 Research API 与 Alternative Dataset。公开文章用于阅读和引用；受许可数据集按 coverage 与用途单独交付。" : "Begin with a public AlphaMap sample or Deep Dive, then evaluate the Research Desk, licensed Research API or alternative datasets as needed. Public articles are for reading and citation; they are not licensed datasets."}</p>
         </div>
         <div className={styles.proofLinks}>
+          <Link className={styles.requestButton} href={isCn ? "/alphamap" : "/en/alphamap"}>
+            <small>PUBLIC ALPHAMAP SAMPLE</small>
+            <strong>{isCn ? "阅读 AlphaMap 样章" : "Read an AlphaMap sample"}</strong>
+            <UpRightIcon />
+          </Link>
           <Link className={styles.requestButton} href={isCn ? "/deep-dive" : "/en/deep-dive"}>
             <small>PUBLIC RESEARCH OBJECTS</small>
             <strong>{isCn ? "阅读 Deep Dive" : "Read Deep Dives"}</strong>

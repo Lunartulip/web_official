@@ -686,6 +686,15 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
           </div>
         </div>
 
+        <div className="enterprise-mode">
+          <div>
+            <small>PUBLIC RESEARCH SERIES / ALPHAMAP</small>
+            <strong>{language === "cn" ? "沿产业因果与价值传导，阅读可证伪的研究地图" : "Follow industry causality and value transmission through falsifiable research maps"}</strong>
+          </div>
+          <p>{language === "cn" ? "AlphaMap 公开样章保留研究问题、关键连接、假设边界与引用元数据。文章用于公开阅读与引用；受许可数据集按用途和许可单独交付。" : "AlphaMap public samples preserve the research question, key connections, hypothesis boundaries and citation metadata. Articles are for public reading and citation; they are not licensed datasets."}</p>
+          <Link href={language === "en" ? "/en/alphamap" : "/alphamap"}>{language === "cn" ? "进入 AlphaMap" : "Explore AlphaMap"} <ArrowRightIcon /></Link>
+        </div>
+
         <div className="product-ladder">
           {productOffers.map((offer, index) => (
             <article className={`product-offer ${index === 1 ? "product-offer-featured" : ""}`} key={offer.code}>
@@ -969,6 +978,7 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
             <p><a href={institutionalMailto({ source: "HOME_FOOTER", topic: language === "cn" ? "官网联系" : "Website Contact", language })}>{INSTITUTIONAL_EMAIL}</a></p>
             <p className="footer-links">
               <Link href={language === "en" ? "/en/about" : "/about"}>{language === "cn" ? "关于我们" : "About"}</Link>
+              <Link href={language === "en" ? "/en/alphamap" : "/alphamap"}>AlphaMap</Link>
               <Link href={language === "en" ? "/en/deep-dive" : "/deep-dive"}>Deep Dive</Link>
               <Link href={language === "en" ? "/en/authority-ledger" : "/authority-ledger"}>Authority Ledger</Link>
               <Link href={language === "en" ? "/en/institutional-access" : "/institutional-access"}>Research Access</Link>

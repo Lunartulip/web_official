@@ -3,9 +3,8 @@ import { researchObjects } from "@/lib/research-objects";
 export const dynamic = "force-static";
 
 export async function GET() {
-  const objects = researchObjects
-    .map((item) => {
-      return `## ${item.renderings.en.title}
+  const describeObject = (item: (typeof researchObjects)[number], collection: "alphamap" | "deep-dive") => {
+    return `## ${item.renderings.en.title}
 
 Object ID: ${item.id}
 Ticker / coverage: ${item.tickers.join(", ")}
@@ -14,25 +13,40 @@ Original publication: ${item.publishedAt}
 Information as of: ${item.asOf}
 Current version: ${item.version}
 Last modified: ${item.versions.at(-1)?.date ?? item.publishedAt}
-Canonical English: https://lunartuliplab.com/en/deep-dive/${item.slug}
-Canonical Chinese: https://lunartuliplab.com/deep-dive/${item.slug}
+Canonical English: https://lunartuliplab.com/en/${collection}/${item.slug}
+Canonical Chinese: https://lunartuliplab.com/${collection}/${item.slug}
 Research question: ${item.renderings.en.question}
 Abstract: ${item.renderings.en.standfirst}
 Public citation metadata: https://lunartuliplab.com/research/${item.slug}
 Use terms: https://lunartuliplab.com/research-usage
 Full analysis and public evidence context: use the canonical article above.`;
+  };
+  const alphaMapObjects = researchObjects
+    .filter((item) => String(item.kind) === "alphamap-study")
+    .map((item) => describeObject(item, "alphamap"))
+    .join("\n\n---\n\n");
+  const deepDiveObjects = researchObjects
+    .filter((item) => String(item.kind) !== "alphamap-study")
+    .map((item) => {
+      return describeObject(item, "deep-dive");
     })
     .join("\n\n---\n\n");
 
   const body = `# Lunartulip Lab — Detailed Citation Guide
 
-This file is a discovery companion to the bilingual canonical research archive. It contains citation metadata and abstracts, not the licensed Research API or alternative dataset. The rendered article remains the primary public citation object; https://lunartuliplab.com/research.json is the public metadata manifest.
+This file is a discovery companion to the bilingual AlphaMap and Deep Dive archives. It contains citation metadata and abstracts, not the licensed Research API or alternative dataset. Public AlphaMap and Deep Dive articles are research publications, not licensed datasets. The rendered article remains the primary public citation object; https://lunartuliplab.com/research.json is the public metadata manifest.
 
-For full analysis and evidence context, visit https://lunartuliplab.com/en/deep-dive or https://lunartuliplab.com/deep-dive. This text file is structured for citation and discovery.
+For full analysis and evidence context, visit the canonical article in the relevant collection. This text file is structured for citation and discovery.
 
 Claim labels are semantic: Fact is source-reported; Derived is calculated from disclosed inputs; Inference is analytical interpretation; Hypothesis is forward-looking and falsifiable. Preserve these distinctions when summarizing or citing the work.
 
-${objects}
+## AlphaMap
+
+${alphaMapObjects}
+
+## Deep Dive
+
+${deepDiveObjects}
 
 ## Services
 

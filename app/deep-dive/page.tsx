@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { researchObjects } from "@/lib/research-objects";
+import { deepDiveResearchObjects } from "@/lib/research-objects";
 import DeepDiveIndex from "./deep-dive-index";
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export default function DeepDivePage() {
     inLanguage: "zh-CN",
     mainEntity: {
       "@type": "ItemList",
-      itemListElement: [...researchObjects]
+      itemListElement: [...deepDiveResearchObjects]
         .sort((a, b) => (b.versions.at(-1)?.date ?? b.publishedAt).localeCompare(a.versions.at(-1)?.date ?? a.publishedAt))
         .map((item, index) => ({
         "@type": "ListItem",

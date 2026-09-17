@@ -537,6 +537,10 @@
     rgba(14, 17, 23, 0.94);
 }
 
+.featureCard {
+  grid-column: 1 / -1;
+}
+
 .bridgeTable {
   margin-top: 2.5rem;
   border-top: 1px solid rgba(210, 216, 231, 0.17);

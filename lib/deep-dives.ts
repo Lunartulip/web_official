@@ -1,4 +1,5 @@
 import { researchObjects } from "./research-objects";
+import type { DeepDiveResearchObject } from "./research-objects/types";
 
 export type DeepDive = {
   slug: string;
@@ -42,7 +43,7 @@ export type DeepDive = {
   updateEn: string;
 };
 
-function projectDeepDive(object: (typeof researchObjects)[number]): DeepDive {
+function projectDeepDive(object: DeepDiveResearchObject): DeepDive {
   const zh = object.renderings["zh-CN"];
   const en = object.renderings.en;
   const claims = new Map(object.claims.map((claim) => [claim.id, claim]));
@@ -98,7 +99,7 @@ function projectDeepDive(object: (typeof researchObjects)[number]): DeepDive {
 }
 
 export const deepDives: DeepDive[] = researchObjects
-  .filter((object) => object.kind === "company-deep-dive" || object.kind === "theme-study")
+  .filter((object): object is DeepDiveResearchObject => object.kind !== "alphamap-study")
   .map(projectDeepDive);
 
 export function getDeepDive(slug: string) {

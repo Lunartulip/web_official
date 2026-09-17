@@ -56,6 +56,16 @@ const editorialRouteSource = await readFile(new URL("../app/deep-dive/global-ai-
 const englishEditorialRouteSource = await readFile(new URL("../app/en/deep-dive/global-ai-hardware-profit-pools-2026-09/route.ts", import.meta.url), "utf8");
 const editorialHtmlCn = await readFile(new URL("../content/editorial-deep-dives/global-ai-hardware-profit-pools-2026-09.zh.html", import.meta.url), "utf8");
 const editorialHtmlEn = await readFile(new URL("../content/editorial-deep-dives/global-ai-hardware-profit-pools-2026-09.en.html", import.meta.url), "utf8");
+const alphaMapSlug = "the-projection-is-part-of-the-signal-001";
+const alphaMapIndexSource = await readFile(new URL("../app/alphamap/page.tsx", import.meta.url), "utf8");
+const englishAlphaMapIndexSource = await readFile(new URL("../app/en/alphamap/page.tsx", import.meta.url), "utf8");
+const alphaMapRouteSource = await readFile(new URL(`../app/alphamap/${alphaMapSlug}/route.ts`, import.meta.url), "utf8");
+const englishAlphaMapRouteSource = await readFile(new URL(`../app/en/alphamap/${alphaMapSlug}/route.ts`, import.meta.url), "utf8");
+const alphaMapLoaderSource = await readFile(new URL("../lib/editorial-alphamap.ts", import.meta.url), "utf8");
+const alphaMapHtmlCn = await readFile(new URL(`../content/editorial-alphamap/${alphaMapSlug}.zh.html`, import.meta.url), "utf8");
+const alphaMapHtmlEn = await readFile(new URL(`../content/editorial-alphamap/${alphaMapSlug}.en.html`, import.meta.url), "utf8");
+const chineseAlphaMapFeedSource = await readFile(new URL("../app/alphamap/feed.xml/route.ts", import.meta.url), "utf8");
+const englishAlphaMapFeedSource = await readFile(new URL("../app/en/alphamap/feed.xml/route.ts", import.meta.url), "utf8");
 const memorySeriesSlugs = [
   "hbm-memory-cash-capture-alpha-2026-09",
   "micron-hbm-capital-cycle-2026-09",
@@ -356,6 +366,79 @@ test("indexes the AI hardware theme study through the companion research object"
   const gaps = JSON.stringify(study.dataGaps);
   assert.match(gaps, /Seeking Alpha/);
   assert.match(gaps, /CXMT/);
+});
+
+test("publishes the first bilingual AlphaMap as a distinct public research series", () => {
+  const catalog = JSON.parse(researchCatalogSource);
+  const study = catalog.find((item) => item.slug === alphaMapSlug);
+  assert.ok(study, "AlphaMap companion research object missing from the catalog");
+  assert.equal(study.kind, "alphamap-study");
+
+  for (const source of [alphaMapRouteSource, englishAlphaMapRouteSource]) {
+    assert.match(source, /export const dynamic = "force-static"/);
+    assert.match(source, /readEditorialAlphaMap/);
+    assert.match(source, /editorialAlphaMapResponse/);
+    assert.match(source, new RegExp(alphaMapSlug));
+  }
+  assert.match(alphaMapLoaderSource, /Content-Type["']?: "text\/html; charset=utf-8"/);
+  assert.match(alphaMapIndexSource, /canonical:\s*["']\/alphamap["']/);
+  assert.match(englishAlphaMapIndexSource, /canonical:\s*["']\/en\/alphamap["']/);
+  for (const source of [alphaMapIndexSource, englishAlphaMapIndexSource]) {
+    assert.match(source, /languages:/);
+    assert.match(source, /CollectionPage|CreativeWorkSeries/);
+  }
+
+  for (const html of [alphaMapHtmlCn, alphaMapHtmlEn]) {
+    assert.match(html, /^<!doctype html>/i);
+    assert.match(html, /Lunartulip Lab/);
+    assert.match(html, /AlphaMap/);
+    assert.match(html, /hreflang="zh-CN"/);
+    assert.match(html, /hreflang="en"/);
+    assert.match(html, /hreflang="x-default"/);
+    assert.match(html, /application\/ld\+json/);
+    assert.match(html, /"@type"\s*:\s*"(?:Article|ScholarlyArticle)"/);
+    assert.match(html, /not investment advice|不构成投资建议/i);
+    assert.doesNotMatch(html, /LunarTulip Research|Lunartulip Research/);
+    assert.doesNotMatch(html, /desk\.lunartuliplab\.com|\/external\/|workspace\/ai-team|workspace\/decision_core|private\//i);
+  }
+  assert.match(alphaMapHtmlCn, new RegExp(`rel="canonical" href="https://lunartuliplab\\.com/alphamap/${alphaMapSlug}"`));
+  assert.match(alphaMapHtmlEn, new RegExp(`rel="canonical" href="https://lunartuliplab\\.com/en/alphamap/${alphaMapSlug}"`));
+});
+
+test("routes AlphaMap discovery separately from Deep Dive and licensed data", () => {
+  assert.match(sitemapSource, /String\(item\.kind\) === "alphamap-study"/);
+  assert.match(sitemapSource, /String\(item\.kind\) !== "alphamap-study"/);
+  assert.match(sitemapSource, /alphamap\/\$\{item\.slug\}/);
+  assert.match(sitemapSource, /research\/\$\{item\.slug\}/);
+  assert.match(sitemapSource, /lunartuliplab\.com\/alphamap\/feed\.xml/);
+  assert.match(sitemapSource, /lunartuliplab\.com\/en\/alphamap\/feed\.xml/);
+
+  for (const source of [chineseAlphaMapFeedSource, englishAlphaMapFeedSource]) {
+    assert.match(source, /String\(item\.kind\) === "alphamap-study"/);
+    assert.match(source, /application\/rss\+xml/);
+    assert.match(source, /item\.id}@\$\{item\.version/);
+  }
+  for (const source of [chineseResearchFeedSource, englishResearchFeedSource]) {
+    assert.match(source, /String\(item\.kind\) !== "alphamap-study"/);
+  }
+
+  for (const source of [llmsSource, llmsFullSource]) {
+    assert.match(source, /AlphaMap/);
+    assert.match(source, /Deep Dive/);
+    assert.match(source, /public citation metadata/i);
+    assert.match(source, /not licensed datasets?/i);
+    assert.match(source, /collection.*alphamap|collection: "alphamap"/s);
+  }
+  assert.match(layoutSource, /"@type": \["CreativeWorkSeries", "CollectionPage"\]/);
+  assert.match(layoutSource, /lunartuliplab\.com\/alphamap#collection/);
+  assert.match(pageSource, /PUBLIC RESEARCH SERIES \/ ALPHAMAP/);
+  assert.match(pageSource, /受许可数据集按用途和许可单独交付/);
+  assert.match(deepDiveIndexSource, /Continue with AlphaMap/);
+  assert.doesNotMatch(deepDiveIndexSource, /\.filter\(\(item\) => String\(item\.kind\) === "alphamap-study"\)/);
+  assert.match(deskPreviewSource, /PUBLIC ALPHAMAP SAMPLE/);
+  assert.match(deskPreviewSource, /licensed Research API/);
+  assert.match(accessPageSource, /PUBLIC SAMPLE TO LICENSED DELIVERY/);
+  assert.match(accessPageSource, /受许可数据集按用途、许可与数据权利单独交付/);
 });
 
 test("renders the Authority Ledger from a generated data projection with visible methodology", () => {

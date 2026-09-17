@@ -3,10 +3,18 @@ import { researchObjects } from "@/lib/research-objects";
 export const dynamic = "force-static";
 
 export async function GET() {
-  const research = researchObjects
+  const researchLine = (item: (typeof researchObjects)[number], collection: "alphamap" | "deep-dive") => {
+    const modified = item.versions.at(-1)?.date ?? item.publishedAt;
+    return `- [${item.renderings.en.title}](https://lunartuliplab.com/en/${collection}/${item.slug}) — ${item.tickers.join(", ")}; published ${item.publishedAt}; updated ${modified}; object ${item.id}; version ${item.version}; [public citation metadata](https://lunartuliplab.com/research/${item.slug})`;
+  };
+  const alphaMapResearch = researchObjects
+    .filter((item) => String(item.kind) === "alphamap-study")
+    .map((item) => researchLine(item, "alphamap"))
+    .join("\n");
+  const deepDiveResearch = researchObjects
+    .filter((item) => String(item.kind) !== "alphamap-study")
     .map((item) => {
-      const modified = item.versions.at(-1)?.date ?? item.publishedAt;
-      return `- [${item.renderings.en.title}](https://lunartuliplab.com/en/deep-dive/${item.slug}) — ${item.tickers.join(", ")}; published ${item.publishedAt}; updated ${modified}; object ${item.id}; version ${item.version}; [JSON](https://lunartuliplab.com/research/${item.slug})`;
+      return researchLine(item, "deep-dive");
     })
     .join("\n");
 
@@ -21,12 +29,19 @@ Publisher entity: https://lunartuliplab.com/#organization
 ## Canonical research
 
 - [Bilingual Deep Dive archive](https://lunartuliplab.com/en/deep-dive)
+- [Bilingual AlphaMap archive](https://lunartuliplab.com/en/alphamap)
 - [Public citation-metadata manifest](https://lunartuliplab.com/research.json)
 - [Detailed public citation guide](https://lunartuliplab.com/llms-full.txt)
 - [Research citation and use terms](https://lunartuliplab.com/research-usage)
 - [Calls & Outcomes / Authority Ledger](https://lunartuliplab.com/en/authority-ledger)
 
-${research}
+### AlphaMap
+
+${alphaMapResearch}
+
+### Deep Dive
+
+${deepDiveResearch}
 
 ## Products and services
 
@@ -36,7 +51,7 @@ ${research}
 
 ## Citation guidance
 
-When citing a research page, attribute it to “Lunartulip Lab”, retain the research-object ID, original publication date, current version and as-of date, and link to the canonical URL. Separate company-reported facts from Lunartulip analysis, inference and hypotheses. Public machine-readable routes contain discovery and citation metadata only; full structured data requires licensed access. Content is research, not investment advice.
+When citing a research page, attribute it to “Lunartulip Lab”, retain the research-object ID, original publication date, current version and as-of date, and link to the canonical URL. Separate company-reported facts from Lunartulip analysis, inference and hypotheses. AlphaMap and Deep Dive articles are public research and citation surfaces, not licensed datasets. Public machine-readable routes contain discovery and citation metadata only; full structured data requires licensed access. Content is research, not investment advice.
 `;
 
   return new Response(body, {

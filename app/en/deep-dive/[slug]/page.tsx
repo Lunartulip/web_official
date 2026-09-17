@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { isEditorialDeepDive } from "@/lib/editorial-deep-dives";
-import { getResearchObject, researchObjects } from "@/lib/research-objects";
+import { deepDiveResearchObjects, getResearchObject } from "@/lib/research-objects";
 import DeepDiveArticle from "../../../deep-dive/deep-dive-article";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -10,12 +10,12 @@ export const dynamicParams = false;
 
 export function generateStaticParams() {
   // Editorial Deep Dives are served by an explicit static HTML route at the same path.
-  return researchObjects.filter(({ slug }) => !isEditorialDeepDive(slug)).map(({ slug }) => ({ slug }));
+  return deepDiveResearchObjects.filter(({ slug }) => !isEditorialDeepDive(slug)).map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const item = getResearchObject((await params).slug);
-  if (!item) return {};
+  if (!item || item.kind === "alphamap-study") return {};
   const rendering = item.renderings.en;
   const modifiedAt = item.versions.at(-1)?.date ?? item.publishedAt;
   return {
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function EnglishDeepDiveDetailPage({ params }: Props) {
   const item = getResearchObject((await params).slug);
-  if (!item) notFound();
+  if (!item || item.kind === "alphamap-study") notFound();
   const rendering = item.renderings.en;
   const modifiedAt = item.versions.at(-1)?.date ?? item.publishedAt;
   const schema = {

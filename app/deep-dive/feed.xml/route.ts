@@ -17,6 +17,7 @@ function escapeXml(value: string) {
 
 export function GET() {
   const items = [...researchObjects]
+    .filter((item) => String(item.kind) !== "alphamap-study")
     .sort((a, b) => (b.versions.at(-1)?.date ?? b.publishedAt).localeCompare(a.versions.at(-1)?.date ?? a.publishedAt))
     .map((item) => {
       const rendering = item.renderings["zh-CN"];

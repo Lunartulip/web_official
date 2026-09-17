@@ -2,6 +2,7 @@ export const researchObjectKinds = [
   "company-deep-dive",
   "theme-study",
   "methodology",
+  "alphamap-study",
 ] as const;
 
 export type ResearchObjectKind = (typeof researchObjectKinds)[number];
@@ -74,7 +75,7 @@ export interface QuantitativeFalsifier {
   rationale: LocalizedText;
 }
 
-export interface LocaleRendering {
+export interface DeepDiveLocaleRendering {
   locale: ResearchLocale;
   siblingLocale: ResearchLocale;
   title: string;
@@ -92,16 +93,32 @@ export interface LocaleRendering {
   forwardTestIds: string[];
 }
 
+export interface AlphaMapLocaleRendering {
+  locale: ResearchLocale;
+  siblingLocale: ResearchLocale;
+  title: string;
+  question: string;
+  standfirst: string;
+  whyItMatters: string;
+  methodology: string;
+  findings: string;
+  limitations: string;
+  update: string;
+  evidenceClaimIds: `CL-${string}`[];
+  riskClaimIds: `CL-${string}`[];
+}
+
+export type LocaleRendering = DeepDiveLocaleRendering | AlphaMapLocaleRendering;
+
 export interface VersionEntry {
   version: string;
   date: string;
   diff: LocalizedText;
 }
 
-export interface ResearchObject {
+interface ResearchObjectIdentity {
   id: `RO-${string}`;
   slug: string;
-  kind: ResearchObjectKind;
   tickers: string[];
   publishedAt: string;
   asOf: string;
@@ -109,11 +126,77 @@ export interface ResearchObject {
   sourceLabel: string;
   claims: Claim[];
   evidence: Evidence[];
+  versions: VersionEntry[];
+}
+
+export interface DeepDiveResearchObject extends ResearchObjectIdentity {
+  kind: "company-deep-dive" | "theme-study" | "methodology";
   financialBridge: FinancialBridgeRow[];
   valuationScenarios: ValuationScenario[];
   counterevidenceClaimIds: `CL-${string}`[];
   falsifiers: QuantitativeFalsifier[];
-  versions: VersionEntry[];
-  renderings: Record<ResearchLocale, LocaleRendering>;
+  renderings: Record<ResearchLocale, DeepDiveLocaleRendering>;
   dataGaps: LocalizedText[];
 }
+
+export interface TemporalAnchor {
+  id: string;
+  type: "graph-vintage" | "return-window" | "price-retrieval";
+  date?: string;
+  startDate?: string;
+  endDate?: string;
+  retrospective: boolean;
+  description: LocalizedText;
+}
+
+export interface AlphaMapStudyDesign {
+  design: "retrospective-post-outcome";
+  objective: LocalizedText;
+  projection: LocalizedText;
+  outcome: LocalizedText;
+}
+
+export interface AlphaMapSample {
+  graphIssuers: number;
+  pricedStocks: number;
+  historicalGraphVintages: number;
+  inclusion: LocalizedText;
+}
+
+export interface AlphaMapDiagnostic {
+  id: string;
+  metric: string;
+  value: number;
+  unit: "percent" | "count" | "ratio";
+  scope: LocalizedText;
+  interpretation: LocalizedText;
+  evidenceIds: `EV-${string}`[];
+  claimIds: `CL-${string}`[];
+}
+
+export interface AlphaMapLimitation {
+  id: string;
+  text: LocalizedText;
+  claimIds: `CL-${string}`[];
+}
+
+export interface AlphaMapArtifact {
+  id: string;
+  label: LocalizedText;
+  mediaType: string;
+  url: string;
+  evidenceIds: `EV-${string}`[];
+}
+
+export interface AlphaMapStudy extends ResearchObjectIdentity {
+  kind: "alphamap-study";
+  renderings: Record<ResearchLocale, AlphaMapLocaleRendering>;
+  temporalAnchors: TemporalAnchor[];
+  studyDesign: AlphaMapStudyDesign;
+  sample: AlphaMapSample;
+  diagnostics: AlphaMapDiagnostic[];
+  limitations: AlphaMapLimitation[];
+  artifacts: AlphaMapArtifact[];
+}
+
+export type ResearchObject = DeepDiveResearchObject | AlphaMapStudy;

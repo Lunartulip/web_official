@@ -96,6 +96,8 @@ const structuredData = {
         "continuous research monitoring",
         "decision memory",
         "industry causal research",
+        "industry causal mapping",
+        "value-chain signal research",
         "active management",
       ],
       contactPoint: {
@@ -154,11 +156,21 @@ const structuredData = {
       publisher: {
         "@id": "https://lunartuliplab.com/#organization",
       },
-      hasPart: {
-        "@type": "DataCatalog",
-        "@id": "https://lunartuliplab.com/research.json#catalog",
-        url: "https://lunartuliplab.com/research.json",
-      },
+      hasPart: [
+        {
+          "@type": "DataCatalog",
+          "@id": "https://lunartuliplab.com/research.json#catalog",
+          url: "https://lunartuliplab.com/research.json",
+        },
+        {
+          "@type": ["CreativeWorkSeries", "CollectionPage"],
+          "@id": "https://lunartuliplab.com/alphamap#collection",
+          name: "Lunartulip AlphaMap",
+          url: "https://lunartuliplab.com/alphamap",
+          description: "A bilingual public research series mapping industry causality, value transmission and falsifiable hypotheses.",
+          inLanguage: ["zh-CN", "en"],
+        },
+      ],
       inLanguage: ["zh-CN", "en"],
     },
   ],

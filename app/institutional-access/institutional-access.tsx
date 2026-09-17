@@ -197,9 +197,26 @@ export default function InstitutionalAccess({ language = "cn" }: { language?: "c
         </div>
       </section>
 
+      <section className={styles.boundaries} aria-labelledby="alphamap-path-title">
+        <div>
+          <p className={styles.cardCode}>02 / PUBLIC SAMPLE TO LICENSED DELIVERY</p>
+          <h2 id="alphamap-path-title">{isCn ? "先读 AlphaMap，再选择持续或机器读交付。" : "Read AlphaMap first, then choose continuous or machine-readable delivery."}</h2>
+        </div>
+        <dl>
+          <div>
+            <dt>PUBLIC ALPHAMAP SAMPLE</dt>
+            <dd>{isCn ? "公开样章呈现产业因果、价值传导、可证伪假设与引用元数据；受许可数据集按用途、许可与数据权利单独交付。" : "The public sample presents industry causality, value transmission, falsifiable hypotheses and citation metadata. The article is not a licensed dataset."}{" "}<Link href={isCn ? "/alphamap" : "/en/alphamap"}>{isCn ? "阅读 AlphaMap →" : "Read AlphaMap →"}</Link></dd>
+          </div>
+          <div>
+            <dt>LICENSED RESEARCH API / ALTERNATIVE DATASET</dt>
+            <dd>{isCn ? "需要结构化历史、字段级更新或系统接入时，再按 coverage、用途、许可与数据权利边界讨论交付。" : "For structured history, field-level updates or system integration, delivery is scoped by coverage, use, licensing and data rights."}{" "}<a href="#intent-machine_readable_research">{isCn ? "查看机器读路径 →" : "View the machine-readable path →"}</a></dd>
+          </div>
+        </dl>
+      </section>
+
       <section className={styles.boundaries}>
         <div>
-          <p className={styles.cardCode}>02 / OPERATING BOUNDARIES</p>
+          <p className={styles.cardCode}>03 / OPERATING BOUNDARIES</p>
           <h2>{isCn ? "合作单位与工作边界" : "Delivery units and working boundaries, stated upfront."}</h2>
         </div>
         <dl>
@@ -212,7 +229,7 @@ export default function InstitutionalAccess({ language = "cn" }: { language?: "c
 
       <section className={styles.inquirySection} aria-labelledby="inquiry-title">
         <div className={styles.inquiryIntro}>
-          <p className={styles.cardCode}>03 / STRUCTURED INQUIRY</p>
+          <p className={styles.cardCode}>04 / STRUCTURED INQUIRY</p>
           <h2 id="inquiry-title">{isCn ? "用一个具体问题开始。" : "Start with one concrete question."}</h2>
           <p>{isCn ? "请说明机构、角色、研究问题与时间预期。不要提交持仓、交易凭证、账户信息或其他敏感数据。" : "Tell us your institution, role, research question and expected timeline. Do not submit positions, trading credentials, account information or other sensitive data."}</p>
           <p className={styles.compliance}>{isCn ? "本入口不构成投资顾问服务、产品募集、投资要约或收益承诺。" : "This channel is not investment advice, fundraising, an investment offer or a promise of returns."}</p>

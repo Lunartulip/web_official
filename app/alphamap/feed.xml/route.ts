@@ -17,11 +17,11 @@ function escapeXml(value: string) {
 
 export function GET() {
   const items = [...researchObjects]
-    .filter((item) => String(item.kind) !== "alphamap-study")
+    .filter((item) => String(item.kind) === "alphamap-study")
     .sort((a, b) => (b.versions.at(-1)?.date ?? b.publishedAt).localeCompare(a.versions.at(-1)?.date ?? a.publishedAt))
     .map((item) => {
-      const rendering = item.renderings.en;
-      const url = `https://lunartuliplab.com/en/deep-dive/${item.slug}`;
+      const rendering = item.renderings["zh-CN"];
+      const url = `https://lunartuliplab.com/alphamap/${item.slug}`;
       const modifiedAt = item.versions.at(-1)?.date ?? item.publishedAt;
       return `<item>
   <title>${escapeXml(rendering.title)}</title>
@@ -37,10 +37,10 @@ export function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-  <title>Lunartulip Deep Dive</title>
-  <link>https://lunartuliplab.com/en/deep-dive</link>
-  <description>Versioned, evidence-led research on global AI technology equities.</description>
-  <language>en</language>
+  <title>Lunartulip AlphaMap</title>
+  <link>https://lunartuliplab.com/alphamap</link>
+  <description>把产业因果、价值传导与可证伪命题组织成可引用的公开研究地图。</description>
+  <language>zh-CN</language>
   ${items}
 </channel>
 </rss>`;

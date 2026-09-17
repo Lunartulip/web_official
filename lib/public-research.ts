@@ -18,8 +18,9 @@ export const publicResearchLicense = {
 export function publicResearchDataset(item: ResearchObject) {
   const modifiedAt = item.versions.at(-1)?.date ?? item.publishedAt;
   const machineReadableUrl = `https://lunartuliplab.com/research/${item.slug}`;
-  const canonicalZh = `https://lunartuliplab.com/deep-dive/${item.slug}`;
-  const canonicalEn = `https://lunartuliplab.com/en/deep-dive/${item.slug}`;
+  const collectionPath = item.kind === "alphamap-study" ? "alphamap" : "deep-dive";
+  const canonicalZh = `https://lunartuliplab.com/${collectionPath}/${item.slug}`;
+  const canonicalEn = `https://lunartuliplab.com/en/${collectionPath}/${item.slug}`;
 
   return {
     "@type": "Dataset",

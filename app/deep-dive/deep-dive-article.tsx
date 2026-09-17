@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import type { ResearchObject, ResearchLocale } from "@/lib/research-objects";
+import type { DeepDiveResearchObject, ResearchLocale } from "@/lib/research-objects";
 import styles from "../proof.module.css";
 
 function formatValue(value: number, unit: "USDm" | "percent" | "count", locale: ResearchLocale) {
@@ -15,7 +15,7 @@ function coverageLabel(tickers: string[]) {
   return tickers.length > 5 ? `${tickers.slice(0, 5).join(" + ")} + ${tickers.length - 5}` : tickers.join(" + ");
 }
 
-export default function DeepDiveArticle({ item, language = "cn" }: { item: ResearchObject; language?: "cn" | "en" }) {
+export default function DeepDiveArticle({ item, language = "cn" }: { item: DeepDiveResearchObject; language?: "cn" | "en" }) {
   const isCn = language === "cn";
   const locale: ResearchLocale = isCn ? "zh-CN" : "en";
   const rendering = item.renderings[locale];
