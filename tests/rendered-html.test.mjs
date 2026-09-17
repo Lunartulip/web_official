@@ -406,6 +406,8 @@ test("publishes the first bilingual AlphaMap as a distinct public research serie
   }
   assert.match(alphaMapHtmlCn, new RegExp(`rel="canonical" href="https://lunartuliplab\\.com/alphamap/${alphaMapSlug}"`));
   assert.match(alphaMapHtmlEn, new RegExp(`rel="canonical" href="https://lunartuliplab\\.com/en/alphamap/${alphaMapSlug}"`));
+  assert.match(alphaMapHtmlEn, /href="\/en">LUNARTULIP LAB<\/a>[\s\S]*href="\/en\/alphamap">ALPHAMAP INDEX<\/a>[\s\S]*>EN<\/a>[\s\S]*>CN<\/a>/);
+  assert.match(alphaMapHtmlCn, /href="\/">LUNARTULIP LAB<\/a>[\s\S]*href="\/alphamap">ALPHAMAP 专栏<\/a>[\s\S]*>EN<\/a>[\s\S]*>CN<\/a>/);
 });
 
 test("routes AlphaMap discovery separately from Deep Dive and licensed data", () => {
