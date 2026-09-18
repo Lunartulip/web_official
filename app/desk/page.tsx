@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import DeskPreview from "./desk-preview";
 
 export const metadata: Metadata = {
-  title: "Always-On Research Desk｜AI-native 研究与决策工作区",
-  description: "了解 Lunartulip Lab 如何通过主观基本面与系统化量化双引擎，持续识别变化、验证判断、管理组合约束并从结果中学习。",
+  title: "Lunartulip Research Desk｜AI科技主题投研与另类数据研究台",
+  description: "围绕八条 AI 科技 Coverage Track 持续维护证据、判断状态与信号，通过人读研究订阅、另类数据和机器可读 API 分别交付。",
   alternates: {
     canonical: "https://lunartuliplab.com/desk",
     languages: {
@@ -12,8 +12,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Always-On Research Desk｜Lunartulip Lab",
-    description: "主观基本面 × 系统化量化 × 持续运行的研究与决策工作区。",
+    title: "Lunartulip Research Desk｜AI科技主题投研与另类数据研究台",
+    description: "围绕 AI 科技全产业链主题持续维护证据、判断状态与信号。",
     url: "https://lunartuliplab.com/desk",
     type: "website",
   },

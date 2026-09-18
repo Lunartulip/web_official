@@ -470,9 +470,14 @@ test("publishes the Workshop and Desk as complementary research-system surfaces"
   assert.match(workshopPreviewSource, /institutional-access#intent-research_system_diagnostic/);
   assert.match(sitemapSource, /lunartuliplab\.com\/workshop/);
   assert.match(sitemapSource, /lunartuliplab\.com\/desk/);
-  assert.match(deskPageSource, /Always-On Research Desk/);
+  assert.match(deskPageSource, /Lunartulip Research Desk/);
   for (const term of [
     "AI-NATIVE RESEARCH & DECISION WORKSPACE",
+    "THEMATIC INVESTMENT INTELLIGENCE",
+    "AI 科技全产业链主题投研与另类数据研究台",
+    "CURRENT ACTIVE COVERAGE / 8 TRACKS",
+    "AI_COMPUTE_ECONOMICS",
+    "PHYSICAL_AI_ROBOTICS",
     "两台研究引擎，在一个工作区形成连续判断",
     "01 / RESEARCH",
     "02 / STRATEGY",
@@ -490,6 +495,20 @@ test("publishes the Workshop and Desk as complementary research-system surfaces"
     assert.match(deskPreviewSource, new RegExp(term.replace(/[×/]/g, "\\$&")));
   }
   assert.doesNotMatch(deskPreviewSource, /付费试点|预约演示|Request demo|如何报价|price:/i);
+});
+
+test("positions Research Desk as thematic investment intelligence without replacing the Lab identity", () => {
+  const primary = /LunarTulip Research Desk is an always-on thematic investment intelligence service for AI technology/;
+  assert.match(pageSource, primary);
+  assert.match(deskPreviewSource, primary);
+  assert.match(englishDeskSource, /Thematic Investment Intelligence for AI Technology/);
+  assert.match(deskPageSource, /AI科技主题投研与另类数据研究台/);
+  assert.match(layoutSource, /thematic investment intelligence/);
+  assert.match(layoutSource, /machine-readable thematic research data/);
+  assert.match(llmsSource, /eight active Coverage Tracks/);
+  assert.match(accessPageSource, /AI 科技主题的持续研究订阅/);
+  assert.match(pageSource, /独立科技权益研究机构/);
+  assert.match(pageSource, /系统化量化研究/);
 });
 
 test("defines a canonical About entity page without a founder", () => {
@@ -527,7 +546,8 @@ test("separates the current mandate from the long-term buy-side vision", () => {
 test("presents institutional access as visitor-oriented research formats", () => {
   for (const term of [
     "索取机构样章",
-    "申请 Always-On Research Desk",
+    "申请 Lunartulip Research Desk",
+    "thematic investment intelligence subscription",
     "机器可读 Research API",
     "Quant 买方 Alternative Dataset",
     "Commissioned Deep Dive / Theme Mandate",
@@ -537,6 +557,7 @@ test("presents institutional access as visitor-oriented research formats", () =>
     assert.match(accessPageSource, new RegExp(term.replace("$", "\\$")));
   }
   assert.match(accessPageSource, /机构 × Coverage Track × 固定周期/);
+  assert.match(accessPageSource, /机器读 API 和另类数据另行约定/);
   assert.match(accessPageSource, /不要提交持仓、交易凭证、账户信息/);
   assert.doesNotMatch(accessPageSource, /¥1,200|RMB 1,200|L1 \/ MEMBER|≥L2 \/ NOT OPEN|INTERNAL \/ NEVER SOLD|checkout|credit card|payment provider/i);
 });

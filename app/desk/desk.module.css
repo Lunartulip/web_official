@@ -64,6 +64,21 @@
 .inviteNote { margin: 27px 0 0; display: flex; align-items: center; gap: 10px; color: #879198; font: 8px/1.5 var(--mono); letter-spacing: .04em; }
 .inviteNote span { width: 6px; height: 6px; border-radius: 50%; background: #7395a7; box-shadow: 0 0 0 4px rgba(113,149,167,.12); }
 
+.coverage {
+  width: min(100% - 96px, 1320px);
+  margin: 0 auto;
+  padding: 52px 0 18px;
+  border-top: 1px solid var(--desk-line-strong);
+}
+.coverageHead { display: grid; grid-template-columns: 1.1fr .65fr; gap: 80px; align-items: end; }
+.coverageHead h2 { max-width: 760px; margin: 0; font-size: clamp(27px,3vw,42px); line-height: 1.35; letter-spacing: -.045em; font-weight: 650; }
+.coverageHead > p { max-width: 500px; margin: 0; color: var(--desk-muted); font-size: 13px; line-height: 1.85; }
+.coverageGrid { margin-top: 38px; display: grid; grid-template-columns: repeat(4,1fr); border-top: 1px solid var(--desk-line-strong); border-left: 1px solid var(--desk-line-strong); }
+.coverageGrid article { min-height: 126px; padding: 20px 22px; display: flex; flex-direction: column; border-right: 1px solid var(--desk-line-strong); border-bottom: 1px solid var(--desk-line-strong); background: rgba(255,255,255,.22); }
+.coverageGrid small, .coverageGrid span { color: #829098; font: 7px/1.45 var(--mono); letter-spacing: .055em; }
+.coverageGrid strong { margin: 22px 0 13px; color: #3f515b; font-size: 13px; line-height: 1.45; font-weight: 600; }
+.coverageGrid span { margin-top: auto; overflow-wrap: anywhere; }
+
 .heroConsole {
   min-height: 560px;
   border: 1px solid #34414a;
@@ -243,7 +258,8 @@
   .hero { grid-template-columns: 1fr; padding: 75px 0 100px; }
   .heroCopy { padding: 0 16px; }
   .heroConsole { width: 100%; max-width: 850px; justify-self: center; }
-  .sectionHeading, .workspaceIntro { grid-template-columns: 1fr .75fr; gap: 45px; }
+  .coverageHead, .sectionHeading, .workspaceIntro { grid-template-columns: 1fr .75fr; gap: 45px; }
+  .coverageGrid { grid-template-columns: 1fr 1fr; }
   .shellGrid { grid-template-columns: 1fr 1fr; }
   .shellGrid > article:nth-child(2) { border-right: 0; }
   .shellGrid > article:last-child { grid-column: 1 / -1; min-height: 330px; border-top: 1px solid #35414a; }
@@ -281,8 +297,10 @@
   .signalRows div { grid-template-columns: 86px 1fr; }
   .signalRows i { display: none; }
   .consoleFooter i { display: none; }
-  .values, .loop, .pilot { width: calc(100% - 36px); padding: 92px 0; }
-  .sectionHeading, .workspaceIntro, .pilotIntro { grid-template-columns: 1fr; gap: 28px; }
+  .coverage, .values, .loop, .pilot { width: calc(100% - 36px); padding: 92px 0; }
+  .coverage { padding-top: 48px; }
+  .coverageHead, .sectionHeading, .workspaceIntro, .pilotIntro { grid-template-columns: 1fr; gap: 28px; }
+  .coverageGrid { grid-template-columns: 1fr; margin-top: 34px; }
   .sectionHeading h2, .workspaceIntro h2, .request h2 { font-size: 35px; line-height: 1.38; }
   .valueGrid { grid-template-columns: 1fr; margin-top: 44px; }
   .valueGrid article { min-height: 280px; }

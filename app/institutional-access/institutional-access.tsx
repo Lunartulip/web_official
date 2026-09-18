@@ -30,12 +30,12 @@ const actions: Array<{
   {
     intent: "research_access",
     code: "02 / ACCESS",
-    titleCn: "申请 Always-On Research Desk",
-    titleEn: "Apply for Always-On Research Desk",
-    bodyCn: "购买单位为「专业投资者或机构 × Coverage Track × 固定周期」，提供持续更新的人读研究版本。",
-    bodyEn: "Purchased as professional investor or institution × Coverage Track × fixed term, with continuously updated human-readable research.",
-    detailCn: "包含 State Change Brief、Coverage Review、Deep Dive、Research Models 与有限 Briefing；不是无限制研究请求。",
-    detailEn: "Includes State Change Briefs, Coverage Reviews, Deep Dives, Research Models and limited Briefings—not an unlimited request queue.",
+    titleCn: "申请 Lunartulip Research Desk",
+    titleEn: "Apply for Lunartulip Research Desk",
+    bodyCn: "按「专业投资者或机构 × Coverage Track × 固定周期」订阅，持续获得围绕 AI 科技主题维护的人读研究。",
+    bodyEn: "An always-on thematic investment intelligence subscription for a focused set of AI technology themes, purchased by professional investor or institution × Coverage Track × fixed term.",
+    detailCn: "包含 State Change Brief、Coverage Review、Deep Dive、Research Models 与有限 Briefing；机器读 API 和另类数据另行约定。",
+    detailEn: "Includes State Change Briefs, Coverage Reviews, Deep Dives, Research Models and limited Briefings. Machine-readable APIs and alternative datasets are scoped separately.",
   },
   {
     intent: "machine_readable_research",
@@ -172,7 +172,7 @@ export default function InstitutionalAccess({ language = "cn" }: { language?: "c
         <p className={styles.kicker}>RESEARCH PRODUCTS & SERVICES / 2026</p>
         <h1>{isCn ? <>先选合作方式，<span>再提交研究问题。</span></> : <>Choose the engagement, <span>then bring the research question.</span></>}</h1>
         <div className={styles.heroFoot}>
-          <p>{isCn ? "从公开研究样章、人读 Research Desk、机器读 API、Alternative Dataset 到投研框架 Workshop，页面列出六种合作方式及边界。" : "Six defined routes span public samples, the human-readable Research Desk, machine-readable API, alternative datasets and the research-framework workshop."}</p>
+          <p>{isCn ? "六种合作方式覆盖公开研究样章、AI 科技主题研究订阅、机器读 API、另类数据、研究委托与六次投研框架 Workshop。" : "Six routes cover public research samples, thematic investment intelligence subscriptions, machine-readable APIs, alternative datasets, scoped mandates and a six-session institutional research-system workshop."}</p>
           <span>EN / CN · PROFESSIONAL & INSTITUTIONAL</span>
         </div>
       </section>
@@ -220,7 +220,7 @@ export default function InstitutionalAccess({ language = "cn" }: { language?: "c
           <h2>{isCn ? "合作单位与工作边界" : "Delivery units and working boundaries, stated upfront."}</h2>
         </div>
         <dl>
-          <div><dt>RESEARCH DESK</dt><dd>{isCn ? "专业投资者或机构 × Coverage Track × 固定周期；交付状态变化、coverage 复核、深度研究、研究模型与有限 briefing。" : "Professional investor or institution × Coverage Track × fixed term; state changes, coverage review, deep research, research models and limited briefings."}</dd></div>
+          <div><dt>RESEARCH DESK</dt><dd>{isCn ? "面向 AI 科技主题的持续研究订阅，以专业投资者或机构 × Coverage Track × 固定周期为合作单位；交付状态变化、coverage 复核、深度研究、研究模型与有限 briefing。" : "Always-on thematic investment intelligence for AI technology, scoped as professional investor or institution × Coverage Track × fixed term; delivering state changes, coverage reviews, deep research, research models and limited briefings."}</dd></div>
           <div><dt>API / DATASET</dt><dd>{isCn ? "按 coverage、字段、历史、更新频率、许可与内部研究用途定义；不把未获权利的数据重新包装为产品。" : "Scoped by coverage, fields, history, update frequency, licensing and internal research use; data without appropriate rights is not repackaged as a product."}</dd></div>
           <div><dt>COMMISSIONED</dt><dd>{isCn ? "只接受既有 coverage 与长期主线内的命题，研究团队按既有能力圈接题。" : "Only within existing coverage and long-term threads; the research team is not positioned as an arbitrary-topic contractor."}</dd></div>
           <div><dt>DIAGNOSTIC</dt><dd>{isCn ? "六次会议覆盖现状诊断、目标架构与共同工作。源码、实施和持续支持不默认包含。" : "Six sessions span current-state diagnosis, target architecture and joint work. Code, implementation and ongoing support are excluded by default."}</dd></div>

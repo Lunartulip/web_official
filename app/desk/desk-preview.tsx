@@ -39,6 +39,17 @@ const values = [
   },
 ];
 
+const coverageThemes = [
+  { id: "AI_COMPUTE_ECONOMICS", cn: "AI 算力经济", en: "AI Compute Economics" },
+  { id: "SEMICONDUCTORS_FOUNDRY", cn: "半导体与晶圆代工", en: "Semiconductors & Foundry" },
+  { id: "MEMORY_HBM_CYCLE", cn: "存储与 HBM 周期", en: "Memory & HBM Cycle" },
+  { id: "OPTICAL_NETWORKING", cn: "光互联与网络", en: "Optical & Networking" },
+  { id: "CLOUD_NEOCLOUD_ECONOMICS", cn: "云与 Neocloud 经济", en: "Cloud & Neocloud Economics" },
+  { id: "AI_DATACENTER_INFRASTRUCTURE", cn: "AI 数据中心基础设施", en: "AI Datacenter Infrastructure" },
+  { id: "AGENTIC_SOFTWARE_APPLICATIONS", cn: "Agentic 软件与应用", en: "Agentic Software & Applications" },
+  { id: "PHYSICAL_AI_ROBOTICS", cn: "Physical AI 与机器人", en: "Physical AI & Robotics" },
+] as const;
+
 const workflow = [
   { code: "SENSE", cn: "摄入全球变化", en: "Sense global change" },
   { code: "REASON", cn: "形成并验证判断", en: "Form and test judgment" },
@@ -119,14 +130,14 @@ export default function DeskPreview({ initialLanguage = "cn" }: { initialLanguag
       <section className={styles.hero}>
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}>AI-NATIVE RESEARCH & DECISION WORKSPACE</p>
-          <p className={styles.productName}>Always-On Research Desk</p>
+          <p className={styles.productName}>{isCn ? "Lunartulip Research Desk｜AI 科技全产业链主题投研与另类数据研究台" : "LUNARTULIP RESEARCH DESK / THEMATIC INVESTMENT INTELLIGENCE"}</p>
           <h1>
             {isCn ? <>每天更快看清什么变了，<br /><span>哪些判断需要更新。</span></> : <>See what changed faster—<br /><span>and which judgments need updating.</span></>}
           </h1>
           <p className={styles.heroLead}>
             {isCn
-              ? "Always-On Research Desk 汇集主观基本面与系统化量化两台研究引擎，把市场变化、产业因果、策略验证、组合约束与结果反馈组织成清晰、可追溯、可持续更新的研究工作区。"
-              : "Always-On Research Desk brings together discretionary fundamental and systematic quant research, organizing market change, industry causality, strategy validation, portfolio constraints and outcome feedback into a clear, traceable and continuously updated workspace."}
+              ? "面向 AI 科技全产业链，Research Desk 围绕一组高价值主题持续维护与投资相关的证据、判断状态与信号。人读研究订阅、另类数据和机器可读 API 按 Coverage Track、字段、历史区间、更新频率与许可分别约定。"
+              : "LunarTulip Research Desk is an always-on thematic investment intelligence service for AI technology, continuously maintaining investment-relevant evidence, thesis states and signals across a focused set of themes, with delivery through institutional research subscriptions and machine-readable thematic data APIs."}
           </p>
           <div className={styles.heroActions}>
             <a className={styles.primaryButton} href="#workspace">
@@ -170,6 +181,25 @@ export default function DeskPreview({ initialLanguage = "cn" }: { initialLanguag
             </div>
           </div>
           <div className={styles.consoleFooter}><span>SANITIZED WORKSPACE VIEW</span><i>HUMAN JUDGMENT IN LOOP</i></div>
+        </div>
+      </section>
+
+      <section className={styles.coverage} aria-labelledby="coverage-title">
+        <div className={styles.coverageHead}>
+          <div>
+            <p className={styles.eyebrow}>CURRENT ACTIVE COVERAGE / 8 TRACKS</p>
+            <h2 id="coverage-title">{isCn ? "围绕八条 AI 科技主题持续维护。" : "Eight maintained themes across the AI technology value chain."}</h2>
+          </div>
+          <p>{isCn ? "Coverage Track 是稳定的主题分类锚点。研究优先级、可用字段和交付深度按具体主题与合作范围确定。" : "Coverage Tracks are stable taxonomy anchors. Research priority, available fields and delivery depth vary by theme and engagement scope."}</p>
+        </div>
+        <div className={styles.coverageGrid}>
+          {coverageThemes.map((theme, index) => (
+            <article key={theme.id}>
+              <small>{String(index + 1).padStart(2, "0")} / ACTIVE</small>
+              <strong>{isCn ? theme.cn : theme.en}</strong>
+              <span>{theme.id}</span>
+            </article>
+          ))}
         </div>
       </section>
 

@@ -665,12 +665,12 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
 
         <div className="desk-control-plane">
           <div className="desk-control-copy">
-            <p>ALWAYS-ON RESEARCH DESK / AI-NATIVE RESEARCH WORKSPACE</p>
+            <p>THEMATIC INVESTMENT INTELLIGENCE / AI-NATIVE RESEARCH WORKSPACE</p>
             <h3>{language === "cn" ? "让两台引擎的判断，在一个工作区持续更新。" : "Keep judgment from both engines continuously updated in one workspace."}</h3>
             <span>
               {language === "cn"
-                ? "主观基本面系统由 PM 判断驱动，通过 Coverage 与 R 线 AlphaMap × Ontology 持续更新产业和公司认知；系统化量化系统持续运行策略研究与组合验证。Research Desk 将两台引擎的研究状态、双 NAV 与结果反馈汇集为清晰的日常工作区。"
-                : "The discretionary fundamental system is PM-led, using Coverage and the R-line AlphaMap × Ontology to update industry and company views; the systematic quant system continuously runs strategy research and portfolio validation. Research Desk brings both engines’ research state, dual NAV and outcome feedback into one clear daily workspace."}
+                ? "Research Desk 是面向 AI 科技全产业链的主题投研与另类数据研究台，围绕八条 active Coverage Track 持续维护证据、判断状态与信号。主观基本面系统负责产业与公司判断，系统化量化系统独立检验策略、组合与结果反馈。"
+                : "LunarTulip Research Desk is an always-on thematic investment intelligence service for AI technology, continuously maintaining investment-relevant evidence, thesis states and signals across a focused set of themes, with delivery through institutional research subscriptions and machine-readable thematic data APIs."}
             </span>
             <Link href={language === "en" ? "/en/desk" : "/desk"}>
               {language === "cn" ? "查看 Research Desk 真实界面与九层架构" : "Explore the real interface and nine-layer architecture"} <ArrowRightIcon />

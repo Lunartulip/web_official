@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import DeskPreview from "../../desk/desk-preview";
 
 export const metadata: Metadata = {
-  title: "Always-On Research Desk | AI-native Research Workspace",
-  description: "See how Lunartulip Lab combines discretionary fundamental and systematic quant research to detect change, test judgment, manage portfolio constraints and learn from outcomes.",
+  title: "Lunartulip Research Desk | Thematic Investment Intelligence for AI Technology",
+  description: "Always-on thematic investment intelligence that maintains evidence, thesis states and signals across focused AI technology themes for research subscriptions and machine-readable delivery.",
   alternates: {
     canonical: "https://lunartuliplab.com/en/desk",
     languages: {
@@ -12,8 +12,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Always-On Research Desk | Lunartulip Lab",
-    description: "Discretionary fundamental × systematic quant × a continuously operating research and decision workspace.",
+    title: "Lunartulip Research Desk | Thematic Investment Intelligence",
+    description: "Always-on evidence, thesis states and signals across focused AI technology themes.",
     url: "https://lunartuliplab.com/en/desk",
     type: "website",
   },

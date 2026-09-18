@@ -50,7 +50,7 @@ ${deepDiveObjects}
 
 ## Services
 
-- Always-On Research Desk: https://lunartuliplab.com/en/desk
+- Lunartulip Research Desk — always-on thematic investment intelligence for AI technology: https://lunartuliplab.com/en/desk
 - AI-native Research Framework Workshop: https://lunartuliplab.com/en/workshop
 - Machine-readable Research API and point-in-time alternative datasets: https://lunartuliplab.com/en/institutional-access
 

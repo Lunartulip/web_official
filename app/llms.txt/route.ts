@@ -45,7 +45,7 @@ ${deepDiveResearch}
 
 ## Products and services
 
-- [Always-On Research Desk](https://lunartuliplab.com/en/desk): continuously updated human-readable research for professional investors and institutions.
+- [Lunartulip Research Desk](https://lunartuliplab.com/en/desk): always-on thematic investment intelligence for AI technology, maintaining investment-relevant evidence, thesis states and signals across eight active Coverage Tracks. Human-readable subscriptions and machine-readable delivery are scoped separately.
 - [AI-native Research Framework Workshop](https://lunartuliplab.com/en/workshop): six working sessions for buy-side research-system diagnosis and design.
 - [Professional and Institutional Access](https://lunartuliplab.com/en/institutional-access): machine-readable Research API, point-in-time alternative datasets, scoped mandates and research access.
 
