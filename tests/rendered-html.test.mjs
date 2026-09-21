@@ -65,6 +65,11 @@ const englishAlphaMapRouteSource = await readFile(new URL(`../app/en/alphamap/${
 const alphaMapLoaderSource = await readFile(new URL("../lib/editorial-alphamap.ts", import.meta.url), "utf8");
 const alphaMapHtmlCn = await readFile(new URL(`../content/editorial-alphamap/${alphaMapSlug}.zh.html`, import.meta.url), "utf8");
 const alphaMapHtmlEn = await readFile(new URL(`../content/editorial-alphamap/${alphaMapSlug}.en.html`, import.meta.url), "utf8");
+const latestAlphaMapSlug = "incremental-network-test-001";
+const latestAlphaMapRouteSource = await readFile(new URL(`../app/alphamap/${latestAlphaMapSlug}/route.ts`, import.meta.url), "utf8");
+const latestEnglishAlphaMapRouteSource = await readFile(new URL(`../app/en/alphamap/${latestAlphaMapSlug}/route.ts`, import.meta.url), "utf8");
+const latestAlphaMapHtmlCn = await readFile(new URL(`../content/editorial-alphamap/${latestAlphaMapSlug}.zh.html`, import.meta.url), "utf8");
+const latestAlphaMapHtmlEn = await readFile(new URL(`../content/editorial-alphamap/${latestAlphaMapSlug}.en.html`, import.meta.url), "utf8");
 const chineseAlphaMapFeedSource = await readFile(new URL("../app/alphamap/feed.xml/route.ts", import.meta.url), "utf8");
 const englishAlphaMapFeedSource = await readFile(new URL("../app/en/alphamap/feed.xml/route.ts", import.meta.url), "utf8");
 const memorySeriesSlugs = [
@@ -408,6 +413,56 @@ test("publishes the first bilingual AlphaMap as a distinct public research serie
   assert.match(alphaMapHtmlEn, new RegExp(`rel="canonical" href="https://lunartuliplab\\.com/en/alphamap/${alphaMapSlug}"`));
   assert.match(alphaMapHtmlEn, /href="\/en">LUNARTULIP LAB<\/a>[\s\S]*href="\/en\/alphamap">ALPHAMAP INDEX<\/a>[\s\S]*>EN<\/a>[\s\S]*>CN<\/a>/);
   assert.match(alphaMapHtmlCn, /href="\/">LUNARTULIP LAB<\/a>[\s\S]*href="\/alphamap">ALPHAMAP 专栏<\/a>[\s\S]*>EN<\/a>[\s\S]*>CN<\/a>/);
+  assert.match(alphaMapHtmlEn, /Lunartulip AlphaMap Research Note #000/);
+  assert.match(alphaMapHtmlCn, /Lunartulip AlphaMap 研究笔记 #000/);
+  assert.match(alphaMapHtmlEn + alphaMapHtmlCn, /10\.5281\/zenodo\.22846355/);
+});
+
+test("publishes AlphaMap Research Note #001 with DOI-linked machine metadata and clean visible titles", () => {
+  const catalog = JSON.parse(researchCatalogSource);
+  const study = catalog.find((item) => item.slug === latestAlphaMapSlug);
+  assert.ok(study, "latest AlphaMap research object missing from the catalog");
+  assert.equal(study.kind, "alphamap-study");
+  assert.equal(study.id, "RO-ALPHAMAP-002");
+  assert.equal(study.doi, "10.5281/zenodo.22862923");
+  assert.equal(study.sample.graphIssuers, 91);
+  assert.equal(study.sample.pricedStocks, 90);
+  const sortedStudies = catalog
+    .filter((item) => item.kind === "alphamap-study")
+    .sort((a, b) =>
+      (b.versions.at(-1)?.date ?? b.publishedAt).localeCompare(a.versions.at(-1)?.date ?? a.publishedAt)
+      || b.publishedAt.localeCompare(a.publishedAt));
+  assert.equal(sortedStudies[0].slug, latestAlphaMapSlug);
+  assert.match(alphaMapIndexComponentSource, /b\.publishedAt\.localeCompare\(a\.publishedAt\)/);
+
+  for (const source of [latestAlphaMapRouteSource, latestEnglishAlphaMapRouteSource]) {
+    assert.match(source, /export const dynamic = "force-static"/);
+    assert.match(source, /readEditorialAlphaMap/);
+    assert.match(source, new RegExp(latestAlphaMapSlug));
+  }
+
+  for (const html of [latestAlphaMapHtmlCn, latestAlphaMapHtmlEn]) {
+    assert.match(html, /Lunartulip AlphaMap/);
+    assert.match(html, /Research Note #001|研究笔记 #001/);
+    assert.match(html, /10\.5281\/zenodo\.22862923/);
+    assert.match(html, /citation_doi/);
+    assert.match(html, /rel="cite-as"/);
+    assert.match(html, /application\/ld\+json/);
+    assert.match(html, /"@type":"ScholarlyArticle"/);
+    assert.match(html, /"propertyID":"DOI"/);
+    assert.match(html, /hreflang="x-default"/);
+    assert.match(html, /index,follow,max-image-preview:large/);
+    assert.doesNotMatch(html, /noindex|nofollow|candidate is unpublished|replacement candidate is unpublished/i);
+    assert.doesNotMatch(html, /desk\.lunartuliplab\.com|\/external\/|workspace\/|private\//i);
+  }
+
+  assert.match(latestAlphaMapHtmlEn, /<h1>The Incremental Network Test<\/h1>/);
+  assert.match(latestAlphaMapHtmlCn, /<h1>增量网络检验<\/h1>/);
+  assert.doesNotMatch(latestAlphaMapHtmlEn, /<h1>[^<]*Research Note #001/);
+  assert.match(latestAlphaMapHtmlEn, new RegExp(`rel="canonical" href="https://lunartuliplab\\.com/en/alphamap/${latestAlphaMapSlug}"`));
+  assert.match(latestAlphaMapHtmlCn, new RegExp(`rel="canonical" href="https://lunartuliplab\\.com/alphamap/${latestAlphaMapSlug}"`));
+  assert.match(latestAlphaMapHtmlEn, /href="\/en">LUNARTULIP LAB<\/a>[\s\S]*href="\/en\/alphamap">ALPHAMAP INDEX<\/a>/);
+  assert.match(latestAlphaMapHtmlCn, /href="\/">LUNARTULIP LAB<\/a>[\s\S]*href="\/alphamap">ALPHAMAP 专栏<\/a>/);
 });
 
 test("routes AlphaMap discovery separately from Deep Dive and licensed data", () => {
@@ -437,8 +492,8 @@ test("routes AlphaMap discovery separately from Deep Dive and licensed data", ()
   assert.match(layoutSource, /"@type": \["CreativeWorkSeries", "CollectionPage"\]/);
   assert.match(layoutSource, /lunartuliplab\.com\/en\/alphamap#collection/);
   assert.match(sitemapSource, /"x-default": "https:\/\/lunartuliplab\.com\/en\/alphamap/);
-  assert.match(pageSource, /PUBLIC RESEARCH SERIES \/ ALPHAMAP/);
-  assert.match(pageSource, /受许可数据集按用途和许可单独交付/);
+  assert.match(pageSource, /PUBLIC RESEARCH SERIES \/ LUNARTULIP ALPHAMAP/);
+  assert.match(pageSource, /底层时点数据按用途和许可另行交付/);
   assert.match(deepDiveIndexSource, /Continue with AlphaMap/);
   assert.doesNotMatch(deepDiveIndexSource, /\.filter\(\(item\) => String\(item\.kind\) === "alphamap-study"\)/);
   assert.match(deskPreviewSource, /PUBLIC ALPHAMAP SAMPLE/);

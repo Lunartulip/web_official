@@ -24,9 +24,10 @@ export function GET() {
       const url = `https://lunartuliplab.com/alphamap/${item.slug}`;
       const modifiedAt = item.versions.at(-1)?.date ?? item.publishedAt;
       return `<item>
-  <title>${escapeXml(rendering.title)}</title>
+  <title>${escapeXml(`${item.sourceLabel.split(" · ")[0]}: ${rendering.title}`)}</title>
   <link>${url}</link>
   <guid isPermaLink="false">${item.id}@${item.version}</guid>
+  ${item.doi ? `<dc:identifier>doi:${item.doi}</dc:identifier>` : ""}
   <description>${escapeXml(rendering.standfirst)}</description>
   <category>${escapeXml(item.kind)}</category>
   <pubDate>${new Date(`${modifiedAt}T00:00:00Z`).toUTCString()}</pubDate>
@@ -35,7 +36,7 @@ export function GET() {
     .join("\n");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel>
   <title>Lunartulip AlphaMap</title>
   <link>https://lunartuliplab.com/alphamap</link>

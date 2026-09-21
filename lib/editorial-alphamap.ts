@@ -3,6 +3,7 @@ import path from "node:path";
 
 export const editorialAlphaMapSlugs = [
   "the-projection-is-part-of-the-signal-001",
+  "incremental-network-test-001",
 ] as const;
 
 export type EditorialAlphaMapSlug = (typeof editorialAlphaMapSlugs)[number];

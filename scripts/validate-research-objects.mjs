@@ -10,6 +10,30 @@ const kinds = new Set(["company-deep-dive", "theme-study", "methodology", "alpha
 const claimTypes = new Set(["Fact", "Derived", "Inference", "Hypothesis"]);
 const roles = new Set(["primary", "supporting"]);
 const confidences = new Set(["high", "medium", "low"]);
+const alphaMapExpectations = {
+  "RO-ALPHAMAP-001": {
+    graphIssuers: 39,
+    pricedStocks: 26,
+    historicalGraphVintages: 1,
+    diagnostics: {
+      "weighted-degree identity coverage": 39,
+      "Katz group-size coverage": 31,
+      "in-sample score fit A": 90.64,
+      "in-sample score fit B": 96.84,
+    },
+  },
+  "RO-ALPHAMAP-002": {
+    graphIssuers: 91,
+    pricedStocks: 90,
+    historicalGraphVintages: 166,
+    diagnostics: {
+      "controlled 21-session Rank IC": 0.0072744,
+      "raw 21-session Rank IC": 0.0779,
+      "mature weekly primary tests": 85,
+      "signals surviving Holm correction": 0,
+    },
+  },
+};
 const globalObjectIds = new Set();
 const globalSlugs = new Set();
 const globalClaimIds = new Set();
@@ -28,6 +52,9 @@ for (const object of objects) {
   assert.match(object.asOf, /^\d{4}-\d{2}-\d{2}$/, `${prefix} invalid asOf`);
   assert.match(object.publishedAt, /^\d{4}-\d{2}-\d{2}$/, `${prefix} invalid publishedAt`);
   assert.match(object.version, /^\d+\.\d+\.\d+$/, `${prefix} current version must be semver`);
+  if (object.doi) {
+    assert.match(object.doi, /^10\.\d{4,9}\/\S+$/, `${prefix} invalid DOI`);
+  }
   assert.ok(Array.isArray(object.tickers), `${prefix} tickers must be an array`);
   const falsifiers = new Map();
   if (object.kind !== "alphamap-study") {
@@ -169,9 +196,11 @@ for (const object of objects) {
   if (object.kind === "alphamap-study") {
     assert.ok(!("financialBridge" in object), `${prefix} AlphaMap must not publish a financial bridge`);
     assert.ok(!("valuationScenarios" in object), `${prefix} AlphaMap must not publish valuation scenarios`);
-    assert.equal(object.sample?.graphIssuers, 39, `${prefix} graph issuer count changed`);
-    assert.equal(object.sample?.pricedStocks, 26, `${prefix} priced-stock count changed`);
-    assert.equal(object.sample?.historicalGraphVintages, 1, `${prefix} historical graph-vintage count changed`);
+    const expected = alphaMapExpectations[object.id];
+    assert.ok(expected, `${prefix} missing study-specific AlphaMap validation contract`);
+    assert.equal(object.sample?.graphIssuers, expected.graphIssuers, `${prefix} graph issuer count changed`);
+    assert.equal(object.sample?.pricedStocks, expected.pricedStocks, `${prefix} priced-stock count changed`);
+    assert.equal(object.sample?.historicalGraphVintages, expected.historicalGraphVintages, `${prefix} historical graph-vintage count changed`);
     for (const locale of locales) {
       assert.ok(object.sample?.inclusion?.[locale]?.trim(), `${prefix} sample missing ${locale} inclusion`);
       assert.ok(object.studyDesign?.objective?.[locale]?.trim(), `${prefix} study design missing ${locale} objective`);
@@ -181,12 +210,15 @@ for (const object of objects) {
     assert.equal(object.studyDesign?.design, "retrospective-post-outcome", `${prefix} design must remain retrospective post-outcome`);
 
     const anchors = new Map(object.temporalAnchors?.map((anchor) => [anchor.type, anchor]));
-    assert.equal(anchors.get("graph-vintage")?.date, "2026-09-08", `${prefix} graph vintage changed`);
-    assert.equal(anchors.get("return-window")?.startDate, "2026-09-09", `${prefix} return-window start changed`);
-    assert.equal(anchors.get("return-window")?.endDate, "2026-09-15", `${prefix} return-window end changed`);
-    assert.equal(anchors.get("price-retrieval")?.date, "2026-09-17", `${prefix} price retrieval date changed`);
+    for (const type of ["graph-vintage", "return-window", "price-retrieval"]) {
+      assert.ok(anchors.has(type), `${prefix} missing ${type} temporal anchor`);
+    }
     for (const anchor of anchors.values()) {
       assert.equal(anchor.retrospective, true, `${prefix} ${anchor.id} must disclose retrospective timing`);
+      assert.ok(anchor.date || (anchor.startDate && anchor.endDate), `${prefix} ${anchor.id} needs a date or date range`);
+      for (const field of ["date", "startDate", "endDate"]) {
+        if (anchor[field]) assert.match(anchor[field], /^\d{4}-\d{2}-\d{2}$/, `${prefix} ${anchor.id} invalid ${field}`);
+      }
       for (const locale of locales) {
         assert.ok(anchor.description?.[locale]?.trim(), `${prefix} ${anchor.id} missing ${locale} description`);
       }
@@ -194,10 +226,9 @@ for (const object of objects) {
 
     assert.ok(object.diagnostics?.length >= 4, `${prefix} requires core diagnostics`);
     const diagnosticValues = new Map(object.diagnostics.map((item) => [item.metric, item.value]));
-    assert.equal(diagnosticValues.get("weighted-degree identity coverage"), 39, `${prefix} weighted-degree 39/39 identity changed`);
-    assert.equal(diagnosticValues.get("Katz group-size coverage"), 31, `${prefix} Katz 31/39 result changed`);
-    assert.equal(diagnosticValues.get("in-sample score fit A"), 90.64, `${prefix} first in-sample R² changed`);
-    assert.equal(diagnosticValues.get("in-sample score fit B"), 96.84, `${prefix} second in-sample R² changed`);
+    for (const [metric, value] of Object.entries(expected.diagnostics)) {
+      assert.equal(diagnosticValues.get(metric), value, `${prefix} ${metric} changed`);
+    }
     for (const diagnostic of object.diagnostics) {
       assert.ok(Number.isFinite(diagnostic.value), `${prefix} ${diagnostic.id} value must be numeric`);
       assert.ok(diagnostic.evidenceIds.length > 0 && diagnostic.claimIds.length > 0, `${prefix} ${diagnostic.id} must link evidence and claims`);
@@ -218,7 +249,10 @@ for (const object of objects) {
 
     assert.ok(object.artifacts?.length > 0, `${prefix} requires published artifacts`);
     for (const artifact of object.artifacts) {
-      assert.ok(artifact.url?.startsWith("/alphamap/"), `${prefix} ${artifact.id} must use an AlphaMap URL`);
+      assert.ok(
+        artifact.url?.startsWith("/alphamap/") || artifact.url?.startsWith("https://doi.org/"),
+        `${prefix} ${artifact.id} must use an AlphaMap or DOI URL`,
+      );
       assert.ok(artifact.mediaType?.trim(), `${prefix} ${artifact.id} missing media type`);
       for (const id of artifact.evidenceIds) assert.ok(evidence.has(id), `${prefix} ${artifact.id} references missing evidence ${id}`);
       for (const locale of locales) assert.ok(artifact.label?.[locale]?.trim(), `${prefix} ${artifact.id} missing ${locale} label`);
@@ -241,8 +275,9 @@ for (const object of objects) {
     assert.deepEqual(zh.evidenceClaimIds, en.evidenceClaimIds, `${prefix} locale claim parity failed for evidenceClaimIds`);
     assert.deepEqual(zh.riskClaimIds, en.riskClaimIds, `${prefix} locale claim parity failed for riskClaimIds`);
     const alphaText = JSON.stringify(object).toLowerCase();
-    assert.match(alphaText, /neutralized score/, `${prefix} must distinguish neutralized score from neutral portfolio`);
-    assert.match(alphaText, /single graph vintage|one historical graph vintage/, `${prefix} must disclose single-vintage limitation`);
+    assert.match(alphaText, /neutralized score|residuali[sz]/, `${prefix} must distinguish score residualization from portfolio neutrality`);
+    assert.match(alphaText, /retrospective/, `${prefix} must disclose retrospective study design`);
+    assert.match(alphaText, /alpha (?:is )?not established|does not establish.*alpha|no (?:predictive )?alpha|makes no alpha/, `${prefix} must preserve the non-alpha conclusion`);
     assert.doesNotMatch(alphaText, /target price\s*[:=]\s*\$?\d|目标价\s*[:：=]\s*\d/, `${prefix} must not fabricate valuation`);
     continue;
   }

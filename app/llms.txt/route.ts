@@ -5,7 +5,11 @@ export const dynamic = "force-static";
 export async function GET() {
   const researchLine = (item: (typeof researchObjects)[number], collection: "alphamap" | "deep-dive") => {
     const modified = item.versions.at(-1)?.date ?? item.publishedAt;
-    return `- [${item.renderings.en.title}](https://lunartuliplab.com/en/${collection}/${item.slug}) — ${item.tickers.join(", ")}; published ${item.publishedAt}; updated ${modified}; object ${item.id}; version ${item.version}; [public citation metadata](https://lunartuliplab.com/research/${item.slug})`;
+    const doi = item.doi ? `; DOI ${item.doi}` : "";
+    const title = collection === "alphamap"
+      ? `${item.sourceLabel.split(" · ")[0]}: ${item.renderings.en.title}`
+      : item.renderings.en.title;
+    return `- [${title}](https://lunartuliplab.com/en/${collection}/${item.slug}) — ${item.tickers.join(", ")}; published ${item.publishedAt}; updated ${modified}; object ${item.id}; version ${item.version}${doi}; [public citation metadata](https://lunartuliplab.com/research/${item.slug})`;
   };
   const alphaMapResearch = researchObjects
     .filter((item) => String(item.kind) === "alphamap-study")

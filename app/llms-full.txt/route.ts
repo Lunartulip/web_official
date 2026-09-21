@@ -7,13 +7,13 @@ export async function GET() {
     return `## ${item.renderings.en.title}
 
 Object ID: ${item.id}
-Ticker / coverage: ${item.tickers.join(", ")}
+${collection === "alphamap" ? `Series label: ${item.sourceLabel.split(" · ")[0]}\n` : ""}Ticker / coverage: ${item.tickers.join(", ")}
 Kind: ${item.kind}
 Original publication: ${item.publishedAt}
 Information as of: ${item.asOf}
 Current version: ${item.version}
 Last modified: ${item.versions.at(-1)?.date ?? item.publishedAt}
-Canonical English: https://lunartuliplab.com/en/${collection}/${item.slug}
+${item.doi ? `DOI: https://doi.org/${item.doi}\n` : ""}Canonical English: https://lunartuliplab.com/en/${collection}/${item.slug}
 Canonical Chinese: https://lunartuliplab.com/${collection}/${item.slug}
 Research question: ${item.renderings.en.question}
 Abstract: ${item.renderings.en.standfirst}

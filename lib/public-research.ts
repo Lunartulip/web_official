@@ -21,19 +21,30 @@ export function publicResearchDataset(item: ResearchObject) {
   const collectionPath = item.kind === "alphamap-study" ? "alphamap" : "deep-dive";
   const canonicalZh = `https://lunartuliplab.com/${collectionPath}/${item.slug}`;
   const canonicalEn = `https://lunartuliplab.com/en/${collectionPath}/${item.slug}`;
+  const seriesLabel = item.kind === "alphamap-study" ? item.sourceLabel.split(" · ")[0] : null;
 
   return {
     "@type": "Dataset",
     "@id": `${machineReadableUrl}#dataset`,
-    name: item.renderings.en.title,
-    alternateName: item.renderings["zh-CN"].title,
+    name: seriesLabel ? `${seriesLabel}: ${item.renderings.en.title}` : item.renderings.en.title,
+    alternateName: seriesLabel ? `${seriesLabel}: ${item.renderings["zh-CN"].title}` : item.renderings["zh-CN"].title,
     description: item.renderings.en.standfirst,
     abstract: item.renderings.en.standfirst,
     researchQuestion: {
       en: item.renderings.en.question,
       "zh-CN": item.renderings["zh-CN"].question,
     },
-    identifier: item.id,
+    identifier: item.doi
+      ? [
+          item.id,
+          {
+            "@type": "PropertyValue",
+            propertyID: "DOI",
+            value: item.doi,
+            url: `https://doi.org/${item.doi}`,
+          },
+        ]
+      : item.id,
     version: item.version,
     datePublished: item.publishedAt,
     dateModified: modifiedAt,
@@ -50,13 +61,13 @@ export function publicResearchDataset(item: ResearchObject) {
     subjectOf: [
       {
         "@type": "ScholarlyArticle",
-        name: item.renderings.en.title,
+        name: seriesLabel ? `${seriesLabel}: ${item.renderings.en.title}` : item.renderings.en.title,
         inLanguage: "en",
         url: canonicalEn,
       },
       {
         "@type": "ScholarlyArticle",
-        name: item.renderings["zh-CN"].title,
+        name: seriesLabel ? `${seriesLabel}: ${item.renderings["zh-CN"].title}` : item.renderings["zh-CN"].title,
         inLanguage: "zh-CN",
         url: canonicalZh,
       },
@@ -74,7 +85,9 @@ export function publicResearchDataset(item: ResearchObject) {
       contentUrl: machineReadableUrl,
       license: publicResearchLicense,
     },
-    citation: [canonicalEn, canonicalZh],
+    citation: item.doi
+      ? [canonicalEn, canonicalZh, `https://doi.org/${item.doi}`]
+      : [canonicalEn, canonicalZh],
     publicSummary: {
       id: item.id,
       slug: item.slug,
@@ -84,6 +97,8 @@ export function publicResearchDataset(item: ResearchObject) {
       asOf: item.asOf,
       modifiedAt,
       version: item.version,
+      sourceLabel: item.sourceLabel,
+      doi: item.doi ?? null,
       canonical: {
         en: canonicalEn,
         "zh-CN": canonicalZh,

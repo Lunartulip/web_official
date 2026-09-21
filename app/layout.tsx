@@ -172,7 +172,7 @@ const structuredData = {
           "@id": "https://lunartuliplab.com/en/alphamap#collection",
           name: "Lunartulip AlphaMap",
           url: "https://lunartuliplab.com/en/alphamap",
-          description: "A bilingual public research series mapping industry causality, value transmission and falsifiable hypotheses.",
+          description: "A bilingual methods-research series testing dated semantic networks, graph signals and cross-sectional stock factors across the AI technology stack.",
           inLanguage: ["en", "zh-CN"],
         },
       ],

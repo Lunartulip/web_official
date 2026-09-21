@@ -3,8 +3,8 @@ import { alphaMapStudies } from "@/lib/research-objects";
 import AlphaMapIndex from "../../alphamap/alphamap-index";
 
 export const metadata: Metadata = {
-  title: "AlphaMap | Graph Signals and Cross-Sectional Measurement",
-  description: "Dated graph vintages, samples and observation windows for auditing how semantic projections enter graph scores and stock diagnostics.",
+  title: "Lunartulip AlphaMap | Graph Signals and Cross-Sectional Stock Factors",
+  description: "Lunartulip AlphaMap fixes dated graph vintages, samples and observation windows to test whether semantic networks add information to cross-sectional stock rankings.",
   alternates: {
     canonical: "/en/alphamap",
     languages: { en: "/en/alphamap", "zh-CN": "/alphamap", "x-default": "/en/alphamap" },
@@ -19,7 +19,14 @@ export default function EnglishAlphaMapPage() {
       "@type": "ScholarlyArticle",
       "@id": `https://lunartuliplab.com/en/alphamap/${item.slug}#article`,
       url: `https://lunartuliplab.com/en/alphamap/${item.slug}`,
-      identifier: item.id,
+      name: `${item.sourceLabel}: ${item.renderings.en.title}`,
+      identifier: item.doi
+        ? [
+            item.id,
+            { "@type": "PropertyValue", propertyID: "DOI", value: item.doi },
+          ]
+        : item.id,
+      sameAs: item.doi ? `https://doi.org/${item.doi}` : undefined,
       headline: item.renderings.en.title,
       datePublished: item.publishedAt,
       dateModified: item.versions.at(-1)?.date ?? item.publishedAt,
@@ -33,8 +40,8 @@ export default function EnglishAlphaMapPage() {
     inLanguage: "en",
     mainEntity: {
       "@type": "CreativeWorkSeries",
-      "@id": "https://lunartuliplab.com/en/alphamap#series",
-      name: "AlphaMap Methods Research",
+      "@id": "https://lunartuliplab.com/alphamap#series",
+      name: "Lunartulip AlphaMap",
       hasPart: {
         "@type": "ItemList",
         itemListElement: items,

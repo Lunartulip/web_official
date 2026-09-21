@@ -7,10 +7,19 @@ function modifiedDate(item: (typeof alphaMapStudies)[number]) {
   return item.versions.at(-1)?.date ?? item.publishedAt;
 }
 
+function compareStudies(
+  a: (typeof alphaMapStudies)[number],
+  b: (typeof alphaMapStudies)[number],
+) {
+  return modifiedDate(b).localeCompare(modifiedDate(a))
+    || b.publishedAt.localeCompare(a.publishedAt);
+}
+
 export default function AlphaMapIndex({ language = "cn" }: { language?: "cn" | "en" }) {
   const isCn = language === "cn";
   const locale = isCn ? "zh-CN" : "en";
   const prefix = isCn ? "" : "/en";
+  const latestStudy = [...alphaMapStudies].sort(compareStudies)[0];
 
   return (
     <main className={styles.page}>
@@ -35,7 +44,7 @@ export default function AlphaMapIndex({ language = "cn" }: { language?: "cn" | "
           <h1>{isCn ? <>先弄清分数里有什么，<br /><span>再讨论它能否预测。</span></> : <>First identify what is inside the score.<br /><span>Then ask whether it predicts.</span></>}</h1>
         </div>
         <aside className={styles.heroAside}>
-          <p>{isCn ? "AlphaMap 记录图谱、语义投影与横截面测量的研究过程。每篇研究固定图谱版本、样本、观察窗口和诊断边界，便于复核方法究竟测到了什么。" : "AlphaMap documents research on graphs, semantic projections and cross-sectional measurement. Each study fixes the graph vintage, sample, observation window and diagnostic boundary so the method can be audited."}</p>
+          <p>{isCn ? "AlphaMap 记录图谱、语义投影与横截面测量的研究过程。每篇研究固定图谱版本、样本、观察窗口和诊断边界，便于复核方法测到了什么。" : "AlphaMap documents research on graphs, semantic projections and cross-sectional measurement. Each study fixes the graph vintage, sample, observation window and diagnostic boundary so the method can be audited."}</p>
           <strong>DATED · REPRODUCIBLE · NON-PROMOTIONAL</strong>
         </aside>
       </section>
@@ -46,14 +55,14 @@ export default function AlphaMapIndex({ language = "cn" }: { language?: "cn" | "
             <p className={styles.sectionLabel}>ALPHAMAP STUDIES / {String(alphaMapStudies.length).padStart(2, "0")}</p>
             <h2>{isCn ? "方法先接受测量检查。" : "Methods face measurement checks first."}</h2>
           </div>
-          <p className={styles.lead}>{isCn ? "首篇研究使用 39 家图谱发行人、26 只共同定价股票和一个历史图谱版本。结果发生后再做的回溯分析只能用于诊断，不能当作 alpha 证据。" : "The first study uses 39 graph issuers, 26 commonly priced stocks and one historical graph vintage. Its retrospective post-outcome analysis is diagnostic and cannot establish alpha."}</p>
+          <p className={styles.lead}>{isCn ? "研究从 #000 的单期投影诊断推进到 #001 的完整图因子检验：91 家候选公司、266 份时点文件和 85 个成熟周度截面。控制后仍未建立可预测的网络 alpha。" : "The series moves from the single-vintage projection diagnostic in #000 to a full graph-factor test in #001: 91 candidates, 266 dated documents and 85 mature weekly cross-sections. Predictive network alpha is still not established after controls."}</p>
         </div>
         <div className={styles.grid}>
           {[...alphaMapStudies]
-            .sort((a, b) => modifiedDate(b).localeCompare(modifiedDate(a)))
+            .sort(compareStudies)
             .map((item) => (
               <article className={`${styles.card} ${styles.themeCard} ${styles.featureCard}`} key={item.slug}>
-                <p className={styles.meta}>{item.id} / PUBLISHED {item.publishedAt} · AS OF {item.asOf}</p>
+                <p className={styles.meta}>{item.sourceLabel.split(" · ")[0].toUpperCase()} / PUBLISHED {item.publishedAt} · AS OF {item.asOf}</p>
                 <h3>{item.renderings[locale].title}</h3>
                 <p>{item.renderings[locale].standfirst}</p>
                 <a href={`${prefix}/alphamap/${item.slug}`}>{isCn ? "阅读方法研究 →" : "Read the methods study →"}</a>
@@ -75,7 +84,7 @@ export default function AlphaMapIndex({ language = "cn" }: { language?: "cn" | "
           <p className={styles.lead}>{isCn ? "公开研究适合审阅方法。机构可进一步讨论版本化数据、内部 Agent 接口和定制研究范围。" : "The public study supports method review. Institutions can discuss versioned data, internal-agent interfaces and scoped research work."}</p>
         </div>
         <div className={styles.grid}>
-          <article className={styles.card}><p className={styles.meta}>CITATION METADATA</p><h3>Research Object</h3><p>{isCn ? "读取对象 ID、版本、日期、摘要和 canonical URL。" : "Read the object ID, version, dates, abstract and canonical URLs."}</p><Link href="/research/the-projection-is-part-of-the-signal-001">{isCn ? "打开公开元数据 →" : "Open public metadata →"}</Link></article>
+          <article className={styles.card}><p className={styles.meta}>CITATION METADATA</p><h3>Research Object</h3><p>{isCn ? "读取对象 ID、版本、日期、摘要、DOI 和 canonical URL。" : "Read the object ID, version, dates, abstract, DOI and canonical URLs."}</p><Link href={`/research/${latestStudy.slug}`}>{isCn ? "打开最新公开元数据 →" : "Open the latest public metadata →"}</Link></article>
           <article className={styles.card}><p className={styles.meta}>INSTITUTIONAL ACCESS</p><h3>{isCn ? "机器读与定制研究" : "Machine-readable and scoped research"}</h3><p>{isCn ? "讨论 Research API、Alternative Dataset 或研究委托。" : "Discuss the Research API, alternative datasets or a research mandate."}</p><Link href={`${prefix}/institutional-access#intent-machine_readable_research`}>{isCn ? "联系研究团队 →" : "Contact the research team →"}</Link></article>
         </div>
       </section>

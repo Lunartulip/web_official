@@ -123,6 +123,7 @@ interface ResearchObjectIdentity {
   publishedAt: string;
   asOf: string;
   version: string;
+  doi?: `10.${string}`;
   sourceLabel: string;
   claims: Claim[];
   evidence: Evidence[];

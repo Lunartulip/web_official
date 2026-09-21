@@ -3983,8 +3983,9 @@
     "tickers": [],
     "publishedAt": "2026-09-18",
     "asOf": "2026-09-17",
-    "version": "1.0.0",
-    "sourceLabel": "AlphaMap Research Note #001 · reviewed edition",
+    "version": "1.0.1",
+    "doi": "10.5281/zenodo.22846355",
+    "sourceLabel": "Lunartulip AlphaMap Research Note #000 · original DOI record v1.0",
     "claims": [
       {
         "id": "CL-ALPHAMAP-001",
@@ -4120,6 +4121,14 @@
           "zh-CN": "首版：固定单一历史图谱的投影、样本内分数诊断和非 alpha 边界。",
           "en": "Initial edition fixing the single-vintage projection, in-sample score diagnostics and non-alpha boundary."
         }
+      },
+      {
+        "version": "1.0.1",
+        "date": "2026-09-21",
+        "diff": {
+          "zh-CN": "网站系列显示编号改为 #000；未改动研究结论、样本、图表或原 DOI。",
+          "en": "Changed the website series display number to #000; research conclusions, sample, figures and the original DOI are unchanged."
+        }
       }
     ],
     "renderings": {
@@ -4133,7 +4142,7 @@
         "methodology": "在 2026-09-08 冻结图谱上计算全部 39 家发行人的图特征，再限制到 26 只共同定价样本；收益窗口为 2026-09-09 至 09-15，价格于 09-17 获取。设计为结果发生后的回溯诊断。",
         "findings": "weighted degree 在 39/39 节点上等于加权角色暴露计数；Katz 有 31/39 可由组规模解释并有 8 个例外；90.64%/96.84% 只是样本内分数拟合。",
         "limitations": "只有一个历史图谱版本，未做样本外预测验证。neutralized score 不等于中性组合，本文不声称 alpha、估值结论或交易可行性。",
-        "update": "首版发布于 2026-09-18，信息截至 2026-09-17。",
+        "update": "首版于 2026-09-18 发布。2026-09-21 仅将网站系列显示编号调整为 #000；研究内容和原 DOI 记录未变。",
         "evidenceClaimIds": ["CL-ALPHAMAP-001", "CL-ALPHAMAP-002", "CL-ALPHAMAP-003", "CL-ALPHAMAP-004", "CL-ALPHAMAP-005"],
         "riskClaimIds": ["CL-ALPHAMAP-006", "CL-ALPHAMAP-007"]
       },
@@ -4147,7 +4156,7 @@
         "methodology": "Compute graph features for all 39 issuers on the graph frozen September 8, 2026, then restrict to the 26-stock common priced sample. The return window is September 9–15 and prices were retrieved September 17. The design is retrospective and post-outcome.",
         "findings": "Weighted degree equals weighted role exposure for 39/39 nodes; group size explains Katz for 31/39 with eight exceptions; 90.64%/96.84% are in-sample score fits only.",
         "limitations": "There is one historical graph vintage and no out-of-sample predictive test. A neutralized score is not a neutral portfolio; this note makes no alpha, valuation or tradability claim.",
-        "update": "Initial edition published September 18, 2026, with information through September 17, 2026.",
+        "update": "The initial edition was published September 18, 2026. On September 21, only the website series display number changed to #000; the research content and original DOI record are unchanged.",
         "evidenceClaimIds": ["CL-ALPHAMAP-001", "CL-ALPHAMAP-002", "CL-ALPHAMAP-003", "CL-ALPHAMAP-004", "CL-ALPHAMAP-005"],
         "riskClaimIds": ["CL-ALPHAMAP-006", "CL-ALPHAMAP-007"]
       }
@@ -4321,6 +4330,598 @@
         "mediaType": "text/html",
         "url": "/alphamap/the-projection-is-part-of-the-signal-001#methods",
         "evidenceIds": ["EV-ALPHAMAP-004"]
+      },
+      {
+        "id": "AR-ALPHAMAP-DOI",
+        "label": {
+          "zh-CN": "原始 DOI 记录（Zenodo v1.0）",
+          "en": "Original DOI record (Zenodo v1.0)"
+        },
+        "mediaType": "application/pdf",
+        "url": "https://doi.org/10.5281/zenodo.22846355",
+        "evidenceIds": ["EV-ALPHAMAP-004"]
+      }
+    ]
+  },
+  {
+    "id": "RO-ALPHAMAP-002",
+    "slug": "incremental-network-test-001",
+    "kind": "alphamap-study",
+    "tickers": [],
+    "publishedAt": "2026-09-21",
+    "asOf": "2026-09-21",
+    "version": "1.0.0",
+    "doi": "10.5281/zenodo.22862923",
+    "sourceLabel": "Lunartulip AlphaMap Research Note #001 · DOI 10.5281/zenodo.22862923",
+    "claims": [
+      {
+        "id": "CL-ALPHAMAP2-001",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "研究从 266 份带日期的 SEC 文件重构 91 家候选公司的公司—概念图；90 家有可用价格，图中包含 70 个技术概念和 166 个带日期的文件状态快照。",
+          "en": "The study reconstructs company–concept graphs for 91 candidate companies from 266 dated SEC documents; 90 have usable prices, and the graph panel contains 70 technical concepts and 166 dated document-state snapshots."
+        },
+        "evidenceIds": [
+          "EV-ALPHAMAP2-001",
+          "EV-ALPHAMAP2-002"
+        ]
+      },
+      {
+        "id": "CL-ALPHAMAP2-002",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "主检验包含 85 个已成熟的周度 21 交易日横截面和 21 个按月调仓日；样本采用 current-cohort selection，价格为 current-vintage，未报告 native-forward 结果。",
+          "en": "The primary test contains 85 mature weekly 21-session cross-sections and 21 monthly formation dates; the sample uses current-cohort selection, prices are current-vintage, and no native-forward results are reported."
+        },
+        "evidenceIds": [
+          "EV-ALPHAMAP2-002"
+        ]
+      },
+      {
+        "id": "CL-ALPHAMAP2-003",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "主要受控信号的 21 交易日平均 Rank IC 为 0.0072744，HAC t 值为 0.31，95% 置信区间为 [-0.040, 0.055]；区间跨过零。",
+          "en": "The primary controlled signal has a mean 21-session Rank IC of 0.0072744, a HAC t-statistic of 0.31 and a 95% confidence interval of [-0.040, 0.055], which crosses zero."
+        },
+        "evidenceIds": [
+          "EV-ALPHAMAP2-003"
+        ]
+      },
+      {
+        "id": "CL-ALPHAMAP2-004",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "主要邻居收益信号的 raw IC 为 0.0779；加入市场、层级和披露控制后降至 0.0072744。该衰减是诊断结果，不能据此作因果归因。",
+          "en": "The primary neighbor-return signal has a raw IC of 0.0779, falling to 0.0072744 after market, layer and disclosure controls. The attenuation is diagnostic and does not support causal attribution."
+        },
+        "evidenceIds": [
+          "EV-ALPHAMAP2-003",
+          "EV-ALPHAMAP2-004"
+        ]
+      },
+      {
+        "id": "CL-ALPHAMAP2-005",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "六个预先固定方向的主要期限信号中，没有一个通过 Holm 多重检验校正。",
+          "en": "None of the six direction-fixed primary-horizon signals survives Holm multiple-testing correction."
+        },
+        "evidenceIds": [
+          "EV-ALPHAMAP2-003"
+        ]
+      },
+      {
+        "id": "CL-ALPHAMAP2-006",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "计入每美元成交 10 个基点成本和年化 3% 卖空借券压力后，主要五分位多空组合回报为 -31.9%，受约束连续组合回报为 -6.2%。",
+          "en": "After 10 basis points per dollar traded and a 3% annual short-borrow stress, the primary quintile long-short portfolio returns -31.9% and the constrained continuous portfolio returns -6.2%."
+        },
+        "evidenceIds": [
+          "EV-ALPHAMAP2-004"
+        ]
+      },
+      {
+        "id": "CL-ALPHAMAP2-007",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "199 个度保持重连面板中只有 95 个保留全部 85 个测试日的支持；这些共同支持结果仅作描述，预先计划的正式 null p 值未发布。",
+          "en": "Only 95 of 199 degree-preserving rewired panels retain support for all 85 test dates; these common-support results are descriptive, and the planned formal null p-value is withheld."
+        },
+        "evidenceIds": [
+          "EV-ALPHAMAP2-005"
+        ]
+      },
+      {
+        "id": "CL-ALPHAMAP2-008",
+        "type": "Inference",
+        "text": {
+          "zh-CN": "本样本没有建立可预测的 network alpha。受控 IC 不精确、六个信号均未通过 Holm 校正，两个网络组合的净回报也为负。",
+          "en": "Predictive network alpha is not established in this sample. The controlled IC is imprecise, none of six signals survives Holm correction, and both network portfolios have negative net returns."
+        },
+        "evidenceIds": [
+          "EV-ALPHAMAP2-003",
+          "EV-ALPHAMAP2-004",
+          "EV-ALPHAMAP2-005"
+        ]
+      },
+      {
+        "id": "CL-ALPHAMAP2-009",
+        "type": "Inference",
+        "text": {
+          "zh-CN": "语义关联可以用于组织公司关系，但共享概念不等于供应合同、现金流方向或因果传导渠道。",
+          "en": "Semantic affinity can organize company relationships, but a shared concept does not identify a supply contract, a cash-flow direction or a causal transmission channel."
+        },
+        "evidenceIds": [
+          "EV-ALPHAMAP2-002"
+        ]
+      },
+      {
+        "id": "CL-ALPHAMAP2-010",
+        "type": "Hypothesis",
+        "text": {
+          "zh-CN": "后续实验可检验带日期、带经济方向和符号的状态变化，在冻结规则与前瞻记录下能否提供超越披露相似度和普通动量的增量预测。",
+          "en": "A subsequent experiment can test whether dated, economically directed and signed state changes add prediction beyond disclosure similarity and ordinary momentum under frozen rules and a native-forward record."
+        },
+        "evidenceIds": [
+          "EV-ALPHAMAP2-002"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "EV-ALPHAMAP2-001",
+        "title": "Zenodo record for AlphaMap Research Note 001, version 2.0",
+        "source": {
+          "publisher": "Zenodo",
+          "url": "https://doi.org/10.5281/zenodo.22862923",
+          "document": "Do Semantic Neighbors Predict Stock Returns? A Dated Graph-Factor Study Across the AI Stack"
+        },
+        "sourceDate": "2026-09-21",
+        "dataAsOf": "2026-09-21",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "Repository metadata identifies the released study but does not by itself validate the empirical estimates.",
+        "lastVerified": "2026-09-21",
+        "role": "primary"
+      },
+      {
+        "id": "EV-ALPHAMAP2-002",
+        "title": "AlphaMap Research Note 001 version 2.0 working paper and canonical note",
+        "source": {
+          "publisher": "Lunartulip Lab",
+          "document": "AlphaMap Research Note 001: Do Semantic Neighbors Predict Stock Returns?"
+        },
+        "sourceDate": "2026-09-21",
+        "dataAsOf": "2026-09-21",
+        "calculation": "Historical reconstruction from 266 dated SEC documents for 91 current-cohort candidates, 90 priced stocks, 70 concepts and 166 dated document-state snapshots; 85 mature weekly tests and 21 monthly formation dates.",
+        "confidence": "high",
+        "counterevidence": "The cohort was selected with hindsight, prices are current-vintage, extraction recall is unmeasured and the release contains no native-forward observations.",
+        "lastVerified": "2026-09-21",
+        "role": "primary"
+      },
+      {
+        "id": "EV-ALPHAMAP2-003",
+        "title": "Aggregate weekly information-coefficient results",
+        "source": {
+          "publisher": "Lunartulip Lab",
+          "document": "aggregate_results.json"
+        },
+        "sourceDate": "2026-09-21",
+        "dataAsOf": "2026-08-14",
+        "calculation": "Primary controlled 21-session Rank IC = 0.0072743981 across 85 weekly tests; HAC t = 0.3058291; 95% CI = [-0.0400263, 0.0545751]. Six direction-fixed primary-horizon signals receive Holm correction; zero survive.",
+        "confidence": "high",
+        "counterevidence": "The short reconstructed history leaves wide uncertainty; the raw estimate is also imprecise and secondary horizons are exploratory.",
+        "lastVerified": "2026-09-21",
+        "role": "primary"
+      },
+      {
+        "id": "EV-ALPHAMAP2-004",
+        "title": "Confounder ladder and net portfolio accounting",
+        "source": {
+          "publisher": "Lunartulip Lab",
+          "document": "AlphaMap Research Note 001 version 2.0, sections 8–10"
+        },
+        "sourceDate": "2026-09-21",
+        "dataAsOf": "2026-09-18",
+        "calculation": "Raw peer-momentum IC = 0.0779 before controls; controlled IC = 0.0072744. Net return = -31.9% for the quintile long-short and -6.2% for the constrained continuous portfolio, including 10 bps per dollar traded and 3% annual short-borrow stress.",
+        "confidence": "high",
+        "counterevidence": "Portfolio results depend on the stated execution, cost and borrow assumptions; borrow availability, financing terms and market impact are not certified.",
+        "lastVerified": "2026-09-21",
+        "role": "primary"
+      },
+      {
+        "id": "EV-ALPHAMAP2-005",
+        "title": "Degree-preserving rewiring and support diagnostic",
+        "source": {
+          "publisher": "Lunartulip Lab",
+          "document": "AlphaMap Research Note 001 version 2.0, section 11"
+        },
+        "sourceDate": "2026-09-21",
+        "dataAsOf": "2026-08-14",
+        "calculation": "Of 199 fixed-seed degree-preserving rewiring runs, 95 preserve all 85 observed test dates and 104 fail the predeclared support contract on at least one date.",
+        "confidence": "high",
+        "counterevidence": "The retained common-support draws are descriptive, do not restore the planned 199-replicate test and do not justify a formal null p-value.",
+        "lastVerified": "2026-09-21",
+        "role": "primary"
+      }
+    ],
+    "versions": [
+      {
+        "version": "1.0.0",
+        "date": "2026-09-21",
+        "diff": {
+          "zh-CN": "首版：发布带日期的增量网络检验，保留受控 IC、Holm 校正、负组合回报、重连支持约束和回溯设计边界。",
+          "en": "Initial edition publishing the dated incremental-network test while retaining the controlled IC, Holm correction, negative portfolio returns, rewiring support constraint and retrospective-design boundary."
+        }
+      }
+    ],
+    "renderings": {
+      "zh-CN": {
+        "locale": "zh-CN",
+        "siblingLocale": "en",
+        "title": "语义邻居能否预测股票收益？",
+        "question": "公司之间的技术语义关联，在扣除市场、层级和披露差异后，能否改善未来收益排序？",
+        "standfirst": "91 家候选公司、266 份带日期的 SEC 文件和 85 个成熟周度检验给出同一结论：raw IC 为 0.0779，完整控制后降至 0.0072744，预测性 network alpha 尚未建立。",
+        "whyItMatters": "语义图可以把分散在披露文件里的技术关系整理成可重复测量的邻居结构。真正需要检验的是这套结构能否提供增量信息。若信号主要来自行业层级、公司自身动量、风险暴露或披露广度，图分数就不能单独支持收益预测。",
+        "methodology": "研究按 SEC 文件可得时间重构 166 个文件状态快照，以 70 个技术概念建立公司—概念二部图，再用 Newman collaboration weighting 投影公司关系。六个固定方向的信号在周末形成，主标签为下一交易日开盘至 21 个交易日后的开盘收益；横截面控制包括层级、自身动量、beta、波动率、流动性、披露长度、概念广度和可得的带日期市值代理。组合按月在下一交易日开盘执行并计入成本。",
+        "findings": "主要受控 Rank IC 为 0.0072744，HAC t=0.31，95% CI 为 [-0.040, 0.055]。raw IC 为 0.0779，六个主要信号均未通过 Holm 校正。五分位多空组合回报 -31.9%，受约束连续组合回报 -6.2%。199 个重连面板中只有 95 个保留全部测试日，因此正式 null p 值未发布。",
+        "limitations": "这是结果发生后的历史重构。候选公司按当前范围选取，价格使用 current-vintage 调整序列，文件获取时间与重构时间分开记录；样本不具备完整退市覆盖，也没有 native-forward 结果。语义边只表示披露关联，不能当作供应合同或现金流方向。重连共同支持结果仅作描述。",
+        "update": "1.0.0 于 2026-09-21 发布，对应 Zenodo DOI 10.5281/zenodo.22862923。本文不提供估值结论或交易建议。",
+        "evidenceClaimIds": [
+          "CL-ALPHAMAP2-001",
+          "CL-ALPHAMAP2-002",
+          "CL-ALPHAMAP2-003",
+          "CL-ALPHAMAP2-004",
+          "CL-ALPHAMAP2-005",
+          "CL-ALPHAMAP2-006",
+          "CL-ALPHAMAP2-007"
+        ],
+        "riskClaimIds": [
+          "CL-ALPHAMAP2-008",
+          "CL-ALPHAMAP2-009",
+          "CL-ALPHAMAP2-010"
+        ]
+      },
+      "en": {
+        "locale": "en",
+        "siblingLocale": "zh-CN",
+        "title": "Do Semantic Neighbors Predict Stock Returns? A Dated Graph-Factor Study Across the AI Stack",
+        "question": "After controlling for market, layer and disclosure differences, do technical semantic links between companies improve the ranking of future returns?",
+        "standfirst": "Across 91 candidate companies, 266 dated SEC documents and 85 mature weekly tests, the raw IC of 0.0779 falls to 0.0072744 under full controls. Predictive network alpha is not established.",
+        "whyItMatters": "A semantic graph can turn technical relationships scattered across disclosures into a repeatable neighborhood measure. The empirical question is whether that structure adds information. If the score inherits layer, own momentum, risk exposure or disclosure breadth, it cannot independently support a return-prediction claim.",
+        "methodology": "The study reconstructs 166 document-state snapshots using SEC availability dates, builds company–concept bipartite graphs over 70 technical concepts, and projects company links with Newman collaboration weighting. Six direction-fixed signals are formed at week-end; the primary label runs from the next-session open to the open 21 sessions later. Cross-sectional controls include layer, own momentum, beta, volatility, liquidity, disclosure length, concept breadth and available dated capitalization proxies. Monthly portfolios execute at the next-session open and include stated costs.",
+        "findings": "The primary controlled Rank IC is 0.0072744 with HAC t=0.31 and a 95% CI of [-0.040, 0.055]. Raw IC is 0.0779, and none of six primary signals survives Holm correction. The quintile long-short returns -31.9%; the constrained continuous portfolio returns -6.2%. Only 95 of 199 rewired panels retain every test date, so the formal null p-value is withheld.",
+        "limitations": "This is a post-outcome historical reconstruction. Candidates are selected from the current cohort, prices use current-vintage adjusted histories, and document acquisition and reconstruction times are recorded separately. The sample lacks complete inactive-security coverage and contains no native-forward results. Semantic edges indicate disclosure affinity, not supply contracts or cash-flow direction. Common-support rewiring results are descriptive only.",
+        "update": "Version 1.0.0 was published on September 21, 2026 under Zenodo DOI 10.5281/zenodo.22862923. It contains no valuation conclusion or trading recommendation.",
+        "evidenceClaimIds": [
+          "CL-ALPHAMAP2-001",
+          "CL-ALPHAMAP2-002",
+          "CL-ALPHAMAP2-003",
+          "CL-ALPHAMAP2-004",
+          "CL-ALPHAMAP2-005",
+          "CL-ALPHAMAP2-006",
+          "CL-ALPHAMAP2-007"
+        ],
+        "riskClaimIds": [
+          "CL-ALPHAMAP2-008",
+          "CL-ALPHAMAP2-009",
+          "CL-ALPHAMAP2-010"
+        ]
+      }
+    },
+    "temporalAnchors": [
+      {
+        "id": "TA-ALPHAMAP2-GRAPH",
+        "type": "graph-vintage",
+        "date": "2026-08-14",
+        "retrospective": true,
+        "description": {
+          "zh-CN": "166 个带日期的文件状态快照所覆盖的最后一个成熟主检验形成日；快照数与 85 个成熟周度测试数口径不同。",
+          "en": "The final mature primary-test formation date covered by 166 dated document-state snapshots; snapshot count and the 85 mature weekly-test count are distinct measures."
+        }
+      },
+      {
+        "id": "TA-ALPHAMAP2-RETURN",
+        "type": "return-window",
+        "startDate": "2025-01-03",
+        "endDate": "2026-08-14",
+        "retrospective": true,
+        "description": {
+          "zh-CN": "85 个已成熟的 21 交易日周度主检验形成日范围。",
+          "en": "Formation-date range for the 85 mature weekly 21-session primary tests."
+        }
+      },
+      {
+        "id": "TA-ALPHAMAP2-PRICE",
+        "type": "price-retrieval",
+        "date": "2026-09-21",
+        "retrospective": true,
+        "description": {
+          "zh-CN": "研究对象的信息截止日；价格为 current-vintage 调整历史，不代表历史时点可见的数据版本。",
+          "en": "Research-object as-of date; prices are current-vintage adjusted histories, not historically visible data vintages."
+        }
+      }
+    ],
+    "studyDesign": {
+      "design": "retrospective-post-outcome",
+      "objective": {
+        "zh-CN": "检验带日期的公司—技术语义网络能否在市场、层级、风险和披露控制之外改善未来股票收益的横截面排序。",
+        "en": "Test whether a dated company–technology semantic network improves cross-sectional ranking of future stock returns beyond market, layer, risk and disclosure controls."
+      },
+      "projection": {
+        "zh-CN": "将 91 家候选公司与 70 个技术概念的带日期披露关联构造成二部图，再用 Newman collaboration weighting 投影为公司邻接网络；边表示共享披露概念。",
+        "en": "Dated disclosure associations between 91 candidate companies and 70 technical concepts form a bipartite graph, which is projected into company adjacency using Newman collaboration weighting; an edge denotes shared disclosed concepts."
+      },
+      "outcome": {
+        "zh-CN": "主要结果为周度信号对下一交易日开盘至 21 个交易日后开盘收益排名的关系，并辅以月度组合、特征回归、风险回归和重连诊断。全部结果来自回溯重构，没有 native-forward 观测。",
+        "en": "The primary outcome relates weekly signals to return ranks from the next-session open to the open 21 sessions later, supplemented by monthly portfolios, characteristic regressions, risk regressions and rewiring diagnostics. All results come from retrospective reconstruction; there are no native-forward observations."
+      }
+    },
+    "sample": {
+      "graphIssuers": 91,
+      "pricedStocks": 90,
+      "historicalGraphVintages": 166,
+      "inclusion": {
+        "zh-CN": "91 家 current-cohort 候选公司保留在冻结索引中，其中 90 家有可用价格。166 表示带日期的文件状态快照；主结果另有 85 个已成熟周度测试和 21 个按月调仓日，三者不能混用。",
+        "en": "Ninety-one current-cohort candidates remain in the frozen index, of which 90 have usable prices. The 166 count refers to dated document-state snapshots; the primary results separately contain 85 mature weekly tests and 21 monthly formation dates, and these counts are not interchangeable."
+      }
+    },
+    "diagnostics": [
+      {
+        "id": "DG-ALPHAMAP2-CONTROLLED-IC",
+        "metric": "controlled 21-session Rank IC",
+        "value": 0.0072744,
+        "unit": "ratio",
+        "scope": {
+          "zh-CN": "主要 network peer momentum 信号；85 个成熟周度横截面，HAC t=0.31，95% CI [-0.040, 0.055]",
+          "en": "Primary network peer-momentum signal; 85 mature weekly cross-sections, HAC t=0.31, 95% CI [-0.040, 0.055]"
+        },
+        "interpretation": {
+          "zh-CN": "点估计接近零且区间跨零，无法据此建立增量预测。",
+          "en": "The estimate is near zero and its interval crosses zero, so it does not establish incremental prediction."
+        },
+        "evidenceIds": [
+          "EV-ALPHAMAP2-003"
+        ],
+        "claimIds": [
+          "CL-ALPHAMAP2-003",
+          "CL-ALPHAMAP2-008"
+        ]
+      },
+      {
+        "id": "DG-ALPHAMAP2-RAW-IC",
+        "metric": "raw 21-session Rank IC",
+        "value": 0.0779,
+        "unit": "ratio",
+        "scope": {
+          "zh-CN": "加入市场、层级和披露控制前的主要邻居收益信号",
+          "en": "Primary neighbor-return signal before market, layer and disclosure controls"
+        },
+        "interpretation": {
+          "zh-CN": "raw 关系在完整控制后大幅衰减；该对比只作诊断。",
+          "en": "The raw relation attenuates sharply under full controls; the comparison is diagnostic."
+        },
+        "evidenceIds": [
+          "EV-ALPHAMAP2-003",
+          "EV-ALPHAMAP2-004"
+        ],
+        "claimIds": [
+          "CL-ALPHAMAP2-004"
+        ]
+      },
+      {
+        "id": "DG-ALPHAMAP2-WEEKLY-TESTS",
+        "metric": "mature weekly primary tests",
+        "value": 85,
+        "unit": "count",
+        "scope": {
+          "zh-CN": "2025-01-03 至 2026-08-14 的 21 交易日主标签",
+          "en": "Mature 21-session primary labels from January 3, 2025 through August 14, 2026"
+        },
+        "interpretation": {
+          "zh-CN": "85 是成熟周度检验数，不能与 166 个文件状态快照混为同一口径。",
+          "en": "The 85 count is for mature weekly tests and is distinct from the 166 document-state snapshots."
+        },
+        "evidenceIds": [
+          "EV-ALPHAMAP2-002",
+          "EV-ALPHAMAP2-003"
+        ],
+        "claimIds": [
+          "CL-ALPHAMAP2-001",
+          "CL-ALPHAMAP2-002"
+        ]
+      },
+      {
+        "id": "DG-ALPHAMAP2-HOLM",
+        "metric": "signals surviving Holm correction",
+        "value": 0,
+        "unit": "count",
+        "scope": {
+          "zh-CN": "六个固定方向的 21 交易日主要期限信号",
+          "en": "Six direction-fixed 21-session primary-horizon signals"
+        },
+        "interpretation": {
+          "zh-CN": "多重检验校正后没有信号达到显著标准。",
+          "en": "No signal meets the significance criterion after multiple-testing correction."
+        },
+        "evidenceIds": [
+          "EV-ALPHAMAP2-003"
+        ],
+        "claimIds": [
+          "CL-ALPHAMAP2-005",
+          "CL-ALPHAMAP2-008"
+        ]
+      },
+      {
+        "id": "DG-ALPHAMAP2-QUINTILE-RETURN",
+        "metric": "net quintile long-short return",
+        "value": -31.9,
+        "unit": "percent",
+        "scope": {
+          "zh-CN": "21 次按月调仓；每美元成交 10 个基点成本并含年化 3% 借券压力",
+          "en": "Twenty-one monthly formation dates; 10 bps per dollar traded and 3% annual short-borrow stress"
+        },
+        "interpretation": {
+          "zh-CN": "尾部组合在所列成本假设下录得负回报。",
+          "en": "The tail portfolio records a negative return under the stated cost assumptions."
+        },
+        "evidenceIds": [
+          "EV-ALPHAMAP2-004"
+        ],
+        "claimIds": [
+          "CL-ALPHAMAP2-006",
+          "CL-ALPHAMAP2-008"
+        ]
+      },
+      {
+        "id": "DG-ALPHAMAP2-CONTINUOUS-RETURN",
+        "metric": "net constrained continuous return",
+        "value": -6.2,
+        "unit": "percent",
+        "scope": {
+          "zh-CN": "单名权重上限 10%，调仓时控制暴露投影为零，成本假设与五分位组合一致",
+          "en": "Ten-percent single-name cap and included control exposures projected to zero at rebalancing, with the same cost assumptions as the quintile portfolio"
+        },
+        "interpretation": {
+          "zh-CN": "连续中性化设计减小了损失，但结果仍为负。",
+          "en": "The continuous neutralized design reduces the loss, but the result remains negative."
+        },
+        "evidenceIds": [
+          "EV-ALPHAMAP2-004"
+        ],
+        "claimIds": [
+          "CL-ALPHAMAP2-006",
+          "CL-ALPHAMAP2-008"
+        ]
+      },
+      {
+        "id": "DG-ALPHAMAP2-REWIRING-SUPPORT",
+        "metric": "rewired panels preserving full support",
+        "value": 95,
+        "unit": "count",
+        "scope": {
+          "zh-CN": "199 个度保持重连运行中，保留全部 85 个测试日的面板数",
+          "en": "Panels retaining all 85 test dates out of 199 degree-preserving rewiring runs"
+        },
+        "interpretation": {
+          "zh-CN": "104 个面板未满足支持约束，因此 95 个共同支持面板只能描述，正式 null p 值未发布。",
+          "en": "Because 104 panels fail the support contract, the 95 common-support panels are descriptive and the formal null p-value is withheld."
+        },
+        "evidenceIds": [
+          "EV-ALPHAMAP2-005"
+        ],
+        "claimIds": [
+          "CL-ALPHAMAP2-007"
+        ]
+      }
+    ],
+    "limitations": [
+      {
+        "id": "LM-ALPHAMAP2-RETROSPECTIVE",
+        "text": {
+          "zh-CN": "研究设计为 retrospective-post-outcome。规则虽在本次计算结果前冻结，但早期研究已影响设计，不能视为历史预注册或样本外验证。",
+          "en": "The design is retrospective-post-outcome. Although rules were frozen before this run's outcomes were computed, earlier research informed the design, so this is neither historical preregistration nor out-of-sample validation."
+        },
+        "claimIds": [
+          "CL-ALPHAMAP2-002",
+          "CL-ALPHAMAP2-008"
+        ]
+      },
+      {
+        "id": "LM-ALPHAMAP2-CURRENT-COHORT",
+        "text": {
+          "zh-CN": "91 家候选公司按当前研究范围选取，历史样本不等于完整的全球股票或历史指数成分序列，仍有 current-cohort selection 与幸存者偏差。",
+          "en": "The 91 candidates are selected from the current research scope. The historical sample is not a complete global-equity or historical-index-membership series and remains subject to current-cohort selection and survivorship bias."
+        },
+        "claimIds": [
+          "CL-ALPHAMAP2-001",
+          "CL-ALPHAMAP2-002"
+        ]
+      },
+      {
+        "id": "LM-ALPHAMAP2-CURRENT-VINTAGE",
+        "text": {
+          "zh-CN": "价格为 current-vintage 调整历史，缺少完整的历史版本与现金精确总回报口径；带日期的市值代理只覆盖部分公司。",
+          "en": "Prices are current-vintage adjusted histories rather than complete historical vintages or a cash-exact total-return record; dated capitalization proxies cover only part of the sample."
+        },
+        "claimIds": [
+          "CL-ALPHAMAP2-002"
+        ]
+      },
+      {
+        "id": "LM-ALPHAMAP2-NO-FORWARD",
+        "text": {
+          "zh-CN": "本版没有 native-forward 观测或收益。前瞻记录只能在规则、代码和输入合同最终冻结后开始。",
+          "en": "This release contains no native-forward observations or returns. A forward record can begin only after final rules, code and input contracts are frozen."
+        },
+        "claimIds": [
+          "CL-ALPHAMAP2-002",
+          "CL-ALPHAMAP2-010"
+        ]
+      },
+      {
+        "id": "LM-ALPHAMAP2-SEMANTICS",
+        "text": {
+          "zh-CN": "披露中的共享概念会混合产品、客户与治理语义，抽取召回率尚未测量；语义边不能直接解释为经济传导。",
+          "en": "Shared disclosure concepts mix product, customer and governance meanings, and extraction recall is unmeasured; semantic edges cannot be read directly as economic transmission."
+        },
+        "claimIds": [
+          "CL-ALPHAMAP2-009",
+          "CL-ALPHAMAP2-010"
+        ]
+      },
+      {
+        "id": "LM-ALPHAMAP2-NEUTRALITY",
+        "text": {
+          "zh-CN": "残差化分数不等于中性投资组合。五分位尾部仍会集中暴露；受约束连续组合只在调仓时对所列控制变量做中性化。",
+          "en": "A residualized score is not a neutral portfolio. Quintile tails can retain concentrated exposures; the constrained continuous portfolio neutralizes only the stated controls at rebalancing."
+        },
+        "claimIds": [
+          "CL-ALPHAMAP2-006",
+          "CL-ALPHAMAP2-008"
+        ]
+      },
+      {
+        "id": "LM-ALPHAMAP2-NULL",
+        "text": {
+          "zh-CN": "只有 95/199 个重连面板保留完整支持。共同支持子集不构成原计划的 199 次重复检验，正式 null p 值因此未发布。",
+          "en": "Only 95 of 199 rewired panels retain full support. The common-support subset does not constitute the planned 199-replicate test, so the formal null p-value is withheld."
+        },
+        "claimIds": [
+          "CL-ALPHAMAP2-007"
+        ]
+      }
+    ],
+    "artifacts": [
+      {
+        "id": "AR-ALPHAMAP2-CANONICAL",
+        "label": {
+          "zh-CN": "网站 canonical 研究页",
+          "en": "Website canonical research page"
+        },
+        "mediaType": "text/html",
+        "url": "/alphamap/incremental-network-test-001",
+        "evidenceIds": [
+          "EV-ALPHAMAP2-001",
+          "EV-ALPHAMAP2-002",
+          "EV-ALPHAMAP2-003",
+          "EV-ALPHAMAP2-004",
+          "EV-ALPHAMAP2-005"
+        ]
+      },
+      {
+        "id": "AR-ALPHAMAP2-DOI",
+        "label": {
+          "zh-CN": "Zenodo 正式记录",
+          "en": "Zenodo record"
+        },
+        "mediaType": "text/html",
+        "url": "https://doi.org/10.5281/zenodo.22862923",
+        "evidenceIds": [
+          "EV-ALPHAMAP2-001"
+        ]
       }
     ]
   }

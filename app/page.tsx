@@ -688,11 +688,11 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
 
         <div className="enterprise-mode">
           <div>
-            <small>PUBLIC RESEARCH SERIES / ALPHAMAP</small>
-            <strong>{language === "cn" ? "沿产业因果与价值传导，阅读可证伪的研究地图" : "Follow industry causality and value transmission through falsifiable research maps"}</strong>
+            <small>PUBLIC RESEARCH SERIES / LUNARTULIP ALPHAMAP</small>
+            <strong>{language === "cn" ? "从语义图谱走到横截面股票因子，阅读带时间戳、可复核的方法研究" : "From semantic graphs to cross-sectional stock factors, with dated and auditable methods research"}</strong>
           </div>
-          <p>{language === "cn" ? "AlphaMap 公开样章保留研究问题、关键连接、假设边界与引用元数据。文章用于公开阅读与引用；受许可数据集按用途和许可单独交付。" : "AlphaMap public samples preserve the research question, key connections, hypothesis boundaries and citation metadata. Articles are for public reading and citation; they are not licensed datasets."}</p>
-          <Link href={language === "en" ? "/en/alphamap" : "/alphamap"}>{language === "cn" ? "进入 AlphaMap" : "Explore AlphaMap"} <ArrowRightIcon /></Link>
+          <p>{language === "cn" ? "Lunartulip AlphaMap 公开研究保留图谱版本、样本、信号定义、负结果和引用元数据。文章可公开阅读与引用；底层时点数据按用途和许可另行交付。" : "Lunartulip AlphaMap public research preserves graph vintages, samples, signal definitions, negative results and citation metadata. Articles are public citation objects; underlying point-in-time data is delivered separately by use case and license."}</p>
+          <Link href={language === "en" ? "/en/alphamap" : "/alphamap"}>{language === "cn" ? "进入 Lunartulip AlphaMap" : "Explore Lunartulip AlphaMap"} <ArrowRightIcon /></Link>
         </div>
 
         <div className="product-ladder">

@@ -1,0 +1,76 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<title>增量网络检验｜Lunartulip AlphaMap 研究笔记 #001</title>
+<meta name="description" content="Lunartulip AlphaMap 研究笔记 #001 使用 91 家候选公司、266 份 SEC 时点文件和 85 个成熟周度截面，检验 AI 技术栈语义网络能否提供增量股票收益排序信息。">
+<meta name="author" content="Xiaotong Wang">
+<meta name="date" content="2026-09-21">
+<meta name="last-modified" content="2026-09-21">
+<meta name="citation_title" content="Do Semantic Neighbors Predict Stock Returns? A Dated Graph-Factor Study Across the AI Stack">
+<meta name="citation_author" content="Xiaotong Wang">
+<meta name="citation_publication_date" content="2026/09/21">
+<meta name="citation_doi" content="10.5281/zenodo.22862923">
+<meta name="citation_pdf_url" content="https://zenodo.org/records/22862923/files/AlphaMap_Research_Note_001_v2_Working_Paper.pdf">
+<meta name="DC.identifier" content="doi:10.5281/zenodo.22862923">
+<link rel="canonical" href="https://lunartuliplab.com/alphamap/incremental-network-test-001">
+<link rel="alternate" hreflang="en" href="https://lunartuliplab.com/en/alphamap/incremental-network-test-001">
+<link rel="alternate" hreflang="zh-CN" href="https://lunartuliplab.com/alphamap/incremental-network-test-001">
+<link rel="alternate" hreflang="x-default" href="https://lunartuliplab.com/en/alphamap/incremental-network-test-001">
+<link rel="alternate" type="application/rss+xml" title="Lunartulip AlphaMap" href="/alphamap/feed.xml">
+<link rel="cite-as" href="https://doi.org/10.5281/zenodo.22862923">
+<meta property="article:published_time" content="2026-09-21T00:00:00+08:00">
+<meta property="article:modified_time" content="2026-09-21T00:00:00+08:00">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Lunartulip Lab">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="增量网络检验｜Lunartulip AlphaMap 研究笔记 #001">
+<meta property="og:description" content="Lunartulip AlphaMap 研究笔记 #001 使用 91 家候选公司、266 份 SEC 时点文件和 85 个成熟周度截面，检验 AI 技术栈语义网络能否提供增量股票收益排序信息。">
+<meta property="og:url" content="https://lunartuliplab.com/alphamap/incremental-network-test-001">
+<meta property="og:image" content="https://lunartuliplab.com/alphamap/001-network/figures/01_graph_structure.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="增量网络检验｜Lunartulip AlphaMap 研究笔记 #001">
+<meta name="twitter:description" content="Lunartulip AlphaMap 研究笔记 #001 使用 91 家候选公司、266 份 SEC 时点文件和 85 个成熟周度截面，检验 AI 技术栈语义网络能否提供增量股票收益排序信息。">
+<meta name="twitter:image" content="https://lunartuliplab.com/alphamap/001-network/figures/01_graph_structure.png">
+<style>
+body{margin:0;background:#fafaf7;color:#173546;font:18px/1.75 Georgia,serif}main{max-width:1000px;margin:auto;padding:55px 28px 80px}p{max-width:780px}h1{font-size:clamp(40px,6vw,68px);line-height:1.08;letter-spacing:-2px;margin:20px 0}h2{font:600 29px/1.3 Arial,sans-serif;margin-top:55px}.kicker,.byline,.footnote,figcaption{font-family:Arial,sans-serif}.kicker{font-size:12px;letter-spacing:2px;color:#00877d}.deck{font-size:25px;line-height:1.5}.byline{font-size:13px;color:#667985}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;border-top:2px solid #00877d;border-bottom:1px solid #cddbdc;padding:22px 0;margin:35px 0}.metrics strong{display:block;font:44px Arial,sans-serif}.metrics span{font:13px Arial,sans-serif;color:#657984}a{color:#00796f;text-decoration-thickness:1px;text-underline-offset:4px}figure{margin:35px 0}figure img{width:100%;height:auto;background:white;display:block}figcaption{font-size:12px;line-height:1.6;color:#526c79;margin-top:12px;max-width:850px}.download{border-left:4px solid #00877d;padding:15px 20px;background:#edf5f3}.footnote{font-size:12px;color:#657984}b{font-weight:bold}@media(max-width:600px){main{padding:30px 18px}.deck{font-size:21px}.metrics{gap:9px}.metrics strong{font-size:34px}.metrics span{font-size:11px}body{font-size:17px}h2{font-size:25px}figure{margin-left:-8px;margin-right:-8px}}
+
+.site-nav{max-width:1000px;margin:auto;padding:18px 28px 0;display:flex;
+justify-content:space-between;gap:20px;font:700 11px/1.4 Arial,sans-serif;
+letter-spacing:.12em;text-transform:uppercase}
+.site-nav div{display:flex;align-items:center;gap:10px}.site-nav a{color:#173546;
+text-decoration:none}.site-nav a:hover,.site-nav a:focus-visible{color:#00877d;
+text-decoration:underline}.site-nav .active{color:#00877d}
+.legal{max-width:1000px;margin:0 auto;padding:20px 28px 42px;border-top:1px solid
+#cddbdc;color:#657984;font:12px/1.65 Arial,sans-serif}
+a:focus-visible{outline:2px solid #00877d;outline-offset:3px}
+@media(max-width:600px){.site-nav{padding:14px 18px 0;align-items:flex-start;
+flex-direction:column;gap:8px}.legal{padding:18px 18px 34px}}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","@id":"https://lunartuliplab.com/alphamap/incremental-network-test-001#article","name":"增量网络检验｜Lunartulip AlphaMap 研究笔记 #001","headline":"Do Semantic Neighbors Predict Stock Returns? A Dated Graph-Factor Study Across the AI Stack","alternativeHeadline":"增量网络检验","description":"Lunartulip AlphaMap 研究笔记 #001 使用 91 家候选公司、266 份 SEC 时点文件和 85 个成熟周度截面，检验 AI 技术栈语义网络能否提供增量股票收益排序信息。","url":"https://lunartuliplab.com/alphamap/incremental-network-test-001","mainEntityOfPage":"https://lunartuliplab.com/alphamap/incremental-network-test-001","inLanguage":"zh-CN","datePublished":"2026-09-21","dateModified":"2026-09-21","version":"2.0","identifier":[{"@type":"PropertyValue","propertyID":"DOI","value":"10.5281/zenodo.22862923","url":"https://doi.org/10.5281/zenodo.22862923"},{"@type":"PropertyValue","propertyID":"Research Object ID","value":"RO-ALPHAMAP-002"}],"sameAs":"https://doi.org/10.5281/zenodo.22862923","isVersionOf":"https://doi.org/10.5281/zenodo.22846354","citation":["https://doi.org/10.5281/zenodo.22846355"],"author":{"@type":"Person","name":"Xiaotong Wang","sameAs":"https://orcid.org/0009-0000-4821-8007","affiliation":{"@type":"Organization","@id":"https://lunartuliplab.com/#organization","name":"Lunartulip Lab"}},"publisher":{"@id":"https://lunartuliplab.com/#organization"},"isPartOf":{"@type":"CreativeWorkSeries","@id":"https://lunartuliplab.com/alphamap#series","name":"Lunartulip AlphaMap","position":2},"image":"https://lunartuliplab.com/alphamap/001-network/figures/01_graph_structure.png","keywords":["semantic networks","bipartite projection","cross-sectional equity signals","empirical asset pricing","AI value chain"],"temporalCoverage":"2025-01-03/2026-09-18","license":"https://lunartuliplab.com/research-usage","associatedMedia":{"@type":"MediaObject","name":"Do Semantic Neighbors Predict Stock Returns? A Dated Graph-Factor Study Across the AI Stack","contentUrl":"https://zenodo.org/records/22862923/files/AlphaMap_Research_Note_001_v2_Working_Paper.pdf","encodingFormat":"application/pdf","license":"https://creativecommons.org/licenses/by-nc/4.0/"},"translationOfWork":{"@id":"https://lunartuliplab.com/en/alphamap/incremental-network-test-001#article"}}</script></head><body><nav class="site-nav" aria-label="语言与站点导航"><div><a href="/">LUNARTULIP LAB</a><span>/</span><a href="/alphamap">ALPHAMAP 专栏</a></div><div><a href="/en/alphamap/incremental-network-test-001" hreflang="en">EN</a><span>/</span><a class="active" aria-current="page" href="/alphamap/incremental-network-test-001" hreflang="zh-CN">CN</a></div></nav><main>
+<p class="kicker">LUNARTULIP ALPHAMAP / 研究笔记 #001</p>
+<h1>增量网络检验</h1>
+<p class="deck">技术图谱可以组织投资标的。更难的问题是：图中的连接能否改善未来收益排序？</p>
+<p class="byline">Xiaotong Wang · Lunartulip Lab · 2026 年 9 月 21 日 · 已发表工作论文 · v2.0</p>
+<div class="metrics"><div><strong>91</strong><span>家候选公司</span></div><div><strong>266</strong><span>份带日期的来源文档</span></div><div><strong>85</strong><span>次成熟周度检验</span></div></div>
+<p>这轮 AlphaMap 实验得到一个明确结论：<b>语义亲近度可以测量，但现有证据还没有证明它能增加收益预测能力。</b>我们沿 AI 产业链重建了公司—技术网络，把它转换成股票信号，在 2025—2026 年反复检验。加进常见的市场类和披露类控制变量之后，原始的邻居收益关系基本消失了。</p>
+<p>这是一次完整的图因子实验。它从公司—概念关联开始，经过二部图投影和中心性计算，最后落在横截面检验和组合核算上。现有证据不足以确立可预测的网络 alpha。</p>
+<h2>先把图建起来，再问它多贡献了什么</h2>
+<p>冻结后的样本覆盖存储、算力、网络、电力与数据中心、云与模型、应用这六层。网络用的是带日期的 SEC 披露中的 70 个技术概念。公司通过共享概念相连，越常见的概念在两两连接上拿到的权重越低。所以它把六层里的公司连成一张网，而没有把每一层当成彼此独立的篮子。</p>
+<figure><a href="/alphamap/001-network/figures/01_graph_structure.png" rel="noopener" target="_blank"><img alt="公司—概念矩阵与 Newman 加权的公司投影" src="/alphamap/001-network/figures/01_graph_structure.png"/></a><figcaption>公司—概念矩阵，以及由它得到的 Newman 加权公司投影。披露层面的关联既不是供应合同，也不是有方向的现金流通道。</figcaption></figure>
+<p>投影里藏着一个说明问题的恒等式：一家公司的加权连接强度，等于它与其他公司共享的概念数量。广度可以冒充中心性。所以我们把概念广度和披露长度也纳入控制，连同所属层、动量、beta、波动率、流动性，以及可获得的带日期市值代理变量。</p>
+<h2>从 0.078 到 0.007</h2>
+<p>主信号取邻居近期收益的均值，扣掉上面这些控制变量，再去预测目标公司未来 21 个交易日的收益排名。它的周度 Rank IC 均值<b>从控制前的 0.078 掉到控制后的 0.007</b>。控制后的 95% 区间是 −0.040 到 +0.055。即便是未控制的那个估计，精度也不高。方向预先固定的六个图信号，在主期限的多重检验校正下没有一个存活。</p>
+<figure><a href="/alphamap/001-network/figures/08_confounder_ladder.png" rel="noopener" target="_blank"><img alt="混淆变量阶梯与滚动信息系数" loading="lazy" src="/alphamap/001-network/figures/08_confounder_ladder.png"/></a><figcaption>混淆变量阶梯，以及主信号随时间的变化。图必须提供超出它所继承的那些暴露之外的信息。</figcaption></figure>
+<p>我们还检验了残差 Katz、中心性变化、中介性，以及与动量的交互。月度特征回归、因子风险回归、替换预测期限和来源范围敏感性分析，在这个样本里都没有确立可预测的溢价。没有任何信号的方向是在看过收益之后被翻转的。</p>
+<h2>组合构建也算实验的一部分</h2>
+<p>尾部组合和中性化打分不是同一回事。按每美元成交 10 个基点的成本、年化 3% 的做空融券压力测算，主信号的五分位多空组合收益为 <b>−31.9%</b>。换成带集中度上限、并在调仓时把控制变量中性化的连续权重组合，收益为 <b>−6.2%</b>。两个结果都是负的。两者的差距说明，评估图因子要看持仓、成本和暴露，光有一个排序相关性不够。</p>
+<figure><a href="/alphamap/001-network/figures/05_portfolio_paths.png" rel="noopener" target="_blank"><img alt="网络组合的月度净值与市场基准" loading="lazy" src="/alphamap/001-network/figures/05_portfolio_paths.png"/></a><figcaption>按月在次日开盘调仓的组合，纯多头基准单独列出。不能把这批 AI 公司本身的强势和市场行情误当成网络 alpha。</figcaption></figure>
+<h2>下一张图要怎么建，经济含义才更站得住？</h2>
+<p>语义连接只说明两家公司谈到了相关技术。传导通道得说出更多东西：谁在买，谁在供，产能卡在哪里，状态发生了什么变化，证据在什么时候才可被知晓，以及哪一只证券承接了这个影响。下一步的检验应该沿着这些被识别出来的连接，传播带日期、经济符号明确的冲击，再拿结果和披露亲近度这个基准比一比。</p>
+<p>这是一条可被否证的研究路线。本研究里并没有藏着一个已经成立的正面结果。更丰富的图，要靠增量预测能力来换取它的复杂度。</p>
+<h2>限制条件跟着结论一起走</h2>
+<p>这 91 家公司的名单是带着事后视角选出来的，其中 90 家有可用价格。历史文档的发布时间、实际获取时间和重建时间分开记录。这是一次历史重建，既不是原生前瞻的记录，也不能算免于生存偏差。年度披露更新很慢，来源语义仍不完美，市场价格用的是当前版本。</p>
+<p>我们预设的保度数零模型还暴露出一个支撑集约束：199 个重连面板里，只有 95 个保留了全部必需的检验日期。这些共同支撑下的抽样只能作描述性解读，原定的 p 值不予报告。整体排名稳定，同样不保证组合尾部稳定。</p>
+<p>这项研究的贡献是一个<b>增量网络基准</b>：带日期的图输入、写明的混淆变量、反复做的预测检验，还有透明公开的负结果。下一次做经济状态实验的人，因此有了一个需要超过的标准。</p>
+<p class="download"><a href="https://doi.org/10.5281/zenodo.22862923" rel="cite-as">阅读已发表工作论文与方法包 →</a></p>
+<p class="footnote">作者 ORCID：<a href="https://orcid.org/0009-0000-4821-8007">0009-0000-4821-8007</a>。本研究以 v2.0 发表，DOI：<a href="https://doi.org/10.5281/zenodo.22862923">10.5281/zenodo.22862923</a>。Zenodo 成果包采用 <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>；网站与数据库的使用条款另行列示。早期粗粒度投影研究现显示为 AlphaMap 研究笔记 #000，原 DOI 仍为 <a href="https://doi.org/10.5281/zenodo.22846355">10.5281/zenodo.22846355</a>。</p>
+</main><footer class="legal">本文为研究出版物，不构成投资建议。研究未建立可预测的网络 alpha，也未验证实盘可用性或承诺任何收益。</footer></body></html>
