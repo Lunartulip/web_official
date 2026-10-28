@@ -11,6 +11,7 @@ export const editorialDeepDiveSlugs = [
   "hbm-memory-cash-capture-alpha-2026-09",
   "micron-hbm-capital-cycle-2026-09",
   "sandisk-nand-capital-cycle-2026-09",
+  "sk-hynix-contracted-supercycle-2026-10",
   "cloudflare-monetization-density-2026q2",
   "atlassian-workflow-density-context-monetization-2026fy",
   "nvidia-fy27q2-supercycle-2026-09",

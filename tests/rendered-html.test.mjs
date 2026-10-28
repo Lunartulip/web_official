@@ -76,6 +76,7 @@ const memorySeriesSlugs = [
   "hbm-memory-cash-capture-alpha-2026-09",
   "micron-hbm-capital-cycle-2026-09",
   "sandisk-nand-capital-cycle-2026-09",
+  "sk-hynix-contracted-supercycle-2026-10",
 ];
 const memorySeriesPages = await Promise.all(memorySeriesSlugs.flatMap((slug) => [
   readFile(new URL(`../content/editorial-deep-dives/${slug}.zh.html`, import.meta.url), "utf8"),
@@ -267,7 +268,7 @@ test("publishes the bilingual memory capital-cycle series without Desk dependenc
     const en = memorySeriesPages[index * 2 + 1];
     for (const html of [zh, en]) {
       assert.match(html, /^<!doctype html>/);
-      assert.match(html, /MEMORY CAPITAL-CYCLE SERIES|存储资本周期三篇系列/);
+      assert.match(html, /MEMORY CAPITAL-CYCLE SERIES|存储资本周期四篇系列/);
       for (const siblingSlug of memorySeriesSlugs) {
         assert.match(html, new RegExp(`/deep-dive/${siblingSlug}`));
       }
@@ -286,6 +287,17 @@ test("publishes the bilingual memory capital-cycle series without Desk dependenc
   assert.match(researchCatalogSource, /"id": "RO-THEME-MEMORY-CASH-CAPTURE-001"/);
   assert.match(researchCatalogSource, /"id": "RO-COMP-MU-CAPITAL-CYCLE-001"/);
   assert.match(researchCatalogSource, /"id": "RO-COMP-SNDK-CAPITAL-CYCLE-001"/);
+  assert.match(researchCatalogSource, /"id": "RO-COMP-SKHYNIX-CONTRACTED-CYCLE-001"/);
+  const skhZh = memorySeriesPages[6];
+  const skhEn = memorySeriesPages[7];
+  assert.match(skhZh, /把短缺写进合同/);
+  assert.match(skhEn, /Writing the Shortage into Contracts/);
+  for (const html of [skhZh, skhEn]) {
+    assert.match(html, /000660\.KS/);
+    assert.match(html, /2026-10-28/);
+    assert.match(html, /RO-COMP-SKHYNIX-CONTRACTED-CYCLE-001/);
+    assert.doesNotMatch(html, /demo\.desk\.lunartuliplab\.com|\/external\/|Director|workspace\//i);
+  }
 });
 
 test("keeps the AI hardware study inside its audited factual boundaries", () => {

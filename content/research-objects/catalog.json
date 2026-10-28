@@ -4924,5 +4924,193 @@
         ]
       }
     ]
+  },
+  {
+    "id": "RO-COMP-SKHYNIX-CONTRACTED-CYCLE-001",
+    "slug": "sk-hynix-contracted-supercycle-2026-10",
+    "kind": "company-deep-dive",
+    "tickers": ["000660.KS"],
+    "publishedAt": "2026-10-28",
+    "asOf": "2026-10-28",
+    "version": "1.0.0",
+    "sourceLabel": "Memory capital-cycle series IV · SK hynix contracted supercycle · 2026-10-28 information set",
+    "claims": [
+      {
+        "id": "CL-SKHC-001",
+        "type": "Fact",
+        "text": {"zh-CN": "SK 海力士 3Q26 营收 104.6155 万亿韩元、营业利润 83.3338 万亿韩元，营业利润率 80%；三项均为公司披露的初步数据。", "en": "SK hynix reported preliminary 3Q26 revenue of KRW 104.6155 trillion, operating profit of KRW 83.3338 trillion and an 80% operating margin."},
+        "evidenceIds": ["EV-SKHC-Q3"]
+      },
+      {
+        "id": "CL-SKHC-002",
+        "type": "Fact",
+        "text": {"zh-CN": "公司披露 HBM4 已进入量产出货，2027 年主要客户的 HBM 数量与价格谈判已经完成，并计划在 2026 财年返还自由现金流的 50% 以上。", "en": "The company disclosed that HBM4 had entered mass-production shipment, that 2027 HBM volume and price negotiations with major customers were complete, and that it planned to return more than 50% of FY2026 free cash flow."},
+        "evidenceIds": ["EV-SKHC-Q3"]
+      },
+      {
+        "id": "CL-SKHC-003",
+        "type": "Derived",
+        "text": {"zh-CN": "以 10 月 27 日约 976 万亿韩元市值为分母，约 100 万亿韩元股东回报对应约 10.2% 的总回报收益率；该结果依赖时点市值与最终执行额。", "en": "Against the roughly KRW 976 trillion market-cap snapshot on October 27, approximately KRW 100 trillion of shareholder returns implies a total return yield of about 10.2%; the result depends on the point-in-time market cap and final execution."},
+        "evidenceIds": ["EV-SKHC-Q3", "EV-SKHC-UNIFORM"]
+      },
+      {
+        "id": "CL-SKHC-004",
+        "type": "Inference",
+        "text": {"zh-CN": "覆盖多年、带价格区间与订金的协议改变了周期下沿的形状，但不能消除需求、违约或资本开支最终形成供给的风险。", "en": "Multi-year agreements with price bands and deposits reshape the cycle floor but do not eliminate demand, default or eventual capex-to-supply risk."},
+        "evidenceIds": ["EV-SKHC-Q3", "EV-SKHC-UNIFORM"]
+      },
+      {
+        "id": "CL-SKHC-005",
+        "type": "Hypothesis",
+        "text": {"zh-CN": "合同化重估需要价格落点与现金回报两条腿同时兑现；若合约价落到带宽下沿或季度回购持续缩减，当前判断应下修。", "en": "A contract-book re-rating requires both price realization and cash returns to deliver; the judgment should be revised down if contract prices settle near the lower edge of the band or quarterly buybacks keep shrinking."},
+        "evidenceIds": ["EV-SKHC-Q3", "EV-SKHC-UNIFORM"]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "EV-SKHC-Q3",
+        "title": "SK hynix 3Q26 financial results",
+        "source": {"publisher": "SK hynix Newsroom", "url": "https://news.skhynix.com/en/q3-2026-business-results/", "document": "3Q26 financial results and management commentary"},
+        "sourceDate": "2026-10-28",
+        "dataAsOf": "2026-09-30",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "The release states that the figures are preliminary and remain subject to the independent audit process.",
+        "lastVerified": "2026-10-28",
+        "role": "primary"
+      },
+      {
+        "id": "EV-SKHC-CALL",
+        "title": "SK hynix Q3 2026 earnings conference call access record",
+        "source": {"publisher": "SK hynix Newsroom", "url": "https://news.skhynix.com/en/q3-2026-earnings-conference-call/", "document": "Q3 2026 earnings conference call"},
+        "sourceDate": "2026-10-28",
+        "dataAsOf": "2026-10-28",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "The access record does not itself provide a complete public transcript of every management statement cited in the note.",
+        "lastVerified": "2026-10-28",
+        "role": "primary"
+      },
+      {
+        "id": "EV-SKHC-UNIFORM",
+        "title": "SK hynix contracted-supercycle point-in-time research uniform",
+        "source": {"publisher": "Lunartulip Lab", "document": "SK hynix contracted-supercycle research uniform · 2026-10-28"},
+        "sourceDate": "2026-10-28",
+        "dataAsOf": "2026-10-28",
+        "calculation": "Return yield = approximately KRW 100 trillion / approximately KRW 976 trillion point-in-time market capitalisation.",
+        "confidence": "medium",
+        "counterevidence": "Market prices are intraday or prior-close snapshots, and the final buyback, cancellation and dividend amounts remain execution-dependent.",
+        "lastVerified": "2026-10-28",
+        "role": "supporting"
+      }
+    ],
+    "financialBridge": [
+      {"label": {"zh-CN": "3Q26 营收", "en": "3Q26 revenue"}, "period": "2026-Q3", "value": 104615.5, "unit": "KRWbn", "evidenceIds": ["EV-SKHC-Q3"]},
+      {"label": {"zh-CN": "3Q26 营业利润", "en": "3Q26 operating profit"}, "period": "2026-Q3", "value": 83333.8, "unit": "KRWbn", "evidenceIds": ["EV-SKHC-Q3"]},
+      {"label": {"zh-CN": "3Q26 营业利润率", "en": "3Q26 operating margin"}, "period": "2026-Q3", "value": 80, "unit": "percent", "evidenceIds": ["EV-SKHC-Q3"]}
+    ],
+    "valuationScenarios": [
+      {
+        "id": "VAL-SKHC-PEAK-GRAMMAR",
+        "label": {"zh-CN": "周期峰值语法", "en": "Peak-cycle grammar"},
+        "metrics": [
+          {"label": {"zh-CN": "前瞻 12 个月市盈率", "en": "Forward 12-month P/E"}, "value": {"zh-CN": "2.7—2.9×", "en": "2.7–2.9×"}},
+          {"label": {"zh-CN": "市场隐含利润回落", "en": "Market-implied profit decline"}, "value": {"zh-CN": "2027 年后 70% 以上", "en": "more than 70% after 2027"}}
+        ],
+        "calculation": "Point-in-time forward-multiple comparison and normalized-earnings reverse arithmetic at the 2026-10-28 intraday information set.",
+        "interpretation": {"zh-CN": "这是对市场隐含路径的反推，不是目标价。", "en": "This reverses the path implied by the market; it is not a price target."}
+      },
+      {
+        "id": "VAL-SKHC-RETURN-ANCHOR",
+        "label": {"zh-CN": "现金回报锚", "en": "Cash-return anchor"},
+        "metrics": [
+          {"label": {"zh-CN": "2026 财年回报", "en": "FY2026 returns"}, "value": {"zh-CN": "约 100 万亿韩元", "en": "approximately KRW 100T"}},
+          {"label": {"zh-CN": "时点总回报收益率", "en": "Point-in-time total return yield"}, "value": {"zh-CN": "约 10.2%", "en": "about 10.2%"}}
+        ],
+        "calculation": "Approximately KRW 100 trillion divided by approximately KRW 976 trillion point-in-time market capitalisation.",
+        "interpretation": {"zh-CN": "执行额、注销时点和市值变动都会改变该读数。", "en": "Execution amounts, cancellation timing and market-cap changes will alter this reading."}
+      }
+    ],
+    "counterevidenceClaimIds": ["CL-SKHC-004", "CL-SKHC-005"],
+    "falsifiers": [
+      {
+        "id": "FAL-SKHC-001",
+        "metric": "quarterly contract-price increase",
+        "operator": "<",
+        "threshold": 10,
+        "unit": "percent",
+        "horizon": "2027-Q1",
+        "claimIds": ["CL-SKHC-005"],
+        "rationale": {"zh-CN": "季度合约价涨幅收至个位数，说明价格落点开始偏离合同化高位锁定的预期。", "en": "A single-digit quarterly contract-price increase would show price realization moving away from the high-level contracted thesis."}
+      },
+      {
+        "id": "FAL-SKHC-002",
+        "metric": "quarterly operating margin",
+        "operator": "<",
+        "threshold": 70,
+        "unit": "percent",
+        "horizon": "any reported quarter",
+        "claimIds": ["CL-SKHC-004"],
+        "rationale": {"zh-CN": "若无一次性解释而营业利润率跌破 70%，高位平台的下沿即告失守。", "en": "An operating margin below 70% without a one-off explanation would break the lower edge of the high plateau."}
+      },
+      {
+        "id": "FAL-SKHC-003",
+        "metric": "quarterly buyback resolution",
+        "operator": "<",
+        "threshold": 10,
+        "unit": "KRWtn",
+        "horizon": "two consecutive quarters",
+        "claimIds": ["CL-SKHC-005"],
+        "rationale": {"zh-CN": "连续两季回购决议低于 10 万亿韩元，说明现金回报这条验证路径正在失速。", "en": "Buyback resolutions below KRW 10 trillion for two consecutive quarters would show the cash-return leg losing momentum."}
+      }
+    ],
+    "versions": [
+      {"version": "1.0.0", "date": "2026-10-28", "diff": {"zh-CN": "将经审校的 3Q26 原稿装配为独立双语 canonical 页面，接入存储资本周期系列、公开官网导航与伴生证据对象；不依赖或回链受限 Desk URL。", "en": "Published the reviewed 3Q26 source as an independent bilingual canonical page, joining the Memory capital-cycle series, public-site navigation and a companion evidence object, with no dependency on or link back to the restricted Desk URL."}}
+    ],
+    "renderings": {
+      "zh-CN": {
+        "locale": "zh-CN",
+        "siblingLocale": "en",
+        "title": "把短缺写进合同：SK 海力士 3Q26，售罄的三年与还按峰值出价的市场",
+        "question": "多年合同、价格区间与现金回报，能否让市场放弃周期峰值定价？",
+        "standfirst": "三年售罄、带底价与订金的长期协议，以及约 100 万亿韩元股东回报，与 2.7—2.9 倍的周期峰值定价正面碰撞。",
+        "whyItMatters": "这轮存储周期的增量证据已从管理层展望转为合同结构与董事会决议，后续可以按价格落点和现金执行逐季审计。",
+        "consensus": "80% 营业利润率处在不可持续的周期峰值，低倍数反映的是利润均值回归。",
+        "differentiated": "合同化抬高了周期下沿，也把证伪条件改写为客户减量、订金重谈、价格落到带宽下沿与现金回报失速。",
+        "valuation": "前瞻市盈率和回报收益率只用于反推市场路径与现金锚，不构成目标价。",
+        "update": "v1.0 保留原稿判断结构与盘中数据边界，增加双语官网 canonical、四篇系列导航和公开 Research Object。",
+        "evidenceClaimIds": ["CL-SKHC-001", "CL-SKHC-002", "CL-SKHC-003"],
+        "causalChain": [
+          {"title": "合同覆盖", "body": "多年协议提高产能与价格可见度。", "claimIds": ["CL-SKHC-002"]},
+          {"title": "现金兑现", "body": "分红与回购把利润转成可核验的股东回报。", "claimIds": ["CL-SKHC-003"]},
+          {"title": "逐季裁决", "body": "价格落点与回购执行共同决定重估是否延续。", "claimIds": ["CL-SKHC-005"]}
+        ],
+        "riskClaimIds": ["CL-SKHC-004", "CL-SKHC-005"],
+        "forwardTestIds": ["FAL-SKHC-001", "FAL-SKHC-002", "FAL-SKHC-003"]
+      },
+      "en": {
+        "locale": "en",
+        "siblingLocale": "zh-CN",
+        "title": "Writing the shortage into contracts: SK hynix 3Q26, three sold-out years, and a market still pricing the peak",
+        "question": "Can multi-year contracts, price bands and cash returns make the market abandon peak-cycle pricing?",
+        "standfirst": "Three sold-out years, LTAs with floors and deposits, and roughly KRW 100 trillion of shareholder returns collide with a 2.7–2.9× peak-cycle valuation.",
+        "whyItMatters": "The incremental evidence in this memory cycle has moved from management outlooks to contract structure and board resolutions, making price realization and cash execution auditable quarter by quarter.",
+        "consensus": "An 80% operating margin is an unsustainable cyclical peak, and the low multiple reflects profit mean reversion.",
+        "differentiated": "Contracting raises the cycle floor and rewrites falsification around customer volume cuts, deposit renegotiation, prices landing at the lower edge of the band and weakening cash returns.",
+        "valuation": "The forward P/E and return yield reverse the market path and cash anchor only; neither is a price target.",
+        "update": "Version 1.0 preserves the source note's judgment structure and intraday-data boundary while adding bilingual public canonicals, four-piece series navigation and a public Research Object.",
+        "evidenceClaimIds": ["CL-SKHC-001", "CL-SKHC-002", "CL-SKHC-003"],
+        "causalChain": [
+          {"title": "Contract coverage", "body": "Multi-year agreements improve capacity and price visibility.", "claimIds": ["CL-SKHC-002"]},
+          {"title": "Cash delivery", "body": "Dividends and buybacks turn profit into auditable shareholder returns.", "claimIds": ["CL-SKHC-003"]},
+          {"title": "Quarterly adjudication", "body": "Price realization and buyback execution jointly decide whether the re-rating continues.", "claimIds": ["CL-SKHC-005"]}
+        ],
+        "riskClaimIds": ["CL-SKHC-004", "CL-SKHC-005"],
+        "forwardTestIds": ["FAL-SKHC-001", "FAL-SKHC-002", "FAL-SKHC-003"]
+      }
+    },
+    "dataGaps": [
+      {"zh-CN": "盘中行情尚未替换为 KRX 正式收盘值；公司未公开逐份 LTA 的客户、带宽与订金条款，卖方一致预期及 10 月资金流数据也未与一手可下载数据逐项闭合。", "en": "Intraday market readings have not yet been replaced by the official KRX close. The company does not disclose customer-level LTA bands or deposit terms, and sell-side consensus and October flow data are not fully reconciled to downloadable primary data."}
+    ]
   }
 ]

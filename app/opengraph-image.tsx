@@ -1,4 +1,5 @@
 import { readFile } from "node:fs/promises";
+import path from "node:path";
 import { ImageResponse } from "next/og";
 
 export const alt = "Lunartulip Lab — AI-native Research & Decision Systems";
@@ -7,7 +8,7 @@ export const contentType = "image/png";
 
 export default async function OpenGraphImage() {
   const logo = await readFile(
-    new URL("../public/lunartulip-silver-emblem.png", import.meta.url),
+    path.join(process.cwd(), "public", "lunartulip-silver-emblem.png"),
   );
   const logoSrc = `data:image/png;base64,${logo.toString("base64")}`;
 
