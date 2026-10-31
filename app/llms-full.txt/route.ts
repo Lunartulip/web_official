@@ -42,6 +42,15 @@ Claim labels are semantic: Fact is source-reported; Derived is calculated from d
 
 ## AlphaMap
 
+### AlphaMap Whitepaper #000 — From Fundamental Judgment to Quantitative Strategy
+
+Canonical Chinese: https://lunartuliplab.com/alphamap/finllm-kg-to-tradable-quant-factors-000
+Series: AlphaMap Whitepaper Series
+Position: Prologue 000
+Published: 2026-10-31
+Focus: Turning FinLLM-KG (large-model financial knowledge graphs) into tradable quantitative factors for medium- and low-frequency global technology-equity growth and rotation strategies.
+Research distinction: The central problem is not entity-triple extraction alone. It is the graph's economic meaning, the modeling of time and state transitions, and the Alpha Mechanics that connect graph structure to excess-return generation.
+
 ${alphaMapObjects}
 
 ## Deep Dive

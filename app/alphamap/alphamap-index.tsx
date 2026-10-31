@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { alphaMapWhitepapers } from "@/lib/alphamap-whitepapers";
 import { alphaMapStudies } from "@/lib/research-objects";
 import styles from "../proof.module.css";
 
@@ -40,22 +41,42 @@ export default function AlphaMapIndex({ language = "cn" }: { language?: "cn" | "
 
       <section className={styles.hero}>
         <div>
-          <p className={styles.kicker}>METHODS RESEARCH / ALPHAMAP</p>
-          <h1>{isCn ? <>先弄清分数里有什么，<br /><span>再讨论它能否预测。</span></> : <>First identify what is inside the score.<br /><span>Then ask whether it predicts.</span></>}</h1>
+          <p className={styles.kicker}>FINLLM-KG → TRADABLE QUANT FACTORS</p>
+          <h1>{isCn ? <>让金融知识图谱，<br /><span>进入科技股因子与策略。</span></> : <>Turn financial knowledge graphs<br /><span>into technology-equity factors and strategies.</span></>}</h1>
         </div>
         <aside className={styles.heroAside}>
-          <p>{isCn ? "AlphaMap 记录图谱、语义投影与横截面测量的研究过程。每篇研究固定图谱版本、样本、观察窗口和诊断边界，便于复核方法测到了什么。" : "AlphaMap documents research on graphs, semantic projections and cross-sectional measurement. Each study fixes the graph vintage, sample, observation window and diagnostic boundary so the method can be audited."}</p>
-          <strong>DATED · REPRODUCIBLE · NON-PROMOTIONAL</strong>
+          <p>{isCn ? "AlphaMap 将 FinLLM-KG（大模型金融知识图谱）转化为可交易的量化因子，主攻全球科技股趋势成长与轮动的中低频策略研究。研究重点是金融图的经济语义、时间与状态迁移；白皮书给出理论版图，DOI 实证研究负责检验。" : "AlphaMap turns FinLLM-KG—large-model financial knowledge graphs—into tradable quantitative factors for medium- and low-frequency global technology-equity growth and rotation strategies. The research focuses on economic meaning, time and state transitions; whitepapers define the map and DOI studies test it."}</p>
+          <strong>ECONOMIC SEMANTICS · STATE TRANSITIONS · ALPHA MECHANICS</strong>
         </aside>
       </section>
 
       <section className={styles.section}>
         <div className={styles.sectionHead}>
           <div>
-            <p className={styles.sectionLabel}>ALPHAMAP STUDIES / {String(alphaMapStudies.length).padStart(2, "0")}</p>
-            <h2>{isCn ? "方法先接受测量检查。" : "Methods face measurement checks first."}</h2>
+            <p className={styles.sectionLabel}>ALPHAMAP WHITEPAPERS / {String(alphaMapWhitepapers.length).padStart(2, "0")}</p>
+            <h2>{isCn ? "从经济语义走向 Alpha Mechanics。" : "From economic meaning to Alpha Mechanics."}</h2>
           </div>
-          <p className={styles.lead}>{isCn ? "研究从 #000 的单期投影诊断推进到 #001 的完整图因子检验：91 家候选公司、266 份时点文件和 85 个成熟周度截面。控制后仍未建立可预测的网络 alpha。" : "The series moves from the single-vintage projection diagnostic in #000 to a full graph-factor test in #001: 91 candidates, 266 dated documents and 85 mature weekly cross-sections. Predictive network alpha is still not established after controls."}</p>
+          <p className={styles.lead}>{isCn ? "业内分歧已经越过实体与三元组抽取，进入图的经济学语义、时间和状态迁移，以及图结构最终对应哪一种超额收益生成机制。AlphaMap 白皮书将逐篇展开这条路线。" : "The central question has moved beyond entity and triple extraction: what economic meaning the graph carries, how time and state transitions are modeled, and which excess-return mechanism the graph ultimately represents."}</p>
+        </div>
+        <div className={styles.grid}>
+          {alphaMapWhitepapers.map((item) => (
+            <article className={`${styles.card} ${styles.themeCard} ${styles.featureCard}`} key={item.slug}>
+              <p className={styles.meta}>WHITEPAPER {item.number} / 2026 ANNUAL RESEARCH TOUR</p>
+              <h3>{item.title}</h3>
+              <p>{item.subtitle}</p>
+              <a href={`/alphamap/${item.slug}`}>{isCn ? "阅读白皮书先导篇 →" : "Read the Chinese whitepaper prologue →"}</a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <div className={styles.sectionHead}>
+          <div>
+            <p className={styles.sectionLabel}>DOI EMPIRICAL STUDIES / {String(alphaMapStudies.length).padStart(2, "0")}</p>
+            <h2>{isCn ? "理论主张交给数据检验。" : "Put each theoretical claim to an empirical test."}</h2>
+          </div>
+          <p className={styles.lead}>{isCn ? "DOI 实证系列从 #000 的单期投影诊断推进到 #001 的完整图因子检验：91 家候选公司、266 份时点文件和 85 个成熟周度截面。控制后仍未建立可预测的网络 alpha。" : "The DOI series moves from the single-vintage projection diagnostic in #000 to a full graph-factor test in #001: 91 candidates, 266 dated documents and 85 mature weekly cross-sections. Predictive network alpha is still not established after controls."}</p>
         </div>
         <div className={styles.grid}>
           {[...alphaMapStudies]
@@ -65,7 +86,7 @@ export default function AlphaMapIndex({ language = "cn" }: { language?: "cn" | "
                 <p className={styles.meta}>{item.sourceLabel.split(" · ")[0].toUpperCase()} / PUBLISHED {item.publishedAt} · AS OF {item.asOf}</p>
                 <h3>{item.renderings[locale].title}</h3>
                 <p>{item.renderings[locale].standfirst}</p>
-                <a href={`${prefix}/alphamap/${item.slug}`}>{isCn ? "阅读方法研究 →" : "Read the methods study →"}</a>
+                <a href={`${prefix}/alphamap/${item.slug}`}>{isCn ? "阅读 DOI 实证研究 →" : "Read the DOI empirical study →"}</a>
               </article>
             ))}
         </div>

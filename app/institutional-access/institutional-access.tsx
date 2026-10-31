@@ -175,11 +175,11 @@ export default function InstitutionalAccess({ language = "cn" }: { language?: "c
         <dl>
           <div>
             <dt>{isCn ? "AlphaMap｜科技股另类数据" : "ALPHAMAP / TECHNOLOGY EQUITY ALTERNATIVE DATA"}</dt>
-            <dd>{isCn ? "适用于希望持续使用产业关系、公司经营状态及其变化数据的机构。具体主题、公司、字段、历史、更新与使用范围在数据说明和授权方案中列明。标准年度数据授权：人民币 30 万元／年。" : "For institutions that need continuing use of industry relationships, company operating conditions and changes over time. Coverage, fields, history, updates and permitted use are defined in the data overview and license. Standard annual data license: RMB 300,000."}{" "}<Link href={isCn ? "/alphamap" : "/en/alphamap"}>{isCn ? "阅读公开研究 →" : "Read the public research →"}</Link></dd>
+            <dd>{isCn ? "适用于希望持续使用产业关系、公司经营状态及其变化数据的机构。具体主题、公司、字段、历史、更新与使用范围在数据说明和授权方案中列明。年度数据授权人民币 30 万元起，具体范围与报价在询单后确认。" : "For institutions that need continuing use of industry relationships, company operating conditions and changes over time. Coverage, fields, history, updates and permitted use are defined in the data overview and license. Annual data licenses start at US$42,000; the final scope and quote follow the inquiry."}{" "}<Link href={isCn ? "/alphamap" : "/en/alphamap"}>{isCn ? "阅读公开研究 →" : "Read the public research →"}</Link></dd>
           </div>
           <div>
             <dt>{isCn ? "专题投研方法与应用" : "SCOPED RESEARCH METHODOLOGY & APPLICATION"}</dt>
-            <dd>{isCn ? "适用于已经确定研究问题、希望把相应方法用于团队实际工作的机构。交付围绕约定任务，可包含研究方法、输出、必要模块与文档，并完成参考应用和团队交接。标准范围项目：人民币 15 万元／项目。" : "For institutions with a defined research question that want a method applied in real team workflows. Delivery may include the agreed methodology, outputs, necessary modules and documentation, plus a reference application and handoff. Standard scoped project: RMB 150,000."}{" "}<a href="#intent-research_access">{isCn ? "讨论研究任务 →" : "Discuss a research task →"}</a></dd>
+            <dd>{isCn ? "适用于已经确定研究问题、希望把相应方法用于团队实际工作的机构。交付围绕约定任务，可包含研究方法、输出、必要模块与文档，并完成参考应用和团队交接。专题项目人民币 15 万元起，具体范围与报价在询单后确认。" : "For institutions with a defined research question that want a method applied in real team workflows. Delivery may include the agreed methodology, outputs, necessary modules and documentation, plus a reference application and handoff. Scoped projects start at US$21,000; the final scope and quote follow the inquiry."}{" "}<a href="#intent-research_access">{isCn ? "讨论研究任务 →" : "Discuss a research task →"}</a></dd>
           </div>
         </dl>
       </section>

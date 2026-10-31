@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<title>从基本面判断到量化策略｜AlphaMap 白皮书 #000</title>
+<meta name="description" content="AlphaMap 白皮书 #000 从金融知识图谱的经济语义、时间与状态迁移出发，讨论如何将 FinLLM-KG 转化为面向全球科技股趋势成长与轮动的可交易中低频量化因子。">
+<meta name="author" content="LunarTulip Research">
+<meta name="date" content="2026-10-31">
+<meta name="last-modified" content="2026-10-31">
+<meta name="keywords" content="FinLLM-KG,大模型金融知识图谱,金融知识图谱,可交易量化因子,Alpha Mechanics,全球科技股,趋势成长,产业轮动,中低频策略,基本面量化,经济网络,状态迁移">
+<link rel="canonical" href="https://lunartuliplab.com/alphamap/finllm-kg-to-tradable-quant-factors-000">
+<link rel="alternate" hreflang="zh-CN" href="https://lunartuliplab.com/alphamap/finllm-kg-to-tradable-quant-factors-000">
+<link rel="alternate" hreflang="x-default" href="https://lunartuliplab.com/alphamap/finllm-kg-to-tradable-quant-factors-000">
+<link rel="alternate" type="application/rss+xml" title="Lunartulip AlphaMap" href="/alphamap/feed.xml">
+<meta property="article:published_time" content="2026-10-31T00:00:00+08:00">
+<meta property="article:modified_time" content="2026-10-31T00:00:00+08:00">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Lunartulip Lab">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="从基本面判断到量化策略｜AlphaMap 白皮书 #000">
+<meta property="og:description" content="将 FinLLM-KG 转化为面向全球科技股趋势成长与轮动的可交易中低频量化因子。">
+<meta property="og:url" content="https://lunartuliplab.com/alphamap/finllm-kg-to-tradable-quant-factors-000">
+<meta property="og:image" content="https://lunartuliplab.com/opengraph-image">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="从基本面判断到量化策略｜AlphaMap 白皮书 #000">
+<meta name="twitter:description" content="将 FinLLM-KG 转化为面向全球科技股趋势成长与轮动的可交易中低频量化因子。">
+<meta name="twitter:image" content="https://lunartuliplab.com/opengraph-image">
+<style>
+:root{--ink:#112b38;--muted:#607782;--line:#cedbdc;--accent:#087d74;--paper:#f7f7f2;--wash:#eaf2ef}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.82 Georgia,"Noto Serif SC","Songti SC",serif}
+a{color:#087d74;text-decoration-thickness:1px;text-underline-offset:4px}a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.site-nav{max-width:1120px;margin:auto;padding:20px 32px;display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);font:700 11px/1.4 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.site-nav div{display:flex;align-items:center;gap:10px}.site-nav a{color:var(--ink);text-decoration:none}.site-nav a:hover,.site-nav a:focus-visible{color:var(--accent);text-decoration:underline}
+.masthead{max-width:1120px;margin:0 auto;padding:74px 32px 62px;display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:72px;border-bottom:1px solid var(--line)}
+.kicker,.series,.byline,.folio,.annual{font-family:Arial,sans-serif}.kicker{margin:0 0 24px;color:var(--accent);font-size:12px;letter-spacing:.16em}.masthead h1{font-size:clamp(42px,6vw,72px);line-height:1.1;letter-spacing:-.045em;margin:0}.masthead h1 span{display:block;margin-top:18px;color:#58707b;font-size:.43em;line-height:1.45;letter-spacing:-.01em;font-weight:500}.annual{align-self:end;border-top:2px solid var(--accent);padding-top:18px;color:var(--muted);font-size:13px;line-height:1.75}.annual strong{display:block;color:var(--ink);font-size:16px;margin-bottom:8px}.article{max-width:850px;margin:auto;padding:64px 32px 100px}.series{font-size:14px;line-height:1.6;color:var(--accent);font-weight:700}.article hr{border:0;border-top:1px solid var(--line);margin:42px 0}.article h3{font:700 30px/1.35 Arial,"Noto Sans SC",sans-serif;margin:62px 0 24px;letter-spacing:-.025em}.article p{margin:0 0 25px}.article blockquote{margin:36px 0;padding:22px 28px;background:var(--wash);border-left:4px solid var(--accent);font-size:21px;line-height:1.65}.article ul{padding-left:1.4em;margin:24px 0 32px}.article li{margin:10px 0}.article table{width:100%;border-collapse:collapse;margin:34px 0;font:15px/1.65 Arial,"Noto Sans SC",sans-serif}.article th,.article td{padding:14px 15px;border:1px solid var(--line);vertical-align:top;text-align:left}.article th{background:var(--wash)}.equation{overflow-x:auto;margin:34px -10px;padding:22px 10px;text-align:center;color:#173e4c}.sources{font-size:15px;color:#304d59}.sources p{margin-bottom:18px}.legal{max-width:1120px;margin:0 auto;padding:24px 32px 44px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:24px;color:var(--muted);font:12px/1.65 Arial,sans-serif}
+@media(max-width:760px){body{font-size:17px}.site-nav{padding:16px 18px;align-items:flex-start;flex-direction:column;gap:9px}.masthead{padding:48px 18px 42px;grid-template-columns:1fr;gap:38px}.masthead h1{font-size:40px}.masthead h1 span{font-size:.5em}.annual{max-width:310px}.article{padding:42px 18px 72px}.article h3{font-size:25px;margin-top:48px}.article blockquote{margin-left:0;margin-right:0;padding:18px}.article table{display:block;overflow-x:auto;white-space:normal}.legal{padding:20px 18px 34px;display:block}.legal span{display:block;margin-bottom:7px}}
+</style>
+<script>window.MathJax={tex:{inlineMath:[["$","$"]],displayMath:[["$$","$$"]]}}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"https://lunartuliplab.com/alphamap/finllm-kg-to-tradable-quant-factors-000#article","url":"https://lunartuliplab.com/alphamap/finllm-kg-to-tradable-quant-factors-000","mainEntityOfPage":"https://lunartuliplab.com/alphamap/finllm-kg-to-tradable-quant-factors-000","inLanguage":"zh-CN","name":"从基本面判断到量化策略：金融知识图谱如何进入科技股投资","headline":"从基本面判断到量化策略：金融知识图谱如何进入科技股投资","alternativeHeadline":"AlphaMap 白皮书先导篇｜面向全球科技股趋势成长与轮动的中低频策略研究","description":"AlphaMap 白皮书 #000 从金融知识图谱的经济语义、时间与状态迁移出发，讨论如何将 FinLLM-KG 转化为面向全球科技股趋势成长与轮动的可交易中低频量化因子。","datePublished":"2026-10-31","dateModified":"2026-10-31","author":{"@type":"Organization","@id":"https://lunartuliplab.com/#organization","name":"LunarTulip Research"},"publisher":{"@id":"https://lunartuliplab.com/#organization"},"isPartOf":{"@type":"CreativeWorkSeries","@id":"https://lunartuliplab.com/alphamap#whitepaper-series","name":"AlphaMap Whitepaper Series","position":0},"about":[{"@type":"Thing","name":"FinLLM-KG"},{"@type":"Thing","name":"Financial Knowledge Graphs"},{"@type":"Thing","name":"Tradable Quantitative Factors"},{"@type":"Thing","name":"Global Technology Equities"},{"@type":"Thing","name":"Medium- and Low-Frequency Strategies"}],"keywords":["FinLLM-KG","大模型金融知识图谱","金融知识图谱","可交易量化因子","Alpha Mechanics","全球科技股","趋势成长","产业轮动","中低频策略","基本面量化","经济网络","状态迁移"],"license":"https://lunartuliplab.com/research-usage"}</script>
+</head>
+<body>
+<nav class="site-nav" aria-label="站点导航"><div><a href="/">LUNARTULIP LAB</a><span>/</span><a href="/alphamap">ALPHAMAP</a></div><div><span>WHITEPAPER 000</span><span>/</span><a href="/institutional-access">INSTITUTIONAL ACCESS</a></div></nav>
+<header class="masthead">
+  <div>
+    <p class="kicker">ALPHAMAP WHITEPAPER / PROLOGUE 000</p>
+    <h1>从基本面判断到量化策略：金融知识图谱如何进入科技股投资<span>AlphaMap 白皮书先导篇｜面向全球科技股趋势成长与轮动的中低频策略研究</span></h1>
+  </div>
+  <aside class="annual"><strong>2026 年度投研策略巡礼</strong>从金融知识图谱走向全球科技股的中低频因子与策略</aside>
+</header>
+<main class="article">
+<p>从基本面判断到量化策略：金融知识图谱如何进入科技股投资<br />AlphaMap 白皮书先导篇｜面向全球科技股趋势成长与轮动的中低频策略研究</p>
+
+<p class="series"><b>2026 年度投研策略巡礼 · 从金融知识图谱走向全球科技股的中低频因子与策略</b></p>
+
+<hr>
+
+<h3>一、隔夜的定价分歧：当云业务翻倍遭遇现金流压力</h3>
+
+<p>隔夜美股风云诡谲，三大指数继续全线收跌。10 月 28 日美股盘后，Alphabet 与 Microsoft 两大HyperScaler相继披露最新季度业绩，对谷歌而言尽管云计算业务季度营收同比增长翻倍，但这并不能弥补自由现金流第二个季度为负且程度大幅超市场共识带来的恐慌。科技股财报令投资者失望的同时，为何资本市场在回调几个月的当下依旧大幅集中抛售？定价逻辑更在意增长能否转化为现金流、资本开支由谁承担，以及价值最终由谁捕获，而这些特征纯量价因子为主的量化策略很难做出真正预测，中低频策略主导的底层离不开基本面逻辑和宏观传导。</p>
+
+<p>Google Cloud 季度营收同比增长 103%，达到 307.1 亿美元；Microsoft Azure 收入同比增长 48%。Google Cloud 分布业务的增长还包含 TPU 系统销售的贡献，包括持续性的云消费也包括外售的部分；两家公司披露的业务扩张，足以让投资者继续对待 AI 与云基础设施的需求依然保持信心，需求的方向市场分歧不大。[1][3]</p>
+
+<p>Alphabet 本季度物业与设备现金采购支出这一科目达到 <b>513.6 亿美元</b>，同比增加约 114%，相当于总收入的 <b>40.3%</b>。经营现金流为 <b>422.9 亿美元</b>；按经营现金流减去现金资本开支计算，自由现金流为 <b>−90.7 亿美元</b>，较上一季度约 <b>−58.6 亿美元</b>进一步扩大。</p>
+
+<p>自由现金流转负加深，是本轮市场恐慌的核心推手。尽管大厂的运营能力依旧想好，市场关注点在FCF连续两级转负，且幅度加深超过市场预期，而究其转负加深的部分主要来自资本开支的投入，这一次市场的表现也足以现身演示了一个产业层面和二级市场预期很深的gap，深入产业市场调研会发现目前订单趋势依旧很好，需求完全没有问题，但二级市场关注的永远是预期，AI硬件供应链的收入追溯到现金流源头也是来自于各大Hyperscaler真金白银砸向AI的投入，结果现在连金主的现金流情况都开始出现端倪并且是趋势性的，情绪和预期的传导一触即发；市场定价往往领先事实兑现2~3个季度，未来的预期下调势必要兑现在当期的股价里，对应产业链整体远期预期系统性的收缩在很短的交易时间里会被充分计入当期股价，甚至考虑到筹码结构和短期流动性承接不足，悲观预期和风险短期过度计入也不是没有可能，场外资金看到的嗜血的筹码正是下一轮超额的来源。</p>
+
+<p>资本开支在采购方的账上体现为现金流出，在设备供应商的账上在后续的季度里会转化为订单，在融资方的账上又对应另一组期限与风险。采购规模扩大后，整条供应链上各家都想分食蛋糕，而最终谁能够提价，谁需要垫资，谁承担折旧，谁为了维持市场占位不得不继续融资，决定了增长如何落地到产业链各家参与者实际的分配和落袋。</p>
+
+<blockquote><b>增长给出了方向。价值捕获、资金回收与市场预期，决定了这份增长最终对应怎样的投资回报。</b></blockquote>
+
+<p>这也是LunarTulip研究全球科技股趋势成长与轮动的出发点：在一条共同扩张的产业链中，识别公司之间的差异，并追踪这些差异何时发生变化。</p>
+
+<hr>
+
+<h3>二、当同一条消息需要不同解释：“隐式贝叶斯大师”的认知解构</h3>
+
+<p>市场上很多机构在尝试用LLM提取制成Fin-LLM金融大模型图谱后用于赋能投研或者增加更多异质性量化特征用于产出策略，我们之前分析过为什么普通工程化的图谱构建方式用到二级市场没什么太大增益。本次又是一个很好的案例，提到将基本面的思考方式嵌入系统化的投资，就不得不借助机器的计算能力，继续带入本轮谷歌业绩，很容易会联想到把“云收入高速增长”单独聚合成一类成长因子计算值，从特征和因子的角度看待并用信号的方式提示方向，这里反倒形成看多信号，但显然当前市场走的是下行趋势。基于产业链图谱提取出供应商、客户和同行关系并向外扩展依然不足以对当前市场走势做出正确的预测。但也无法进一步解释在当前市场状况下相关供应商无差别下跌为何发生。</p>
+
+<p>这里才涉及到图网络走到量化特征的开始。</p>
+
+<p>首先一阶导的静态维度上来看，供应商的实际产能为何？新增订单对应的是有定价权的产品，还是需要降价争夺的标准件？客户预付款能否覆盖扩产？产业链中哪一方先确认收入，哪一方要等几个季度才能收回现金？同一条消息，沿不同关系、在不同状态下，可能产生方向与时滞都不同的影响。</p>
+
+<p>这对量化建模提出了两层要求。</p>
+
+<p>第一，<b>公司指标需要放回经济关系与信息时点中解释</b>。Cohen 与 Frazzini 在经典论文《Economic Links and Predictable Returns》（<i>The Journal of Finance</i>, 63(4), 1977–2011, 2008）中，利用公司披露的客户—供应商关系，发现客户股票的先前收益能够预测其供应商后续收益；据此构造的客户动量策略——买入表现较好的客户所对应的供应商、卖出表现较差客户所对应的供应商——取得了显著的异常收益。(<a href="https://doi.org/10.1111/j.1540-6261.2008.01382.x">论文原文</a>) 这为经济联系可能传递尚未同步反映在相关证券价格中的信息，提供了经典实证证据。</p>
+
+<p>第二，<b>图上的连边必须转化为可检验的金融暴露与传导假设</b>。<code>Supplier_Of</code> 只能标记供应关系；但关系的经济重要性、客户权重、信息披露时点、收益窗口与传导滞后这些在量化策略和另类数据上更看重的点才决定它能否形成对供应商回报有用的变量。客户动量的证据支持的是特定关系和特定预测设计，任意图谱边或 GNN 并不天然具有预测力。</p>
+
+<p>富有经验的基本面投资者，往往在阅读一条新消息时，同时调动了这些背景。他们看到增长，也在判断增长所处的阶段；看到合同，也在追问合同怎样穿过产能、成本、融资和收入确认，进入股东能够获得的现金流。</p>
+
+<p>沿着此前“隐式贝叶斯大师”的讨论，我们可以把这种判断过程理解为：<b>投资者依据已经形成的产业认知，为不同情景赋予初始判断，再用新证据调整它们的相对可信度。</b></p>
+
+<div class="equation">$$
+\underbrace{\frac{P(H_1\mid E,I)}{P(H_0\mid E,I)}}_{\text{后验赔率}}
+=
+\underbrace{\frac{P(E\mid H_1,I)}{P(E\mid H_0,I)}}_{\text{似然比}}
+\times
+\underbrace{\frac{P(H_1\mid I)}{P(H_0\mid I)}}_{\text{先验赔率}}
+$$</div>
+
+<p>这里，$I$ 是此前可知的信息，$E$ 是新到达的证据。这个公式说明判断如何更新；要把它用于实际估计，还需进一步定义情景、先验与观测分布。</p>
+
+<p>例如，需求强劲与融资趋紧可以同时发生。投资者需要更新的，是这两股力量共同作用后，对不同公司的盈利、资金需求和估值意味着什么。就近期全球科技股近期的系统性风险和定价逻辑来看，债的逻辑接管股权定价在股权端兑现了， GOOGL 和META的自由现金流指向需求方集体进入融资依赖期,市场开始按信用质量给股权定价。</p>
+
+<p>因此，面对需求与融资条件同时变化的证据，投资者需要追问的不是单一的“需求强弱”，而是这些变化如何沿着产业、公司经营传导到证券定价。以一轮财报为例，可以把判断拆成三个前后相接的问题：</p>
+
+<ul>
+<li><b>需求判断</b>：订单、使用量与收入是否支持原有增长预期？需求变化是否具有持续性？</li>
+<li><b>捕获判断</b>：新增需求会由哪些公司转化为销量、定价权、利润率与现金流？产能、认证或议价结构会如何影响兑现？</li>
+<li><b>定价判断</b>：这些经营改善或压力有多少已经进入市场预期与股价？剩余回报空间是否足以补偿相应风险？</li>
+</ul>
+
+<p>这样，需求证据才会经过公司层面的价值捕获判断，进一步成为关于证券回报的判断，而不仅局限于单纯方向性的看多或看空信号。</p>
+
+<p>长期被优秀交易员视为天赋的盘感，在这条研究路径中，借由系统化的方式实现为可以继续拆解的判断过程。它包含对产业的理解、对证据的取舍，以及对预期和价格的比较。减仓、增持或继续等待，则还取决于组合已有的暴露与可承受损失。</p>
+
+<p>这为基本面量化提出了一个具体任务：<b>把这些判断中可以观察、比较和更新的部分，转化为因子与策略能够使用的信息。</b></p>
+
+<hr>
+
+<h3>三、投研认知的形式化合龙：从数据工程到世界状态机</h3>
+
+<p>碳基专家能够沿着一条熟悉的产业链推演得很深，但当研究跨越美股、港股、A 股与日韩市场，关系数量、披露节奏和信息版本会迅速超出个人能够稳定维护的范围。同一个判断也可能在不同时间被赋予不同标准，难以复盘它究竟为何改变。</p>
+
+<p>这构成了 AlphaMap 的核心研究问题：<b>如何把产业认知中有投资意义的结构与变化，转化为可复现的证券级信号，并形成面向全球科技股趋势成长与中低频轮动的组合策略？</b></p>
+
+<p>此前《结构即 Alpha》与科技股投资世界模型的讨论，为这条路线打开了两个入口。接下来，它们需要在金融研究中接起来。</p>
+
+<table>
+<thead><tr><th>演进层次</th><th>核心问题</th><th>通向因子与策略的作用</th></tr></thead>
+<tbody>
+<tr><td>结构与信息</td><td>在当时可知的信息中，公司连接了哪些产品、客户、产能与约束？</td><td>定义公司暴露与关系，形成可比较的研究输入。</td></tr>
+<tr><td>状态与变化</td><td>供需、融资、竞争和价值捕获正在如何变化？</td><td>构造状态水平、状态修正及有条件的关系传导信号。</td></tr>
+<tr><td>定价与组合</td><td>哪些变化尚未被充分反映，适合在哪个期限、以怎样的暴露持有？</td><td>检验收益信息，将信号接入选股、轮动与风险配置。</td></tr>
+</tbody>
+</table>
+
+<p><b>在数据工程层，我们关注“结构携带了什么信息”。</b></p>
+
+<p>公司财报揭示已经进入报表的经营结果；产品、产能、客户认证与合同安排，则提供理解未来变化的另一组材料。将这些材料组织成有类型、有时点、有出处的关系，可以让研究者追踪：一项变化影响谁，经过什么环节，在什么条件下才能兑现。</p>
+
+<p>“结构即 Alpha”由此指向一个投资研究命题：市场可能没有充分吸收复杂关系中包含的信息。哪些结构有用、是否超越行业标签和简单暴露，仍须在相同信息集下比较。图表示与表格特征都可以服务这项研究。</p>
+
+<p><b>在世界模型层，我们关注“这些关系在什么状态下起作用”。</b></p>
+
+<p>这里所说的世界模型，围绕科技产业的经济状态、约束与演化假设展开。它帮助我们把供需、资本投入与公司价值捕获放进同一个研究框架。例如，可以用下面的形式组织状态：</p>
+
+<div class="equation">$$
+S_t=\left\langle
+\mathcal{G}^{\mathrm{economic}}_t,
+\boldsymbol{\theta}^{\mathrm{macro}}_t,
+\mathbf{c}^{\mathrm{capture}}_t
+\right\rangle
+$$</div>
+
+<p>其中，$\mathcal{G}^{\mathrm{economic}}_t$ 表示带有产品、供需与瓶颈信息的经济关系网络，$\boldsymbol{\theta}^{\mathrm{macro}}_t$ 表示融资与宏观条件，$\mathbf{c}^{\mathrm{capture}}_t$ 表示公司将产业增长转化为经营成果的能力与约束。</p>
+
+<p>这个状态表示提出了后续需要回答的问题：哪些量可直接观测，哪些需要估计？什么证据足以触发状态更新？当供给扩张、客户议价或融资条件改变时，原有传导假设如何调整？状态转移规则与误差检验，将在后续方法篇中展开。</p>
+
+<p>它的投资意义也很具体。先进封装供给紧张时，新增需求与交付约束共同影响议价；供给逐渐释放后，竞争结构和客户选择可能重新分配利润。瓶颈位置与企业捕获能力随时间变化，轮动研究因此需要追踪变化本身。</p>
+
+<p><b>在因子与组合层，AlphaMap 当前优先测试两条研究线。</b></p>
+
+<p><b>主轴：经济状态变化与公司价值捕获差异（Economic State Changes & Value Capture Heterogeneity）。</b> 我们研究同一产业变化，如何因产品组合、供给能力、客户关系、议价权和再投资负担不同，转化为公司的经营差异。哪些状态修正能够先于财务兑现提供信息？哪些公司能够把收入增长保留为利润与现金流？这些差异何时进入市场预期，又是否仍留下可交易的空间？</p>
+
+<p><b>辅轴：沿已验证经济关系传播的冲击（Shock Propagation through Verified Economic Links）。</b> 我们依据监管申报、公司披露与合同材料建立关系证据，研究节点上的订单、价格、交付或融资变化，怎样影响关联公司。关系的方向、敞口、有效期和时滞需要分别处理。这条研究线可以形成候选信号，也可以帮助确认或修正主轴中的状态判断。</p>
+
+<p>两条研究线最终都要经过同一段金融传导：</p>
+
+<div class="equation">$$
+\text{经济状态变化}
+\rightarrow \text{公司基本面影响}
+\rightarrow \text{市场预期与定价调整}
+\rightarrow \text{证券收益与组合结果}
+$$</div>
+
+<p>在中低频策略中，信息更新、预测期限、持有期与调仓频率各有自己的时钟。一条新披露可以当天改变判断，其经营影响可能跨越数个季度，组合也未必需要立即交易。将这些时间尺度连接起来，是趋势成长选择与产业轮动研究的一部分。</p>
+
+<p>AlphaMap 的当前选择由此明确：围绕状态变化与捕获差异构建因子研究，以经济关系中的冲击传播提供另一组观察与预测路径，再把结果接回真实的组合约束。</p>
+
+<hr>
+
+<h3>四、本白皮书连载的使命与理论坐标</h3>
+
+<p><b>LLM 抽取图只是共同的数据生产方式；因子类型取决于后面如何使用图、预测什么，以及如何构建组合。</b></p>
+
+<p>同一批金融文本，可以被组织成用于解释新闻的公司背景，可以生成网络位置特征，可以进入图模型学习，也可以用于追踪经济状态和关联公司的变化。这些路径对应不同的研究假说、预测对象与组合用途。</p>
+
+<p>这正是本系列准备系统展开的版图：<b>从金融知识图谱与经济网络，走向面向全球公开市场科技股的中低频量化因子与策略。</b></p>
+
+<p></p>
+
+<p>白皮书与长文连载希望将金融问题、研究版图和方法选择联系在一起清晰展示；AlphaMap Research 论文系列则以具体命题、数据、实验和结果，为其中的主张提供可复核的证据。研究结果也将反哺推动这幅版图修订与长期策略迭代。</p>
+
+<p>从基本面判断到量化策略，用金融知识图谱着手，构建面向全球科技股趋势成长与轮动的中低频策略研究，沿途希望探索的，是投资者对经济变化的理解，以及把这种理解转化为投资回报的能力。形式化让其中的判断可以被定义和比较，从市场实际表现获取反馈来做验证，从而实现长期的自我进化与迭代。</p>
+
+<p>下一期我们将进入系列第一篇：金融图网络已经产生了哪些因子与策略，我们又准备沿着哪一条路径继续深入探索。</p>
+
+<hr>
+
+<section class="sources">
+<h3>资料来源</h3>
+
+<p>[1] Alphabet，2026 年第三季度业绩公告，2026-10-28。收入、季度现金流及自由现金流调节表；文中 FCF 按经营现金流减现金购置物业与设备支出计算。<a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/googexhibit991q32026.htm">原文</a></p>
+
+<p>[2] Alphabet，季度截至 2026-09-30 的 Form 10-Q，融资披露。票据净发行所得与扣除全部偿债后的净新增借款不同。<a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm">原文</a></p>
+
+<p>[3] Microsoft，FY2027 第一季度业绩公告，2026-10-28，季度截至 2026-09-30。<a href="https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast">原文</a></p>
+
+<p>[4] Microsoft，FY2027 第一季度业绩电话会，资本开支、融资租赁及容量交付说明。<a href="https://www.microsoft.com/en-us/Investor/events/fy-2027/earnings-fy-2027-q1">原文</a></p>
+
+<p>[5] Reuters，Microsoft 财报与现金流报道，2026-10-28。用于盘后市场反应描述，不作为排他性价格归因。<a href="https://www.reuters.com/business/retail-consumer/microsoft-beats-quarterly-cloud-revenue-estimates-2026-10-28/">原文</a></p>
+
+<p>[6] Veličković et al., <i>Graph Attention Networks</i>, ICLR 2018。<a href="https://openreview.net/pdf?id=rJXMpikCZ">原文</a></p>
+
+<p></p>
+</section>
+</main>
+<footer class="legal"><span>© 2026 LUNARTULIP LAB · ALPHAMAP WHITEPAPER SERIES</span><span>本文为研究出版物，不构成投资建议、交易指令或收益承诺。</span></footer>
+</body>
+</html>

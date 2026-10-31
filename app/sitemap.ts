@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import authoritySummary from "@/data/authority/calls_kpi_summary.json";
+import { alphaMapWhitepapers } from "@/lib/alphamap-whitepapers";
 import { getAllNotes } from "@/lib/notes";
 import { researchObjects } from "@/lib/research-objects";
 
@@ -14,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .at(-1) ?? "2026-08-15";
   const latestAlphaMapDate = alphaMapObjects
     .map((item) => item.versions.at(-1)?.date ?? item.publishedAt)
+    .concat(alphaMapWhitepapers.map((item) => item.publishedAt))
     .sort()
     .at(-1) ?? latestResearchDate;
 
@@ -230,6 +232,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       ];
     }),
+    ...alphaMapWhitepapers.map((item) => ({
+      url: `https://lunartuliplab.com/alphamap/${item.slug}`,
+      lastModified: new Date(`${item.publishedAt}T00:00:00+08:00`),
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+      alternates: {
+        languages: {
+          "zh-CN": `https://lunartuliplab.com/alphamap/${item.slug}`,
+          "x-default": `https://lunartuliplab.com/alphamap/${item.slug}`,
+        },
+      },
+    })),
     ...notes.flatMap((note) => {
       const englishNote = englishNotes.find((item) => item.slug === note.slug);
       const languages = englishNote

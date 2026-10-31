@@ -41,6 +41,8 @@ Publisher entity: https://lunartuliplab.com/#organization
 
 ### AlphaMap
 
+- [AlphaMap Whitepaper #000 — From Fundamental Judgment to Quantitative Strategy](https://lunartuliplab.com/alphamap/finllm-kg-to-tradable-quant-factors-000): Chinese-language prologue on turning FinLLM-KG (large-model financial knowledge graphs) into tradable quantitative factors for medium- and low-frequency global technology-equity growth and rotation strategies. It focuses on economic graph semantics, time and state transitions, and Alpha Mechanics rather than entity-triple extraction alone.
+
 ${alphaMapResearch}
 
 ### Deep Dive

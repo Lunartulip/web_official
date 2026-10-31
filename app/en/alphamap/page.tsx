@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { alphaMapWhitepapers } from "@/lib/alphamap-whitepapers";
 import { alphaMapStudies } from "@/lib/research-objects";
 import AlphaMapIndex from "../../alphamap/alphamap-index";
 
 export const metadata: Metadata = {
-  title: "Lunartulip AlphaMap | Graph Signals and Cross-Sectional Stock Factors",
-  description: "Lunartulip AlphaMap fixes dated graph vintages, samples and observation windows to test whether semantic networks add information to cross-sectional stock rankings.",
+  title: "AlphaMap | Turning FinLLM-KG into Tradable Technology-Equity Factors",
+  description: "AlphaMap studies the economic meaning, time and state transitions of financial knowledge graphs, and how graph structures map into medium- and low-frequency factors for global technology-equity growth and rotation.",
   alternates: {
     canonical: "/en/alphamap",
     languages: { en: "/en/alphamap", "zh-CN": "/alphamap", "x-default": "/en/alphamap" },
@@ -12,6 +13,20 @@ export const metadata: Metadata = {
 };
 
 export default function EnglishAlphaMapPage() {
+  const whitepapers = alphaMapWhitepapers.map((item) => ({
+    "@type": "ListItem",
+    position: Number(item.number),
+    item: {
+      "@type": "Article",
+      "@id": `https://lunartuliplab.com/alphamap/${item.slug}#article`,
+      url: `https://lunartuliplab.com/alphamap/${item.slug}`,
+      name: item.title,
+      headline: item.title,
+      alternativeHeadline: item.subtitle,
+      datePublished: item.publishedAt,
+      inLanguage: "zh-CN",
+    },
+  }));
   const items = alphaMapStudies.map((item, index) => ({
     "@type": "ListItem",
     position: index + 1,
@@ -38,15 +53,27 @@ export default function EnglishAlphaMapPage() {
     "@id": "https://lunartuliplab.com/en/alphamap#collection",
     name: "Lunartulip AlphaMap",
     inLanguage: "en",
-    mainEntity: {
-      "@type": "CreativeWorkSeries",
-      "@id": "https://lunartuliplab.com/alphamap#series",
-      name: "Lunartulip AlphaMap",
-      hasPart: {
-        "@type": "ItemList",
-        itemListElement: items,
+    mainEntity: [
+      {
+        "@type": "CreativeWorkSeries",
+        "@id": "https://lunartuliplab.com/alphamap#whitepaper-series",
+        name: "AlphaMap Whitepaper Series",
+        description: "From FinLLM-KG and economic networks to tradable medium- and low-frequency factors for global technology equities.",
+        hasPart: {
+          "@type": "ItemList",
+          itemListElement: whitepapers,
+        },
       },
-    },
+      {
+        "@type": "CreativeWorkSeries",
+        "@id": "https://lunartuliplab.com/alphamap#series",
+        name: "Lunartulip AlphaMap DOI Empirical Research Series",
+        hasPart: {
+          "@type": "ItemList",
+          itemListElement: items,
+        },
+      },
+    ],
     publisher: { "@id": "https://lunartuliplab.com/#organization" },
   };
   return (

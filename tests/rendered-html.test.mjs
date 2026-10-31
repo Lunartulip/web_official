@@ -69,6 +69,10 @@ const latestAlphaMapRouteSource = await readFile(new URL(`../app/alphamap/${late
 const latestEnglishAlphaMapRouteSource = await readFile(new URL(`../app/en/alphamap/${latestAlphaMapSlug}/route.ts`, import.meta.url), "utf8");
 const latestAlphaMapHtmlCn = await readFile(new URL(`../content/editorial-alphamap/${latestAlphaMapSlug}.zh.html`, import.meta.url), "utf8");
 const latestAlphaMapHtmlEn = await readFile(new URL(`../content/editorial-alphamap/${latestAlphaMapSlug}.en.html`, import.meta.url), "utf8");
+const alphaMapWhitepaperSlug = "finllm-kg-to-tradable-quant-factors-000";
+const alphaMapWhitepaperSource = await readFile(new URL(`../content/editorial-alphamap/${alphaMapWhitepaperSlug}.zh.html`, import.meta.url), "utf8");
+const alphaMapWhitepaperRouteSource = await readFile(new URL(`../app/alphamap/${alphaMapWhitepaperSlug}/route.ts`, import.meta.url), "utf8");
+const alphaMapWhitepapersSource = await readFile(new URL("../lib/alphamap-whitepapers.ts", import.meta.url), "utf8");
 const chineseAlphaMapFeedSource = await readFile(new URL("../app/alphamap/feed.xml/route.ts", import.meta.url), "utf8");
 const englishAlphaMapFeedSource = await readFile(new URL("../app/en/alphamap/feed.xml/route.ts", import.meta.url), "utf8");
 const memorySeriesSlugs = [
@@ -480,6 +484,36 @@ test("publishes AlphaMap Research Note #001 with DOI-linked machine metadata and
   assert.match(latestAlphaMapHtmlCn, /href="\/">LUNARTULIP LAB<\/a>[\s\S]*href="\/alphamap">ALPHAMAP 专栏<\/a>/);
 });
 
+test("publishes AlphaMap Whitepaper #000 as the FinLLM-KG strategy prologue", () => {
+  assert.match(alphaMapWhitepaperRouteSource, /export const dynamic = "force-static"/);
+  assert.match(alphaMapWhitepaperRouteSource, /readEditorialAlphaMap/);
+  assert.match(alphaMapWhitepaperRouteSource, new RegExp(alphaMapWhitepaperSlug));
+  assert.match(alphaMapLoaderSource, new RegExp(alphaMapWhitepaperSlug));
+  assert.match(alphaMapWhitepapersSource, new RegExp(alphaMapWhitepaperSlug));
+  assert.match(sitemapSource, /alphaMapWhitepapers/);
+
+  for (const term of [
+    "从基本面判断到量化策略：金融知识图谱如何进入科技股投资",
+    "AlphaMap 白皮书先导篇｜面向全球科技股趋势成长与轮动的中低频策略研究",
+    "2026 年度投研策略巡礼",
+    "图上的连边必须转化为可检验的金融暴露与传导假设",
+    "如何把产业认知中有投资意义的结构与变化，转化为可复现的证券级信号",
+    "经济状态变化与公司价值捕获差异",
+    "沿已验证经济关系传播的冲击",
+    "LLM 抽取图只是共同的数据生产方式",
+    "下一期我们将进入系列第一篇",
+  ]) {
+    assert.match(alphaMapWhitepaperSource, new RegExp(term));
+  }
+  for (const term of ["FinLLM-KG", "转化为可交易的量化因子", "Alpha Mechanics", "状态迁移"]) {
+    assert.match(alphaMapIndexComponentSource + alphaMapWhitepaperSource, new RegExp(term));
+  }
+  assert.match(alphaMapWhitepaperSource, /"@type":"Article"/);
+  assert.match(alphaMapWhitepaperSource, /#whitepaper-series/);
+  assert.match(alphaMapWhitepaperSource, /rel="canonical" href="https:\/\/lunartuliplab\.com\/alphamap\/finllm-kg-to-tradable-quant-factors-000"/);
+  assert.doesNotMatch(alphaMapWhitepaperSource, /desk\.lunartuliplab\.com|\/external\/|app\.notion\.com/i);
+});
+
 test("routes AlphaMap discovery separately from Deep Dive and licensed data", () => {
   assert.match(sitemapSource, /String\(item\.kind\) === "alphamap-study"/);
   assert.match(sitemapSource, /String\(item\.kind\) !== "alphamap-study"/);
@@ -611,14 +645,20 @@ test("presents institutional access around three buyer tasks and two products", 
     "投资研究平台",
     "AlphaMap｜科技股另类数据",
     "专题投研方法与应用",
-    "人民币 30 万元／年",
-    "人民币 15 万元／项目",
+    "年度数据授权人民币 30 万元起",
+    "专题项目人民币 15 万元起",
+    "Annual data licenses start at US$42,000",
+    "Scoped projects start at US$21,000",
+    "具体范围与报价在询单后确认",
   ]) {
     assert.match(accessPageSource, new RegExp(term.replace("$", "\\$")));
   }
   assert.match(accessPageSource, /不自动包含第三方分发、产品内展示、再许可或模型训练/);
   assert.match(accessPageSource, /不要提交持仓、交易凭证、账户信息/);
-  assert.doesNotMatch(accessPageSource, /Research API|6-Session|¥100,000|US\$15,000|checkout|credit card|payment provider/i);
+  assert.doesNotMatch(accessPageSource, /标准年度数据授权：人民币 30 万元／年|标准范围项目：人民币 15 万元／项目|Standard annual data license: RMB 300,000|Standard scoped project: RMB 150,000|Research API|6-Session|¥100,000|US\$15,000|checkout|credit card|payment provider/i);
+  assert.match(layoutSource, /"@type": "AggregateOffer"/);
+  assert.match(layoutSource, /lowPrice: "300000"/);
+  assert.match(layoutSource, /lowPrice: "150000"/);
 });
 
 test("ships a validated, attributed SMTP institutional inquiry flow", () => {
