@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import InstitutionalAccess from "../../institutional-access/institutional-access";
 
 export const metadata: Metadata = {
-  title: "Research Products & Services | Professional and Institutional Access",
-  description: "Request a sample, subscribe to thematic investment intelligence for AI technology, or discuss machine-readable APIs, quant alternative datasets, scoped mandates and a six-session institutional research-system workshop.",
+  title: "Institutional Buyers & Engagements | Global Technology Equity Research",
+  description: "AlphaMap alternative data and scoped research-methodology engagements for systematic equity teams, fundamental investors and investment platforms.",
   alternates: {
     canonical: "/en/institutional-access",
     languages: { "zh-CN": "/institutional-access", en: "/en/institutional-access" },

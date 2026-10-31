@@ -87,7 +87,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: "https://lunartuliplab.com/institutional-access",
-      lastModified: new Date("2026-08-13T00:00:00+08:00"),
+      lastModified: new Date("2026-10-31T00:00:00+08:00"),
       changeFrequency: "monthly",
       priority: 0.75,
     },
@@ -96,18 +96,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date("2026-08-13T00:00:00+08:00"),
       changeFrequency: "monthly",
       priority: 0.85,
-    },
-    {
-      url: "https://lunartuliplab.com/workshop",
-      lastModified: new Date("2026-09-14T00:00:00+08:00"),
-      changeFrequency: "monthly",
-      priority: 0.8,
-      alternates: {
-        languages: {
-          "zh-CN": "https://lunartuliplab.com/workshop",
-          en: "https://lunartuliplab.com/en/workshop",
-        },
-      },
     },
     {
       url: "https://lunartuliplab.com/research.json",
@@ -170,8 +158,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { path: "/alphamap", modified: latestAlphaMapDate },
       { path: "/authority-ledger", modified: authoritySummary.generated_at },
       { path: "/desk", modified: "2026-08-13" },
-      { path: "/workshop", modified: "2026-09-14" },
-      { path: "/institutional-access", modified: "2026-09-14" },
+      { path: "/institutional-access", modified: "2026-10-31" },
     ].map((entry, index) => ({
       url: `https://lunartuliplab.com/en${entry.path}`,
       lastModified: new Date(`${entry.modified}T00:00:00+08:00`),

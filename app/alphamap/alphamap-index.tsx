@@ -80,12 +80,12 @@ export default function AlphaMapIndex({ language = "cn" }: { language?: "cn" | "
 
       <section className={styles.section}>
         <div className={styles.sectionHead}>
-          <div><p className={styles.sectionLabel}>CONTINUE THE WORK</p><h2>{isCn ? "需要接入研究系统，可以从这里开始。" : "Start here to bring the work into a research system."}</h2></div>
-          <p className={styles.lead}>{isCn ? "公开研究适合审阅方法。机构可进一步讨论版本化数据、内部 Agent 接口和定制研究范围。" : "The public study supports method review. Institutions can discuss versioned data, internal-agent interfaces and scoped research work."}</p>
+          <div><p className={styles.sectionLabel}>CONTINUE THE WORK</p><h2>{isCn ? "从公开方法研究进入机构数据评估。" : "Move from public methods research into institutional data evaluation."}</h2></div>
+          <p className={styles.lead}>{isCn ? "公开研究适合审阅问题、设计、结果和局限。机构可进一步获取 AlphaMap 数据说明与样例，或围绕明确问题讨论专题投研方法与应用。" : "The public study supports review of the question, design, result and limitations. Institutions can request AlphaMap data materials or discuss a scoped methodology application for a defined question."}</p>
         </div>
         <div className={styles.grid}>
           <article className={styles.card}><p className={styles.meta}>CITATION METADATA</p><h3>Research Object</h3><p>{isCn ? "读取对象 ID、版本、日期、摘要、DOI 和 canonical URL。" : "Read the object ID, version, dates, abstract, DOI and canonical URLs."}</p><Link href={`/research/${latestStudy.slug}`}>{isCn ? "打开最新公开元数据 →" : "Open the latest public metadata →"}</Link></article>
-          <article className={styles.card}><p className={styles.meta}>INSTITUTIONAL ACCESS</p><h3>{isCn ? "机器读与定制研究" : "Machine-readable and scoped research"}</h3><p>{isCn ? "讨论 Research API、Alternative Dataset 或研究委托。" : "Discuss the Research API, alternative datasets or a research mandate."}</p><Link href={`${prefix}/institutional-access#intent-machine_readable_research`}>{isCn ? "联系研究团队 →" : "Contact the research team →"}</Link></article>
+          <article className={styles.card}><p className={styles.meta}>INSTITUTIONAL ACCESS</p><h3>{isCn ? "AlphaMap 数据与专题应用" : "AlphaMap Data & Scoped Applications"}</h3><p>{isCn ? "获取数据说明与样例，或围绕一个明确研究问题讨论方法应用。" : "Request data materials and samples, or discuss a methodology application for one defined research question."}</p><Link href={`${prefix}/institutional-access#intent-alternative_dataset`}>{isCn ? "查看机构合作入口 →" : "View institutional entry points →"}</Link></article>
         </div>
       </section>
 

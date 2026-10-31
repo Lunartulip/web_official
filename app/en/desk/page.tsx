@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import DeskPreview from "../../desk/desk-preview";
 
 export const metadata: Metadata = {
-  title: "Lunartulip Research Desk | Thematic Investment Intelligence for AI Technology",
-  description: "Always-on thematic investment intelligence that maintains evidence, thesis states and signals across focused AI technology themes for research subscriptions and machine-readable delivery.",
+  title: "LunarTulip Research Desk | Public Preview of a Continuous Research Method",
+  description: "How LunarTulip maintains technology-industry and company evidence, investment theses and forward tests. External engagements use AlphaMap licensing and scoped methodology applications.",
   alternates: {
     canonical: "https://lunartuliplab.com/en/desk",
     languages: {
@@ -12,8 +12,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Lunartulip Research Desk | Thematic Investment Intelligence",
-    description: "Always-on evidence, thesis states and signals across focused AI technology themes.",
+    title: "LunarTulip Research Desk | Continuous Research Method",
+    description: "A public preview of continuous evidence, thesis and forward-test maintenance.",
     url: "https://lunartuliplab.com/en/desk",
     type: "website",
   },

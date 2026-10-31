@@ -49,10 +49,10 @@ const navigation = [
 ];
 
 const positioningSignals = [
-  { label: "WHO WE ARE", cn: "独立科技权益研究机构", en: "Independent public-equities research" },
-  { label: "ENGINE / FUNDAMENTAL", cn: "主观基本面研究", en: "Discretionary fundamental research" },
-  { label: "ENGINE / QUANT", cn: "系统化量化研究", en: "Systematic quantitative research" },
-  { label: "RESEARCH WORKSPACE", cn: "Always-On Research Desk", en: "Always-On Research Desk" },
+  { label: "WHO WE ARE", cn: "全球科技股独立研究机构", en: "Independent global technology-equity research" },
+  { label: "METHOD", cn: "基本面与量化研究", en: "Fundamental and quantitative research" },
+  { label: "ALTERNATIVE DATA", cn: "AlphaMap 科技股另类数据", en: "AlphaMap technology-equity alternative data" },
+  { label: "INSTITUTIONAL", cn: "专题投研方法与应用", en: "Scoped research methodology and application" },
 ];
 
 const deskCapabilities = [
@@ -63,34 +63,41 @@ const deskCapabilities = [
 ];
 
 const engagementTopics = [
-  { cn: "索取机构样章", en: "Request an institutional sample", detailCn: "先审阅研究密度、证据纪律与交付标准", detailEn: "Evaluate analytical density, evidence discipline and delivery quality", intent: "sample_request" },
-  { cn: "申请 Always-On Research Desk", en: "Apply for Always-On Research Desk", detailCn: "专业投资者或机构 × Coverage Track × 固定周期的持续研究", detailEn: "Ongoing research by professional investor or institution × Coverage Track × fixed term", intent: "research_access" },
-  { cn: "讨论 Research API", en: "Discuss the Research API", detailCn: "把 Claim、Evidence、版本与证伪条件接入内部 Agent", detailEn: "Bring claims, evidence, versions and falsifiers into internal agents", intent: "machine_readable_research" },
-  { cn: "讨论 Alternative Dataset", en: "Discuss alternative datasets", detailCn: "面向 Quant 买方的 point-in-time 研究状态数据", detailEn: "Point-in-time research-state data for quant investors", intent: "alternative_dataset" },
-  { cn: "提交研究 Mandate", en: "Submit a research mandate", detailCn: "仅限既有 coverage 与长期研究主线", detailEn: "Scoped to existing coverage and long-horizon research threads", intent: "commissioned_mandate" },
-  { cn: "讨论 6-Session Workshop", en: "Discuss the 6-Session Workshop", detailCn: "诊断并共同设计 AI-native 投研框架", detailEn: "Diagnose and co-design an AI-native research framework", intent: "research_system_diagnostic" },
+  { cn: "获取 AlphaMap 数据说明与样例", en: "Request AlphaMap data overview and samples", detailCn: "面向系统化权益与基本面量化团队", detailEn: "For systematic equity and quantamental teams", intent: "alternative_dataset" },
+  { cn: "讨论科技股研究应用", en: "Discuss a technology-equity research use case", detailCn: "面向基本面 PM、分析师与研究负责人", detailEn: "For fundamental PMs, analysts and research leads", intent: "research_access" },
+  { cn: "讨论研究与数据合作", en: "Discuss a research and data partnership", detailCn: "面向投资研究平台与产品团队", detailEn: "For investment research platforms and product teams", intent: "commissioned_mandate" },
 ];
 
 const collaborationLanes = [
   {
-    code: "ENGINE 01 / DISCRETIONARY FUNDAMENTAL",
-    titleCn: "主观基本面研究",
-    titleEn: "Discretionary Fundamental Research",
-    bodyCn: "追问技术变化如何穿透产业结构、公司利润、估值与预期差，形成公司深度研究、价值捕获图谱与可持续跟踪的前瞻验证点。",
-    bodyEn: "Trace how technology change travels through industry structure, company earnings, valuation and expectations—producing company deep dives, value-capture maps and forward tests.",
-    href: "/deep-dive",
-    ctaCn: "阅读旗舰 Deep Dive",
-    ctaEn: "Read flagship Deep Dives",
+    code: "BUYER 01 / SYSTEMATIC EQUITY",
+    titleCn: "系统化权益与基本面量化团队",
+    titleEn: "Systematic Equity & Quantamental Teams",
+    bodyCn: "将产业关系、产品结构和经营变化用于科技股中低频选股、主题轮动与共同风险研究。",
+    bodyEn: "Use industry relationships, product structures and operating changes in medium- and low-frequency stock selection, thematic analysis and common-risk research.",
+    href: "/institutional-access#intent-alternative_dataset",
+    ctaCn: "获取数据说明与样例",
+    ctaEn: "Request data overview and samples",
   },
   {
-    code: "ENGINE 02 / SYSTEMATIC QUANT",
-    titleCn: "系统化量化研究",
-    titleEn: "Systematic Quantitative Research",
-    bodyCn: "检验信号、权重、市场状态与组合规则是否具有可复现的预测或风险调整价值，公开验证设计、样本边界、成本后结果与失败记录。",
-    bodyEn: "Test whether signals, weights, regimes and portfolio rules offer reproducible predictive or risk-adjusted value, with explicit validation design, sample boundaries, post-cost results and failures.",
-    href: "#notes",
-    ctaCn: "查看量化研究",
-    ctaEn: "Explore quant research",
+    code: "BUYER 02 / FUNDAMENTAL EQUITY",
+    titleCn: "基本面权益投资团队",
+    titleEn: "Fundamental Equity Investment Teams",
+    bodyCn: "把新的产业证据对应到公司盈利驱动，识别支持或挑战原有投资假设的变化。",
+    bodyEn: "Connect new industry evidence to company earnings drivers and identify what supports or challenges an existing investment thesis.",
+    href: "/institutional-access#intent-research_access",
+    ctaCn: "讨论科技股研究应用",
+    ctaEn: "Discuss a research use case",
+  },
+  {
+    code: "BUYER 03 / INVESTMENT PLATFORM",
+    titleCn: "投资研究平台与产品团队",
+    titleEn: "Investment Research Platforms",
+    bodyCn: "围绕终端投资用户的实际问题，增加科技产业分析、公司比较与投资假设跟踪能力。",
+    bodyEn: "Add technology-industry analysis, company comparison and thesis monitoring around a defined end-user investment task.",
+    href: "/institutional-access#intent-commissioned_mandate",
+    ctaCn: "讨论研究与数据合作",
+    ctaEn: "Discuss a research and data partnership",
   },
 ];
 
@@ -552,34 +559,31 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
 
       <section className="hero" id="top" aria-labelledby="hero-title">
         <div className="hero-copy">
-          <p className="eyebrow">INDEPENDENT PUBLIC-EQUITIES RESEARCH · GLOBAL AI TECHNOLOGY</p>
+          <p className="eyebrow">GLOBAL TECHNOLOGY EQUITY RESEARCH & ALTERNATIVE DATA</p>
           <h1 id="hero-title">
             {language === "cn" ? (
               <>
-                <span className="hero-title-line">主观基本面 × 系统化量化</span>
-                <span className="hero-title-line hero-title-tagline">两台研究引擎，持续验证判断。</span>
+                <span className="hero-title-line">全球科技股的</span>
+                <span className="hero-title-line hero-title-tagline">基本面与量化研究。</span>
               </>
             ) : (
               <>
-                <span className="hero-title-line">Discretionary Fundamental</span>
-                <span className="hero-title-line">× Systematic Quant</span>
-                <span className="hero-title-line hero-title-tagline">Two Research Engines.</span>
-                <span className="hero-title-line">Judgment under Continuous Test.</span>
+                <span className="hero-title-line">Global Technology</span>
+                <span className="hero-title-line">Equity Research</span>
+                <span className="hero-title-line hero-title-tagline">& Alternative Data.</span>
               </>
             )}
           </h1>
           <p className="hero-description">
             {language === "cn" ? (
               <>
-                <span>Lunartulip Lab 是一家聚焦全球泛 AI 科技权益的 AI-native 独立研究机构。</span>
-                <span>我们用主观基本面研究理解产业因果、公司利润与预期差，用系统化量化研究检验信号、组合纪律与风险调整价值。</span>
-                <span>帮助专业投资者与机构研究团队更快识别变化、复核关键假设，并以可追溯记录持续提高判断质量。</span>
+                <span>LunarTulip Research 是一家聚焦全球科技股的独立研究机构，重点研究 AI 产业链与相关投资主题。</span>
+                <span>我们结合产业与公司基本面分析、量化研究和 AlphaMap 另类数据，为股票选择、投资假设跟踪与主题研究提供研究输入和方法支持。</span>
               </>
             ) : (
               <>
-                <span>Lunartulip Lab is an AI-native independent research institution focused on global AI technology equities.</span>
-                <span>Discretionary fundamental research explains industry causality, earnings and expectations; systematic quant tests signals, portfolio discipline and risk-adjusted value.</span>
-                <span>For professional investors and institutional research teams seeking faster change detection, explicit thesis review and traceable improvement in judgment quality.</span>
+                <span>LunarTulip Research is an independent research firm focused on global technology equities, with an emphasis on the AI value chain and related investment themes.</span>
+                <span>We combine fundamental analysis, quantitative research and AlphaMap alternative data to support stock selection, investment thesis monitoring and thematic research.</span>
               </>
             )}
           </p>
@@ -637,15 +641,15 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
       <section className="product-section page-section" id="research" aria-labelledby="research-title">
         <div className="section-heading product-heading">
           <div>
-            <p className="section-index">RESEARCH ENGINES / 01</p>
+            <p className="section-index">INSTITUTIONAL BUYERS / 01</p>
             <h2 id="research-title">
-              {language === "cn" ? "两台研究引擎，持续解释与验证市场机会。" : "Two research engines continuously explain and test market opportunity."}
+              {language === "cn" ? "按买方研究任务，选择数据或专题合作。" : "Choose data or a scoped engagement by buy-side research task."}
             </h2>
           </div>
           <p className="section-lead">
             {language === "cn"
-              ? "主观基本面研究回答产业因果、公司利润与预期差，系统化量化研究检验信号、组合纪律与风险调整价值。两台引擎共同产出可追溯的研究判断、验证记录与结果反馈。"
-              : "Discretionary fundamental research addresses industry causality, company earnings and expectation gaps; systematic quant tests signals, portfolio discipline and risk-adjusted value. Together they produce traceable judgment, validation records and outcome feedback."}
+              ? "系统化权益团队、基本面投资团队和投资研究平台面对的任务不同。合作从实际研究问题出发，再确定 AlphaMap 数据授权、专题投研方法与应用，或两者组合。"
+              : "Systematic equity teams, fundamental investors and investment platforms have different research tasks. Each engagement starts with the real question, then scopes AlphaMap data, a methodology application or both."}
           </p>
         </div>
 
@@ -665,15 +669,15 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
 
         <div className="desk-control-plane">
           <div className="desk-control-copy">
-            <p>THEMATIC INVESTMENT INTELLIGENCE / AI-NATIVE RESEARCH WORKSPACE</p>
-            <h3>{language === "cn" ? "让两台引擎的判断，在一个工作区持续更新。" : "Keep judgment from both engines continuously updated in one workspace."}</h3>
+            <p>RESEARCH METHOD / CONTINUOUS EVIDENCE & THESIS TRACKING</p>
+            <h3>{language === "cn" ? "研究工作台持续维护证据、假设与后续验证。" : "The research workspace maintains evidence, theses and forward tests."}</h3>
             <span>
               {language === "cn"
-                ? "Research Desk 是面向 AI 科技全产业链的主题投研与另类数据研究台，围绕八条 active Coverage Track 持续维护证据、判断状态与信号。主观基本面系统负责产业与公司判断，系统化量化系统独立检验策略、组合与结果反馈。"
-                : "LunarTulip Research Desk is an always-on thematic investment intelligence service for AI technology, continuously maintaining investment-relevant evidence, thesis states and signals across a focused set of themes, with delivery through institutional research subscriptions and machine-readable thematic data APIs."}
+                ? "Research Desk 是 LunarTulip 内部持续研究方法的公开预览，展示产业与公司证据怎样进入投资假设、验证节点和结果复核。对外合作仍以 AlphaMap 数据授权和专题投研方法与应用为准。"
+                : "Research Desk is a public preview of LunarTulip’s continuous research method: how industry and company evidence enters investment theses, forward tests and outcome review. External engagements remain AlphaMap licensing and scoped methodology applications."}
             </span>
             <Link href={language === "en" ? "/en/desk" : "/desk"}>
-              {language === "cn" ? "查看 Research Desk 真实界面与九层架构" : "Explore the real interface and nine-layer architecture"} <ArrowRightIcon />
+              {language === "cn" ? "查看研究方法与脱敏界面" : "Explore the method and sanitized interface"} <ArrowRightIcon />
             </Link>
           </div>
           <div className="desk-control-grid">
@@ -727,9 +731,9 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
         </div>
 
         <div className="enterprise-mode">
-          <div><small>PROFESSIONAL & INSTITUTIONAL ACCESS</small><strong>{language === "cn" ? "从公开研究开始，进入人读、机器读与系统部署" : "Begin with public research, then move into human, machine and system delivery"}</strong></div>
-          <p>{language === "cn" ? "通过 Deep Dive 与 Authority Ledger 验证研究质量后，可按 coverage 使用 Always-On Research Desk、机器读 Research API、Quant 买方 Alternative Dataset，或通过六次 Workshop 部署团队自身的投研框架。" : "After evaluating the research through Deep Dives and the Authority Ledger, move by coverage into Always-On Research Desk, the machine-readable Research API, alternative datasets for quant investors, or a six-session workshop that installs the team’s own research framework."}</p>
-          <Link href={language === "en" ? "/en/institutional-access" : "/institutional-access"}>{language === "cn" ? "查看产品与合作方式" : "Explore products and access"} <ArrowRightIcon /></Link>
+          <div><small>INSTITUTIONAL PRODUCTS & ENGAGEMENTS</small><strong>{language === "cn" ? "AlphaMap 数据授权 + 专题投研方法与应用" : "AlphaMap licensing and scoped methodology applications"}</strong></div>
+          <p>{language === "cn" ? "AlphaMap 面向持续使用科技产业与公司研究输入的机构；专题项目围绕一个明确研究问题交付方法、研究输出、必要模块和文档。两项可以独立选择，也可以组合。" : "AlphaMap serves institutions that need continuing technology-industry and company research inputs. Scoped projects apply a research method to one defined question and deliver the agreed outputs, necessary modules and documentation. The two formats can stand alone or be combined."}</p>
+          <Link href={language === "en" ? "/en/institutional-access" : "/institutional-access"}>{language === "cn" ? "查看买方方案与标准范围" : "View buyer solutions and standard scope"} <ArrowRightIcon /></Link>
         </div>
       </section>
 
@@ -877,7 +881,7 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
             <article>
               <small>RESEARCH ACCESS</small>
               <h3>{language === "cn" ? "先验证研究质量" : "Evaluate research quality first"}</h3>
-              <p>{language === "cn" ? "通过 Deep Dive、研究方法、更新记录与 Authority Ledger 评估研究质量；随后可选择人读 Research Desk、机器读 API、Alternative Dataset 或投研框架 Workshop。" : "Use Deep Dives, research methods, update histories and the Authority Ledger to assess quality, then choose the human-readable Research Desk, machine-readable API, alternative datasets or the research-framework workshop."}</p>
+              <p>{language === "cn" ? "通过 Deep Dive、AlphaMap Research Series、更新记录与 Authority Ledger 评估研究质量；随后按任务选择 AlphaMap 数据授权或专题投研方法与应用。" : "Use Deep Dives, the AlphaMap Research Series, update histories and the Authority Ledger to assess quality, then choose AlphaMap licensing or a scoped methodology application by task."}</p>
               <Link href={language === "en" ? "/en/institutional-access" : "/institutional-access"}>{language === "cn" ? "查看研究产品与服务" : "Explore research products and services"} <ArrowRightIcon /></Link>
             </article>
             <article>

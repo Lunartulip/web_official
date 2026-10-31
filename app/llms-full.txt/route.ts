@@ -34,7 +34,7 @@ Full analysis and public evidence context: use the canonical article above.`;
 
   const body = `# Lunartulip Lab — Detailed Citation Guide
 
-This file is a discovery companion to the bilingual AlphaMap and Deep Dive archives. It contains citation metadata and abstracts, not the licensed Research API or alternative dataset. Public AlphaMap and Deep Dive articles are research publications, not licensed datasets. The rendered article remains the primary public citation object; https://lunartuliplab.com/research.json is the public metadata manifest.
+This file is a discovery companion to the bilingual AlphaMap and Deep Dive archives. It contains citation metadata and abstracts, not licensed AlphaMap data. Public AlphaMap and Deep Dive articles are research publications, not licensed datasets. The rendered article remains the primary public citation object; https://lunartuliplab.com/research.json is the public metadata manifest.
 
 For full analysis and evidence context, visit the canonical article in the relevant collection. This text file is structured for citation and discovery.
 
@@ -48,11 +48,12 @@ ${alphaMapObjects}
 
 ${deepDiveObjects}
 
-## Services
+## Institutional products and engagements
 
-- Lunartulip Research Desk — always-on thematic investment intelligence for AI technology: https://lunartuliplab.com/en/desk
-- AI-native Research Framework Workshop: https://lunartuliplab.com/en/workshop
-- Machine-readable Research API and point-in-time alternative datasets: https://lunartuliplab.com/en/institutional-access
+- AlphaMap Technology-Equity Alternative Data — licensed by defined coverage, fields, history, updates and use: https://lunartuliplab.com/en/institutional-access#intent-alternative_dataset
+- Scoped Research Methodology & Application — one defined investment research question with agreed outputs and handoff: https://lunartuliplab.com/en/institutional-access#intent-research_access
+- Buyer Solutions & Institutional Access — for systematic equity teams, fundamental investors and investment research platforms: https://lunartuliplab.com/en/institutional-access
+- Research Desk — public preview of the continuous research method, not a third standalone product: https://lunartuliplab.com/en/desk
 
 Public metadata supports discovery and attributed citation under https://lunartuliplab.com/research-usage. Bulk extraction, republication, model training and competing database or API use require separate permission. Research is not investment advice.
 `;

@@ -18,7 +18,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ slu
     {
       "@context": "https://schema.org",
       ...publicResearchDataset(item),
-      usageNotice: "Public metadata supports discovery, search retrieval and attributed citation. It excludes the licensed Research API and alternative-dataset fields.",
+      usageNotice: "Public metadata supports discovery, search retrieval and attributed citation. It excludes licensed AlphaMap fields, history and updates.",
     },
     {
       headers: {

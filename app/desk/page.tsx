@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import DeskPreview from "./desk-preview";
 
 export const metadata: Metadata = {
-  title: "Lunartulip Research Desk｜AI科技主题投研与另类数据研究台",
-  description: "围绕八条 AI 科技 Coverage Track 持续维护证据、判断状态与信号，通过人读研究订阅、另类数据和机器可读 API 分别交付。",
+  title: "LunarTulip Research Desk｜持续研究方法公开预览",
+  description: "展示 LunarTulip 如何持续维护科技产业与公司证据、投资假设和验证节点；对外合作以 AlphaMap 数据授权和专题投研方法与应用为准。",
   alternates: {
     canonical: "https://lunartuliplab.com/desk",
     languages: {
@@ -12,8 +12,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Lunartulip Research Desk｜AI科技主题投研与另类数据研究台",
-    description: "围绕 AI 科技全产业链主题持续维护证据、判断状态与信号。",
+    title: "LunarTulip Research Desk｜持续研究方法公开预览",
+    description: "科技产业与公司证据、投资假设和验证节点的持续研究方法。",
     url: "https://lunartuliplab.com/desk",
     type: "website",
   },

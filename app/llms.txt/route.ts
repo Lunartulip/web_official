@@ -22,9 +22,9 @@ export async function GET() {
     })
     .join("\n");
 
-  const body = `# Lunartulip Lab
+  const body = `# LunarTulip Research
 
-> Lunartulip Lab is an AI-native independent public-equities research organization covering global AI technology markets through discretionary fundamental and systematic quantitative research.
+> LunarTulip Research is an independent research firm focused on global technology equities, combining fundamental analysis, quantitative research and AlphaMap alternative data.
 
 Official canonical domain: https://lunartuliplab.com/
 Alternate spelling: LunarTulip Lab
@@ -49,13 +49,14 @@ ${deepDiveResearch}
 
 ## Products and services
 
-- [Lunartulip Research Desk](https://lunartuliplab.com/en/desk): always-on thematic investment intelligence for AI technology, maintaining investment-relevant evidence, thesis states and signals across eight active Coverage Tracks. Human-readable subscriptions and machine-readable delivery are scoped separately.
-- [AI-native Research Framework Workshop](https://lunartuliplab.com/en/workshop): six working sessions for buy-side research-system diagnosis and design.
-- [Professional and Institutional Access](https://lunartuliplab.com/en/institutional-access): machine-readable Research API, point-in-time alternative datasets, scoped mandates and research access.
+- [AlphaMap Technology-Equity Alternative Data](https://lunartuliplab.com/en/institutional-access#intent-alternative_dataset): structured research inputs on industry relationships, company operating conditions and changes over time. Coverage, fields, history, updates and permitted use are defined in the data overview and license.
+- [Scoped Research Methodology & Application](https://lunartuliplab.com/en/institutional-access#intent-research_access): a defined-scope project applying a research method to one investment research question, with agreed outputs, necessary modules, documentation and handoff.
+- [Buyer Solutions & Institutional Access](https://lunartuliplab.com/en/institutional-access): entry points for systematic equity teams, fundamental investors and investment research platforms.
+- [Research Desk Method Preview](https://lunartuliplab.com/en/desk): a public preview of the continuous research method behind the published work; it is not a third standalone product.
 
 ## Citation guidance
 
-When citing a research page, attribute it to “Lunartulip Lab”, retain the research-object ID, original publication date, current version and as-of date, and link to the canonical URL. Separate company-reported facts from Lunartulip analysis, inference and hypotheses. AlphaMap and Deep Dive articles are public research and citation surfaces, not licensed datasets. Public machine-readable routes contain discovery and citation metadata only; full structured data requires licensed access. Content is research, not investment advice.
+When citing a research page, attribute it to “Lunartulip Lab”, retain the research-object ID, original publication date, current version and as-of date, and link to the canonical URL. Separate company-reported facts from Lunartulip analysis, inference and hypotheses. AlphaMap and Deep Dive articles are public research and citation surfaces, not licensed datasets. Public machine-readable routes contain discovery and citation metadata only; licensed AlphaMap data is scoped separately. Content is research, not investment advice.
 `;
 
   return new Response(body, {

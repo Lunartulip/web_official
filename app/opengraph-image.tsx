@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { ImageResponse } from "next/og";
 
-export const alt = "Lunartulip Lab — AI-native Research & Decision Systems";
+export const alt = "Lunartulip Lab — Global Technology Equity Research & Alternative Data";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -61,17 +61,17 @@ export default async function OpenGraphImage() {
               marginTop: 24,
               display: "flex",
               flexDirection: "column",
-              fontSize: 54,
+              fontSize: 46,
               lineHeight: 1.14,
               fontWeight: 700,
               letterSpacing: "-.045em",
             }}
           >
-            <span>AI-native Research</span>
-            <span>&amp; Decision Systems</span>
+            <span>Global Technology Equity</span>
+            <span>Research &amp; Alternative Data</span>
           </div>
           <span style={{ marginTop: 25, color: "#5f6e77", fontSize: 21 }}>
-            Make every judgment a system asset for the next decision.
+            Fundamental insight, quantitative research and AlphaMap data.
           </span>
         </div>
 

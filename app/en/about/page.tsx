@@ -3,7 +3,7 @@ import AboutPreview from "../../about/about-preview";
 
 export const metadata: Metadata = {
   title: "About Lunartulip Lab",
-  description: "Lunartulip Lab is an AI-native independent research institution combining discretionary fundamental and systematic quantitative research across global AI technology equities.",
+  description: "LunarTulip Research is an independent research firm focused on global technology equities, combining fundamental analysis, quantitative research and alternative data.",
   alternates: {
     canonical: "/en/about",
     languages: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "/en/about",
     title: "About Lunartulip Lab",
-    description: "Independent global AI technology equity research combining discretionary fundamental insight with systematic quantitative validation.",
+    description: "Independent global technology equity research combining fundamental analysis, quantitative research and alternative data.",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Lunartulip Lab" }],
   },
 };

@@ -18,71 +18,41 @@ const actions: Array<{
   detailEn: string;
 }> = [
   {
-    intent: "sample_request",
-    code: "01 / SAMPLE",
-    titleCn: "索取机构样章",
-    titleEn: "Request an institutional sample",
-    bodyCn: "先审阅代表性研究交付物，再判断方法、证据纪律与表达密度是否适合团队。",
-    bodyEn: "Review a representative institutional deliverable before assessing fit, evidence discipline and analytical density.",
-    detailCn: "适合首次评估，不需要提供持仓或交易凭证。",
-    detailEn: "For initial evaluation; no positions or trading credentials are requested.",
+    intent: "alternative_dataset",
+    code: "01 / SYSTEMATIC EQUITY",
+    titleCn: "系统化权益与基本面量化团队",
+    titleEn: "Systematic equity and quantamental teams",
+    bodyCn: "将产业关系、产品结构和经营变化用于科技股中低频选股、主题轮动与共同风险研究。",
+    bodyEn: "Use industry relationships, product structures and operating changes in medium- and low-frequency stock selection, thematic analysis and common-risk research.",
+    detailCn: "获取 AlphaMap 数据说明、字段、历史覆盖与可评估样例。",
+    detailEn: "Request the AlphaMap data overview, fields, history and evaluation samples.",
   },
   {
     intent: "research_access",
-    code: "02 / ACCESS",
-    titleCn: "申请 Lunartulip Research Desk",
-    titleEn: "Apply for Lunartulip Research Desk",
-    bodyCn: "按「专业投资者或机构 × Coverage Track × 固定周期」订阅，持续获得围绕 AI 科技主题维护的人读研究。",
-    bodyEn: "An always-on thematic investment intelligence subscription for a focused set of AI technology themes, purchased by professional investor or institution × Coverage Track × fixed term.",
-    detailCn: "包含 State Change Brief、Coverage Review、Deep Dive、Research Models 与有限 Briefing；机器读 API 和另类数据另行约定。",
-    detailEn: "Includes State Change Briefs, Coverage Reviews, Deep Dives, Research Models and limited Briefings. Machine-readable APIs and alternative datasets are scoped separately.",
-  },
-  {
-    intent: "machine_readable_research",
-    code: "03 / API",
-    titleCn: "讨论机器可读 Research API",
-    titleEn: "Discuss the machine-readable Research API",
-    bodyCn: "把同一套 Research Object、Claim、Evidence、版本与证伪条件交付给内部 Agent、知识库或研究工作流。",
-    bodyEn: "Deliver the same Research Objects, claims, evidence, versions and falsifiers into internal agents, knowledge bases or research workflows.",
-    detailCn: "按 coverage、字段、更新频率与内部使用场景定义权限；不是公开行情 API。",
-    detailEn: "Access is scoped by coverage, fields, update frequency and internal use case; this is not a public market-data API.",
-  },
-  {
-    intent: "alternative_dataset",
-    code: "04 / DATA",
-    titleCn: "讨论 Quant 买方 Alternative Dataset",
-    titleEn: "Discuss alternative datasets for quant investors",
-    bodyCn: "面向系统化与 quantamental 买方，提供 point-in-time 的命题、事件、状态、因子候选与证据归属数据。",
-    bodyEn: "Point-in-time thesis, event, state, candidate-factor and evidence-attribution data for systematic and quantamental buy-side teams.",
-    detailCn: "先定义研究用途、历史覆盖、可回测口径、许可与数据权利边界，再评估交付。",
-    detailEn: "Research use, history, backtest basis, licensing and data-rights boundaries are defined before delivery is assessed.",
+    code: "02 / FUNDAMENTAL EQUITY",
+    titleCn: "基本面权益投资团队",
+    titleEn: "Fundamental equity investment teams",
+    bodyCn: "把新的产业证据对应到公司盈利驱动，复核支持或挑战原有投资假设的变化。",
+    bodyEn: "Connect new industry evidence to company earnings drivers and review what supports or challenges an existing investment thesis.",
+    detailCn: "讨论一个正在跟踪的科技股主题、公司或投资判断。",
+    detailEn: "Discuss a technology-equity theme, company or investment question under active review.",
   },
   {
     intent: "commissioned_mandate",
-    code: "05 / MANDATE",
-    titleCn: "提交 Commissioned Deep Dive / Theme Mandate",
-    titleEn: "Submit a Commissioned Deep Dive / Theme Mandate",
-    bodyCn: "仅接受既有 coverage 与长期研究主线内、能够沉淀进持续研究系统的问题。",
-    bodyEn: "Accepted only within existing coverage and long-horizon research threads that compound into the ongoing research system.",
-    detailCn: "范围限于既有能力圈，不接受临时尽调、代写及无关命题。",
-    detailEn: "Not a general outsourcing, ad-hoc diligence, ghostwriting or arbitrary topic service.",
-  },
-  {
-    intent: "research_system_diagnostic",
-    code: "06 / WORKSHOP",
-    titleCn: "讨论 6-Session AI-native 投研框架 Workshop",
-    titleEn: "Discuss the 6-Session AI-native Research Framework Workshop",
-    bodyCn: "公开价格：人民币 ¥100,000 起 / US$15,000 起。六次工作会议用于诊断、架构设计与共同工作。",
-    bodyEn: "Public starting price: ¥100,000 / US$15,000. Six working sessions cover diagnosis, architecture and collaborative work.",
-    detailCn: "默认不含源码交付、代为实施或无限期支持；超出边界的工作另行定义。",
-    detailEn: "Source-code delivery, implementation and unlimited support are not included by default; additional work is scoped separately.",
+    code: "03 / INVESTMENT PLATFORM",
+    titleCn: "投资研究平台与产品团队",
+    titleEn: "Investment research platforms and product teams",
+    bodyCn: "围绕终端投资用户的具体问题，补充科技产业分析、公司比较与投资假设跟踪能力。",
+    bodyEn: "Add technology-industry analysis, company comparison and thesis monitoring around a defined end-user investment task.",
+    detailCn: "讨论 AlphaMap 数据授权和专题投研方法与应用的组合方式。",
+    detailEn: "Discuss a research and data partnership combining AlphaMap with a scoped methodology application.",
   },
 ];
 
 export default function InstitutionalAccess({ language = "cn" }: { language?: "cn" | "en" }) {
   const isCn = language === "cn";
   const pagePath = isCn ? "/institutional-access" : "/en/institutional-access";
-  const [intent, setIntent] = useState<InquiryIntent>("sample_request");
+  const [intent, setIntent] = useState<InquiryIntent>("alternative_dataset");
   const [status, setStatus] = useState<{ kind: "idle" | "sending" | "success" | "error"; message: string }>({
     kind: "idle",
     message: "",
@@ -128,7 +98,7 @@ export default function InstitutionalAccess({ language = "cn" }: { language?: "c
       if (!result.ok) throw new Error(payload.message || (isCn ? "提交失败。" : "Submission failed."));
       setStatus({ kind: "success", message: payload.message || (isCn ? "询盘已发送。" : "Inquiry sent.") });
       form.reset();
-      setIntent("sample_request");
+      setIntent("alternative_dataset");
     } catch (error) {
       setStatus({
         kind: "error",
@@ -169,18 +139,18 @@ export default function InstitutionalAccess({ language = "cn" }: { language?: "c
       </header>
 
       <section className={styles.hero}>
-        <p className={styles.kicker}>RESEARCH PRODUCTS & SERVICES / 2026</p>
-        <h1>{isCn ? <>先选合作方式，<span>再提交研究问题。</span></> : <>Choose the engagement, <span>then bring the research question.</span></>}</h1>
+        <p className={styles.kicker}>GLOBAL TECHNOLOGY EQUITY RESEARCH & ALTERNATIVE DATA</p>
+        <h1>{isCn ? <>按研究任务，<span>选择合作入口。</span></> : <>Choose the entry point <span>by research task.</span></>}</h1>
         <div className={styles.heroFoot}>
-          <p>{isCn ? "六种合作方式覆盖公开研究样章、AI 科技主题研究订阅、机器读 API、另类数据、研究委托与六次投研框架 Workshop。" : "Six routes cover public research samples, thematic investment intelligence subscriptions, machine-readable APIs, alternative datasets, scoped mandates and a six-session institutional research-system workshop."}</p>
-          <span>EN / CN · PROFESSIONAL & INSTITUTIONAL</span>
+          <p>{isCn ? "LunarTulip Research 面向系统化权益、基本面权益和投资研究平台，提供 AlphaMap 科技股另类数据，以及固定范围的专题投研方法与应用。" : "LunarTulip Research works with systematic equity teams, fundamental investors and investment platforms through AlphaMap alternative data and defined research-methodology engagements."}</p>
+          <span>EN / CN · INSTITUTIONAL BUY-SIDE</span>
         </div>
       </section>
 
       <section className={styles.section} aria-labelledby="entry-title">
         <div className={styles.sectionHead}>
-          <p>01 / ENGAGEMENT ROUTES</p>
-          <h2 id="entry-title">{isCn ? "选择一个明确动作" : "Choose one explicit action"}</h2>
+          <p>01 / BUY-SIDE RESEARCH TASKS</p>
+          <h2 id="entry-title">{isCn ? "您的团队希望完成什么任务？" : "What does your team need to accomplish?"}</h2>
         </div>
         <div className={styles.actionGrid}>
           {actions.map((action) => (
@@ -199,37 +169,37 @@ export default function InstitutionalAccess({ language = "cn" }: { language?: "c
 
       <section className={styles.boundaries} aria-labelledby="alphamap-path-title">
         <div>
-          <p className={styles.cardCode}>02 / PUBLIC SAMPLE TO LICENSED DELIVERY</p>
-          <h2 id="alphamap-path-title">{isCn ? "先读 AlphaMap，再选择持续或机器读交付。" : "Read AlphaMap first, then choose continuous or machine-readable delivery."}</h2>
+          <p className={styles.cardCode}>02 / TWO ENGAGEMENT FORMATS</p>
+          <h2 id="alphamap-path-title">{isCn ? "两种合作方式，可以独立选择或组合。" : "Two engagement formats, available separately or together."}</h2>
         </div>
         <dl>
           <div>
-            <dt>PUBLIC ALPHAMAP SAMPLE</dt>
-            <dd>{isCn ? "公开样章呈现产业因果、价值传导、可证伪假设与引用元数据；受许可数据集按用途、许可与数据权利单独交付。" : "The public sample presents industry causality, value transmission, falsifiable hypotheses and citation metadata. The article is not a licensed dataset."}{" "}<Link href={isCn ? "/alphamap" : "/en/alphamap"}>{isCn ? "阅读 AlphaMap →" : "Read AlphaMap →"}</Link></dd>
+            <dt>{isCn ? "AlphaMap｜科技股另类数据" : "ALPHAMAP / TECHNOLOGY EQUITY ALTERNATIVE DATA"}</dt>
+            <dd>{isCn ? "适用于希望持续使用产业关系、公司经营状态及其变化数据的机构。具体主题、公司、字段、历史、更新与使用范围在数据说明和授权方案中列明。标准年度数据授权：人民币 30 万元／年。" : "For institutions that need continuing use of industry relationships, company operating conditions and changes over time. Coverage, fields, history, updates and permitted use are defined in the data overview and license. Standard annual data license: RMB 300,000."}{" "}<Link href={isCn ? "/alphamap" : "/en/alphamap"}>{isCn ? "阅读公开研究 →" : "Read the public research →"}</Link></dd>
           </div>
           <div>
-            <dt>LICENSED RESEARCH API / ALTERNATIVE DATASET</dt>
-            <dd>{isCn ? "需要结构化历史、字段级更新或系统接入时，再按 coverage、用途、许可与数据权利边界讨论交付。" : "For structured history, field-level updates or system integration, delivery is scoped by coverage, use, licensing and data rights."}{" "}<a href="#intent-machine_readable_research">{isCn ? "查看机器读路径 →" : "View the machine-readable path →"}</a></dd>
+            <dt>{isCn ? "专题投研方法与应用" : "SCOPED RESEARCH METHODOLOGY & APPLICATION"}</dt>
+            <dd>{isCn ? "适用于已经确定研究问题、希望把相应方法用于团队实际工作的机构。交付围绕约定任务，可包含研究方法、输出、必要模块与文档，并完成参考应用和团队交接。标准范围项目：人民币 15 万元／项目。" : "For institutions with a defined research question that want a method applied in real team workflows. Delivery may include the agreed methodology, outputs, necessary modules and documentation, plus a reference application and handoff. Standard scoped project: RMB 150,000."}{" "}<a href="#intent-research_access">{isCn ? "讨论研究任务 →" : "Discuss a research task →"}</a></dd>
           </div>
         </dl>
       </section>
 
       <section className={styles.boundaries}>
         <div>
-          <p className={styles.cardCode}>03 / OPERATING BOUNDARIES</p>
-          <h2>{isCn ? "合作单位与工作边界" : "Delivery units and working boundaries, stated upfront."}</h2>
+          <p className={styles.cardCode}>03 / SCOPE & LICENSING</p>
+          <h2>{isCn ? "合作范围随实际研究用途确定。" : "Scope follows the actual research use."}</h2>
         </div>
         <dl>
-          <div><dt>RESEARCH DESK</dt><dd>{isCn ? "面向 AI 科技主题的持续研究订阅，以专业投资者或机构 × Coverage Track × 固定周期为合作单位；交付状态变化、coverage 复核、深度研究、研究模型与有限 briefing。" : "Always-on thematic investment intelligence for AI technology, scoped as professional investor or institution × Coverage Track × fixed term; delivering state changes, coverage reviews, deep research, research models and limited briefings."}</dd></div>
-          <div><dt>API / DATASET</dt><dd>{isCn ? "按 coverage、字段、历史、更新频率、许可与内部研究用途定义；不把未获权利的数据重新包装为产品。" : "Scoped by coverage, fields, history, update frequency, licensing and internal research use; data without appropriate rights is not repackaged as a product."}</dd></div>
-          <div><dt>COMMISSIONED</dt><dd>{isCn ? "只接受既有 coverage 与长期主线内的命题，研究团队按既有能力圈接题。" : "Only within existing coverage and long-term threads; the research team is not positioned as an arbitrary-topic contractor."}</dd></div>
-          <div><dt>DIAGNOSTIC</dt><dd>{isCn ? "六次会议覆盖现状诊断、目标架构与共同工作。源码、实施和持续支持不默认包含。" : "Six sessions span current-state diagnosis, target architecture and joint work. Code, implementation and ongoing support are excluded by default."}</dd></div>
+          <div><dt>DATA LICENSE</dt><dd>{isCn ? "标准授权不自动包含第三方分发、产品内展示、再许可或模型训练。使用主体、范围、更新与权利按合作方案确认。" : "A standard license does not automatically include third-party distribution, in-product display, sublicensing or model training. Users, scope, updates and rights are agreed in the engagement."}</dd></div>
+          <div><dt>SCOPED PROJECT</dt><dd>{isCn ? "项目围绕一个可界定的主题或任务展开，不自动扩大到全部主题、无限定制或完整内部系统。" : "Each project covers one defined theme or task. It does not automatically extend to every theme, unlimited customization or the complete internal system."}</dd></div>
+          <div><dt>PLATFORM APPLICATION</dt><dd>{isCn ? "面向终端用户的展示、查询、分发、白标、再许可及训练用途，需要按实际应用单独确定范围与报价。" : "End-user display, querying, distribution, white-label use, sublicensing and training rights require a separately defined scope and commercial proposal."}</dd></div>
+          <div><dt>PUBLIC RESEARCH</dt><dd>{isCn ? "Deep Dive、Research Series 与公开 AlphaMap 用于阅读、引用和方法评估，不等同于获授数据或完整产品权限。" : "Deep Dives, Research Series and public AlphaMap studies support reading, citation and method evaluation; they do not grant licensed data or complete product rights."}</dd></div>
         </dl>
       </section>
 
       <section className={styles.inquirySection} aria-labelledby="inquiry-title">
         <div className={styles.inquiryIntro}>
-          <p className={styles.cardCode}>04 / STRUCTURED INQUIRY</p>
+          <p className={styles.cardCode}>04 / INSTITUTIONAL INQUIRY</p>
           <h2 id="inquiry-title">{isCn ? "用一个具体问题开始。" : "Start with one concrete question."}</h2>
           <p>{isCn ? "请说明机构、角色、研究问题与时间预期。不要提交持仓、交易凭证、账户信息或其他敏感数据。" : "Tell us your institution, role, research question and expected timeline. Do not submit positions, trading credentials, account information or other sensitive data."}</p>
           <p className={styles.compliance}>{isCn ? "本入口不构成投资顾问服务、产品募集、投资要约或收益承诺。" : "This channel is not investment advice, fundraising, an investment offer or a promise of returns."}</p>
@@ -259,7 +229,7 @@ export default function InstitutionalAccess({ language = "cn" }: { language?: "c
             {status.kind === "sending" ? (isCn ? "发送中…" : "Sending…") : (isCn ? "提交结构化询盘 →" : "Submit structured inquiry →")}
           </button>
           <p className={`${styles.formStatus} ${status.kind === "error" ? styles.error : ""}`} role="status" aria-live="polite">
-            {status.message || (isCn ? "提交后，邮件主题与正文会记录唯一的 source 与 intent。" : "The email subject and body retain the unique source and intent.")}
+            {status.message || (isCn ? "我们会根据研究任务匹配资料、样例与合作范围。" : "We will match the inquiry with relevant materials, samples and engagement scope.")}
           </p>
           <noscript><p className={styles.noScript}>{isCn ? "JavaScript 已关闭：提交后将打开清晰的成功或失败结果页。" : "JavaScript is off: submission opens a clear success or failure result page."}</p></noscript>
         </form>

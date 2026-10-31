@@ -11,18 +11,18 @@ type Language = "cn" | "en";
 const definitions = [
   {
     code: "RESEARCH SCOPE",
-    cn: "聚焦全球泛 AI 科技产业链的跨市场二级权益研究，连接 A 股、美股与港股的技术演进、产业传导与价值兑现。",
-    en: "Cross-market public-equity research across the global AI technology value chain, connecting A-share, U.S. and Hong Kong markets.",
+    cn: "聚焦全球科技股，重点研究 AI 产业链与相关投资主题。",
+    en: "Global technology equities, with an emphasis on the AI value chain and related investment themes.",
   },
   {
     code: "WHO WE SERVE",
-    cn: "服务公募、私募、资管机构、专业家族办公室、研究团队，以及需要可验证外部研究源的研究 Agent。",
-    en: "For funds, asset managers, professional family offices, research teams and research agents that need a verifiable external source.",
+    cn: "面向系统化权益与基本面量化团队、基本面权益投资团队，以及投资研究平台与产品团队。",
+    en: "For systematic and quantamental teams, fundamental equity investors, and investment research platforms.",
   },
   {
     code: "RESEARCH VALUE",
-    cn: "主观基本面研究解释产业因果与预期差，系统化量化研究检验信号与组合纪律，共同形成可追溯、可验证、可持续更新的研究判断。",
-    en: "Discretionary fundamental research explains causality and expectation gaps; systematic quant tests signals and portfolio discipline—together producing traceable, testable and continuously updated judgment.",
+    cn: "结合产业与公司基本面分析、量化研究和 AlphaMap 另类数据，为股票选择、投资假设跟踪与主题研究提供研究输入和方法支持。",
+    en: "Fundamental analysis, quantitative research and AlphaMap alternative data support stock selection, investment thesis monitoring and thematic research.",
   },
 ];
 
@@ -64,10 +64,10 @@ export default function AboutPreview({ initialLanguage = "cn" }: { initialLangua
 
       <section className={styles.hero}>
         <div>
-          <p>INDEPENDENT PUBLIC-EQUITIES RESEARCH</p>
-          <h1>{isCn ? <>理解 AI 产业变化，<br /><span>验证其如何转化为权益价值。</span></> : <>Understand AI industry change.<br /><span>Test how it translates into equity value.</span></>}</h1>
+          <p>GLOBAL TECHNOLOGY EQUITY RESEARCH & ALTERNATIVE DATA</p>
+          <h1>{isCn ? <>全球科技股的<br /><span>基本面与量化研究。</span></> : <>Fundamental and quantitative research<br /><span>for global technology equities.</span></>}</h1>
         </div>
-        <p>{isCn ? "Lunartulip Lab 聚焦 A 股、美股与港股的全球泛 AI 科技权益，为机构与专业投资者提供带时间戳、证据边界、更新记录和结果验证的独立研究。" : "Lunartulip Lab covers global AI technology equities across A-share, U.S. and Hong Kong markets, providing institutions and professional investors with independent research built around timestamps, evidence boundaries, update histories and outcome validation."}</p>
+        <p>{isCn ? "LunarTulip Research 是一家聚焦全球科技股的独立研究机构。我们研究产业变化怎样进入公司的收入、利润与现金流，以及这些变化相对于既有预期意味着什么。" : "LunarTulip Research is an independent research firm focused on global technology equities. We study how industry change reaches company revenue, profit and cash flow, and what it means relative to existing expectations."}</p>
       </section>
 
       <section className={styles.definition}>
