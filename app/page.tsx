@@ -669,15 +669,15 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
 
         <div className="desk-control-plane">
           <div className="desk-control-copy">
-            <p>RESEARCH METHOD / CONTINUOUS EVIDENCE & THESIS TRACKING</p>
-            <h3>{language === "cn" ? "研究工作台持续维护证据、假设与后续验证。" : "The research workspace maintains evidence, theses and forward tests."}</h3>
+            <p>RESEARCH DESK / ALWAYS-ON THEMATIC INTELLIGENCE</p>
+            <h3>{language === "cn" ? "Research Desk 继续作为持续研究产品线推进。" : "Research Desk continues as a continuous-research product line."}</h3>
             <span>
               {language === "cn"
-                ? "Research Desk 是 LunarTulip 内部持续研究方法的公开预览，展示产业与公司证据怎样进入投资假设、验证节点和结果复核。对外合作仍以 AlphaMap 数据授权和专题投研方法与应用为准。"
-                : "Research Desk is a public preview of LunarTulip’s continuous research method: how industry and company evidence enters investment theses, forward tests and outcome review. External engagements remain AlphaMap licensing and scoped methodology applications."}
+                ? "当前由 AlphaMap Dataset 率先进入市场，Research Desk／Pro 随后推进。Desk 面向 PM、CIO、基金创始人与专业投资者，Pro 可按合作范围提供结构化导出与限额 API；更高限额的 Power/API 由真实接入需求拉出。"
+                : "AlphaMap Dataset is first to market, with Research Desk / Pro following afterward. Desk serves PMs, CIOs, fund founders and professional investors; Pro may include structured exports and a limited API, while higher-limit Power/API access remains demand-led."}
             </span>
             <Link href={language === "en" ? "/en/desk" : "/desk"}>
-              {language === "cn" ? "查看研究方法与脱敏界面" : "Explore the method and sanitized interface"} <ArrowRightIcon />
+              {language === "cn" ? "查看 Desk 产品路线与脱敏界面" : "Explore the Desk roadmap and sanitized interface"} <ArrowRightIcon />
             </Link>
           </div>
           <div className="desk-control-grid">
@@ -731,8 +731,8 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
         </div>
 
         <div className="enterprise-mode">
-          <div><small>INSTITUTIONAL PRODUCTS & ENGAGEMENTS</small><strong>{language === "cn" ? "AlphaMap 数据授权 + 专题投研方法与应用" : "AlphaMap licensing and scoped methodology applications"}</strong></div>
-          <p>{language === "cn" ? "AlphaMap 面向持续使用科技产业与公司研究输入的机构；专题项目围绕一个明确研究问题交付方法、研究输出、必要模块和文档。两项可以独立选择，也可以组合。" : "AlphaMap serves institutions that need continuing technology-industry and company research inputs. Scoped projects apply a research method to one defined question and deliver the agreed outputs, necessary modules and documentation. The two formats can stand alone or be combined."}</p>
+          <div><small>ONE ENGINE · TIERED PRODUCT SURFACES</small><strong>{language === "cn" ? "AlphaMap 先行，Research Desk／Pro 与 API 随需求展开" : "AlphaMap first; Research Desk / Pro and API expand with demand"}</strong></div>
+          <p>{language === "cn" ? "当前商业承接以 AlphaMap 数据授权和固定范围的专题项目为主。Research Desk 保留专业投资者端的产品地位，Desk Pro 可包含限额 API；部分 AlphaMap 交付也可使用获许可的 Desk API。各产品面共用同一套时点化、证据可追溯的研究状态。" : "Current commercial work leads with AlphaMap licensing and scoped projects. Research Desk remains the professional-investor product line, Desk Pro may include a limited API, and some AlphaMap delivery may use licensed Desk APIs. Every surface shares the same point-in-time, evidence-linked research state."}</p>
           <Link href={language === "en" ? "/en/institutional-access" : "/institutional-access"}>{language === "cn" ? "查看买方方案与标准范围" : "View buyer solutions and standard scope"} <ArrowRightIcon /></Link>
         </div>
       </section>
@@ -881,7 +881,7 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
             <article>
               <small>RESEARCH ACCESS</small>
               <h3>{language === "cn" ? "先验证研究质量" : "Evaluate research quality first"}</h3>
-              <p>{language === "cn" ? "通过 Deep Dive、AlphaMap Research Series、更新记录与 Authority Ledger 评估研究质量；随后按任务选择 AlphaMap 数据授权或专题投研方法与应用。" : "Use Deep Dives, the AlphaMap Research Series, update histories and the Authority Ledger to assess quality, then choose AlphaMap licensing or a scoped methodology application by task."}</p>
+              <p>{language === "cn" ? "通过 Deep Dive、AlphaMap Research Series、更新记录与 Authority Ledger 评估研究质量；随后按任务选择 AlphaMap 数据授权、Research Desk／API 产品路线或专题投研方法与应用。" : "Use Deep Dives, the AlphaMap Research Series, update histories and the Authority Ledger to assess quality, then evaluate AlphaMap licensing, the Research Desk / API roadmap or a scoped methodology application by task."}</p>
               <Link href={language === "en" ? "/en/institutional-access" : "/institutional-access"}>{language === "cn" ? "查看研究产品与服务" : "Explore research products and services"} <ArrowRightIcon /></Link>
             </article>
             <article>

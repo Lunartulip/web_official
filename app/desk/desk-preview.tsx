@@ -243,12 +243,12 @@ export default function DeskPreview({
       <section className={styles.hero}>
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}>
-            CONTINUOUS RESEARCH METHOD / PUBLIC PREVIEW
+            ALWAYS-ON THEMATIC INTELLIGENCE / PRODUCT ROADMAP
           </p>
           <p className={styles.productName}>
             {isCn
-              ? "LunarTulip Research Desk｜内部持续研究方法的公开预览"
-              : "LUNARTULIP RESEARCH DESK / PUBLIC METHOD PREVIEW"}
+              ? "LunarTulip Research Desk｜面向专业投资者的持续研究产品"
+              : "LUNARTULIP RESEARCH DESK / CONTINUOUS RESEARCH PRODUCT"}
           </p>
           <h1>
             {isCn ? (
@@ -267,8 +267,8 @@ export default function DeskPreview({
           </h1>
           <p className={styles.heroLead}>
             {isCn
-              ? "Research Desk 展示 LunarTulip 怎样持续维护科技产业与公司证据、投资假设和验证节点。它支持公开研究、AlphaMap 数据与专题投研方法与应用，本页不构成单独的第三款商品。"
-              : "Research Desk shows how LunarTulip maintains technology-industry and company evidence, investment theses and forward tests. It supports public research, AlphaMap data and scoped methodology applications; this page does not represent a third standalone product."}
+              ? "Research Desk 是 LunarTulip 面向 PM、CIO、基金创始人与专业投资者的持续研究产品线。当前由 AlphaMap Dataset 率先进入市场，Desk 随后分阶段开放；Desk Pro 可在约定范围内提供结构化导出与限额 API。"
+              : "Research Desk is LunarTulip’s continuous-research product line for PMs, CIOs, fund founders and professional investors. AlphaMap Dataset is first to market, with Desk opening in stages afterward; Desk Pro may include structured exports and a limited API within the agreed scope."}
           </p>
           <div className={styles.heroActions}>
             <a className={styles.primaryButton} href="#workspace">
@@ -459,14 +459,14 @@ export default function DeskPreview({
           </article>
           <i aria-hidden="true">→</i>
           <article className={styles.topologyDesk}>
-            <p>METHOD PREVIEW</p>
-            <h3>{isCn ? "持续研究方法" : "Continuous Research Method"}</h3>
+            <p>PRODUCT SURFACE</p>
+            <h3>{isCn ? "Research Desk／Pro" : "Research Desk / Pro"}</h3>
             <span>
               {isCn
-                ? "展示研究状态、主观与量化验证、结果账本和可复盘的决策记忆如何衔接。"
-                : "Shows how research state, discretionary and quantitative validation, outcome ledgers and reviewable decision memory connect."}
+                ? "把研究状态、主题优先的 Decision Objects、结构化导出与限额 API 组织成可持续使用的产品。"
+                : "Turns research state, theme-first Decision Objects, structured exports and a limited API into a recurring product."}
             </span>
-            <small>PUBLIC METHOD PREVIEW</small>
+            <small>STAGED AVAILABILITY</small>
           </article>
         </div>
       </section>
@@ -474,17 +474,17 @@ export default function DeskPreview({
       <section className={styles.values} aria-labelledby="desk-formats">
         <div className={styles.sectionHeading}>
           <div>
-            <p className={styles.eyebrow}>FROM METHOD TO ENGAGEMENT / 02</p>
+            <p className={styles.eyebrow}>ONE ENGINE · TIERED SURFACES / 02</p>
             <h2 id="desk-formats">
               {isCn
-                ? "研究方法通过两款商品进入机构工作。"
-                : "The method reaches institutional work through two products."}
+                ? "同一套研究状态，按任务进入不同产品面。"
+                : "One research state, delivered through task-specific product surfaces."}
             </h2>
           </div>
           <p>
             {isCn
-              ? "AlphaMap 提供可持续使用的科技产业与公司研究输入；专题投研方法与应用围绕一个明确问题交付方法、研究输出和必要模块。公开研究用于理解与评估。"
-              : "AlphaMap provides continuing technology-industry and company research inputs. Scoped methodology engagements apply a method to one defined question and deliver agreed outputs and necessary modules. Public research supports evaluation."}
+              ? "AlphaMap 是当前先行产品；Research Desk／Pro 作为专业投资者端的 recurring 产品随后推进。限额 API 属于 Pro 的可选交付，高限额 Power/API 则由真实机器接入需求拉出。"
+              : "AlphaMap is the current spearhead. Research Desk / Pro follows as a recurring product for professional investors. A limited API may be included with Pro, while higher-limit Power/API access is pulled forward by validated machine-integration demand."}
           </p>
         </div>
         <div className={styles.valueGrid}>
@@ -502,7 +502,33 @@ export default function DeskPreview({
             </span>
           </article>
           <article>
-            <p>02 / PROJECT</p>
+            <p>02 / DESK · NEXT</p>
+            <h3>
+              {isCn
+                ? "Research Desk／Pro"
+                : "Research Desk / Pro"}
+            </h3>
+            <span>
+              {isCn
+                ? "面向专业投资者提供主题优先的 Decision Objects、持续 Coverage、结构化导出，以及约定范围内的限额 API。"
+                : "Theme-first Decision Objects, maintained coverage, structured exports and, within an agreed scope, a limited API for professional investors."}
+            </span>
+          </article>
+          <article>
+            <p>03 / API · DEMAND-LED</p>
+            <h3>
+              {isCn
+                ? "Research API／Power"
+                : "Research API / Power"}
+            </h3>
+            <span>
+              {isCn
+                ? "部分 AlphaMap 数据可通过 Desk API 交付；高限额调用、批量历史与事件流将在真实接入需求出现后开放。"
+                : "Some AlphaMap delivery may use Desk APIs. Higher limits, bulk history and event streams open after validated integration demand emerges."}
+            </span>
+          </article>
+          <article>
+            <p>04 / PROJECT · SCOPED</p>
             <h3>
               {isCn
                 ? "专题投研方法与应用"
@@ -510,21 +536,8 @@ export default function DeskPreview({
             </h3>
             <span>
               {isCn
-                ? "围绕一个明确主题或研究任务，交付约定的方法、研究输出、必要模块、样例与文档。"
-                : "A defined theme or research task with agreed methodology, outputs, necessary modules, examples and documentation."}
-            </span>
-          </article>
-          <article>
-            <p>03 / PROOF</p>
-            <h3>
-              {isCn
-                ? "公开研究与方法证据"
-                : "Public research and method evidence"}
-            </h3>
-            <span>
-              {isCn
-                ? "Deep Dive、AlphaMap Research Series 和 Authority Ledger 用于阅读、引用与方法评估。"
-                : "Deep Dives, the AlphaMap Research Series and Authority Ledger support reading, citation and method evaluation."}
+                ? "围绕明确主题或任务，交付约定的方法、研究输出、必要模块、样例与文档。"
+                : "A defined theme or task with agreed methodology, outputs, necessary modules, examples and documentation."}
             </span>
           </article>
         </div>
@@ -734,13 +747,13 @@ export default function DeskPreview({
           <p className={styles.eyebrow}>DEEPER VERIFICATION / 06</p>
           <h2 id="request-title">
             {isCn
-              ? "从研究作品开始，进一步了解系统方法。"
-              : "Begin with the research, then explore the system behind it."}
+              ? "先看研究作品，再评估合适的产品面。"
+              : "Begin with the research, then evaluate the right product surface."}
           </h2>
           <p>
             {isCn
-              ? "先阅读公开 AlphaMap 或 Deep Dive，再按研究任务评估 AlphaMap 数据授权和专题投研方法与应用。公开文章用于阅读、引用和方法评估；数据与应用权利按合作范围另行确认。"
-              : "Begin with public AlphaMap research or a Deep Dive, then evaluate AlphaMap licensing and a scoped methodology application against the research task. Public articles support reading, citation and method evaluation; data and application rights are defined separately."}
+              ? "先阅读公开 AlphaMap 或 Deep Dive，再按研究任务评估 AlphaMap 数据授权、Research Desk／Pro、机器接入或专题投研项目。公开文章只用于阅读、引用和方法评估；数据、Desk 与 API 权限分别约定。"
+              : "Begin with public AlphaMap research or a Deep Dive, then evaluate AlphaMap licensing, Research Desk / Pro, machine integration or a scoped project. Public articles support reading, citation and method evaluation; data, Desk and API rights are scoped separately."}
           </p>
         </div>
         <div className={styles.proofLinks}>
@@ -776,11 +789,11 @@ export default function DeskPreview({
       </section>
 
       <section className={styles.boundary}>
-        <p>RESEARCH METHODOLOGY / IMPORTANT INFORMATION</p>
+        <p>RESEARCH DESK / IMPORTANT INFORMATION</p>
         <span>
           {isCn
-            ? "本页展示研究方法、系统结构与脱敏界面，仅供了解 Lunartulip 的研究能力与工作方式；不构成投资建议、基金募集、金融产品推介或收益承诺。"
-            : "This page presents research methods, system architecture and sanitized interfaces to explain Lunartulip’s research capabilities and working approach. It is not investment advice, fundraising, financial-product solicitation or a promise of returns."}
+            ? "本页介绍 Research Desk 产品路线，并展示脱敏界面与系统结构。具体可用功能、覆盖、数据字段和 API 权限以合作范围为准；不提供实时仓位、模型权重、核心 Decision Memory 或完整内部系统。本页不构成投资建议、基金募集、金融产品推介或收益承诺。"
+            : "This page describes the Research Desk product roadmap and presents sanitized interfaces and system architecture. Available features, coverage, data fields and API rights depend on the agreed scope; live positions, model weights, core Decision Memory and the complete internal system are not provided. This is not investment advice, fundraising, financial-product solicitation or a promise of returns."}
         </span>
       </section>
 
@@ -795,7 +808,7 @@ export default function DeskPreview({
           />
           <span>LUNARTULIP LAB</span>
         </Link>
-        <p>RESEARCH DESK · CONTINUOUS RESEARCH METHOD</p>
+        <p>RESEARCH DESK · ALWAYS-ON THEMATIC INTELLIGENCE</p>
         <a href={exchangeMailto}>
           {isCn ? "机构研究交流" : "Institutional research exchange"}
         </a>

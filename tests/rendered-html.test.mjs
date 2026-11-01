@@ -136,7 +136,7 @@ test("states the global technology-equity identity and research disciplines", ()
   assert.match(pageSource, /AlphaMap 科技股另类数据/);
 });
 
-test("publishes three buyer tasks, proof surfaces and two products", () => {
+test("publishes buyer tasks, proof surfaces, current offers and the product roadmap", () => {
   for (const term of [
     "系统化权益与基本面量化团队",
     "基本面权益投资团队",
@@ -147,12 +147,14 @@ test("publishes three buyer tasks, proof surfaces and two products", () => {
     "AGGREGATE / METHODOLOGY-LED",
     "AlphaMap 科技股另类数据",
     "专题投研方法与应用",
+    "Research Desk／Pro",
+    "Power/API",
   ]) {
     assert.match(pageSource, new RegExp(term.replace("$", "\\$")));
   }
   assert.match(pageSource, /href: "\/deep-dive"/);
   assert.match(pageSource, /href: "\/authority-ledger"/);
-  assert.doesNotMatch(pageSource, /6-Session Workshop|Research API/);
+  assert.doesNotMatch(pageSource, /6-Session Workshop/);
 });
 
 test("publishes canonical versioned Deep Dive research objects", () => {
@@ -546,8 +548,8 @@ test("routes AlphaMap discovery separately from Deep Dive and licensed data", ()
   assert.match(deepDiveIndexSource, /Continue with AlphaMap/);
   assert.doesNotMatch(deepDiveIndexSource, /\.filter\(\(item\) => String\(item\.kind\) === "alphamap-study"\)/);
   assert.match(deskPreviewSource, /AlphaMap 科技股另类数据/);
-  assert.match(deskPreviewSource, /公开研究与方法证据/);
-  assert.match(accessPageSource, /ALPHAMAP \/ TECHNOLOGY EQUITY ALTERNATIVE DATA/);
+  assert.match(deskPreviewSource, /Research API／Power/);
+  assert.match(accessPageSource, /ALPHAMAP TECHNOLOGY-EQUITY ALTERNATIVE DATA/);
   assert.match(accessPageSource, /具体主题、公司、字段、历史、更新与使用范围在数据说明和授权方案中列明/);
 });
 
@@ -567,14 +569,14 @@ test("renders the Authority Ledger from a generated data projection with visible
   assert.match(authorityViewSource, /回溯期与纪律期独立列示/);
 });
 
-test("publishes the Desk as a method preview and retires the Workshop route", () => {
+test("publishes the Desk product roadmap and retires the Workshop route", () => {
   assert.match(workshopPageSource, /redirect\("\/institutional-access#intent-research_access"\)/);
   assert.doesNotMatch(sitemapSource, /path: "\/workshop"/);
   assert.match(sitemapSource, /lunartuliplab\.com\/desk/);
   assert.match(deskPageSource, /LunarTulip Research Desk/);
   for (const term of [
-    "CONTINUOUS RESEARCH METHOD \/ PUBLIC PREVIEW",
-    "不构成单独的第三款商品",
+    "ALWAYS-ON THEMATIC INTELLIGENCE / PRODUCT ROADMAP",
+    "面向专业投资者的持续研究产品",
     "AI_COMPUTE_ECONOMICS",
     "PHYSICAL_AI_ROBOTICS",
     "01 / RESEARCH",
@@ -586,22 +588,32 @@ test("publishes the Desk as a method preview and retires the Workshop route", ()
     "AlphaMap × Ontology",
     "MOSTLY AUTOMATED",
     "双 NAV",
-    "FROM METHOD TO ENGAGEMENT",
+    "ONE ENGINE · TIERED SURFACES",
     "AlphaMap 科技股另类数据",
+    "Research Desk／Pro",
+    "Research API／Power",
+    "限额 API",
     "专题投研方法与应用",
   ]) {
     assert.match(deskPreviewSource, new RegExp(term.replace(/[×/]/g, "\\$&")));
   }
-  assert.doesNotMatch(deskPreviewSource, /Always-On Research Desk|Research API|6-Session Workshop/i);
+  assert.doesNotMatch(deskPreviewSource, /6-Session Workshop/i);
 });
 
-test("keeps Research Desk as evidence of method rather than a third product", () => {
-  assert.match(pageSource, /内部持续研究方法的公开预览/);
-  assert.match(deskPreviewSource, /不构成单独的第三款商品/);
-  assert.match(englishDeskSource, /Public Preview of a Continuous Research Method/);
-  assert.match(llmsSource, /not a third standalone product/);
-  assert.match(accessPageSource, /AlphaMap/);
-  assert.match(accessPageSource, /专题投研方法与应用/);
+test("keeps Dataset first while preserving Desk, Pro and API product surfaces", () => {
+  for (const source of [pageSource, deskPreviewSource, accessPageSource, llmsSource, llmsFullSource]) {
+    assert.match(source, /AlphaMap/);
+    assert.match(source, /Research Desk/);
+    assert.match(source, /API/);
+  }
+  assert.match(pageSource, /AlphaMap Dataset 率先进入市场/);
+  assert.match(deskPreviewSource, /Desk Pro 可在约定范围内提供结构化导出与限额 API/);
+  assert.match(englishDeskSource, /Continuous Research for Professional Investors/);
+  assert.match(llmsSource, /current go-to-market spearhead/);
+  assert.match(llmsSource, /Some licensed AlphaMap delivery may use Desk APIs/);
+  assert.match(accessPageSource, /高限额 API、批量历史和事件流在出现真实接入需求后开放/);
+  assert.match(accessPageSource, /购买 AlphaMap 不自动取得全部 Desk 或 API 权限/);
+  assert.doesNotMatch(deskPreviewSource + llmsSource + llmsFullSource, /not a third standalone product|不构成单独的第三款商品/i);
 });
 
 test("defines a canonical About entity page without a founder", () => {
@@ -638,12 +650,15 @@ test("separates the current mandate from the long-term buy-side vision", () => {
   assert.match(pageSource, /不构成投资建议、操作指引、基金募集、金融产品推介或收益承诺/);
 });
 
-test("presents institutional access around three buyer tasks and two products", () => {
+test("presents institutional access around buyer tasks and tiered product surfaces", () => {
   for (const term of [
     "系统化权益与基本面量化",
     "基本面权益",
     "投资研究平台",
-    "AlphaMap｜科技股另类数据",
+    "需要 Research API 或结构化接入的团队",
+    "AlphaMap 科技股另类数据",
+    "LunarTulip Research Desk／Pro",
+    "Research API",
     "专题投研方法与应用",
     "年度数据授权人民币 30 万元起",
     "专题项目人民币 15 万元起",
@@ -655,7 +670,7 @@ test("presents institutional access around three buyer tasks and two products", 
   }
   assert.match(accessPageSource, /不自动包含第三方分发、产品内展示、再许可或模型训练/);
   assert.match(accessPageSource, /不要提交持仓、交易凭证、账户信息/);
-  assert.doesNotMatch(accessPageSource, /标准年度数据授权：人民币 30 万元／年|标准范围项目：人民币 15 万元／项目|Standard annual data license: RMB 300,000|Standard scoped project: RMB 150,000|Research API|6-Session|¥100,000|US\$15,000|checkout|credit card|payment provider/i);
+  assert.doesNotMatch(accessPageSource, /标准年度数据授权：人民币 30 万元／年|标准范围项目：人民币 15 万元／项目|Standard annual data license: RMB 300,000|Standard scoped project: RMB 150,000|6-Session|¥100,000|US\$15,000|checkout|credit card|payment provider/i);
   assert.match(layoutSource, /"@type": "AggregateOffer"/);
   assert.match(layoutSource, /lowPrice: "300000"/);
   assert.match(layoutSource, /lowPrice: "150000"/);

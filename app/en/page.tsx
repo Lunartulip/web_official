@@ -3,7 +3,7 @@ import Home from "../page";
 
 export const metadata: Metadata = {
   title: "Global Technology Equity Research & Alternative Data",
-  description: "LunarTulip Research is an independent research firm focused on global technology equities, combining fundamental analysis, quantitative research and AlphaMap alternative data.",
+  description: "LunarTulip Research combines fundamental analysis, quantitative research, AlphaMap alternative data and the Research Desk continuous-research product line for global technology equities.",
   alternates: {
     canonical: "/en",
     languages: {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     url: "/en",
     siteName: "Lunartulip Lab",
     title: "Lunartulip Lab — Global Technology Equity Research & Alternative Data",
-    description: "Independent global technology equity research combining fundamental analysis, quantitative research and AlphaMap alternative data.",
+    description: "Independent global technology equity research combining fundamental analysis, quantitative research, AlphaMap alternative data and Research Desk.",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Lunartulip Lab" }],
   },
 };

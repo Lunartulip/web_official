@@ -51,14 +51,15 @@ ${deepDiveResearch}
 
 ## Products and services
 
-- [AlphaMap Technology-Equity Alternative Data](https://lunartuliplab.com/en/institutional-access#intent-alternative_dataset): structured research inputs on industry relationships, company operating conditions and changes over time. Coverage, fields, history, updates and permitted use are defined in the data overview and license.
+- [AlphaMap Technology-Equity Alternative Data](https://lunartuliplab.com/en/institutional-access#intent-alternative_dataset): the current go-to-market spearhead, providing structured research inputs on industry relationships, company operating conditions and changes over time. Coverage, fields, history, updates and permitted use are defined in the data overview and license.
+- [Research Desk / Pro](https://lunartuliplab.com/en/desk): LunarTulip's B2P continuous-research product line for PMs, CIOs, fund founders and professional investors. It follows AlphaMap in the launch sequence rather than being discontinued. Desk Pro may include theme-first Decision Objects, maintained coverage, structured exports and a limited API within the agreed scope.
+- [Research API / Power](https://lunartuliplab.com/en/institutional-access#intent-machine_readable_research): a machine-delivery surface of the same canonical research state. Some licensed AlphaMap delivery may use Desk APIs. Higher limits, bulk history and event streams will open in stages after validated integration demand.
 - [Scoped Research Methodology & Application](https://lunartuliplab.com/en/institutional-access#intent-research_access): a defined-scope project applying a research method to one investment research question, with agreed outputs, necessary modules, documentation and handoff.
 - [Buyer Solutions & Institutional Access](https://lunartuliplab.com/en/institutional-access): entry points for systematic equity teams, fundamental investors and investment research platforms.
-- [Research Desk Method Preview](https://lunartuliplab.com/en/desk): a public preview of the continuous research method behind the published work; it is not a third standalone product.
 
 ## Citation guidance
 
-When citing a research page, attribute it to “Lunartulip Lab”, retain the research-object ID, original publication date, current version and as-of date, and link to the canonical URL. Separate company-reported facts from Lunartulip analysis, inference and hypotheses. AlphaMap and Deep Dive articles are public research and citation surfaces, not licensed datasets. Public machine-readable routes contain discovery and citation metadata only; licensed AlphaMap data is scoped separately. Content is research, not investment advice.
+When citing a research page, attribute it to “Lunartulip Lab”, retain the research-object ID, original publication date, current version and as-of date, and link to the canonical URL. Separate company-reported facts from Lunartulip analysis, inference and hypotheses. AlphaMap and Deep Dive articles are public research and citation surfaces, not licensed datasets. Public machine-readable routes contain discovery and citation metadata only; licensed AlphaMap, Desk and Research API access is scoped separately. Product surfaces share point-in-time, evidence-linked research state, but no public page or standard license grants the complete internal system. Content is research, not investment advice.
 `;
 
   return new Response(body, {

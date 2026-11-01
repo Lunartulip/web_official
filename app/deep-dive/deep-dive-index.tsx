@@ -109,8 +109,8 @@ export default function DeepDiveIndex({ language = "cn" }: { language?: "cn" | "
 
       <section className={styles.section}>
         <div className={styles.sectionHead}>
-          <div><p className={styles.sectionLabel}>FROM PUBLIC RESEARCH TO INSTITUTIONAL USE</p><h2>{isCn ? "按研究任务选择数据授权或专题项目。" : "Choose data licensing or a scoped project by research task."}</h2></div>
-          <p className={styles.lead}>{isCn ? "公开 Deep Dive 用于阅读、引用和研究方法评估。机构可以进一步使用 AlphaMap 科技股另类数据，或围绕一个明确问题开展专题投研方法与应用项目。" : "Public Deep Dives support reading, citation and method evaluation. Institutions can license AlphaMap technology-equity alternative data or engage on one defined research question."}</p>
+          <div><p className={styles.sectionLabel}>FROM PUBLIC RESEARCH TO INSTITUTIONAL USE</p><h2>{isCn ? "按研究任务选择数据、Desk 或专题项目。" : "Choose data, Desk or a scoped project by research task."}</h2></div>
+          <p className={styles.lead}>{isCn ? "公开 Deep Dive 用于阅读、引用和研究方法评估。机构可以进一步使用 AlphaMap 科技股另类数据，登记 Research Desk／API 产品更新，或围绕一个明确问题开展专题投研方法与应用项目。" : "Public Deep Dives support reading, citation and method evaluation. Institutions can license AlphaMap alternative data, register for Research Desk / API updates or engage on one defined research question."}</p>
         </div>
         <div className={styles.grid}>
           <article className={styles.card}><p className={styles.meta}>DATA / ANNUAL LICENSE</p><h3>{isCn ? "AlphaMap 科技股另类数据" : "AlphaMap Technology-Equity Alternative Data"}</h3><p>{isCn ? "将产业关系、公司经营状态及其变化用于机构已有的量化或基本面研究流程。" : "Use industry relationships, company operating conditions and changes over time in existing quantitative or fundamental research processes."}</p><Link href={`${isCn ? "" : "/en"}/institutional-access#intent-alternative_dataset`}>{isCn ? "获取数据说明与样例 →" : "Request data overview and samples →"}</Link></article>

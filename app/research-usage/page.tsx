@@ -4,7 +4,7 @@ import styles from "./research-usage.module.css";
 
 export const metadata: Metadata = {
   title: "Research Citation & Use Terms｜研究引用与使用条款",
-  description: "Lunartulip Lab 公开研究页面、引用元数据与获授权 AlphaMap 数据之间的使用边界。",
+  description: "Lunartulip Lab 公开研究页面、引用元数据与获授权 AlphaMap、Research Desk 及 Research API 之间的使用边界。",
   alternates: { canonical: "/research-usage" },
   robots: { index: true, follow: true },
 };
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const permitted = [
   "搜索引擎与 AI Search 可以抓取、缓存公开页面和公开 citation manifest，用于索引、检索和生成带来源链接的有限摘要。一次读取完整的公开 manifest 属于允许范围。",
   "读者可以引用有限篇幅的内容，但应保留 Lunartulip Lab、Research Object ID、版本、发布日期与 canonical URL。",
-  "机构可以在内部评估阶段阅读公开材料，并据此判断是否申请 AlphaMap 数据评估或专题投研方法与应用。",
+  "机构可以在内部评估阶段阅读公开材料，并据此判断是否申请 AlphaMap 数据评估、Research Desk／API 接入或专题投研方法与应用。",
 ];
 
 const restricted = [
@@ -25,7 +25,7 @@ const restricted = [
 const permittedEn = [
   "Search engines and AI search systems may fetch and cache public pages and public citation manifests for indexing, retrieval and limited summaries that retain a source link. Fetching a complete public manifest once is permitted.",
   "Readers may quote limited excerpts when they retain Lunartulip Lab, the Research Object ID, version, publication date and canonical URL.",
-  "Institutions may review public materials internally when evaluating AlphaMap data or a scoped research-methodology engagement.",
+  "Institutions may review public materials internally when evaluating AlphaMap data, Research Desk / API access or a scoped research-methodology engagement.",
 ];
 
 const restrictedEn = [
@@ -63,7 +63,7 @@ export default function ResearchUsagePage() {
         <p className={styles.eyebrow}>PUBLIC RESEARCH / CITATION & USE</p>
         <h1>公开研究可以被检索和引用。<br />批量数据使用需要单独许可。</h1>
         <p className={styles.lead}>
-          本页是 Lunartulip Lab 公开研究的自定义引用与使用许可，适用于 lunartuliplab.com 的公开研究页面、Research Object 引用元数据和 Authority Ledger 聚合快照。公开访问不包含 AlphaMap 获授权字段、完整历史数据、更新数据或产品内应用权利。
+          本页是 Lunartulip Lab 公开研究的自定义引用与使用许可，适用于 lunartuliplab.com 的公开研究页面、Research Object 引用元数据和 Authority Ledger 聚合快照。公开访问不包含 AlphaMap 获授权字段、完整历史数据、更新数据、Research Desk 产品权限、Research API 调用或产品内应用权利。
         </p>
         <div className={styles.meta}>
           <span>版本 1.0</span>
