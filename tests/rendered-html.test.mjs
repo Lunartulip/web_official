@@ -606,7 +606,8 @@ test("keeps Dataset first while preserving Desk, Pro and API product surfaces", 
     assert.match(source, /Research Desk/);
     assert.match(source, /API/);
   }
-  assert.match(pageSource, /AlphaMap Dataset 率先进入市场/);
+  assert.match(pageSource, /AlphaMap Dataset 将基本面洞察整合成结构化研究数据和量化特征信号/);
+  assert.match(deskPreviewSource, /AlphaMap Dataset 率先进入市场/);
   assert.match(deskPreviewSource, /Desk Pro 可在约定范围内提供结构化导出与限额 API/);
   assert.match(englishDeskSource, /Continuous Research for Professional Investors/);
   assert.match(llmsSource, /current go-to-market spearhead/);

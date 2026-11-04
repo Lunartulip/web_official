@@ -563,27 +563,27 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
           <h1 id="hero-title">
             {language === "cn" ? (
               <>
-                <span className="hero-title-line">全球科技股的</span>
-                <span className="hero-title-line hero-title-tagline">基本面与量化研究。</span>
+                <span className="hero-title-line">全球科技股</span>
+                <span className="hero-title-line hero-title-tagline">基本面与量化研究</span>
               </>
             ) : (
               <>
                 <span className="hero-title-line">Global Technology</span>
-                <span className="hero-title-line">Equity Research</span>
-                <span className="hero-title-line hero-title-tagline">& Alternative Data.</span>
+                <span className="hero-title-line">Equity Research & Thematic Investing Strategies</span>
+                <span className="hero-title-line hero-title-tagline">& Alternative Data</span>
               </>
             )}
           </h1>
           <p className="hero-description">
             {language === "cn" ? (
               <>
-                <span>LunarTulip Research 是一家聚焦全球科技股的独立研究机构，重点研究 AI 产业链与相关投资主题。</span>
-                <span>我们结合产业与公司基本面分析、量化研究和 AlphaMap 另类数据，为股票选择、投资假设跟踪与主题研究提供研究输入和方法支持。</span>
+                <span>LunarTulip Research 是一家聚焦全球科技股的独立研究机构，重点研究 AI 产业链与相关主题投资策略。</span>
+                <span>我们结合产业与公司基本面洞察、量化策略和 AlphaMap 另类数据，为股票选择、投资假设跟踪与主题研究提供研究输入和方法支持。</span>
               </>
             ) : (
               <>
-                <span>LunarTulip Research is an independent research firm focused on global technology equities, with an emphasis on the AI value chain and related investment themes.</span>
-                <span>We combine fundamental analysis, quantitative research and AlphaMap alternative data to support stock selection, investment thesis monitoring and thematic research.</span>
+                <span>LunarTulip Research is an independent research firm focused on global technology equities, with an emphasis on the AI value chain and related thematic investment strategies.</span>
+                <span>We combine fundamental insights, Quant strategies and AlphaMap alternative data to support stock selection, investment thesis monitoring and thematic research.</span>
               </>
             )}
           </p>
@@ -670,11 +670,11 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
         <div className="desk-control-plane">
           <div className="desk-control-copy">
             <p>RESEARCH DESK / ALWAYS-ON THEMATIC INTELLIGENCE</p>
-            <h3>{language === "cn" ? "Research Desk 继续作为持续研究产品线推进。" : "Research Desk continues as a continuous-research product line."}</h3>
+            <h3>{language === "cn" ? "Research Desk 持续主题研究工作台" : "Always-on Thematic Intelligence: Research Desk"}</h3>
             <span>
               {language === "cn"
-                ? "当前由 AlphaMap Dataset 率先进入市场，Research Desk／Pro 随后推进。Desk 面向 PM、CIO、基金创始人与专业投资者，Pro 可按合作范围提供结构化导出与限额 API；更高限额的 Power/API 由真实接入需求拉出。"
-                : "AlphaMap Dataset is first to market, with Research Desk / Pro following afterward. Desk serves PMs, CIOs, fund founders and professional investors; Pro may include structured exports and a limited API, while higher-limit Power/API access remains demand-led."}
+                ? "AlphaMap Dataset 将基本面洞察整合成结构化研究数据和量化特征信号，Research Desk／Pro 持续跟踪科技主题投资趋势。Desk 面向 PM、CIO、基金创始人与专业投资者，Pro 可按合作范围提供结构化导出与限额 API；更高限额的 Power/API 由真实接入需求拉出。"
+                : "AlphaMap Dataset turns fundamental insights into structured research data and quantitative features, while Research Desk / Pro continuously tracks technology investment themes and trends. Desk serves PMs, CIOs, fund founders and professional investors; Pro may include structured exports and a limited API, while higher-limit Power/API access remains demand-led."}
             </span>
             <Link href={language === "en" ? "/en/desk" : "/desk"}>
               {language === "cn" ? "查看 Desk 产品路线与脱敏界面" : "Explore the Desk roadmap and sanitized interface"} <ArrowRightIcon />
@@ -759,7 +759,7 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
           <article className="principle-card">
             <p className="card-index">02 / DUAL ENGINE</p>
             <h3>{language === "cn" ? <>产业因果<br />× 统计验证</> : <>Industry causality<br />× statistical validation</>}</h3>
-            <p>{language === "cn" ? "主观基本面回答机制与预期差；系统化量化回答复现性、稳定性和成本后价值。" : "Fundamental research addresses mechanisms and expectation gaps; systematic quant addresses reproducibility, stability and post-cost value."}</p>
+            <p>{language === "cn" ? "基本面洞察回答机制与预期差；系统化量化回答复现性、稳定性和成本后价值。" : "Fundamental research addresses mechanisms and expectation gaps; systematic quant addresses reproducibility, stability and post-cost value."}</p>
           </article>
           <article className="principle-card">
             <p className="card-index">03 / CORRECTION</p>
