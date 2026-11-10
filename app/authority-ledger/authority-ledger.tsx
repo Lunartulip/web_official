@@ -29,7 +29,7 @@ export default function AuthorityLedger({ language = "cn" }: { language?: "cn" |
           <h1>{isCn ? <>过去的判断，后来<br /><span>究竟发生了什么。</span></> : <>What happened after<br /><span>the original calls.</span></>}</h1>
         </div>
         <aside className={styles.heroAside}>
-          <p>{isCn ? "这里汇总带时间戳判断的后续结果，并以双基准、命中率、平均超额与盈亏比呈现。所有数字由统一 calls 账本生成，便于复核样本、口径与更新时间。" : "This page summarizes what followed timestamped judgments using dual benchmarks, hit rates, average excess returns and payoff ratios. Every figure is generated from the canonical calls ledger for reproducible sample, methodology and update checks."}</p>
+          <p>{isCn ? "这里是 Research Desk 判断的聚合结果层：汇总带时间戳判断的后续结算，并以双基准、命中率、平均超额与盈亏比呈现。所有数字由统一 calls 账本生成，便于复核样本、口径与更新时间。" : "This is the aggregate outcome layer for Research Desk judgments: it summarizes subsequent settlement of timestamped calls using dual benchmarks, hit rates, average excess returns and payoff ratios. Every figure is generated from the canonical calls ledger for reproducible sample, methodology and update checks."}</p>
           <strong>AS OF {ledger.as_of} · GENERATED {ledger.generated_at}</strong>
         </aside>
       </section>
@@ -37,7 +37,7 @@ export default function AuthorityLedger({ language = "cn" }: { language?: "cn" |
       <section className={styles.section}>
         <div className={styles.sectionHead}>
           <div><p className={styles.sectionLabel}>SAMPLE & METHODOLOGY</p><h2>{isCn ? "理解样本，再解读结果。" : "Understand the sample before interpreting the result."}</h2></div>
-          <p className={styles.lead}>{isCn ? "当前已裁决样本来自历史重构区间，用于检验既有判断在统一规则下的后续表现；Desk 纪律期样本独立记录，待形成足够已结算观察后单独展示。" : "Currently resolved observations come from a reconstructed historical window, testing prior judgments under one consistent rule set. Desk-discipline observations are recorded separately and will be shown independently once enough outcomes have settled."}</p>
+          <p className={styles.lead}>{isCn ? "当前已裁决样本来自历史重构区间，用于检验既有判断在统一规则下的后续表现；Desk 纪律期样本独立记录并单列展示，避免用回溯样本覆盖真正的事前研究纪律。" : "Currently resolved historical observations come from a reconstructed window and test prior judgments under one consistent rule set. Desk-discipline observations are recorded and displayed separately so backfilled evidence does not overwrite genuine ex-ante research discipline."}</p>
         </div>
 
         <div className={styles.stats}>

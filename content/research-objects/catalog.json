@@ -5112,5 +5112,1121 @@
     "dataGaps": [
       {"zh-CN": "盘中行情尚未替换为 KRX 正式收盘值；公司未公开逐份 LTA 的客户、带宽与订金条款，卖方一致预期及 10 月资金流数据也未与一手可下载数据逐项闭合。", "en": "Intraday market readings have not yet been replaced by the official KRX close. The company does not disclose customer-level LTA bands or deposit terms, and sell-side consensus and October flow data are not fully reconciled to downloadable primary data."}
     ]
+  },
+  {
+    "id": "RO-THEME-AI-SUPERCYCLE-001",
+    "slug": "ai-supercycle-who-pays-2026-11",
+    "kind": "theme-study",
+    "tickers": [
+      "META",
+      "GOOGL",
+      "AMZN",
+      "MSFT",
+      "NVDA",
+      "ORCL",
+      "PLTR",
+      "NET",
+      "000660.KS"
+    ],
+    "publishedAt": "2026-11-03",
+    "asOf": "2026-11-09",
+    "version": "3.0.0",
+    "sourceLabel": "AI capital-cycle theme study · canonical amendment set through 2026-11-10",
+    "claims": [
+      {
+        "id": "CL-AISC-001",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "截至 11 月 9 日，十一项必要条件为 3 绿、8 黄、0 红；原十条件矩阵因审批窗口升格而扩展。",
+          "en": "As of November 9, the eleven-condition matrix stood at three green, eight amber and zero red after the approval window was promoted into the framework."
+        },
+        "evidenceIds": [
+          "EV-AISC-NOTE"
+        ]
+      },
+      {
+        "id": "CL-AISC-002",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "合同化把现货量价风险更多转写为付款方信用风险，因此需求侧融资窗口与审批窗口成为并列裁决变量。",
+          "en": "Contracting shifts more spot price-volume risk into counterparty credit risk, making the demand-side financing and approval windows joint adjudication variables."
+        },
+        "evidenceIds": [
+          "EV-AISC-NOTE",
+          "EV-AISC-SEC"
+        ]
+      },
+      {
+        "id": "CL-AISC-003",
+        "type": "Inference",
+        "text": {
+          "zh-CN": "市场不是在简单定价“周期”或“超级周期”，而是在为融资不断档、审批不扭曲、变现兑现与供给纪律并存的窄走廊出价。",
+          "en": "The market is not simply pricing a cycle or supercycle; it is pricing a narrow corridor in which financing, approvals, monetization and supply discipline all hold."
+        },
+        "evidenceIds": [
+          "EV-AISC-NOTE"
+        ]
+      },
+      {
+        "id": "CL-AISC-004",
+        "type": "Hypothesis",
+        "text": {
+          "zh-CN": "若旗舰发行失败、投资级信用穿越阈值或审批冻结实质关闭 2028—2029 投产窗口，超级周期框架应降级重审。",
+          "en": "The supercycle framework should be downgraded if a flagship issuance fails, investment-grade credit crosses the stated threshold, or approval freezes close the 2028–2029 commissioning window."
+        },
+        "evidenceIds": [
+          "EV-AISC-NOTE",
+          "EV-AISC-SEC"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "EV-AISC-NOTE",
+        "title": "Who pays for the AI supercycle",
+        "source": {
+          "publisher": "Lunartulip Lab",
+          "url": "https://lunartuliplab.com/deep-dive/ai-supercycle-who-pays-2026-11",
+          "document": "Who pays for the AI supercycle · point-in-time research note"
+        },
+        "sourceDate": "2026-11-03",
+        "dataAsOf": "2026-11-09",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "The matrix contains event-driven amber observations and several market-data inputs sourced through reported or third-party channels; no green condition alone proves a supercycle.",
+        "lastVerified": "2026-11-10",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AISC-SEC",
+        "title": "Public-company filings for the AI capital-cycle cohort",
+        "source": {
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/edgar/search/",
+          "document": "EDGAR company filings cited and reconciled in the research note"
+        },
+        "sourceDate": "2026-11-02",
+        "dataAsOf": "2026-11-02",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "Filings establish company disclosures but do not independently validate every market-price, CDS, policy or third-party estimate used in the cross-sectional framework.",
+        "lastVerified": "2026-11-10",
+        "role": "supporting"
+      }
+    ],
+    "financialBridge": [
+      {
+        "label": {
+          "zh-CN": "Meta 三季度自由现金流",
+          "en": "Meta Q3 free cash flow"
+        },
+        "period": "2026-Q3",
+        "value": -2120,
+        "unit": "USDm",
+        "evidenceIds": [
+          "EV-AISC-NOTE"
+        ]
+      },
+      {
+        "label": {
+          "zh-CN": "Alphabet 三季度自由现金流",
+          "en": "Alphabet Q3 free cash flow"
+        },
+        "period": "2026-Q3",
+        "value": -9070,
+        "unit": "USDm",
+        "evidenceIds": [
+          "EV-AISC-NOTE"
+        ]
+      },
+      {
+        "label": {
+          "zh-CN": "Amazon 过去十二个月自由现金流",
+          "en": "Amazon trailing-twelve-month free cash flow"
+        },
+        "period": "2026-TTM",
+        "value": -42400,
+        "unit": "USDm",
+        "evidenceIds": [
+          "EV-AISC-NOTE"
+        ]
+      }
+    ],
+    "valuationScenarios": [
+      {
+        "id": "VAL-AISC-CORRIDOR",
+        "label": {
+          "zh-CN": "窄走廊维持",
+          "en": "Narrow corridor holds"
+        },
+        "metrics": [
+          {
+            "label": {
+              "zh-CN": "绿灯",
+              "en": "Green conditions"
+            },
+            "value": {
+              "zh-CN": "3 / 11",
+              "en": "3 / 11"
+            }
+          },
+          {
+            "label": {
+              "zh-CN": "黄灯",
+              "en": "Amber conditions"
+            },
+            "value": {
+              "zh-CN": "8 / 11",
+              "en": "8 / 11"
+            }
+          }
+        ],
+        "calculation": "Point-in-time count of the eleven published necessary conditions after the 2026-11-09 amendment.",
+        "interpretation": {
+          "zh-CN": "这是条件矩阵，不是概率加总或目标价。",
+          "en": "This is a condition matrix, not a probability sum or price target."
+        }
+      },
+      {
+        "id": "VAL-AISC-DUAL-WINDOW",
+        "label": {
+          "zh-CN": "双窗口失效",
+          "en": "Dual-window failure"
+        },
+        "metrics": [
+          {
+            "label": {
+              "zh-CN": "融资窗口",
+              "en": "Financing window"
+            },
+            "value": {
+              "zh-CN": "旗舰发行 / 信用阈值",
+              "en": "flagship issuance / credit threshold"
+            }
+          },
+          {
+            "label": {
+              "zh-CN": "审批窗口",
+              "en": "Approval window"
+            },
+            "value": {
+              "zh-CN": "三要件任二翻红",
+              "en": "two of three triggers turn red"
+            }
+          }
+        ],
+        "calculation": "Scenario classification follows the report's explicit financing and approval-window trigger rules.",
+        "interpretation": {
+          "zh-CN": "触发条件用于框架重审，不构成交易指令。",
+          "en": "The triggers require framework review; they are not trading instructions."
+        }
+      }
+    ],
+    "counterevidenceClaimIds": [
+      "CL-AISC-003",
+      "CL-AISC-004"
+    ],
+    "falsifiers": [
+      {
+        "id": "FAL-AISC-001",
+        "metric": "hyperscaler five-year CDS close in basis points",
+        "operator": ">=",
+        "threshold": 300,
+        "unit": "count",
+        "horizon": "any observed close",
+        "claimIds": [
+          "CL-AISC-004"
+        ],
+        "rationale": {
+          "zh-CN": "投资级云厂 CDS 穿越 300bp，意味着融资窗口由变贵转向结构性受损。",
+          "en": "A hyperscaler CDS close at or above 300bp would move the financing window from expensive to structurally impaired."
+        }
+      },
+      {
+        "id": "FAL-AISC-002",
+        "metric": "approval-window red triggers satisfied",
+        "operator": ">=",
+        "threshold": 2,
+        "unit": "count",
+        "horizon": "through 2027-Q1",
+        "claimIds": [
+          "CL-AISC-004"
+        ],
+        "rationale": {
+          "zh-CN": "得州无日落冻结、其他州跟进或联邦法案出委员会三项中任二成立，审批窗口翻红。",
+          "en": "Two of the Texas freeze, another-state action or federal committee progression would turn the approval window red."
+        }
+      }
+    ],
+    "versions": [
+      {
+        "version": "1.0.0",
+        "date": "2026-11-03",
+        "diff": {
+          "zh-CN": "主题研究首发。",
+          "en": "Initial theme-study publication."
+        }
+      },
+      {
+        "version": "2.0.0",
+        "date": "2026-11-04",
+        "diff": {
+          "zh-CN": "登记 Palantir、选举与市场读数增补。",
+          "en": "Registered the Palantir, election and market-reading amendment."
+        }
+      },
+      {
+        "version": "3.0.0",
+        "date": "2026-11-10",
+        "diff": {
+          "zh-CN": "签发审批窗口增补与定价判读，并装配为公开 canonical 研究对象。",
+          "en": "Signed the approval-window amendment and pricing synthesis, then published the public canonical research object."
+        }
+      }
+    ],
+    "renderings": {
+      "zh-CN": {
+        "locale": "zh-CN",
+        "siblingLocale": "en",
+        "title": "谁为超级周期买单——AI：周期还是超级周期",
+        "question": "当供给被合同锁定，AI 周期的最终裁决权究竟落在谁的资产负债表与审批窗口上？",
+        "standfirst": "从需求侧融资窗口、合同化供给与审批闸门出发，检验 AI 全栈“周期还是超级周期”的十一项必要条件。",
+        "whyItMatters": "它把分散的财报、信用、政策与供给读数压缩成可逐项更新的条件矩阵。",
+        "consensus": "AI 需求与合同簿足以支撑长期超级周期，近期波动主要是估值消化。",
+        "differentiated": "合同化提高了中段可见度，却把尾部风险集中到融资与审批两个窗口；超级周期只能条件性成立。",
+        "valuation": "估值只用于反推市场隐含的窄走廊与事件刻度，不给目标价。",
+        "update": "v3.0 纳入两次增补、十一条件矩阵和 11 月 10 日定价判读。",
+        "evidenceClaimIds": [
+          "CL-AISC-001",
+          "CL-AISC-002"
+        ],
+        "riskClaimIds": [
+          "CL-AISC-003",
+          "CL-AISC-004"
+        ],
+        "forwardTestIds": [
+          "FAL-AISC-001",
+          "FAL-AISC-002"
+        ],
+        "causalChain": [
+          {
+            "title": "供给合同化",
+            "body": "量价风险被长期协议吸收。",
+            "claimIds": [
+              "CL-AISC-002"
+            ]
+          },
+          {
+            "title": "风险迁移",
+            "body": "付款能力与项目审批成为并列约束。",
+            "claimIds": [
+              "CL-AISC-002",
+              "CL-AISC-003"
+            ]
+          },
+          {
+            "title": "事件裁决",
+            "body": "发行、信用与审批触发器逐项改写矩阵。",
+            "claimIds": [
+              "CL-AISC-004"
+            ]
+          }
+        ]
+      },
+      "en": {
+        "locale": "en",
+        "siblingLocale": "zh-CN",
+        "title": "Who pays for the supercycle—AI cycle or supercycle?",
+        "question": "Once supply is contracted, whose balance sheet and approval window ultimately adjudicate the AI cycle?",
+        "standfirst": "An eleven-condition test of the AI stack through demand-side financing, contracted supply and approval bottlenecks.",
+        "whyItMatters": "It compresses dispersed earnings, credit, policy and supply readings into an explicitly updateable matrix.",
+        "consensus": "AI demand and contracted backlogs support a durable supercycle; recent volatility is mostly valuation digestion.",
+        "differentiated": "Contracting improves mid-cycle visibility but concentrates tail risk in financing and approval windows, so the supercycle remains conditional.",
+        "valuation": "Valuation is used only to reverse the market's narrow corridor and event scales, not to set a price target.",
+        "update": "Version 3.0 incorporates both amendments, the eleven-condition matrix and the November 10 pricing synthesis.",
+        "evidenceClaimIds": [
+          "CL-AISC-001",
+          "CL-AISC-002"
+        ],
+        "riskClaimIds": [
+          "CL-AISC-003",
+          "CL-AISC-004"
+        ],
+        "forwardTestIds": [
+          "FAL-AISC-001",
+          "FAL-AISC-002"
+        ],
+        "causalChain": [
+          {
+            "title": "Contracted supply",
+            "body": "Long-term agreements absorb spot price-volume risk.",
+            "claimIds": [
+              "CL-AISC-002"
+            ]
+          },
+          {
+            "title": "Risk migration",
+            "body": "Payment capacity and project approvals become joint constraints.",
+            "claimIds": [
+              "CL-AISC-002",
+              "CL-AISC-003"
+            ]
+          },
+          {
+            "title": "Event adjudication",
+            "body": "Issuance, credit and approval triggers update the matrix.",
+            "claimIds": [
+              "CL-AISC-004"
+            ]
+          }
+        ]
+      }
+    },
+    "dataGaps": [
+      {
+        "zh-CN": "部分 CDS、政策暴露度与行业收入估算来自报道或第三方口径；矩阵状态不等同于统计概率。",
+        "en": "Some CDS, policy-exposure and industry-revenue estimates use reported or third-party sources; matrix status is not a statistical probability."
+      }
+    ]
+  },
+  {
+    "id": "RO-THEME-HUMANOID-001",
+    "slug": "humanoid-three-layer-map-2026-11",
+    "kind": "theme-study",
+    "tickers": [
+      "688787.SH",
+      "688322.SH",
+      "605488.SH",
+      "688585.SH"
+    ],
+    "publishedAt": "2026-11-09",
+    "asOf": "2026-11-09",
+    "version": "1.1.0",
+    "sourceLabel": "Physical AI theme study · three-layer map and order-verifiability scorecard · 2026-11-10 edition",
+    "claims": [
+      {
+        "id": "CL-HUM-001",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "四个技术子命题中，中间层“初步实现”成立；小脑、数据与大脑层均只在限定口径下部分成立。",
+          "en": "Of the four technical sub-theses, only the orchestration layer's initial implementation passes outright; control, data and planning pass only under qualified definitions."
+        },
+        "evidenceIds": [
+          "EV-HUM-NOTE"
+        ]
+      },
+      {
+        "id": "CL-HUM-002",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "头部本体厂把三层能力大多内化，系统性外流的价值量主要集中在数据采集与传感器硬件。",
+          "en": "Leading embodiment vendors internalize most of the three-layer stack, leaving systematic external value capture concentrated in data collection and sensor hardware."
+        },
+        "evidenceIds": [
+          "EV-HUM-NOTE",
+          "EV-HUM-SSE"
+        ]
+      },
+      {
+        "id": "CL-HUM-003",
+        "type": "Inference",
+        "text": {
+          "zh-CN": "当前分支的核心预期差不是“数据层是否规模化”，而是哪家订单能先从公司口径升级为公告与报表确收。",
+          "en": "The key expectation gap is not whether the data layer is scaling, but whose orders graduate first from company commentary into filings and recognized revenue."
+        },
+        "evidenceIds": [
+          "EV-HUM-NOTE"
+        ]
+      },
+      {
+        "id": "CL-HUM-004",
+        "type": "Hypothesis",
+        "text": {
+          "zh-CN": "若板块与龙头同时跌破既定价格锚，或 2027 年中报确收显著低于签单，订单可验证度分层框架应失效重审。",
+          "en": "The order-verifiability framework should be reviewed if both the sector and leader break their stated price anchors or 2027 interim recognized revenue materially misses signed orders."
+        },
+        "evidenceIds": [
+          "EV-HUM-NOTE",
+          "EV-HUM-SSE"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "EV-HUM-NOTE",
+        "title": "Humanoid robotics three-layer map",
+        "source": {
+          "publisher": "Lunartulip Lab",
+          "url": "https://lunartuliplab.com/deep-dive/humanoid-three-layer-map-2026-11",
+          "document": "Humanoid robotics three-layer map · point-in-time research note"
+        },
+        "sourceDate": "2026-11-09",
+        "dataAsOf": "2026-11-09",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "Most disclosed order evidence remains company-commentary grade, and the principal revenue-recognition tests do not arrive until 2027.",
+        "lastVerified": "2026-11-10",
+        "role": "primary"
+      },
+      {
+        "id": "EV-HUM-SSE",
+        "title": "Shanghai Stock Exchange issuer disclosures",
+        "source": {
+          "publisher": "Shanghai Stock Exchange",
+          "url": "https://www.sse.com.cn/disclosure/listedinfo/announcement/",
+          "document": "Issuer announcements and periodic reports cited in the scorecard"
+        },
+        "sourceDate": "2026-11-09",
+        "dataAsOf": "2026-09-30",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "Exchange filings validate disclosed revenue and corporate actions but do not validate all media-reported orders or technical benchmark claims.",
+        "lastVerified": "2026-11-10",
+        "role": "supporting"
+      }
+    ],
+    "financialBridge": [
+      {
+        "label": {
+          "zh-CN": "海天瑞声 2026H1 签单",
+          "en": "Speechocean 2026H1 signed orders"
+        },
+        "period": "2026-H1",
+        "value": 50,
+        "unit": "USDm",
+        "displayValue": {
+          "zh-CN": "约 ¥50m",
+          "en": "about CNY 50m"
+        },
+        "evidenceIds": [
+          "EV-HUM-NOTE"
+        ]
+      },
+      {
+        "label": {
+          "zh-CN": "福莱新材柔性传感累计收入",
+          "en": "Fulai flexible-sensor cumulative revenue"
+        },
+        "period": "2026-Q3",
+        "value": 4.6675,
+        "unit": "USDm",
+        "displayValue": {
+          "zh-CN": "¥4.6675m",
+          "en": "CNY 4.6675m"
+        },
+        "evidenceIds": [
+          "EV-HUM-NOTE",
+          "EV-HUM-SSE"
+        ]
+      },
+      {
+        "label": {
+          "zh-CN": "上纬新材机器人三季度确认收入",
+          "en": "Swancor Advanced Materials Q3 robotics revenue"
+        },
+        "period": "2026-Q3",
+        "value": 0,
+        "unit": "USDm",
+        "displayValue": {
+          "zh-CN": "¥0",
+          "en": "CNY 0"
+        },
+        "evidenceIds": [
+          "EV-HUM-NOTE",
+          "EV-HUM-SSE"
+        ]
+      }
+    ],
+    "valuationScenarios": [
+      {
+        "id": "VAL-HUM-VERIFICATION",
+        "label": {
+          "zh-CN": "订单验证路径",
+          "en": "Order-verification path"
+        },
+        "metrics": [
+          {
+            "label": {
+              "zh-CN": "首个场外读数",
+              "en": "First off-statement readout"
+            },
+            "value": {
+              "zh-CN": "2026 年 12 月初",
+              "en": "early December 2026"
+            }
+          },
+          {
+            "label": {
+              "zh-CN": "报表主裁决",
+              "en": "Financial-statement adjudication"
+            },
+            "value": {
+              "zh-CN": "2027 年中报",
+              "en": "2027 interim reports"
+            }
+          }
+        ],
+        "calculation": "Verification dates are taken from the report's published calendar and issuer disclosure cadence.",
+        "interpretation": {
+          "zh-CN": "先看验收与交付，再看报表确收。",
+          "en": "Observe acceptance and delivery first, then financial-statement recognition."
+        }
+      },
+      {
+        "id": "VAL-HUM-OVERLOAD",
+        "label": {
+          "zh-CN": "估值过载路径",
+          "en": "Valuation-overload path"
+        },
+        "metrics": [
+          {
+            "label": {
+              "zh-CN": "宇树 PE_TTM",
+              "en": "Unitree trailing P/E"
+            },
+            "value": {
+              "zh-CN": "约 516×",
+              "en": "about 516×"
+            }
+          },
+          {
+            "label": {
+              "zh-CN": "下行情景刻度",
+              "en": "Downside scenario scale"
+            },
+            "value": {
+              "zh-CN": "25%—40%",
+              "en": "25%–40%"
+            }
+          }
+        ],
+        "calculation": "Point-in-time market multiples and historical drawdown scale as documented in the 2026-11-09 research note.",
+        "interpretation": {
+          "zh-CN": "用于描述零缓冲定价与历史刻度，不构成目标价。",
+          "en": "Describes zero-buffer pricing and a historical scale; it is not a price target."
+        }
+      }
+    ],
+    "counterevidenceClaimIds": [
+      "CL-HUM-003",
+      "CL-HUM-004"
+    ],
+    "falsifiers": [
+      {
+        "id": "FAL-HUM-001",
+        "metric": "recognized revenue / signed order value",
+        "operator": "<",
+        "threshold": 50,
+        "unit": "percent",
+        "horizon": "2027-H1",
+        "claimIds": [
+          "CL-HUM-004"
+        ],
+        "rationale": {
+          "zh-CN": "中报确收不足签单额一半，将直接削弱数据外包商业模式。",
+          "en": "Recognition below half of signed orders would directly weaken the outsourced-data business model."
+        }
+      },
+      {
+        "id": "FAL-HUM-002",
+        "metric": "Fulai ten-thousand-unit order delivered and recognized",
+        "operator": "<",
+        "threshold": 30,
+        "unit": "percent",
+        "horizon": "2027-H1",
+        "claimIds": [
+          "CL-HUM-004"
+        ],
+        "rationale": {
+          "zh-CN": "交付与确收不足三成，触觉传感器量产叙事失去订单支撑。",
+          "en": "Delivery and recognition below 30% would remove order support from the tactile-sensor scaling thesis."
+        }
+      }
+    ],
+    "versions": [
+      {
+        "version": "1.0.0",
+        "date": "2026-11-09",
+        "diff": {
+          "zh-CN": "主题研究首发。",
+          "en": "Initial theme-study publication."
+        }
+      },
+      {
+        "version": "1.1.0",
+        "date": "2026-11-10",
+        "diff": {
+          "zh-CN": "签发定价判读并装配公开 canonical、记分卡与机器可读研究对象。",
+          "en": "Signed the pricing synthesis and published the canonical, scorecard and machine-readable research object."
+        }
+      }
+    ],
+    "renderings": {
+      "zh-CN": {
+        "locale": "zh-CN",
+        "siblingLocale": "en",
+        "title": "人形机器人的三层地图：谁跑通了，钱往哪流",
+        "question": "三层技术叙事究竟跑通到哪一步，价值量又能从全栈本体厂流向哪些 A 股环节？",
+        "standfirst": "独立核验小脑、中间层、大脑与数据层的产业证据，并按订单可验证度追踪 A 股价值量流向。",
+        "whyItMatters": "主题进入高估值与确收空窗期后，时间锚、订单档位和报表日历比叙事强度更重要。",
+        "consensus": "小脑与数据层已跑通，大脑与中间层加速成熟，产业链将普遍受益。",
+        "differentiated": "技术里程碑比主流时间锚晚，三层价值大多内化；A 股只剩数据、传感器与本体少数切口，且应按订单档位分层。",
+        "valuation": "估值倍数与历史回撤只用于标记零缓冲程度和情景刻度。",
+        "update": "v1.1 加入 11 月 10 日定价判读、四标的订单可验证度记分卡和公开 canonical。",
+        "evidenceClaimIds": [
+          "CL-HUM-001",
+          "CL-HUM-002"
+        ],
+        "riskClaimIds": [
+          "CL-HUM-003",
+          "CL-HUM-004"
+        ],
+        "forwardTestIds": [
+          "FAL-HUM-001",
+          "FAL-HUM-002"
+        ],
+        "causalChain": [
+          {
+            "title": "技术分层",
+            "body": "逐层区分评测、部署与规模化证据。",
+            "claimIds": [
+              "CL-HUM-001"
+            ]
+          },
+          {
+            "title": "价值内化",
+            "body": "全栈本体厂吸收大部分软件价值。",
+            "claimIds": [
+              "CL-HUM-002"
+            ]
+          },
+          {
+            "title": "订单裁决",
+            "body": "公告与确收决定外溢环节能否兑现。",
+            "claimIds": [
+              "CL-HUM-003",
+              "CL-HUM-004"
+            ]
+          }
+        ]
+      },
+      "en": {
+        "locale": "en",
+        "siblingLocale": "zh-CN",
+        "title": "Humanoid robotics' three-layer map: what works, and where value flows",
+        "question": "How far has the three-layer technology stack actually progressed, and which A-share links can capture value outside integrated embodiment vendors?",
+        "standfirst": "An independent evidence test of control, orchestration, planning and data layers, followed by an order-verifiability map of A-share value capture.",
+        "whyItMatters": "With valuations elevated and recognized revenue deferred, timing, order grade and the reporting calendar matter more than narrative intensity.",
+        "consensus": "Control and data have scaled, planning and orchestration are maturing rapidly, and the supply chain should benefit broadly.",
+        "differentiated": "Milestones arrive later than the prevailing timeline and most stack value is internalized; only data, sensors and selected embodiments remain, differentiated by order grade.",
+        "valuation": "Multiples and historical drawdowns mark zero-buffer pricing and scenario scale only.",
+        "update": "Version 1.1 adds the November 10 pricing synthesis, four-name order-verifiability scorecard and public canonical.",
+        "evidenceClaimIds": [
+          "CL-HUM-001",
+          "CL-HUM-002"
+        ],
+        "riskClaimIds": [
+          "CL-HUM-003",
+          "CL-HUM-004"
+        ],
+        "forwardTestIds": [
+          "FAL-HUM-001",
+          "FAL-HUM-002"
+        ],
+        "causalChain": [
+          {
+            "title": "Technical layers",
+            "body": "Separate benchmark, deployment and scaling evidence layer by layer.",
+            "claimIds": [
+              "CL-HUM-001"
+            ]
+          },
+          {
+            "title": "Internalized value",
+            "body": "Integrated embodiment vendors absorb most software value.",
+            "claimIds": [
+              "CL-HUM-002"
+            ]
+          },
+          {
+            "title": "Order adjudication",
+            "body": "Filings and recognized revenue decide whether external suppliers deliver.",
+            "claimIds": [
+              "CL-HUM-003",
+              "CL-HUM-004"
+            ]
+          }
+        ]
+      }
+    },
+    "dataGaps": [
+      {
+        "zh-CN": "多项技术基准、订单与行业出货量仍为公司口径或报道级；主要确收裁决集中在 2027 年。",
+        "en": "Several technical benchmarks, orders and industry shipment figures remain company-reported or media-sourced; the main recognition tests arrive in 2027."
+      }
+    ]
+  },
+  {
+    "id": "RO-COMP-NET-002",
+    "slug": "cloudflare-act4-inflection-2026q3",
+    "kind": "company-deep-dive",
+    "tickers": [
+      "NET"
+    ],
+    "publishedAt": "2026-11-09",
+    "asOf": "2026-11-10",
+    "version": "1.1.0",
+    "sourceLabel": "Cloudflare continuous coverage series II · Q3 2026 Act Four inflection · 2026-11-10 edition",
+    "claims": [
+      {
+        "id": "CL-NET2-001",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "Cloudflare Q3 2026 营收 7.825 亿美元，同比增长 39.2%；非 GAAP 营业利润率 17.5%，均为本篇财报对账的核心报表读数。",
+          "en": "Cloudflare Q3 2026 revenue was $782.5 million, up 39.2%, while non-GAAP operating margin reached 17.5%; both are core earnings reconciliation readings."
+        },
+        "evidenceIds": [
+          "EV-NET2-NOTE"
+        ]
+      },
+      {
+        "id": "CL-NET2-002",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "DBNR 为 122%，cRPO 同比增长 37%，合同簿增速与收入保持同速带，未出现订单可见性降档。",
+          "en": "DBNR was 122% and cRPO grew 37%, keeping the contract book in the same growth band as revenue without an order-visibility downgrade."
+        },
+        "evidenceIds": [
+          "EV-NET2-NOTE"
+        ]
+      },
+      {
+        "id": "CL-NET2-003",
+        "type": "Inference",
+        "text": {
+          "zh-CN": "四轴全加速说明应用层订单降档不能外推到 Cloudflare，但第四幕收入未量化且毛利率承压，趋势恢复仍需外部 beta 与后续披露共同确认。",
+          "en": "Four-axis acceleration prevents extrapolating an application-layer order slowdown to Cloudflare, but unquantified Act Four revenue and gross-margin pressure leave trend recovery dependent on beta and later disclosure."
+        },
+        "evidenceIds": [
+          "EV-NET2-NOTE",
+          "EV-NET2-SEC"
+        ]
+      },
+      {
+        "id": "CL-NET2-004",
+        "type": "Hypothesis",
+        "text": {
+          "zh-CN": "若 Q4 未实现 GAAP 转正，或 cRPO 增速落后收入增速至少 5 个百分点，当前高倍数结构将进入双杀风险。",
+          "en": "If Q4 misses GAAP profitability or cRPO growth trails revenue by at least five points, the current high-multiple structure faces a double-hit risk."
+        },
+        "evidenceIds": [
+          "EV-NET2-NOTE",
+          "EV-NET2-SEC"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "EV-NET2-NOTE",
+        "title": "Cloudflare Act Four starts booking revenue",
+        "source": {
+          "publisher": "Lunartulip Lab",
+          "url": "https://lunartuliplab.com/deep-dive/cloudflare-act4-inflection-2026q3",
+          "document": "Cloudflare Act Four starts booking revenue · point-in-time research note"
+        },
+        "sourceDate": "2026-11-09",
+        "dataAsOf": "2026-11-10",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "Act Four revenue is not quantified, several call statistics await page-level 10-Q verification, and the post-earnings price move coincided with a broad beta rebound.",
+        "lastVerified": "2026-11-10",
+        "role": "primary"
+      },
+      {
+        "id": "EV-NET2-SEC",
+        "title": "Cloudflare SEC filing index",
+        "source": {
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/edgar/browse/?CIK=1477333&owner=exclude",
+          "document": "Cloudflare Q3 2026 Form 8-K and Exhibit 99.1"
+        },
+        "sourceDate": "2026-11-05",
+        "dataAsOf": "2026-09-30",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "The 8-K supports reported financial results but does not contain every conference-call metric or the research note's market-price interpretation.",
+        "lastVerified": "2026-11-10",
+        "role": "supporting"
+      }
+    ],
+    "financialBridge": [
+      {
+        "label": {
+          "zh-CN": "Q3 2026 营收",
+          "en": "Q3 2026 revenue"
+        },
+        "period": "2026-Q3",
+        "value": 782.5,
+        "unit": "USDm",
+        "evidenceIds": [
+          "EV-NET2-NOTE",
+          "EV-NET2-SEC"
+        ]
+      },
+      {
+        "label": {
+          "zh-CN": "Q3 2026 营收同比增速",
+          "en": "Q3 2026 revenue growth"
+        },
+        "period": "2026-Q3",
+        "value": 39.2,
+        "unit": "percent",
+        "evidenceIds": [
+          "EV-NET2-NOTE",
+          "EV-NET2-SEC"
+        ]
+      },
+      {
+        "label": {
+          "zh-CN": "Q3 2026 非 GAAP 营业利润率",
+          "en": "Q3 2026 non-GAAP operating margin"
+        },
+        "period": "2026-Q3",
+        "value": 17.5,
+        "unit": "percent",
+        "evidenceIds": [
+          "EV-NET2-NOTE",
+          "EV-NET2-SEC"
+        ]
+      }
+    ],
+    "valuationScenarios": [
+      {
+        "id": "VAL-NET2-REPAIR",
+        "label": {
+          "zh-CN": "修复价",
+          "en": "Repair-price regime"
+        },
+        "metrics": [
+          {
+            "label": {
+              "zh-CN": "11 月 6 日收盘",
+              "en": "November 6 close"
+            },
+            "value": {
+              "zh-CN": "$268.69",
+              "en": "$268.69"
+            }
+          },
+          {
+            "label": {
+              "zh-CN": "相对 10 月 26 日高点",
+              "en": "Versus October 26 high"
+            },
+            "value": {
+              "zh-CN": "-19.0%",
+              "en": "-19.0%"
+            }
+          }
+        ],
+        "calculation": "Return = 268.69 / 331.86 - 1, using the point-in-time closes documented in the note.",
+        "interpretation": {
+          "zh-CN": "财报后的上涨只修复部分回撤，尚未恢复趋势。",
+          "en": "The post-earnings move repaired only part of the drawdown and did not restore the trend."
+        }
+      },
+      {
+        "id": "VAL-NET2-EARNINGS",
+        "label": {
+          "zh-CN": "盈利元年定价",
+          "en": "First-profit-year pricing"
+        },
+        "metrics": [
+          {
+            "label": {
+              "zh-CN": "FY26 前瞻市盈率",
+              "en": "FY26 forward P/E"
+            },
+            "value": {
+              "zh-CN": "约 199×",
+              "en": "about 199×"
+            }
+          },
+          {
+            "label": {
+              "zh-CN": "FY26 前瞻市销率",
+              "en": "FY26 forward P/S"
+            },
+            "value": {
+              "zh-CN": "约 32.5×",
+              "en": "about 32.5×"
+            }
+          }
+        ],
+        "calculation": "Point-in-time share price divided by company FY2026 non-GAAP EPS guidance; market cap divided by FY2026 revenue-guidance midpoint.",
+        "interpretation": {
+          "zh-CN": "倍数对盈利路径近乎零容错，不构成目标价。",
+          "en": "The multiples allow little error in the profitability path and are not price targets."
+        }
+      }
+    ],
+    "counterevidenceClaimIds": [
+      "CL-NET2-003",
+      "CL-NET2-004"
+    ],
+    "falsifiers": [
+      {
+        "id": "FAL-NET2-001",
+        "metric": "cRPO growth minus revenue growth",
+        "operator": "<=",
+        "threshold": -5,
+        "unit": "percent",
+        "horizon": "any reported quarter",
+        "claimIds": [
+          "CL-NET2-004"
+        ],
+        "rationale": {
+          "zh-CN": "cRPO 增速落后收入至少 5 个百分点，将构成应用层第二个订单簿降档样本。",
+          "en": "cRPO growth trailing revenue by at least five points would create a second application-layer order-book downgrade sample."
+        }
+      },
+      {
+        "id": "FAL-NET2-002",
+        "metric": "quarterly GAAP net income",
+        "operator": "<=",
+        "threshold": 0,
+        "unit": "USDm",
+        "horizon": "2026-Q4",
+        "claimIds": [
+          "CL-NET2-004"
+        ],
+        "rationale": {
+          "zh-CN": "Q4 未能如指引实现 GAAP 转正，将直接击穿“盈利元年”定价。",
+          "en": "Failure to achieve Q4 GAAP profitability as guided would directly break first-profit-year pricing."
+        }
+      }
+    ],
+    "versions": [
+      {
+        "version": "1.0.0",
+        "date": "2026-11-09",
+        "diff": {
+          "zh-CN": "Cloudflare 连续研究第二篇首发。",
+          "en": "Initial publication of the second Cloudflare continuous-coverage note."
+        }
+      },
+      {
+        "version": "1.1.0",
+        "date": "2026-11-10",
+        "diff": {
+          "zh-CN": "签发定价判读，关联上一季研究并装配公开 canonical 与引用对象。",
+          "en": "Signed the pricing synthesis, linked the prior-quarter study and published the public canonical and citation object."
+        }
+      }
+    ],
+    "renderings": {
+      "zh-CN": {
+        "locale": "zh-CN",
+        "siblingLocale": "en",
+        "title": "第四幕开始入账：Cloudflare 四轴全加速，市场只付了修复价",
+        "question": "四轴全加速与第四幕首次入账，能否把财报后的修复价升级为趋势恢复价？",
+        "standfirst": "收入、留存、合同簿与盈利性同向加速，但第四幕收入尚未量化，市场只修复了 10 月回撤的一部分。",
+        "whyItMatters": "这是 Cloudflare 连续研究第二篇，也是应用层订单可见性与 agentic 变现的关键横截面对照。",
+        "consensus": "强劲财报与 agentic 收入启动足以重启高增长趋势。",
+        "differentiated": "基本面信念上修，但价格反应仍以 beta 修复为主；趋势恢复需要 10-Q、同业安全需求与系统性环境共同确认。",
+        "valuation": "32.5 倍前瞻市销率与约 199 倍前瞻市盈率用于反推零容错路径，不是目标价。",
+        "update": "v1.1 增加定价判读、上一季双向系列导航、Desk 与 Authority Ledger 关联。",
+        "evidenceClaimIds": [
+          "CL-NET2-001",
+          "CL-NET2-002"
+        ],
+        "riskClaimIds": [
+          "CL-NET2-003",
+          "CL-NET2-004"
+        ],
+        "forwardTestIds": [
+          "FAL-NET2-001",
+          "FAL-NET2-002"
+        ],
+        "causalChain": [
+          {
+            "title": "四轴加速",
+            "body": "收入、留存、合同簿与盈利性同时改善。",
+            "claimIds": [
+              "CL-NET2-001",
+              "CL-NET2-002"
+            ]
+          },
+          {
+            "title": "第四幕入账",
+            "body": "agentic 商业模式首次进入损益表，但强度未披露。",
+            "claimIds": [
+              "CL-NET2-003"
+            ]
+          },
+          {
+            "title": "倍数裁决",
+            "body": "盈利兑现与合同簿同速决定修复能否升级。",
+            "claimIds": [
+              "CL-NET2-004"
+            ]
+          }
+        ]
+      },
+      "en": {
+        "locale": "en",
+        "siblingLocale": "zh-CN",
+        "title": "Act Four starts booking revenue: Cloudflare accelerates on four axes, but the market pays only a repair price",
+        "question": "Can four-axis acceleration and first Act Four revenue turn a post-earnings repair into a restored trend?",
+        "standfirst": "Revenue, retention, contract book and profitability accelerated together, but Act Four remains unquantified and the market repaired only part of the October drawdown.",
+        "whyItMatters": "This is the second Cloudflare continuous-coverage note and a key cross-sectional test of application-layer order visibility and agentic monetization.",
+        "consensus": "Strong earnings and initial agentic revenue are enough to restart the high-growth trend.",
+        "differentiated": "The fundamental view rises, but the price reaction remains beta-heavy; trend restoration requires 10-Q verification, peer security demand and a friendlier systemic backdrop.",
+        "valuation": "About 32.5× forward sales and 199× forward earnings reverse a near-zero-error path; neither is a price target.",
+        "update": "Version 1.1 adds the pricing synthesis, two-way prior-quarter navigation and links to Research Desk and the Authority Ledger.",
+        "evidenceClaimIds": [
+          "CL-NET2-001",
+          "CL-NET2-002"
+        ],
+        "riskClaimIds": [
+          "CL-NET2-003",
+          "CL-NET2-004"
+        ],
+        "forwardTestIds": [
+          "FAL-NET2-001",
+          "FAL-NET2-002"
+        ],
+        "causalChain": [
+          {
+            "title": "Four-axis acceleration",
+            "body": "Revenue, retention, contract book and profitability improve together.",
+            "claimIds": [
+              "CL-NET2-001",
+              "CL-NET2-002"
+            ]
+          },
+          {
+            "title": "Act Four books revenue",
+            "body": "The agentic model enters the income statement, but its magnitude is undisclosed.",
+            "claimIds": [
+              "CL-NET2-003"
+            ]
+          },
+          {
+            "title": "Multiple adjudication",
+            "body": "Profit delivery and contract-book pace decide whether repair becomes restoration.",
+            "claimIds": [
+              "CL-NET2-004"
+            ]
+          }
+        ]
+      }
+    },
+    "dataGaps": [
+      {
+        "zh-CN": "DBNR、客户数、RPO/cRPO 与地理拆分来自电话会第三方转录，待 10-Q 页码级复核；第四幕收入绝对额未披露。",
+        "en": "DBNR, customer count, RPO/cRPO and geography rely on third-party call transcripts pending page-level 10-Q verification; absolute Act Four revenue is undisclosed."
+      }
+    ]
   }
 ]

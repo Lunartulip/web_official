@@ -752,8 +752,8 @@ export default function DeskPreview({
           </h2>
           <p>
             {isCn
-              ? "先阅读公开 AlphaMap 或 Deep Dive，再按研究任务评估 AlphaMap 数据授权、Research Desk／Pro、机器接入或专题投研项目。公开文章只用于阅读、引用和方法评估；数据、Desk 与 API 权限分别约定。"
-              : "Begin with public AlphaMap research or a Deep Dive, then evaluate AlphaMap licensing, Research Desk / Pro, machine integration or a scoped project. Public articles support reading, citation and method evaluation; data, Desk and API rights are scoped separately."}
+              ? "Deep Dive 是 Research Desk 的公开、版本化研究输出，Authority Ledger 是 Desk 判断进入后续结算后的聚合结果层。可先从两者评估研究深度与纪律，再按任务讨论 AlphaMap 数据授权、Research Desk／Pro、机器接入或专题投研项目；数据、Desk 与 API 权限分别约定。"
+              : "Deep Dive is the public, versioned research output of Research Desk; the Authority Ledger is the aggregate outcome layer for Desk judgments after settlement. Use both to evaluate depth and discipline before discussing AlphaMap licensing, Research Desk / Pro, machine integration or a scoped project; data, Desk and API rights are scoped separately."}
           </p>
         </div>
         <div className={styles.proofLinks}>
@@ -771,7 +771,7 @@ export default function DeskPreview({
             className={styles.requestButton}
             href={isCn ? "/deep-dive" : "/en/deep-dive"}
           >
-            <small>PUBLIC RESEARCH OBJECTS</small>
+            <small>PUBLIC RESEARCH OUTPUT</small>
             <strong>{isCn ? "阅读 Deep Dive" : "Read Deep Dives"}</strong>
             <UpRightIcon />
           </Link>
@@ -779,7 +779,7 @@ export default function DeskPreview({
             className={styles.requestButton}
             href={isCn ? "/authority-ledger" : "/en/authority-ledger"}
           >
-            <small>CALLS & OUTCOMES</small>
+            <small>AGGREGATE OUTCOME PROOF</small>
             <strong>
               {isCn ? "打开 Authority Ledger" : "Open Authority Ledger"}
             </strong>

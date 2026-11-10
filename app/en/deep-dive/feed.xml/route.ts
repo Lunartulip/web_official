@@ -1,3 +1,4 @@
+import { isSourceLanguageEditorial } from "@/lib/editorial-deep-dives";
 import { researchObjects } from "@/lib/research-objects";
 
 export const dynamic = "force-static";
@@ -21,7 +22,7 @@ export function GET() {
     .sort((a, b) => (b.versions.at(-1)?.date ?? b.publishedAt).localeCompare(a.versions.at(-1)?.date ?? a.publishedAt))
     .map((item) => {
       const rendering = item.renderings.en;
-      const url = `https://lunartuliplab.com/en/deep-dive/${item.slug}`;
+      const url = `https://lunartuliplab.com/${isSourceLanguageEditorial(item.slug) ? "" : "en/"}deep-dive/${item.slug}`;
       const modifiedAt = item.versions.at(-1)?.date ?? item.publishedAt;
       return `<item>
   <title>${escapeXml(rendering.title)}</title>

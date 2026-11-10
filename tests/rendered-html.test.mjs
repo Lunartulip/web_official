@@ -96,6 +96,15 @@ const refreshedCompanyPages = await Promise.all(refreshedCompanySlugs.flatMap((s
   readFile(new URL(`../content/editorial-deep-dives/${slug}.zh.html`, import.meta.url), "utf8"),
   readFile(new URL(`../content/editorial-deep-dives/${slug}.en.html`, import.meta.url), "utf8"),
 ]));
+const latestDeskReportSlugs = [
+  "ai-supercycle-who-pays-2026-11",
+  "humanoid-three-layer-map-2026-11",
+  "cloudflare-act4-inflection-2026q3",
+];
+const latestDeskReportPages = await Promise.all(latestDeskReportSlugs.flatMap((slug) => [
+  readFile(new URL(`../content/editorial-deep-dives/${slug}.zh.html`, import.meta.url), "utf8"),
+  readFile(new URL(`../content/editorial-deep-dives/${slug}.en.html`, import.meta.url), "utf8"),
+]));
 
 test("defines every public navigation section", () => {
   for (const id of ["top", "research", "philosophy", "capabilities", "workflow", "direction", "practice", "notes", "contact"]) {
@@ -269,6 +278,28 @@ test("publishes five refreshed company studies as bilingual editorial citation o
   }
   assert.match(refreshedCompanyPages[4], /FY27Q2|FY27 第二财季/);
   assert.doesNotMatch(refreshedCompanyPages[4] + refreshedCompanyPages[5], /FY26Q2|FY26 Q2/);
+});
+
+test("publishes the latest Desk reports as independent public canonicals", () => {
+  for (const [index, slug] of latestDeskReportSlugs.entries()) {
+    const zh = latestDeskReportPages[index * 2];
+    const sourceMirror = latestDeskReportPages[index * 2 + 1];
+    for (const html of [zh, sourceMirror]) {
+      assert.match(html, /^<!doctype html>/);
+      assert.match(html, /"@type":"ScholarlyArticle"/);
+      assert.match(html, /PUBLIC RESEARCH OUTPUT/);
+      assert.match(html, /AGGREGATE OUTCOME PROOF/);
+      assert.match(html, /href="\/desk"/);
+      assert.match(html, /href="\/authority-ledger"/);
+      assert.doesNotMatch(html, /desk\.lunartuliplab\.com|\/external\//i);
+    }
+    assert.match(zh, new RegExp(`rel="canonical" href="https://lunartuliplab\\.com/deep-dive/${slug}"`));
+    assert.match(sourceMirror, /meta name="robots" content="noindex,follow"/);
+  }
+  assert.match(latestDeskReportPages[0], /谁为超级周期买单/);
+  assert.match(latestDeskReportPages[2], /人形机器人的三层地图/);
+  assert.match(latestDeskReportPages[4], /第四幕开始入账/);
+  assert.match(latestDeskReportPages[4], /cloudflare-monetization-density-2026q2/);
 });
 
 test("publishes the bilingual memory capital-cycle series without Desk dependencies", () => {

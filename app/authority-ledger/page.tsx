@@ -4,8 +4,8 @@ import { publicResearchLicense, RESEARCH_USAGE_URL } from "@/lib/public-research
 import AuthorityLedger from "./authority-ledger";
 
 export const metadata: Metadata = {
-  title: "Authority Ledger｜判断命中率与更正记录",
-  description: "Lunartulip Lab 聚合判断账本：回溯期与纪律期分列，公开方向性命中率、双基准、样本口径、as-of 日期与版本来源。",
+  title: "Authority Ledger｜Research Desk 判断命中率与更正记录",
+  description: "Lunartulip Research Desk 聚合结果账本：回溯期与纪律期分列，公开方向性命中率、双基准、样本口径、as-of 日期与版本来源。",
   alternates: {
     canonical: "/authority-ledger",
     languages: { "zh-CN": "/authority-ledger", en: "/en/authority-ledger" },

@@ -12,6 +12,9 @@ export const editorialDeepDiveSlugs = [
   "micron-hbm-capital-cycle-2026-09",
   "sandisk-nand-capital-cycle-2026-09",
   "sk-hynix-contracted-supercycle-2026-10",
+  "ai-supercycle-who-pays-2026-11",
+  "humanoid-three-layer-map-2026-11",
+  "cloudflare-act4-inflection-2026q3",
   "cloudflare-monetization-density-2026q2",
   "atlassian-workflow-density-context-monetization-2026fy",
   "nvidia-fy27q2-supercycle-2026-09",
@@ -22,8 +25,18 @@ export const editorialDeepDiveSlugs = [
 export type EditorialDeepDiveSlug = (typeof editorialDeepDiveSlugs)[number];
 export type EditorialDeepDiveLocale = "zh" | "en";
 
+export const sourceLanguageEditorialSlugs = [
+  "ai-supercycle-who-pays-2026-11",
+  "humanoid-three-layer-map-2026-11",
+  "cloudflare-act4-inflection-2026q3",
+] as const;
+
 export function isEditorialDeepDive(slug: string): slug is EditorialDeepDiveSlug {
   return (editorialDeepDiveSlugs as readonly string[]).includes(slug);
+}
+
+export function isSourceLanguageEditorial(slug: string) {
+  return (sourceLanguageEditorialSlugs as readonly string[]).includes(slug);
 }
 
 export function readEditorialDeepDive(slug: EditorialDeepDiveSlug, locale: EditorialDeepDiveLocale) {

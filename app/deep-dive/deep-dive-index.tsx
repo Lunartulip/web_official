@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { isEditorialDeepDive } from "@/lib/editorial-deep-dives";
+import { isEditorialDeepDive, isSourceLanguageEditorial } from "@/lib/editorial-deep-dives";
 import { deepDiveResearchObjects } from "@/lib/research-objects";
 import styles from "../proof.module.css";
 
@@ -66,7 +66,7 @@ export default function DeepDiveIndex({ language = "cn" }: { language?: "cn" | "
               <h3>{item.renderings[locale].title}</h3>
               <p>{item.renderings[locale].standfirst}</p>
               {isEditorialDeepDive(item.slug)
-                ? <a href={`${isCn ? "" : "/en"}/deep-dive/${item.slug}`}>{isCn ? "阅读研究 →" : "Read the research →"}</a>
+                ? <a href={`${isCn || isSourceLanguageEditorial(item.slug) ? "" : "/en"}/deep-dive/${item.slug}`}>{isCn ? "阅读研究 →" : isSourceLanguageEditorial(item.slug) ? "Read the Chinese original →" : "Read the research →"}</a>
                 : <Link href={`${isCn ? "" : "/en"}/deep-dive/${item.slug}`}>{isCn ? "阅读研究 →" : "Read the research →"}</Link>}
             </article>
           ))}
@@ -85,7 +85,7 @@ export default function DeepDiveIndex({ language = "cn" }: { language?: "cn" | "
               <h3>{item.renderings[locale].title}</h3>
               <p>{item.renderings[locale].standfirst}</p>
               {isEditorialDeepDive(item.slug)
-                ? <a href={`${isCn ? "" : "/en"}/deep-dive/${item.slug}`}>{isCn ? "阅读主题研究 →" : "Read the theme study →"}</a>
+                ? <a href={`${isCn || isSourceLanguageEditorial(item.slug) ? "" : "/en"}/deep-dive/${item.slug}`}>{isCn ? "阅读主题研究 →" : isSourceLanguageEditorial(item.slug) ? "Read the Chinese original →" : "Read the theme study →"}</a>
                 : <Link href={`${isCn ? "" : "/en"}/deep-dive/${item.slug}`}>{isCn ? "阅读主题研究 →" : "Read the theme study →"}</Link>}
             </article>
           ))}
@@ -94,8 +94,11 @@ export default function DeepDiveIndex({ language = "cn" }: { language?: "cn" | "
 
       <section className={styles.section}>
         <div className={styles.policy}>
-          <strong>{isCn ? "如何使用 Deep Dive" : "How to use the Deep Dives"}</strong>
-          <p>{isCn ? "适合用于评估 Lunartulip 对公司、产业传导、预期差与风险边界的研究深度。内容保留判断时点与后续修正，帮助读者区分当时可得信息、原始论点和后来出现的新证据。" : "Use these Deep Dives to evaluate Lunartulip’s work on companies, industry transmission, expectation gaps and risk boundaries. Point-in-time context and later corrections help separate the original information set and thesis from evidence that emerged afterward."}</p>
+          <strong>{isCn ? "Research Desk 的公开研究输出" : "Public research output from Research Desk"}</strong>
+          <p>{isCn ? "Deep Dive 是 Research Desk 的公开、版本化研究层，保留公司与产业判断当时如何形成、后来又因何更新。Authority Ledger 汇总这些判断进入结算后的结果，便于对照原始判断与实际进展。" : "Deep Dive is the public, versioned research layer of Research Desk, preserving how company and industry judgments were formed and why they changed. The Authority Ledger aggregates subsequent outcomes so readers can compare the original call with what actually followed."}</p>
+          <Link href={`${isCn ? "" : "/en"}/desk`}>{isCn ? "查看 Research Desk →" : "Explore Research Desk →"}</Link>
+          <span aria-hidden="true"> · </span>
+          <Link href={`${isCn ? "" : "/en"}/authority-ledger`}>{isCn ? "复核 Authority Ledger →" : "Review the Authority Ledger →"}</Link>
         </div>
       </section>
 

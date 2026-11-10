@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import authoritySummary from "@/data/authority/calls_kpi_summary.json";
 import { alphaMapWhitepapers } from "@/lib/alphamap-whitepapers";
+import { isSourceLanguageEditorial } from "@/lib/editorial-deep-dives";
 import { getAllNotes } from "@/lib/notes";
 import { researchObjects } from "@/lib/research-objects";
 
@@ -169,6 +170,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...deepDiveObjects.flatMap((item) => {
       const modifiedAt = item.versions.at(-1)?.date ?? item.publishedAt;
+      const sourceLanguageOnly = isSourceLanguageEditorial(item.slug);
       return [
       {
         url: `https://lunartuliplab.com/deep-dive/${item.slug}`,
@@ -176,13 +178,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         changeFrequency: "monthly" as const,
         priority: 0.8,
         alternates: {
-          languages: {
-            "zh-CN": `https://lunartuliplab.com/deep-dive/${item.slug}`,
-            en: `https://lunartuliplab.com/en/deep-dive/${item.slug}`,
-          },
+          languages: sourceLanguageOnly
+            ? { "zh-CN": `https://lunartuliplab.com/deep-dive/${item.slug}`, "x-default": `https://lunartuliplab.com/deep-dive/${item.slug}` }
+            : { "zh-CN": `https://lunartuliplab.com/deep-dive/${item.slug}`, en: `https://lunartuliplab.com/en/deep-dive/${item.slug}` },
         },
       },
-      {
+      ...(sourceLanguageOnly ? [] : [{
         url: `https://lunartuliplab.com/en/deep-dive/${item.slug}`,
         lastModified: new Date(`${modifiedAt}T00:00:00+08:00`),
         changeFrequency: "monthly" as const,
@@ -193,7 +194,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             en: `https://lunartuliplab.com/en/deep-dive/${item.slug}`,
           },
         },
-      },
+      }]),
       {
         url: `https://lunartuliplab.com/research/${item.slug}`,
         lastModified: new Date(`${modifiedAt}T00:00:00+08:00`),
