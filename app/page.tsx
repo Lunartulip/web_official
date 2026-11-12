@@ -215,6 +215,7 @@ const noteColumns = [
     title: "买方决策系统",
     titleEn: "Decision Systems",
     notes: [
+      "AI 投研的隐蔽摩擦：为什么顶配的分析师 + FDE 团队造出的系统依旧脆弱",
       "盈亏不是经验：Self-Driving Portfolio 之后，AI 投资还缺一层决策归因",
       "Self-Driving Portfolio：AI 投研的真正终点",
       "如果量化基金有因子库，主动管理也该有假设库",
@@ -222,13 +223,14 @@ const noteColumns = [
       "AI 投研越多，为什么买方决策反而更难？",
     ],
     notesEn: [
+      "The Hidden Friction in AI Investment Research",
       "P&L Is Not Experience: The Missing Decision-Attribution Layer",
       "Self-Driving Portfolio: The Real Destination of AI Investing",
       "If Quant Funds Have Factor Libraries, Active Managers Need Thesis Libraries",
       "The First Divide in AI Buy-Side Decisions: Who Validates the Output?",
       "Why More AI Research Can Make Buy-Side Decisions Harder",
     ],
-    slugs: ["decision-attribution-after-self-driving-portfolio", "self-driving-portfolio-ai-investing", "active-management-hypothesis-library", "who-validates-ai-output", "more-ai-research-harder-decisions"],
+    slugs: ["ai-investment-research-hidden-friction-fde", "decision-attribution-after-self-driving-portfolio", "self-driving-portfolio-ai-investing", "active-management-hypothesis-library", "who-validates-ai-output", "more-ai-research-harder-decisions"],
   },
   {
     code: "COLUMN / 03",
@@ -263,6 +265,11 @@ const noteColumns = [
     slugs: ["trading-like-pm-lab-notes", "notion-research-brain", "coding-agents-quant-moat"],
   },
 ];
+
+const bilingualNoteSlugs = new Set([
+  "ai-investment-research-hidden-friction-fde",
+  "decision-attribution-after-self-driving-portfolio",
+]);
 
 const capabilities = [
   {
@@ -938,7 +945,7 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
               <h3>{language === "cn" ? column.title : column.titleEn}</h3>
               <ol>{(language === "cn" ? column.notes : column.notesEn).map((note, index) => {
                 const slug = column.slugs[index];
-                const href = language === "en" && slug === "decision-attribution-after-self-driving-portfolio"
+                const href = language === "en" && bilingualNoteSlugs.has(slug)
                   ? `/en/notes/${slug}`
                   : `/notes/${slug}`;
                 return <li key={note}><span>0{index + 1}</span><Link href={href}><p>{note}</p></Link><i aria-hidden="true">↗</i></li>;

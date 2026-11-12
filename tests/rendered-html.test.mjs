@@ -33,6 +33,8 @@ const englishNotesIndexSource = await readFile(new URL("../app/en/notes/page.tsx
 const englishNotePageSource = await readFile(new URL("../app/en/notes/[slug]/page.tsx", import.meta.url), "utf8");
 const decisionAttributionNoteSource = await readFile(new URL("../content/notes/decision-attribution-after-self-driving-portfolio.md", import.meta.url), "utf8");
 const englishDecisionAttributionNoteSource = await readFile(new URL("../content/notes/decision-attribution-after-self-driving-portfolio.en.md", import.meta.url), "utf8");
+const hiddenFrictionNoteSource = await readFile(new URL("../content/notes/ai-investment-research-hidden-friction-fde.md", import.meta.url), "utf8");
+const englishHiddenFrictionNoteSource = await readFile(new URL("../content/notes/ai-investment-research-hidden-friction-fde.en.md", import.meta.url), "utf8");
 const selfDrivingNoteSource = await readFile(new URL("../content/notes/self-driving-portfolio-ai-investing.md", import.meta.url), "utf8");
 const tradingLabNoteSource = await readFile(new URL("../content/notes/trading-like-pm-lab-notes.md", import.meta.url), "utf8");
 const sitemapSource = await readFile(new URL("../app/sitemap.ts", import.meta.url), "utf8");
@@ -818,14 +820,28 @@ test("ships the LunarTulip brand artwork", async () => {
   assert.ok(favicon.size > 100);
 });
 
-test("publishes fourteen Chinese research notes and one English edition", async () => {
+test("publishes fifteen Chinese research notes and two English editions", async () => {
   const noteFiles = (await readdir(new URL("../content/notes/", import.meta.url))).filter((file) => file.endsWith(".md"));
-  assert.equal(noteFiles.length, 15);
+  assert.equal(noteFiles.length, 17);
   const slugs = new Set(noteFiles.map((file) => file.replace(/\.en\.md$|\.md$/, "")));
-  assert.equal(slugs.size, 14);
+  assert.equal(slugs.size, 15);
   for (const slug of slugs) {
     assert.match(pageSource, new RegExp(slug));
   }
+});
+
+test("publishes the AI research hidden-friction note as a linked bilingual edition", () => {
+  for (const source of [hiddenFrictionNoteSource, englishHiddenFrictionNoteSource]) {
+    assert.match(source, /https:\/\/www\.palantir\.com\/careers\//);
+    assert.match(source, /https:\/\/research\.google\/blog\/the-reusable-holdout-preserving-validity-in-adaptive-data-analysis\//);
+    assert.match(source, /\/alphamap/);
+    assert.match(source, /\/desk/);
+    assert.match(source, /\/authority-ledger/);
+  }
+  assert.match(hiddenFrictionNoteSource, /AI 投研的隐蔽摩擦/);
+  assert.match(englishHiddenFrictionNoteSource, /The Hidden Friction in AI Investment Research/);
+  assert.match(englishHiddenFrictionNoteSource, /locale: en/);
+  assert.match(pageSource, /bilingualNoteSlugs/);
 });
 
 test("publishes the decision-attribution note as a claim-parity bilingual first release", () => {
