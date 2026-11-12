@@ -595,7 +595,9 @@ test("renders the Authority Ledger from a generated data projection with visible
   assert.match(englishAuthoritySource, /"@type": "Dataset"/);
   assert.match(authorityPageSource + englishAuthoritySource, /authority-ledger\/data\.json/);
   assert.match(authorityViewSource, /机器读快照|machine-readable snapshot/);
-  assert.match(authorityViewSource, /当前已裁决样本来自历史重构区间/);
+  assert.match(authorityViewSource, /DESK DISCIPLINE \/ EX-ANTE RECORD/);
+  assert.match(authorityViewSource, /LATEST 30 DAYS \/ CURRENT SIGNAL/);
+  assert.ok(authorityViewSource.indexOf("discipline.universe_ew.hit_rate") < authorityViewSource.indexOf("backfill.universe_ew.hit_rate"));
   assert.match(authorityViewSource, /方向性命中率 = hit \/ \(hit \+ miss\)/);
   assert.match(authorityViewSource, /回溯期与纪律期独立列示/);
 });

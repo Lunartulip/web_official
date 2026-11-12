@@ -11,7 +11,8 @@ export default function AuthorityLedger({ language = "cn" }: { language?: "cn" |
   const isCn = language === "cn";
   const backfill = ledger.cohorts.backfill;
   const discipline = ledger.cohorts.desk_discipline;
-  const external = backfill.csi500;
+  const disciplineExternal = discipline.csi500;
+  const recent = ledger.windows.d30;
 
   return (
     <main className={styles.page}>
@@ -36,27 +37,27 @@ export default function AuthorityLedger({ language = "cn" }: { language?: "cn" |
 
       <section className={styles.section}>
         <div className={styles.sectionHead}>
-          <div><p className={styles.sectionLabel}>SAMPLE & METHODOLOGY</p><h2>{isCn ? "理解样本，再解读结果。" : "Understand the sample before interpreting the result."}</h2></div>
-          <p className={styles.lead}>{isCn ? "当前已裁决样本来自历史重构区间，用于检验既有判断在统一规则下的后续表现；Desk 纪律期样本独立记录并单列展示，避免用回溯样本覆盖真正的事前研究纪律。" : "Currently resolved historical observations come from a reconstructed window and test prior judgments under one consistent rule set. Desk-discipline observations are recorded and displayed separately so backfilled evidence does not overwrite genuine ex-ante research discipline."}</p>
+          <div><p className={styles.sectionLabel}>DESK DISCIPLINE / EX-ANTE RECORD</p><h2>{isCn ? "先看真正的事前研究纪律。" : "Start with the genuine ex-ante record."}</h2></div>
+          <p className={styles.lead}>{isCn ? "首屏展示 Research Desk 进入纪律期后的真实事前判断，不与历史重构样本混算。最近 30 天窗口单列，用于观察当前判断质量是否延续。" : "The lead view shows genuine ex-ante Research Desk calls after the discipline period began, without mixing in reconstructed history. A separate rolling 30-day window shows whether current judgment quality is holding."}</p>
         </div>
 
         <div className={styles.stats}>
-          <div><small>{isCn ? "已裁决 / 含失效裁定" : "Resolved / incl. invalidated"}</small><strong>{backfill.settled}</strong></div>
-          <div><small>{isCn ? "EW 方向性命中率" : "EW directional hit rate"}</small><strong>{pct(backfill.universe_ew.hit_rate)}</strong></div>
-          <div><small>{isCn ? "CSI500 方向性命中率" : "CSI500 directional hit rate"}</small><strong>{pct(external.hit_rate)}</strong></div>
-          <div><small>{isCn ? "CSI500 纯赢亏盈亏比" : "CSI500 hit/miss payoff ratio"}</small><strong>{external.win_loss_ratio_hm_only?.toFixed(2) ?? "—"}×</strong></div>
+          <div><small>{isCn ? "纪律期已结算" : "Desk-discipline settled"}</small><strong>{discipline.settled}</strong></div>
+          <div><small>{isCn ? "纪律期 EW 方向性命中率" : "Discipline EW hit rate"}</small><strong>{pct(discipline.universe_ew.hit_rate)}</strong></div>
+          <div><small>{isCn ? "纪律期 CSI500 方向性命中率" : "Discipline CSI500 hit rate"}</small><strong>{pct(disciplineExternal.hit_rate)}</strong></div>
+          <div><small>{isCn ? "纪律期 EW 纯赢亏盈亏比" : "Discipline EW payoff ratio"}</small><strong>{discipline.universe_ew.win_loss_ratio_hm_only?.toFixed(2) ?? "—"}×</strong></div>
         </div>
 
         <div className={styles.grid}>
           <article className={styles.card}>
-            <p className={styles.meta}>UNIVERSE-EW / RESEARCH BENCHMARK</p>
-            <h3>{backfill.universe_ew.hit} hit / {backfill.universe_ew.miss} miss / {backfill.universe_ew.flat} flat</h3>
-            <p>{isCn ? `方向调整后平均超额 ${signedPct(backfill.universe_ew.avg_excess)}；hit/miss-only 盈亏比 ${backfill.universe_ew.win_loss_ratio_hm_only?.toFixed(2)}×。` : `Direction-adjusted average excess ${signedPct(backfill.universe_ew.avg_excess)}; hit/miss-only payoff ratio ${backfill.universe_ew.win_loss_ratio_hm_only?.toFixed(2)}×.`}</p>
+            <p className={styles.meta}>LATEST 30 DAYS / CURRENT SIGNAL</p>
+            <h3>{pct(recent.universe_ew.hit_rate)} EW / {pct(recent.csi500.hit_rate)} CSI500</h3>
+            <p>{isCn ? `${recent.universe_ew.settled} 个已结算样本；方向调整后平均超额分别为 ${signedPct(recent.universe_ew.avg_excess)} 与 ${signedPct(recent.csi500.avg_excess)}。` : `${recent.universe_ew.settled} settled observations; direction-adjusted average excess was ${signedPct(recent.universe_ew.avg_excess)} and ${signedPct(recent.csi500.avg_excess)}, respectively.`}</p>
           </article>
           <article className={styles.card}>
-            <p className={styles.meta}>CSI500 / EXTERNAL BENCHMARK</p>
-            <h3>{external.hit} hit / {external.miss} miss / {external.flat} flat</h3>
-            <p>{isCn ? `方向调整后平均超额 ${signedPct(external.avg_excess)}；hit/miss-only 盈亏比 ${external.win_loss_ratio_hm_only?.toFixed(2)}×。` : `Direction-adjusted average excess ${signedPct(external.avg_excess)}; hit/miss-only payoff ratio ${external.win_loss_ratio_hm_only?.toFixed(2)}×.`}</p>
+            <p className={styles.meta}>DESK DISCIPLINE / DUAL BENCHMARK</p>
+            <h3>{discipline.universe_ew.hit} hit / {discipline.universe_ew.miss} miss / {discipline.universe_ew.flat} flat</h3>
+            <p>{isCn ? `EW 平均超额 ${signedPct(discipline.universe_ew.avg_excess)}，CSI500 平均超额 ${signedPct(disciplineExternal.avg_excess)}；CSI500 口径为 ${disciplineExternal.hit} hit / ${disciplineExternal.miss} miss / ${disciplineExternal.flat} flat。` : `Average excess was ${signedPct(discipline.universe_ew.avg_excess)} versus EW and ${signedPct(disciplineExternal.avg_excess)} versus CSI500; the CSI500 record is ${disciplineExternal.hit} hit / ${disciplineExternal.miss} miss / ${disciplineExternal.flat} flat.`}</p>
           </article>
         </div>
 
@@ -68,6 +69,19 @@ export default function AuthorityLedger({ language = "cn" }: { language?: "cn" |
               <span>{isCn ? `${point.settled_count} 个 EW 已结算样本` : `${point.settled_count} EW observations settled`}</span>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <div className={styles.sectionHead}>
+          <div><p className={styles.sectionLabel}>RECONSTRUCTED HISTORY / BASELINE</p><h2>{isCn ? "历史样本保留为方法基线。" : "Historical evidence remains as a methodology baseline."}</h2></div>
+          <p className={styles.lead}>{isCn ? "回溯样本用于检验统一结算规则，不代表当前 Desk 的事前命中表现，因此从首屏主指标下移并独立展示。" : "The reconstructed cohort tests one consistent settlement rule. It does not represent current ex-ante Desk performance, so it is reported separately from the lead metrics."}</p>
+        </div>
+        <div className={styles.stats}>
+          <div><small>{isCn ? "回溯期已裁决 / 含失效裁定" : "Backfill resolved / incl. invalidated"}</small><strong>{backfill.settled}</strong></div>
+          <div><small>{isCn ? "回溯期 EW 命中率" : "Backfill EW hit rate"}</small><strong>{pct(backfill.universe_ew.hit_rate)}</strong></div>
+          <div><small>{isCn ? "回溯期 CSI500 命中率" : "Backfill CSI500 hit rate"}</small><strong>{pct(backfill.csi500.hit_rate)}</strong></div>
+          <div><small>{isCn ? "回溯期 CSI500 纯赢亏盈亏比" : "Backfill CSI500 payoff ratio"}</small><strong>{backfill.csi500.win_loss_ratio_hm_only?.toFixed(2) ?? "—"}×</strong></div>
         </div>
       </section>
 
