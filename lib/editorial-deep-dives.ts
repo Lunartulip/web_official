@@ -14,6 +14,7 @@ export const editorialDeepDiveSlugs = [
   "sk-hynix-contracted-supercycle-2026-10",
   "ai-supercycle-who-pays-2026-11",
   "humanoid-three-layer-map-2026-11",
+  "ai-infrastructure-cash-flow-first-case-2026-11",
   "cloudflare-act4-inflection-2026q3",
   "cloudflare-monetization-density-2026q2",
   "atlassian-workflow-density-context-monetization-2026fy",

@@ -6228,5 +6228,435 @@
         "en": "DBNR, customer count, RPO/cRPO and geography rely on third-party call transcripts pending page-level 10-Q verification; absolute Act Four revenue is undisclosed."
       }
     ]
+  },
+  {
+    "id": "RO-THEME-AI-INFRA-CASHFLOW-001",
+    "slug": "ai-infrastructure-cash-flow-first-case-2026-11",
+    "kind": "theme-study",
+    "tickers": [
+      "NVDA",
+      "CRWV",
+      "CORZ",
+      "APLD",
+      "WULF",
+      "NBIS",
+      "IREN",
+      "AMD",
+      "AVGO",
+      "MSFT",
+      "GOOGL",
+      "MU",
+      "000660.KS"
+    ],
+    "publishedAt": "2026-11-17",
+    "asOf": "2026-11-17",
+    "version": "1.3.0",
+    "sourceLabel": "LunarTulip Research industry and company deep dive · AlphaMap-powered AI infrastructure cash-flow transmission case",
+    "claims": [
+      {
+        "id": "CL-AICF-001",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "NVIDIA 对 CoreWeave 特定未售剩余算力的采购安排初始价值为 63 亿美元，期限至 2032 年 4 月；该安排不覆盖 CoreWeave 的全部债务。",
+          "en": "NVIDIA's purchase arrangement for specified unsold residual CoreWeave capacity carries an initial value of $6.3 billion through April 2032 and does not cover all CoreWeave debt."
+        },
+        "evidenceIds": [
+          "EV-AICF-REPORT",
+          "EV-AICF-CRWV"
+        ]
+      },
+      {
+        "id": "CL-AICF-002",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "CoreWeave 前三季度经营现金流仅覆盖同期固定资产及软件现金投入的 23.9%，未获充分资金的远期扩张因而对融资到账时间敏感。",
+          "en": "CoreWeave's first-nine-month operating cash flow covered 23.9% of cash investment in property, equipment and capitalised software, leaving underfunded future expansion sensitive to financing timing."
+        },
+        "evidenceIds": [
+          "EV-AICF-REPORT",
+          "EV-AICF-CRWV"
+        ]
+      },
+      {
+        "id": "CL-AICF-003",
+        "type": "Inference",
+        "text": {
+          "zh-CN": "既有合同与已投运容量支持近期业务延续；需要重估的是尚未筹足资金、仍依赖追加支持的远期项目。",
+          "en": "Existing contracts and operating capacity support near-term continuity; the projects requiring reassessment are farther-dated expansions that remain underfunded and dependent on additional support."
+        },
+        "evidenceIds": [
+          "EV-AICF-REPORT",
+          "EV-AICF-NVDA"
+        ]
+      },
+      {
+        "id": "CL-AICF-004",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "在本文冻结的模型中，ASIC 贡献约 75% 的新增设备需求；采购提前量变化可造成约 2.4EB 的条件差额。",
+          "en": "In the frozen model, ASICs contribute roughly 75% of incremental desired devices, while procurement lead-time choices create a conditional difference of about 2.4 EB."
+        },
+        "evidenceIds": [
+          "EV-AICF-REPORT"
+        ]
+      },
+      {
+        "id": "CL-AICF-005",
+        "type": "Hypothesis",
+        "text": {
+          "zh-CN": "沿融资路径下调设备采购与投运预期，需要新增支持减少且替代资金未能在设备付款前补位；任一条件不成立，都不足以推导同步减产。",
+          "en": "A financing-path downgrade to equipment procurement and commissioning requires both reduced additional support and replacement funding that fails to arrive before equipment payments; absent either condition, a matching volume cut does not follow."
+        },
+        "evidenceIds": [
+          "EV-AICF-REPORT",
+          "EV-AICF-CRWV",
+          "EV-AICF-NVDA"
+        ]
+      },
+      {
+        "id": "CL-AICF-006",
+        "type": "Hypothesis",
+        "text": {
+          "zh-CN": "当前识别的 Ultra 与 MI450/MI455 配置变化只解释同批设备约 2.8% 的 HBM 变化，不能直接外推为全市场修正。",
+          "en": "The identified Ultra and MI450/MI455 configuration changes explain about 2.8% of HBM for the same device cohort and cannot be extrapolated directly into a whole-market revision."
+        },
+        "evidenceIds": [
+          "EV-AICF-REPORT"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "EV-AICF-REPORT",
+        "title": "After NVIDIA's leadership transition, which AI growth expectations need reassessment?",
+        "source": {
+          "publisher": "LunarTulip Research",
+          "url": "https://lunartuliplab.com/deep-dive/ai-infrastructure-cash-flow-first-case-2026-11",
+          "document": "Bilingual industry and company deep dive · version 1.3.0"
+        },
+        "sourceDate": "2026-11-17",
+        "dataAsOf": "2026-11-17",
+        "calculation": "The report reconciles AlphaMap relationship paths with 49 cited public sources and a frozen device, financing and HBM scenario model.",
+        "confidence": "high",
+        "counterevidence": "The relationship map does not establish return correlation or event probability, and several future financing, lease-commencement and procurement outcomes remain conditional.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AICF-CRWV",
+        "title": "CoreWeave Q3 2026 Form 10-Q",
+        "source": {
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/crwv-20260930.htm",
+          "document": "CoreWeave quarterly filing for the period ended September 30, 2026"
+        },
+        "sourceDate": "2026-11-06",
+        "dataAsOf": "2026-09-30",
+        "calculation": "Cash-flow coverage and financing figures are reconciled to the filing in the published report.",
+        "confidence": "high",
+        "counterevidence": "The filing records executed financing and contractual positions but cannot determine whether future funding will arrive before each equipment-payment date.",
+        "lastVerified": "2026-11-17",
+        "role": "supporting"
+      },
+      {
+        "id": "EV-AICF-NVDA",
+        "title": "NVIDIA announces CEO transition",
+        "source": {
+          "publisher": "NVIDIA",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+          "document": "Board statement on leadership transition, commitments and product roadmap"
+        },
+        "sourceDate": "2026-11-12",
+        "dataAsOf": "2026-11-12",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "The statement addresses continuity of existing commitments and the product roadmap; it does not promise discretionary new support for every future customer expansion.",
+        "lastVerified": "2026-11-17",
+        "role": "supporting"
+      }
+    ],
+    "financialBridge": [
+      {
+        "label": {
+          "zh-CN": "CoreWeave 前三季度经营现金流",
+          "en": "CoreWeave first-nine-month operating cash flow"
+        },
+        "period": "2026-9M",
+        "value": 5638,
+        "unit": "USDm",
+        "evidenceIds": [
+          "EV-AICF-REPORT",
+          "EV-AICF-CRWV"
+        ]
+      },
+      {
+        "label": {
+          "zh-CN": "CoreWeave 前三季度净融资",
+          "en": "CoreWeave first-nine-month net financing"
+        },
+        "period": "2026-9M",
+        "value": 21346,
+        "unit": "USDm",
+        "evidenceIds": [
+          "EV-AICF-REPORT",
+          "EV-AICF-CRWV"
+        ]
+      },
+      {
+        "label": {
+          "zh-CN": "管理层预计未来三个月收到的预付款及押金",
+          "en": "Management's expected prepayments and deposits over the following three months"
+        },
+        "period": "2026-Q4 window",
+        "value": 9000,
+        "unit": "USDm",
+        "evidenceIds": [
+          "EV-AICF-REPORT",
+          "EV-AICF-CRWV"
+        ]
+      }
+    ],
+    "valuationScenarios": [
+      {
+        "id": "VAL-AICF-CONTINUITY",
+        "label": {
+          "zh-CN": "近期业务延续",
+          "en": "Near-term continuity"
+        },
+        "metrics": [
+          {
+            "label": {
+              "zh-CN": "特定剩余容量采购安排",
+              "en": "Specified residual-capacity purchase arrangement"
+            },
+            "value": {
+              "zh-CN": "初始价值 63 亿美元",
+              "en": "$6.3bn initial value"
+            }
+          },
+          {
+            "label": {
+              "zh-CN": "协议期限",
+              "en": "Agreement term"
+            },
+            "value": {
+              "zh-CN": "至 2032 年 4 月",
+              "en": "through April 2032"
+            }
+          }
+        ],
+        "calculation": "Contract scope and term are taken from the cited arrangement; the scenario does not extend that obligation to all CoreWeave debt or future discretionary support.",
+        "interpretation": {
+          "zh-CN": "既有安排支持近期需求，但不替远期项目解决全部融资。",
+          "en": "The existing arrangement supports near-term demand without funding every farther-dated project."
+        }
+      },
+      {
+        "id": "VAL-AICF-FUNDING-TIMING",
+        "label": {
+          "zh-CN": "融资到账压力测试",
+          "en": "Funding-timing stress test"
+        },
+        "metrics": [
+          {
+            "label": {
+              "zh-CN": "预付款及押金延迟比例",
+              "en": "Delayed share of prepayments and deposits"
+            },
+            "value": {
+              "zh-CN": "20%",
+              "en": "20%"
+            }
+          },
+          {
+            "label": {
+              "zh-CN": "替代资金 10 亿美元时的条件差额",
+              "en": "Conditional gap with $1bn replacement funding"
+            },
+            "value": {
+              "zh-CN": "8 亿美元",
+              "en": "$0.8bn"
+            }
+          }
+        ],
+        "calculation": "$9bn × 20% delayed − $1bn otherwise unallocated replacement funding = $0.8bn conditional timing gap.",
+        "interpretation": {
+          "zh-CN": "这是到账时间压力测试，不是已发生的融资缺口或收入损失。",
+          "en": "This is a cash-timing stress test, not an observed financing shortfall or lost revenue."
+        }
+      }
+    ],
+    "counterevidenceClaimIds": [
+      "CL-AICF-005",
+      "CL-AICF-006"
+    ],
+    "falsifiers": [
+      {
+        "id": "FAL-AICF-001",
+        "metric": "Replacement funding and customer advances available inside the stressed payment window",
+        "operator": ">=",
+        "threshold": 1800,
+        "unit": "USDm",
+        "horizon": "Next disclosed equipment-payment and financing window",
+        "claimIds": [
+          "CL-AICF-003",
+          "CL-AICF-005"
+        ],
+        "rationale": {
+          "zh-CN": "若替代资金与客户预付款达到 18 亿美元，20% 延迟情景下的现金差额被覆盖，沿该路径下调投运的依据消失。",
+          "en": "If replacement funding and customer advances reach $1.8 billion, the modeled gap under the 20% delay case is covered and that path no longer supports a commissioning downgrade."
+        }
+      },
+      {
+        "id": "FAL-AICF-002",
+        "metric": "HBM reduction from identified configuration changes at constant device quantities",
+        "operator": ">",
+        "threshold": 5,
+        "unit": "percent",
+        "horizon": "Next public accelerator configuration and shipment-model update",
+        "claimIds": [
+          "CL-AICF-004",
+          "CL-AICF-006"
+        ],
+        "rationale": {
+          "zh-CN": "若同口径配置效应超过 5%，当前把它视为局部 2.8% 修正的判断需要重算。",
+          "en": "If the like-for-like configuration effect exceeds 5%, the present treatment as a local 2.8% adjustment requires recalculation."
+        }
+      }
+    ],
+    "versions": [
+      {
+        "version": "1.3.0",
+        "date": "2026-11-17",
+        "diff": {
+          "zh-CN": "发布双语官网版，接通 AlphaMap 关系数据、公开证据、公司现金流与可观察更新条件。",
+          "en": "Published the bilingual web edition linking AlphaMap relationships, public evidence, company cash flows and observable update conditions."
+        }
+      }
+    ],
+    "renderings": {
+      "zh-CN": {
+        "locale": "zh-CN",
+        "siblingLocale": "en",
+        "title": "NVIDIA换帅之后，AI产业链哪些增长预期需要重估？",
+        "question": "领导层变化会先影响哪些未获充分融资的扩张，并如何传导到设备采购、HBM需求和托管回款？",
+        "standfirst": "以 AlphaMap 的客户、供货与信用关系为起点，结合 49 项公开来源和冻结模型，区分已有合同支撑的近期业务与仍待融资交割的远期增长。",
+        "whyItMatters": "这是一份消费 AlphaMap 关系数据完成的产业投资研究：图提供跨公司路径，合同、财务和起租条件决定路径是否成立。",
+        "consensus": "NVIDIA 的领导层变化会统一削弱依赖其生态的 AI 基础设施扩张。",
+        "differentiated": "冲击需要逐份合同拆解。既有容量采购、未来担保、客户预付款和替代融资的触发条件不同，传导速度也不同。",
+        "valuation": "报告采用现金流覆盖、融资到账和采购提前量情景，没有给出目标价或未经校准的事件概率。",
+        "update": "v1.3.0 为首个双语官网版，Research Object ID 为 RO-THEME-AI-INFRA-CASHFLOW-001。",
+        "evidenceClaimIds": [
+          "CL-AICF-001",
+          "CL-AICF-002",
+          "CL-AICF-004"
+        ],
+        "riskClaimIds": [
+          "CL-AICF-005",
+          "CL-AICF-006"
+        ],
+        "forwardTestIds": [
+          "FAL-AICF-001",
+          "FAL-AICF-002"
+        ],
+        "causalChain": [
+          {
+            "title": "关系定位",
+            "body": "从客户、供货与信用关系中定位可能受领导层变化影响的第一跳和第二跳公司。",
+            "claimIds": [
+              "CL-AICF-001"
+            ]
+          },
+          {
+            "title": "合同核验",
+            "body": "逐项区分既有采购义务、尚未起效的担保和自主决定的追加支持。",
+            "claimIds": [
+              "CL-AICF-001",
+              "CL-AICF-003"
+            ]
+          },
+          {
+            "title": "现金流传导",
+            "body": "把融资到账、设备付款与起租时间放进同一个公司现金流判断。",
+            "claimIds": [
+              "CL-AICF-002",
+              "CL-AICF-005"
+            ]
+          },
+          {
+            "title": "设备与HBM映射",
+            "body": "用采购提前量和配置条件测算 HBM 需求，保留模型适用范围。",
+            "claimIds": [
+              "CL-AICF-004",
+              "CL-AICF-006"
+            ]
+          }
+        ]
+      },
+      "en": {
+        "locale": "en",
+        "siblingLocale": "zh-CN",
+        "title": "After NVIDIA’s Leadership Transition, Which AI Growth Expectations Need Reassessment?",
+        "question": "Which underfunded expansions would a leadership transition affect first, and how would that travel into equipment procurement, HBM demand and hosting cash flows?",
+        "standfirst": "Starting with AlphaMap customer, supply and credit relationships, the report combines 49 public sources with a frozen model to separate near-term business supported by existing contracts from farther-dated growth awaiting financing.",
+        "whyItMatters": "This industry investment study consumes AlphaMap relationship data: the graph supplies cross-company paths, while contracts, financials and lease conditions determine whether each path holds.",
+        "consensus": "NVIDIA's leadership transition will weaken AI infrastructure expansion across its ecosystem in a uniform way.",
+        "differentiated": "The shock requires contract-by-contract analysis. Existing capacity purchases, future guarantees, customer advances and replacement financing carry different triggers and transmission speeds.",
+        "valuation": "The report uses cash-flow coverage, funding-timing and procurement lead-time scenarios. It publishes neither a price target nor an uncalibrated event probability.",
+        "update": "Version 1.3.0 is the first bilingual web edition under Research Object RO-THEME-AI-INFRA-CASHFLOW-001.",
+        "evidenceClaimIds": [
+          "CL-AICF-001",
+          "CL-AICF-002",
+          "CL-AICF-004"
+        ],
+        "riskClaimIds": [
+          "CL-AICF-005",
+          "CL-AICF-006"
+        ],
+        "forwardTestIds": [
+          "FAL-AICF-001",
+          "FAL-AICF-002"
+        ],
+        "causalChain": [
+          {
+            "title": "Relationship targeting",
+            "body": "Use customer, supply and credit relationships to locate first- and second-hop companies exposed to the leadership change.",
+            "claimIds": [
+              "CL-AICF-001"
+            ]
+          },
+          {
+            "title": "Contract verification",
+            "body": "Separate existing purchase obligations, guarantees that have not yet become effective and discretionary additional support.",
+            "claimIds": [
+              "CL-AICF-001",
+              "CL-AICF-003"
+            ]
+          },
+          {
+            "title": "Cash-flow transmission",
+            "body": "Place financing arrival, equipment payments and lease commencement in one company cash-flow assessment.",
+            "claimIds": [
+              "CL-AICF-002",
+              "CL-AICF-005"
+            ]
+          },
+          {
+            "title": "Equipment-to-HBM mapping",
+            "body": "Model HBM demand through procurement lead times and configuration choices while preserving the model boundary.",
+            "claimIds": [
+              "CL-AICF-004",
+              "CL-AICF-006"
+            ]
+          }
+        ]
+      }
+    },
+    "dataGaps": [
+      {
+        "zh-CN": "未来追加担保、客户预付款到账、替代融资、设备验收和起租仍待后续披露；本文不把关系路径解释为收益相关性或事件概率。",
+        "en": "Additional guarantees, customer advances, replacement financing, equipment acceptance and lease commencement await future disclosure; relationship paths are not treated as return correlations or event probabilities."
+      }
+    ]
   }
 ]

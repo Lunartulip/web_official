@@ -107,6 +107,11 @@ const latestDeskReportPages = await Promise.all(latestDeskReportSlugs.flatMap((s
   readFile(new URL(`../content/editorial-deep-dives/${slug}.zh.html`, import.meta.url), "utf8"),
   readFile(new URL(`../content/editorial-deep-dives/${slug}.en.html`, import.meta.url), "utf8"),
 ]));
+const alphaMapIndustryCaseSlug = "ai-infrastructure-cash-flow-first-case-2026-11";
+const alphaMapIndustryCaseRouteSource = await readFile(new URL(`../app/deep-dive/${alphaMapIndustryCaseSlug}/route.ts`, import.meta.url), "utf8");
+const englishAlphaMapIndustryCaseRouteSource = await readFile(new URL(`../app/en/deep-dive/${alphaMapIndustryCaseSlug}/route.ts`, import.meta.url), "utf8");
+const alphaMapIndustryCaseCn = await readFile(new URL(`../content/editorial-deep-dives/${alphaMapIndustryCaseSlug}.zh.html`, import.meta.url), "utf8");
+const alphaMapIndustryCaseEn = await readFile(new URL(`../content/editorial-deep-dives/${alphaMapIndustryCaseSlug}.en.html`, import.meta.url), "utf8");
 
 test("defines every public navigation section", () => {
   for (const id of ["top", "research", "philosophy", "capabilities", "workflow", "direction", "practice", "notes", "contact"]) {
@@ -302,6 +307,55 @@ test("publishes the latest Desk reports as independent public canonicals", () =>
   assert.match(latestDeskReportPages[2], /人形机器人的三层地图/);
   assert.match(latestDeskReportPages[4], /第四幕开始入账/);
   assert.match(latestDeskReportPages[4], /cloudflare-monetization-density-2026q2/);
+});
+
+test("publishes the first AlphaMap-powered industry case inside the Deep Dive series", async () => {
+  for (const source of [alphaMapIndustryCaseRouteSource, englishAlphaMapIndustryCaseRouteSource]) {
+    assert.match(source, /export const dynamic = "force-static"/);
+    assert.match(source, /readEditorialDeepDive\("ai-infrastructure-cash-flow-first-case-2026-11"/);
+  }
+  assert.match(alphaMapIndustryCaseRouteSource, /"zh"/);
+  assert.match(englishAlphaMapIndustryCaseRouteSource, /"en"/);
+  assert.match(editorialLoaderSource, new RegExp(`"${alphaMapIndustryCaseSlug}"`));
+
+  for (const html of [alphaMapIndustryCaseCn, alphaMapIndustryCaseEn]) {
+    assert.match(html, /^<!doctype html>/i);
+    assert.match(html, /"@type":"ScholarlyArticle"/);
+    assert.match(html, /RO-THEME-AI-INFRA-CASHFLOW-001/);
+    assert.match(html, /"version":"1\.3\.0"/);
+    assert.match(html, /article:published_time/);
+    assert.match(html, /article:modified_time/);
+    assert.match(html, /href="\/(?:en\/)?deep-dive">Deep Dive<\/a>/);
+    assert.match(html, /href="\/(?:en\/)?alphamap">AlphaMap<\/a>/);
+    assert.match(html, /AlphaMap_First_Case_Publication_Pack_20261117\.zip/);
+    assert.doesNotMatch(html, /\/alphamap\/ai-infrastructure-cash-flow-first-case-2026-11/);
+    assert.doesNotMatch(html, /annual_results\.csv|device_BOM_panel\.csv|desk\.lunartuliplab\.com|\/external\//i);
+  }
+
+  assert.match(alphaMapIndustryCaseCn, new RegExp(`rel="canonical" href="https://lunartuliplab\\.com/deep-dive/${alphaMapIndustryCaseSlug}"`));
+  assert.match(alphaMapIndustryCaseEn, new RegExp(`rel="canonical" href="https://lunartuliplab\\.com/en/deep-dive/${alphaMapIndustryCaseSlug}"`));
+  for (const term of ["23.9%", "约75%", "2.4EB", "约2.8%"]) {
+    assert.match(alphaMapIndustryCaseCn, new RegExp(term));
+  }
+  for (const term of ["23.9%", "roughly 75%", "2.4 EB", "2.8%"]) {
+    assert.match(alphaMapIndustryCaseEn, new RegExp(term));
+  }
+  assert.match(alphaMapIndustryCaseEn, /LunarTulip_Research_01_AI_Infrastructure\.zh\.pdf">Research PDF \(Chinese\)/);
+
+  const catalog = JSON.parse(researchCatalogSource);
+  const study = catalog.find((item) => item.id === "RO-THEME-AI-INFRA-CASHFLOW-001");
+  assert.ok(study, "AlphaMap-powered industry case research object missing");
+  assert.equal(study.slug, alphaMapIndustryCaseSlug);
+  assert.equal(study.kind, "theme-study");
+  assert.equal(study.version, "1.3.0");
+  assert.equal(study.renderings["zh-CN"].evidenceClaimIds.join(","), study.renderings.en.evidenceClaimIds.join(","));
+  assert.match(alphaMapIndexComponentSource, new RegExp(alphaMapIndustryCaseSlug));
+  assert.match(alphaMapIndexComponentSource, /ALPHAMAP-POWERED INDUSTRY RESEARCH/);
+
+  const publicationPack = await stat(new URL("../public/alphamap/first-case-20261117/AlphaMap_First_Case_Publication_Pack_20261117.zip", import.meta.url));
+  const chinesePdf = await stat(new URL("../public/alphamap/first-case-20261117/LunarTulip_Research_01_AI_Infrastructure.zh.pdf", import.meta.url));
+  assert.ok(publicationPack.size > 1_000_000);
+  assert.ok(chinesePdf.size > 1_000_000);
 });
 
 test("publishes the bilingual memory capital-cycle series without Desk dependencies", () => {

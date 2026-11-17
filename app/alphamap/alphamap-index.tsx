@@ -93,6 +93,24 @@ export default function AlphaMapIndex({ language = "cn" }: { language?: "cn" | "
       </section>
 
       <section className={styles.section}>
+        <div className={styles.sectionHead}>
+          <div>
+            <p className={styles.sectionLabel}>ALPHAMAP-POWERED INDUSTRY RESEARCH / 01</p>
+            <h2>{isCn ? "看见关系，还要算清它怎样进入现金流。" : "Map the relationship, then trace it into cash flow."}</h2>
+          </div>
+          <p className={styles.lead}>{isCn ? "DOI 系列检验网络因子。这一层使用 AlphaMap 的客户、供货与信用关系，结合合同、财务和起租条件，处理市场正在交易的投资命题。首篇追踪 NVIDIA 换帅之后 CoreWeave 融资、设备采购、托管回款与 HBM 需求的传导条件。" : "The DOI series tests network factors. This layer uses AlphaMap customer, supply and credit relationships alongside contracts, financials and lease conditions to study live investment theses. The first case traces CoreWeave financing, equipment procurement, hosting cash flows and HBM demand after NVIDIA's leadership transition."}</p>
+        </div>
+        <div className={styles.grid}>
+          <article className={`${styles.card} ${styles.themeCard} ${styles.featureCard}`}>
+            <p className={styles.meta}>LUNARTULIP RESEARCH / INDUSTRY &amp; COMPANY DEEP DIVE</p>
+            <h3>{isCn ? "NVIDIA换帅之后，AI产业链哪些增长预期需要重估？" : "After NVIDIA’s Leadership Transition, Which AI Growth Expectations Need Reassessment?"}</h3>
+            <p>{isCn ? "以 AlphaMap 关系为起点，核对 49 项公开来源，并把融资支持、共同客户、替代采购与起租时间放进同一份投资判断。" : "Starting with AlphaMap relationships, the report reconciles 49 public sources and places financing support, shared customers, substitute procurement and lease timing in one investment assessment."}</p>
+            <Link href={`${prefix}/deep-dive/ai-infrastructure-cash-flow-first-case-2026-11`}>{isCn ? "阅读首个产业研究案例 →" : "Read the first industry-research case →"}</Link>
+          </article>
+        </div>
+      </section>
+
+      <section className={styles.section}>
         <div className={styles.policy}>
           <strong>{isCn ? "产品边界" : "Product boundary"}</strong>
           <p>{isCn ? "公开页面展示可引用的方法研究和限制条件，不提供实时信号、生产组合权重、交易指令或收益承诺。机器读 Research Objects 与持续研究按用途和许可范围交付。" : "The public surface provides citable methods research and its limitations. It does not provide live signals, production portfolio weights, trading instructions or return promises. Machine-readable Research Objects and continuous research are delivered by use case and license."}</p>
