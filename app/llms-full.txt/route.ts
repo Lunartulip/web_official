@@ -22,11 +22,11 @@ Use terms: https://lunartuliplab.com/research-usage
 Full analysis and public evidence context: use the canonical article above.`;
   };
   const alphaMapObjects = researchObjects
-    .filter((item) => String(item.kind) === "alphamap-study")
+    .filter((item) => (String(item.kind) === "alphamap-study" || String(item.kind) === "alphamap-case"))
     .map((item) => describeObject(item, "alphamap"))
     .join("\n\n---\n\n");
   const deepDiveObjects = researchObjects
-    .filter((item) => String(item.kind) !== "alphamap-study")
+    .filter((item) => (String(item.kind) !== "alphamap-study" && String(item.kind) !== "alphamap-case"))
     .map((item) => {
       return describeObject(item, "deep-dive");
     })

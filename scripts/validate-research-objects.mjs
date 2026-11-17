@@ -6,7 +6,7 @@ const root = process.cwd();
 const catalogPath = path.join(root, "content", "research-objects", "catalog.json");
 const objects = JSON.parse(await readFile(catalogPath, "utf8"));
 const locales = ["zh-CN", "en"];
-const kinds = new Set(["company-deep-dive", "theme-study", "methodology", "alphamap-study"]);
+const kinds = new Set(["company-deep-dive", "theme-study", "methodology", "alphamap-study", "alphamap-case"]);
 const claimTypes = new Set(["Fact", "Derived", "Inference", "Hypothesis"]);
 const roles = new Set(["primary", "supporting"]);
 const confidences = new Set(["high", "medium", "low"]);
@@ -132,6 +132,7 @@ for (const object of objects) {
     }
   }
 
+  if (object.kind !== "alphamap-case") {
   assert.ok(object.valuationScenarios.length >= 2, `${prefix} requires at least two valuation scenarios`);
   for (const scenario of object.valuationScenarios) {
     if (scenario.metrics) {
@@ -155,6 +156,15 @@ for (const object of objects) {
     const scenarioText = JSON.stringify(scenario).toLowerCase();
     assert.doesNotMatch(scenarioText, /target price\s*[:=]\s*\$?\d|目标价\s*[:：=]\s*\d/, `${prefix} ${scenario.id} must not publish a target price`);
   }
+  } else {
+    assert.ok(!("studyDesign" in object) && !("sample" in object) && !("diagnostics" in object), `${prefix} an investment case must not inherit retrospective factor-study fields`);
+    assert.ok(!("valuationScenarios" in object), `${prefix} a cash-flow case must not imply unperformed stock valuation`);
+    assert.ok(object.claims.some((claim) => claim.type === "Hypothesis"), `${prefix} a current case requires a forward thesis`);
+    assert.ok(object.dataGaps?.length > 0, `${prefix} a current case requires explicit evidence limits`);
+    for (const gap of object.dataGaps) {
+      for (const locale of locales) assert.ok(gap[locale]?.trim(), `${prefix} evidence limit missing ${locale}`);
+    }
+  }
 
   assert.ok(object.counterevidenceClaimIds.length > 0, `${prefix} requires counterevidence claims`);
   for (const id of object.counterevidenceClaimIds) {
@@ -163,10 +173,14 @@ for (const object of objects) {
     assert.ok(["Inference", "Hypothesis"].includes(claim.type), `${prefix} counterevidence ${id} must be analytical`);
   }
 
-  assert.ok(object.falsifiers.length >= 2, `${prefix} requires at least two quantitative falsifiers`);
+  assert.ok(object.falsifiers.length >= 2, `${prefix} requires at least two falsifiers`);
   for (const falsifier of object.falsifiers) {
+    if (object.kind === "alphamap-case") {
+      assert.ok(falsifier.condition?.trim(), `${prefix} ${falsifier.id} needs an observable failure condition`);
+    } else {
     assert.ok(Number.isFinite(falsifier.threshold), `${prefix} ${falsifier.id} threshold must be numeric`);
     assert.ok(["<", "<=", ">", ">="].includes(falsifier.operator), `${prefix} ${falsifier.id} invalid operator`);
+    }
     assert.ok(falsifier.metric?.trim() && falsifier.horizon?.trim(), `${prefix} ${falsifier.id} missing metric or horizon`);
     assert.ok(falsifier.claimIds.length > 0, `${prefix} ${falsifier.id} must link claims`);
     for (const id of falsifier.claimIds) {

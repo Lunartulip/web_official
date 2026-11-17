@@ -8,8 +8,8 @@ import { researchObjects } from "@/lib/research-objects";
 export default function sitemap(): MetadataRoute.Sitemap {
   const notes = getAllNotes();
   const englishNotes = getAllNotes("en");
-  const alphaMapObjects = researchObjects.filter((item) => String(item.kind) === "alphamap-study");
-  const deepDiveObjects = researchObjects.filter((item) => String(item.kind) !== "alphamap-study");
+  const alphaMapObjects = researchObjects.filter((item) => (String(item.kind) === "alphamap-study" || String(item.kind) === "alphamap-case"));
+  const deepDiveObjects = researchObjects.filter((item) => (String(item.kind) !== "alphamap-study" && String(item.kind) !== "alphamap-case"));
   const latestResearchDate = researchObjects
     .map((item) => item.versions.at(-1)?.date ?? item.publishedAt)
     .sort()

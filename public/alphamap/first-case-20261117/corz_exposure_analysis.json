@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0.0",
+  "research_object_id": "RO-ALPHAMAP-CASE-001",
+  "analysis_id": "CORZ-CONTRACT-EXPOSURE-20261117",
+  "as_of": "2026-11-17",
+  "publisher": "LunarTulip Research",
+  "scope": "Core Scientific consolidated colocation customer relationships, with current revenue, executed customer IT capacity and billing progress kept as separate denominators.",
+  "source_ids": [
+    6,
+    7,
+    49
+  ],
+  "inputs": {
+    "current_revenue": {
+      "as_of": "2026-09-30",
+      "counterparty": "CoreWeave",
+      "colocation_revenue_share": 1.0,
+      "denominator": "Current Core Scientific colocation revenue, not total group revenue or future contracted capacity",
+      "coreweave_share_of_group_9m_revenue_approximately": 0.84,
+      "group_revenue_period": "2026-01-01/2026-09-30",
+      "source_id": 7,
+      "source_section": "MD&A, Strategic Transition to High-Density Colocation Services, page 34",
+      "amd_neocloud_leases_commenced": false,
+      "amd_neocloud_lease_revenue_recognized": false
+    },
+    "contracted_capacity": {
+      "as_of": "2026-11-05",
+      "unit": "MW of leased customer / critical IT capacity",
+      "source_id": 6,
+      "source_section": "Q3 2026 earnings deck, pages 4 and 13",
+      "categories": [
+        {
+          "counterparty": "CoreWeave",
+          "capacity_MW": 590,
+          "instrument": "Executed hosting / lease agreements",
+          "source_ids": [
+            6,
+            7
+          ],
+          "legal_obligor_note": "Certain agreements were assigned to CW SPV, an indirect CoreWeave subsidiary; CoreWeave remains a primary obligor."
+        },
+        {
+          "counterparty": "AMD direct",
+          "capacity_MW": 377,
+          "instrument": "Direct leases with Advanced Micro Devices, Inc.",
+          "source_ids": [
+            6,
+            49
+          ],
+          "sites": {
+            "Pecos_TX": 185,
+            "Hunt_County_TX": 110,
+            "Muskogee_OK": 82
+          }
+        },
+        {
+          "counterparty": "Neocloud counterparty",
+          "capacity_MW": 152,
+          "instrument": "Neocloud leases with lease-specific conditional AMD credit support",
+          "source_ids": [
+            6,
+            49
+          ],
+          "sites": {
+            "Dalton_Phase_3_GA": 120,
+            "Auburn_AL": 32
+          }
+        }
+      ],
+      "reported_amd_neocloud_combined_rounded_MW": 530,
+      "reported_coreweave_and_amd_neocloud_combined_rounded_MW": 1120,
+      "reservation_capacity_right_excluded_MW": 1925,
+      "reservation_expiry": "2028-12-28",
+      "reservation_source_id": 49,
+      "rounding_note": "377 + 152 = 529 MW; management presents the combined agreement as approximately 530 MW. The reported group aggregates sum to approximately 1,120 MW. All capacity figures are approximate."
+    },
+    "billing_progress": {
+      "as_of": "2026-11-05",
+      "counterparty": "CoreWeave",
+      "contracted_MW": 590,
+      "billable_MW": 485,
+      "unit": "MW of customer IT capacity",
+      "source_id": 6,
+      "source_section": "Q3 2026 earnings deck, page 9",
+      "rounding_note": "Use the reported aggregate billing total. The deck states that approximate site figures may not add due to rounding. Billable capacity is not a cash-collection percentage."
+    },
+    "new_lease_delivery": {
+      "capacity_MW_rounded": 530,
+      "forecast_owner": "Core Scientific management",
+      "forecast_as_of": "2026-11-05",
+      "initial_delivery": "early 2027",
+      "full_delivery_target": "end of 2028",
+      "lease_commencement_condition": "Completion of contracted capacity and satisfaction of applicable commencement conditions",
+      "source_ids": [
+        6,
+        7
+      ],
+      "source_sections": [
+        "Earnings deck page 6",
+        "Q3 10-Q Note 6"
+      ],
+      "funding_note": "Q3 10-Q describes additional financing needs for the AMD and Neocloud build-out and expected project-level bond financing; delivery forecasts are not funded revenue guarantees."
+    },
+    "amd_credit_support": {
+      "applicable_neocloud_capacity_MW": 152,
+      "source_id": 49,
+      "source_section": "Q2 2026 10-Q Note 15, subsequent events",
+      "lease_execution_date": "2026-07-27",
+      "source_published_at": "2026-07-28",
+      "elements": [
+        "Protection for AMD equipment held on the applicable leased premises",
+        "AMD right, but not obligation, to cure specified Neocloud defaults",
+        "AMD rights and obligations upon specified material Neocloud defaults"
+      ],
+      "termination_scope": "Applicable lease expiry, specified insolvency/default circumstances, contractual term limit and specified Core Scientific representation-breach provisions",
+      "scope_warning": "Not an unconditional guarantee of all 530 MW, every Neocloud obligation, or the Core Scientific group."
+    }
+  },
+  "derivations": {
+    "sum_of_disaggregated_contract_capacity_MW": {
+      "value": 1119,
+      "formula": "590 + 377 + 152",
+      "unit": "MW",
+      "source_ids": [
+        6,
+        49
+      ]
+    },
+    "reported_rounded_contract_capacity_MW": {
+      "value": 1120,
+      "formula": "590 + 530",
+      "unit": "MW (approximately)",
+      "source_ids": [
+        6
+      ]
+    },
+    "coreweave_share_of_reported_rounded_contract_capacity": {
+      "value": 0.5267857142857143,
+      "formula": "590 / (590 + 530)",
+      "unit": "fraction of reported contracted IT MW",
+      "display": "approximately 53%",
+      "source_ids": [
+        6
+      ]
+    },
+    "coreweave_share_of_disaggregated_contract_capacity": {
+      "value": 0.5272564789991063,
+      "formula": "590 / (590 + 377 + 152)",
+      "unit": "fraction of disaggregated contracted IT MW",
+      "source_ids": [
+        6,
+        49
+      ]
+    },
+    "coreweave_billable_share": {
+      "value": 0.8220338983050848,
+      "formula": "485 / 590",
+      "unit": "fraction of CoreWeave contracted IT MW",
+      "display": "approximately 82%",
+      "source_ids": [
+        6
+      ]
+    },
+    "coreweave_not_yet_billable_MW": {
+      "value": 105,
+      "formula": "590 - 485",
+      "unit": "MW (approximately)",
+      "source_ids": [
+        6
+      ]
+    }
+  },
+  "interpretation": {
+    "zh": "签约容量已引入AMD与另一客户，但当前托管收入仍全部来自CoreWeave。新增租约尚待建设、融资及交付，不能把未来容量的约53%占比用于当前收入或利润下修。",
+    "en": "Contracted capacity includes AMD and another customer, while current colocation revenue remains entirely dependent on CoreWeave. New leases still require construction, financing and delivery. The roughly 53% future contracted-capacity share is not a current revenue or earnings sensitivity."
+  },
+  "guardrails": [
+    "Current revenue, contracted MW and billing MW use separate denominators and dates.",
+    "No same-axis comparison between revenue percentages and MW capacity.",
+    "No 1,925 MW reservation right included in contracted totals.",
+    "No implied revenue haircut, profit weight, guarantee-coverage ratio or calibrated shock elasticity.",
+    "No claim that all 530 MW are directly leased or unconditionally guaranteed by AMD.",
+    "This company-level extension does not modify or rerun frozen global model 4.1."
+  ]
+}

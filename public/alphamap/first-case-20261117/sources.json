@@ -1,0 +1,345 @@
+[
+  {
+    "id": 1,
+    "title": "NVIDIA CEO transition",
+    "published_at": "2026-11-12",
+    "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+    "scope": "Corporate announcement"
+  },
+  {
+    "id": 2,
+    "title": "CoreWeave: NVIDIA capacity-purchase arrangement",
+    "published_at": "2025-09-15",
+    "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962825000047/crwv-20250909.htm",
+    "scope": "Form 8-K; specified residual capacity, through April 13, 2032"
+  },
+  {
+    "id": 3,
+    "title": "CoreWeave Q3 2026 Form 10-Q",
+    "published_at": "2026-11-10",
+    "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/crwv-20260930.htm",
+    "scope": "Cash-flow statement: nine months ended September 30, 2026; named customers"
+  },
+  {
+    "id": 4,
+    "title": "CoreWeave Q3 2026 results",
+    "published_at": "2026-11-10",
+    "url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/",
+    "scope": "Results release"
+  },
+  {
+    "id": 5,
+    "title": "CoreWeave Q3 2026 earnings call",
+    "published_at": "2026-11-10",
+    "url": "https://s205.q4cdn.com/133937190/files/content_files/CoreWeave-3Q26-Transcript-_1_.pdf",
+    "scope": "PDF pages 2 and 6; expected customer prepayments/deposits, not receipts"
+  },
+  {
+    "id": 6,
+    "title": "Core Scientific Q3 2026 presentation",
+    "published_at": "2026-11-05",
+    "url": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000028/q3fy26earningsdeckvfinal.htm",
+    "scope": "Slides 4, 6, 9–13; leased and billable IT capacity, AMD-associated delivery expectations, CoreWeave contract book and construction credits"
+  },
+  {
+    "id": 7,
+    "title": "Core Scientific Q3 2026 Form 10-Q",
+    "published_at": "2026-11-05",
+    "url": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000030/core-20260930.htm",
+    "scope": "Notes 6–7 and MD&A; uncommenced AMD-associated leases, current CoreWeave customer concentration, construction financing and contingent debt schedule"
+  },
+  {
+    "id": 8,
+    "title": "Core Scientific Finance I LLC indenture",
+    "published_at": "2026-05-06",
+    "url": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001193125-26-208905/d47435dex41.htm",
+    "scope": "Sections 4.23 and 14.01; principal and cash-use conditions"
+  },
+  {
+    "id": 9,
+    "title": "Applied Digital Q1 FY2027 results",
+    "published_at": "2026-10-07",
+    "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm",
+    "scope": "Polaris Forge 1 delivery and completed project-note issuance"
+  },
+  {
+    "id": 10,
+    "title": "Applied Digital FY2026 Form 10-K",
+    "published_at": "2026-07-29",
+    "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000048/apld-20260531.htm",
+    "scope": "CoreWeave hosting scope and legal entities"
+  },
+  {
+    "id": 11,
+    "title": "TeraWulf Q3 2026 Form 10-Q",
+    "published_at": "2026-11-06",
+    "url": "https://investors.terawulf.com/sec-filings/all-sec-filings/content/0001628280-26-071671/wulf-20260930.htm",
+    "scope": "Akela/Fluidstack leases, Google recognition agreements and warrants"
+  },
+  {
+    "id": 12,
+    "title": "Nebius Q3 2026 shareholder letter",
+    "published_at": "2026-11-12",
+    "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926126008/tm2629571d1_ex99-2.htm",
+    "scope": "Microsoft NJ deployment schedule; companywide funding expectations"
+  },
+  {
+    "id": 13,
+    "title": "Nebius Microsoft agreement summary",
+    "published_at": "2025-09-08",
+    "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465925088312/tm2525580d1_6k.htm",
+    "scope": "Form 6-K; financing, phased delivery, grace period and alternative capacity"
+  },
+  {
+    "id": 14,
+    "title": "IREN FY2026 Form 10-K",
+    "published_at": "2026-08-27",
+    "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000052/iren-20260630.htm",
+    "scope": "Microsoft tranche prepayment/credit terms; NVIDIA cloud-services contract"
+  },
+  {
+    "id": 15,
+    "title": "IREN Q1 FY2027 results",
+    "published_at": "2026-11-05",
+    "url": "https://iren.gcs-web.com/news-releases/news-release-details/iren-reports-q1-fy27-results",
+    "scope": "Horizon rollout; scope and conditions of funding statements"
+  },
+  {
+    "id": 16,
+    "title": "SemiAnalysis Accelerator Model: supplied comparison charts",
+    "published_at": "2026-11-13 model / 2026-11-02 previous version",
+    "url": null,
+    "scope": "Displayed chart values supplied to LunarTulip; circulated November 17. Original institutional report and underlying Excel not obtained. Calculations use displayed rounded values, not independently calibrated forecasts."
+  },
+  {
+    "id": 17,
+    "title": "SemiAnalysis Accelerator & HBM Model: official methodology",
+    "published_at": "Accessed 2026-11-17",
+    "url": "https://semianalysis.com/accelerator-hbm-model/",
+    "scope": "Official model methodology and scope, not the underlying data for this revision"
+  },
+  {
+    "id": 18,
+    "title": "Separate SemiAnalysis November 17 report: user-supplied headline summary",
+    "published_at": "2026-11-17, identified by user; original pending",
+    "url": null,
+    "scope": "Distinct from source 16. User reports -17% cumulative 2026–2030 accelerator logic area, -30% 2028 HBM, -34% 2030 data-centre power. Original text, baseline, metric perimeter and model inputs not yet obtained. No original-report audit claimed."
+  },
+  {
+    "id": 19,
+    "title": "NVIDIA Q2 FY2027 commitments and guarantees",
+    "published_at": "2026-08-26 filing; July 26 balances and August subsequent event",
+    "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/R17.htm",
+    "scope": "AI cloud service agreements, SB Energy/OpenAI conditional guarantees and optional further support; fiscal years"
+  },
+  {
+    "id": 20,
+    "title": "Micron Q4 FY2026 prepared remarks",
+    "published_at": "2026-09-30",
+    "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+    "scope": "Industry DRAM bit outlook, contracted 2027 HBM and capex-to-output lag; company expectations"
+  },
+  {
+    "id": 21,
+    "title": "Microsoft FY2027 Q1 earnings call",
+    "published_at": "2026-10-28",
+    "url": "https://www.microsoft.com/en-us/Investor/events/fy-2027/earnings-fy-2027-q1",
+    "scope": "Customer demand, capital spending and third-party delivery timing; company CapEx includes finance leases"
+  },
+  {
+    "id": 22,
+    "title": "Alphabet Q3 2026 earnings call",
+    "published_at": "2026-10-28",
+    "url": "https://abc.xyz/investor/events/event-details/2026/2026-Q3-Earnings-Call-2026-Ujou16CTw9/",
+    "scope": "2026 cash capital spending guidance; server/network versus building mix; company outlook"
+  },
+  {
+    "id": 23,
+    "title": "NVIDIA DGX B300 specifications",
+    "published_at": "Accessed 2026-11-17",
+    "url": "https://www.nvidia.com/en-us/data-center/dgx-b300/",
+    "scope": "Eight GPUs, reported 2.1 TB GPU memory, approximately 14 kW system power; hardware-equivalent illustration"
+  },
+  {
+    "id": 24,
+    "title": "CoreWeave Vera Rubin MLPerf announcement",
+    "published_at": "2026-11-16",
+    "url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Becomes-First-Cloud-Provider-to-Deliver-Multi-Rack-NVIDIA-Vera-Rubin-Results-in-MLPerf-Training-v6-1/default.aspx",
+    "scope": "Post-transition execution evidence in Available category; not a funding or all-roadmap guarantee"
+  },
+  {
+    "id": 25,
+    "title": "LS Securities: SK hynix forecast and quarterly TSV model",
+    "published_at": "2026-11-16",
+    "url": "https://msg.ls-sec.co.kr/eum/K_20261114_31922_71.pdf",
+    "scope": "Original broker estimates, PDF p3. 2026/27 HBM2.117/2.779 nominalEB and annual processing2.205/2.85m wafers. Estimates, not issuer-reported actual output."
+  },
+  {
+    "id": 26,
+    "title": "Hana Securities: semiconductor industry capacity study",
+    "published_at": "2026-11-12",
+    "url": "https://file.hanaw.com/download/research/FileServer/WEB/industry/industry/2026/11/11/Semi_Indepth_261112_F.pdf",
+    "scope": "Original broker estimates, printed p25. Supplier capacity paths and new-DRAM-fab scale. Filename Semi means semiconductor, not SemiAnalysis. Capacity timing and HBM allocation are modeled separately."
+  },
+  {
+    "id": 27,
+    "title": "Samsung Securities: HBM wafer geometry",
+    "published_at": "2026-06-02",
+    "url": "https://www.samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=2020%2F2026060216210610K_02_04.pdf&inlineYn=Y&saveKey=research.pdf",
+    "scope": "Printed p19 engineering estimates for dies per wafer and effective recovery; not measured factory yields."
+  },
+  {
+    "id": 28,
+    "title": "DIGITIMES: high-end cloud AI accelerator shipments",
+    "published_at": "2026-10-19",
+    "url": "https://www.digitimes.com/reports/item.php?id=20261013RS400",
+    "scope": "Public original-publisher abstract anchors a backcast2026 estimate. Full paid report/count dictionary not accessed; 2026 is not an observed actual. Our forward growth assumptions are separate."
+  },
+  {
+    "id": 29,
+    "title": "NVIDIA Q2 FY2027 earnings call",
+    "published_at": "2026-08-26",
+    "url": "https://investor.nvidia.com/files/content_files/TRANSCRIPT_-NVIDIA-Corp-NVDA-US-Q2-2027-Earnings-Call-26-August-2026-5_00-PM-ET.pdf",
+    "scope": "AWS additional2mGPUs over the stated multi-year period; no calendar-year delivery schedule. Revenue opportunity perGW includes multiple products, not a GPU ASP."
+  },
+  {
+    "id": 30,
+    "title": "Google TPU8t and TPU8i technical deep dive",
+    "published_at": "2026-04-22",
+    "url": "https://cloud.google.com/blog/products/compute/tpu-8t-and-tpu-8i-technical-deep-dive/",
+    "scope": "Official capacity/specification definitions. Neither customer counts nor model availability establishes annual chip shipments."
+  },
+  {
+    "id": 31,
+    "title": "NVIDIA Rubin architecture",
+    "published_at": "2026-07-21",
+    "url": "https://developer.nvidia.com/blog/inside-nvidia-rubin-gpu-architecture-powering-the-era-of-agentic-ai/",
+    "scope": "Two compute dies form one logical GPU; regularRubin288GB12Hi remains separate from unfinalizedUltra configurations."
+  },
+  {
+    "id": 32,
+    "title": "AMD MI450X specifications",
+    "published_at": "2026-11-12",
+    "url": "https://www.amd.com/en/products/accelerators/instinct/mi400/mi450x.html",
+    "scope": "288GB with8HBM stacks. Compare withMI455X432GB/12stacks; this is stack-count selection, not automatically an8Hi layer change."
+  },
+  {
+    "id": 33,
+    "title": "AMD MI455X specifications",
+    "published_at": "2026-07-23",
+    "url": "https://www.amd.com/en/products/accelerators/instinct/mi400/mi455x.html",
+    "scope": "432GB and12HBM stacks. Product choice is modeled at constant device count for the configuration bridge."
+  },
+  {
+    "id": 34,
+    "title": "TrendForce: Rubin Ultra configurations under evaluation",
+    "published_at": "2026-08-04",
+    "url": "https://www.trendforce.com/presscenter/news/20260804-13166.html",
+    "scope": "Configuration and validation discussion predates the November CEO event. Does not confirm finalUltra architecture or adoption rate."
+  },
+  {
+    "id": 35,
+    "title": "TrendForce: HBM layer-count pricing",
+    "published_at": "2026-09-29",
+    "url": "https://www.trendforce.com/presscenter/news/20260929-13255.html",
+    "scope": "2027 forecast of8Hi10–20%per-Gb premium vs12Hi. Used as a constant-scope revenue sensitivity, not a2028 executed price."
+  },
+  {
+    "id": 36,
+    "title": "IEA Key Questions on Energy and AI, Table A.1",
+    "published_at": "2026-04-16",
+    "url": "https://www.iea.org/files/3179f7f8-01f6-4dd6-bffa-c9f7b73f1dc9/KeyQuestionsonEnergyandAI.pdf",
+    "scope": "2023/24/25IT capacity57/68/82GW initializes the historical stock. IEA2030 forecast is an external check, never an independent-model input. IT, facility rating, average load and annual energy differ."
+  },
+  {
+    "id": 37,
+    "title": "CBRE North America Data Center Trends H1 2026",
+    "published_at": "2026-08-27",
+    "url": "https://www.cbre.com/insights/books/north-america-data-center-trends-h1-2026",
+    "scope": "Eight primaryNA markets: operating10.903GW,33.7%YoY; construction7.481GW. Selected-market scope cannot prove global25%growth."
+  },
+  {
+    "id": 38,
+    "title": "JLL North America Data Center Report Midyear 2026",
+    "published_at": "2026-08-11",
+    "url": "https://www.jll.com/en-us/newsroom/data-center-demand-exceeds-expectations-in-h1-2026",
+    "scope": "66GW under construction,95%precommitted. Construction and absorption are not commissioned power; do not add to narrowerCBRE coverage."
+  },
+  {
+    "id": 39,
+    "title": "Broadcom / financial partners: Anthropic financing structure",
+    "published_at": "2026-10-26",
+    "url": "https://investors.broadcom.com/news-releases/news-release-details/bank-america-blackstone-citi-and-morgan-stanley-announce",
+    "scope": "63bnUSDSPV transaction with committed financing, deliveries from2027. Broadcom residual-value support equals the first-lien portion; no claim all funds already drawn."
+  },
+  {
+    "id": 40,
+    "title": "NVIDIA AI compute financing platform memoranda",
+    "published_at": "2026-08-10",
+    "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Partners-With-Apollo-BlackRock-Blackstone-Brookfield-Goldman-Sachs-and-KKR-to-Establish-AI-Compute-Infrastructure-Financing-Platforms-to-Mobilize-Over-500-Billion-of-Third-Party-Capital/default.aspx",
+    "scope": "MOU structure aiming to mobilize500bnUSDthird-party capital over time, subject to definitive agreements. Neither NVIDIAcash nor already funded GPU orders."
+  },
+  {
+    "id": 41,
+    "title": "SK hynix Q3 2026 results",
+    "published_at": "2026-10-28",
+    "url": "https://news.skhynix.com/en/q3-2026-business-results/",
+    "scope": "HBM4 ramp and M15X timing; more-than50%2027–28LTAcoverage concerns total capacity, not HBM-only volume."
+  },
+  {
+    "id": 42,
+    "title": "Samsung Q3 2026 earnings call",
+    "published_at": "2026-10-29",
+    "url": "https://irsvc.teletogether.com/sec/pdf/2026Q3_script_eng.pdf",
+    "scope": "2027HBMallocation and agreed target prices; HBM4revenue mix is not wafer/bit mix. No published company-level HBMprofit floor."
+  },
+  {
+    "id": 43,
+    "title": "SK hynix / TSMC HBM4 cooperation",
+    "published_at": "2024-04-19",
+    "url": "https://news.skhynix.com/sk-hynix-partners-with-tsmc-to-strengthen-hbm-technological-leadership/",
+    "scope": "Base-die and packaging cooperation; relationship existence does not establish annual customer allocation."
+  },
+  {
+    "id": 44,
+    "title": "NVIDIA FY2026 Form10-K: manufacturing and memory suppliers",
+    "published_at": "2026-02-25",
+    "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+    "scope": "Names memory suppliers includingSKhynix,Micron,Samsung; generic supply relationship does not prove qualification for every generation."
+  },
+  {
+    "id": 45,
+    "title": "NVIDIA DGX Rubin NVL8 system specification",
+    "published_at": "available2026-11-17",
+    "url": "https://www.nvidia.com/en-us/data-center/dgx-rubin-nvl8/",
+    "scope": "8GPUs and approximately24kW system power. System scope is distinct from acceleratorTDP and wholefacility capacity."
+  },
+  {
+    "id": 46,
+    "title": "Intel Foundry power-delivery white paper",
+    "published_at": "2026-08",
+    "url": "https://www.thailand.intel.com/content/dam/www/central-libraries/us/en/documents/2026-08/foundry-power-delivery-white-paper.pdf",
+    "scope": "Original Intel analysis offers power-scaling estimates. Not an NVIDIA TDP disclosure; used only as engineering cross-check."
+  },
+  {
+    "id": 47,
+    "title": "Microsoft Maia multigigawatt deployment plan",
+    "published_at": "2026-10-12",
+    "url": "https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/",
+    "scope": "96accelerators/167kWrack concernsMaia300. Do not attach this rack ratio toMaia200. Multi-GW deployment starts2027; annual mix is not disclosed."
+  },
+  {
+    "id": 48,
+    "title": "Anthropic / Google / Broadcom compute update",
+    "published_at": "2026-05-06",
+    "url": "https://www.anthropic.com/news/higher-limits-spacex",
+    "scope": "5GW agreement begins coming online2027. Calendar phasing is analyst-assumed; do not add the3.5GWsubset again."
+  },
+  {
+    "id": 49,
+    "title": "Core Scientific Q2 2026 Form 10-Q: AMD direct leases and Neocloud credit support",
+    "published_at": "2026-07-28",
+    "url": "https://www.sec.gov/Archives/edgar/data/1839341/000183934126000014/core-20260630.htm",
+    "scope": "Note 15 subsequent events: July 27 execution. AMD directly leases 377 MW; a separate Neocloud leases 152 MW under lease-specific AMD credit support, including equipment protections, optional cure rights and specified material-default provisions. The 1,925 MW reservation right is not included in contracted capacity. Filing date verified on the issuer IR filing page as July 28, not the June 30 period-end."
+  }
+]

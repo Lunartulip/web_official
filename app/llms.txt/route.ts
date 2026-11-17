@@ -12,11 +12,11 @@ export async function GET() {
     return `- [${title}](https://lunartuliplab.com/en/${collection}/${item.slug}) — ${item.tickers.join(", ")}; published ${item.publishedAt}; updated ${modified}; object ${item.id}; version ${item.version}${doi}; [public citation metadata](https://lunartuliplab.com/research/${item.slug})`;
   };
   const alphaMapResearch = researchObjects
-    .filter((item) => String(item.kind) === "alphamap-study")
+    .filter((item) => (String(item.kind) === "alphamap-study" || String(item.kind) === "alphamap-case"))
     .map((item) => researchLine(item, "alphamap"))
     .join("\n");
   const deepDiveResearch = researchObjects
-    .filter((item) => String(item.kind) !== "alphamap-study")
+    .filter((item) => (String(item.kind) !== "alphamap-study" && String(item.kind) !== "alphamap-case"))
     .map((item) => {
       return researchLine(item, "deep-dive");
     })

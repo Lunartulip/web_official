@@ -1,16 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { alphaMapWhitepapers } from "@/lib/alphamap-whitepapers";
-import { alphaMapStudies } from "@/lib/research-objects";
+import { alphaMapCases, alphaMapResearchObjects, alphaMapStudies } from "@/lib/research-objects";
 import styles from "../proof.module.css";
 
-function modifiedDate(item: (typeof alphaMapStudies)[number]) {
+function modifiedDate(item: (typeof alphaMapResearchObjects)[number]) {
   return item.versions.at(-1)?.date ?? item.publishedAt;
 }
 
 function compareStudies(
-  a: (typeof alphaMapStudies)[number],
-  b: (typeof alphaMapStudies)[number],
+  a: (typeof alphaMapResearchObjects)[number],
+  b: (typeof alphaMapResearchObjects)[number],
 ) {
   return modifiedDate(b).localeCompare(modifiedDate(a))
     || b.publishedAt.localeCompare(a.publishedAt);
@@ -20,7 +20,7 @@ export default function AlphaMapIndex({ language = "cn" }: { language?: "cn" | "
   const isCn = language === "cn";
   const locale = isCn ? "zh-CN" : "en";
   const prefix = isCn ? "" : "/en";
-  const latestStudy = [...alphaMapStudies].sort(compareStudies)[0];
+  const latestStudy = [...alphaMapResearchObjects].sort(compareStudies)[0];
 
   return (
     <main className={styles.page}>
@@ -49,6 +49,26 @@ export default function AlphaMapIndex({ language = "cn" }: { language?: "cn" | "
           <strong>ECONOMIC SEMANTICS · STATE TRANSITIONS · ALPHA MECHANICS</strong>
         </aside>
       </section>
+
+      {alphaMapCases.length > 0 && <section className={styles.section}>
+        <div className={styles.sectionHead}>
+          <div>
+            <p className={styles.sectionLabel}>INVESTMENT THESIS CASES / {String(alphaMapCases.length).padStart(2, "0")}</p>
+            <h2>{isCn ? "沿产业关系，追踪盈利与现金兑现。" : "Follow industry relationships into earnings and cash flow."}</h2>
+          </div>
+          <p className={styles.lead}>{isCn ? "从正在发生的市场变化出发，把公司合同、项目交付与现金分配接到同一条投资逻辑，提出当前证据支持的判断和可观察的反证条件。" : "Start with a current market change, connect contracts, project delivery and cash distribution, and state the investment thesis supported by the evidence and the conditions that would overturn it."}</p>
+        </div>
+        <div className={styles.grid}>
+          {[...alphaMapCases].sort(compareStudies).map((item) => (
+            <article className={`${styles.card} ${styles.themeCard} ${styles.featureCard}`} key={item.slug}>
+              <p className={styles.meta}>{item.sourceLabel.split(" · ")[0].toUpperCase()} / PUBLISHED {item.publishedAt} · AS OF {item.asOf}</p>
+              <h3>{item.renderings[locale].title}</h3>
+              <p>{item.renderings[locale].standfirst}</p>
+              <a href={`${prefix}/alphamap/${item.slug}`}>{isCn ? "阅读投资逻辑案例 →" : "Read the investment thesis →"}</a>
+            </article>
+          ))}
+        </div>
+      </section>}
 
       <section className={styles.section}>
         <div className={styles.sectionHead}>

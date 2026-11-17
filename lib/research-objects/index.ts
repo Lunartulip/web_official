@@ -2,6 +2,7 @@ import catalog from "@/content/research-objects/catalog.json";
 import type { ResearchObject } from "./types";
 
 export type {
+  AlphaMapCase,
   AlphaMapArtifact,
   AlphaMapDiagnostic,
   AlphaMapLimitation,
@@ -11,6 +12,7 @@ export type {
   AlphaMapStudyDesign,
   Claim,
   ClaimType,
+  CaseFalsifier,
   Evidence,
   EvidenceRole,
   DeepDiveLocaleRendering,
@@ -30,10 +32,17 @@ export type {
 export const researchObjects = catalog as unknown as readonly ResearchObject[];
 export const deepDiveResearchObjects = researchObjects.filter(
   (object): object is Extract<ResearchObject, { kind: "company-deep-dive" | "theme-study" | "methodology" }> =>
-    object.kind !== "alphamap-study",
+    object.kind !== "alphamap-study" && object.kind !== "alphamap-case",
 );
 export const alphaMapStudies = researchObjects.filter(
   (object): object is Extract<ResearchObject, { kind: "alphamap-study" }> => object.kind === "alphamap-study",
+);
+export const alphaMapCases = researchObjects.filter(
+  (object): object is Extract<ResearchObject, { kind: "alphamap-case" }> => object.kind === "alphamap-case",
+);
+export const alphaMapResearchObjects = researchObjects.filter(
+  (object): object is Extract<ResearchObject, { kind: "alphamap-study" | "alphamap-case" }> =>
+    object.kind === "alphamap-study" || object.kind === "alphamap-case",
 );
 
 const byId = new Map(researchObjects.map((object) => [object.id, object]));

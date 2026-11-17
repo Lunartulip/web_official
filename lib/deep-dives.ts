@@ -99,7 +99,7 @@ function projectDeepDive(object: DeepDiveResearchObject): DeepDive {
 }
 
 export const deepDives: DeepDive[] = researchObjects
-  .filter((object): object is DeepDiveResearchObject => object.kind !== "alphamap-study")
+  .filter((object): object is DeepDiveResearchObject => object.kind !== "alphamap-study" && object.kind !== "alphamap-case")
   .map(projectDeepDive);
 
 export function getDeepDive(slug: string) {
