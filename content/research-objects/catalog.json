@@ -6242,12 +6242,18 @@
       "IREN",
       "WULF",
       "MSFT",
-      "GOOGL"
+      "GOOGL",
+      "MU",
+      "AMD",
+      "AVGO",
+      "AMZN",
+      "000660.KS",
+      "005930.KS"
     ],
     "publishedAt": "2026-11-17",
     "asOf": "2026-11-17",
-    "version": "1.1.0",
-    "sourceLabel": "AlphaMap Investment Thesis Case 01 · Contracted demand, delivery and cash flow · 2026-11-17",
+    "version": "1.2.0",
+    "sourceLabel": "AlphaMap Investment Thesis Case 01 · HBM procurement, inventory funding and cash flow · 2026-11-17",
     "claims": [
       {
         "id": "CL-AMCASE1-001",
@@ -6462,8 +6468,8 @@
         "id": "CL-AMCASE1-018",
         "type": "Fact",
         "text": {
-          "zh-CN": "NVIDIA披露约4.25GW SB Energy/OpenAI项目的条件担保，首阶段预计FY2029；另3.8GW取决于自行决定追加支持的选择权，本案不计入确定供给。360亿美元AI云服务承诺亦不能重复计作独立芯片需求。",
-          "en": "NVIDIA discloses conditional guarantees for approximately 4.25 GW of SB Energy/OpenAI projects, with the first phase expected in FY2029. A further 3.8 GW depends on discretionary additional support and is excluded from firm supply. The $36bn AI cloud-service commitments are not additional independent chip demand."
+          "zh-CN": "NVIDIA对SB Energy项目约4.25GW IT负荷提供条件担保，一般随相关租约起始生效，并在特定租户违约时触发；首阶段预计FY2029。额外3.8GW支持仍为公司自主选择权，不能计作已落实供给或重复芯片需求。",
+          "en": "NVIDIA provides conditional guarantees for approximately 4.25 GW of IT load at the SB Energy project, generally effective as the relevant leases commence and payable on specified tenant defaults; the first phase is expected in FY2029. Support for another 3.8 GW remains discretionary and is not executed supply or additional independent chip demand."
         },
         "evidenceIds": [
           "EV-AMCASE1-NVDACOMMITMENTS"
@@ -6488,12 +6494,13 @@
         "id": "CL-AMCASE1-020",
         "type": "Inference",
         "text": {
-          "zh-CN": "11月13日更新的旧图表与用户另行指出的11月17日报告为不同证据；后者原件仍待取得。两组外部下修数均未进入独立项目模型，项目增长也不足以裁决全球远期预测下修是否合理。",
-          "en": "The older charts labelled a November 13 update and the separately user-identified November 17 report are distinct evidence. The latter original remains unavailable. Neither set of external cuts feeds the independent project model, and project growth alone cannot adjudicate global long-range revisions."
+          "zh-CN": "11月13日旧图表与另行指出的11月17日SemiAnalysis报告为不同证据，后者原件仍待取得。两组下修数均未进入独立模型；本案检验采购、配置和融资条件，尚未对齐原稿口径裁决其下调是否公允。",
+          "en": "The older November 13 charts and the separately identified November 17 SemiAnalysis report are distinct evidence; the latter original remains unavailable. Neither set of revision figures enters the independent model. This case tests procurement, configuration and funding conditions without claiming a like-for-like verdict on the original report."
         },
         "evidenceIds": [
           "EV-AMCASE1-SACHARTS",
-          "EV-AMCASE1-SA17SUMMARY"
+          "EV-AMCASE1-SA17SUMMARY",
+          "EV-AMCASE1-MODEL41"
         ]
       },
       {
@@ -6506,6 +6513,145 @@
         "evidenceIds": [
           "EV-AMCASE1-MSFTOUTLOOK",
           "EV-AMCASE1-MUOUTLOOK"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-022",
+        "type": "Hypothesis",
+        "text": {
+          "zh-CN": "独立工程基准估计三家主要原厂2028年合格HBM能力为7.835EB，低高情景为5.886—10.285EB；这是分期晶圆投片、代际配置和有效合格回收率的结果，不是收入或出货保底。",
+          "en": "The independent engineering base estimates 7.835 EB of qualified 2028 HBM capacity at the three major suppliers, with 5.886–10.285 EB low/high cases. It combines phased wafer input, generation mix and effective qualified recovery; it is not a shipment or revenue floor."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-HBMSUPPLY",
+          "EV-AMCASE1-LSHBM",
+          "EV-AMCASE1-HANACAPACITY",
+          "EV-AMCASE1-SAMSUNGGEOMETRY"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-023",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "在全球机房IT容量年增25%、固定开仓状态、一季物理投运时滞和中值功率条件下，将采购前瞻从一季延至四季，2028年设备内嵌HBM由4.958升至7.311EB，已投运AI系统IT均约99.667GW。年度采购差2.354EB与期末内嵌库存差4.433EB分开计量。",
+          "en": "Under 25% annual global facility-IT growth, a fixed opening state, one-quarter physical readiness and baseline power, extending procurement lookahead from one to four quarters raises 2028 embedded HBM from 4.958 to 7.311 EB, with 99.667 GW of installed AI-system IT in both cases. The 2.354 EB annual flow difference is distinct from the 4.433 EB year-end inventory difference."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-MODEL41",
+          "EV-AMCASE1-IEAHISTORY"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-024",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "四季窗口比一季窗口多持有约1202.44万枚未安装设备。按GPU每枚3万美元、ASIC每枚1万美元归一化计价，额外期末加速器资本占用约2174.20亿美元，未含主机、网络和融资成本，亦非已落实融资。",
+          "en": "The four-quarter policy holds about 12.024 million additional uninstalled devices. At assumed prices of $30,000 per GPU and $10,000 per ASIC, additional year-end accelerator capital is $217.42bn, excluding host, network and financing costs; it is not committed funding."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-MODEL41"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-025",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "在相同设备数量下，所建模的Ultra降层工程分支与AMD产品选择，使2028年配置需求由11.418降至11.100EB，减少0.318EB、约2.8%。前者非已确认规格，后者是HBM stack数量差异，不能机械外推全行业下修30%。",
+          "en": "At the same device count, modeled Ultra layer-count branches and AMD product selection reduce 2028 configuration demand from 11.418 to 11.100 EB, a 0.318 EB or 2.8% change. Ultra remains an engineering branch; AMD changes stack count. This cannot mechanically establish a 30% industry-wide revision."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-BOMCONFIG",
+          "EV-AMCASE1-AMDBOM"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-026",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "Samsung称2027年HBM供货已按目标价格谈定；Micron称已完成绝大部分2027年HBM位元供给协议。SK hynix超过50%的2027—2028年长约覆盖率指全部产能，不能当作HBM专属保障比例。",
+          "en": "Samsung reports its 2027 HBM supply allocated at agreed target prices; Micron reports agreements for the vast majority of its 2027 HBM bits. SK hynix’s greater-than-50% LTA coverage in 2027–2028 refers to total capacity, not an HBM-specific protection ratio."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-SAMSUNGHBM",
+          "EV-AMCASE1-MUOUTLOOK",
+          "EV-AMCASE1-SKLTA"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-027",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "CoreWeave在2026年第三季度因相关合同变得可取消，将19亿美元期初递延收入转为其他流动负债内的客户负债；披露不等于订单已经取消或退款已经发生。",
+          "en": "In Q3 2026, CoreWeave reclassified $1.9bn of opening deferred revenue into customer liabilities within other current liabilities because the associated contracts became cancellable. This disclosure does not establish actual order cancellations or refunds."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-CRWV10Q"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-028",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "IREN为Microsoft项目安排的延迟提款贷款分四批、按交付里程碑和先决条件提款；另行发行的私募票据款项进入受限托管账户，满足条件才释放。承诺金额并非可立即自由使用的锁货现金。",
+          "en": "IREN’s delayed-draw term loan for the Microsoft project is drawn in four tranches against delivery milestones and conditions precedent. Separate private-placement note proceeds enter restricted escrow and are released on conditions; commitments are not immediately unrestricted procurement cash."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-IREN10K"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-029",
+        "type": "Inference",
+        "text": {
+          "zh-CN": "三厂合格HBM能力与高端云加速器设备内嵌需求的范围不同，原始HBM及在制品库存、其他客户和代际适配须另行核对。两侧不能直接相减认定全行业过剩，也不能把设备内嵌量直接当原厂同期收入。",
+          "en": "Qualified HBM capacity at three suppliers and embedded demand from high-end cloud accelerators have different scopes. Raw-HBM/WIP inventory, other customers and generation matching require separate reconciliation. Their difference is not directly an industry surplus, nor is embedded memory equivalent to same-period supplier revenue."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-MODEL41",
+          "EV-AMCASE1-HBMSUPPLY",
+          "EV-AMCASE1-DT2026"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-030",
+        "type": "Hypothesis",
+        "text": {
+          "zh-CN": "已谈定量价的2027年HBM协议提高近端收入可见度；2028年扩产回报更依赖客户能否融资提前锁货。融资、设备交付与电力投运的匹配，比远期合同总额更能检验算力商扩张的现金承受能力。",
+          "en": "Negotiated 2027 HBM volume and pricing improve near-term revenue visibility; returns on 2028 expansion depend more heavily on customers’ ability to finance advance procurement. Matching funding, equipment delivery and energisation tests compute operators’ cash capacity more directly than multiyear headline contract values."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-MODEL41",
+          "EV-AMCASE1-SAMSUNGHBM",
+          "EV-AMCASE1-MUOUTLOOK",
+          "EV-AMCASE1-IREN10K",
+          "EV-AMCASE1-CRWV10Q"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-031",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "固定stack数量、同代24Gb die条件下，12Hi改8Hi使位元数降至三分之二。即使每位元价溢价10%—20%，单设备HBM收入仍减少约20%—27%，需设备数增25%—36%才抵补；这是假设价格敏感性，不是2028年ASP或净利润预测。",
+          "en": "At fixed stack count and same-generation 24Gb dies, moving from 12Hi to 8Hi reduces bits to two-thirds. Even with a 10–20% per-bit premium, HBM revenue per device falls about 20–27%, requiring 25–36% more devices to offset it. This is price sensitivity, not a 2028 ASP or net-profit forecast."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-HBMLAYERPRICE",
+          "EV-AMCASE1-BOMCONFIG"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-032",
+        "type": "Inference",
+        "text": {
+          "zh-CN": "Microsoft同时连接多家算力商，Google的Akela租约支持与Broadcom参与的Anthropic融资则属于不同资金渠道。NVIDIA支持变化不会自动等幅传到所有节点；融资压力需经过具体提款、交付、租约和付款条件。",
+          "en": "Microsoft connects several operators, while Google’s Akela lease support and the Anthropic financing involving Broadcom are distinct funding channels. Changes in NVIDIA support do not automatically transmit equally across all nodes; funding pressure must pass through specific drawdown, delivery, lease and payment conditions."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-CRWV10Q",
+          "EV-AMCASE1-NBISCONTRACT",
+          "EV-AMCASE1-IREN10K",
+          "EV-AMCASE1-WULF10Q",
+          "EV-AMCASE1-AVGOSPV"
         ]
       }
     ],
@@ -6548,13 +6694,13 @@
         "source": {
           "publisher": "CoreWeave / SEC",
           "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/crwv-20260930.htm",
-          "document": "Form 10-Q, cash-flow statement for the nine months ended September 30, 2026"
+          "document": "Q3 2026 Form 10-Q: cash-flow statement for nine months ended September 30 and Note 2 Contract Balances"
         },
         "sourceDate": "2026-11-10",
         "dataAsOf": "2026-09-30",
         "calculation": "5638 / 23558 * 100 = 23.932422%; 23558 - 5638 = 17920; amounts are USD millions.",
         "confidence": "high",
-        "counterevidence": "The operating-cash-flow measure includes working-capital movements and customer cash. The derived funding difference is historical and is not an unfilled current liquidity gap.",
+        "counterevidence": "Historical financing inflows are already realized and cannot be counted again. The Q3 $1.9bn deferred-revenue reclassification follows contracts becoming cancellable; it does not establish actual cancellations, refunds or a post-November CEO-event effect.",
         "lastVerified": "2026-11-17",
         "role": "primary"
       },
@@ -6707,7 +6853,7 @@
         "title": "IREN FY2026 Form 10-K",
         "source": {
           "publisher": "IREN / SEC",
-          "document": "IREN FY2026 Form 10-K — Microsoft tranche prepayment/credit terms; NVIDIA cloud-services contract",
+          "document": "FY2026 Form 10-K: Microsoft prepayments, project DDTL delivery/conditions precedent, and separate USPP escrow-release terms",
           "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000052/iren-20260630.htm"
         },
         "sourceDate": "2026-08-27",
@@ -6811,6 +6957,214 @@
         "counterevidence": "The report date and headline cuts are supplied by the user; the original text, baseline, metric perimeter and model inputs remain pending. These values are not inputs to the independent project forecast.",
         "lastVerified": "2026-11-17",
         "role": "supporting"
+      },
+      {
+        "id": "EV-AMCASE1-MODEL41",
+        "title": "Frozen independent model 4.1: physical cohorts and procurement policies",
+        "source": {
+          "publisher": "LunarTulip Research",
+          "document": "AlphaMap first case 1.2.0 public publication pack; independent input freeze, formulae and procurement comparison",
+          "url": "https://lunartuliplab.com/alphamap/first-case-20261117/AlphaMap_First_Case_Publication_Pack_20261117.zip"
+        },
+        "sourceDate": "2026-11-17",
+        "dataAsOf": "2026-11-17",
+        "calculation": "2028 1q/4q embedded HBM: 4.957506237/7.311074772 EB; annual flow difference 2.353568535 EB. End-inventory HBM difference 4.433050057 EB. Normalized inventory cost difference = 21.7420448847 million basic-cost units * assumed $10,000 = $217420.448847 million.",
+        "confidence": "medium",
+        "counterevidence": "Conditional engineering and procurement-policy calculations, not calibrated global behavior probabilities. Raw-HBM/WIP inventories, other supplier customers and non-memory global throughput constraints require separate treatment.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-HBMSUPPLY",
+        "title": "Independent qualified HBM supply model",
+        "source": {
+          "publisher": "LunarTulip Research",
+          "document": "Supplier and generation wafer-month panel; qualified output and 2028 engineering sensitivities",
+          "url": "https://lunartuliplab.com/alphamap/first-case-20261117/AlphaMap_First_Case_Publication_Pack_20261117.zip"
+        },
+        "sourceDate": "2026-11-17",
+        "dataAsOf": "2026-11-17",
+        "calculation": "2028 base: 8.16 million annual wafer inputs * 960.1525 nominal GB per wafer / 1000 = 7.83484452 nominal EB. Low/base/high: 5.88606966 / 7.83484452 / 10.28451645 EB. Recovery includes yield, assembly and qualification losses.",
+        "confidence": "medium",
+        "counterevidence": "Fab phasing, supplier mix and effective recovery are engineering estimates informed by original broker research. Qualified capacity is not realized shipment or revenue; year-end capacity is not multiplied by twelve.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-BOMCONFIG",
+        "title": "Same-device configuration sensitivity and physical unit contract",
+        "source": {
+          "publisher": "LunarTulip Research",
+          "document": "Frozen product BOM and model 4.1 configuration bridge; supplier nominal GB/EB units with physical-unit checks",
+          "url": "https://lunartuliplab.com/alphamap/first-case-20261117/AlphaMap_First_Case_Publication_Pack_20261117.zip"
+        },
+        "sourceDate": "2026-11-17",
+        "dataAsOf": "2026-11-17",
+        "calculation": "2028 same-device memory: 11.418183189 -> 11.099816413 nominal EB; saving 0.318366777 EB (2.788244%).",
+        "confidence": "medium",
+        "counterevidence": "Ultra architecture, adoption and future product mix are explicit engineering branches. AMD stack-count selection is not automatically an 8Hi layer-count change; the result is not a market-wide 30% revision.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-LSHBM",
+        "title": "LS Securities original HBM/TSV estimates",
+        "source": {
+          "publisher": "LS Securities",
+          "document": "SK hynix quarterly TSV and HBM shipment forecast, PDF page 3",
+          "url": "https://msg.ls-sec.co.kr/eum/K_20261114_31922_71.pdf"
+        },
+        "sourceDate": "2026-11-16",
+        "dataAsOf": "2026-11-16",
+        "calculation": null,
+        "confidence": "medium",
+        "counterevidence": "Broker forecasts, not issuer-reported realized production; supplier-share inference and quarterly capacity timing remain separate assumptions.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-HANACAPACITY",
+        "title": "Hana Securities semiconductor capacity study",
+        "source": {
+          "publisher": "Hana Securities",
+          "document": "Supplier capacity paths and new-fab scope, printed page 25",
+          "url": "https://file.hanaw.com/download/research/FileServer/WEB/industry/industry/2026/11/11/Semi_Indepth_261112_F.pdf"
+        },
+        "sourceDate": "2026-11-12",
+        "dataAsOf": "2026-11-12",
+        "calculation": null,
+        "confidence": "medium",
+        "counterevidence": "Original semiconductor research, not SemiAnalysis. Capacity scale is not the same as fully qualified annual HBM output.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-SAMSUNGGEOMETRY",
+        "title": "HBM wafer geometry and recovery estimates",
+        "source": {
+          "publisher": "Samsung Securities",
+          "document": "Engineering estimates for die area, dies per wafer and effective recovery, printed page 19",
+          "url": "https://www.samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=2020%2F2026060216210610K_02_04.pdf&inlineYn=Y&saveKey=research.pdf"
+        },
+        "sourceDate": "2026-06-02",
+        "dataAsOf": "2026-06-02",
+        "calculation": null,
+        "confidence": "medium",
+        "counterevidence": "Analyst engineering estimates, not measured factory yields; qualification loss cannot be deducted again after bundled effective recovery.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-DT2026",
+        "title": "High-end cloud accelerator quantity anchor",
+        "source": {
+          "publisher": "DIGITIMES Research",
+          "document": "Public original-publisher abstract; 2026 backcast from 2027 forecast and stated growth",
+          "url": "https://www.digitimes.com/reports/item.php?id=20261013RS400"
+        },
+        "sourceDate": "2026-10-19",
+        "dataAsOf": "2026-10-19",
+        "calculation": "25.951 million / 1.645 = 15.7756838906 million estimated 2026 high-end cloud accelerators.",
+        "confidence": "medium",
+        "counterevidence": "2026 is a forecast backcast, not an observed actual. Full paid count dictionary was not accessed; forward growth is independently assumed and not copied from this forecast.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-IEAHISTORY",
+        "title": "Historical global data-centre IT capacity",
+        "source": {
+          "publisher": "IEA",
+          "document": "Key Questions on Energy and AI, Table A.1; historical 2023–2025 stock anchors",
+          "url": "https://www.iea.org/files/3179f7f8-01f6-4dd6-bffa-c9f7b73f1dc9/KeyQuestionsonEnergyandAI.pdf"
+        },
+        "sourceDate": "2026-04-16",
+        "dataAsOf": "2026-04-16",
+        "calculation": "2025 IT capacity = 82 GW. 25% future growth is a separate scenario, not IEA guidance or a measured probability.",
+        "confidence": "medium",
+        "counterevidence": "Historical global facility capacity does not establish all capacity is fungible or AI-ready. IEA 2030 forecasts are external checks, not independent-model inputs.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-SAMSUNGHBM",
+        "title": "Samsung 2027 HBM allocation and price discussion",
+        "source": {
+          "publisher": "Samsung Electronics",
+          "document": "Q3 2026 earnings call, HBM Q&A",
+          "url": "https://irsvc.teletogether.com/sec/pdf/2026Q3_script_eng.pdf"
+        },
+        "sourceDate": "2026-10-29",
+        "dataAsOf": "2026-10-29",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "Management reports sold-out volume at agreed target prices; full cancellation, delivery and guarantee terms are not published, so this is not an unconditional revenue or profit floor.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-SKLTA",
+        "title": "SK hynix company-wide LTA coverage",
+        "source": {
+          "publisher": "SK hynix",
+          "document": "Q3 2026 results, long-term agreements section",
+          "url": "https://news.skhynix.com/en/q3-2026-business-results/"
+        },
+        "sourceDate": "2026-10-28",
+        "dataAsOf": "2026-10-28",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "More-than-50% coverage applies to total 2027–2028 production capacity, not a disclosed HBM-only percentage; pricing remains within a framework reflecting market conditions.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-HBMLAYERPRICE",
+        "title": "HBM layer-count pricing forecast",
+        "source": {
+          "publisher": "TrendForce",
+          "document": "2027 8Hi per-bit premium forecast, used only for constant-scope revenue sensitivity",
+          "url": "https://www.trendforce.com/presscenter/news/20260929-13255.html"
+        },
+        "sourceDate": "2026-09-29",
+        "dataAsOf": "2026-09-29",
+        "calculation": "At fixed stack count and 24Gb dies, 12Hi -> 8Hi gives 2/3 bits. A 10–20% per-bit premium gives (2/3)*(1.10–1.20) = 73.33–80% revenue per device; unit-volume breakeven rises 25–36.36%.",
+        "confidence": "medium",
+        "counterevidence": "The premium is a 2027 forecast, not an executed 2028 ASP. It cannot automatically be applied to AMD products with different stack counts or be treated as a net-income estimate.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-AMDBOM",
+        "title": "AMD MI450X and MI455X HBM configuration",
+        "source": {
+          "publisher": "AMD",
+          "document": "MI450X: 288GB and eight HBM stacks; compare MI455X: 432GB and twelve stacks",
+          "url": "https://www.amd.com/en/products/accelerators/instinct/mi400/mi450x.html"
+        },
+        "sourceDate": "2026-11-12",
+        "dataAsOf": "2026-11-12",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "Product selection changes total stack count; it does not prove a change from twelve to eight dies in each stack. Future sales mix is assumed, not disclosed.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-AVGOSPV",
+        "title": "Anthropic compute-financing structure",
+        "source": {
+          "publisher": "Broadcom and financing partners",
+          "document": "Announced $63bn SPV transaction and committed financing; deliveries from 2027",
+          "url": "https://investors.broadcom.com/news-releases/news-release-details/bank-america-blackstone-citi-and-morgan-stanley-announce"
+        },
+        "sourceDate": "2026-10-26",
+        "dataAsOf": "2026-10-26",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "Committed financing is not the same as funds already drawn; Broadcom residual-value support corresponds to a defined first-lien portion, not an unconditional guarantee of every project obligation.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
       }
     ],
     "financialBridge": [
@@ -6946,15 +7300,32 @@
         "evidenceIds": [
           "EV-AMCASE1-CALL"
         ]
+      },
+      {
+        "label": {
+          "zh-CN": "较长锁货窗口的额外期末加速器资本占用：假设单价归一化",
+          "en": "Additional year-end accelerator capital under longer procurement: assumed-price normalization"
+        },
+        "period": "2028 year-end, 4q less 1q procurement policy; assumed device prices",
+        "value": 217420.44884721417,
+        "unit": "USDm",
+        "displayValue": {
+          "zh-CN": "约2174.2亿美元（假设GPU $30,000、ASIC $10,000）",
+          "en": "$217.42bn (assumed GPU $30,000; ASIC $10,000)"
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-MODEL41"
+        ]
       }
     ],
     "counterevidenceClaimIds": [
       "CL-AMCASE1-007",
-      "CL-AMCASE1-008",
       "CL-AMCASE1-009",
       "CL-AMCASE1-017",
       "CL-AMCASE1-019",
-      "CL-AMCASE1-020"
+      "CL-AMCASE1-020",
+      "CL-AMCASE1-029",
+      "CL-AMCASE1-032"
     ],
     "falsifiers": [
       {
@@ -7011,6 +7382,50 @@
           "zh-CN": "资金、供电、工程或验收延期须修订对应项目日期；APLD的年中措辞可能跨越6月底，不能把条件基准当保底承诺。",
           "en": "Funding, power, construction or acceptance delays require project-specific date revisions. APLD’s mid-year wording may extend beyond June 30; the conditional base is not a guaranteed completion date."
         }
+      },
+      {
+        "id": "FAL-AMCASE1-INVENTORY",
+        "metric": "Procurement, installed capacity and equipment inventory under matched scope",
+        "condition": "Observed procurement and uninstalled equipment stocks, after matching products and periods, contradict the model policy path or show that supplier/customer credit can sustain long advance-procurement windows without the assumed external funding burden.",
+        "horizon": "2027–2028 quarterly observations",
+        "claimIds": [
+          "CL-AMCASE1-023",
+          "CL-AMCASE1-024",
+          "CL-AMCASE1-030"
+        ],
+        "rationale": {
+          "zh-CN": "按季度核对采购、投运、库存及其出资方；若长期锁货可持续且资金压力低，需减弱库存融资约束判断。",
+          "en": "Reconcile purchases, commissioning, inventory and funding by quarter; sustainable long advance buying with little funding pressure weakens the inventory-financing constraint thesis."
+        }
+      },
+      {
+        "id": "FAL-AMCASE1-HBMSUPPLY",
+        "metric": "Qualified HBM wafer output, generation mix and customer qualification",
+        "condition": "Disclosed fab ramps, qualified recovery or generation allocations move the reconciled 2028 qualified-output estimate outside the stated engineering envelope, or customer qualification prevents modeled reallocation.",
+        "horizon": "Through 2028",
+        "claimIds": [
+          "CL-AMCASE1-022",
+          "CL-AMCASE1-025",
+          "CL-AMCASE1-029"
+        ],
+        "rationale": {
+          "zh-CN": "产能预测须随实际投片、认证和代际匹配修订；不能把最大可行物理能力当已实现原厂出货。",
+          "en": "Revise capacity with actual wafer inputs, qualification and generation matching; maximum feasible physical capability is not realized supplier shipment."
+        }
+      },
+      {
+        "id": "FAL-AMCASE1-HBMCONTRACT",
+        "metric": "2027 negotiated HBM supply agreements and collections",
+        "condition": "Supplier disclosures identify material volume, price, delivery or cancellation changes affecting the agreements used to support 2027 HBM revenue visibility.",
+        "horizon": "2027 contract performance",
+        "claimIds": [
+          "CL-AMCASE1-026",
+          "CL-AMCASE1-030"
+        ],
+        "rationale": {
+          "zh-CN": "近端可见度来自特定量价协议；若条款或履约实质改变，应重估对应收入可见度，而非沿用行业保底假设。",
+          "en": "Near-term visibility rests on identified volume/price arrangements; material term or performance changes require issuer-specific revisions, not an industry guarantee assumption."
+        }
       }
     ],
     "versions": [
@@ -7029,126 +7444,132 @@
           "zh-CN": "审阅稿扩展为全局合同网络：压缩保留原研究第一章，补充共同客户、项目信用支持及下跌传导；先建立截至2027年6月底的独立项目交付条件基准，再单列外部预测对照。",
           "en": "Review-draft expansion into the contract network: compress and retain the original research as Chapter 1, add shared customers, project credit support and downside paths, and establish an independent conditional project-delivery base through June 2027 before external forecast comparison."
         }
+      },
+      {
+        "version": "1.2.0",
+        "date": "2026-11-17",
+        "diff": {
+          "zh-CN": "将主问题推进为独立HBM能力、设备配置、设施与季度库存模型：比较一季与四季采购前瞻，分开年度流量、期末库存和资本占用；保留项目合同网络，明确2027协议与2028扩产回报。研究为条件情景，不声称全球最大概率预测或已裁决SemiAnalysis原稿。",
+          "en": "Adds independent HBM capacity, product configuration, facility and quarterly cohort-inventory models. Compares one- and four-quarter procurement windows while separating annual flow, year-end stock and capital tied up; retains the contract network and distinguishes 2027 agreement visibility from 2028 expansion returns. Conditional research, not a calibrated global most-probable forecast or a verdict on the unavailable SemiAnalysis original."
+        }
       }
     ],
     "dataGaps": [
       {
-        "zh-CN": "本案没有使用当前股价或一致预期估值，不能据此直接给出证券回报排序。",
-        "en": "This case does not use current share prices or consensus valuation and does not establish a security-return ranking."
+        "zh-CN": "研究状态为可复核的条件采购融资研究。25%设施增长、采购前瞻、开仓库存及未来型号和功率mix为显式假设，未校准全市场行为概率。",
+        "en": "Research status: reproducible conditional procurement-financing analysis. The 25% facility growth, procurement lookahead, opening inventory and future product/power mix are explicit assumptions, not calibrated global behavior probabilities."
       },
       {
-        "zh-CN": "未来预付款与项目融资仍需后续披露验证；完整股东现金模型还需项目级抵扣、偿债及储备账户余额。",
-        "en": "Future prepayments and project financing require subsequent confirmation; a complete equity-cash-flow model also requires project-level credit, debt-service and reserve balances."
+        "zh-CN": "三厂合格供给与高端云加速器内嵌HBM范围不同；原始HBM、在制品、其他客户及代际资格需另行对账，模型结果不直接等于原厂收入或行业过剩。",
+        "en": "Top-three qualified supply and high-end-cloud embedded HBM have different perimeters. Raw-HBM/WIP, other customers and generation qualification require reconciliation; outputs are not directly supplier revenue or an industry surplus."
       },
       {
-        "zh-CN": "各项目最新披露日和状态不同；Ready for Service、计费与运营不能作为同一实测现金兑现率。486MW不是2027上半年净新增GPU装机。",
-        "en": "Project observation dates and milestone definitions differ. Ready for Service, billing and operation are not a common measured cash-conversion rate. The 486 MW figure is not H1 2027 net incremental GPU installation."
+        "zh-CN": "2029—2030年容量、代际和配置含工程延伸；逻辑晶圆、加速器CoWoS、基板和整机吞吐未独立求解全市场约束。",
+        "en": "2029–2030 capacity, generation and configuration include engineering extensions; global processor-wafer, accelerator-CoWoS, substrate and system throughput limits are not separately solved."
       },
       {
-        "zh-CN": "未校准各项目按期完成概率。APLD的1H2027与mid-2027披露存在措辞边界，6月底预测仍以资金、电力和验收条件为前提。",
-        "en": "Project completion probabilities are not calibrated. APLD’s H1 2027 and mid-2027 wording creates a boundary around June 30; the forecast remains conditional on funding, power and acceptance."
+        "zh-CN": "归一化库存金额使用GPU每枚3万美元、ASIC每枚1万美元，并非合同报价或实际市场均价；未含主机、网络和融资费用，也未推算2028年ASP、净利润或证券价格。",
+        "en": "Normalized inventory capital assumes $30,000 per GPU and $10,000 per ASIC, not contract quotations or observed market-average prices. It excludes host, network and financing costs and does not forecast 2028 ASP, net income or security prices."
       },
       {
-        "zh-CN": "缺独立的全球SKU、芯片面积、HBM物理位元与装机退役面板；本案没有给出全球2028 HBM或2030功率总量预测。",
-        "en": "Independent global SKU, logic-area, physical HBM-bit and installed-stock/retirement inputs are incomplete; this case does not forecast global 2028 HBM or 2030 power totals."
+        "zh-CN": "486MW项目基准仍为具名设施的条件交付判断，不能外推全球GPU/HBM；CORZ待计费量与物理新增容量分开，资金、供电和验收仍待兑现。",
+        "en": "The 486 MW project case remains conditional named-facility delivery research, not a global GPU/HBM extrapolation. CORZ unbilled capacity is separate from physical additions; funding, power and acceptance remain conditions."
       },
       {
-        "zh-CN": "11月17日SemiAnalysis报告仅取得用户提供的主张，原文、基线与数据边界待核；与11月13日旧图表保持分离。",
-        "en": "The November 17 SemiAnalysis report is represented only by user-supplied claims; its original, baseline and metric perimeter remain pending, separate from the older November 13 charts."
+        "zh-CN": "11月17日SemiAnalysis报告原文、基线及指标边界仍待取得，与11月13日旧图分开；外部下修数字未用于校准独立模型。",
+        "en": "The original November 17 SemiAnalysis report, baseline and metric definitions remain unavailable and separate from the older November 13 charts. External revision figures do not calibrate the independent model."
       },
       {
-        "zh-CN": "无完整共同因子控制、收益回测或借券成本证据，图路径不等于已验证做空信号。",
-        "en": "No complete common-factor controls, return backtest or borrow-cost evidence is available; graph paths are not validated short signals."
+        "zh-CN": "公开图谱关系与新增一手披露用于识别传导条件；未运行全生产数据库、共同因子控制、借券成本和收益回测，不能称已验证做空信号或外部CFA/CQF认证。",
+        "en": "Public graph relationships and supplemental primary disclosures identify transmission conditions. No full production-database run, common-factor controls, borrow-cost analysis or return backtest establishes short alpha; internal reviews are not external CFA/CQF certification."
       }
     ],
     "renderings": {
       "zh-CN": {
         "locale": "zh-CN",
         "siblingLocale": "en",
-        "title": "NVIDIA换帅后的算力供需：存量交付继续，远期扩张看资金",
-        "question": "已签算力需求如何通过客户付款、项目融资与工程节点转化为交付和股权现金？",
-        "standfirst": "条件基准预计，APLD与Akela最新披露的合计486MW在建容量到2027年6月底前达到交付或起租节点；共同客户、不同信用支持与现金分配顺序决定公司差异。",
-        "whyItMatters": "同一客户预算连接多家算力商，但融资、验收和租约保护落在不同项目。把每层合同相加会重复计量需求，把容量计费当股东现金则会高估兑现。",
-        "consensus": "研究争议是NVIDIA换帅是否改变具名合同与未来支持，以及扩张约束如何传到交付；本文未测量市场一致预期。",
-        "differentiated": "先由互不重复的合同资产、资金状态和工程排期形成独立项目基准，再比较外部全球预测；不统一套用换帅折扣或外部下修率。",
-        "valuation": "分别评估可验证交付、合同回款与股权现金。远期项目需计入融资和关键工程条件；本案未形成证券价格或收益排序。",
-        "update": "1.1.0审阅稿，截至2026年11月17日：新增项目级供需基准、全局关系图与敏感性；11月17日外部报告原件仍待补核。",
+        "title": "2028年HBM：约2.4EB采购差额，谁来为提前锁货垫资？",
+        "question": "同样的已投运算力，为什么会对应不同HBM采购量，谁承担提前锁货的资金？",
+        "standfirst": "独立工程基准估计2028年三厂合格HBM能力为7.8EB。在25%设施增长等条件下，将采购前瞻从一季延至四季，设备内嵌HBM由4.958升至7.311EB，投运容量相同。2027年协议提高收入可见度，2028年扩产回报取决于库存融资与交付兑现。",
+        "whyItMatters": "电力延期可以先压低采购，也可以先抬高未安装设备库存。客户、设备商与资金方承担现金的方式，会让同一物理投运路径对应不同原厂订单和收入时点。",
+        "consensus": "争议是远期算力修正究竟来自设备台数、单机配置、电力交付还是采购时点。本文未测量一致预期，也未取得11月17日SemiAnalysis原稿作同口径裁决。",
+        "differentiated": "从独立HBM晶圆能力、设备配置和设施起点建立模型，再按季度追踪采购、安装、退役和库存。由合同网络识别提款与支持条件，外部下修率不进入输入。",
+        "valuation": "已谈定2027年HBM量价的协议与2028年新增产能应分开评估。未来扩张按可提款资金、库存承受力和投运时点检验；本文不提供证券价格或收益排序。",
+        "update": "1.2.0｜截至2026年11月17日。条件采购融资研究与模型4.1：区分2.354EB年度采购差和4.433EB期末库存差，新增归一化资本占用、合同检验与公开模型附件；未宣称全球最大概率预测或裁决Semi原稿。",
         "evidenceClaimIds": [
           "CL-AMCASE1-001",
           "CL-AMCASE1-002",
-          "CL-AMCASE1-003",
-          "CL-AMCASE1-004",
-          "CL-AMCASE1-005",
-          "CL-AMCASE1-010",
-          "CL-AMCASE1-011",
           "CL-AMCASE1-012",
-          "CL-AMCASE1-013",
-          "CL-AMCASE1-016",
           "CL-AMCASE1-018",
-          "CL-AMCASE1-021"
+          "CL-AMCASE1-022",
+          "CL-AMCASE1-023",
+          "CL-AMCASE1-024",
+          "CL-AMCASE1-025",
+          "CL-AMCASE1-026",
+          "CL-AMCASE1-027",
+          "CL-AMCASE1-028",
+          "CL-AMCASE1-031",
+          "CL-AMCASE1-032"
         ],
         "riskClaimIds": [
           "CL-AMCASE1-007",
-          "CL-AMCASE1-008",
           "CL-AMCASE1-009",
-          "CL-AMCASE1-015",
           "CL-AMCASE1-017",
           "CL-AMCASE1-019",
-          "CL-AMCASE1-020"
+          "CL-AMCASE1-020",
+          "CL-AMCASE1-029",
+          "CL-AMCASE1-030"
         ],
         "forwardTestIds": [
-          "FAL-AMCASE1-CONTRACT",
+          "FAL-AMCASE1-INVENTORY",
+          "FAL-AMCASE1-HBMSUPPLY",
+          "FAL-AMCASE1-HBMCONTRACT",
           "FAL-AMCASE1-FUNDING",
-          "FAL-AMCASE1-EASING",
-          "FAL-AMCASE1-DELIVERY"
+          "FAL-AMCASE1-CONTRACT"
         ],
         "causalChain": [
           {
-            "title": "已签需求",
-            "body": "三组独立托管资产合计1368MW；同一客户、云服务与托管容量不可重复累加。",
+            "title": "共同需求与支持范围",
+            "body": "沿Microsoft共同客户、NVIDIA容量购买、Google租约支持及Broadcom融资结构核对需求来源与承担义务的实体，避免逐层重复累加合同。",
             "claimIds": [
               "CL-AMCASE1-012",
-              "CL-AMCASE1-016",
-              "CL-AMCASE1-021"
+              "CL-AMCASE1-018",
+              "CL-AMCASE1-032"
             ]
           },
           {
-            "title": "资金与工程",
-            "body": "486MW条件基准取决于可用资金、电力、施工及验收；CORZ剩余计费另行验证。",
+            "title": "合格HBM与设备配置",
+            "body": "分期投片与有效合格回收率形成2028年7.8EB工程基准；固定台数配置桥只减约2.8%，供给与设备范围仍分别核对。",
             "claimIds": [
-              "CL-AMCASE1-010",
-              "CL-AMCASE1-015",
-              "CL-AMCASE1-016"
+              "CL-AMCASE1-022",
+              "CL-AMCASE1-025",
+              "CL-AMCASE1-029"
             ]
           },
           {
-            "title": "支持范围",
-            "body": "容量购买、条件信用支持与未来追加选择权分别改变不同项目风险。",
+            "title": "采购前瞻与投运",
+            "body": "在25%设施增长及同一物理投运条件下，一季与四季采购对应4.958与7.311EB，已投运AI系统IT相同；年度采购流量与期末库存分开。",
             "claimIds": [
-              "CL-AMCASE1-001",
-              "CL-AMCASE1-007",
-              "CL-AMCASE1-011",
-              "CL-AMCASE1-018"
+              "CL-AMCASE1-023",
+              "CL-AMCASE1-029"
             ]
           },
           {
-            "title": "回款与股权现金",
-            "body": "客户预付、租金抵扣、债务与储备决定现金使用顺序；市场预期可能先于经营变化。",
+            "title": "库存融资与现金承受力",
+            "body": "新增未安装设备按假设单价对应2174亿美元资本占用。DDTL里程碑、预付款取消属性及替代融资决定哪些主体能够提前锁货。",
             "claimIds": [
-              "CL-AMCASE1-005",
-              "CL-AMCASE1-008",
-              "CL-AMCASE1-013",
-              "CL-AMCASE1-014",
-              "CL-AMCASE1-019"
+              "CL-AMCASE1-024",
+              "CL-AMCASE1-027",
+              "CL-AMCASE1-028"
             ]
           },
           {
-            "title": "检验与外部对照",
-            "body": "按项目修订预测，保留尚未取得的全球模型输入及外部报告原件缺口。",
+            "title": "近端协议与远期扩产回报",
+            "body": "2027年已谈定量价提高收入可见度；2028年扩产回报继续按资金、库存和电力兑现检验。单设备位元减少也须通过价格和台数才传至收入。",
             "claimIds": [
-              "CL-AMCASE1-009",
-              "CL-AMCASE1-017",
-              "CL-AMCASE1-020"
+              "CL-AMCASE1-026",
+              "CL-AMCASE1-030",
+              "CL-AMCASE1-031"
             ]
           }
         ]
@@ -7156,90 +7577,88 @@
       "en": {
         "locale": "en",
         "siblingLocale": "zh-CN",
-        "title": "AI infrastructure after NVIDIA’s transition: delivery continues, expansion depends on funding",
-        "question": "How does contracted compute demand convert through customer payments, project funding and construction into delivery and equity cash?",
-        "standfirst": "The conditional base case expects 486 MW reported under construction at APLD and Akela to reach delivery or commencement by June 2027. Shared customers, different credit support and cash priorities explain company-level differences.",
-        "whyItMatters": "A customer budget can connect several operators, while financing, acceptance and lease protection remain project-specific. Adding each contractual layer double-counts demand; treating billing capacity as equity cash overstates conversion.",
-        "consensus": "The research question is whether NVIDIA’s leadership change alters identified contracts and future support, and how constraints reach delivery. No measured market-consensus claim is made.",
-        "differentiated": "Form an independent project base from non-overlapping contracted assets, funding and construction schedules before comparing external global forecasts. Apply neither a uniform leadership haircut nor external revision percentages.",
-        "valuation": "Assess verifiable delivery, contractual collections and equity cash separately. Distant capacity requires financing and engineering conditions; the case does not establish stock-price or return rankings.",
-        "update": "Version 1.1.0 review draft, as of November 17, 2026: adds an independent project supply-demand base, the contract network and sensitivities. The separate November 17 external report remains unverified.",
+        "title": "HBM in 2028: who finances the roughly 2.4-EB procurement difference?",
+        "question": "Why can the same installed compute support different HBM purchases, and who funds procurement ahead of commissioning?",
+        "standfirst": "The independent engineering base estimates 7.8 EB of qualified 2028 HBM capacity at three suppliers. Under 25% facility growth and other stated assumptions, extending procurement from one to four quarters raises embedded HBM from 4.958 to 7.311 EB with the same installed capacity. 2027 agreements improve visibility; 2028 expansion returns depend on inventory funding and delivery.",
+        "whyItMatters": "Delayed power can reduce purchases or first increase uninstalled equipment inventory. How customers, equipment suppliers and financiers carry cash can produce different orders and revenue timing along the same physical commissioning path.",
+        "consensus": "The research dispute is whether distant compute revisions come from device volumes, memory configuration, power delivery or procurement timing. This case measures no market consensus and lacks the November 17 SemiAnalysis original for a like-for-like verdict.",
+        "differentiated": "Build from independent HBM wafer capacity, device configurations and a historical facility stock, then track purchases, installation, retirement and inventory by quarter. Contract relationships identify drawdown and support conditions; external revision percentages are not inputs.",
+        "valuation": "Underwrite negotiated 2027 HBM volumes/prices separately from incremental 2028 capacity. Assess expansion against drawable funds, inventory capacity and commissioning dates; no stock-price or return ranking is claimed.",
+        "update": "1.2.0 | As of November 17, 2026. Conditional procurement-financing research and model 4.1 distinguish the 2.354 EB annual purchase difference from the 4.433 EB year-end inventory difference, with normalized capital, contract checks and public model attachments. No calibrated global most-probable forecast or verdict on the SemiAnalysis original.",
         "evidenceClaimIds": [
           "CL-AMCASE1-001",
           "CL-AMCASE1-002",
-          "CL-AMCASE1-003",
-          "CL-AMCASE1-004",
-          "CL-AMCASE1-005",
-          "CL-AMCASE1-010",
-          "CL-AMCASE1-011",
           "CL-AMCASE1-012",
-          "CL-AMCASE1-013",
-          "CL-AMCASE1-016",
           "CL-AMCASE1-018",
-          "CL-AMCASE1-021"
+          "CL-AMCASE1-022",
+          "CL-AMCASE1-023",
+          "CL-AMCASE1-024",
+          "CL-AMCASE1-025",
+          "CL-AMCASE1-026",
+          "CL-AMCASE1-027",
+          "CL-AMCASE1-028",
+          "CL-AMCASE1-031",
+          "CL-AMCASE1-032"
         ],
         "riskClaimIds": [
           "CL-AMCASE1-007",
-          "CL-AMCASE1-008",
           "CL-AMCASE1-009",
-          "CL-AMCASE1-015",
           "CL-AMCASE1-017",
           "CL-AMCASE1-019",
-          "CL-AMCASE1-020"
+          "CL-AMCASE1-020",
+          "CL-AMCASE1-029",
+          "CL-AMCASE1-030"
         ],
         "forwardTestIds": [
-          "FAL-AMCASE1-CONTRACT",
+          "FAL-AMCASE1-INVENTORY",
+          "FAL-AMCASE1-HBMSUPPLY",
+          "FAL-AMCASE1-HBMCONTRACT",
           "FAL-AMCASE1-FUNDING",
-          "FAL-AMCASE1-EASING",
-          "FAL-AMCASE1-DELIVERY"
+          "FAL-AMCASE1-CONTRACT"
         ],
         "causalChain": [
           {
-            "title": "Contracted demand",
-            "body": "Three distinct hosting scopes total 1,368 MW; common-customer, cloud-service and hosting layers must not be added again.",
+            "title": "Common demand and support perimeter",
+            "body": "Trace Microsoft common-customer exposure, NVIDIA capacity purchases, Google lease support and Broadcom financing to the demand source and obligated entity without adding successive contract layers.",
             "claimIds": [
               "CL-AMCASE1-012",
-              "CL-AMCASE1-016",
-              "CL-AMCASE1-021"
+              "CL-AMCASE1-018",
+              "CL-AMCASE1-032"
             ]
           },
           {
-            "title": "Funding and construction",
-            "body": "The 486 MW conditional base depends on usable funding, power, construction and acceptance; remaining CORZ billing is tested separately.",
+            "title": "Qualified HBM and device configuration",
+            "body": "Phased wafer input and qualified recovery produce a 7.8 EB 2028 engineering base. The fixed-device configuration bridge reduces demand by about 2.8%; supply and device perimeters remain distinct.",
             "claimIds": [
-              "CL-AMCASE1-010",
-              "CL-AMCASE1-015",
-              "CL-AMCASE1-016"
+              "CL-AMCASE1-022",
+              "CL-AMCASE1-025",
+              "CL-AMCASE1-029"
             ]
           },
           {
-            "title": "Scope of support",
-            "body": "Capacity purchases, conditional credit support and discretionary future options affect different project risks.",
+            "title": "Procurement lookahead and commissioning",
+            "body": "At 25% facility growth and identical physical readiness, one- and four-quarter procurement yield 4.958 and 7.311 EB with the same installed AI-system IT; annual purchases and year-end stock are separate.",
             "claimIds": [
-              "CL-AMCASE1-001",
-              "CL-AMCASE1-007",
-              "CL-AMCASE1-011",
-              "CL-AMCASE1-018"
+              "CL-AMCASE1-023",
+              "CL-AMCASE1-029"
             ]
           },
           {
-            "title": "Collections and equity cash",
-            "body": "Customer advances, fee credits, debt and reserves determine cash priorities; market expectations can move before operating effects.",
+            "title": "Inventory financing and cash capacity",
+            "body": "Additional uninstalled devices imply $217.4bn of capital at assumed prices. DDTL milestones, cancellation attributes of advances and substitute financing determine who can procure ahead.",
             "claimIds": [
-              "CL-AMCASE1-005",
-              "CL-AMCASE1-008",
-              "CL-AMCASE1-013",
-              "CL-AMCASE1-014",
-              "CL-AMCASE1-019"
+              "CL-AMCASE1-024",
+              "CL-AMCASE1-027",
+              "CL-AMCASE1-028"
             ]
           },
           {
-            "title": "Tests and external comparison",
-            "body": "Revise forecasts project by project while retaining missing global-model inputs and the unavailable external original.",
+            "title": "Near-term agreements and expansion returns",
+            "body": "Negotiated 2027 volumes/prices improve visibility; test 2028 expansion returns against funding, inventory and power execution. Per-device bit reductions reach revenue through pricing and device volumes.",
             "claimIds": [
-              "CL-AMCASE1-009",
-              "CL-AMCASE1-017",
-              "CL-AMCASE1-020"
+              "CL-AMCASE1-026",
+              "CL-AMCASE1-030",
+              "CL-AMCASE1-031"
             ]
           }
         ]

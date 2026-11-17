@@ -1,0 +1,80 @@
+﻿year,group,sku,name,variant,desired_devices_m,nominal_memory_GB,logic_mm2,rated_accelerator_W,outside_pool_memory_GB,HBM3e_or_earlier_GB,HBM4_GB,HBM4e_GB,later_generation_GB,observed_power_W,observed_logic_mm2,availability_status
+2026,nvidia_gpu,h200_sxm,H200 SXM,reference_configuration,0.5386802030456853,144.0,814,700,0.0,144.0,0.0,0.0,0.0,700,,existing
+2026,nvidia_gpu,b200_hgx,B200 HGX,reference_configuration,1.6391269035532996,192,1581,1000,0.0,192.0,0.0,0.0,0.0,1000,1581,existing
+2026,nvidia_gpu,b300_hgx,B300 HGX,reference_configuration,1.5298517766497464,288,1650,1100,0.0,288.0,0.0,0.0,0.0,1100,,existing
+2026,nvidia_gpu,gb300_gpu,GB300 NVL72 GPU portion,reference_configuration,2.2947776649746197,288,1650,1400,0.0,288.0,0.0,0.0,0.0,1400,,existing
+2026,nvidia_gpu,rubin_gpu,Rubin GPU,reference_configuration,1.692994923857868,288,1650,1800,0.0,0.0,288.0,0.0,0.0,,,announced 2026 platform; shipment mix belongs to demand module
+2026,other_gpu,mi350x,MI350X,reference_configuration,0.16872947848351583,288,2180,1000,0.0,288.0,0.0,0.0,0.0,1000,,launched 2025-06-12
+2026,other_gpu,mi355x,MI355X,reference_configuration,0.42182369620878957,288,2180,1400,0.0,288.0,0.0,0.0,0.0,1400,,launched 2025-06-12
+2026,other_gpu,mi450x,MI450X,reference_configuration,0.08436473924175791,288,2870,1800,0.0,0.0,288.0,0.0,0.0,,,product launch 2026-11-12
+2026,other_gpu,mi455x,MI455X,reference_configuration,0.16872947848351583,432,2870,1800,0.0,0.0,432.0,0.0,0.0,,,product launch 2026-07-23
+2026,google_tpu,tpu_v5p,TPU v5p,reference_configuration,0.06845299145299145,96,700,550,96.0,0.0,0.0,0.0,0.0,,,existing
+2026,google_tpu,tpu_v6e,TPU v6e,reference_configuration,0.10267948717948719,32,425,400,32.0,0.0,0.0,0.0,0.0,,,existing
+2026,google_tpu,tpu7x,TPU7x / Ironwood,reference_configuration,2.498534188034188,192,1200,900,0.0,192.0,0.0,0.0,0.0,,,existing by cutoff
+2026,google_tpu,tpu8t,TPU8t,reference_configuration,0.3422649572649573,216,1550,1200,0.0,216.0,0.0,0.0,0.0,,,announced April 2026; 8tx November 2026
+2026,google_tpu,tpu8i,TPU8i,reference_configuration,0.41071794871794876,288,1550,1300,0.0,288.0,0.0,0.0,0.0,,,announced April 2026; 8tx November 2026
+2026,other_asic,trainium2,Trainium2,reference_configuration,0.3813955453429138,96,900,600,96.0,0.0,0.0,0.0,0.0,,,existing
+2026,other_asic,trainium3,Trainium3,reference_configuration,1.9069777267145689,144,1100,800,0.0,144.0,0.0,0.0,0.0,,,GA 2025-12-02
+2026,other_asic,mtia300,MTIA300,reference_configuration,0.4576746544114965,216,1280,912,0.0,216.0,0.0,0.0,0.0,912,1280,in production
+2026,other_asic,mtia400_450_family,MTIA400/450,reference_configuration,0.30511643627433105,384,2300,1400,0.0,192.0,192.0,0.0,0.0,,,400 deployment path in2026;450 planned early2027
+2026,other_asic,maia200,Maia200,reference_configuration,0.3813955453429138,216,800,900,0.0,216.0,0.0,0.0,0.0,750,,deployed as of launch
+2026,other_asic,ascend950dt,Ascend950DT,reference_configuration,0.1906977726714569,144,1200,1000,144.0,0.0,0.0,0.0,0.0,,,roadmap Q4 2026
+2026,other_asic,gaudi3,Gaudi3 OAM,reference_configuration,0.1906977726714569,128,1400,900,128.0,0.0,0.0,0.0,0.0,900,,existing
+2027,nvidia_gpu,h200_sxm,H200 SXM,reference_configuration,0.18469035532994924,144.0,814,700,0.0,144.0,0.0,0.0,0.0,700,,existing
+2027,nvidia_gpu,b300_hgx,B300 HGX,reference_configuration,0.6648852791878171,288,1650,1100,0.0,288.0,0.0,0.0,0.0,1100,,existing
+2027,nvidia_gpu,gb300_gpu,GB300 NVL72 GPU portion,reference_configuration,0.9973279187817258,288,1650,1400,0.0,288.0,0.0,0.0,0.0,1400,,existing
+2027,nvidia_gpu,rubin_gpu,Rubin GPU,reference_configuration,5.540710659898477,288,1650,1800,0.0,0.0,288.0,0.0,0.0,,,announced 2026 platform; shipment mix belongs to demand module
+2027,nvidia_gpu,rubin_ultra_scenario,Rubin Ultra architecture branches,reference_configuration,1.8469035532994924,480.0,3300,2800,0.0,0.0,240.0,240.0,0.0,,,roadmap; configuration unresolved
+2027,other_gpu,mi355x,MI355X,reference_configuration,0.21513008506648268,288,2180,1400,0.0,288.0,0.0,0.0,0.0,1400,,launched 2025-06-12
+2027,other_gpu,mi450x,MI450X,reference_configuration,0.43026017013296536,288,2870,1800,0.0,0.0,288.0,0.0,0.0,,,product launch 2026-11-12
+2027,other_gpu,mi455x,MI455X,reference_configuration,0.645390255199448,432,2870,1800,0.0,0.0,432.0,0.0,0.0,,,product launch 2026-07-23
+2027,other_gpu,amd_future_family,Post-MI400 GPU family (unnamed),future_24Gb_population,0.14342005671098845,480.0,3200,2400,0.0,0.0,0.0,480.0,0.0,,,analyst family placeholder
+2027,google_tpu,tpu_v6e,TPU v6e,reference_configuration,0.3165950854700855,32,425,400,32.0,0.0,0.0,0.0,0.0,,,existing
+2027,google_tpu,tpu7x,TPU7x / Ironwood,reference_configuration,0.9497852564102565,192,1200,900,0.0,192.0,0.0,0.0,0.0,,,existing by cutoff
+2027,google_tpu,tpu8t,TPU8t,reference_configuration,2.2161655982905986,216,1550,1200,0.0,216.0,0.0,0.0,0.0,,,announced April 2026; 8tx November 2026
+2027,google_tpu,tpu8i,TPU8i,reference_configuration,2.8493557692307694,288,1550,1300,0.0,288.0,0.0,0.0,0.0,,,announced April 2026; 8tx November 2026
+2027,other_asic,trainium3,Trainium3,reference_configuration,3.5660483489562442,144,1100,800,0.0,144.0,0.0,0.0,0.0,,,GA 2025-12-02
+2027,other_asic,trainium_future_family,Trainium4 and successor family,future_24Gb_population,0.32418621354147675,288.0,1600,1300,0.0,0.0,288.0,0.0,0.0,,,Trainium4 planned 2027; successors scenario
+2027,other_asic,mtia300,MTIA300,reference_configuration,0.32418621354147675,216,1280,912,0.0,216.0,0.0,0.0,0.0,912,1280,in production
+2027,other_asic,mtia400_450_family,MTIA400/450,reference_configuration,0.6483724270829535,384,2300,1400,0.0,192.0,192.0,0.0,0.0,,,400 deployment path in2026;450 planned early2027
+2027,other_asic,mtia500_future_family,MTIA500 and successor family,future_24Gb_population,0.6483724270829535,480.0,3600,2200,0.0,0.0,480.0,0.0,0.0,,,500 planned2027; successors scenario
+2027,other_asic,maia200,Maia200,reference_configuration,0.6483724270829535,216,800,900,0.0,216.0,0.0,0.0,0.0,750,,deployed as of launch
+2027,other_asic,other_asic_future,Unspecified HBM ASIC family,future_24Gb_population,0.32418621354147675,240.0,1500,1200,120.0,0.0,120.0,0.0,0.0,,,analyst residual family
+2028,nvidia_gpu,b300_hgx,B300 HGX,reference_configuration,0.1218956345177665,288,1650,1100,0.0,288.0,0.0,0.0,0.0,1100,,existing
+2028,nvidia_gpu,gb300_gpu,GB300 NVL72 GPU portion,reference_configuration,0.18284345177664973,288,1650,1400,0.0,288.0,0.0,0.0,0.0,1400,,existing
+2028,nvidia_gpu,rubin_gpu,Rubin GPU,reference_configuration,1.9096982741116753,288,1650,1800,0.0,0.0,288.0,0.0,0.0,,,announced 2026 platform; shipment mix belongs to demand module
+2028,nvidia_gpu,rubin_ultra_scenario,Rubin Ultra architecture branches,reference_configuration,2.8645474111675124,480.0,3300,2800,0.0,0.0,120.0,360.0,0.0,,,roadmap; configuration unresolved
+2028,nvidia_gpu,nvidia_future_family,Post-2027 GPU family (unnamed),future_24Gb_population,5.078984771573604,480.0,3300,3200,0.0,0.0,0.0,480.0,0.0,,,"analyst family placeholder, not a product announcement"
+2028,other_gpu,mi450x,MI450X,reference_configuration,0.30118211909307574,288,2870,1800,0.0,0.0,288.0,0.0,0.0,,,product launch 2026-11-12
+2028,other_gpu,mi455x,MI455X,reference_configuration,0.5019701984884596,432,2870,1800,0.0,0.0,432.0,0.0,0.0,,,product launch 2026-07-23
+2028,other_gpu,amd_future_family,Post-MI400 GPU family (unnamed),future_24Gb_population,1.204728476372303,480.0,3200,2400,0.0,0.0,0.0,480.0,0.0,,,analyst family placeholder
+2028,google_tpu,tpu8t,TPU8t,reference_configuration,1.329699358974359,216,1550,1200,0.0,216.0,0.0,0.0,0.0,,,announced April 2026; 8tx November 2026
+2028,google_tpu,tpu8i,TPU8i,reference_configuration,2.2161655982905986,288,1550,1300,0.0,288.0,0.0,0.0,0.0,,,announced April 2026; 8tx November 2026
+2028,google_tpu,google_future_family,Future TPU family (unnamed),future_24Gb_population,5.318797435897436,384.0,1900,1600,0.0,0.0,268.79999999999995,115.19999999999999,0.0,,,analyst family placeholder
+2028,other_asic,trainium3,Trainium3,reference_configuration,0.9077213979161348,144,1100,800,0.0,144.0,0.0,0.0,0.0,,,GA 2025-12-02
+2028,other_asic,trainium_future_family,Trainium4 and successor family,future_24Gb_population,4.538606989580674,288.0,1600,1300,0.0,0.0,288.0,0.0,0.0,,,Trainium4 planned 2027; successors scenario
+2028,other_asic,mtia400_450_family,MTIA400/450,reference_configuration,0.4538606989580674,384,2300,1400,0.0,192.0,192.0,0.0,0.0,,,400 deployment path in2026;450 planned early2027
+2028,other_asic,mtia500_future_family,MTIA500 and successor family,future_24Gb_population,1.8154427958322696,480.0,3600,2200,0.0,0.0,480.0,0.0,0.0,,,500 planned2027; successors scenario
+2028,other_asic,maia200,Maia200,reference_configuration,0.4538606989580674,216,800,900,0.0,216.0,0.0,0.0,0.0,750,,deployed as of launch
+2028,other_asic,other_asic_future,Unspecified HBM ASIC family,future_24Gb_population,0.9077213979161348,240.0,1500,1200,120.0,0.0,120.0,0.0,0.0,,,analyst residual family
+2029,nvidia_gpu,rubin_gpu,Rubin GPU,reference_configuration,0.5332934010152285,288,1650,1800,0.0,0.0,288.0,0.0,0.0,,,announced 2026 platform; shipment mix belongs to demand module
+2029,nvidia_gpu,rubin_ultra_scenario,Rubin Ultra architecture branches,reference_configuration,1.066586802030457,480.0,3300,2800,0.0,0.0,48.0,432.0,0.0,,,roadmap; configuration unresolved
+2029,nvidia_gpu,nvidia_future_family,Post-2027 GPU family (unnamed),future_24Gb_population,9.065987817258884,480.0,3300,3200,0.0,0.0,0.0,480.0,0.0,,,"analyst family placeholder, not a product announcement"
+2029,other_gpu,mi450x,MI450X,reference_configuration,0.1254925496221149,288,2870,1800,0.0,0.0,288.0,0.0,0.0,,,product launch 2026-11-12
+2029,other_gpu,mi455x,MI455X,reference_configuration,0.2509850992442298,432,2870,1800,0.0,0.0,432.0,0.0,0.0,,,product launch 2026-07-23
+2029,other_gpu,amd_future_family,Post-MI400 GPU family (unnamed),future_24Gb_population,2.133373343575953,480.0,3200,2400,0.0,0.0,0.0,480.0,0.0,,,analyst family placeholder
+2029,google_tpu,tpu8i,TPU8i,reference_configuration,1.6621241987179487,288,1550,1300,0.0,288.0,0.0,0.0,0.0,,,announced April 2026; 8tx November 2026
+2029,google_tpu,google_future_family,Future TPU family (unnamed),future_24Gb_population,9.418703792735043,384.0,1900,1600,0.0,0.0,0.0,384.0,0.0,,,analyst family placeholder
+2029,other_asic,trainium_future_family,Trainium4 and successor family,future_24Gb_population,6.807910484371011,288.0,1600,1300,0.0,0.0,144.0,144.0,0.0,,,Trainium4 planned 2027; successors scenario
+2029,other_asic,mtia500_future_family,MTIA500 and successor family,future_24Gb_population,2.8366293684879214,480.0,3600,2200,0.0,0.0,120.0,360.0,0.0,,,500 planned2027; successors scenario
+2029,other_asic,other_asic_future,Unspecified HBM ASIC family,future_24Gb_population,1.7019776210927529,240.0,1500,1200,120.0,0.0,120.0,0.0,0.0,,,analyst residual family
+2030,nvidia_gpu,rubin_gpu,Rubin GPU,reference_configuration,0.2133173604060914,288,1650,1800,0.0,0.0,288.0,0.0,0.0,,,announced 2026 platform; shipment mix belongs to demand module
+2030,nvidia_gpu,rubin_ultra_scenario,Rubin Ultra architecture branches,reference_configuration,0.3199760406091371,480.0,3300,2800,0.0,0.0,0.0,480.0,0.0,,,roadmap; configuration unresolved
+2030,nvidia_gpu,nvidia_future_family,Post-2027 GPU family (unnamed),future_24Gb_population,10.132574619289342,480.0,3300,3200,0.0,0.0,0.0,480.0,0.0,,,"analyst family placeholder, not a product announcement"
+2030,other_gpu,mi455x,MI455X,reference_configuration,0.15059105954653787,432,2870,1800,0.0,0.0,432.0,0.0,0.0,,,product launch 2026-07-23
+2030,other_gpu,amd_future_family,Post-MI400 GPU family (unnamed),future_24Gb_population,2.8612301313842194,480.0,3200,2400,0.0,0.0,0.0,480.0,0.0,,,analyst family placeholder
+2030,google_tpu,tpu8i,TPU8i,reference_configuration,0.6648496794871795,288,1550,1300,0.0,288.0,0.0,0.0,0.0,,,announced April 2026; 8tx November 2026
+2030,google_tpu,google_future_family,Future TPU family (unnamed),future_24Gb_population,12.63214391025641,384.0,1900,1600,0.0,0.0,0.0,384.0,0.0,,,analyst family placeholder
+2030,other_asic,trainium_future_family,Trainium4 and successor family,future_24Gb_population,8.169492581245214,288.0,1600,1300,0.0,0.0,72.0,216.0,0.0,,,Trainium4 planned 2027; successors scenario
+2030,other_asic,mtia500_future_family,MTIA500 and successor family,future_24Gb_population,3.4039552421855057,480.0,3600,2200,0.0,0.0,120.0,360.0,0.0,,,500 planned2027; successors scenario
+2030,other_asic,other_asic_future,Unspecified HBM ASIC family,future_24Gb_population,2.0423731453113034,240.0,1500,1200,120.0,0.0,120.0,0.0,0.0,,,analyst residual family
