@@ -1,0 +1,367 @@
+{
+  "edges": [
+    {
+      "id": "gpu",
+      "source": "NVIDIA",
+      "target": "CoreWeave",
+      "relationship_zh": "设备供应",
+      "relationship_en": "GPU supply",
+      "provenance": "AlphaMap existing relationship",
+      "references": [
+        3
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "supply"
+    },
+    {
+      "id": "crwv_msft",
+      "source": "CoreWeave",
+      "target": "Microsoft",
+      "relationship_zh": "算力服务",
+      "relationship_en": "Compute service",
+      "provenance": "AlphaMap existing relationship",
+      "references": [
+        3
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "service"
+    },
+    {
+      "id": "crwv_openai",
+      "source": "CoreWeave",
+      "target": "OpenAI",
+      "relationship_zh": "算力服务",
+      "relationship_en": "Compute service",
+      "provenance": "AlphaMap existing relationship",
+      "references": [
+        3
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "service"
+    },
+    {
+      "id": "nbis_msft",
+      "source": "Nebius",
+      "target": "Microsoft",
+      "relationship_zh": "分批GPU服务",
+      "relationship_en": "Phased GPU service",
+      "provenance": "AlphaMap existing relationship",
+      "references": [
+        12,
+        13
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "service"
+    },
+    {
+      "id": "iren_msft",
+      "source": "IREN",
+      "target": "Microsoft",
+      "relationship_zh": "分批GPU服务",
+      "relationship_en": "Phased GPU service",
+      "provenance": "AlphaMap existing relationship",
+      "references": [
+        14,
+        15
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "service"
+    },
+    {
+      "id": "apld_crwv",
+      "source": "Applied Digital",
+      "target": "CoreWeave",
+      "relationship_zh": "项目托管",
+      "relationship_en": "Project hosting",
+      "provenance": "AlphaMap existing relationship",
+      "references": [
+        9,
+        10
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "service"
+    },
+    {
+      "id": "wulf_akela",
+      "source": "TeraWulf",
+      "target": "Akela",
+      "relationship_zh": "间接子公司",
+      "relationship_en": "Indirect subsidiary",
+      "provenance": "AlphaMap existing relationship",
+      "references": [
+        11
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "ownership"
+    },
+    {
+      "id": "akela_fluid",
+      "source": "Akela",
+      "target": "Fluidstack",
+      "relationship_zh": "项目租约",
+      "relationship_en": "Project leases",
+      "provenance": "AlphaMap existing relationship",
+      "references": [
+        11
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "service"
+    },
+    {
+      "id": "google_akela",
+      "source": "Google",
+      "target": "Akela",
+      "relationship_zh": "条件信用支持",
+      "relationship_en": "Conditional credit support",
+      "provenance": "AlphaMap existing relationship",
+      "references": [
+        11
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "support"
+    },
+    {
+      "id": "wulf_google",
+      "source": "TeraWulf",
+      "target": "Google",
+      "relationship_zh": "权证对价",
+      "relationship_en": "Warrant consideration",
+      "provenance": "AlphaMap existing relationship",
+      "references": [
+        11
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "ownership"
+    },
+    {
+      "id": "capacity",
+      "source": "NVIDIA",
+      "target": "CoreWeave",
+      "relationship_zh": "按条件购买剩余容量",
+      "relationship_en": "Conditional residual-capacity purchase",
+      "provenance": "Public-source supplement",
+      "references": [
+        2
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "support"
+    },
+    {
+      "id": "corz_crwv",
+      "source": "Core Scientific",
+      "target": "CoreWeave",
+      "relationship_zh": "项目托管",
+      "relationship_en": "Project hosting",
+      "provenance": "Public-source supplement",
+      "references": [
+        6,
+        7,
+        8
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "service"
+    },
+    {
+      "id": "iren_nvda",
+      "source": "IREN",
+      "target": "NVIDIA",
+      "relationship_zh": "云服务客户合同",
+      "relationship_en": "Cloud-services customer contract",
+      "provenance": "Public-source supplement",
+      "references": [
+        14
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "service"
+    },
+    {
+      "id": "sk_nv",
+      "source": "SK hynix",
+      "target": "NVIDIA",
+      "relationship_zh": "内存供应",
+      "relationship_en": "Memory supply",
+      "provenance": "AlphaMap existing relationship",
+      "references": [
+        44
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "supply"
+    },
+    {
+      "id": "mu_nv",
+      "source": "Micron",
+      "target": "NVIDIA",
+      "relationship_zh": "内存供应",
+      "relationship_en": "Memory supply",
+      "provenance": "AlphaMap existing relationship",
+      "references": [
+        44
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "supply"
+    },
+    {
+      "id": "sk_tsmc",
+      "source": "SK hynix",
+      "target": "TSMC",
+      "relationship_zh": "HBM4基底合作",
+      "relationship_en": "HBM4 base-die cooperation",
+      "provenance": "AlphaMap existing relationship",
+      "references": [
+        43
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "supply"
+    },
+    {
+      "id": "avgo_spv_credit",
+      "source": "Broadcom",
+      "target": "Financing SPV",
+      "relationship_zh": "一顺位等额残值支持",
+      "relationship_en": "Residual support = first lien",
+      "provenance": "Public-source supplement",
+      "references": [
+        39
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "support"
+    },
+    {
+      "id": "avgo_spv_goods",
+      "source": "Broadcom",
+      "target": "Financing SPV",
+      "relationship_zh": "XPU与网络设备",
+      "relationship_en": "XPU / networking supply",
+      "provenance": "Public-source supplement",
+      "references": [
+        39
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "supply"
+    },
+    {
+      "id": "spv_anthropic",
+      "source": "Financing SPV",
+      "target": "Anthropic",
+      "relationship_zh": "设备租赁",
+      "relationship_en": "Equipment leasing",
+      "provenance": "Public-source supplement",
+      "references": [
+        39
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "service"
+    },
+    {
+      "id": "corz_amd_lease",
+      "source": "Core Scientific",
+      "target": "AMD",
+      "relationship_zh": "377MW直接承租／待起租",
+      "relationship_en": "377 MW direct lease / pending",
+      "provenance": "Public-source supplement",
+      "references": [
+        6,
+        7,
+        49
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "service",
+      "contracted_critical_IT_MW": 377,
+      "lease_commenced": false,
+      "lease_state_as_of": "2026-09-30"
+    },
+    {
+      "id": "corz_other_lease",
+      "source": "Core Scientific",
+      "target": "Undisclosed Neocloud",
+      "relationship_zh": "152MW租约／待起租",
+      "relationship_en": "152 MW lease / pending",
+      "provenance": "Public-source supplement",
+      "references": [
+        6,
+        7,
+        49
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "service",
+      "contracted_critical_IT_MW": 152,
+      "lease_commenced": false,
+      "lease_state_as_of": "2026-09-30"
+    },
+    {
+      "id": "amd_corz_credit",
+      "source": "AMD",
+      "target": "Core Scientific",
+      "relationship_zh": "仅152MW租约条件支持",
+      "relationship_en": "Conditional support: 152 MW only",
+      "provenance": "Public-source supplement",
+      "references": [
+        49
+      ],
+      "weight": null,
+      "probability": null,
+      "type": "support",
+      "supported_lease_critical_IT_MW": 152,
+      "scope": "Specified third-party leases only; not all CORZ obligations or the full 530 MW group.",
+      "unconditional_guarantee": false
+    }
+  ],
+  "nodes": [
+    "AMD",
+    "Akela",
+    "Anthropic",
+    "Applied Digital",
+    "Broadcom",
+    "Core Scientific",
+    "CoreWeave",
+    "Financing SPV",
+    "Fluidstack",
+    "Google",
+    "IREN",
+    "Micron",
+    "Microsoft",
+    "NVIDIA",
+    "Nebius",
+    "OpenAI",
+    "SK hynix",
+    "TSMC",
+    "TeraWulf",
+    "Undisclosed Neocloud"
+  ],
+  "as_of": "2026-11-17",
+  "arrow_semantics": "Goods/services, corporate ownership, or specified support direction; NOT cash-flow direction or calibrated shock transmission.",
+  "existing_relationships": 13,
+  "public_supplements": 9,
+  "no_production_graph_update_claim": true,
+  "automated_propagation_or_alpha_test_executed": false,
+  "shared_customer_dedup": "Same end-payer and nested project/contract quantities are not independently additive.",
+  "transmission_gates": [
+    "Delivery and acceptance",
+    "Refundability of advances",
+    "Conditions precedent to drawdown",
+    "Lease commencement and termination choice",
+    "Replacement funding",
+    "Project-level power and commissioning"
+  ]
+}

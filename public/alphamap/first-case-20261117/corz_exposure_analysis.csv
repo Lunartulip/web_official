@@ -1,0 +1,13 @@
+metric,value,unit,denominator,as_of,status,formula,source_ids,scope_note
+CoreWeave share of current colocation revenue,1.0,fraction,CORZ current colocation revenue,2026-09-30,reported,,7,Not group revenue or future contracted capacity
+Contracted customer IT capacity: CoreWeave,590,MW,Executed customer contracts; not gross utility capacity,2026-11-05,reported,,6;7,Executed hosting / lease agreements
+Contracted customer IT capacity: AMD direct,377,MW,Executed customer contracts; not gross utility capacity,2026-11-05,reported,,6;49,"Direct leases with Advanced Micro Devices, Inc."
+Contracted customer IT capacity: Neocloud counterparty,152,MW,Executed customer contracts; not gross utility capacity,2026-11-05,reported,,6;49,Neocloud leases with lease-specific conditional AMD credit support
+CoreWeave billable customer IT capacity,485,MW,CoreWeave contracted IT capacity,2026-11-05,reported,,6,Not rent collections; aggregate as disclosed
+sum_of_disaggregated_contract_capacity_MW,1119,MW,Two disclosed contract groups; no reservation rights,2026-11-05,derived,590 + 377 + 152,6;49,Approximate disclosed inputs; capacity percentages are not revenue or profit weights
+reported_rounded_contract_capacity_MW,1120,MW (approximately),Two disclosed contract groups; no reservation rights,2026-11-05,derived,590 + 530,6,Approximate disclosed inputs; capacity percentages are not revenue or profit weights
+coreweave_share_of_reported_rounded_contract_capacity,0.5267857142857143,fraction of reported contracted IT MW,Two disclosed contract groups; no reservation rights,2026-11-05,derived,590 / (590 + 530),6,Approximate disclosed inputs; capacity percentages are not revenue or profit weights
+coreweave_share_of_disaggregated_contract_capacity,0.5272564789991063,fraction of disaggregated contracted IT MW,Two disclosed contract groups; no reservation rights,2026-11-05,derived,590 / (590 + 377 + 152),6;49,Approximate disclosed inputs; capacity percentages are not revenue or profit weights
+coreweave_billable_share,0.8220338983050848,fraction of CoreWeave contracted IT MW,CoreWeave contracted IT MW,2026-11-05,derived,485 / 590,6,Approximate disclosed inputs; capacity percentages are not revenue or profit weights
+coreweave_not_yet_billable_MW,105,MW (approximately),CoreWeave contracted IT MW,2026-11-05,derived,590 - 485,6,Approximate disclosed inputs; capacity percentages are not revenue or profit weights
+Excluded AMD reservation right,1925,MW,Excluded from all contracted-capacity calculations,2026-07-27,reported_reservation_only,,49,"A right through 2028-12-28, not an executed lease for all reserved capacity"

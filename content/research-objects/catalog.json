@@ -6252,8 +6252,8 @@
     ],
     "publishedAt": "2026-11-17",
     "asOf": "2026-11-17",
-    "version": "1.2.0",
-    "sourceLabel": "AlphaMap Investment Thesis Case 01 · HBM procurement, inventory funding and cash flow · 2026-11-17",
+    "version": "1.3.0",
+    "sourceLabel": "LunarTulip Research 01 · AI infrastructure, customer financing and company cash flows · 2026-11-17",
     "claims": [
       {
         "id": "CL-AMCASE1-001",
@@ -6316,17 +6316,18 @@
         "id": "CL-AMCASE1-006",
         "type": "Hypothesis",
         "text": {
-          "zh-CN": "已签合同与已落实项目资金支持交付继续；新增容量的时点取决于资金、电力、工程和客户验收。对本案具名项目的条件基准另列，未校准按期概率。",
-          "en": "Signed contracts and executed project financing support continued delivery; incremental timing depends on funding, power, construction and customer acceptance. Named-project conditional forecasts are specified separately without calibrated completion probabilities."
+          "zh-CN": "我们的基准判断是，既有合同与已投运容量支持近期业务延续；远期需要重估的是尚未筹足资金、仍依赖NVIDIA追加支持的项目。 沿这条融资路径下调采购与投运预期，须以新增支持减少、且替代资金赶不上设备付款为条件。Broadcom参与的ASIC融资，以及Google、AMD各自支持的项目，需要按其合同分别估算。",
+          "en": "Our base case is that existing contracts and operating capacity support near-term business continuity. The distant projects requiring reassessment are those that still lack sufficient financing and depend on additional NVIDIA support. A downgrade to procurement and commissioning forecasts through this financing channel requires reduced support and insufficient replacement funding before equipment payments. ASIC financing involving Broadcom, and projects supported by Google or AMD, require separate assessments under their own contracts."
         },
         "evidenceIds": [
           "EV-AMCASE1-NVDA",
+          "EV-AMCASE1-PURCHASE",
+          "EV-AMCASE1-NVDACOMMITMENTS",
           "EV-AMCASE1-CRWV10Q",
           "EV-AMCASE1-CALL",
-          "EV-AMCASE1-CORZDECK",
-          "EV-AMCASE1-APLDQ1",
           "EV-AMCASE1-WULF10Q",
-          "EV-AMCASE1-NBISLETTER"
+          "EV-AMCASE1-AVGOSPV",
+          "EV-AMCASE1-CORZAMD"
         ]
       },
       {
@@ -6533,8 +6534,8 @@
         "id": "CL-AMCASE1-023",
         "type": "Derived",
         "text": {
-          "zh-CN": "在全球机房IT容量年增25%、固定开仓状态、一季物理投运时滞和中值功率条件下，将采购前瞻从一季延至四季，2028年设备内嵌HBM由4.958升至7.311EB，已投运AI系统IT均约99.667GW。年度采购差2.354EB与期末内嵌库存差4.433EB分开计量。",
-          "en": "Under 25% annual global facility-IT growth, a fixed opening state, one-quarter physical readiness and baseline power, extending procurement lookahead from one to four quarters raises 2028 embedded HBM from 4.958 to 7.311 EB, with 99.667 GW of installed AI-system IT in both cases. The 2.354 EB annual flow difference is distinct from the 4.433 EB year-end inventory difference."
+          "zh-CN": "在全球机房IT容量年增25%、固定开仓状态、一季物理投运时滞和中值功率条件下，将采购前瞻从一季延至四季，2028年设备内嵌HBM由4.958升至7.311EB，已投运AI系统IT均约99.667GW。年度采购差2.354EB与期末内嵌库存差4.433EB分开计量。 采购前瞻为外生设定，差额尚未识别为换帅或融资收缩的影响量。",
+          "en": "Under 25% annual global facility-IT growth, a fixed opening state, one-quarter physical readiness and baseline power, extending procurement lookahead from one to four quarters raises 2028 embedded HBM from 4.958 to 7.311 EB, with 99.667 GW of installed AI-system IT in both cases. The 2.354 EB annual flow difference is distinct from the 4.433 EB year-end inventory difference. Procurement windows are exogenous inputs; this gap has not been identified as the effect of the leadership transition or a financing contraction."
         },
         "evidenceIds": [
           "EV-AMCASE1-MODEL41",
@@ -6616,15 +6617,15 @@
         "id": "CL-AMCASE1-030",
         "type": "Hypothesis",
         "text": {
-          "zh-CN": "已谈定量价的2027年HBM协议提高近端收入可见度；2028年扩产回报更依赖客户能否融资提前锁货。融资、设备交付与电力投运的匹配，比远期合同总额更能检验算力商扩张的现金承受能力。",
-          "en": "Negotiated 2027 HBM volume and pricing improve near-term revenue visibility; returns on 2028 expansion depend more heavily on customers’ ability to finance advance procurement. Matching funding, equipment delivery and energisation tests compute operators’ cash capacity more directly than multiyear headline contract values."
+          "zh-CN": "Micron、Samsung已谈定的2027年HBM供货提高近端交付与收入可见度。对2028年新增产能，应另行核对客户采购资金、产品认证及交付条件；独立融资安排支持的ASIC采购须逐项跟踪，不能将NVIDIA份额变化直接等同于全行业内存需求变化。",
+          "en": "Micron’s and Samsung’s negotiated 2027 HBM supply improves near-term delivery and revenue visibility. Additional 2028 capacity requires separate checks of customer procurement funding, product qualification and delivery. Track ASIC purchases supported by independent financing individually; a change in NVIDIA’s share is not a direct measure of the change in industry-wide memory demand."
         },
         "evidenceIds": [
           "EV-AMCASE1-MODEL41",
           "EV-AMCASE1-SAMSUNGHBM",
           "EV-AMCASE1-MUOUTLOOK",
           "EV-AMCASE1-IREN10K",
-          "EV-AMCASE1-CRWV10Q"
+          "EV-AMCASE1-AVGOSPV"
         ]
       },
       {
@@ -6643,15 +6644,29 @@
         "id": "CL-AMCASE1-032",
         "type": "Inference",
         "text": {
-          "zh-CN": "Microsoft同时连接多家算力商，Google的Akela租约支持与Broadcom参与的Anthropic融资则属于不同资金渠道。NVIDIA支持变化不会自动等幅传到所有节点；融资压力需经过具体提款、交付、租约和付款条件。",
-          "en": "Microsoft connects several operators, while Google’s Akela lease support and the Anthropic financing involving Broadcom are distinct funding channels. Changes in NVIDIA support do not automatically transmit equally across all nodes; funding pressure must pass through specific drawdown, delivery, lease and payment conditions."
+          "zh-CN": "Microsoft连接多家算力商；Google的Akela租约支持、AMD对指定Neocloud租约的信用支持及Broadcom参与的Anthropic融资，分别对应不同合同与资金渠道。须按付款、提款、交付和起租条件逐项估算影响；现有证据未给出统一传导幅度，也未证明换帅后的订单转移。",
+          "en": "Microsoft connects multiple compute operators. Google’s Akela lease support, AMD’s credit support for specified Neocloud leases and the Anthropic financing involving Broadcom have distinct contracts and funding channels. Assess effects through each payment, drawdown, delivery and commencement condition. Available evidence establishes neither a uniform transmission magnitude nor post-transition order migration."
         },
         "evidenceIds": [
           "EV-AMCASE1-CRWV10Q",
           "EV-AMCASE1-NBISCONTRACT",
           "EV-AMCASE1-IREN10K",
           "EV-AMCASE1-WULF10Q",
-          "EV-AMCASE1-AVGOSPV"
+          "EV-AMCASE1-AVGOSPV",
+          "EV-AMCASE1-CORZAMD"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-033",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "截至11月5日，CORZ披露CoreWeave590MW、AMD直租377MW及另一Neocloud152MW签约客户IT容量，后两项取整约530MW；CoreWeave占两组约1120MW的52.7%。截至9月底，新增AMD相关租约均未起租，托管收入全部来自CoreWeave、占集团前三季度收入约84%。未来容量占比不能作为当前收入或利润权重。",
+          "en": "At November 5, CORZ disclosed 590 MW contracted to CoreWeave, 377 MW directly to AMD and 152 MW to another Neocloud; the latter two are rounded to approximately 530 MW. CoreWeave is 52.7% of the roughly 1,120 MW in those two contract groups. At September-end, none of the new AMD-associated leases had commenced; all colocation revenue came from CoreWeave, representing about 84% of first-nine-month group revenue. Future capacity share is not a current revenue or earnings weight."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-CORZDECK",
+          "EV-AMCASE1-CORZ10Q",
+          "EV-AMCASE1-CORZAMD"
         ]
       }
     ],
@@ -6726,7 +6741,7 @@
         "source": {
           "publisher": "Core Scientific",
           "url": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000028/q3fy26earningsdeckvfinal.htm",
-          "document": "Q3 2026 presentation, pages 9–11"
+          "document": "Q3 2026 presentation, pages 4, 6, 9–11 and 13: contract mix, delivery forecasts, billing and MW definitions"
         },
         "sourceDate": "2026-11-05",
         "dataAsOf": "2026-11-05",
@@ -6738,11 +6753,11 @@
       },
       {
         "id": "EV-AMCASE1-CORZ10Q",
-        "title": "Core Scientific Q3 2026 secured-note terms",
+        "title": "Core Scientific Q3 2026 contracts, revenue concentration and secured-note terms",
         "source": {
           "publisher": "Core Scientific",
           "url": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000030/core-20260930.htm",
-          "document": "Form 10-Q, Note 7"
+          "document": "Form 10-Q, Notes 6 and 7; MD&A page 34 and financing discussion: lease commencement, CoreWeave concentration, secured debt and new-project funding"
         },
         "sourceDate": "2026-11-05",
         "dataAsOf": "2026-09-30",
@@ -6963,14 +6978,14 @@
         "title": "Frozen independent model 4.1: physical cohorts and procurement policies",
         "source": {
           "publisher": "LunarTulip Research",
-          "document": "AlphaMap first case 1.2.0 public publication pack; independent input freeze, formulae and procurement comparison",
+          "document": "AlphaMap first-case publication pack, frozen model 4.1: independent input freeze, formulae and procurement comparison",
           "url": "https://lunartuliplab.com/alphamap/first-case-20261117/AlphaMap_First_Case_Publication_Pack_20261117.zip"
         },
         "sourceDate": "2026-11-17",
         "dataAsOf": "2026-11-17",
         "calculation": "2028 1q/4q embedded HBM: 4.957506237/7.311074772 EB; annual flow difference 2.353568535 EB. End-inventory HBM difference 4.433050057 EB. Normalized inventory cost difference = 21.7420448847 million basic-cost units * assumed $10,000 = $217420.448847 million.",
         "confidence": "medium",
-        "counterevidence": "Conditional engineering and procurement-policy calculations, not calibrated global behavior probabilities. Raw-HBM/WIP inventories, other supplier customers and non-memory global throughput constraints require separate treatment.",
+        "counterevidence": "Conditional engineering and procurement-policy calculations, not calibrated global behavior probabilities. Raw-HBM/WIP inventories, other supplier customers and non-memory global throughput constraints require separate treatment. Procurement windows are exogenous; their difference is not an identified CEO-transition or financing-shock effect.",
         "lastVerified": "2026-11-17",
         "role": "primary"
       },
@@ -7163,6 +7178,22 @@
         "calculation": null,
         "confidence": "high",
         "counterevidence": "Committed financing is not the same as funds already drawn; Broadcom residual-value support corresponds to a defined first-lien portion, not an unconditional guarantee of every project obligation.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-CORZAMD",
+        "title": "Core Scientific Q2 2026 AMD direct leases and Neocloud credit support",
+        "source": {
+          "publisher": "Core Scientific",
+          "url": "https://www.sec.gov/Archives/edgar/data/1839341/000183934126000014/core-20260630.htm",
+          "document": "Q2 2026 Form 10-Q, Note 15 subsequent events: July 27 lease execution; filed July 28, 2026"
+        },
+        "sourceDate": "2026-07-28",
+        "dataAsOf": "2026-07-27",
+        "calculation": "AMD direct: 185 + 110 + 82 = 377 MW. Neocloud: 120 + 32 = 152 MW. Combined 529 MW is reported approximately as 530 MW; 590 / (590 + 530) = 52.6786% in the later Q3 contract-capacity comparison.",
+        "confidence": "high",
+        "counterevidence": "The 152 MW Neocloud leases have lease-specific conditional AMD credit support, including equipment protections, optional cure rights and specified material-default provisions. This is not an unconditional guarantee of all 530 MW or CORZ group obligations. The additional 1,925 MW reservation is excluded from executed capacity.",
         "lastVerified": "2026-11-17",
         "role": "primary"
       }
@@ -7452,12 +7483,20 @@
           "zh-CN": "将主问题推进为独立HBM能力、设备配置、设施与季度库存模型：比较一季与四季采购前瞻，分开年度流量、期末库存和资本占用；保留项目合同网络，明确2027协议与2028扩产回报。研究为条件情景，不声称全球最大概率预测或已裁决SemiAnalysis原稿。",
           "en": "Adds independent HBM capacity, product configuration, facility and quarterly cohort-inventory models. Compares one- and four-quarter procurement windows while separating annual flow, year-end stock and capital tied up; retains the contract network and distinguishes 2027 agreement visibility from 2028 expansion returns. Conditional research, not a calibrated global most-probable forecast or a verdict on the unavailable SemiAnalysis original."
         }
+      },
+      {
+        "version": "1.3.0",
+        "date": "2026-11-17",
+        "diff": {
+          "zh-CN": "恢复完整产业链投资命题与主体、工具、条件、财务后果的叙事。新增CORZ收入集中与未来租约的口径计算、AMD直接租约及信用支持一手证据，公开图20节点22关系；重排八组图并增加中英PDF。模型4.1不改，采购窗口差额不作事件效应。",
+          "en": "Restores the complete industry thesis with explicit actors, instruments, conditions and financial consequences. Adds CORZ current-revenue/future-lease calculations and primary AMD lease/support evidence, expands the public graph to 20 nodes/22 relationships, reorders eight chart groups and adds Chinese/English PDFs. Model 4.1 is unchanged; procurement-window differences are not event effects."
+        }
       }
     ],
     "dataGaps": [
       {
-        "zh-CN": "研究状态为可复核的条件采购融资研究。25%设施增长、采购前瞻、开仓库存及未来型号和功率mix为显式假设，未校准全市场行为概率。",
-        "en": "Research status: reproducible conditional procurement-financing analysis. The 25% facility growth, procurement lookahead, opening inventory and future product/power mix are explicit assumptions, not calibrated global behavior probabilities."
+        "zh-CN": "公司合同、收入集中度与条件供需测算可复核；全球最可能路径尚未校准。25%设施增长、采购前瞻、期初库存及未来型号和功率mix为显式假设，采购窗口差额不是已识别的事件效应。",
+        "en": "Company contracts, revenue concentration and conditional supply-demand calculations are reproducible; a globally most-likely path is not calibrated. The 25% facility growth, procurement windows, opening inventory and future product/power mix remain explicit assumptions. Procurement-window differences are not identified event effects."
       },
       {
         "zh-CN": "三厂合格供给与高端云加速器内嵌HBM范围不同；原始HBM、在制品、其他客户及代际资格需另行对账，模型结果不直接等于原厂收入或行业过剩。",
@@ -7480,22 +7519,22 @@
         "en": "The original November 17 SemiAnalysis report, baseline and metric definitions remain unavailable and separate from the older November 13 charts. External revision figures do not calibrate the independent model."
       },
       {
-        "zh-CN": "公开图谱关系与新增一手披露用于识别传导条件；未运行全生产数据库、共同因子控制、借券成本和收益回测，不能称已验证做空信号或外部CFA/CQF认证。",
-        "en": "Public graph relationships and supplemental primary disclosures identify transmission conditions. No full production-database run, common-factor controls, borrow-cost analysis or return backtest establishes short alpha; internal reviews are not external CFA/CQF certification."
+        "zh-CN": "公开案例图含20个节点、22项关系，其中13项AlphaMap既有关系与9项公开补证，用于识别合同传导条件。未声称运行全生产数据库、共同因子控制、借券成本或收益回测，也没有外部CFA/CQF认证。",
+        "en": "The public case graph contains 20 nodes and 22 relationships: 13 existing AlphaMap relationships and nine public-source supplements, used to identify contractual transmission conditions. No full production-database run, common-factor controls, borrow-cost analysis, return backtest or external CFA/CQF certification is claimed."
       }
     ],
     "renderings": {
       "zh-CN": {
         "locale": "zh-CN",
         "siblingLocale": "en",
-        "title": "2028年HBM：约2.4EB采购差额，谁来为提前锁货垫资？",
-        "question": "同样的已投运算力，为什么会对应不同HBM采购量，谁承担提前锁货的资金？",
-        "standfirst": "独立工程基准估计2028年三厂合格HBM能力为7.8EB。在25%设施增长等条件下，将采购前瞻从一季延至四季，设备内嵌HBM由4.958升至7.311EB，投运容量相同。2027年协议提高收入可见度，2028年扩产回报取决于库存融资与交付兑现。",
-        "whyItMatters": "电力延期可以先压低采购，也可以先抬高未安装设备库存。客户、设备商与资金方承担现金的方式，会让同一物理投运路径对应不同原厂订单和收入时点。",
-        "consensus": "争议是远期算力修正究竟来自设备台数、单机配置、电力交付还是采购时点。本文未测量一致预期，也未取得11月17日SemiAnalysis原稿作同口径裁决。",
-        "differentiated": "从独立HBM晶圆能力、设备配置和设施起点建立模型，再按季度追踪采购、安装、退役和库存。由合同网络识别提款与支持条件，外部下修率不进入输入。",
-        "valuation": "已谈定2027年HBM量价的协议与2028年新增产能应分开评估。未来扩张按可提款资金、库存承受力和投运时点检验；本文不提供证券价格或收益排序。",
-        "update": "1.2.0｜截至2026年11月17日。条件采购融资研究与模型4.1：区分2.354EB年度采购差和4.433EB期末库存差，新增归一化资本占用、合同检验与公开模型附件；未宣称全球最大概率预测或裁决Semi原稿。",
+        "title": "NVIDIA换帅之后，AI产业链哪些增长预期需要重估？",
+        "question": "NVIDIA管理层交接后，哪些依赖其容量购买或信用支持的扩张仍能按期交付，哪些融资变化会传到设备采购、HBM订单和托管收入？",
+        "standfirst": "11月12日，黄仁勋离任NVIDIA CEO。NVIDIA既出售加速器，也向部分客户购买算力、提供信用支持。管理层交接因此提出一个投资问题：依赖这些安排的扩张，哪些仍能按期完成，哪些会先影响融资，再影响设备订单与托管收入？ 我们的基准判断是，既有合同与已投运容量支持近期业务延续；远期需要重估的是尚未筹足资金、仍依赖NVIDIA追加支持的项目。 沿这条融资路径下调采购与投运预期，须以新增支持减少、且替代资金赶不上设备付款为条件。Broadcom参与的ASIC融资，以及Google、AMD各自支持的项目，需要按其合同分别估算。 沿AlphaMap的客户、供货与信用关系继续追踪，Core Scientific的未来签约容量正在分散，当前托管收入却仍全部来自CoreWeave；HBM供应商则须区分2027年已谈定供货与2028年新增产能的消化。本文据此测算公司敞口与采购条件，判断哪些增长已有兑现基础、哪些仍取决于融资交割。",
+        "whyItMatters": "尚未获资金的项目若不能按期支付设备或建设款，采购、投运和托管起账可能延后；替代借款也可能维持交付却增加利息。研究因此分别估算设备订单、供应商交付与运营商股权端现金。",
+        "consensus": "研究检验的是管理层交接可能如何影响既有承诺的执行与未来追加支持，以及后续采购和交付。本文未测量市场一致预期，也未取得11月17日SemiAnalysis原稿进行同口径幅度裁决。",
+        "differentiated": "CORZ的客户关系需要加上起租状态：新客户占未来签约容量近一半，当前托管收入仍全部来自CoreWeave。Microsoft的共同客户关系则须接上各运营商的预付款与提款条款。AlphaMap提供已有的跨公司关系；本案再补核公开合同与财务数据，把同一产业事件拆成不同公司的收入、融资和现金流判断。",
+        "valuation": "近期交付保留既有合同与已投运容量的支持；未获资金且依赖新增支持的远期项目，按替代融资和付款时点重估。CORZ现有收款与AMD相关新增租约分别预测；HBM的2027供货可见度与2028产能消化分别评估。未给出股票目标价或已验证做空收益。",
+        "update": "1.3.0｜截至2026年11月17日。恢复完整产业链投资命题，新增CORZ当前收入、未来签约容量与AMD租约的计算及一手证据；公开图扩为20节点22关系，重排八组图并增加双语PDF。33项论点、33项证据；模型4.1数值冻结，全球最可能路径仍待校准。",
         "evidenceClaimIds": [
           "CL-AMCASE1-001",
           "CL-AMCASE1-002",
@@ -7509,7 +7548,8 @@
           "CL-AMCASE1-027",
           "CL-AMCASE1-028",
           "CL-AMCASE1-031",
-          "CL-AMCASE1-032"
+          "CL-AMCASE1-032",
+          "CL-AMCASE1-033"
         ],
         "riskClaimIds": [
           "CL-AMCASE1-007",
@@ -7518,58 +7558,71 @@
           "CL-AMCASE1-019",
           "CL-AMCASE1-020",
           "CL-AMCASE1-029",
-          "CL-AMCASE1-030"
+          "CL-AMCASE1-030",
+          "CL-AMCASE1-033"
         ],
         "forwardTestIds": [
-          "FAL-AMCASE1-INVENTORY",
-          "FAL-AMCASE1-HBMSUPPLY",
-          "FAL-AMCASE1-HBMCONTRACT",
+          "FAL-AMCASE1-CONTRACT",
           "FAL-AMCASE1-FUNDING",
-          "FAL-AMCASE1-CONTRACT"
+          "FAL-AMCASE1-HBMCONTRACT",
+          "FAL-AMCASE1-HBMSUPPLY",
+          "FAL-AMCASE1-INVENTORY"
         ],
         "causalChain": [
           {
-            "title": "共同需求与支持范围",
-            "body": "沿Microsoft共同客户、NVIDIA容量购买、Google租约支持及Broadcom融资结构核对需求来源与承担义务的实体，避免逐层重复累加合同。",
+            "title": "NVIDIA现有义务与追加支持",
+            "body": "交付与服务条件满足后，NVIDIA购买指定剩余容量；新增项目支持另行决定。先识别合同范围，再判断尚未获资金的扩张。",
+            "claimIds": [
+              "CL-AMCASE1-001",
+              "CL-AMCASE1-006",
+              "CL-AMCASE1-018"
+            ]
+          },
+          {
+            "title": "CoreWeave资金与设备付款",
+            "body": "预付款到账、新贷款提款及替代资金须赶上设备付款；替代借款可维持交付，同时改变利息与股权端现金。",
+            "claimIds": [
+              "CL-AMCASE1-002",
+              "CL-AMCASE1-003",
+              "CL-AMCASE1-009",
+              "CL-AMCASE1-014"
+            ]
+          },
+          {
+            "title": "CORZ当前收入与未来租约",
+            "body": "当前托管收入全部来自CoreWeave；未来两组签约容量中其占约53%。AMD直租与Neocloud附条件信用支持分开，起租与融资决定新增收入时点。",
+            "claimIds": [
+              "CL-AMCASE1-004",
+              "CL-AMCASE1-008",
+              "CL-AMCASE1-033"
+            ]
+          },
+          {
+            "title": "共同客户与独立融资",
+            "body": "Microsoft共同预算敞口须按各运营商提款和交付条件核对；Google、AMD与Broadcom相关安排按各自范围估算，不能证明换帅后的订单转移。",
             "claimIds": [
               "CL-AMCASE1-012",
-              "CL-AMCASE1-018",
+              "CL-AMCASE1-028",
               "CL-AMCASE1-032"
             ]
           },
           {
-            "title": "合格HBM与设备配置",
-            "body": "分期投片与有效合格回收率形成2028年7.8EB工程基准；固定台数配置桥只减约2.8%，供给与设备范围仍分别核对。",
+            "title": "HBM供货与新增产能",
+            "body": "2027年谈定供货支持近端可见度；2028年合格能力约7.8EB仍须与覆盖设备采购、其他客户和原始HBM库存分别核对。",
             "claimIds": [
               "CL-AMCASE1-022",
-              "CL-AMCASE1-025",
-              "CL-AMCASE1-029"
+              "CL-AMCASE1-026",
+              "CL-AMCASE1-029",
+              "CL-AMCASE1-030"
             ]
           },
           {
-            "title": "采购前瞻与投运",
-            "body": "在25%设施增长及同一物理投运条件下，一季与四季采购对应4.958与7.311EB，已投运AI系统IT相同；年度采购流量与期末库存分开。",
+            "title": "条件采购窗口与库存",
+            "body": "一季和四季窗口产生约2.4EB年度采购差，同期投运相同。该外生情景没有识别融资冲击的影响；公司预测仍需确定实际出资方与付款条件。",
             "claimIds": [
               "CL-AMCASE1-023",
-              "CL-AMCASE1-029"
-            ]
-          },
-          {
-            "title": "库存融资与现金承受力",
-            "body": "新增未安装设备按假设单价对应2174亿美元资本占用。DDTL里程碑、预付款取消属性及替代融资决定哪些主体能够提前锁货。",
-            "claimIds": [
               "CL-AMCASE1-024",
-              "CL-AMCASE1-027",
-              "CL-AMCASE1-028"
-            ]
-          },
-          {
-            "title": "近端协议与远期扩产回报",
-            "body": "2027年已谈定量价提高收入可见度；2028年扩产回报继续按资金、库存和电力兑现检验。单设备位元减少也须通过价格和台数才传至收入。",
-            "claimIds": [
-              "CL-AMCASE1-026",
-              "CL-AMCASE1-030",
-              "CL-AMCASE1-031"
+              "CL-AMCASE1-029"
             ]
           }
         ]
@@ -7577,14 +7630,14 @@
       "en": {
         "locale": "en",
         "siblingLocale": "zh-CN",
-        "title": "HBM in 2028: who finances the roughly 2.4-EB procurement difference?",
-        "question": "Why can the same installed compute support different HBM purchases, and who funds procurement ahead of commissioning?",
-        "standfirst": "The independent engineering base estimates 7.8 EB of qualified 2028 HBM capacity at three suppliers. Under 25% facility growth and other stated assumptions, extending procurement from one to four quarters raises embedded HBM from 4.958 to 7.311 EB with the same installed capacity. 2027 agreements improve visibility; 2028 expansion returns depend on inventory funding and delivery.",
-        "whyItMatters": "Delayed power can reduce purchases or first increase uninstalled equipment inventory. How customers, equipment suppliers and financiers carry cash can produce different orders and revenue timing along the same physical commissioning path.",
-        "consensus": "The research dispute is whether distant compute revisions come from device volumes, memory configuration, power delivery or procurement timing. This case measures no market consensus and lacks the November 17 SemiAnalysis original for a like-for-like verdict.",
-        "differentiated": "Build from independent HBM wafer capacity, device configurations and a historical facility stock, then track purchases, installation, retirement and inventory by quarter. Contract relationships identify drawdown and support conditions; external revision percentages are not inputs.",
-        "valuation": "Underwrite negotiated 2027 HBM volumes/prices separately from incremental 2028 capacity. Assess expansion against drawable funds, inventory capacity and commissioning dates; no stock-price or return ranking is claimed.",
-        "update": "1.2.0 | As of November 17, 2026. Conditional procurement-financing research and model 4.1 distinguish the 2.354 EB annual purchase difference from the 4.433 EB year-end inventory difference, with normalized capital, contract checks and public model attachments. No calibrated global most-probable forecast or verdict on the SemiAnalysis original.",
+        "title": "After NVIDIA’s Leadership Transition, Which AI Growth Expectations Need Reassessment?",
+        "question": "After NVIDIA’s leadership transition, which expansions relying on its capacity purchases or credit support can still be delivered on schedule, and where could financing changes reach equipment procurement, HBM orders and hosting revenue?",
+        "standfirst": "Jensen Huang left NVIDIA’s CEO role on November 12. NVIDIA sells accelerators, purchases capacity from selected customers and provides specified credit support. The transition raises an investment question: which customer expansions can still be delivered on schedule, and where could changes in financing reach equipment orders and hosting revenue? Our base case is that existing contracts and operating capacity support near-term business continuity. The distant projects requiring reassessment are those that still lack sufficient financing and depend on additional NVIDIA support. A downgrade to procurement and commissioning forecasts through this financing channel requires reduced support and insufficient replacement funding before equipment payments. ASIC financing involving Broadcom, and projects supported by Google or AMD, require separate assessments under their own contracts. Following AlphaMap’s customer, supply and credit relationships reveals a material timing distinction: Core Scientific’s future contracted capacity is diversifying, while all of its current colocation revenue still comes from CoreWeave. HBM suppliers likewise need separate assessments of negotiated 2027 supply and absorption of new 2028 capacity. We calculate these company exposures and procurement conditions to identify which growth expectations already have delivery support and which still depend on financing closing.",
+        "whyItMatters": "If underfunded projects cannot pay equipment or construction bills on time, procurement, commissioning and hosting billing may be delayed. Replacement borrowing may preserve delivery while increasing interest. The study therefore assesses equipment orders, supplier deliveries and cash available to operator equity separately.",
+        "consensus": "The study examines how a leadership transition could affect existing commitments and additional support, then procurement and delivery. It measures no market consensus and lacks the November 17 SemiAnalysis original for a like-for-like verdict on the revision magnitude.",
+        "differentiated": "CORZ customer links require lease status: new counterparties represent nearly half of future contracted capacity, while current colocation revenue remains entirely with CoreWeave. Microsoft’s shared-customer links require each operator’s advance-payment and drawdown terms. AlphaMap supplies existing cross-company relationships; this study adds public-contract and financial verification to derive distinct revenue, funding and cash-flow judgments from the same industry event.",
+        "valuation": "Retain near-term delivery support from existing contracts and operating capacity; reassess underfunded distant projects that depend on additional support against replacement financing and payment dates. Forecast CORZ’s existing collections separately from new AMD-associated leases, and 2027 HBM supply visibility separately from 2028 capacity absorption. No stock target or validated short return is presented.",
+        "update": "1.3.0 | As of November 17, 2026. Restores the complete industry thesis, adds CORZ current-revenue, future-capacity and AMD lease calculations with primary evidence, expands the public graph to 20 nodes/22 relationships, reorders eight chart groups and adds bilingual PDFs. The case has 33 claims and 33 evidence records. Model 4.1 values remain frozen; a globally most-likely path is not calibrated.",
         "evidenceClaimIds": [
           "CL-AMCASE1-001",
           "CL-AMCASE1-002",
@@ -7598,7 +7651,8 @@
           "CL-AMCASE1-027",
           "CL-AMCASE1-028",
           "CL-AMCASE1-031",
-          "CL-AMCASE1-032"
+          "CL-AMCASE1-032",
+          "CL-AMCASE1-033"
         ],
         "riskClaimIds": [
           "CL-AMCASE1-007",
@@ -7607,58 +7661,71 @@
           "CL-AMCASE1-019",
           "CL-AMCASE1-020",
           "CL-AMCASE1-029",
-          "CL-AMCASE1-030"
+          "CL-AMCASE1-030",
+          "CL-AMCASE1-033"
         ],
         "forwardTestIds": [
-          "FAL-AMCASE1-INVENTORY",
-          "FAL-AMCASE1-HBMSUPPLY",
-          "FAL-AMCASE1-HBMCONTRACT",
+          "FAL-AMCASE1-CONTRACT",
           "FAL-AMCASE1-FUNDING",
-          "FAL-AMCASE1-CONTRACT"
+          "FAL-AMCASE1-HBMCONTRACT",
+          "FAL-AMCASE1-HBMSUPPLY",
+          "FAL-AMCASE1-INVENTORY"
         ],
         "causalChain": [
           {
-            "title": "Common demand and support perimeter",
-            "body": "Trace Microsoft common-customer exposure, NVIDIA capacity purchases, Google lease support and Broadcom financing to the demand source and obligated entity without adding successive contract layers.",
+            "title": "Existing NVIDIA duties and additional support",
+            "body": "NVIDIA buys specified residual capacity after delivery and service conditions are met; additional project support requires separate decisions. Identify contract scope before reassessing underfunded expansion.",
+            "claimIds": [
+              "CL-AMCASE1-001",
+              "CL-AMCASE1-006",
+              "CL-AMCASE1-018"
+            ]
+          },
+          {
+            "title": "CoreWeave funding and equipment payments",
+            "body": "Advance receipts, new drawdowns and replacement funding must precede equipment payments. Replacement borrowing can preserve delivery while changing interest and cash available to equity.",
+            "claimIds": [
+              "CL-AMCASE1-002",
+              "CL-AMCASE1-003",
+              "CL-AMCASE1-009",
+              "CL-AMCASE1-014"
+            ]
+          },
+          {
+            "title": "CORZ current revenue and future leases",
+            "body": "All current colocation revenue comes from CoreWeave, versus roughly 53% of the two future contract-capacity groups. Separate AMD direct leases from conditional Neocloud credit support; financing and commencement determine new revenue timing.",
+            "claimIds": [
+              "CL-AMCASE1-004",
+              "CL-AMCASE1-008",
+              "CL-AMCASE1-033"
+            ]
+          },
+          {
+            "title": "Shared customers and independent financing",
+            "body": "Check shared Microsoft budget exposure against each operator’s drawdown and delivery conditions. Assess Google, AMD and Broadcom arrangements within their own scopes; they do not prove post-transition order migration.",
             "claimIds": [
               "CL-AMCASE1-012",
-              "CL-AMCASE1-018",
+              "CL-AMCASE1-028",
               "CL-AMCASE1-032"
             ]
           },
           {
-            "title": "Qualified HBM and device configuration",
-            "body": "Phased wafer input and qualified recovery produce a 7.8 EB 2028 engineering base. The fixed-device configuration bridge reduces demand by about 2.8%; supply and device perimeters remain distinct.",
+            "title": "HBM supply and additional capacity",
+            "body": "Negotiated 2027 supply supports near-term visibility. Approximately 7.8 EB of qualified 2028 capability must still be reconciled with covered-device procurement, other customers and raw-HBM inventory.",
             "claimIds": [
               "CL-AMCASE1-022",
-              "CL-AMCASE1-025",
-              "CL-AMCASE1-029"
+              "CL-AMCASE1-026",
+              "CL-AMCASE1-029",
+              "CL-AMCASE1-030"
             ]
           },
           {
-            "title": "Procurement lookahead and commissioning",
-            "body": "At 25% facility growth and identical physical readiness, one- and four-quarter procurement yield 4.958 and 7.311 EB with the same installed AI-system IT; annual purchases and year-end stock are separate.",
+            "title": "Conditional procurement windows and inventory",
+            "body": "One- and four-quarter windows produce a roughly 2.4 EB annual purchase difference with the same commissioning. This exogenous scenario does not identify a financing-shock effect; company forecasts still require actual funders and payment conditions.",
             "claimIds": [
               "CL-AMCASE1-023",
-              "CL-AMCASE1-029"
-            ]
-          },
-          {
-            "title": "Inventory financing and cash capacity",
-            "body": "Additional uninstalled devices imply $217.4bn of capital at assumed prices. DDTL milestones, cancellation attributes of advances and substitute financing determine who can procure ahead.",
-            "claimIds": [
               "CL-AMCASE1-024",
-              "CL-AMCASE1-027",
-              "CL-AMCASE1-028"
-            ]
-          },
-          {
-            "title": "Near-term agreements and expansion returns",
-            "body": "Negotiated 2027 volumes/prices improve visibility; test 2028 expansion returns against funding, inventory and power execution. Per-device bit reductions reach revenue through pricing and device volumes.",
-            "claimIds": [
-              "CL-AMCASE1-026",
-              "CL-AMCASE1-030",
-              "CL-AMCASE1-031"
+              "CL-AMCASE1-029"
             ]
           }
         ]

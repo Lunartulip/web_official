@@ -39,14 +39,14 @@
     "title": "Core Scientific Q3 2026 presentation",
     "published_at": "2026-11-05",
     "url": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000028/q3fy26earningsdeckvfinal.htm",
-    "scope": "Pages 9–11; CoreWeave contract book and construction credits"
+    "scope": "Slides 4, 6, 9–13; leased and billable IT capacity, AMD-associated delivery expectations, CoreWeave contract book and construction credits"
   },
   {
     "id": 7,
     "title": "Core Scientific Q3 2026 Form 10-Q",
     "published_at": "2026-11-05",
     "url": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000030/core-20260930.htm",
-    "scope": "Note 7; contingent debt maturity-table assumption"
+    "scope": "Notes 6–7 and MD&A; uncommenced AMD-associated leases, current CoreWeave customer concentration, construction financing and contingent debt schedule"
   },
   {
     "id": 8,
@@ -334,5 +334,12 @@
     "published_at": "2026-05-06",
     "url": "https://www.anthropic.com/news/higher-limits-spacex",
     "scope": "5GW agreement begins coming online2027. Calendar phasing is analyst-assumed; do not add the3.5GWsubset again."
+  },
+  {
+    "id": 49,
+    "title": "Core Scientific Q2 2026 Form 10-Q: AMD direct leases and Neocloud credit support",
+    "published_at": "2026-07-28",
+    "url": "https://www.sec.gov/Archives/edgar/data/1839341/000183934126000014/core-20260630.htm",
+    "scope": "Note 15 subsequent events: July 27 execution. AMD directly leases 377 MW; a separate Neocloud leases 152 MW under lease-specific AMD credit support, including equipment protections, optional cure rights and specified material-default provisions. The 1,925 MW reservation right is not included in contracted capacity. Filing date verified on the issuer IR filing page as July 28, not the June 30 period-end."
   }
 ]

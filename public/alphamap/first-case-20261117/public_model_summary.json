@@ -766,7 +766,7 @@
   "base_cumulative_logic_2026_2030_m2": 166719.36275022788,
   "desired_cumulative_logic_2026_2030_m2": 317293.7179543563,
   "research_object_id": "RO-ALPHAMAP-CASE-001",
-  "publication_version": "1.2.0",
+  "publication_version": "1.3.0",
   "status": "Conditional research; physical accounting reviewed. Procurement policies and future engineering inputs are not calibrated probabilities.",
   "coverage": "High-end cloud accelerator cohort, top-three matched HBM capacity plus an explicit residual memory pool. Global facility scenarios are an external physical envelope, not a complete global processor/packaging supply model.",
   "units": {
