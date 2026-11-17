@@ -6236,12 +6236,18 @@
     "tickers": [
       "NVDA",
       "CRWV",
-      "CORZ"
+      "CORZ",
+      "APLD",
+      "NBIS",
+      "IREN",
+      "WULF",
+      "MSFT",
+      "GOOGL"
     ],
     "publishedAt": "2026-11-17",
     "asOf": "2026-11-17",
-    "version": "1.0.0",
-    "sourceLabel": "AlphaMap Investment Thesis Case 01 · AI infrastructure cash flow · 2026-11-17",
+    "version": "1.1.0",
+    "sourceLabel": "AlphaMap Investment Thesis Case 01 · Contracted demand, delivery and cash flow · 2026-11-17",
     "claims": [
       {
         "id": "CL-AMCASE1-001",
@@ -6259,8 +6265,8 @@
         "id": "CL-AMCASE1-002",
         "type": "Derived",
         "text": {
-          "zh-CN": "CoreWeave 前九个月经营现金流 56.38 亿美元，现金固定资产投入 235.58 亿美元，覆盖率为 23.9%；两者相差 179.20 亿美元，同期净融资现金流为 213.46 亿美元。",
-          "en": "CoreWeave generated $5.638 billion of operating cash flow against $23.558 billion of cash property-and-equipment purchases in the first nine months: 23.9% coverage and a $17.920 billion difference. Net financing cash inflow was $21.346 billion."
+          "zh-CN": "CoreWeave 前九个月经营现金流56.38亿美元，现金固定资产及资本化软件投入235.58亿美元，覆盖率23.9%；历史差额179.20亿美元，同期净融资213.46亿美元已发生。",
+          "en": "CoreWeave generated $5.638bn of operating cash flow against $23.558bn of cash PP&E purchases and capitalized software in the first nine months: 23.9% coverage and a historical $17.920bn difference. Net financing of $21.346bn had already occurred."
         },
         "evidenceIds": [
           "EV-AMCASE1-CRWV10Q"
@@ -6304,14 +6310,17 @@
         "id": "CL-AMCASE1-006",
         "type": "Hypothesis",
         "text": {
-          "zh-CN": "未来两个季度，有客户合同和项目资金支撑的存量业务将继续兑现；新增产能更可能按融资落实与现金回收进度分化。",
-          "en": "Over the next two quarters, existing business supported by customer contracts and project funding should continue to convert into delivery; incremental capacity is more likely to diverge with financing execution and cash collection."
+          "zh-CN": "已签合同与已落实项目资金支持交付继续；新增容量的时点取决于资金、电力、工程和客户验收。对本案具名项目的条件基准另列，未校准按期概率。",
+          "en": "Signed contracts and executed project financing support continued delivery; incremental timing depends on funding, power, construction and customer acceptance. Named-project conditional forecasts are specified separately without calibrated completion probabilities."
         },
         "evidenceIds": [
           "EV-AMCASE1-NVDA",
           "EV-AMCASE1-CRWV10Q",
           "EV-AMCASE1-CALL",
-          "EV-AMCASE1-CORZDECK"
+          "EV-AMCASE1-CORZDECK",
+          "EV-AMCASE1-APLDQ1",
+          "EV-AMCASE1-WULF10Q",
+          "EV-AMCASE1-NBISLETTER"
         ]
       },
       {
@@ -6349,6 +6358,154 @@
         "evidenceIds": [
           "EV-AMCASE1-CALL",
           "EV-AMCASE1-CRWV10Q"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-010",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "Applied Digital的Polaris Forge 1于10月1日达到250MW Ready for Service，CoreWeave合同共400MW，余下150MW在建；项目已完成15.9亿美元7%债券发行，部分资金用于偿还过桥。",
+          "en": "Applied Digital’s Polaris Forge 1 reached 250 MW Ready for Service on October 1 within its 400 MW CoreWeave contract, leaving 150 MW under construction. A $1.59bn 7% project-note issuance was completed, with proceeds partly repaying bridge debt."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-APLDQ1",
+          "EV-AMCASE1-APLD10K"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-011",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "Akela的Fluidstack租约合计378MW；Google支持自对应租约起租日起生效，在指定付款违约或破产及通知条件下，可支付终止费或补租承接租约。",
+          "en": "Akela’s Fluidstack leases total 378 MW. Google support begins at the respective lease commencement and, following specified default or insolvency and notice, may be fulfilled through a termination fee or paying rent due and assuming the lease."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-WULF10Q"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-012",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "CoreWeave、Nebius、IREN均有Microsoft客户关系，但交付节点不同；Nebius剩余新泽西容量改排2027年二季度，IREN Horizon 1已交付、Horizon 2–4仍在施工后期。",
+          "en": "CoreWeave, Nebius and IREN all have Microsoft customer relationships with different delivery milestones. Nebius moved remaining New Jersey tranches to Q2 2027; IREN delivered Horizon 1 while Horizon 2–4 remained in late-stage construction."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-CRWV10Q",
+          "EV-AMCASE1-NBISLETTER",
+          "EV-AMCASE1-IRENQ1"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-013",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "IREN各批Microsoft合同金额的20%按约应在交付前预付，并在服务期第24个月后抵扣费用；预付款支持前期建设，也减少后续净收款。",
+          "en": "IREN’s Microsoft contract requires a 20% advance before each tranche is delivered, credited against fees after month 24. It supports earlier construction cash while reducing later net collections."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-IREN10K"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-014",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "对CoreWeave管理层预计的90亿美元预付款及押金，假设20%移出三个月窗口，且同窗另有未被原计划占用的10亿美元可用替代资金，仍有8亿美元延迟收款未抵补；这不是完整融资缺口或收入损失预测。",
+          "en": "For management’s expected $9bn of prepayments and deposits, assuming 20% is delayed beyond the three-month window and $1bn of usable alternative funds is not already allocated, $0.8bn remains unreplaced. This is neither a complete financing-gap forecast nor lost revenue."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-CALL"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-015",
+        "type": "Hypothesis",
+        "text": {
+          "zh-CN": "条件基准为：APLD最新披露的150MW与Akela的336MW在建容量，合计486MW，到2027年6月30日前达到对应交付或起租节点；日期、资金可用、电力和验收条件仍待兑现，不能称全部属于2027上半年新增量。",
+          "en": "The conditional base case is that APLD’s reported 150 MW and Akela’s 336 MW under construction, totaling 486 MW, reach their respective delivery or commencement milestones by June 30, 2027. Funding, power, acceptance and timing remain conditional; this is not all incremental capacity during H1 2027."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-APLDQ1",
+          "EV-AMCASE1-APLD10K",
+          "EV-AMCASE1-WULF10Q"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-016",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "APLD—CoreWeave400MW、CORZ—CoreWeave约590MW、Akela—Fluidstack378MW构成三个独立托管资产范围，合同容量合计1368MW。CORZ约105MW未计费不等于全部新增物理容量。",
+          "en": "Three distinct hosting asset scopes comprise APLD–CoreWeave 400 MW, CORZ–CoreWeave approximately 590 MW and Akela–Fluidstack 378 MW, totaling 1,368 MW. CORZ’s approximately 105 MW not yet billing is not necessarily all new physical capacity."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-APLDQ1",
+          "EV-AMCASE1-CORZDECK",
+          "EV-AMCASE1-WULF10Q"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-017",
+        "type": "Inference",
+        "text": {
+          "zh-CN": "存量项目预测保留已披露合同和既有延期，不因换帅统一施加机械折扣；未测得统一撤约幅度也不能证明事件影响为零。",
+          "en": "The existing-project forecast retains disclosed contracts and pre-existing delays without a uniform mechanical haircut for the leadership change. Absence of a quantified common withdrawal does not establish zero event impact."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-NVDA",
+          "EV-AMCASE1-PURCHASE",
+          "EV-AMCASE1-NVDACOMMITMENTS",
+          "EV-AMCASE1-NBISLETTER"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-018",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "NVIDIA披露约4.25GW SB Energy/OpenAI项目的条件担保，首阶段预计FY2029；另3.8GW取决于自行决定追加支持的选择权，本案不计入确定供给。360亿美元AI云服务承诺亦不能重复计作独立芯片需求。",
+          "en": "NVIDIA discloses conditional guarantees for approximately 4.25 GW of SB Energy/OpenAI projects, with the first phase expected in FY2029. A further 3.8 GW depends on discretionary additional support and is excluded from firm supply. The $36bn AI cloud-service commitments are not additional independent chip demand."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-NVDACOMMITMENTS"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-019",
+        "type": "Inference",
+        "text": {
+          "zh-CN": "共同客户揭示共同需求来源，不能直接量化股票相关性；客户资金压力须经过融资替代、交付与合同条件才影响托管回款，估值重估可以更早。本文未验证下跌预测或做空收益。",
+          "en": "Shared customers identify common demand exposure, not measured stock correlation. Customer-funding pressure reaches hosting collections through financing alternatives, delivery and contract conditions, while valuation may reprice earlier. This case does not validate downside prediction or short returns."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-CRWV10Q",
+          "EV-AMCASE1-CALL",
+          "EV-AMCASE1-NBISCONTRACT",
+          "EV-AMCASE1-IREN10K",
+          "EV-AMCASE1-WULF10Q"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-020",
+        "type": "Inference",
+        "text": {
+          "zh-CN": "11月13日更新的旧图表与用户另行指出的11月17日报告为不同证据；后者原件仍待取得。两组外部下修数均未进入独立项目模型，项目增长也不足以裁决全球远期预测下修是否合理。",
+          "en": "The older charts labelled a November 13 update and the separately user-identified November 17 report are distinct evidence. The latter original remains unavailable. Neither set of external cuts feeds the independent project model, and project growth alone cannot adjudicate global long-range revisions."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-SACHARTS",
+          "EV-AMCASE1-SA17SUMMARY"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-021",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "Microsoft预计下一财季资本开支超过500亿美元，含融资租赁和非GPU资产；Micron表示2027年绝大多数HBM位元供给已签约，新增洁净室主要从2028年末之后投入。两者是各公司预期，不构成全球供需平衡测算。",
+          "en": "Microsoft expects more than $50bn of next-quarter capital expenditure, including finance leases and non-GPU assets. Micron says the vast majority of 2027 HBM bit supply is contracted, with incremental cleanrooms mainly arriving from late 2028 onward. These company expectations do not constitute a global supply-demand balance."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-MSFTOUTLOOK",
+          "EV-AMCASE1-MUOUTLOOK"
         ]
       }
     ],
@@ -6464,6 +6621,196 @@
         "counterevidence": "Cash collections are subject to operating, debt-service, reserve and distribution conditions. A full shareholder free-cash-flow model requires actual project cash schedules and balances.",
         "lastVerified": "2026-11-17",
         "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-APLDQ1",
+        "title": "Applied Digital Q1 FY2027 results",
+        "source": {
+          "publisher": "Applied Digital",
+          "document": "Applied Digital Q1 FY2027 results — Polaris Forge 1 delivery and completed project-note issuance",
+          "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000057/apldq127earningsrelease.htm"
+        },
+        "sourceDate": "2026-10-07",
+        "dataAsOf": "2026-10-01",
+        "calculation": "400 - 250 = 150 MW remaining; 250 / 400 = 62.5%.",
+        "confidence": "high",
+        "counterevidence": "Ready for Service is not end-customer billing or cash received. Issued-note proceeds partly repay a bridge loan, and the remaining project still requires construction, power and acceptance.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-APLD10K",
+        "title": "Applied Digital FY2026 Form 10-K",
+        "source": {
+          "publisher": "Applied Digital / SEC",
+          "document": "Applied Digital FY2026 Form 10-K — CoreWeave hosting scope and legal entities",
+          "url": "https://ir.applieddigital.com/sec-filings/all-sec-filings/content/0001144879-26-000048/apld-20260531.htm"
+        },
+        "sourceDate": "2026-07-29",
+        "dataAsOf": "2026-05-31",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "The CoreWeave contract is limited to Polaris Forge 1; other Applied Digital contracts must not be attributed to CoreWeave. Project legal entities and payment obligations differ.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-WULF10Q",
+        "title": "TeraWulf Q3 2026 Form 10-Q",
+        "source": {
+          "publisher": "TeraWulf / SEC",
+          "document": "TeraWulf Q3 2026 Form 10-Q — Akela/Fluidstack leases, Google recognition agreements and warrants",
+          "url": "https://investors.terawulf.com/sec-filings/all-sec-filings/content/0001628280-26-071671/wulf-20260930.htm"
+        },
+        "sourceDate": "2026-11-06",
+        "dataAsOf": "2026-09-30",
+        "calculation": "102 MW total Lake Mariner operating capacity - 60 MW Core42 = 42 MW Fluidstack; 378 - 42 = 336 MW remaining.",
+        "confidence": "high",
+        "counterevidence": "Google support takes effect at the corresponding lease commencement and is conditional on specified events and notice. It may resolve through a termination fee and is not construction insurance or a groupwide guarantee.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-NBISLETTER",
+        "title": "Nebius Q3 2026 shareholder letter",
+        "source": {
+          "publisher": "Nebius / SEC",
+          "document": "Nebius Q3 2026 shareholder letter — Microsoft NJ deployment schedule; companywide funding expectations",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926126008/tm2629571d1_ex99-2.htm"
+        },
+        "sourceDate": "2026-11-12",
+        "dataAsOf": "2026-11-12",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "The revised delivery calendar is management guidance, affected by the transition from temporary generation to permanent power; it does not establish a uniform Microsoft budget cut.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-NBISCONTRACT",
+        "title": "Nebius Microsoft agreement summary",
+        "source": {
+          "publisher": "Nebius / SEC",
+          "document": "Nebius Microsoft agreement summary — Form 6-K; financing, phased delivery, grace period and alternative capacity",
+          "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465925088312/tm2525580d1_6k.htm"
+        },
+        "sourceDate": "2025-09-08",
+        "dataAsOf": "2025-09-08",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "Termination provisions depend on affected services, applicable grace periods and alternative-capacity conditions. Contract value is not current-year revenue.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-IREN10K",
+        "title": "IREN FY2026 Form 10-K",
+        "source": {
+          "publisher": "IREN / SEC",
+          "document": "IREN FY2026 Form 10-K — Microsoft tranche prepayment/credit terms; NVIDIA cloud-services contract",
+          "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000052/iren-20260630.htm"
+        },
+        "sourceDate": "2026-08-27",
+        "dataAsOf": "2026-06-30",
+        "calculation": "Approximately $9.7bn x 20% = approximately $1.94bn contractual advances; normalized 20 upfront + 80 later net cash = 100, assuming full performance and crediting.",
+        "confidence": "high",
+        "counterevidence": "Contractual advances are not proof of receipt. Crediting advances reduces subsequent fees collected; NVIDIA is also a cloud-services customer, which is distinct from a corporate credit guarantee.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-IRENQ1",
+        "title": "IREN Q1 FY2027 results",
+        "source": {
+          "publisher": "IREN",
+          "document": "IREN Q1 FY2027 results — Horizon rollout; scope and conditions of funding statements",
+          "url": "https://iren.gcs-web.com/news-releases/news-release-details/iren-reports-q1-fy27-results"
+        },
+        "sourceDate": "2026-11-05",
+        "dataAsOf": "2026-11-05",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "Horizon 1 delivery and late-stage Horizon 2–4 construction are different milestones. Companywide funding descriptions include amounts not yet received or drawn and conditional sources.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-NVDACOMMITMENTS",
+        "title": "NVIDIA Q2 FY2027 commitments and guarantees",
+        "source": {
+          "publisher": "NVIDIA / SEC",
+          "document": "NVIDIA Q2 FY2027 commitments and guarantees — AI cloud service agreements, SB Energy/OpenAI conditional guarantees and optional further support; fiscal years",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/R17.htm"
+        },
+        "sourceDate": "2026-08-26",
+        "dataAsOf": "2026-08-26",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "The 4.25 GW project has conditional guarantees and an incomplete phase calendar; FY2029 is a fiscal first-phase date. The additional 3.8 GW is discretionary and is excluded from firm supply. Neither nominal guarantees nor cloud-service commitments are incremental independent chip demand.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-MUOUTLOOK",
+        "title": "Micron Q4 FY2026 prepared remarks",
+        "source": {
+          "publisher": "Micron",
+          "document": "Micron Q4 FY2026 prepared remarks — Industry DRAM bit outlook, contracted 2027 HBM and capex-to-output lag; company expectations",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf"
+        },
+        "sourceDate": "2026-09-30",
+        "dataAsOf": "2026-09-30",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "HBM contracted supply and cleanroom timing are Micron management expectations, not an independently measured global 2028 HBM balance.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-MSFTOUTLOOK",
+        "title": "Microsoft FY2027 Q1 earnings call",
+        "source": {
+          "publisher": "Microsoft",
+          "document": "Microsoft FY2027 Q1 earnings call — Customer demand, capital spending and third-party delivery timing; company CapEx includes finance leases",
+          "url": "https://www.microsoft.com/en-us/Investor/events/fy-2027/earnings-fy-2027-q1"
+        },
+        "sourceDate": "2026-10-28",
+        "dataAsOf": "2026-10-28",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "Capital expenditure includes finance leases and non-GPU assets. It cannot be directly converted into accelerator procurement or added to suppliers’ multi-year contract values.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-SACHARTS",
+        "title": "SemiAnalysis Accelerator Model: supplied comparison charts",
+        "source": {
+          "publisher": "User-supplied reproduction attributed to SemiAnalysis",
+          "document": "SemiAnalysis Accelerator Model: supplied comparison charts — Displayed chart values supplied to LunarTulip; circulated November 17. Original institutional report and underlying Excel not obtained. Calculations use displayed rounded values, not independently calibrated forecasts."
+        },
+        "sourceDate": "2026-11-13",
+        "dataAsOf": "2026-11-13",
+        "calculation": null,
+        "confidence": "low",
+        "counterevidence": "Only supplied rounded chart values are available. Original institutional text and spreadsheet were not obtained. This older chart comparison must remain separate from the user-identified November 17 report.",
+        "lastVerified": "2026-11-17",
+        "role": "supporting"
+      },
+      {
+        "id": "EV-AMCASE1-SA17SUMMARY",
+        "title": "Separate SemiAnalysis November 17 report: user-supplied headline summary",
+        "source": {
+          "publisher": "User-supplied identification of a separate SemiAnalysis report",
+          "document": "Separate SemiAnalysis November 17 report: user-supplied headline summary — Distinct from source 16. User reports -17% cumulative 2026–2030 accelerator logic area, -30% 2028 HBM, -34% 2030 data-centre power. Original text, baseline, metric perimeter and model inputs not yet obtained. No original-report audit claimed."
+        },
+        "sourceDate": "2026-11-17",
+        "dataAsOf": "2026-11-17",
+        "calculation": null,
+        "confidence": "low",
+        "counterevidence": "The report date and headline cuts are supplied by the user; the original text, baseline, metric perimeter and model inputs remain pending. These values are not inputs to the independent project forecast.",
+        "lastVerified": "2026-11-17",
+        "role": "supporting"
       }
     ],
     "financialBridge": [
@@ -6481,8 +6828,8 @@
       },
       {
         "label": {
-          "zh-CN": "现金固定资产投入",
-          "en": "Cash property-and-equipment purchases"
+          "zh-CN": "现金固定资产及资本化软件投入",
+          "en": "Cash PP&E purchases and capitalized software"
         },
         "period": "2026-9M",
         "value": 23558,
@@ -6493,8 +6840,8 @@
       },
       {
         "label": {
-          "zh-CN": "经营现金对现金固定资产投入覆盖率",
-          "en": "Operating-cash-flow coverage of cash PP&E"
+          "zh-CN": "经营现金对现金固定资产及资本化软件投入覆盖率",
+          "en": "Operating-cash-flow coverage of cash PP&E and capitalized software"
         },
         "period": "2026-9M",
         "value": 23.932422107139825,
@@ -6509,8 +6856,8 @@
       },
       {
         "label": {
-          "zh-CN": "两项现金流之差",
-          "en": "Difference between cash PP&E and operating cash flow"
+          "zh-CN": "现金固定资产及资本化软件投入与经营现金流的历史差额",
+          "en": "Historical difference between cash PP&E/software investment and operating cash flow"
         },
         "period": "2026-9M",
         "value": 17920,
@@ -6559,12 +6906,55 @@
           "EV-AMCASE1-CORZ10Q",
           "EV-AMCASE1-INDENTURE"
         ]
+      },
+      {
+        "label": {
+          "zh-CN": "三组独立托管资产的已签合同容量",
+          "en": "Contracted capacity across three distinct hosting asset scopes"
+        },
+        "value": 1368,
+        "unit": "MW",
+        "period": "Contract scope as of 2026-11-17",
+        "evidenceIds": [
+          "EV-AMCASE1-APLDQ1",
+          "EV-AMCASE1-CORZDECK",
+          "EV-AMCASE1-WULF10Q"
+        ]
+      },
+      {
+        "label": {
+          "zh-CN": "两项目最新披露在建容量的交付条件基准",
+          "en": "Conditional delivery base case for two projects’ reported construction capacity"
+        },
+        "value": 486,
+        "unit": "MW",
+        "period": "By 2027-06-30, relative to distinct disclosed baselines",
+        "evidenceIds": [
+          "EV-AMCASE1-APLDQ1",
+          "EV-AMCASE1-APLD10K",
+          "EV-AMCASE1-WULF10Q"
+        ]
+      },
+      {
+        "label": {
+          "zh-CN": "假设20%延迟与10亿美元替代资金后的未抵补收款",
+          "en": "Unreplaced collections under assumed 20% delay and $1bn alternative funding"
+        },
+        "value": 800,
+        "unit": "USDm",
+        "period": "Illustrative three-month timing sensitivity",
+        "evidenceIds": [
+          "EV-AMCASE1-CALL"
+        ]
       }
     ],
     "counterevidenceClaimIds": [
       "CL-AMCASE1-007",
       "CL-AMCASE1-008",
-      "CL-AMCASE1-009"
+      "CL-AMCASE1-009",
+      "CL-AMCASE1-017",
+      "CL-AMCASE1-019",
+      "CL-AMCASE1-020"
     ],
     "falsifiers": [
       {
@@ -6607,6 +6997,20 @@
           "zh-CN": "融资与交付连续兑现，应降低对增量扩张受资金约束的权重。",
           "en": "Repeated financing and delivery execution would reduce the weight placed on incremental funding constraints."
         }
+      },
+      {
+        "id": "FAL-AMCASE1-DELIVERY",
+        "metric": "Named-project service and billing milestones",
+        "condition": "Project financing is no longer drawable or releasable as required, or power, commissioning or acceptance shifts the relevant APLD/Akela milestone beyond June 30, 2027. CORZ full billing is tested separately from physical buildout.",
+        "horizon": "Through 2027-06-30",
+        "claimIds": [
+          "CL-AMCASE1-015",
+          "CL-AMCASE1-016"
+        ],
+        "rationale": {
+          "zh-CN": "资金、供电、工程或验收延期须修订对应项目日期；APLD的年中措辞可能跨越6月底，不能把条件基准当保底承诺。",
+          "en": "Funding, power, construction or acceptance delays require project-specific date revisions. APLD’s mid-year wording may extend beyond June 30; the conditional base is not a guaranteed completion date."
+        }
       }
     ],
     "versions": [
@@ -6616,6 +7020,14 @@
         "diff": {
           "zh-CN": "投资逻辑案例首版；截至 NVIDIA 下一次财报前公开材料，区分合同义务、资金落实、计费与股东现金。",
           "en": "Initial investment-thesis case using public evidence available before NVIDIA’s next earnings release; separates contractual obligations, funding execution, billing and equity cash flow."
+        }
+      },
+      {
+        "version": "1.1.0",
+        "date": "2026-11-17",
+        "diff": {
+          "zh-CN": "审阅稿扩展为全局合同网络：压缩保留原研究第一章，补充共同客户、项目信用支持及下跌传导；先建立截至2027年6月底的独立项目交付条件基准，再单列外部预测对照。",
+          "en": "Review-draft expansion into the contract network: compress and retain the original research as Chapter 1, add shared customers, project credit support and downside paths, and establish an independent conditional project-delivery base through June 2027 before external forecast comparison."
         }
       }
     ],
@@ -6627,68 +7039,116 @@
       {
         "zh-CN": "未来预付款与项目融资仍需后续披露验证；完整股东现金模型还需项目级抵扣、偿债及储备账户余额。",
         "en": "Future prepayments and project financing require subsequent confirmation; a complete equity-cash-flow model also requires project-level credit, debt-service and reserve balances."
+      },
+      {
+        "zh-CN": "各项目最新披露日和状态不同；Ready for Service、计费与运营不能作为同一实测现金兑现率。486MW不是2027上半年净新增GPU装机。",
+        "en": "Project observation dates and milestone definitions differ. Ready for Service, billing and operation are not a common measured cash-conversion rate. The 486 MW figure is not H1 2027 net incremental GPU installation."
+      },
+      {
+        "zh-CN": "未校准各项目按期完成概率。APLD的1H2027与mid-2027披露存在措辞边界，6月底预测仍以资金、电力和验收条件为前提。",
+        "en": "Project completion probabilities are not calibrated. APLD’s H1 2027 and mid-2027 wording creates a boundary around June 30; the forecast remains conditional on funding, power and acceptance."
+      },
+      {
+        "zh-CN": "缺独立的全球SKU、芯片面积、HBM物理位元与装机退役面板；本案没有给出全球2028 HBM或2030功率总量预测。",
+        "en": "Independent global SKU, logic-area, physical HBM-bit and installed-stock/retirement inputs are incomplete; this case does not forecast global 2028 HBM or 2030 power totals."
+      },
+      {
+        "zh-CN": "11月17日SemiAnalysis报告仅取得用户提供的主张，原文、基线与数据边界待核；与11月13日旧图表保持分离。",
+        "en": "The November 17 SemiAnalysis report is represented only by user-supplied claims; its original, baseline and metric perimeter remain pending, separate from the older November 13 charts."
+      },
+      {
+        "zh-CN": "无完整共同因子控制、收益回测或借券成本证据，图路径不等于已验证做空信号。",
+        "en": "No complete common-factor controls, return backtest or borrow-cost evidence is available; graph paths are not validated short signals."
       }
     ],
     "renderings": {
       "zh-CN": {
         "locale": "zh-CN",
         "siblingLocale": "en",
-        "title": "NVIDIA 换帅之后，CoreWeave 的扩张取决于融资兑现",
-        "question": "NVIDIA 换帅后，CoreWeave 与其托管商的合同如何转化为交付、现金与股东价值？",
-        "standfirst": "有客户合同与项目资金支撑的存量业务仍有兑现基础；新增产能取决于融资落地，已计费托管收入还需经过抵扣和偿债才能进入股东现金。",
-        "whyItMatters": "同一算力产业链上的公司承担不同付款义务、交付条件与现金优先级，订单和容量不能直接代替股东可支配现金。",
-        "consensus": "本案检验的研究争议是：管理层更替是否影响既有支持，以及已签约容量何时能够转成权益现金；这里不代表已测量的市场共识。",
-        "differentiated": "未来两个季度，合同与项目资金支撑的存量业务继续兑现，增量扩张和权益现金回收按融资落实与收款顺序分化。",
-        "valuation": "给可验证现金流更高权重，对依赖后续融资的远期容量要求更大折价；证券选择仍须结合买入价格。",
-        "update": "首版冻结于 2026 年 11 月 17 日 13:40（Asia/Shanghai），未使用随后发布的 NVIDIA 财报。",
+        "title": "NVIDIA换帅后的算力供需：存量交付继续，远期扩张看资金",
+        "question": "已签算力需求如何通过客户付款、项目融资与工程节点转化为交付和股权现金？",
+        "standfirst": "条件基准预计，APLD与Akela最新披露的合计486MW在建容量到2027年6月底前达到交付或起租节点；共同客户、不同信用支持与现金分配顺序决定公司差异。",
+        "whyItMatters": "同一客户预算连接多家算力商，但融资、验收和租约保护落在不同项目。把每层合同相加会重复计量需求，把容量计费当股东现金则会高估兑现。",
+        "consensus": "研究争议是NVIDIA换帅是否改变具名合同与未来支持，以及扩张约束如何传到交付；本文未测量市场一致预期。",
+        "differentiated": "先由互不重复的合同资产、资金状态和工程排期形成独立项目基准，再比较外部全球预测；不统一套用换帅折扣或外部下修率。",
+        "valuation": "分别评估可验证交付、合同回款与股权现金。远期项目需计入融资和关键工程条件；本案未形成证券价格或收益排序。",
+        "update": "1.1.0审阅稿，截至2026年11月17日：新增项目级供需基准、全局关系图与敏感性；11月17日外部报告原件仍待补核。",
         "evidenceClaimIds": [
           "CL-AMCASE1-001",
           "CL-AMCASE1-002",
           "CL-AMCASE1-003",
           "CL-AMCASE1-004",
-          "CL-AMCASE1-005"
+          "CL-AMCASE1-005",
+          "CL-AMCASE1-010",
+          "CL-AMCASE1-011",
+          "CL-AMCASE1-012",
+          "CL-AMCASE1-013",
+          "CL-AMCASE1-016",
+          "CL-AMCASE1-018",
+          "CL-AMCASE1-021"
         ],
         "riskClaimIds": [
           "CL-AMCASE1-007",
           "CL-AMCASE1-008",
-          "CL-AMCASE1-009"
+          "CL-AMCASE1-009",
+          "CL-AMCASE1-015",
+          "CL-AMCASE1-017",
+          "CL-AMCASE1-019",
+          "CL-AMCASE1-020"
         ],
         "forwardTestIds": [
           "FAL-AMCASE1-CONTRACT",
           "FAL-AMCASE1-FUNDING",
-          "FAL-AMCASE1-EASING"
+          "FAL-AMCASE1-EASING",
+          "FAL-AMCASE1-DELIVERY"
         ],
         "causalChain": [
           {
-            "title": "公司合同",
-            "body": "区分有条件容量购买与未来可自行决定的资金支持。",
+            "title": "已签需求",
+            "body": "三组独立托管资产合计1368MW；同一客户、云服务与托管容量不可重复累加。",
+            "claimIds": [
+              "CL-AMCASE1-012",
+              "CL-AMCASE1-016",
+              "CL-AMCASE1-021"
+            ]
+          },
+          {
+            "title": "资金与工程",
+            "body": "486MW条件基准取决于可用资金、电力、施工及验收；CORZ剩余计费另行验证。",
+            "claimIds": [
+              "CL-AMCASE1-010",
+              "CL-AMCASE1-015",
+              "CL-AMCASE1-016"
+            ]
+          },
+          {
+            "title": "支持范围",
+            "body": "容量购买、条件信用支持与未来追加选择权分别改变不同项目风险。",
             "claimIds": [
               "CL-AMCASE1-001",
-              "CL-AMCASE1-007"
+              "CL-AMCASE1-007",
+              "CL-AMCASE1-011",
+              "CL-AMCASE1-018"
             ]
           },
           {
-            "title": "项目融资与交付",
-            "body": "客户预付款和合同支持融资影响新容量投运；经营现金流尚不足以覆盖设备投入。",
-            "claimIds": [
-              "CL-AMCASE1-002",
-              "CL-AMCASE1-003",
-              "CL-AMCASE1-006"
-            ]
-          },
-          {
-            "title": "托管计费",
-            "body": "相关合约约82.2%已计费，但这与最终客户起账及股权现金不同。",
-            "claimIds": [
-              "CL-AMCASE1-004"
-            ]
-          },
-          {
-            "title": "现金分配",
-            "body": "租金抵扣结束和本金摊还触发相连，股东现金释放受偿债及储备顺序制约。",
+            "title": "回款与股权现金",
+            "body": "客户预付、租金抵扣、债务与储备决定现金使用顺序；市场预期可能先于经营变化。",
             "claimIds": [
               "CL-AMCASE1-005",
-              "CL-AMCASE1-008"
+              "CL-AMCASE1-008",
+              "CL-AMCASE1-013",
+              "CL-AMCASE1-014",
+              "CL-AMCASE1-019"
+            ]
+          },
+          {
+            "title": "检验与外部对照",
+            "body": "按项目修订预测，保留尚未取得的全球模型输入及外部报告原件缺口。",
+            "claimIds": [
+              "CL-AMCASE1-009",
+              "CL-AMCASE1-017",
+              "CL-AMCASE1-020"
             ]
           }
         ]
@@ -6696,62 +7156,90 @@
       "en": {
         "locale": "en",
         "siblingLocale": "zh-CN",
-        "title": "After NVIDIA’s leadership transition, CoreWeave’s expansion depends on funding execution",
-        "question": "After NVIDIA’s CEO transition, how do CoreWeave’s contracts and hosting relationships convert into delivery, cash and equity value?",
-        "standfirst": "Existing business supported by customer contracts and project funding should keep converting into delivery. Incremental capacity depends on financing execution, while billed hosting revenue must pass through credits and debt service before reaching equity.",
-        "whyItMatters": "Companies on the same compute chain face different payment obligations, delivery conditions and cash priorities. Orders and MW cannot substitute for cash available to shareholders.",
-        "consensus": "The research debate is whether leadership change alters existing support and when contracted capacity becomes equity cash. This is a question under examination, not a measured consensus claim.",
-        "differentiated": "Over the next two quarters, supported existing contracts should keep converting; incremental growth and equity cash recovery should diverge with funding execution and payment priority.",
-        "valuation": "Give greater weight to verifiable cash flows and require a larger discount for distant capacity dependent on future funding. Security selection still requires an entry-price assessment.",
-        "update": "Initial evidence cutoff: November 17, 2026, 13:40 Asia/Shanghai, before the subsequent NVIDIA earnings release.",
+        "title": "AI infrastructure after NVIDIA’s transition: delivery continues, expansion depends on funding",
+        "question": "How does contracted compute demand convert through customer payments, project funding and construction into delivery and equity cash?",
+        "standfirst": "The conditional base case expects 486 MW reported under construction at APLD and Akela to reach delivery or commencement by June 2027. Shared customers, different credit support and cash priorities explain company-level differences.",
+        "whyItMatters": "A customer budget can connect several operators, while financing, acceptance and lease protection remain project-specific. Adding each contractual layer double-counts demand; treating billing capacity as equity cash overstates conversion.",
+        "consensus": "The research question is whether NVIDIA’s leadership change alters identified contracts and future support, and how constraints reach delivery. No measured market-consensus claim is made.",
+        "differentiated": "Form an independent project base from non-overlapping contracted assets, funding and construction schedules before comparing external global forecasts. Apply neither a uniform leadership haircut nor external revision percentages.",
+        "valuation": "Assess verifiable delivery, contractual collections and equity cash separately. Distant capacity requires financing and engineering conditions; the case does not establish stock-price or return rankings.",
+        "update": "Version 1.1.0 review draft, as of November 17, 2026: adds an independent project supply-demand base, the contract network and sensitivities. The separate November 17 external report remains unverified.",
         "evidenceClaimIds": [
           "CL-AMCASE1-001",
           "CL-AMCASE1-002",
           "CL-AMCASE1-003",
           "CL-AMCASE1-004",
-          "CL-AMCASE1-005"
+          "CL-AMCASE1-005",
+          "CL-AMCASE1-010",
+          "CL-AMCASE1-011",
+          "CL-AMCASE1-012",
+          "CL-AMCASE1-013",
+          "CL-AMCASE1-016",
+          "CL-AMCASE1-018",
+          "CL-AMCASE1-021"
         ],
         "riskClaimIds": [
           "CL-AMCASE1-007",
           "CL-AMCASE1-008",
-          "CL-AMCASE1-009"
+          "CL-AMCASE1-009",
+          "CL-AMCASE1-015",
+          "CL-AMCASE1-017",
+          "CL-AMCASE1-019",
+          "CL-AMCASE1-020"
         ],
         "forwardTestIds": [
           "FAL-AMCASE1-CONTRACT",
           "FAL-AMCASE1-FUNDING",
-          "FAL-AMCASE1-EASING"
+          "FAL-AMCASE1-EASING",
+          "FAL-AMCASE1-DELIVERY"
         ],
         "causalChain": [
           {
-            "title": "Corporate contracts",
-            "body": "Separate conditional capacity purchases from discretionary future financial support.",
+            "title": "Contracted demand",
+            "body": "Three distinct hosting scopes total 1,368 MW; common-customer, cloud-service and hosting layers must not be added again.",
+            "claimIds": [
+              "CL-AMCASE1-012",
+              "CL-AMCASE1-016",
+              "CL-AMCASE1-021"
+            ]
+          },
+          {
+            "title": "Funding and construction",
+            "body": "The 486 MW conditional base depends on usable funding, power, construction and acceptance; remaining CORZ billing is tested separately.",
+            "claimIds": [
+              "CL-AMCASE1-010",
+              "CL-AMCASE1-015",
+              "CL-AMCASE1-016"
+            ]
+          },
+          {
+            "title": "Scope of support",
+            "body": "Capacity purchases, conditional credit support and discretionary future options affect different project risks.",
             "claimIds": [
               "CL-AMCASE1-001",
-              "CL-AMCASE1-007"
+              "CL-AMCASE1-007",
+              "CL-AMCASE1-011",
+              "CL-AMCASE1-018"
             ]
           },
           {
-            "title": "Project funding and delivery",
-            "body": "Customer prepayments and contract-backed financing affect commissioning; operating cash flow does not yet cover cash equipment purchases.",
-            "claimIds": [
-              "CL-AMCASE1-002",
-              "CL-AMCASE1-003",
-              "CL-AMCASE1-006"
-            ]
-          },
-          {
-            "title": "Hosting billing",
-            "body": "Approximately 82.2% of the relevant contract book is billing, distinct from end-customer billing or equity cash.",
-            "claimIds": [
-              "CL-AMCASE1-004"
-            ]
-          },
-          {
-            "title": "Cash distribution",
-            "body": "Credit exhaustion connects to principal-amortization triggers, with debt service and reserves constraining equity cash release.",
+            "title": "Collections and equity cash",
+            "body": "Customer advances, fee credits, debt and reserves determine cash priorities; market expectations can move before operating effects.",
             "claimIds": [
               "CL-AMCASE1-005",
-              "CL-AMCASE1-008"
+              "CL-AMCASE1-008",
+              "CL-AMCASE1-013",
+              "CL-AMCASE1-014",
+              "CL-AMCASE1-019"
+            ]
+          },
+          {
+            "title": "Tests and external comparison",
+            "body": "Revise forecasts project by project while retaining missing global-model inputs and the unavailable external original.",
+            "claimIds": [
+              "CL-AMCASE1-009",
+              "CL-AMCASE1-017",
+              "CL-AMCASE1-020"
             ]
           }
         ]
