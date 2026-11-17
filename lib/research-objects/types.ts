@@ -3,6 +3,7 @@ export const researchObjectKinds = [
   "theme-study",
   "methodology",
   "alphamap-study",
+  "alphamap-case",
 ] as const;
 
 export type ResearchObjectKind = (typeof researchObjectKinds)[number];
@@ -200,4 +201,23 @@ export interface AlphaMapStudy extends ResearchObjectIdentity {
   artifacts: AlphaMapArtifact[];
 }
 
-export type ResearchObject = DeepDiveResearchObject | AlphaMapStudy;
+export interface CaseFalsifier {
+  id: string;
+  metric: string;
+  condition: string;
+  horizon: string;
+  claimIds: `CL-${string}`[];
+  rationale: LocalizedText;
+}
+
+/** A current investment thesis; distinct from retrospective factor research. */
+export interface AlphaMapCase extends ResearchObjectIdentity {
+  kind: "alphamap-case";
+  financialBridge: FinancialBridgeRow[];
+  counterevidenceClaimIds: `CL-${string}`[];
+  falsifiers: CaseFalsifier[];
+  renderings: Record<ResearchLocale, DeepDiveLocaleRendering>;
+  dataGaps: LocalizedText[];
+}
+
+export type ResearchObject = DeepDiveResearchObject | AlphaMapStudy | AlphaMapCase;

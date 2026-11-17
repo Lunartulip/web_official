@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { alphaMapWhitepapers } from "@/lib/alphamap-whitepapers";
-import { alphaMapStudies } from "@/lib/research-objects";
+import { alphaMapCases, alphaMapStudies } from "@/lib/research-objects";
 import AlphaMapIndex from "./alphamap-index";
 
 export const metadata: Metadata = {
@@ -47,6 +47,21 @@ export default function AlphaMapPage() {
       dateModified: item.versions.at(-1)?.date ?? item.publishedAt,
     },
   }));
+  const cases = alphaMapCases.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "Article",
+      "@id": `https://lunartuliplab.com/alphamap/${item.slug}#article`,
+      url: `https://lunartuliplab.com/alphamap/${item.slug}`,
+      name: item.renderings["zh-CN"].title,
+      headline: item.renderings["zh-CN"].title,
+      identifier: item.id,
+      datePublished: item.publishedAt,
+      dateModified: item.versions.at(-1)?.date ?? item.publishedAt,
+      inLanguage: "zh-CN",
+    },
+  }));
   const schema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -54,6 +69,12 @@ export default function AlphaMapPage() {
     name: "Lunartulip AlphaMap",
     inLanguage: "zh-CN",
     mainEntity: [
+      {
+        "@type": "CreativeWorkSeries",
+        "@id": "https://lunartuliplab.com/alphamap#investment-cases",
+        name: "LunarTulip AlphaMap Investment Thesis Cases",
+        hasPart: { "@type": "ItemList", itemListElement: cases },
+      },
       {
         "@type": "CreativeWorkSeries",
         "@id": "https://lunartuliplab.com/alphamap#whitepaper-series",

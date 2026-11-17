@@ -18,10 +18,10 @@ export const publicResearchLicense = {
 export function publicResearchDataset(item: ResearchObject) {
   const modifiedAt = item.versions.at(-1)?.date ?? item.publishedAt;
   const machineReadableUrl = `https://lunartuliplab.com/research/${item.slug}`;
-  const collectionPath = item.kind === "alphamap-study" ? "alphamap" : "deep-dive";
+  const collectionPath = (item.kind === "alphamap-study" || item.kind === "alphamap-case") ? "alphamap" : "deep-dive";
   const canonicalZh = `https://lunartuliplab.com/${collectionPath}/${item.slug}`;
   const canonicalEn = `https://lunartuliplab.com/en/${collectionPath}/${item.slug}`;
-  const seriesLabel = item.kind === "alphamap-study" ? item.sourceLabel.split(" · ")[0] : null;
+  const seriesLabel = (item.kind === "alphamap-study" || item.kind === "alphamap-case") ? item.sourceLabel.split(" · ")[0] : null;
 
   return {
     "@type": "Dataset",
@@ -60,13 +60,13 @@ export function publicResearchDataset(item: ResearchObject) {
     mainEntityOfPage: machineReadableUrl,
     subjectOf: [
       {
-        "@type": "ScholarlyArticle",
+        "@type": item.kind === "alphamap-case" ? "Article" : "ScholarlyArticle",
         name: seriesLabel ? `${seriesLabel}: ${item.renderings.en.title}` : item.renderings.en.title,
         inLanguage: "en",
         url: canonicalEn,
       },
       {
-        "@type": "ScholarlyArticle",
+        "@type": item.kind === "alphamap-case" ? "Article" : "ScholarlyArticle",
         name: seriesLabel ? `${seriesLabel}: ${item.renderings["zh-CN"].title}` : item.renderings["zh-CN"].title,
         inLanguage: "zh-CN",
         url: canonicalZh,

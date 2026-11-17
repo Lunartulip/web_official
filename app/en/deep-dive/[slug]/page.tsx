@@ -15,7 +15,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const item = getResearchObject((await params).slug);
-  if (!item || item.kind === "alphamap-study") return {};
+  if (!item || item.kind === "alphamap-study" || item.kind === "alphamap-case") return {};
   const rendering = item.renderings.en;
   const modifiedAt = item.versions.at(-1)?.date ?? item.publishedAt;
   return {
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function EnglishDeepDiveDetailPage({ params }: Props) {
   const item = getResearchObject((await params).slug);
-  if (!item || item.kind === "alphamap-study") notFound();
+  if (!item || item.kind === "alphamap-study" || item.kind === "alphamap-case") notFound();
   const rendering = item.renderings.en;
   const modifiedAt = item.versions.at(-1)?.date ?? item.publishedAt;
   const schema = {

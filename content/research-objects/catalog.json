@@ -6228,5 +6228,534 @@
         "en": "DBNR, customer count, RPO/cRPO and geography rely on third-party call transcripts pending page-level 10-Q verification; absolute Act Four revenue is undisclosed."
       }
     ]
+  },
+  {
+    "id": "RO-ALPHAMAP-CASE-001",
+    "slug": "ai-infrastructure-cash-flow-first-case-2026-11",
+    "kind": "alphamap-case",
+    "tickers": [
+      "NVDA",
+      "CRWV",
+      "CORZ"
+    ],
+    "publishedAt": "2026-11-17",
+    "asOf": "2026-11-17",
+    "version": "1.0.0",
+    "sourceLabel": "AlphaMap Investment Thesis Case 01 · AI infrastructure cash flow · 2026-11-17",
+    "claims": [
+      {
+        "id": "CL-AMCASE1-001",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "NVIDIA 公告管理层更替时表示预期客户承诺继续执行；对 CoreWeave 的剩余容量购买安排是附交付及服务条件的公司合同。",
+          "en": "NVIDIA said it expected customer commitments to continue through the CEO transition. Its CoreWeave residual-capacity purchase is a corporate contract subject to delivery and service conditions."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-NVDA",
+          "EV-AMCASE1-PURCHASE"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-002",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "CoreWeave 前九个月经营现金流 56.38 亿美元，现金固定资产投入 235.58 亿美元，覆盖率为 23.9%；两者相差 179.20 亿美元，同期净融资现金流为 213.46 亿美元。",
+          "en": "CoreWeave generated $5.638 billion of operating cash flow against $23.558 billion of cash property-and-equipment purchases in the first nine months: 23.9% coverage and a $17.920 billion difference. Net financing cash inflow was $21.346 billion."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-CRWV10Q"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-003",
+        "type": "Fact",
+        "text": {
+          "zh-CN": "CoreWeave 管理层预计未来三个月收到约 90 亿美元客户预付款及押金，并预计下一笔延迟提款贷款覆盖相关资本开支的九成以上；这些是公司前瞻陈述。",
+          "en": "CoreWeave management expected approximately $9 billion of customer prepayments and deposits over the next three months and its next delayed-draw loan to finance more than 90% of relevant capex. These are forward-looking statements."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-CALL"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-004",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "截至 11 月 5 日，Core Scientific 与 CoreWeave 的约 590MW 合约中约 485MW 已计费，约占 82.2%；约 105MW 尚未计费。",
+          "en": "As of November 5, approximately 485MW of Core Scientific’s approximately 590MW CoreWeave contract book was billing, or 82.2%, leaving approximately 105MW not yet billing."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-CORZDECK"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-005",
+        "type": "Derived",
+        "text": {
+          "zh-CN": "Core Scientific Finance I LLC 发行的 33 亿美元有担保债券，初始年度本金摊还额为原始本金的 11.5%，即 3.795 亿美元；启动时间由全部相关租约最终起租、全部收入抵扣耗尽及至少15天等付款日期条件决定。",
+          "en": "Initial annual principal amortization on the $3.3 billion secured notes issued by Core Scientific Finance I LLC is 11.5% of original principal, or $379.5 million. The start is conditional on final rent commencement across the relevant leases, all revenue credits being exhausted, and at least 15 days before the qualifying payment date."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-CORZ10Q",
+          "EV-AMCASE1-INDENTURE"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-006",
+        "type": "Hypothesis",
+        "text": {
+          "zh-CN": "未来两个季度，有客户合同和项目资金支撑的存量业务将继续兑现；新增产能更可能按融资落实与现金回收进度分化。",
+          "en": "Over the next two quarters, existing business supported by customer contracts and project funding should continue to convert into delivery; incremental capacity is more likely to diverge with financing execution and cash collection."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-NVDA",
+          "EV-AMCASE1-CRWV10Q",
+          "EV-AMCASE1-CALL",
+          "EV-AMCASE1-CORZDECK"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-007",
+        "type": "Inference",
+        "text": {
+          "zh-CN": "存量容量购买合同不能覆盖 CoreWeave 全部风险；融资安排的存在也不能视为所有未来项目已经完成交割。",
+          "en": "The existing capacity-purchase contract does not cover all CoreWeave risk. Announced financing plans do not establish that every future project is fully funded."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-PURCHASE",
+          "EV-AMCASE1-CALL"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-008",
+        "type": "Inference",
+        "text": {
+          "zh-CN": "Core Scientific 的收入抵扣结束后，租金实收可增加，但本金摊还和现金账户分配约束意味着股东可支配现金不会自动同幅增加。",
+          "en": "Core Scientific can collect more rent after revenue credits end, but principal amortization and account-distribution restrictions prevent an automatic one-for-one increase in cash available to equity."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-CORZDECK",
+          "EV-AMCASE1-CORZ10Q",
+          "EV-AMCASE1-INDENTURE"
+        ]
+      },
+      {
+        "id": "CL-AMCASE1-009",
+        "type": "Hypothesis",
+        "text": {
+          "zh-CN": "若客户资金和项目融资未能按计划落实、替代资金又不足以补足并影响交付，应下调相关项目收入兑现速度；若融资与投运持续完成且不明显增加母公司资本需求，增长融资约束判断应减弱。",
+          "en": "If customer cash and project financing fail to arrive as planned, alternative funding is insufficient, and delivery is disrupted, the affected revenue-conversion path should be reduced. Continued financing and commissioning without materially greater parent capital needs would weaken the financing-constraint view."
+        },
+        "evidenceIds": [
+          "EV-AMCASE1-CALL",
+          "EV-AMCASE1-CRWV10Q"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "EV-AMCASE1-NVDA",
+        "title": "NVIDIA announces CEO transition",
+        "source": {
+          "publisher": "NVIDIA",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+          "document": "CEO transition announcement"
+        },
+        "sourceDate": "2026-11-12",
+        "dataAsOf": "2026-11-12",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "The board’s expectation of continuity does not guarantee every future investment or credit-support decision.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-PURCHASE",
+        "title": "CoreWeave residual-capacity purchase arrangement",
+        "source": {
+          "publisher": "CoreWeave / SEC",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962825000047/crwv-20250909.htm",
+          "document": "Form 8-K, capacity purchase arrangement"
+        },
+        "sourceDate": "2025-09-15",
+        "dataAsOf": "2025-09-09",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "The initial $6.3 billion scope, delivery and availability requirements, and termination provisions prevent treating this as a guarantee of all company obligations.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-CRWV10Q",
+        "title": "CoreWeave Q3 2026 cash-flow statement",
+        "source": {
+          "publisher": "CoreWeave / SEC",
+          "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/crwv-20260930.htm",
+          "document": "Form 10-Q, cash-flow statement for the nine months ended September 30, 2026"
+        },
+        "sourceDate": "2026-11-10",
+        "dataAsOf": "2026-09-30",
+        "calculation": "5638 / 23558 * 100 = 23.932422%; 23558 - 5638 = 17920; amounts are USD millions.",
+        "confidence": "high",
+        "counterevidence": "The operating-cash-flow measure includes working-capital movements and customer cash. The derived funding difference is historical and is not an unfilled current liquidity gap.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-CALL",
+        "title": "CoreWeave Q3 2026 earnings call",
+        "source": {
+          "publisher": "CoreWeave",
+          "url": "https://s205.q4cdn.com/133937190/files/content_files/CoreWeave-3Q26-Transcript-_1_.pdf",
+          "document": "Official proofread transcript, PDF pages 2 and 6"
+        },
+        "sourceDate": "2026-11-10",
+        "dataAsOf": "2026-11-10",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "The expected prepayments, delayed-draw facility terms and parent-capital requirements are management forecasts, not completed cash receipts or financing closings.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-CORZDECK",
+        "title": "Core Scientific Q3 2026 investor presentation",
+        "source": {
+          "publisher": "Core Scientific",
+          "url": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000028/q3fy26earningsdeckvfinal.htm",
+          "document": "Q3 2026 presentation, pages 9–11"
+        },
+        "sourceDate": "2026-11-05",
+        "dataAsOf": "2026-11-05",
+        "calculation": "485 / 590 * 100 = 82.203390%; 590 - 485 = 105 MW.",
+        "confidence": "high",
+        "counterevidence": "Billing MW describes this CoreWeave hosting contract book as of November 5. It is neither total-company completion nor proof of billing to CoreWeave’s end customers.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-CORZ10Q",
+        "title": "Core Scientific Q3 2026 secured-note terms",
+        "source": {
+          "publisher": "Core Scientific",
+          "url": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000030/core-20260930.htm",
+          "document": "Form 10-Q, Note 7"
+        },
+        "sourceDate": "2026-11-05",
+        "dataAsOf": "2026-09-30",
+        "calculation": "3300 * 11.5% = 379.5 USD million initial annual principal amortization.",
+        "confidence": "high",
+        "counterevidence": "The maturity table assumes a November 2029 amortization start; the actual start remains conditional. Principal amortization is separate from interest and operating expenses.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      },
+      {
+        "id": "EV-AMCASE1-INDENTURE",
+        "title": "Core Scientific secured-note cash waterfall and amortization",
+        "source": {
+          "publisher": "Core Scientific",
+          "url": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001193125-26-208905/d47435dex41.htm",
+          "document": "Indenture, sections 4.23 and 14.01"
+        },
+        "sourceDate": "2026-05-06",
+        "dataAsOf": "2026-05-06",
+        "calculation": null,
+        "confidence": "high",
+        "counterevidence": "Cash collections are subject to operating, debt-service, reserve and distribution conditions. A full shareholder free-cash-flow model requires actual project cash schedules and balances.",
+        "lastVerified": "2026-11-17",
+        "role": "primary"
+      }
+    ],
+    "financialBridge": [
+      {
+        "label": {
+          "zh-CN": "经营活动现金流",
+          "en": "Operating cash flow"
+        },
+        "period": "2026-9M",
+        "value": 5638,
+        "unit": "USDm",
+        "evidenceIds": [
+          "EV-AMCASE1-CRWV10Q"
+        ]
+      },
+      {
+        "label": {
+          "zh-CN": "现金固定资产投入",
+          "en": "Cash property-and-equipment purchases"
+        },
+        "period": "2026-9M",
+        "value": 23558,
+        "unit": "USDm",
+        "evidenceIds": [
+          "EV-AMCASE1-CRWV10Q"
+        ]
+      },
+      {
+        "label": {
+          "zh-CN": "经营现金对现金固定资产投入覆盖率",
+          "en": "Operating-cash-flow coverage of cash PP&E"
+        },
+        "period": "2026-9M",
+        "value": 23.932422107139825,
+        "unit": "percent",
+        "evidenceIds": [
+          "EV-AMCASE1-CRWV10Q"
+        ],
+        "displayValue": {
+          "zh-CN": "23.9%",
+          "en": "23.9%"
+        }
+      },
+      {
+        "label": {
+          "zh-CN": "两项现金流之差",
+          "en": "Difference between cash PP&E and operating cash flow"
+        },
+        "period": "2026-9M",
+        "value": 17920,
+        "unit": "USDm",
+        "evidenceIds": [
+          "EV-AMCASE1-CRWV10Q"
+        ]
+      },
+      {
+        "label": {
+          "zh-CN": "净融资现金流",
+          "en": "Net financing cash inflow"
+        },
+        "period": "2026-9M",
+        "value": 21346,
+        "unit": "USDm",
+        "evidenceIds": [
+          "EV-AMCASE1-CRWV10Q"
+        ]
+      },
+      {
+        "label": {
+          "zh-CN": "CRWV 托管合约已计费比例",
+          "en": "Billing share of the CRWV hosting contract book"
+        },
+        "period": "2026-11-05",
+        "value": 82.20338983050848,
+        "unit": "percent",
+        "evidenceIds": [
+          "EV-AMCASE1-CORZDECK"
+        ],
+        "displayValue": {
+          "zh-CN": "约82.2%",
+          "en": "approximately 82.2%"
+        }
+      },
+      {
+        "label": {
+          "zh-CN": "条件触发后的初始年度本金摊还",
+          "en": "Initial annual principal amortization after trigger"
+        },
+        "period": "conditional",
+        "value": 379.5,
+        "unit": "USDm",
+        "evidenceIds": [
+          "EV-AMCASE1-CORZ10Q",
+          "EV-AMCASE1-INDENTURE"
+        ]
+      }
+    ],
+    "counterevidenceClaimIds": [
+      "CL-AMCASE1-007",
+      "CL-AMCASE1-008",
+      "CL-AMCASE1-009"
+    ],
+    "falsifiers": [
+      {
+        "id": "FAL-AMCASE1-CONTRACT",
+        "metric": "Existing corporate contractual support",
+        "condition": "A company filing discloses a material amendment, termination or breach affecting an identified existing capacity-purchase agreement.",
+        "horizon": "Next two quarters after 2026-11-17",
+        "claimIds": [
+          "CL-AMCASE1-006",
+          "CL-AMCASE1-007"
+        ],
+        "rationale": {
+          "zh-CN": "具体存量合同保护范围发生实质变化，应重估对应项目兑现。",
+          "en": "A material change to identified existing support would require re-underwriting the affected project."
+        }
+      },
+      {
+        "id": "FAL-AMCASE1-FUNDING",
+        "metric": "Customer cash, financing closing and project delivery",
+        "condition": "Expected customer cash or project financing is delayed or materially less favorable than described, alternative funding is insufficient, and the affected project misses its delivery schedule.",
+        "horizon": "Next two quarters after 2026-11-17",
+        "claimIds": [
+          "CL-AMCASE1-006",
+          "CL-AMCASE1-009"
+        ],
+        "rationale": {
+          "zh-CN": "资金偏离计划并传导至交付，削弱现有融资路径足以支撑扩张的判断。",
+          "en": "Funding shortfalls that reach delivery weaken the view that the proposed financing path can support expansion."
+        }
+      },
+      {
+        "id": "FAL-AMCASE1-EASING",
+        "metric": "Financing execution without additional parent capital",
+        "condition": "Customer funding and project financing close as planned, commissioning continues, and parent-capital needs do not materially increase.",
+        "horizon": "Next two quarters after 2026-11-17",
+        "claimIds": [
+          "CL-AMCASE1-009"
+        ],
+        "rationale": {
+          "zh-CN": "融资与交付连续兑现，应降低对增量扩张受资金约束的权重。",
+          "en": "Repeated financing and delivery execution would reduce the weight placed on incremental funding constraints."
+        }
+      }
+    ],
+    "versions": [
+      {
+        "version": "1.0.0",
+        "date": "2026-11-17",
+        "diff": {
+          "zh-CN": "投资逻辑案例首版；截至 NVIDIA 下一次财报前公开材料，区分合同义务、资金落实、计费与股东现金。",
+          "en": "Initial investment-thesis case using public evidence available before NVIDIA’s next earnings release; separates contractual obligations, funding execution, billing and equity cash flow."
+        }
+      }
+    ],
+    "dataGaps": [
+      {
+        "zh-CN": "本案没有使用当前股价或一致预期估值，不能据此直接给出证券回报排序。",
+        "en": "This case does not use current share prices or consensus valuation and does not establish a security-return ranking."
+      },
+      {
+        "zh-CN": "未来预付款与项目融资仍需后续披露验证；完整股东现金模型还需项目级抵扣、偿债及储备账户余额。",
+        "en": "Future prepayments and project financing require subsequent confirmation; a complete equity-cash-flow model also requires project-level credit, debt-service and reserve balances."
+      }
+    ],
+    "renderings": {
+      "zh-CN": {
+        "locale": "zh-CN",
+        "siblingLocale": "en",
+        "title": "NVIDIA 换帅之后，CoreWeave 的扩张取决于融资兑现",
+        "question": "NVIDIA 换帅后，CoreWeave 与其托管商的合同如何转化为交付、现金与股东价值？",
+        "standfirst": "有客户合同与项目资金支撑的存量业务仍有兑现基础；新增产能取决于融资落地，已计费托管收入还需经过抵扣和偿债才能进入股东现金。",
+        "whyItMatters": "同一算力产业链上的公司承担不同付款义务、交付条件与现金优先级，订单和容量不能直接代替股东可支配现金。",
+        "consensus": "本案检验的研究争议是：管理层更替是否影响既有支持，以及已签约容量何时能够转成权益现金；这里不代表已测量的市场共识。",
+        "differentiated": "未来两个季度，合同与项目资金支撑的存量业务继续兑现，增量扩张和权益现金回收按融资落实与收款顺序分化。",
+        "valuation": "给可验证现金流更高权重，对依赖后续融资的远期容量要求更大折价；证券选择仍须结合买入价格。",
+        "update": "首版冻结于 2026 年 11 月 17 日 13:40（Asia/Shanghai），未使用随后发布的 NVIDIA 财报。",
+        "evidenceClaimIds": [
+          "CL-AMCASE1-001",
+          "CL-AMCASE1-002",
+          "CL-AMCASE1-003",
+          "CL-AMCASE1-004",
+          "CL-AMCASE1-005"
+        ],
+        "riskClaimIds": [
+          "CL-AMCASE1-007",
+          "CL-AMCASE1-008",
+          "CL-AMCASE1-009"
+        ],
+        "forwardTestIds": [
+          "FAL-AMCASE1-CONTRACT",
+          "FAL-AMCASE1-FUNDING",
+          "FAL-AMCASE1-EASING"
+        ],
+        "causalChain": [
+          {
+            "title": "公司合同",
+            "body": "区分有条件容量购买与未来可自行决定的资金支持。",
+            "claimIds": [
+              "CL-AMCASE1-001",
+              "CL-AMCASE1-007"
+            ]
+          },
+          {
+            "title": "项目融资与交付",
+            "body": "客户预付款和合同支持融资影响新容量投运；经营现金流尚不足以覆盖设备投入。",
+            "claimIds": [
+              "CL-AMCASE1-002",
+              "CL-AMCASE1-003",
+              "CL-AMCASE1-006"
+            ]
+          },
+          {
+            "title": "托管计费",
+            "body": "相关合约约82.2%已计费，但这与最终客户起账及股权现金不同。",
+            "claimIds": [
+              "CL-AMCASE1-004"
+            ]
+          },
+          {
+            "title": "现金分配",
+            "body": "租金抵扣结束和本金摊还触发相连，股东现金释放受偿债及储备顺序制约。",
+            "claimIds": [
+              "CL-AMCASE1-005",
+              "CL-AMCASE1-008"
+            ]
+          }
+        ]
+      },
+      "en": {
+        "locale": "en",
+        "siblingLocale": "zh-CN",
+        "title": "After NVIDIA’s leadership transition, CoreWeave’s expansion depends on funding execution",
+        "question": "After NVIDIA’s CEO transition, how do CoreWeave’s contracts and hosting relationships convert into delivery, cash and equity value?",
+        "standfirst": "Existing business supported by customer contracts and project funding should keep converting into delivery. Incremental capacity depends on financing execution, while billed hosting revenue must pass through credits and debt service before reaching equity.",
+        "whyItMatters": "Companies on the same compute chain face different payment obligations, delivery conditions and cash priorities. Orders and MW cannot substitute for cash available to shareholders.",
+        "consensus": "The research debate is whether leadership change alters existing support and when contracted capacity becomes equity cash. This is a question under examination, not a measured consensus claim.",
+        "differentiated": "Over the next two quarters, supported existing contracts should keep converting; incremental growth and equity cash recovery should diverge with funding execution and payment priority.",
+        "valuation": "Give greater weight to verifiable cash flows and require a larger discount for distant capacity dependent on future funding. Security selection still requires an entry-price assessment.",
+        "update": "Initial evidence cutoff: November 17, 2026, 13:40 Asia/Shanghai, before the subsequent NVIDIA earnings release.",
+        "evidenceClaimIds": [
+          "CL-AMCASE1-001",
+          "CL-AMCASE1-002",
+          "CL-AMCASE1-003",
+          "CL-AMCASE1-004",
+          "CL-AMCASE1-005"
+        ],
+        "riskClaimIds": [
+          "CL-AMCASE1-007",
+          "CL-AMCASE1-008",
+          "CL-AMCASE1-009"
+        ],
+        "forwardTestIds": [
+          "FAL-AMCASE1-CONTRACT",
+          "FAL-AMCASE1-FUNDING",
+          "FAL-AMCASE1-EASING"
+        ],
+        "causalChain": [
+          {
+            "title": "Corporate contracts",
+            "body": "Separate conditional capacity purchases from discretionary future financial support.",
+            "claimIds": [
+              "CL-AMCASE1-001",
+              "CL-AMCASE1-007"
+            ]
+          },
+          {
+            "title": "Project funding and delivery",
+            "body": "Customer prepayments and contract-backed financing affect commissioning; operating cash flow does not yet cover cash equipment purchases.",
+            "claimIds": [
+              "CL-AMCASE1-002",
+              "CL-AMCASE1-003",
+              "CL-AMCASE1-006"
+            ]
+          },
+          {
+            "title": "Hosting billing",
+            "body": "Approximately 82.2% of the relevant contract book is billing, distinct from end-customer billing or equity cash.",
+            "claimIds": [
+              "CL-AMCASE1-004"
+            ]
+          },
+          {
+            "title": "Cash distribution",
+            "body": "Credit exhaustion connects to principal-amortization triggers, with debt service and reserves constraining equity cash release.",
+            "claimIds": [
+              "CL-AMCASE1-005",
+              "CL-AMCASE1-008"
+            ]
+          }
+        ]
+      }
+    }
   }
 ]

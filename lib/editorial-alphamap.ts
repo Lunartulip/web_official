@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 
 export const editorialAlphaMapSlugs = [
+  "ai-infrastructure-cash-flow-first-case-2026-11",
   "the-projection-is-part-of-the-signal-001",
   "incremental-network-test-001",
   "finllm-kg-to-tradable-quant-factors-000",
