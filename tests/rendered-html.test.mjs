@@ -607,6 +607,10 @@ test("publishes AlphaMap Whitepaper #000 as the FinLLM-KG strategy prologue", ()
   }
   assert.match(alphaMapWhitepaperSource, /"@type":"Article"/);
   assert.match(alphaMapWhitepaperSource, /#whitepaper-series/);
+  assert.match(alphaMapWhitepaperSource, /class="report-showcase"/);
+  assert.match(alphaMapWhitepaperSource, /AlphaMap_Whitepaper_000_page_02\.webp/);
+  assert.match(alphaMapWhitepaperSource, /class="report-reader-details"/);
+  assert.match(alphaMapWhitepaperSource, /LunarTulip_AlphaMap_Whitepaper_000_2026_zh\.pdf/);
   assert.match(alphaMapWhitepaperSource, /rel="canonical" href="https:\/\/lunartuliplab\.com\/alphamap\/finllm-kg-to-tradable-quant-factors-000"/);
   assert.doesNotMatch(alphaMapWhitepaperSource, /desk\.lunartuliplab\.com|\/external\/|app\.notion\.com/i);
 });
