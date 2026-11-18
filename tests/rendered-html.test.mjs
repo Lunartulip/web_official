@@ -328,12 +328,20 @@ test("publishes the first AlphaMap-powered industry case inside the Deep Dive se
     assert.match(html, /href="\/(?:en\/)?deep-dive">Deep Dive<\/a>/);
     assert.match(html, /href="\/(?:en\/)?alphamap">AlphaMap<\/a>/);
     assert.match(html, /AlphaMap_First_Case_Publication_Pack_20261118_v1\.4\.zip/);
+    assert.match(html, /class="report-showcase"/);
+    assert.match(html, /class="report-preview-window"/);
+    assert.match(html, /class="report-reader-details"/);
+    for (const page of ["02", "08", "16"]) assert.match(html, new RegExp(`LunarTulip_Research_01_page_${page}\\.webp`));
+    assert.match(html, /class="report-viewer" src="\/alphamap\/first-case-20261117\/LunarTulip_Research_01_AI_Infrastructure_v1\.4_zh\.pdf#view=FitH"/);
+    assert.match(html, /LunarTulip_Research_01_AI_Infrastructure_v1\.4_cover\.webp/);
     assert.doesNotMatch(html, /\/alphamap\/ai-infrastructure-cash-flow-first-case-2026-11/);
     assert.doesNotMatch(html, /desk\.lunartuliplab\.com|\/external\//i);
   }
 
   assert.match(alphaMapIndustryCaseCn, new RegExp(`rel="canonical" href="https://lunartuliplab\\.com/deep-dive/${alphaMapIndustryCaseSlug}"`));
   assert.match(alphaMapIndustryCaseEn, new RegExp(`rel="canonical" href="https://lunartuliplab\\.com/en/deep-dive/${alphaMapIndustryCaseSlug}"`));
+  assert.match(alphaMapIndustryCaseEn, /<div class="lang-en"><header class="hero">/);
+  assert.match(alphaMapIndustryCaseEn, /Read the full industry report/);
   for (const term of ["23.9%", "约75%", "CRWV", "CORZ", "HBM"]) {
     assert.match(alphaMapIndustryCaseCn, new RegExp(term));
   }
