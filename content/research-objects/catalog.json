@@ -6230,7 +6230,7 @@
     ]
   },
   {
-    "id": "RO-THEME-AI-INFRA-CASHFLOW-001",
+    "id": "RO-ALPHAMAP-CASE-001",
     "slug": "ai-infrastructure-cash-flow-first-case-2026-11",
     "kind": "theme-study",
     "tickers": [
@@ -6249,8 +6249,8 @@
       "000660.KS"
     ],
     "publishedAt": "2026-11-17",
-    "asOf": "2026-11-17",
-    "version": "1.3.0",
+    "asOf": "2026-11-18",
+    "version": "1.4.0",
     "sourceLabel": "LunarTulip Research industry and company deep dive · AlphaMap-powered AI infrastructure cash-flow transmission case",
     "claims": [
       {
@@ -6281,12 +6281,12 @@
         "id": "CL-AICF-003",
         "type": "Inference",
         "text": {
-          "zh-CN": "既有合同与已投运容量支持近期业务延续；需要重估的是尚未筹足资金、仍依赖追加支持的远期项目。",
-          "en": "Existing contracts and operating capacity support near-term continuity; the projects requiring reassessment are farther-dated expansions that remain underfunded and dependent on additional support."
+          "zh-CN": "11月18日新指引支持NVIDIA近端交付增长；远期最需要重估的是筹资中的Neocloud扩张及其托管起租，CPO采用改变光通信器件的增长分配。",
+          "en": "The 18 November guidance supports near-term NVIDIA delivery growth; farther-dated Neocloud expansion and hosting commencement require funding scrutiny, while CPO adoption reallocates optical-component growth."
         },
         "evidenceIds": [
           "EV-AICF-REPORT",
-          "EV-AICF-NVDA"
+          "EV-AICF-NVDA-Q3"
         ]
       },
       {
@@ -6332,14 +6332,14 @@
         "source": {
           "publisher": "LunarTulip Research",
           "url": "https://lunartuliplab.com/deep-dive/ai-infrastructure-cash-flow-first-case-2026-11",
-          "document": "Bilingual industry and company deep dive · version 1.3.0"
+          "document": "Bilingual industry and company deep dive · version 1.4.0"
         },
-        "sourceDate": "2026-11-17",
-        "dataAsOf": "2026-11-17",
-        "calculation": "The report reconciles AlphaMap relationship paths with 49 cited public sources and a frozen device, financing and HBM scenario model.",
+        "sourceDate": "2026-11-18",
+        "dataAsOf": "2026-11-18",
+        "calculation": "The report reconciles AlphaMap relationship paths with 55 cited public sources and a frozen device, financing and HBM scenario model; the 18 November earnings update adds guidance, supply commitments and CPO evidence.",
         "confidence": "high",
         "counterevidence": "The relationship map does not establish return correlation or event probability, and several future financing, lease-commencement and procurement outcomes remain conditional.",
-        "lastVerified": "2026-11-17",
+        "lastVerified": "2026-11-18",
         "role": "primary"
       },
       {
@@ -6372,6 +6372,22 @@
         "confidence": "high",
         "counterevidence": "The statement addresses continuity of existing commitments and the product roadmap; it does not promise discretionary new support for every future customer expansion.",
         "lastVerified": "2026-11-17",
+        "role": "supporting"
+      },
+      {
+        "id": "EV-AICF-NVDA-Q3",
+        "title": "NVIDIA Q3 FY2027 financial results",
+        "source": {
+          "publisher": "NVIDIA",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+          "document": "Quarterly results and fourth-quarter guidance"
+        },
+        "sourceDate": "2026-11-17",
+        "dataAsOf": "2026-11-18",
+        "calculation": "The report compares Q3 revenue of $115.8 billion with Q4 guidance midpoint of $130.0 billion and keeps the additional-week caveat beside the growth calculation.",
+        "confidence": "high",
+        "counterevidence": "Guidance is management expectation and the fourth quarter includes an additional week.",
+        "lastVerified": "2026-11-18",
         "role": "supporting"
       }
     ],
@@ -6532,6 +6548,14 @@
           "zh-CN": "发布双语官网版，接通 AlphaMap 关系数据、公开证据、公司现金流与可观察更新条件。",
           "en": "Published the bilingual web edition linking AlphaMap relationships, public evidence, company cash flows and observable update conditions."
         }
+      },
+      {
+        "version": "1.4.0",
+        "date": "2026-11-18",
+        "diff": {
+          "zh-CN": "首个换帅后业绩更新：补入新指引、客户融资生效条件、供应链承诺与CPO生产部署，并以55项来源复核。",
+          "en": "First post-transition earnings update: guidance, customer-financing conditions, supplier commitments and production CPO, reconciled against 55 cited sources."
+        }
       }
     ],
     "renderings": {
@@ -6540,12 +6564,12 @@
         "siblingLocale": "en",
         "title": "NVIDIA换帅之后，AI产业链哪些增长预期需要重估？",
         "question": "领导层变化会先影响哪些未获充分融资的扩张，并如何传导到设备采购、HBM需求和托管回款？",
-        "standfirst": "以 AlphaMap 的客户、供货与信用关系为起点，结合 49 项公开来源和冻结模型，区分已有合同支撑的近期业务与仍待融资交割的远期增长。",
+        "standfirst": "以 AlphaMap 的客户、供货与信用关系为起点，结合 55 项公开来源和新财报，判断近端交付、远期筹资中的扩张与CPO器件价值。",
         "whyItMatters": "这是一份消费 AlphaMap 关系数据完成的产业投资研究：图提供跨公司路径，合同、财务和起租条件决定路径是否成立。",
-        "consensus": "NVIDIA 的领导层变化会统一削弱依赖其生态的 AI 基础设施扩张。",
-        "differentiated": "冲击需要逐份合同拆解。既有容量采购、未来担保、客户预付款和替代融资的触发条件不同，传导速度也不同。",
+        "consensus": "领导层交接后，市场需要重新评估既有合同、远期客户融资与供应链扩张的不同兑现时点。",
+        "differentiated": "新指引支持近端交付增长。远期Neocloud扩张按资金到账、设备付款与起租时点判断；CPO使光通信增长在不同器件之间重新分配。",
         "valuation": "报告采用现金流覆盖、融资到账和采购提前量情景，没有给出目标价或未经校准的事件概率。",
-        "update": "v1.3.0 为首个双语官网版，Research Object ID 为 RO-THEME-AI-INFRA-CASHFLOW-001。",
+        "update": "v1.4.0 补入11月18日财报与55项来源，Research Object ID 为 RO-ALPHAMAP-CASE-001。",
         "evidenceClaimIds": [
           "CL-AICF-001",
           "CL-AICF-002",
@@ -6598,12 +6622,12 @@
         "siblingLocale": "zh-CN",
         "title": "After NVIDIA’s Leadership Transition, Which AI Growth Expectations Need Reassessment?",
         "question": "Which underfunded expansions would a leadership transition affect first, and how would that travel into equipment procurement, HBM demand and hosting cash flows?",
-        "standfirst": "Starting with AlphaMap customer, supply and credit relationships, the report combines 49 public sources with a frozen model to separate near-term business supported by existing contracts from farther-dated growth awaiting financing.",
+        "standfirst": "Starting with AlphaMap customer, supply and credit relationships, the report combines 55 public sources with the new earnings release to assess near-term delivery, farther-dated funding and CPO component value.",
         "whyItMatters": "This industry investment study consumes AlphaMap relationship data: the graph supplies cross-company paths, while contracts, financials and lease conditions determine whether each path holds.",
-        "consensus": "NVIDIA's leadership transition will weaken AI infrastructure expansion across its ecosystem in a uniform way.",
-        "differentiated": "The shock requires contract-by-contract analysis. Existing capacity purchases, future guarantees, customer advances and replacement financing carry different triggers and transmission speeds.",
+        "consensus": "After the leadership transition, investors need to reassess the distinct realization dates of existing contracts, future customer funding and supplier expansion.",
+        "differentiated": "New guidance supports near-term delivery growth. Farther-dated Neocloud expansion turns on funding, equipment payments and lease commencement; CPO reallocates optical-component growth.",
         "valuation": "The report uses cash-flow coverage, funding-timing and procurement lead-time scenarios. It publishes neither a price target nor an uncalibrated event probability.",
-        "update": "Version 1.3.0 is the first bilingual web edition under Research Object RO-THEME-AI-INFRA-CASHFLOW-001.",
+        "update": "Version 1.4.0 incorporates the 18 November earnings update and 55 cited sources under Research Object RO-ALPHAMAP-CASE-001.",
         "evidenceClaimIds": [
           "CL-AICF-001",
           "CL-AICF-002",
