@@ -1,0 +1,241 @@
+{
+  "as_of": "2026-11-17",
+  "sources": {
+    "S1": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+    "S2": "https://www.sec.gov/Archives/edgar/data/1769628/000176962825000047/crwv-20250909.htm",
+    "S3": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/crwv-20260930.htm",
+    "S4": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/",
+    "S5": "https://s205.q4cdn.com/133937190/files/content_files/CoreWeave-3Q26-Transcript-_1_.pdf",
+    "S6": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000028/q3fy26earningsdeckvfinal.htm",
+    "S7": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000030/core-20260930.htm",
+    "S8": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001193125-26-208905/d47435dex41.htm"
+  },
+  "data": [
+    {
+      "metric": "CRWV_CFO",
+      "value": 5.638,
+      "unit": "USD_bn",
+      "period": "9M ended 2026-09-30",
+      "status": "reported",
+      "source": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/crwv-20260930.htm",
+      "definition": "Operating cash flow including working capital changes"
+    },
+    {
+      "metric": "CRWV_cash_ppe",
+      "value": 23.558,
+      "unit": "USD_bn",
+      "period": "9M ended 2026-09-30",
+      "status": "reported",
+      "source": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/crwv-20260930.htm",
+      "definition": "Cash purchase of PP&E including capitalized internal-use software; positive spend"
+    },
+    {
+      "metric": "CRWV_CFO_less_cash_ppe",
+      "value": -17.92,
+      "unit": "USD_bn",
+      "period": "9M ended 2026-09-30",
+      "status": "derived",
+      "source": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/crwv-20260930.htm",
+      "definition": "5.638 - 23.558; historical post-PPE cash shortfall, not a present unfunded financing gap"
+    },
+    {
+      "metric": "CRWV_net_investing",
+      "value": -24.71,
+      "unit": "USD_bn",
+      "period": "9M ended 2026-09-30",
+      "status": "reported",
+      "source": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/crwv-20260930.htm",
+      "definition": "Includes all investing flows, including PP&E"
+    },
+    {
+      "metric": "CRWV_net_financing",
+      "value": 21.346,
+      "unit": "USD_bn",
+      "period": "9M ended 2026-09-30",
+      "status": "reported",
+      "source": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/crwv-20260930.htm",
+      "definition": "Net financing cash already raised, after debt repayments and other financing flows"
+    },
+    {
+      "metric": "CRWV_change_cash_including_restricted",
+      "value": 2.274,
+      "unit": "USD_bn",
+      "period": "9M ended 2026-09-30",
+      "status": "reported_and_reconciled",
+      "source": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/crwv-20260930.htm",
+      "definition": "5.638 - 24.710 + 21.346"
+    },
+    {
+      "metric": "CRWV_CFO_to_cash_ppe",
+      "value": 23.932422107139825,
+      "unit": "percent",
+      "period": "9M ended 2026-09-30",
+      "status": "derived",
+      "source": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/crwv-20260930.htm",
+      "definition": "Cash flow coverage, not pure internally generated profit"
+    },
+    {
+      "metric": "CORZ_CRWV_leased",
+      "value": 590,
+      "unit": "MW_critical_IT",
+      "period": "as of 2026-11-05",
+      "status": "reported_approximate",
+      "source": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000028/q3fy26earningsdeckvfinal.htm",
+      "definition": "Only CORZ CoreWeave contract book, not total company"
+    },
+    {
+      "metric": "CORZ_CRWV_billing",
+      "value": 485,
+      "unit": "MW_critical_IT",
+      "period": "as of 2026-11-05",
+      "status": "reported_approximate",
+      "source": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000028/q3fy26earningsdeckvfinal.htm",
+      "definition": "Actively billing, not necessarily CRWV end-customer billing"
+    },
+    {
+      "metric": "CORZ_CRWV_not_yet_billing",
+      "value": 105,
+      "unit": "MW_critical_IT",
+      "period": "as of 2026-11-05",
+      "status": "derived_approximate",
+      "source": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000028/q3fy26earningsdeckvfinal.htm",
+      "definition": "590 - 485; not automatically unbuilt/undelivered"
+    },
+    {
+      "metric": "CORZ_CRWV_billing_share",
+      "value": 82.20338983050847,
+      "unit": "percent",
+      "period": "as of 2026-11-05",
+      "status": "derived_approximate",
+      "source": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000028/q3fy26earningsdeckvfinal.htm",
+      "definition": "Use about82% to respect input approximation"
+    },
+    {
+      "metric": "CORZ_original_secured_notes_principal",
+      "value": 3.3,
+      "unit": "USD_bn",
+      "period": "issued 2026-05-06",
+      "status": "reported",
+      "source": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000030/core-20260930.htm",
+      "definition": "Original face value of 7.75% senior secured notes, not carrying value"
+    },
+    {
+      "metric": "CORZ_initial_annual_amortization_pct",
+      "value": 11.5,
+      "unit": "percent",
+      "period": "after First Installment Payment Date",
+      "status": "contractual_conditional",
+      "source": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000030/core-20260930.htm",
+      "definition": "Rate applied to original principal; initial schedule"
+    },
+    {
+      "metric": "CORZ_initial_annual_principal_amortization",
+      "value": 379.5,
+      "unit": "USD_m",
+      "period": "after First Installment Payment Date",
+      "status": "derived_conditional",
+      "source": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000030/core-20260930.htm",
+      "definition": "3300 x 11.50%; excludes interest, early redemption or other changes"
+    },
+    {
+      "metric": "CORZ_initial_semiannual_principal_amortization",
+      "value": 189.75,
+      "unit": "USD_m",
+      "period": "after First Installment Payment Date",
+      "status": "derived_conditional",
+      "source": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000030/core-20260930.htm",
+      "definition": "3300 x 11.50% / 2; excludes interest"
+    },
+    {
+      "metric": "CORZ_annual_coupon_before_amortization",
+      "value": 255.75,
+      "unit": "USD_m",
+      "period": "full year before principal amortization",
+      "status": "derived_illustrative",
+      "source": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000030/core-20260930.htm",
+      "definition": "3300 x 7.75%; interest decreases after principal reductions"
+    },
+    {
+      "metric": "CRWV_expected_customer_prepaid_deposits",
+      "value": 9,
+      "unit": "USD_bn",
+      "period": "next three months from 2026-11-10",
+      "status": "management_expectation",
+      "source": "https://s205.q4cdn.com/133937190/files/content_files/CoreWeave-3Q26-Transcript-_1_.pdf",
+      "definition": "Future inflow, not cash already received, not additive to same-period CFO"
+    }
+  ],
+  "debt_cash_schedule": {
+    "as_of": "2026-11-17",
+    "assumptions": [
+      "First installment November 15 2029, same contingent timing assumed in Q3 2026 debt maturity table",
+      "No prepayment, optional redemption, additional notes, lease termination deferral, refinancing or other modification",
+      "Coupon on beginning-of-half-year principal; annual sums; 2027-2030 regular coupon periods, 2031 May15 maturity",
+      "Debt cash obligations only, not a company cash flow or solvency forecast"
+    ],
+    "sources": [
+      "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001193125-26-208905/d47435dex41.htm",
+      "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000030/core-20260930.htm"
+    ],
+    "rows": [
+      {
+        "year": 2027,
+        "beginning_principal_usdm": 3300.0,
+        "cash_coupon_usdm": 255.75,
+        "scheduled_principal_usdm": 0,
+        "cash_debt_service_usdm": 255.75,
+        "ending_principal_usdm": 3300.0
+      },
+      {
+        "year": 2028,
+        "beginning_principal_usdm": 3300.0,
+        "cash_coupon_usdm": 255.75,
+        "scheduled_principal_usdm": 0,
+        "cash_debt_service_usdm": 255.75,
+        "ending_principal_usdm": 3300.0
+      },
+      {
+        "year": 2029,
+        "beginning_principal_usdm": 3300.0,
+        "cash_coupon_usdm": 255.75,
+        "scheduled_principal_usdm": 189.75,
+        "cash_debt_service_usdm": 445.5,
+        "ending_principal_usdm": 3110.25
+      },
+      {
+        "year": 2030,
+        "beginning_principal_usdm": 3110.25,
+        "cash_coupon_usdm": 233.6915625,
+        "scheduled_principal_usdm": 379.5,
+        "cash_debt_service_usdm": 613.1915625,
+        "ending_principal_usdm": 2730.75
+      },
+      {
+        "year": 2031,
+        "beginning_principal_usdm": 2730.75,
+        "cash_coupon_usdm": 105.8165625,
+        "scheduled_principal_usdm": 2730.75,
+        "cash_debt_service_usdm": 2836.5665625,
+        "ending_principal_usdm": 0
+      }
+    ],
+    "normalized_credit_example": {
+      "gross_eligible_contractual_monthly_fee": 100,
+      "credit_rate_assumption": 0.5,
+      "credit_applied_while_sufficient_balance": 50,
+      "current_cash_receipt_before_expenses_debt": 50,
+      "post_credit_cash_receipt_before_expenses_debt": 100,
+      "limitations": "Contract mechanism illustration at maximum 50% monthly credit, not average GAAP revenue, not observed all-portfolio cash conversion."
+    }
+  },
+  "cash_flow_check": {
+    "beginning_cash_including_restricted_USD_bn": 4.13,
+    "CFO": 5.638,
+    "investing": -24.71,
+    "financing": 21.346,
+    "change": 2.274,
+    "ending_cash_including_restricted_USD_bn": 6.404,
+    "independent_reconciliation_pass": true
+  },
+  "scope": "Public financial-data calculations; no private AlphaMap source records included."
+}

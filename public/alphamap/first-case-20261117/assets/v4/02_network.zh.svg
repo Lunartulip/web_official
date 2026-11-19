@@ -1,0 +1,283 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1609.0 885.0" role="img" aria-label="共同客户、不同支持方与尚未起租的扩张"><rect width="100%" height="100%" fill="#f6f3eb"/><g font-family="Noto Sans CJK SC,Arial,sans-serif" fill="#20332d"><text x="38" y="30" font-size="14" fill="#64716a" font-weight="700">LUNARTULIP RESEARCH / 01</text><text x="38" y="73" font-size="27" font-weight="700">共同客户、不同支持方与尚未起租的扩张</text><text x="38" y="107" font-size="15" fill="#64716a">实线：AlphaMap既有关系   虚线：本轮公开补证</text></g><g transform="translate(0,145)"><g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(36 609)">
+<title>G</title>
+<polygon fill="#f6f3eb" stroke="transparent" points="-36,36 -36,-609 1573,-609 1573,36 -36,36"/>
+<!-- AMD&#45;&gt;Core Scientific -->
+<g id="edge26" class="edge">
+<title>AMD&#45;&gt;Core Scientific</title>
+<path fill="none" stroke="#ad7b38" stroke-width="1.5" stroke-dasharray="5,2" d="M118.87,-269.08C86.02,-251.47 38.5,-226 38.5,-226 38.5,-226 38.5,-213 38.5,-213 38.5,-213 48.74,-193.97 57.63,-177.43"/>
+<polygon fill="#ad7b38" stroke="#ad7b38" stroke-width="1.5" points="59.91,-178.36 61.07,-171.03 55.6,-176.03 59.91,-178.36"/>
+<text text-anchor="middle" x="101" y="-216.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#ad7b38">仅152MW租约条件支持</text>
+</g>
+<!-- Akela&#45;&gt;Fluidstack -->
+<g id="edge12" class="edge">
+<title>Akela&#45;&gt;Fluidstack</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" d="M1132.42,-267.97C1153.36,-250.42 1182.5,-226 1182.5,-226 1182.5,-226 1182.5,-213 1182.5,-213 1182.5,-213 1084.34,-187.04 1017.69,-169.42"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="1017.93,-166.95 1010.54,-167.53 1016.68,-171.68 1017.93,-166.95"/>
+<text text-anchor="middle" x="1207" y="-216.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">项目租约</text>
+</g>
+<!-- Applied Digital&#45;&gt;CoreWeave -->
+<g id="edge10" class="edge">
+<title>Applied Digital&#45;&gt;CoreWeave</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" d="M350.85,-171.18C367.47,-211.14 406.5,-305 406.5,-305 406.5,-305 480.5,-360 480.5,-360 480.5,-360 568.91,-384.35 632.61,-401.9"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="632.07,-404.29 639.47,-403.79 633.37,-399.57 632.07,-404.29"/>
+<text text-anchor="middle" x="431" y="-283.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">项目托管</text>
+</g>
+<!-- Broadcom&#45;&gt;Financing SPV -->
+<g id="edge21" class="edge">
+<title>Broadcom&#45;&gt;Financing SPV</title>
+<path fill="none" stroke="#ad7b38" stroke-width="1.5" stroke-dasharray="5,2" d="M1438.42,-305.03C1393.29,-322.58 1330.5,-347 1330.5,-347 1330.5,-347 1303.41,-375.46 1283.18,-396.72"/>
+<polygon fill="#ad7b38" stroke="#ad7b38" stroke-width="1.5" points="1281.25,-395.19 1278.2,-401.95 1284.8,-398.57 1281.25,-395.19"/>
+<text text-anchor="middle" x="1385" y="-350.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#ad7b38">一顺位等额残值支持</text>
+</g>
+<!-- Broadcom&#45;&gt;Financing SPV -->
+<g id="edge22" class="edge">
+<title>Broadcom&#45;&gt;Financing SPV</title>
+<path fill="none" stroke="#52748a" stroke-width="1.5" stroke-dasharray="5,2" d="M1474.54,-305.05C1463.59,-326.51 1446.5,-360 1446.5,-360 1446.5,-360 1370.14,-384.56 1315.54,-402.12"/>
+<polygon fill="#52748a" stroke="#52748a" stroke-width="1.5" points="1314.58,-399.86 1308.66,-404.33 1316.08,-404.52 1314.58,-399.86"/>
+<text text-anchor="middle" x="1494.5" y="-350.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#52748a">XPU与网络设备</text>
+</g>
+<!-- Core Scientific&#45;&gt;AMD -->
+<g id="edge24" class="edge">
+<title>Core Scientific&#45;&gt;AMD</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" stroke-dasharray="5,2" d="M101.14,-171.03C131.82,-188.58 174.5,-213 174.5,-213 174.5,-213 174.5,-226 174.5,-226 174.5,-226 166.64,-244.7 159.74,-261.13"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="157.32,-260.57 156.87,-267.97 161.84,-262.47 157.32,-260.57"/>
+<text text-anchor="middle" x="243" y="-216.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">377MW直接承租／待起租</text>
+</g>
+<!-- Core Scientific&#45;&gt;CoreWeave -->
+<g id="edge16" class="edge">
+<title>Core Scientific&#45;&gt;CoreWeave</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" stroke-dasharray="5,2" d="M141.03,-170.15C215.58,-187.76 322.5,-213 322.5,-213 322.5,-213 462.5,-268 462.5,-268 462.5,-268 598.55,-356.09 663.18,-397.92"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="661.99,-400.08 669.2,-401.82 664.65,-395.96 661.99,-400.08"/>
+<text text-anchor="middle" x="541" y="-283.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">项目托管</text>
+</g>
+<!-- Core Scientific&#45;&gt;Undisclosed Neocloud -->
+<g id="edge25" class="edge">
+<title>Core Scientific&#45;&gt;Undisclosed Neocloud</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" stroke-dasharray="5,2" d="M141.25,-160.42C191.28,-165.31 249.5,-171 249.5,-171 249.5,-171 791.5,-213 791.5,-213 791.5,-213 997.5,-347 997.5,-347 997.5,-347 1132.5,-481 1132.5,-481 1132.5,-481 1132.5,-494 1132.5,-494 1132.5,-494 1113.95,-513.71 1098.2,-530.44"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="1096.01,-529.19 1093,-535.97 1099.58,-532.55 1096.01,-529.19"/>
+<text text-anchor="middle" x="1068" y="-350.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">152MW租约／待起租</text>
+</g>
+<!-- CoreWeave&#45;&gt;Microsoft -->
+<g id="edge6" class="edge">
+<title>CoreWeave&#45;&gt;Microsoft</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" d="M703.87,-439.03C711.24,-456.58 721.5,-481 721.5,-481 721.5,-481 721.5,-494 721.5,-494 721.5,-494 713.64,-512.7 706.74,-529.13"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="704.32,-528.57 703.87,-535.97 708.84,-530.47 704.32,-528.57"/>
+<text text-anchor="middle" x="746" y="-484.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">算力服务</text>
+</g>
+<!-- CoreWeave&#45;&gt;NVIDIA -->
+<!-- CoreWeave&#45;&gt;OpenAI -->
+<g id="edge7" class="edge">
+<title>CoreWeave&#45;&gt;OpenAI</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" d="M753.79,-431.43C776.58,-435.38 797.5,-439 797.5,-439 797.5,-439 1072.5,-481 1072.5,-481 1072.5,-481 1072.5,-494 1072.5,-494 1072.5,-494 990.29,-520.16 934.89,-537.79"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="933.86,-535.54 927.93,-540 935.35,-540.21 933.86,-535.54"/>
+<text text-anchor="middle" x="1097" y="-484.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">算力服务</text>
+</g>
+<!-- Financing SPV&#45;&gt;Anthropic -->
+<g id="edge23" class="edge">
+<title>Financing SPV&#45;&gt;Anthropic</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" stroke-dasharray="5,2" d="M1261.9,-439.1C1262.42,-462.12 1263.34,-502.57 1263.94,-528.69"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="1261.49,-529.03 1264.1,-535.97 1266.39,-528.92 1261.49,-529.03"/>
+<text text-anchor="middle" x="1288" y="-484.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">设备租赁</text>
+</g>
+<!-- Google&#45;&gt;Akela -->
+<g id="edge13" class="edge">
+<title>Google&#45;&gt;Akela</title>
+<path fill="none" stroke="#ad7b38" stroke-width="1.5" d="M1270.31,-286.5C1236.01,-286.5 1187.38,-286.5 1152.99,-286.5"/>
+<polygon fill="#ad7b38" stroke="#ad7b38" stroke-width="1.5" points="1152.88,-284.05 1145.88,-286.5 1152.88,-288.95 1152.88,-284.05"/>
+<text text-anchor="middle" x="1208" y="-292.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#ad7b38">条件信用支持</text>
+</g>
+<!-- IREN&#45;&gt;Microsoft -->
+<g id="edge9" class="edge">
+<title>IREN&#45;&gt;Microsoft</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" d="M835.31,-439.05C814.3,-460.51 781.5,-494 781.5,-494 781.5,-494 751.85,-514.75 727.58,-531.75"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="725.87,-529.95 721.54,-535.97 728.68,-533.96 725.87,-529.95"/>
+<text text-anchor="middle" x="830" y="-484.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">分批GPU服务</text>
+</g>
+<!-- IREN&#45;&gt;NVIDIA -->
+<g id="edge17" class="edge">
+<title>IREN&#45;&gt;NVIDIA</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" stroke-dasharray="5,2" d="M866.94,-401.97C881.39,-384.42 901.5,-360 901.5,-360 901.5,-360 901.5,-347 901.5,-347 901.5,-347 803.31,-318.5 742.84,-300.95"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="743.43,-298.57 736.03,-298.97 742.07,-303.28 743.43,-298.57"/>
+<text text-anchor="middle" x="944" y="-350.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">云服务客户合同</text>
+</g>
+<!-- Micron&#45;&gt;NVIDIA -->
+<g id="edge19" class="edge">
+<title>Micron&#45;&gt;NVIDIA</title>
+<path fill="none" stroke="#52748a" stroke-width="1.5" d="M563.03,-171.1C590.81,-194.91 640.34,-237.37 670.63,-263.32"/>
+<polygon fill="#52748a" stroke="#52748a" stroke-width="1.5" points="669.14,-265.28 676.05,-267.97 672.33,-261.56 669.14,-265.28"/>
+<text text-anchor="middle" x="649" y="-216.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#52748a">内存供应</text>
+</g>
+<!-- Microsoft&#45;&gt;CoreWeave -->
+<!-- NVIDIA&#45;&gt;CoreWeave -->
+<g id="edge5" class="edge">
+<title>NVIDIA&#45;&gt;CoreWeave</title>
+<path fill="none" stroke="#52748a" stroke-width="1.5" d="M703.87,-305.03C711.24,-322.58 721.5,-347 721.5,-347 721.5,-347 721.5,-360 721.5,-360 721.5,-360 713.64,-378.7 706.74,-395.13"/>
+<polygon fill="#52748a" stroke="#52748a" stroke-width="1.5" points="704.32,-394.57 703.87,-401.97 708.84,-396.47 704.32,-394.57"/>
+<text text-anchor="middle" x="746" y="-350.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#52748a">设备供应</text>
+</g>
+<!-- NVIDIA&#45;&gt;CoreWeave -->
+<g id="edge15" class="edge">
+<title>NVIDIA&#45;&gt;CoreWeave</title>
+<path fill="none" stroke="#ad7b38" stroke-width="1.5" stroke-dasharray="5,2" d="M721.54,-305.03C746.62,-322.58 781.5,-347 781.5,-347 781.5,-347 781.5,-360 781.5,-360 781.5,-360 751.85,-380.75 727.58,-397.75"/>
+<polygon fill="#ad7b38" stroke="#ad7b38" stroke-width="1.5" points="725.87,-395.95 721.54,-401.97 728.68,-399.96 725.87,-395.95"/>
+<text text-anchor="middle" x="836" y="-350.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#ad7b38">按条件购买剩余容量</text>
+</g>
+<!-- NVIDIA&#45;&gt;SK hynix -->
+<!-- Nebius&#45;&gt;Microsoft -->
+<g id="edge8" class="edge">
+<title>Nebius&#45;&gt;Microsoft</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" d="M958.6,-439.05C926.93,-460.51 877.5,-494 877.5,-494 877.5,-494 806.66,-517.29 753.62,-534.72"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="752.8,-532.41 746.92,-536.93 754.33,-537.07 752.8,-532.41"/>
+<text text-anchor="middle" x="932" y="-484.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">分批GPU服务</text>
+</g>
+<!-- SK hynix&#45;&gt;NVIDIA -->
+<g id="edge18" class="edge">
+<title>SK hynix&#45;&gt;NVIDIA</title>
+<path fill="none" stroke="#52748a" stroke-width="1.5" d="M706.81,-171.03C717.14,-188.58 731.5,-213 731.5,-213 731.5,-213 731.5,-226 731.5,-226 731.5,-226 720.31,-245.03 710.58,-261.57"/>
+<polygon fill="#52748a" stroke="#52748a" stroke-width="1.5" points="708.25,-260.69 706.81,-267.97 712.47,-263.18 708.25,-260.69"/>
+<text text-anchor="middle" x="756" y="-216.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#52748a">内存供应</text>
+</g>
+<!-- SK hynix&#45;&gt;TSMC -->
+<!-- SK hynix&#45;&gt;TSMC -->
+<g id="edge20" class="edge">
+<title>SK hynix&#45;&gt;TSMC</title>
+<path fill="none" stroke="#52748a" stroke-width="1.5" d="M706.81,-133.97C717.14,-116.42 731.5,-92 731.5,-92 731.5,-92 731.5,-79 731.5,-79 731.5,-79 720.31,-59.97 710.58,-43.43"/>
+<polygon fill="#52748a" stroke="#52748a" stroke-width="1.5" points="712.47,-41.82 706.81,-37.03 708.25,-44.31 712.47,-41.82"/>
+<text text-anchor="middle" x="772.5" y="-82.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#52748a">HBM4基底合作</text>
+</g>
+<!-- TeraWulf&#45;&gt;Akela -->
+<g id="edge11" class="edge">
+<title>TeraWulf&#45;&gt;Akela</title>
+<path fill="none" stroke="#8a8e84" stroke-width="1.5" d="M984.2,-37.01C1054.11,-84.64 1242.5,-213 1242.5,-213 1242.5,-213 1242.5,-226 1242.5,-226 1242.5,-226 1190.57,-249.59 1152.11,-267.06"/>
+<polygon fill="#8a8e84" stroke="#8a8e84" stroke-width="1.5" points="1150.94,-264.9 1145.58,-270.02 1152.96,-269.36 1150.94,-264.9"/>
+<text text-anchor="middle" x="1208" y="-149.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#8a8e84">间接子公司</text>
+</g>
+<!-- TeraWulf&#45;&gt;Google -->
+<g id="edge14" class="edge">
+<title>TeraWulf&#45;&gt;Google</title>
+<path fill="none" stroke="#8a8e84" stroke-width="1.5" d="M1003.01,-37.01C1084.53,-69.09 1249.5,-134 1249.5,-134 1249.5,-134 1284.11,-218.57 1301.61,-261.34"/>
+<polygon fill="#8a8e84" stroke="#8a8e84" stroke-width="1.5" points="1299.35,-262.27 1304.27,-267.82 1303.88,-260.42 1299.35,-262.27"/>
+<text text-anchor="middle" x="1289" y="-149.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#8a8e84">权证对价</text>
+</g>
+<!-- AMD -->
+<g id="node1" class="node">
+<title>AMD</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M168,-305C168,-305 131,-305 131,-305 125,-305 119,-299 119,-293 119,-293 119,-280 119,-280 119,-274 125,-268 131,-268 131,-268 168,-268 168,-268 174,-268 180,-274 180,-280 180,-280 180,-293 180,-293 180,-299 174,-305 168,-305"/>
+<text text-anchor="middle" x="149.5" y="-282.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">AMD</text>
+</g>
+<!-- Akela -->
+<g id="node2" class="node">
+<title>Akela</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M1133.5,-305C1133.5,-305 1089.5,-305 1089.5,-305 1083.5,-305 1077.5,-299 1077.5,-293 1077.5,-293 1077.5,-280 1077.5,-280 1077.5,-274 1083.5,-268 1089.5,-268 1089.5,-268 1133.5,-268 1133.5,-268 1139.5,-268 1145.5,-274 1145.5,-280 1145.5,-280 1145.5,-293 1145.5,-293 1145.5,-299 1139.5,-305 1133.5,-305"/>
+<text text-anchor="middle" x="1111.5" y="-282.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Akela</text>
+</g>
+<!-- Anthropic -->
+<g id="node3" class="node">
+<title>Anthropic</title>
+<path fill="#e3ecdf" stroke="#aab4a8" stroke-width="1.2" d="M1304.5,-573C1304.5,-573 1224.5,-573 1224.5,-573 1218.5,-573 1212.5,-567 1212.5,-561 1212.5,-561 1212.5,-548 1212.5,-548 1212.5,-542 1218.5,-536 1224.5,-536 1224.5,-536 1304.5,-536 1304.5,-536 1310.5,-536 1316.5,-542 1316.5,-548 1316.5,-548 1316.5,-561 1316.5,-561 1316.5,-567 1310.5,-573 1304.5,-573"/>
+<text text-anchor="middle" x="1264.5" y="-550.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Anthropic</text>
+</g>
+<!-- Applied Digital -->
+<g id="node4" class="node">
+<title>Applied Digital</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M401.5,-171C401.5,-171 285.5,-171 285.5,-171 279.5,-171 273.5,-165 273.5,-159 273.5,-159 273.5,-146 273.5,-146 273.5,-140 279.5,-134 285.5,-134 285.5,-134 401.5,-134 401.5,-134 407.5,-134 413.5,-140 413.5,-146 413.5,-146 413.5,-159 413.5,-159 413.5,-165 407.5,-171 401.5,-171"/>
+<text text-anchor="middle" x="343.5" y="-148.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Applied Digital</text>
+</g>
+<!-- Broadcom -->
+<g id="node5" class="node">
+<title>Broadcom</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M1525,-305C1525,-305 1442,-305 1442,-305 1436,-305 1430,-299 1430,-293 1430,-293 1430,-280 1430,-280 1430,-274 1436,-268 1442,-268 1442,-268 1525,-268 1525,-268 1531,-268 1537,-274 1537,-280 1537,-280 1537,-293 1537,-293 1537,-299 1531,-305 1525,-305"/>
+<text text-anchor="middle" x="1483.5" y="-282.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Broadcom</text>
+</g>
+<!-- Core Scientific -->
+<g id="node6" class="node">
+<title>Core Scientific</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M129,-171C129,-171 12,-171 12,-171 6,-171 0,-165 0,-159 0,-159 0,-146 0,-146 0,-140 6,-134 12,-134 12,-134 129,-134 129,-134 135,-134 141,-140 141,-146 141,-146 141,-159 141,-159 141,-165 135,-171 129,-171"/>
+<text text-anchor="middle" x="70.5" y="-148.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Core Scientific</text>
+</g>
+<!-- CoreWeave -->
+<g id="node7" class="node">
+<title>CoreWeave</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M741.5,-439C741.5,-439 651.5,-439 651.5,-439 645.5,-439 639.5,-433 639.5,-427 639.5,-427 639.5,-414 639.5,-414 639.5,-408 645.5,-402 651.5,-402 651.5,-402 741.5,-402 741.5,-402 747.5,-402 753.5,-408 753.5,-414 753.5,-414 753.5,-427 753.5,-427 753.5,-433 747.5,-439 741.5,-439"/>
+<text text-anchor="middle" x="696.5" y="-416.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">CoreWeave</text>
+</g>
+<!-- Financing SPV -->
+<g id="node8" class="node">
+<title>Financing SPV</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M1296.5,-439C1296.5,-439 1226.5,-439 1226.5,-439 1220.5,-439 1214.5,-433 1214.5,-427 1214.5,-427 1214.5,-414 1214.5,-414 1214.5,-408 1220.5,-402 1226.5,-402 1226.5,-402 1296.5,-402 1296.5,-402 1302.5,-402 1308.5,-408 1308.5,-414 1308.5,-414 1308.5,-427 1308.5,-427 1308.5,-433 1302.5,-439 1296.5,-439"/>
+<text text-anchor="middle" x="1261.5" y="-416.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">融资 SPV</text>
+</g>
+<!-- Fluidstack -->
+<g id="node9" class="node">
+<title>Fluidstack</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M998.5,-171C998.5,-171 916.5,-171 916.5,-171 910.5,-171 904.5,-165 904.5,-159 904.5,-159 904.5,-146 904.5,-146 904.5,-140 910.5,-134 916.5,-134 916.5,-134 998.5,-134 998.5,-134 1004.5,-134 1010.5,-140 1010.5,-146 1010.5,-146 1010.5,-159 1010.5,-159 1010.5,-165 1004.5,-171 998.5,-171"/>
+<text text-anchor="middle" x="957.5" y="-148.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Fluidstack</text>
+</g>
+<!-- Google -->
+<g id="node10" class="node">
+<title>Google</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M1340.5,-305C1340.5,-305 1282.5,-305 1282.5,-305 1276.5,-305 1270.5,-299 1270.5,-293 1270.5,-293 1270.5,-280 1270.5,-280 1270.5,-274 1276.5,-268 1282.5,-268 1282.5,-268 1340.5,-268 1340.5,-268 1346.5,-268 1352.5,-274 1352.5,-280 1352.5,-280 1352.5,-293 1352.5,-293 1352.5,-299 1346.5,-305 1340.5,-305"/>
+<text text-anchor="middle" x="1311.5" y="-282.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Google</text>
+</g>
+<!-- IREN -->
+<g id="node11" class="node">
+<title>IREN</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M871.5,-439C871.5,-439 833.5,-439 833.5,-439 827.5,-439 821.5,-433 821.5,-427 821.5,-427 821.5,-414 821.5,-414 821.5,-408 827.5,-402 833.5,-402 833.5,-402 871.5,-402 871.5,-402 877.5,-402 883.5,-408 883.5,-414 883.5,-414 883.5,-427 883.5,-427 883.5,-433 877.5,-439 871.5,-439"/>
+<text text-anchor="middle" x="852.5" y="-416.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">IREN</text>
+</g>
+<!-- Micron -->
+<g id="node12" class="node">
+<title>Micron</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M570,-171C570,-171 515,-171 515,-171 509,-171 503,-165 503,-159 503,-159 503,-146 503,-146 503,-140 509,-134 515,-134 515,-134 570,-134 570,-134 576,-134 582,-140 582,-146 582,-146 582,-159 582,-159 582,-165 576,-171 570,-171"/>
+<text text-anchor="middle" x="542.5" y="-148.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Micron</text>
+</g>
+<!-- Microsoft -->
+<g id="node13" class="node">
+<title>Microsoft</title>
+<path fill="#e3ecdf" stroke="#aab4a8" stroke-width="1.2" d="M734.5,-573C734.5,-573 658.5,-573 658.5,-573 652.5,-573 646.5,-567 646.5,-561 646.5,-561 646.5,-548 646.5,-548 646.5,-542 652.5,-536 658.5,-536 658.5,-536 734.5,-536 734.5,-536 740.5,-536 746.5,-542 746.5,-548 746.5,-548 746.5,-561 746.5,-561 746.5,-567 740.5,-573 734.5,-573"/>
+<text text-anchor="middle" x="696.5" y="-550.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Microsoft</text>
+</g>
+<!-- NVIDIA -->
+<g id="node14" class="node">
+<title>NVIDIA</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M724,-305C724,-305 669,-305 669,-305 663,-305 657,-299 657,-293 657,-293 657,-280 657,-280 657,-274 663,-268 669,-268 669,-268 724,-268 724,-268 730,-268 736,-274 736,-280 736,-280 736,-293 736,-293 736,-299 730,-305 724,-305"/>
+<text text-anchor="middle" x="696.5" y="-282.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">NVIDIA</text>
+</g>
+<!-- Nebius -->
+<g id="node15" class="node">
+<title>Nebius</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M1012.5,-439C1012.5,-439 956.5,-439 956.5,-439 950.5,-439 944.5,-433 944.5,-427 944.5,-427 944.5,-414 944.5,-414 944.5,-408 950.5,-402 956.5,-402 956.5,-402 1012.5,-402 1012.5,-402 1018.5,-402 1024.5,-408 1024.5,-414 1024.5,-414 1024.5,-427 1024.5,-427 1024.5,-433 1018.5,-439 1012.5,-439"/>
+<text text-anchor="middle" x="984.5" y="-416.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Nebius</text>
+</g>
+<!-- OpenAI -->
+<g id="node16" class="node">
+<title>OpenAI</title>
+<path fill="#e3ecdf" stroke="#aab4a8" stroke-width="1.2" d="M915.5,-573C915.5,-573 855.5,-573 855.5,-573 849.5,-573 843.5,-567 843.5,-561 843.5,-561 843.5,-548 843.5,-548 843.5,-542 849.5,-536 855.5,-536 855.5,-536 915.5,-536 915.5,-536 921.5,-536 927.5,-542 927.5,-548 927.5,-548 927.5,-561 927.5,-561 927.5,-567 921.5,-573 915.5,-573"/>
+<text text-anchor="middle" x="885.5" y="-550.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">OpenAI</text>
+</g>
+<!-- SK hynix -->
+<g id="node17" class="node">
+<title>SK hynix</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M731,-171C731,-171 662,-171 662,-171 656,-171 650,-165 650,-159 650,-159 650,-146 650,-146 650,-140 656,-134 662,-134 662,-134 731,-134 731,-134 737,-134 743,-140 743,-146 743,-146 743,-159 743,-159 743,-165 737,-171 731,-171"/>
+<text text-anchor="middle" x="696.5" y="-148.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">SK hynix</text>
+</g>
+<!-- TSMC -->
+<g id="node18" class="node">
+<title>TSMC</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M719,-37C719,-37 674,-37 674,-37 668,-37 662,-31 662,-25 662,-25 662,-12 662,-12 662,-6 668,0 674,0 674,0 719,0 719,0 725,0 731,-6 731,-12 731,-12 731,-25 731,-25 731,-31 725,-37 719,-37"/>
+<text text-anchor="middle" x="696.5" y="-14.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">TSMC</text>
+</g>
+<!-- TeraWulf -->
+<g id="node19" class="node">
+<title>TeraWulf</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M993.5,-37C993.5,-37 923.5,-37 923.5,-37 917.5,-37 911.5,-31 911.5,-25 911.5,-25 911.5,-12 911.5,-12 911.5,-6 917.5,0 923.5,0 923.5,0 993.5,0 993.5,0 999.5,0 1005.5,-6 1005.5,-12 1005.5,-12 1005.5,-25 1005.5,-25 1005.5,-31 999.5,-37 993.5,-37"/>
+<text text-anchor="middle" x="958.5" y="-14.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">TeraWulf</text>
+</g>
+<!-- Undisclosed Neocloud -->
+<g id="node20" class="node">
+<title>Undisclosed Neocloud</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M1141.5,-573C1141.5,-573 1011.5,-573 1011.5,-573 1005.5,-573 999.5,-567 999.5,-561 999.5,-561 999.5,-548 999.5,-548 999.5,-542 1005.5,-536 1011.5,-536 1011.5,-536 1141.5,-536 1141.5,-536 1147.5,-536 1153.5,-542 1153.5,-548 1153.5,-548 1153.5,-561 1153.5,-561 1153.5,-567 1147.5,-573 1141.5,-573"/>
+<text text-anchor="middle" x="1076.5" y="-550.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">未具名Neocloud</text>
+</g>
+</g>
+</g><line x1="38.0" x2="67.0" y1="820.0" y2="820.0" stroke="#315f4e" stroke-width="3"/><text x="76.0" y="825.0" font-family="Noto Sans CJK SC,Arial" font-size="15" fill="#20332d">算力 / 托管服务</text><line x1="574.3333333333334" x2="603.3333333333334" y1="820.0" y2="820.0" stroke="#52748a" stroke-width="3"/><text x="612.3333333333334" y="825.0" font-family="Noto Sans CJK SC,Arial" font-size="15" fill="#20332d">设备 / 内存 / 技术</text><line x1="1110.6666666666667" x2="1139.6666666666667" y1="820.0" y2="820.0" stroke="#ad7b38" stroke-width="3"/><text x="1148.6666666666667" y="825.0" font-family="Noto Sans CJK SC,Arial" font-size="15" fill="#20332d">条件资金支持</text><text x="38" y="862.0" font-family="Noto Sans CJK SC,Arial" font-size="13" fill="#64716a">箭头为关系方向；线宽不代表风险权重。已融资、可提款、到货与回款分别核对。</text></svg>

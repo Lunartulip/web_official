@@ -1,0 +1,10 @@
+Who pays for the next stage of AI infrastructure after NVIDIA’s leadership transition?
+
+NVIDIA guided to $130bn next quarter, while management raised its FY2028 revenue-growth outlook to 75%. We trace customer funding into equipment purchases and hosting cash flows, then examine how HBM inventory capital and CPO adoption change the supplier picture.
+
+Using AlphaMap relationships and original calculations, LunarTulip Research 01 compares current revenue concentration with future capacity, and shows why buyers’ financing calendars matter for distant orders.
+
+Read the complete research and reproduce the model:
+https://lunartuliplab.com/alphamap/ai-infrastructure-cash-flow-first-case-2026-11
+
+Research edition dated November 18, 2026. Publication remains in draft.

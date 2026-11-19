@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="489.6pt" viewBox="0 0 864 489.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-16T23:46:13.399407</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 489.6 
+L 864 489.6 
+L 864 0 
+L 0 0 
+z
+" style="fill: #f6f3eb"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 190.08 269.28 
+L 777.6 269.28 
+L 777.6 127.296 
+L 190.08 127.296 
+z
+" style="fill: #f6f3eb"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 190.08 173.808 
+L 483.84 173.808 
+L 483.84 133.749818 
+L 190.08 133.749818 
+z
+" clip-path="url(#p797d2ae54d)" style="fill: #315f4e"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 190.08 262.826182 
+L 777.6 262.826182 
+L 777.6 222.768 
+L 190.08 222.768 
+z
+" clip-path="url(#p797d2ae54d)" style="fill: #315f4e"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 483.84 173.808 
+L 777.6 173.808 
+L 777.6 133.749818 
+L 483.84 133.749818 
+z
+" clip-path="url(#p797d2ae54d)" style="fill: #c78a49"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'; text-anchor: end" x="186.58" y="158.554534" transform="rotate(-0 186.58 158.554534)">抵扣期间</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'; text-anchor: end" x="186.58" y="247.572716" transform="rotate(-0 186.58 247.572716)">抵扣结束后</text>
+     </g>
+    </g>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Noto Sans CJK JP'; text-anchor: middle; fill: #ffffff" x="336.96" y="157.276722" transform="rotate(-0 336.96 157.276722)">$50 实收</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Noto Sans CJK JP'; text-anchor: middle; fill: #ffffff" x="630.72" y="157.276722" transform="rotate(-0 630.72 157.276722)">$50 抵扣</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Noto Sans CJK JP'; text-anchor: middle; fill: #ffffff" x="483.84" y="246.294903" transform="rotate(-0 483.84 246.294903)">$100 实收</text>
+   </g>
+  </g>
+  <g id="text_6">
+   <text style="font-weight: 700; font-size: 21px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #20332d" x="51.84" y="43.685344" transform="rotate(-0 51.84 43.685344)">建设抵扣结束提高租金实收；资金使用仍受合同顺序约束</text>
+  </g>
+  <g id="text_7">
+   <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #64716a" x="51.84" y="104.227312" transform="rotate(-0 51.84 104.227312)">每100美元符合抵扣条件的合同月费 · 月费保持不变 · 按50%抵扣上限举例</text>
+  </g>
+  <g id="text_8">
+   <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #64716a" x="51.84" y="470.016" transform="rotate(-0 51.84 470.016)">LUNARTULIP RESEARCH  /  ALPHAMAP CASE 01</text>
+  </g>
+  <g id="text_9">
+   <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'; text-anchor: end; fill: #64716a" x="812.16" y="470.016" transform="rotate(-0 812.16 470.016)">17 NOV 2026</text>
+  </g>
+  <g id="text_10">
+   <text style="font-weight: 700; font-size: 14px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #20332d" x="51.84" y="337.824" transform="rotate(-0 51.84 337.824)">相关收款依次满足：经营支出 → 债务偿付及储备 → 契约允许的后续用途</text>
+  </g>
+  <g id="text_11">
+   <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #315f4e" x="51.84" y="376.992" transform="rotate(-0 51.84 376.992)">全部相关租约最终起租且全部抵扣耗尽后，满足时间条件才启动本金摊还。</text>
+  </g>
+  <g id="text_12">
+   <text style="font-size: 10.5px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #64716a" x="51.84" y="416.16" transform="rotate(-0 51.84 416.16)">机制示例，非公司平均回款率；不含电力代收代付、成本、债务支出及其他约束。</text>
+  </g>
+  <g id="text_13">
+   <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #64716a" x="51.84" y="440.64" transform="rotate(-0 51.84 440.64)">来源 / Source: Core Scientific Q3 2026 presentation; May 6, 2026 indenture §§4.23, 14.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p797d2ae54d">
+   <rect x="190.08" y="127.296" width="587.52" height="141.984"/>
+  </clipPath>
+ </defs>
+</svg>

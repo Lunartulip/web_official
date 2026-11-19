@@ -1,0 +1,438 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>AlphaMap First Case 研究冷审与原子修订</title><style>
+:root{--paper:#f6f3eb;--ink:#20332d;--muted:#64716a;--green:#315f4e;--line:#d9dbd1;--amber:#a76e32;--white:#fffdfa}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Helvetica Neue","Noto Sans CJK SC",Arial,sans-serif}a{color:var(--green);text-decoration-thickness:1px;text-underline-offset:3px}a:hover{color:var(--amber)}.top{padding:22px 5vw;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:18px}.brand{font-size:14px;font-weight:800;letter-spacing:.17em;text-decoration:none}.brand small{display:block;font-size:9px;font-weight:500;letter-spacing:.3em;margin-top:7px}.language{display:flex;gap:12px;align-items:center;font-size:13px}.language button{font:inherit;background:none;border:0;color:var(--muted);padding:9px;cursor:pointer}.language button[aria-pressed=true]{color:var(--ink);border-bottom:2px solid var(--green)}.wrap{max-width:1160px;margin:auto;padding:0 42px}.hero{padding:62px 0 40px;border-bottom:1px solid var(--line)}.eyebrow{font-size:12px;letter-spacing:.14em;color:var(--green);text-transform:uppercase;margin-bottom:20px}.hero h1{font-family:"Noto Serif CJK SC","Songti SC",Georgia,serif;font-weight:600;font-size:43px;line-height:1.35;max-width:1030px;margin:0 0 23px;letter-spacing:-.02em}.hero .meta{font-size:12px;color:var(--muted);line-height:1.8}.main-layout{display:flex;gap:52px;align-items:flex-start}.rail{width:175px;flex-shrink:0;position:sticky;top:26px;padding-top:35px}.rail a{display:block;text-decoration:none;font-size:12px;line-height:1.7;margin:0 0 15px;color:var(--muted)}.rail a:hover{color:var(--green)}.article{width:100%;min-width:0;max-width:800px;padding:30px 0 0}.article p{font-size:16px;line-height:1.96;margin:0 0 20px;text-wrap:pretty}.article .intro p:first-child{font-size:19px;line-height:1.9;color:#243e31}.article section{padding-top:25px;margin-top:12px}.article h2{font-family:"Noto Serif CJK SC","Songti SC",Georgia,serif;font-size:26px;line-height:1.5;margin:12px 0 23px;font-weight:650}.article h3{font-size:18px;line-height:1.6;margin:22px 0 14px}.article sup{font-size:10px;white-space:nowrap}.article sup a{text-decoration:none;margin:0 2px;color:var(--amber)}figure{margin:24px 0 30px;border:1px solid var(--line);background:var(--paper);padding:0;overflow:hidden;border-radius:4px}figure img,figure svg{width:100%;height:auto;display:block}figcaption{padding:13px 18px 16px;font-size:12px;line-height:1.65;color:var(--muted);border-top:1px solid var(--line)}.note{background:#eceee4;border-left:3px solid var(--green);padding:20px 23px;margin:24px 0}.note p:last-child{margin-bottom:0}.note p{font-size:14px}.comparison{overflow-x:auto;margin:24px 0}table{width:100%;border-collapse:collapse;font-size:13px;line-height:1.7}th{text-align:left;color:var(--green);font-weight:700;border-top:2px solid var(--green);background:#eceedf}td,th{padding:13px 12px;border-bottom:1px solid var(--line);vertical-align:top}td:first-child{font-weight:600}.sources{border-top:1px solid var(--line);padding-top:20px;margin-top:40px}.source{font-size:12px!important;line-height:1.8!important;overflow-wrap:anywhere}.source a{word-break:break-word}.reproduction{margin:24px 0;border:1px solid var(--line);padding:20px}.reproduction summary{cursor:pointer;font-size:14px;font-weight:700}.reproduction p{font-size:13px;margin-top:15px;line-height:1.8}.rangebox{margin:20px 0;padding:20px;background:var(--white)}.rangebox label{font-size:13px;font-weight:600;display:block;margin-bottom:12px}.rangebox input{width:100%;accent-color:var(--green)}.range-result{font-size:27px!important;font-weight:700;color:var(--green);margin:8px 0!important}.range-caption{font-size:12px!important;color:var(--muted)}.endmatter{margin-top:45px;padding:28px 0;border-top:1px solid var(--line)}.endmatter p{font-size:13px}.cta{display:inline-block;background:var(--green);color:white;text-decoration:none;padding:12px 18px;font-size:13px}.cta:hover{color:white;background:#224a39}.footer{margin-top:46px;padding:26px 5vw;border-top:1px solid var(--line);font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:20px}.graph{font-family:Arial,"Noto Sans CJK SC",sans-serif}.graph text{fill:var(--ink)}html[data-lang=zh] .lang-en,html[data-lang=en] .lang-zh{display:none}.download-note{font-size:11px;color:var(--muted)}.social-post{white-space:pre-wrap;font:15px/1.85 inherit;background:#fffdfa;border:1px solid var(--line);padding:24px}.copy{padding:9px 14px;background:var(--green);color:white;border:0;cursor:pointer;font:inherit;font-size:12px}.source-target:target{background:#e8eadc}
+@media(max-width:800px){.wrap{padding:0 22px}.hero{padding-top:38px}.hero h1{font-size:31px}.main-layout{display:block}.rail{position:static;width:auto;padding:20px 0 4px;display:flex;flex-wrap:wrap;gap:10px 18px;border-bottom:1px solid var(--line)}.rail a{margin:0;font-size:11px}.article{padding-top:24px}.article p{font-size:16px;line-height:1.9}.article .intro p:first-child{font-size:18px}.article h2{font-size:23px}.top{padding:18px 22px}.brand{font-size:12px}.brand small{font-size:8px}.footer{display:block;line-height:1.8}td,th{padding:10px 8px;min-width:95px}figcaption{padding:12px;font-size:11px}}@media print{.top,.rail,.language,.copy{display:none}.wrap{padding:0;max-width:none}.hero{padding:0 0 18px}.hero h1{font-size:26px}.main-layout{display:block}.article{max-width:none;padding-top:18px}.article p{font-size:10.5pt;line-height:1.7}.article .intro p:first-child{font-size:12pt}.article h2{font-size:17pt;break-after:avoid}figure{break-inside:avoid}.sources{break-before:auto}.reproduction{break-inside:auto}.rangebox{display:none}.footer{font-size:9px}table{font-size:9pt}.endmatter{break-inside:avoid}@page{size:A4;margin:18mm}}
+
+.lang-en,.social-post{font-family:Inter,"Helvetica Neue","DejaVu Sans",Arial,sans-serif}.lang-en .hero h1,.lang-en .article h2{font-family:Georgia,"Bitstream Charter","DejaVu Serif",serif}@media print{tr{break-inside:avoid}.footer{display:none}}
+
+.wrap{max-width:1280px}.main-layout{gap:30px}.rail{width:160px}.article{max-width:930px}.hero h1{max-width:1130px;font-size:42px}.article p{line-height:1.9}.article p.lede{font-size:17px;line-height:1.9}.appendix details{border:1px solid var(--line);background:#faf8f2;padding:18px 20px;margin:15px 0}.appendix summary{font-weight:650;font-size:15px;line-height:1.7;cursor:pointer}.appendix p,.appendix li{font-size:13px;line-height:1.8}.appendix table{font-size:12px}.appendix h3{font-size:16px;margin-top:25px}.sources li{font-size:12px;line-height:1.8;margin:0 0 13px;overflow-wrap:anywhere}.sources ol{padding-left:26px}.metric-label{font-size:11px;color:var(--muted)}.source-type{color:var(--muted)}.download-bar{padding:17px 20px;background:#e9ede3;display:flex;gap:16px;flex-wrap:wrap;align-items:center;font-size:13px;line-height:1.8;margin:24px 0}.download-bar strong{margin-right:auto}.figure-tools{border-top:1px solid var(--line);padding:8px 16px;font-size:11px}.scenario-panel{padding:23px;background:var(--white);border:1px solid var(--line);margin:22px 0 30px}.scenario-panel h3{margin:0 0 18px;font-size:18px}.scenario-controls{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}.scenario-controls label{display:block;font-size:12px;line-height:1.6;color:var(--muted)}.scenario-controls select{width:100%;font:inherit;font-size:14px;color:var(--ink);background:#fffefa;border:1px solid #9ba99c;border-radius:3px;padding:10px;margin-top:7px;min-height:44px}.scenario-results{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.scenario-results>div{background:#e9ede3;padding:15px}.scenario-results strong{display:block;font-size:29px;line-height:1.3;margin:8px 0}.scenario-results span{font-size:12px}.scenario-panel .model-limit{font-size:12px;line-height:1.75;margin:17px 0 0}.model-unit{color:var(--muted)}.review-status{font-size:12px;line-height:1.8;border-left:3px solid var(--amber);background:#eee8dc;padding:13px 17px;margin-top:20px}.workflow{max-width:1040px;margin:40px auto;padding:0 30px;font-size:16px;line-height:1.95}.workflow h1{font-size:35px;line-height:1.4}.workflow h2{font-size:24px;margin-top:40px}.workflow h3{font-size:19px}.workflow table{font-size:13px}.workflow li{margin-bottom:7px}.workflow code{font-size:.86em;overflow-wrap:anywhere}.distrib .main-layout{display:block}.distrib .article{margin:auto}.distrib .hero{max-width:930px;margin:auto}.source-target:target{outline:2px solid var(--amber);outline-offset:5px}.copy:focus-visible,select:focus-visible,a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:3px}.print-only{display:none}.appendix .comparison{margin:20px 0}table caption{font-size:12px;text-align:left;margin-bottom:10px}.chart-dialog{max-width:96vw;max-height:95vh;border:1px solid var(--line);background:var(--paper);padding:20px}.chart-dialog img{max-width:100%;height:auto}.chart-dialog button{font:inherit;padding:8px 15px;margin-bottom:10px}
+@media(max-width:900px){.main-layout{display:block}.rail{width:auto}.hero h1{font-size:31px}.wrap{padding:0 20px}.scenario-controls{grid-template-columns:1fr}.scenario-panel{padding:17px}.scenario-results strong{font-size:25px}.hero{padding-top:35px}.download-bar{display:block}.download-bar a{display:inline-block;margin:8px 15px 0 0}.article h2{font-size:22px}.appendix details{padding:15px}.workflow{padding:0 20px}.workflow h1{font-size:28px}}
+@media print{.scenario-panel,.figure-tools,.download-bar,.copy,.review-status{display:none}.main-layout{display:block}.wrap{padding:0}.article{max-width:none}.hero h1{font-size:25pt}.article p,.article p.lede{font-size:10.5pt}.article h2{font-size:16pt;break-after:avoid}.appendix details:not([open])>*:not(summary){display:none}.appendix details{break-inside:auto}.appendix summary{font-size:10pt}.sources li{font-size:8.5pt}figure{break-inside:avoid}thead{display:table-header-group}tr{break-inside:avoid}.workflow{max-width:none;margin:0;padding:0}.workflow p,.workflow li{font-size:10.5pt}.workflow h1{font-size:24pt}.workflow h2{font-size:16pt}.footer{display:none}}
+
+.brand{font-size:15px;letter-spacing:.12em}.brand small{letter-spacing:.15em}.hero{padding:48px 0 30px}.hero h1{font-size:46px;line-height:1.3;max-width:1000px;margin-bottom:18px}.hero .deck{font-size:21px;line-height:1.65;max-width:900px;margin:0 0 20px;color:var(--green)}.hero .meta{margin-bottom:6px}.hero .credit{font-size:12px;line-height:1.65;color:var(--muted);margin:0}.eyebrow{font-size:12px;letter-spacing:.09em;margin-bottom:18px}.article p.lede{font-size:17px;line-height:1.95}.relationship-insight{padding:24px 26px;background:#e9ede3;border-left:3px solid var(--green);margin:28px 0}.relationship-insight h3{margin:0 0 12px;font-size:17px}.relationship-insight p{font-size:15px;line-height:1.9;margin:0}.benchmark-note{margin:25px 0;padding:19px 22px;border:1px solid var(--line);background:#faf8f2}.benchmark-note h3{font-size:15px;margin:0 0 12px}.benchmark-note p{font-size:13px;line-height:1.85;margin:0}.research-signature{border-top:2px solid var(--green);padding:28px 30px;background:#e5ebdf;margin:36px 0 24px}.research-signature .signature-brand{font-size:15px;letter-spacing:.12em;font-weight:800;margin-bottom:14px}.research-signature p{font-size:15px;line-height:1.9}.research-signature .signature-cta{font-size:14px;color:var(--muted)}.research-signature .actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;font-size:13px}.research-signature .cta{padding:13px 18px}.edition-note{font-size:12px!important;color:var(--muted);margin-top:24px!important}.lang-en .hero h1{max-width:980px;font-size:48px}.distrib .hero{max-width:930px}.distrib .article{padding-top:25px}
+@media(max-width:800px){.rail{display:none}.top{align-items:flex-start}.brand{font-size:12px;letter-spacing:.09em}.brand small{font-size:8px}.hero{padding:33px 0 24px}.hero h1,.lang-en .hero h1{font-size:33px;line-height:1.35}.hero .deck{font-size:17px;line-height:1.7}.article p.lede{font-size:16px}.relationship-insight{padding:20px}.research-signature{padding:23px 20px}.research-signature .actions{align-items:flex-start;flex-direction:column}.language{gap:4px}.language button{padding:5px}.eyebrow{font-size:11px}}
+@media print{.hero{padding:0 0 18px}.hero h1,.lang-en .hero h1{font-size:27pt}.hero .deck{font-size:13pt}.hero .credit,.hero .meta{font-size:9pt}.article p.lede{font-size:10.5pt}.research-signature{break-inside:avoid;padding:18px}.research-signature p{font-size:10pt}.research-signature .cta{padding:8px 12px;font-size:9pt}.relationship-insight p{font-size:10pt}.benchmark-note p{font-size:9pt}}
+</style></head><body><section><h1>2026年11月18日 · 16处实际逐句修订</h1><p>研究1.4.0：恢复陌生读者入口、完整经济推理与正向表达；本轮独立CFA/CQF框架审稿及复算结果见发布包audit。</p><table><tr><th>序号</th><th>1.3.0原句或原段</th><th>本轮问题</th><th>主谓宾与定状补调整</th><th>1.4.0采用表达</th><th>事实与数字处理</th></tr><tr><td>1</td><td>11月12日，黄仁勋离任NVIDIA CEO。NVIDIA既出售加速器，也向部分客户购买算力、提供信用支持。管理层交接因此提出一个投资问题：依赖这些安排的扩张，哪些仍能按期完成，哪些会先影响融资，再影响设备订单与托管收入？[1][2][19]</td><td>从事件直接跳到融资问题，缺少生态网络与财务重要性。</td><td>事件时间前置，NVIDIA为经济主语；先说明卖设备、购买服务和信用支持，再连接订单。</td><td>11月12日，黄仁勋离任NVIDIA CEO。他留给继任者的，是一张把芯片供应、客户融资和数据中心建设连在一起的产业网络：NVIDIA向客户卖GPU，也通过算力采购和信用支持帮助部分客户扩张。换帅之后，这张网络还能支撑多快的增长？答案关系到Neocloud的设备采购、HBM原厂的扩产回报，以及光通信供应商的下一轮订单。</td><td>公司事实按来源刷新；数字变化见对应来源及update_calculations.csv</td></tr><tr><td>2</td><td>我们的基准判断是，既有合同与已投运容量支持近期业务延续；远期需要重估的是尚未筹足资金、仍依赖NVIDIA追加支持的项目。 沿这条融资路径下调采购与投运预期，须以新增支持减少、且替代资金赶不上设备付款为条件。Broadcom参与的ASIC融资，以及Google、AMD各自支持的项目，需要按其合同分别估算。[2][11][39][49]</td><td>以限制条件收尾，压缩了作者主张。</td><td>先给新指引，再由“我们”承担近端判断；点名筹资中的Neocloud与CPO器件变化。</td><td>11月18日凌晨的新指引提供了第一个检验：NVIDIA预计下一季收入1,300亿美元，管理层把FY2028收入增长展望由70%上调至75%。我们沿AlphaMap的客户、供应和信用关系复核后，维持NVIDIA近端交付增长的判断。远期最需要重估的，是筹资中的Neocloud扩张及其托管起租；光通信的增长则随CPO采用重新分配到不同器件。已签供货安排支撑生产，客户筹资支付设备，两侧资金的时点决定下一轮采购。</td><td>公司事实按来源刷新；数字变化见对应来源及update_calculations.csv</td></tr><tr><td>3</td><td>NVIDIA须在交付、服务可用性等条件满足时，购买CoreWeave特定的未售剩余算力。该协议初始价值63亿美元，期限至2032年4月；义务由NVIDIA承担，范围不覆盖CoreWeave全部债务。董事会在换帅公告中表示，预计既有承诺与产品路线图继续执行。未来追加支持仍需另行评估：例如SB Energy的4.25GW担保一般随相关租约起始生效，并在约定租户违约时触发付款；另3.8GW是否追加由NVIDIA自主决定。[1][2][19]</td><td>义务、期限与合同范围挤在一组限制句内。</td><td>签约方作主语；交付条件贴近购买动作；接上收入保障如何支持贷款。</td><td>NVIDIA与CoreWeave的剩余算力采购协议初始价值63亿美元，延续至2032年4月。CoreWeave完成约定容量交付并满足服务条件后，NVIDIA购买适用范围内的剩余容量。这项安排改善指定项目的收入保障，支持运营商向贷款人展示未来收款来源。[2]</td><td>公司事实按来源刷新；数字变化见对应来源及update_calculations.csv</td></tr><tr><td>4</td><td>CoreWeave前三季度经营现金流56.38亿美元，覆盖现金固定资产及软件投入的23.9%；同期净融资213.46亿美元已经发生。管理层另预计未来三个月收到90亿美元预付款及押金。若20%迟到、同窗仅有10亿美元未被占用的替代资金，尚有8亿美元未抵补。该情景衡量到账时间风险，不能写成已经发生的融资缺口或收入损失。即使替代贷款补足缺口，更高利息仍可能压低股权端可用现金，投运无需同步下调。[3][5]</td><td>现金数字与情景混段，读者不易区分事实和推导。</td><td>先锁定同期收支与已融资金额；次句解释外部资金承担何种经济作用。</td><td>建设发生在经营收款之前。CoreWeave前三季度经营现金流56.38亿美元，现金固定资产及软件投入235.58亿美元，现金覆盖率为23.9%；同期净融资213.46亿美元。外部资金已经承担了扩张中的大部分资本需求。管理层预计随后三个月收到90亿美元预付款及押金，到账节奏决定下一批设备付款的资金余量。[3][5]</td><td>公司事实按来源刷新；数字变化见对应来源及update_calculations.csv</td></tr><tr><td>5</td><td>CoreWeave前三季度经营现金流56.38亿美元，覆盖现金固定资产及软件投入的23.9%；同期净融资213.46亿美元已经发生。管理层另预计未来三个月收到90亿美元预付款及押金。若20%迟到、同窗仅有10亿美元未被占用的替代资金，尚有8亿美元未抵补。该情景衡量到账时间风险，不能写成已经发生的融资缺口或收入损失。即使替代贷款补足缺口，更高利息仍可能压低股权端可用现金，投运无需同步下调。[3][5]</td><td>防御性说明打断压力测算。</td><td>用假设到账减少额、替代资金、待补额逐步演绎，再给利息刻度。</td><td>我们把这项依赖展开为一个付款压力测试。假设90亿美元中有20%推迟到账，当期少收18亿美元；再投入10亿美元可即时动用的替代资金，剩余8亿美元需要新增融资或付款展期。足额贷款可以维持采购节奏，并通过利息减少权益端现金；按100个基点的额外年融资成本计算，每10亿美元借款增加1,000万美元年利息。这些参数可由读者替换。[3][5]</td><td>公司事实按来源刷新；数字变化见对应来源及update_calculations.csv</td></tr><tr><td>6</td><td>因此，CoreWeave新增项目的投运速度取决于客户合同能否支持融资，以及资金到账能否赶上设备付款。既有剩余容量采购安排提供需求支持；新增贷款、预付款和后续追加支持，决定尚未筹足资金的项目何时能够采购。图1｜13项AlphaMap既有关系与9项公开补证。AMD直租377MW、另一客户152MW及特定租约信用支持分开标示；新增租约尚未起租。箭头为设备、服务、权属或支持方向，不代表已校准的冲击方向与强度。共用客户须核对具体容量和负载重叠才去重。[2][3][6][7][9][11][12][14][39][43][44][49]</td><td>旧结论缺少新问答关于条款沿用的澄清。</td><td>客户筹资、投运和验收依次作动作；将“此前就在执行”归于管理层。</td><td>11月17日CFO说明把Neocloud支持的生效顺序写得更清楚：客户先筹得采购资金，设备完成部署、投运和验收，约定支持随之生效。管理层在问答中确认这套机制此前就在执行。我们的基准延续项目融资与采购的逐项判断，把资金到位作为预计交付的具体依据。[51][52]</td><td>公司事实按来源刷新；数字变化见对应来源及update_calculations.csv</td></tr><tr><td>7</td><td>Core Scientific（CORZ）提供了一个容易误判的例子。CoreWeave租用的590MW中已有485MW计费，约82%；AMD直接承租377MW，另一家未具名Neocloud承租152MW，后者获得AMD对特定租约的条件信用支持。按这两组约1,120MW的签约IT容量计算，CoreWeave占约53%。[6][49]</td><td>先给未来容量稀释比例，当前收入重要性后置。</td><td>先给当前100%托管收入和84%集团收入，再给590MW内的计费进展。</td><td>从CoreWeave再走一跳，Core Scientific（CORZ）的收入结构就变得重要。截至9月底，CORZ全部托管收入来自CoreWeave，后者贡献集团前三季度约84%的收入。CoreWeave租用的590MW中已有485MW计费，约82%；余下105MW的起账时间继续影响新增托管收入。[6][7]</td><td>公司事实按来源刷新；数字变化见对应来源及update_calculations.csv</td></tr><tr><td>8</td><td>未来容量的客户分散，尚未转化为当期收入分散。 截至9月底，AMD相关两组新租约均未起租；CORZ的托管收入全部来自CoreWeave，后者占集团前三季度收入约84%。管理层预计新增约530MW从2027年开始交付、至2028年底完成，建设仍需外部融资。对CORZ应分别测算现有租约收款、未计费105MW的起账和新增项目融资，不能用53%的容量比例调整全公司收入。租金抵扣与项目偿债，还使计费收入与股权端可用现金在时间上分离。[6][7][8]</td><td>否定句告诫分母，替代了增长过程。</td><td>新租约为主语；定语区分直接承租与信用支持；交付逐步进入收入。</td><td>CORZ未来合同引入了另一组客户：AMD直接承租377MW，另一家Neocloud承租152MW，并取得AMD对特定租约的条件信用支持。把这些合同与CoreWeave放在同一容量表里，CoreWeave约占53%。新增租约当时处于起租前，未来客户分散通过2027—2028年的交付逐步进入收入。[6][7][49]</td><td>公司事实按来源刷新；数字变化见对应来源及update_calculations.csv</td></tr><tr><td>9</td><td>未来容量的客户分散，尚未转化为当期收入分散。 截至9月底，AMD相关两组新租约均未起租；CORZ的托管收入全部来自CoreWeave，后者占集团前三季度收入约84%。管理层预计新增约530MW从2027年开始交付、至2028年底完成，建设仍需外部融资。对CORZ应分别测算现有租约收款、未计费105MW的起账和新增项目融资，不能用53%的容量比例调整全公司收入。租金抵扣与项目偿债，还使计费收入与股权端可用现金在时间上分离。[6][7][8]</td><td>“不能用容量调收入”未展开现金机制。</td><td>将月费限定为合资格租约，按50%抵扣举例，接上债务支付顺序。</td><td>因此，我们判断CORZ的近期现金流主要受CoreWeave的付款与抵扣条款影响；新增529MW的收入增长则跟随各租约的融资、建设和起租进度。按达到50%抵扣上限的适用租约举例，每100美元合资格月费当期收现50美元；抵扣耗尽、月费保持不变时，当期收现升至100美元。之后的现金继续按项目债务契约支付利息、摊还与储备。[7][8]</td><td>公司事实按来源刷新；数字变化见对应来源及update_calculations.csv</td></tr><tr><td>10</td><td>替代资金也会改变判断。Google对Akela指定租约的信用支持须待起租生效，按约定违约条件触发；其补租承接或支付终止费的选择，影响剩余租约收入能否延续。Broadcom参与、已获融资承诺的630亿美元SPV交易，将购买XPU及网络设备并租给Anthropic，其残值支持对应第一顺位债务部分。这些安排早于换帅，不能当作交接后订单转移的证据，却说明部分ASIC项目已取得其他支持方的融资承诺。评估NVIDIA份额和HBM总需求时，应分别跟踪这些客户的采购。[11][39]</td><td>段落反复排除事件归因，经济工具被压缩。</td><td>点名Google和Broadcom各自的合同安排，再推到不同客户的采购资金。</td><td>替代支持方还连接了其他建设路径。Google向Akela指定租约提供条件信用支持；Broadcom参与的630亿美元设备SPV融资安排连接Anthropic的XPU与网络采购。这些合同说明，部分ASIC客户获得了其他支持方的筹资安排。我们在行业需求判断中同时考虑GPU与ASIC扩张，按每项合同核对支持范围和资金交割，再评估其设备采购时点。[11][39]</td><td>公司事实按来源刷新；数字变化见对应来源及update_calculations.csv</td></tr><tr><td>11</td><td>供给端按2028年全年816万片匹配前后道加工能力、每片约960标称GB合格产出，推得Top3有效HBM能力7.8EB，低、高工程情景为5.9、10.3EB。新厂分期、HBM分配比例、晶粒面积与有效回收率分别列账，年底月产能没有直接乘十二。[25][26][27]</td><td>先密集列参数，缺少为何关心采购方的解释。</td><td>保留晶圆和有效产出的计算链，将供给与GPU/ASIC客户组合连接。</td><td>独立供给模型从全年晶圆加工量、每片有效产出和代际配方推算，2028年三家主要原厂的初始配方能力约7.83EB，工程低、高情景为5.89—10.28EB。需求模型把GPU与ASIC分开，覆盖设备在完整采购路径下需要约11.10EB；其中ASIC贡献2026—2028年新增设备数量的约75%。这些数量说明，供应商争取NVIDIA、AMD与自研芯片客户时，客户组合和合格代际会共同影响产能消化。[25][26][27][28]</td><td>公司事实按来源刷新；数字变化见对应来源及update_calculations.csv</td></tr><tr><td>12</td><td>7.8EB是产能预测，收入仍取决于客户采购。 覆盖设备的完整需求配置约需11.1EB；代际、客户认证、资金与交付条件会限制采购兑现。需求侧计量设备内嵌HBM，原厂还供应其他客户，原始HBM及在制品库存也影响出货。两侧相减不能认定全行业过剩。</td><td>否定式口径声明占据主张位置。</td><td>作者先给HBM量价与资格的评估顺序，再说明实际价格和采购资金进入何种判断。</td><td>我们据此优先评估已谈定量价、具备客户资格的HBM供货，再评估远期新增产线。对NVIDIA的供应链议价力，继续跟踪实际采购价格和可分配产能；对HBM行业需求，同时计入GPU与ASIC客户的采购资金。</td><td>公司事实按来源刷新；数字变化见对应来源及update_calculations.csv</td></tr><tr><td>13</td><td>在设施IT容量年增25%、中值设备功率、相同期初库存和一季物理投运延迟下，提前一季与四季采购，分别对应2028年设备内嵌HBM约4.96、7.31EB，年末已投运AI系统IT均为99.7GW。约2.4EB是外生采购窗口的条件差额，尚未被识别为换帅或融资收缩的影响量。 将它用于公司预测，还须查明谁有能力提前接货。[36]图5｜采购由提前一季改为一年，2028年覆盖设备内嵌HBM由4.96增至7.31EB，年末已投运AI系统IT容量同为99.7GW。条件：设施IT年增25%、中值功率、相同期初库存及一季投运延迟。差额按未取整数计算；未赋予情景概率。1EB为10亿GB。来源：LunarTulip Research独立模型4.1。</td><td>数值与“不被识别为冲击”混在主句。</td><td>先定义买方垫资，再锁定共用假设，完整列三种采购窗口及相同投运量。</td><td>设备从采购到上电之间，买方需要垫付资本。固定设施IT容量年增25%、中值设备功率、相同期初库存和一季物理投运延迟，我们把采购窗口分别设为提前一季、两季和四季。2028年覆盖设备内嵌HBM分别为4.958、5.212和7.311EB，三条路径的年末已投运AI系统IT容量均为99.7GW。[36]</td><td>公司事实按来源刷新；数字变化见对应来源及update_calculations.csv</td></tr><tr><td>14</td><td>四季采购下，2028年末未安装设备折合43.8GW，一季采购为10.1GW。按GPU/ASIC单价3万/1万美元的假设，前者多占用约2174亿美元期末加速器资本，未含其他系统及融资费用。这是库存资本尺度，不能当作实际融资缺口。CoreWeave第三季度另有19亿美元因合同变得可取消，从递延收入重分类为客户负债；款项能否退款，也影响其能否作为长期锁货资金。[3]</td><td>“不能当融资缺口”中断资本占用的经济演绎。</td><td>顺序给年度采购差、库存差、成本假设、资本占用，说明提前锁货的财务行为。</td><td>从提前一季改为提前一年，2028年采购流量增加2.354EB，约47.5%；年末未安装设备内嵌HBM增加4.433EB。按GPU和ASIC分别3万、1万美元的设备成本假设，较长采购窗口还多占用约2,174亿美元期末加速器资本。提前锁货把未来安装需求转成今天的订单，也把资本占用留在买方账上。</td><td>公司事实按来源刷新；数字变化见对应来源及update_calculations.csv</td></tr><tr><td>15</td><td>普通Rubin保持已披露288GB。对适用Ultra的8-Hi工程分支，以及MI450X的288GB、8栈相对MI455X的432GB、12栈选择，按本模型产品范围和采用率计算，同批2028年需求设备的HBM由11.42降至11.10EB，减少约0.32EB、2.8%。这是配置效应，不能直接反驳另一设备范围下的30%修正。[31][32][33][34]</td><td>通过不能反驳外部结论结束，丢失自有模型用途。</td><td>固定同一设备群，写配置变化的0.32EB和2.8%，再分别解释两组实验。</td><td>产品配置同样影响需求。固定同一批2028年设备数量，适用Ultra工程配置与MI450X／MI455X选择使HBM从11.42EB变为11.10EB，减少约0.32EB、2.8%。固定设备实验给出配置变化的量级，采购窗口实验给出提前持货的资金规模。我们将客户资金、投运速度和产品配置分别计算，再判断原厂的产能消化。[31][32][33][34]</td><td>公司事实按来源刷新；数字变化见对应来源及update_calculations.csv</td></tr><tr><td>16</td><td>我们保留既有合同支持下近期交付延续的判断，并对未锁定资金的远期扩张保持审慎。CoreWeave重点看预付款到账与新增贷款；CORZ当前收款仍集中于CoreWeave，AMD相关新项目的融资与起租需另列。APLD的150MW、Akela的336MW在建容量仍按2027年中前完成相应节点的条件基准跟踪，设施MW不直接换算为GPU出货。[3][6][7][9][11]</td><td>结尾重述研究工作和待核条件，主张不鲜明。</td><td>明确作者在新业绩节点保留的三项经营判断，分别对应新证据。</td><td>我们在换帅后的第一个业绩节点，维持NVIDIA近端交付增长、HBM近期合同交付和网络互连建设继续推进的判断。新指引、已签供货安排和生产部署分别支持这三项结论。</td><td>公司事实按来源刷新；数字变化见对应来源及update_calculations.csv</td></tr></table><p>本轮新增财报与供应链来源50—55；保留此前审稿记录如下。</p></section><main class="workflow"><h1>AlphaMap First Case：研究与原子修订记录</h1>
+<p>版本1.3.0 · 模型4.1 · 研究截止2026年11月17日</p>
+<h2>验收结论</h2>
+<p><strong>本篇条件投资研究通过本轮文本、来源及计算冷审；原始“完整全球供需预测及SemiAnalysis三项下修裁决”任务仍为research_incomplete。</strong> 两个状态分开保存。新增数字可复算，并不使尚未识别的全球采购政策、未来BOM或外部报告范围自动确定。</p>
+<p>CFA/CQF在这里表示独立AI审阅采用的分析框架，不是外部持证人士审计或专业认证。</p>
+<h2>本轮命题、句法与跨公司分析修订</h2>
+<p>本案恢复完整命题：NVIDIA换帅后，既有公司合同与未来追加支持如何分别影响各家公司融资、采购、投运、收入和现金。Neocloud融资是其中一条路径，同时跟踪共同客户预算、Google/AMD条件支持、独立ASIC融资与内存采购。首屏先交代事件、投资问题、基准判断与AlphaMap带来的具体发现；2.4EB回到采购情景章节。</p>
+<p>本轮没有把外生的一季/四季采购差额认定为换帅或融资收缩的影响量。模型4.1保持冻结，新增CORZ公司敞口计算独立保存。公开图为13项既有关系加9项公开补证，包含AMD直租、另一客户租约和指定152MW信用支持，不声称生产数据库已写入。</p>
+<table>
+<thead>
+<tr>
+<th>原问题</th>
+<th>本轮采用表达及含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用2.4EB数字倒推主线</td>
+<td>先写完整投资命题，再将数字归入采购政策敏感性</td>
+</tr>
+<tr>
+<td>“谁能出资、提前锁货”省略责任主体</td>
+<td>点名CoreWeave、NVIDIA剩余容量采购、客户预付款和新增贷款</td>
+</tr>
+<tr>
+<td>将融资路径条件泛化为所有下修原因</td>
+<td>限定为沿该融资路径下调采购/交付预测；需求、工程与供给变化仍独立评估</td>
+</tr>
+<tr>
+<td>支持变化直接推到停建</td>
+<td>新增支持减少后先核对替代资金；不足以支付设备款才下调采购与投运</td>
+</tr>
+<tr>
+<td>资金缺口被写成下修盈利的必要条件</td>
+<td>资金缺口限定采购与交付路径；融资足额但利息上升仍能影响盈利与权益现金</td>
+</tr>
+<tr>
+<td>融资补足便认为没有影响</td>
+<td>更高利息仍可能压低股权端可用现金，投运无需同步下调</td>
+</tr>
+<tr>
+<td>“条件支持”掩盖法律触发</td>
+<td>SB Energy与Akela分别保留起租、违约、付款/承接或终止条件</td>
+</tr>
+<tr>
+<td>从单一路径推出CORZ整体受损</td>
+<td>加入AMD377MW直租及另一客户152MW租约；未来容量和当前收入分开</td>
+</tr>
+<tr>
+<td>用53%容量份额代表当期收入风险</td>
+<td>保留当前托管收入100%来自CoreWeave、其集团收入贡献约84%的反证</td>
+</tr>
+<tr>
+<td>以ASIC独立融资证明换帅导致转单</td>
+<td>明确融资安排早于事件；承诺资金、提款与交付分别核对</td>
+</tr>
+<tr>
+<td>“不会同幅传递”暗示已测公司弹性</td>
+<td>各关系保留自己的合同、财务变量与成立条件，不宣称统一传导系数</td>
+</tr>
+<tr>
+<td>把研究框架当自动能力</td>
+<td>AlphaMap已有关系与本轮Agent公开补证分开，未执行生产传播或做空回测</td>
+</tr>
+</tbody>
+</table>
+<p>已复用保存技能中的16条句法记录：先限定受影响公司及融资依赖，再写具体交易、资金后果、替代路径与下游条件。完整首轮记录附于本文件末尾，作为历史编辑材料；旧稿事实与编号不替代当前来源账本。</p>
+<p>LunarTulip Research作为出版品牌；双语canonical、公众号、LinkedIn及独立PDF共用同一研究对象。中文语言精修遵循humanizer-zh，删除复述而保留因果条件。</p>
+<h2>本轮独立结果</h2>
+<table>
+<thead>
+<tr>
+<th>结果</th>
+<th style="text-align: right;">数值</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CORZ两组签约IT容量中的CoreWeave份额</td>
+<td style="text-align: right;">590 / 1,120 ≈ 53%</td>
+<td>不等于收入、利润或担保份额；1,925MW预约权排除</td>
+</tr>
+<tr>
+<td>CoreWeave已计费占本组容量</td>
+<td style="text-align: right;">485 / 590 ≈ 82%</td>
+<td>与全部CORZ未来签约容量使用不同分母</td>
+</tr>
+<tr>
+<td>CORZ当前托管收入中CoreWeave占比</td>
+<td style="text-align: right;">100%</td>
+<td>截至2026年9月底；AMD相关租约未起租</td>
+</tr>
+<tr>
+<td>2028 Top3初始有效HBM能力</td>
+<td style="text-align: right;">7.8348 EB</td>
+<td>低/高工程情景5.8861/10.2845；与实际吸收分开</td>
+</tr>
+<tr>
+<td>同晶圆预算规划重配</td>
+<td style="text-align: right;">7.9407 EB</td>
+<td>增加0.1059来自配方/每片产出，不是新增晶圆</td>
+</tr>
+<tr>
+<td>2028一季/四季设备内嵌HBM</td>
+<td style="text-align: right;">4.9575 / 7.3111 EB</td>
+<td>同25%设施增长、中值功率、相同开仓</td>
+</tr>
+<tr>
+<td>年度采购流量差</td>
+<td style="text-align: right;">2.3536 EB</td>
+<td>不是期末库存差</td>
+</tr>
+<tr>
+<td>期末未装HBM库存差</td>
+<td style="text-align: right;">4.4331 EB</td>
+<td>额外1,202.44万设备，跨年累计</td>
+</tr>
+<tr>
+<td>期末已装AI系统IT</td>
+<td style="text-align: right;">同为99.6674 GW</td>
+<td>相同功率不要求相同设备批次或内存</td>
+</tr>
+<tr>
+<td>同设备已识别配置变化</td>
+<td style="text-align: right;">−0.3184 EB / −2.8%</td>
+<td>特定Ultra和MI450/455选择；不直接反驳外部全市场30%</td>
+</tr>
+</tbody>
+</table>
+<h2>冷审发现及处理</h2>
+<table>
+<thead>
+<tr>
+<th>原问题</th>
+<th>已落实修正</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用供电约束单独决定采购</td>
+<td>采购前瞻与物理安装延迟分开；1/2/4季政策一起展示</td>
+</tr>
+<tr>
+<td>采购差与库存差混淆</td>
+<td>分别保留年度流量、期末库存和安装存量，逐季度实物守恒</td>
+</tr>
+<tr>
+<td>资格风险可能重复扣减</td>
+<td>有效回收率已含资格；基准额外因子改为1.0，.95/.85仅为额外压力</td>
+</tr>
+<tr>
+<td>功率敏感性同时改变内存/面积</td>
+<td>分离三个索引；27格交互仅改变明确的变量</td>
+</tr>
+<tr>
+<td>开仓库存随未来增长改变</td>
+<td>固定开仓IT及2025可用硬件代理，所有政策保持相同初始状态</td>
+</tr>
+<tr>
+<td>强制32Gb切换制造代际错配</td>
+<td>基准24Gb续接；32Gb切换保留独立压力，未来平均配置与单一SKU区分</td>
+</tr>
+<tr>
+<td>年度供给与匹配重配对不上</td>
+<td>披露7.8348→7.9407桥；实际采购晶圆与最大能力分开</td>
+</tr>
+<tr>
+<td>将HBM原厂供给直接减覆盖设备内嵌量</td>
+<td>供需章节说明覆盖、原始HBM/WIP和其他客户差异</td>
+</tr>
+<tr>
+<td>共享客户自动重复计量</td>
+<td>仅同容量/终端负载重叠时去重，共享预算敞口另列</td>
+</tr>
+<tr>
+<td>IREN融资过度泛化</td>
+<td>精确到Microsoft项目DDTL四批与先决条件</td>
+</tr>
+<tr>
+<td>CRWV19亿美元误读为退款</td>
+<td>保留Q3合同可取消后重分类，未声称实际撤单/退款或11月事件归因</td>
+</tr>
+<tr>
+<td>2027 HBM合同可见度泛化</td>
+<td>点名Samsung/Micron；SK公司全部产能LTA比例不转为HBM比例</td>
+</tr>
+<tr>
+<td>以旧图填11月17日新报告</td>
+<td>Source16和18身份分别保留，不合并绝对量与基期</td>
+</tr>
+</tbody>
+</table>
+<h2>投资相关性</h2>
+<p>现有合同与投运容量为近期业务延续提供依据；远期未获资金项目对新增支持和替代融资更需逐项核验。CORZ未来容量的客户分散尚未转化为当期收入分散。Microsoft共同预算、Google/AMD信用支持和独立ASIC融资，必须分别经过合同与财务变量，才进入公司判断。HBM近期交付与2028年扩产回报，也采用不同证据和采购条件。</p>
+<p>约2174亿美元的额外期末加速器资本按GPU3万美元、ASIC1万美元假设计量；它不是市场报价、实际融资缺口或年度新增资本开支。2.4EB为外生窗口差额，未识别为事件因果效应。</p>
+<h2>尚未达到的标准</h2>
+<ol>
+<li>全球买方提前采购窗口的分布及概率没有观测校准；未来功率/面积与产品组合仍有较大工程成分。</li>
+<li>逻辑前道、CoWoS、基板及板卡尚未形成完整的全球约束面板；覆盖设备未被证明穷尽所有市场。</li>
+<li>原始HBM及WIP阶段库存、真实采购价格、公司收入/利润确认桥接不足以给出全市场收益或估值结论。</li>
+<li>独立的11月17日SemiAnalysis原稿、绝对量、旧基期和功率范围未取得；定向官方公开检索不能替代机构模型更新档案。</li>
+</ol>
+<p>25%设施路径到2030约250GW IT，高于IEA174GW及185GW Lift-Off外部预测，因此已前置为较快扩张情景。没有用图表数量、网页构建或计算守恒替代这些研究验收条件。</p>
+<h2>交付与复算</h2>
+<p>同一研究对象RO-ALPHAMAP-CASE-001、同一官网草稿PR #2、双语canonical及公众号/LinkedIn表征。8组原创主图，保留4组项目现金图；27格独立计算；79行设备面板；165行场景年度输出。</p>
+<p>公开包中 <code>assets/v4/model/run.py</code> 使用冻结输入重算并对照所有场景、年份和关键物理量。完整输入、输出、来源、CSV及审计说明一并提供。私有数据库源包与内部映射不进入公开包。</p>
+<p>技能write-thesis-research已更新并同步至Notion Skill Factory。技能与本案结论分离：复用研究纪律，不固化未验证的投资答案。</p>
+<h2>附：首轮16处句法记录（历史材料）</h2>
+<p>以下保留先前的完整研究表达审阅，用于复用句法与金融限定。其历史公司事实、来源编号与旧版结论不覆盖本版正文，尤其不能合并两份SemiAnalysis报告身份。</p>
+<h1>AlphaMap 首案：按投资逻辑逐句审查主语、谓语与条件位置</h1>
+<p>审阅日期：2026年11月17日。对象为 AlphaMap 首个投资逻辑案例的中文终稿及其英文分发稿；读者定位为基本面分析师，以及关注量化基本面的研究员。</p>
+<p>本次逐句对照使用实际读取的 SemiAnalysis <strong>2026年11月12日《Nvidia and the World Without Jensen》原文</strong>：<a href="https://newsletter.semianalysis.com/p/nvidia-and-the-world-without-jensen">原文链接</a>。对2026年11月13日的模型下修报告，本次取得的是用户转发的中文二次解读与所附图表，未将其当作英文原稿进行句法分析。下文以段落讨论的主题定位，不使用内部行号；中文主题名用于说明内容，并非原文标题的逐字翻译。</p>
+<p>中文终稿含标题、元信息和引用序号，<strong>共2,647个非空白字符，不含来源列表</strong>；数字、公司名和标点均计入。关键财务数字与基准判断已锁定，CFA基本面框架、CQF计算与建模框架要求的必要修订已执行。</p>
+<p>本附件记录独立分析审阅与编辑过程，不代表外部持证CFA或CQF专业人士认证。</p>
+<h2>1. 将研究发起思路转译为完整的投资问题</h2>
+<p>原始思路：哪些算力接下来容易受到黄在任时承诺的融资影响？</p>
+<p>这句话已经抓住研究起点，但“算力”把项目、运营商和资金工具揉在了一起；“受到融资影响”又没有说明融资提供方做了什么、谁承担付款或交付义务。</p>
+<p>用于研究发起的完整表达可以是：</p>
+<blockquote>
+<p>对黄仁勋任内借助 NVIDIA 支持筹集建设资金的算力运营商，管理层交接后需要分别评估两类敞口：已经生效的公司合同，继续为哪些项目提供收入或信用支持；尚未锁定资金的扩张计划，又在多大程度上依赖 NVIDIA 追加投资、采购承诺或信用安排。若新增支持减少，融资成本和可筹金额会先改变；只有当替代资金不足时，影响才进一步传至项目交付和供应商收入。</p>
+</blockquote>
+<p>这段保留了完整的推理长度。其顺序是：<strong>具备特定融资依赖的运营商 → 支持方是否改变具体安排 → 借款条件与可筹金额 → 替代资金是否足够 → 项目交付与供应商收入</strong>。它没有把“换帅”直接等同于合同失效，也没有把三种融资工具当作同一法律责任。</p>
+<p>实际成稿收窄到原始资料能够证明的 NVIDIA–CoreWeave–Core Scientific 关系。我们未给所有 Neocloud 排名，也未证明全行业融资已经收缩。</p>
+<h2>2. 原文中真正可借鉴的同类段落</h2>
+<p>原文关于客户关系、芯片分配与融资支持的段落最贴近本案。作者先区分不同客户群及其获得支持的方式，再解释支持如何影响融资，最后给出支持变化的条件结果。关于Neocloud借款的段落进一步写出设备出售、收入下限、房东付款支持和借款成本之间的关系。</p>
+<p>正文仅引用三个英文短语，共18词：<strong>“Nvidia’s deals require extensive Nvidia support”</strong>，出自客户关系与芯片分配的段落；<strong>“operators without an investment-grade rating”</strong> 和 <strong>“If the Jensen put is not there”</strong>，出自Neocloud融资机制及其条件后果的段落。下表其余内容均为原创语法分析与意思转述。</p>
+<p>原文的强结论包含作者预测与修辞。我们借鉴论证结构，同时把事实判断交回 SEC 文件与财报。其中，作者汇总不同支持安排的表述不能替代法律分类；本案仍按采购承诺、股权投资、租赁义务和担保分别核查。对高管个人动机的推断不进入本案的财务结论。</p>
+<h2>3. 十六处微观对照与精修</h2>
+<p>表格里的“对照”说明为什么选这一段，不表示 SA 曾研究本文的全部公司或说过我们的结论。</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>原稿句子/问题</th>
+<th>SA 原文定位与对应逻辑</th>
+<th>主谓宾、定状补位置怎样处理</th>
+<th>采用的完整投资表达</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>“AI基础设施面临的核心问题是：已经签下的算力合同，能否继续转化为交付和现金？” 主语过宽，问题容易漂成行业口号。</td>
+<td>客户关系与芯片分配的段落，先点出不同类型的客户，限定哪些交易需要供应商支持，随后讨论支持方式。</td>
+<td>时间状语放前；“依靠其设备供应和资金支持扩张的”放在“算力运营商”前，先限定暴露；谓语用“重新评估”；宾语为“下一阶段项目的融资条件”。</td>
+<td>“NVIDIA更换CEO后，依靠其设备供应和资金支持扩张的算力运营商，需要重新评估下一阶段项目的融资条件。”</td>
+</tr>
+<tr>
+<td>2</td>
+<td>“有客户合同和项目资金支撑的存量业务将继续兑现；新增产能的分化，取决于融资落地和现金回收。” “兑现”没有指定交付还是收入。</td>
+<td>Neocloud融资机制的段落，把支持工具接到筹资能力，然后才谈支持变化的后果；原因和结果没有合并成一个抽象词。</td>
+<td>“已有客户合同和项目资金支持的”限定业务；“继续交付”直接说明经营行为；新增容量另起分句，把预付款/融资是否覆盖建设支出写成宾语从句。</td>
+<td>“已有客户合同和项目资金支持的业务将继续交付；新增容量能否按期投运，取决于客户预付款与项目融资能否覆盖建设支出。”</td>
+</tr>
+<tr>
+<td>3</td>
+<td>“风险会落到不同主体、不同季度，股东收到现金的时间也会明显晚于收入确认。” 主体未指明，“明显晚于”未经量化。</td>
+<td>Neocloud融资机制的段落中，设备供应商、运营商、房东承担不同动作；资金并没有因为属于同一生态而合成一项敞口。</td>
+<td>先点出 CRWV/CORZ 两个主体；以“同一笔算力投资”为承上主语，谓语为“对应”；宾语具体到付款义务。删除未建模的股东分红时点。</td>
+<td>“对CoreWeave（CRWV）及其托管商Core Scientific（CORZ），同一笔算力投资对应不同的付款义务，收入增长也会形成不同的股权端可用现金。”</td>
+</tr>
+<tr>
+<td>4</td>
+<td>“研究权重应向已计费容量、融资落实和收款顺序倾斜。” 说的是研究员如何工作，没有交代投资判断。</td>
+<td>讨论HBM价格与供应优先级的段落，先列具体客户的价格差，再讨论供给优先级变化对其他买方的含义；经营差异直接进入公司比较。</td>
+<td>主语改“我们”；介词“在估值中”限定判断用途；“已计费、资金落实且收款路径明确的”修饰业务，避免三个抽象名词并列完即止。</td>
+<td>“我们在估值中更看重已计费、资金落实且收款路径明确的业务。远期订单和规划容量仍有价值，但须分别计入交付条件、融资成本与优先偿付。”</td>
+</tr>
+<tr>
+<td>5</td>
+<td>“具体合同决定了第一层影响。” 说明写作方法，对产业分析没有新增信息。</td>
+<td>Neocloud融资机制的段落，逐项写出NVIDIA的交易动作及其作用。</td>
+<td>让签约方 NVIDIA 作主语，“须购买”作谓语，未售出的剩余算力作宾语；履约条件紧贴这一义务，期限与价值放前句。</td>
+<td>“NVIDIA须在约定条件下购买CoreWeave未售出的剩余算力，前提是相关容量完成交付并满足服务可用性；合同保留违约等终止条件。”</td>
+</tr>
+<tr>
+<td>6</td>
+<td>“换帅首先带来对未来资本配置的重新审视。” 谁审视、哪类资本没有明确。</td>
+<td>接班人与公司现金用途的段落，将新管理层的选择限定到公司现金用途；回购倾向属于作者预测，并非已公布事实。</td>
+<td>以换帅增加的不确定性承上；“对尚未锁定资金的新项目”前置作范围状语，随后才说追加支持与融资条件。</td>
+<td>“对尚未锁定资金的新项目，NVIDIA是否追加支持会影响融资条件；既有合同则不能仅因人事变化就按支持撤回处理。”</td>
+</tr>
+<tr>
+<td>7</td>
+<td>“这说明扩张高度依赖外部资金，并不代表公司还有同等规模的资金缺口尚未填补。” 原句方向对，但“这”指向多组数据，容易被截取误读。</td>
+<td>讨论供应链产能承诺的段落，将承诺规模变化明确限定于供应安排和期间，数字并不孤立承担所有推论。</td>
+<td>将历史差额明确命名；解释句重提 179.20 亿美元，给读者一个不能移位的对象；保留同期净融资，不从历史支出推断当前缺口。</td>
+<td>“这些数字说明扩张依赖外部资金；179.20亿美元是历史现金收支差额，并非尚未填补的资金缺口。”</td>
+</tr>
+<tr>
+<td>8</td>
+<td>“按当时收益率水平，预计到2027年底不再新增母公司无担保债务。” 容易把管理层意向改写为研究员确定预测。</td>
+<td>继任者与长期投资、经理人资本配置等段落中的管理层行为预测在动作前有预测语气；作者观点与已发生事实不互换。</td>
+<td>时间状语在句首；“管理层表示”锁定归属；“按当时收益率水平”紧邻“计划”；“母公司无担保”必须保留在债务前，限制工具范围。</td>
+<td>“管理层表示，按当时收益率水平，计划在2027年底前不再发行母公司无担保债务，转向客户合约支持的项目融资、预付款和其他资本来源。”</td>
+</tr>
+<tr>
+<td>9</td>
+<td>“这些仍需到账和融资交割验证，却足以构成‘扩张全面停摆’的反证。” 预期资金被写成已实现反证。</td>
+<td>Neocloud融资机制的段落，对支持缺失的后果使用条件结构，先限定前提，再讨论结果。</td>
+<td>先交代这些安排早于换帅披露；以“结合已经投运的容量”修饰推论依据；“支持”宾语是基准判断，后句将到账与交割留作未来验证。</td>
+<td>“结合已经投运的容量，它们支持交付延续的基准判断；实际到账和融资交割仍待验证。”</td>
+</tr>
+<tr>
+<td>10</td>
+<td>“新增项目的速度则更依赖合同质量和资金匹配。” “质量”“匹配”把读者需要的机制压缩掉了。</td>
+<td>Neocloud融资机制的段落，解释支持为何改变借款条件；讨论供应商扩张的段落，再把产能投入与承诺、交付计划相连。</td>
+<td>主语“新增项目的投运速度”；用两个完整条件宾语说明“取决于”什么；资金时点具体写为“资金到账能否与设备付款匹配”，不用抽象名词收尾。</td>
+<td>“新增项目的投运速度将取决于合同能否支持融资，以及资金到账能否与设备付款匹配。订单总额无法替代这两个条件。”</td>
+</tr>
+<tr>
+<td>11</td>
+<td>“已交付→托管收入→现金租金”隐含同一状态可直接穿透整个付款链。</td>
+<td>客户关系与芯片分配的段落，对不同客户类型和支持渠道分层，Neocloud融资机制的段落则说明跨主体需要中间付款安排。</td>
+<td>把 485/590 的限定语放在比例之后立刻说明；不能把限制挪到文末，让读者先误读成全公司/终端起账。</td>
+<td>“这一比例仅对应该组合同，也不能证明CoreWeave已向最终客户起账。”</td>
+</tr>
+<tr>
+<td>12</td>
+<td>“并无客户单方面终止权，为已经交付的收入提供了约束。” 过宽法律含义加抽象“约束”。</td>
+<td>Neocloud融资机制的段落中，融资作用依赖支持工具的具体结构；工具名称之外必须说明作用对象。</td>
+<td>主语明确为相关租约；客户权利的限制写成“单方任意解约”；结果直接落到已交付容量的收入基础，随后指出现金限制另有来源。</td>
+<td>“相关租约采取固定收费、照付不议安排，客户没有单方任意解约权。已交付容量因此有较明确的收入基础，但建设资金的回收安排会影响当期现金。”</td>
+</tr>
+<tr>
+<td>13</td>
+<td>“每100美元抵扣前月费…约50美元…恢复100美元。” 分母范围与费用恒定假设离数字太远。</td>
+<td>讨论HBM价格与供应优先级的段落，在价格比较中明确每类买方与计量单位，数值具有对象、范围。</td>
+<td>“按达到上限的租约举例”前置；“符合抵扣条件的”紧挨月费；恢复至100前加“假定月费不变”；不把100写成公司全部收入。</td>
+<td>“每100美元符合抵扣条件的月费，托管商当期实收50美元；假定月费不变，抵扣耗尽后实收恢复至100美元。”</td>
+</tr>
+<tr>
+<td>14</td>
+<td>“Core Scientific的33亿美元有担保债券规定…两项条件均满足后…” 发行主体和全部租约范围缺失。</td>
+<td>Neocloud融资机制的段落，解释谁向谁提供支持、谁因此能借款，反映法律主体对金融传导的重要性。原文不包含本文这一债券，应以原始契约补证。</td>
+<td>先用“从中期现金分配看”划分期限；项目公司作主语；“全部…、全部…至少15天后”在摊还动作前，随后给首个合资格付款日和金额。</td>
+<td>“其项目公司Core Scientific Finance I LLC发行的33亿美元有担保债券规定，全部相关租约达到最终起租条件、全部收入抵扣耗尽至少15天后，在首个合资格半年度付款日开始摊还本金。”</td>
+</tr>
+<tr>
+<td>15</td>
+<td>“未来两季…沿‘融资已落实—已经交付—现金可支配’的顺序分化。” 概念压缩让读者自行填补主体与关系。</td>
+<td>客户关系与Neocloud融资支持的段落，逐项解释客户选择和融资机制，结论建立在动作链上；结尾关于竞争对手与供应链影响的总结则过宽，不宜学习。</td>
+<td>先分别点名 CRWV/CORZ 各自的约束；再解释估值用途，保留收入时间、现金回收和买入价格三个不同判断层次。</td>
+<td>“CoreWeave的收入增长仍有兑现基础，新增容量需要客户付款与外部融资配合；资本成本和交付延误会影响盈利与股权价值。Core Scientific已计费业务的交付风险较低，租金抵扣和偿债顺序则决定可供权益端使用的现金。”</td>
+</tr>
+<tr>
+<td>16</td>
+<td>“AlphaMap把这些差别保留…可以找到应更新的判断。” 工具成为主语，完成态范围也模糊。</td>
+<td>讨论加速器模型与芯片去向的段落，在提出数据结论的位置点出模型来源；产品名称服务于证据。客户关系与融资支持的正文依旧由交易主体承担动作。</td>
+<td>以“本案”限定已执行范围；研究Agent只承担补核财报合同的动作；末句以案例图说明出处与假设的对应，不声称生产图已自动回写或验证超额收益。</td>
+<td>“本案结合AlphaMap既有的设备、客户与托管关系，由研究Agent补核财报和合同，将容量购买、租金抵扣与债务偿付放入同一张证据图，并保留主体、期限和触发条件。”</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 每段写作中的位置规则</h2>
+<p>这些是本篇实际适用的修订原则，不要求所有句子排成同一模板。</p>
+<ul>
+<li><strong>影响对象放在名词前，时间与假设贴近谓语。</strong> “依赖尚未到位的项目融资的运营商”先告诉读者哪类公司受影响；“在替代资金不足时”再限定交付后果。不能把“哪些公司”“为什么”都留给标题后的口号。</li>
+<li><strong>动作选能进入财务模型的动词。</strong> 购置、支付、抵扣、计费、偿还、追加、延期、覆盖，比“受影响、实现价值、加速分化、产生赋能”更容易检验。</li>
+<li><strong>不要让法律定语被剪掉。</strong> “母公司无担保”“全部相关租约”“符合抵扣条件的”“单方任意”都是经济结论的一部分，无法为了短句而删除。</li>
+<li><strong>评价词需要比较对象。</strong> “高”“低”“稳健”“敏感”后面应说明相对于什么；没有统一模型测出的弹性，就不能说传导“不会同幅度”发生。</li>
+<li><strong>对预测承担判断，同时保留正确归属。</strong> 本文“我们预计/基准判断”代表研究意见；“公司预计/管理层计划”代表资金来源或行为计划；实际经营数据用披露期间和明确量纲。</li>
+<li><strong>结论留在完整句中。</strong> 资金、建设、计费、收现、偿债不是同义词，也不必每次压缩成三项并列。需要用相邻两句把依赖关系讲完整时，就写两句。</li>
+</ul>
+<h2>5. CFA与CQF框架合并审阅结果</h2>
+<p>两轮审阅的必要修订均已执行。下表汇总实际修订及其对投资判断的影响；财务来源与计算式见正式研究稿的来源1–8。</p>
+<table>
+<thead>
+<tr>
+<th>审阅维度</th>
+<th>已执行的必要修订</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CFA与CQF：现金流概念</td>
+<td>全文统一为股权端或权益端可用现金；收入确认、合同收款、自由现金流与实际股东分红分别处理。</td>
+<td>删除未经建模的分红时点推断。</td>
+</tr>
+<tr>
+<td>CFA与CQF：融资计划与事实</td>
+<td>母公司无担保债发行保留管理层计划、当时利率及2027年底期限；预付款和贷款覆盖比例保留预期属性及到账、交割条件。</td>
+<td>基准判断有明确方向，同时保留未来验证点。</td>
+</tr>
+<tr>
+<td>CFA与CQF：计算口径</td>
+<td>23.9%现金覆盖率、179.20亿美元历史差额和213.46亿美元净融资使用同一期间；485/590约82.2%仅对应该组合同，105MW称尚未计费；3.795亿美元为初始年度本金摊还额。</td>
+<td>历史现金差额没有被误写为未筹资缺口，计费比例没有被误写为全公司完成率。</td>
+</tr>
+<tr>
+<td>CFA：债券主体与触发条件</td>
+<td>写明Core Scientific Finance I LLC、全部相关租约最终起租、全部收入抵扣耗尽、至少15天及首个合资格半年度付款日。</td>
+<td>将中期现金释放对应到真实偿债义务。</td>
+</tr>
+<tr>
+<td>CFA与CQF：租金抵扣示例</td>
+<td>100美元分母限定为符合抵扣条件的月费，按50%上限、费用不变举例，并排除电力代收代付。</td>
+<td>示例说明合同收款机制，不冒充全组合GAAP收入到权益现金的换算。</td>
+</tr>
+<tr>
+<td>CQF：合同保护与反证</td>
+<td>解约权限定为客户单方任意解约；融资变差只有在替代资金不足时才下调交付预期；删除未经测量的跨公司同幅度弹性结论。</td>
+<td>传导保持法律边界，并纳入资金替代路径。</td>
+</tr>
+<tr>
+<td>CQF：研究期限</td>
+<td>未来两个季度验证资金与交付；2029年11月起还明确为到期表编制假设，中期摊还取决于合同条件。</td>
+<td>长期现金分配没有被误作两季度内催化剂。</td>
+</tr>
+<tr>
+<td>CFA与CQF：证据与研究贡献</td>
+<td>电话会定位改为PDF第2、6页；研究图表述限定为本案结合已有关系与本轮核验所完成的结果。</td>
+<td>来源与判断相对应，能力表述与交付内容一致。</td>
+</tr>
+</tbody>
+</table>
+<p>本表体现独立分析审阅的结果，不构成外部持证人士认证或证券收益验证。</p>
+<h2>6. 标题选择</h2>
+<p>采用：<strong>NVIDIA 换帅之后，CoreWeave 的扩张取决于融资兑现</strong>。</p>
+<p>该标题点明事件、公司和决定变量。没有写“NVIDIA支持延续”，因为那样可能把仍有效的存量合同与尚未公布的追加支持合在一起。开篇则明确给出当前证据最支持的交付延续判断，读者不会只得到“存在风险”的空话。</p>
+<p>标题不取“现金先归谁”：本文能证明的是抵扣、储备和本金偿付顺序，尚未形成上市公司分红预测；这一表述容易模糊现金属于谁与现金何时可自由使用的区别。</p>
+<h2>7. 原创与引用边界</h2>
+<p>本文件只提取 SA 同类投资问题中可观察的论证结构，没有模仿作者的个人口吻、政治判断、人物评价或独特比喻。正文英文短语逐字引文共18词，集中在第二节；文章题名另作为文献信息列示。所有财务数字、法律条件与公司结论来自本案已核验披露及独立计算。用户转发的5,931字符中文材料仍标为二次解读，其统计不用于冒充SA英文原文分析。</p></main></body></html>

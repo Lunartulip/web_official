@@ -1,0 +1,151 @@
+{
+  "cutoff": "2026-11-18",
+  "type": "curated_research_view",
+  "production_database_write": false,
+  "paths": [
+    {
+      "first": [
+        "CoreWeave",
+        "剩余容量采购支持 [2]"
+      ],
+      "second": [
+        "Core Scientific",
+        "起租、抵扣与回款 [7]"
+      ],
+      "enfirst": [
+        "CoreWeave",
+        "Residual-capacity purchase [2]"
+      ],
+      "ensecond": [
+        "Core Scientific",
+        "Lease starts, credits, receipts [7]"
+      ],
+      "theme": "客户融资",
+      "entheme": "Customer capital",
+      "refs": [
+        2,
+        7
+      ]
+    },
+    {
+      "first": [
+        "SK hynix / Micron / Samsung",
+        "内存供货与采购安排 [44,52]"
+      ],
+      "second": [
+        "HBM扩产回报",
+        "合格位元、量价与库存资本"
+      ],
+      "enfirst": [
+        "SK hynix / Micron / Samsung",
+        "Memory sourcing and commitments [44,52]"
+      ],
+      "ensecond": [
+        "HBM expansion returns",
+        "Qualified bits, pricing, inventory capital"
+      ],
+      "theme": "HBM",
+      "entheme": "HBM",
+      "refs": [
+        44,
+        52
+      ],
+      "inference": true
+    },
+    {
+      "first": [
+        "Kinsus / Amkor / SPIL",
+        "基板、封装及扩产资金 [53]"
+      ],
+      "second": [
+        "2028—2029新增制造能力",
+        "建设、爬坡与交付排期 [53]"
+      ],
+      "enfirst": [
+        "Kinsus / Amkor / SPIL",
+        "Substrates, packaging, funding [53]"
+      ],
+      "ensecond": [
+        "Planned 2028–2029 capacity",
+        "Construction, ramp, delivery dates [53]"
+      ],
+      "theme": "制造供应",
+      "entheme": "Manufacturing",
+      "refs": [
+        53
+      ]
+    },
+    {
+      "first": [
+        "NVIDIA Photonics → Lambda",
+        "CPO生产部署 [51]"
+      ],
+      "second": [
+        "同组scale-out连接的器件",
+        "端口 × 采用率 × 合格份额 × 价值"
+      ],
+      "enfirst": [
+        "NVIDIA Photonics → Lambda",
+        "Production CPO deployment [51]"
+      ],
+      "ensecond": [
+        "Comparable scale-out components",
+        "Ports × adoption × share × value"
+      ],
+      "theme": "光通信",
+      "entheme": "Optical links",
+      "refs": [
+        51
+      ],
+      "inference": true
+    },
+    {
+      "first": [
+        "中国数据中心计算销售",
+        "本季Hopper 24亿美元 [52]"
+      ],
+      "second": [
+        "下一季收入预测",
+        "中国计算收入按零计入 [50]"
+      ],
+      "enfirst": [
+        "China Data Center compute sales",
+        "Q3 Hopper sales: $2.4bn [52]"
+      ],
+      "ensecond": [
+        "Next-quarter revenue forecast",
+        "Zero China compute in Q4 guide [50]"
+      ],
+      "theme": "地区销售",
+      "entheme": "Regional sales",
+      "refs": [
+        50,
+        52
+      ]
+    },
+    {
+      "first": [
+        "Nemotron for Science",
+        "开放模型及科学数据 [55]"
+      ],
+      "second": [
+        "科学研究工作流",
+        "应用采用 → GPU使用场景"
+      ],
+      "enfirst": [
+        "Nemotron for Science",
+        "Open model and science data [55]"
+      ],
+      "ensecond": [
+        "Scientific workflows",
+        "Adoption → potential GPU use cases"
+      ],
+      "theme": "开放生态",
+      "entheme": "Open ecosystem",
+      "refs": [
+        55
+      ],
+      "inference": true
+    }
+  ]
+}

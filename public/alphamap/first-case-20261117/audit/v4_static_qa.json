@@ -1,0 +1,41 @@
+{
+  "status": "pass",
+  "files": {
+    "AlphaMap_First_Case_20261117.html": {
+      "figures": 24,
+      "citation_links": 328,
+      "duplicate_ids": 0,
+      "missing_citation_targets": 0,
+      "placeholders": 0
+    },
+    "AlphaMap_First_Case_20261117.zh.html": {
+      "figures": 12,
+      "citation_links": 164,
+      "duplicate_ids": 0,
+      "missing_citation_targets": 0,
+      "placeholders": 0
+    },
+    "AlphaMap_First_Case_20261117.en.html": {
+      "figures": 12,
+      "citation_links": 164,
+      "duplicate_ids": 0,
+      "missing_citation_targets": 0,
+      "placeholders": 0
+    },
+    "AlphaMap_First_Case_WeChat_20261117.html": {
+      "figures": 8,
+      "citation_links": 83,
+      "duplicate_ids": 0,
+      "missing_citation_targets": 0,
+      "placeholders": 0
+    },
+    "AlphaMap_First_Case_LinkedIn_20261117.html": {
+      "figures": 8,
+      "citation_links": 83,
+      "duplicate_ids": 0,
+      "missing_citation_targets": 0,
+      "placeholders": 0
+    }
+  },
+  "rendering": "Static WeasyPrint render inspected. Chromium process blocked by runtime socket permissions; no live-browser render certification."
+}

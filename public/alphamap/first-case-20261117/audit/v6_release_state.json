@@ -1,0 +1,24 @@
+{
+  "publication_version": "1.4.0",
+  "date": "2026-11-18",
+  "model_version": "4.1",
+  "updated_arguments": [
+    "zero-context opening",
+    "funding and delivery",
+    "memory and packaging contracts",
+    "CPO comparable-port illustration",
+    "China revenue bridge",
+    "open models"
+  ],
+  "numeric_model_status": "conditional_physical_scenarios_retained",
+  "global_most_likely_status": "research_incomplete",
+  "external_revision_adjudication": "research_incomplete",
+  "website_pr_sync": "not_yet_synced_this_revision",
+  "publication": "draft_unpublished",
+  "skill_factory": "generic_update_written; archive_upload_blocked_by_auto_review",
+  "reviews": [
+    "v6_cfa_review.md",
+    "v6_cqf_review.md",
+    "v6_sentence_edits.md"
+  ]
+}

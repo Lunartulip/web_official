@@ -1,0 +1,17 @@
+{
+  "publication_version": "1.3.0",
+  "canonical_sha256": {
+    "zh": "9f32a2e451d67a86e4789b297907dcadff72f440444cf0803771aabec6685417",
+    "en": "6f347d327d023aadc1e50885db52b740588e521b584e0e7922a6d569d0c019b2"
+  },
+  "scope": "CFA/CQF-style independent AI review; no external certification",
+  "necessary_atomic_edits": [
+    "Financing-specific condition does not exclude other causes of procurement downgrades",
+    "A funded replacement loan can still depress earnings through higher interest",
+    "Broadcom $63bn is committed financing; drawdown remains separate",
+    "CORZ current colocation concentration is distinct from future contract capacity",
+    "Exogenous 2.4EB policy sensitivity is not an identified event effect"
+  ],
+  "model_changed": false,
+  "review_status": "pass_after_atomic_edits"
+}

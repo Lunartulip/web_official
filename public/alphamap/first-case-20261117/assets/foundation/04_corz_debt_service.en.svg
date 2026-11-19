@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="489.6pt" viewBox="0 0 864 489.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-16T23:46:15.498159</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 489.6 
+L 864 489.6 
+L 864 0 
+L 0 0 
+z
+" style="fill: #f6f3eb"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 86.4 342.72 
+L 794.88 342.72 
+L 794.88 122.4 
+L 86.4 122.4 
+z
+" style="fill: #f6f3eb"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'; text-anchor: middle" x="168.496594" y="355.77125" transform="rotate(-0 168.496594 355.77125)">2027</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'; text-anchor: middle" x="349.925531" y="355.77125" transform="rotate(-0 349.925531 355.77125)">2028</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'; text-anchor: middle" x="531.354469" y="355.77125" transform="rotate(-0 531.354469 355.77125)">2029</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'; text-anchor: middle" x="712.783406" y="355.77125" transform="rotate(-0 712.783406 355.77125)">2030</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_5">
+      <path d="M 86.4 342.72 
+L 794.88 342.72 
+" clip-path="url(#pb689ed1380)" style="fill: none; stroke: #dddcd3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_5">
+      <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'; text-anchor: end" x="82.9" y="347.495625" transform="rotate(-0 82.9 347.495625)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_7">
+      <path d="M 86.4 282.358356 
+L 794.88 282.358356 
+" clip-path="url(#pb689ed1380)" style="fill: none; stroke: #dddcd3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_6">
+      <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'; text-anchor: end" x="82.9" y="287.133981" transform="rotate(-0 82.9 287.133981)">200</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_9">
+      <path d="M 86.4 221.996712 
+L 794.88 221.996712 
+" clip-path="url(#pb689ed1380)" style="fill: none; stroke: #dddcd3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_7">
+      <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'; text-anchor: end" x="82.9" y="226.772337" transform="rotate(-0 82.9 226.772337)">400</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_11">
+      <path d="M 86.4 161.635068 
+L 794.88 161.635068 
+" clip-path="url(#pb689ed1380)" style="fill: none; stroke: #dddcd3; stroke-width: 0.6; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_8">
+      <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'; text-anchor: end" x="82.9" y="166.410693" transform="rotate(-0 82.9 166.410693)">600</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 118.603636 342.72 
+L 218.389552 342.72 
+L 218.389552 265.532548 
+L 118.603636 265.532548 
+z
+" clip-path="url(#pb689ed1380)" style="fill: #315f4e"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 300.032574 342.72 
+L 399.818489 342.72 
+L 399.818489 265.532548 
+L 300.032574 265.532548 
+z
+" clip-path="url(#pb689ed1380)" style="fill: #315f4e"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 481.461511 342.72 
+L 581.247426 342.72 
+L 581.247426 265.532548 
+L 481.461511 265.532548 
+z
+" clip-path="url(#pb689ed1380)" style="fill: #315f4e"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 662.890448 342.72 
+L 762.676364 342.72 
+L 762.676364 272.189966 
+L 662.890448 272.189966 
+z
+" clip-path="url(#pb689ed1380)" style="fill: #315f4e"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 118.603636 265.532548 
+L 218.389552 265.532548 
+L 218.389552 265.532548 
+L 118.603636 265.532548 
+z
+" clip-path="url(#pb689ed1380)" style="fill: #c78a49"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 300.032574 265.532548 
+L 399.818489 265.532548 
+L 399.818489 265.532548 
+L 300.032574 265.532548 
+z
+" clip-path="url(#pb689ed1380)" style="fill: #c78a49"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 481.461511 265.532548 
+L 581.247426 265.532548 
+L 581.247426 208.264438 
+L 481.461511 208.264438 
+z
+" clip-path="url(#pb689ed1380)" style="fill: #c78a49"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 662.890448 272.189966 
+L 762.676364 272.189966 
+L 762.676364 157.653747 
+L 662.890448 157.653747 
+z
+" clip-path="url(#pb689ed1380)" style="fill: #c78a49"/>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'Noto Sans CJK JP'; text-anchor: middle; fill: #20332d" x="168.496594" y="261.005425" transform="rotate(-0 168.496594 261.005425)">255.8</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'Noto Sans CJK JP'; text-anchor: middle; fill: #20332d" x="349.925531" y="261.005425" transform="rotate(-0 349.925531 261.005425)">255.8</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'Noto Sans CJK JP'; text-anchor: middle; fill: #20332d" x="531.354469" y="203.737315" transform="rotate(-0 531.354469 203.737315)">445.5</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'Noto Sans CJK JP'; text-anchor: middle; fill: #20332d" x="712.783406" y="153.126623" transform="rotate(-0 712.783406 153.126623)">613.2</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_11">
+     <path d="M 97.2 142.75125 
+L 121.2 142.75125 
+L 121.2 134.35125 
+L 97.2 134.35125 
+z
+" style="fill: #315f4e"/>
+    </g>
+    <g id="text_13">
+     <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'; text-anchor: start" x="130.8" y="142.75125" transform="rotate(-0 130.8 142.75125)">Cash coupon</text>
+    </g>
+    <g id="patch_12">
+     <path d="M 227.506875 142.75125 
+L 251.506875 142.75125 
+L 251.506875 134.35125 
+L 227.506875 134.35125 
+z
+" style="fill: #c78a49"/>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'; text-anchor: start" x="261.106875" y="142.75125" transform="rotate(-0 261.106875 142.75125)">Principal</text>
+    </g>
+   </g>
+  </g>
+  <g id="text_15">
+   <text style="font-weight: 700; font-size: 21px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #20332d" x="51.84" y="43.980656" transform="rotate(-0 51.84 43.980656)">Once amortization begins, principal absorbs part of the cash-rent uplift</text>
+  </g>
+  <g id="text_16">
+   <!-- $3.3bn project secured notes · US$ million · assumed first installment November 15, 2029 -->
+   <g style="fill: #64716a" transform="translate(51.84 104.227312)">
+    <text>
+     <tspan x="0" y="-0.828125" style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">3</tspan>
+     <tspan x="6.998535" y="-0.828125" style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">.</tspan>
+     <tspan x="10.495117" y="-0.828125" style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">3</tspan>
+     <tspan x="144.170898" y="-0.828125" style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">·</tspan>
+     <tspan x="17.493652" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">b</tspan>
+     <tspan x="24.476074" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">n</tspan>
+     <tspan x="31.447754" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">p</tspan>
+     <tspan x="38.430176" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">r</tspan>
+     <tspan x="42.952637" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">o</tspan>
+     <tspan x="49.682617" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">j</tspan>
+     <tspan x="52.73877" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">e</tspan>
+     <tspan x="59.506348" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">c</tspan>
+     <tspan x="65.554199" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">t</tspan>
+     <tspan x="69.867188" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">s</tspan>
+     <tspan x="75.598145" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">e</tspan>
+     <tspan x="82.365723" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">c</tspan>
+     <tspan x="88.413574" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">u</tspan>
+     <tspan x="95.385254" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">r</tspan>
+     <tspan x="99.907715" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">e</tspan>
+     <tspan x="106.675293" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">d</tspan>
+     <tspan x="113.657715" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">n</tspan>
+     <tspan x="120.629395" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">o</tspan>
+     <tspan x="127.359375" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">t</tspan>
+     <tspan x="131.672363" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">e</tspan>
+     <tspan x="138.439941" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">s</tspan>
+     <tspan x="147.66748" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">U</tspan>
+     <tspan x="155.71875" y="-0.828125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #64716a">S</tspan>
+     <tspan x="162.701172" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a"> </tspan>
+     <tspan x="165.165161" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">m</tspan>
+     <tspan x="175.351166" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">i</tspan>
+     <tspan x="178.37616" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">l</tspan>
+     <tspan x="181.500153" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">l</tspan>
+     <tspan x="184.624146" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">i</tspan>
+     <tspan x="187.649139" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">o</tspan>
+     <tspan x="194.31514" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">n</tspan>
+     <tspan x="201.025131" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a"> </tspan>
+     <tspan x="203.48912" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">·</tspan>
+     <tspan x="209.66011" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a"> </tspan>
+     <tspan x="212.1241" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">a</tspan>
+     <tspan x="218.317093" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">s</tspan>
+     <tspan x="223.465088" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">s</tspan>
+     <tspan x="228.613083" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">u</tspan>
+     <tspan x="235.290085" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">m</tspan>
+     <tspan x="245.476089" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">e</tspan>
+     <tspan x="251.570084" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">d</tspan>
+     <tspan x="258.390076" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a"> </tspan>
+     <tspan x="260.854065" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">f</tspan>
+     <tspan x="264.429062" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">i</tspan>
+     <tspan x="267.454056" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">r</tspan>
+     <tspan x="271.722046" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">s</tspan>
+     <tspan x="276.870041" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">t</tspan>
+     <tspan x="281.017044" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a"> </tspan>
+     <tspan x="283.481033" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">i</tspan>
+     <tspan x="286.506027" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">n</tspan>
+     <tspan x="293.216019" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">s</tspan>
+     <tspan x="298.364014" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">t</tspan>
+     <tspan x="302.511017" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">a</tspan>
+     <tspan x="308.70401" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">l</tspan>
+     <tspan x="311.828003" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">l</tspan>
+     <tspan x="314.951996" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">m</tspan>
+     <tspan x="325.138" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">e</tspan>
+     <tspan x="331.231995" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">n</tspan>
+     <tspan x="337.941986" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">t</tspan>
+     <tspan x="342.088989" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a"> </tspan>
+     <tspan x="344.552979" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">N</tspan>
+     <tspan x="352.505981" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">o</tspan>
+     <tspan x="359.171982" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">v</tspan>
+     <tspan x="364.902985" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">e</tspan>
+     <tspan x="370.996979" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">m</tspan>
+     <tspan x="381.182983" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">b</tspan>
+     <tspan x="387.980988" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">e</tspan>
+     <tspan x="394.074982" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">r</tspan>
+     <tspan x="398.342972" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a"> </tspan>
+     <tspan x="400.806961" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">1</tspan>
+     <tspan x="406.911957" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">5</tspan>
+     <tspan x="413.016953" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">,</tspan>
+     <tspan x="416.074951" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a"> </tspan>
+     <tspan x="418.53894" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">2</tspan>
+     <tspan x="424.643936" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">0</tspan>
+     <tspan x="430.748932" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">2</tspan>
+     <tspan x="436.853928" y="-0.828125" style="font-size: 11px; font-family: 'Noto Sans CJK JP'; fill: #64716a">9</tspan>
+    </text>
+   </g>
+  </g>
+  <g id="text_17">
+   <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #64716a" x="51.84" y="470.016" transform="rotate(-0 51.84 470.016)">LUNARTULIP RESEARCH  /  ALPHAMAP CASE 01</text>
+  </g>
+  <g id="text_18">
+   <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'; text-anchor: end; fill: #64716a" x="812.16" y="470.016" transform="rotate(-0 812.16 470.016)">17 NOV 2026</text>
+  </g>
+  <g id="text_19">
+   <text style="font-weight: 700; font-size: 12px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #20332d" x="51.84" y="386.784" transform="rotate(-0 51.84 386.784)">A further $2.731bn of remaining principal matures in May 2031.</text>
+  </g>
+  <g id="text_20">
+   <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #64716a" x="51.84" y="416.16" transform="rotate(-0 51.84 416.16)">Uses the 10-Q’s contingent timing assumption; no refinancing, prepayment or amendments; coupon declines with principal.</text>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #64716a" x="51.84" y="440.64" transform="rotate(-0 51.84 440.64)">来源 / Source: Core Scientific Q3 2026 10-Q and indenture; LunarTulip debt-payment calculation, not company FCF.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pb689ed1380">
+   <rect x="86.4" y="122.4" width="708.48" height="220.32"/>
+  </clipPath>
+ </defs>
+</svg>

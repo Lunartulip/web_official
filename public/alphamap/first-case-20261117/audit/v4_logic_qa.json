@@ -1,0 +1,7 @@
+{
+  "status": "pass",
+  "computedScenarioChecks": 54,
+  "fieldsPerCase": 4,
+  "languageState": "pass",
+  "scope": "Exact delivered JS executed against DOM adapters and frozen-model oracle; not a browser layout test."
+}

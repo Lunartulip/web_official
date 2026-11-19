@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="489.6pt" viewBox="0 0 864 489.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-16T23:46:14.488659</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 489.6 
+L 864 489.6 
+L 864 0 
+L 0 0 
+z
+" style="fill: #f6f3eb"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 64.8 279.072 
+L 668.501695 279.072 
+L 668.501695 181.152 
+L 64.8 181.152 
+z
+" clip-path="url(#p691ec23100)" style="fill: #315f4e"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 668.501695 279.072 
+L 799.2 279.072 
+L 799.2 181.152 
+L 668.501695 181.152 
+z
+" clip-path="url(#p691ec23100)" style="fill: #ded7c9"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 19px; font-family: 'Noto Sans CJK JP'; fill: #ffffff" transform="translate(325.278347 224.097312)">~485 MW</text>
+    <text style="font-weight: 700; font-size: 19px; font-family: 'Noto Sans CJK JP'; fill: #ffffff" transform="translate(336.659051 246.671687)">Billing</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'; fill: #20332d" transform="translate(709.046472 226.2825)">~105 MW</text>
+    <text style="font-size: 12px; font-family: 'Noto Sans CJK JP'; fill: #20332d" transform="translate(694.753347 240.49275)">Not yet billing</text>
+   </g>
+  </g>
+  <g id="text_3">
+   <text style="font-weight: 700; font-size: 21px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #20332d" x="51.84" y="43.980656" transform="rotate(-0 51.84 43.980656)">About 82% of Core Scientific’s CoreWeave contract book was billing</text>
+  </g>
+  <g id="text_4">
+   <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #64716a" x="51.84" y="104.371688" transform="rotate(-0 51.84 104.371688)">As of November 5, 2026 · approximately 590 MW critical IT load · CoreWeave leases only</text>
+  </g>
+  <g id="text_5">
+   <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #64716a" x="51.84" y="470.016" transform="rotate(-0 51.84 470.016)">LUNARTULIP RESEARCH  /  ALPHAMAP CASE 01</text>
+  </g>
+  <g id="text_6">
+   <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'; text-anchor: end; fill: #64716a" x="812.16" y="470.016" transform="rotate(-0 812.16 470.016)">17 NOV 2026</text>
+  </g>
+  <g id="text_7">
+   <text style="font-weight: 700; font-size: 23px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #315f4e" x="64.8" y="332.928" transform="rotate(-0 64.8 332.928)">485 / 590 ≈ 82.2%</text>
+  </g>
+  <g id="text_8">
+   <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #64716a" x="64.8" y="376.992" transform="rotate(-0 64.8 376.992)">The 590 MW denominator excludes the company’s other signed capacity.</text>
+  </g>
+  <g id="text_9">
+   <text style="font-size: 11px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #64716a" x="64.8" y="401.472" transform="rotate(-0 64.8 401.472)">Not yet billing does not necessarily mean undelivered; hosting billing is not end-customer billing.</text>
+  </g>
+  <g id="text_10">
+   <text style="font-size: 10px; font-family: 'Noto Sans CJK JP'; text-anchor: start; fill: #64716a" x="64.8" y="440.64" transform="rotate(-0 64.8 440.64)">来源 / Source: Core Scientific Q3 2026 presentation, slide 9; LunarTulip calculations.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p691ec23100">
+   <rect x="64.8" y="176.256" width="734.4" height="107.712"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,283 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2042.5 885.0" role="img" aria-label="Shared customers, distinct support and future leases"><rect width="100%" height="100%" fill="#f6f3eb"/><g font-family="Noto Sans CJK SC,Arial,sans-serif" fill="#20332d"><text x="38" y="30" font-size="14" fill="#64716a" font-weight="700">LUNARTULIP RESEARCH / 01</text><text x="38" y="73" font-size="27" font-weight="700">Shared customers, distinct support and future leases</text><text x="38" y="107" font-size="15" fill="#64716a">Solid: existing AlphaMap relationship   Dashed: public-source supplement</text></g><g transform="translate(0,145)"><g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(36 609)">
+<title>G</title>
+<polygon fill="#f6f3eb" stroke="transparent" points="-36,36 -36,-609 2006.5,-609 2006.5,36 -36,36"/>
+<!-- AMD&#45;&gt;Core Scientific -->
+<g id="edge26" class="edge">
+<title>AMD&#45;&gt;Core Scientific</title>
+<path fill="none" stroke="#ad7b38" stroke-width="1.5" stroke-dasharray="5,2" d="M67.88,-267.97C52.25,-250.42 30.5,-226 30.5,-226 30.5,-226 30.5,-213 30.5,-213 30.5,-213 43.52,-193.63 54.71,-176.99"/>
+<polygon fill="#ad7b38" stroke="#ad7b38" stroke-width="1.5" points="56.84,-178.21 58.72,-171.03 52.78,-175.47 56.84,-178.21"/>
+<text text-anchor="middle" x="126" y="-216.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#ad7b38">Conditional support: 152 MW only</text>
+</g>
+<!-- Akela&#45;&gt;Fluidstack -->
+<g id="edge12" class="edge">
+<title>Akela&#45;&gt;Fluidstack</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" d="M1315.15,-267.95C1300.06,-246.49 1276.5,-213 1276.5,-213 1276.5,-213 1155.13,-185.01 1078.88,-167.42"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="1079.02,-164.94 1071.64,-165.76 1077.92,-169.72 1079.02,-164.94"/>
+<text text-anchor="middle" x="1324.5" y="-216.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">Project leases</text>
+</g>
+<!-- Applied Digital&#45;&gt;CoreWeave -->
+<g id="edge10" class="edge">
+<title>Applied Digital&#45;&gt;CoreWeave</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" d="M388.52,-171.03C398.55,-188.58 412.5,-213 412.5,-213 412.5,-213 412.5,-226 412.5,-226 412.5,-226 386.5,-268 386.5,-268 386.5,-268 386.5,-305 386.5,-305 386.5,-305 484.5,-360 484.5,-360 484.5,-360 613.21,-387.95 694.2,-405.54"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="694.03,-408.01 701.39,-407.1 695.07,-403.22 694.03,-408.01"/>
+<text text-anchor="middle" x="429" y="-283.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">Project hosting</text>
+</g>
+<!-- Broadcom&#45;&gt;Financing SPV -->
+<g id="edge21" class="edge">
+<title>Broadcom&#45;&gt;Financing SPV</title>
+<path fill="none" stroke="#ad7b38" stroke-width="1.5" stroke-dasharray="5,2" d="M1790.16,-305.1C1721.5,-329.6 1597.46,-373.85 1525.44,-399.54"/>
+<polygon fill="#ad7b38" stroke="#ad7b38" stroke-width="1.5" points="1524.4,-397.31 1518.63,-401.97 1526.05,-401.93 1524.4,-397.31"/>
+<text text-anchor="middle" x="1742.5" y="-350.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#ad7b38">Residual support = first lien</text>
+</g>
+<!-- Broadcom&#45;&gt;Financing SPV -->
+<g id="edge22" class="edge">
+<title>Broadcom&#45;&gt;Financing SPV</title>
+<path fill="none" stroke="#52748a" stroke-width="1.5" stroke-dasharray="5,2" d="M1837.32,-305.05C1834.66,-326.51 1830.5,-360 1830.5,-360 1830.5,-360 1651.81,-389.45 1545.86,-406.91"/>
+<polygon fill="#52748a" stroke="#52748a" stroke-width="1.5" points="1545.19,-404.54 1538.68,-408.1 1545.98,-409.38 1545.19,-404.54"/>
+<text text-anchor="middle" x="1901" y="-350.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#52748a">XPU / networking supply</text>
+</g>
+<!-- Core Scientific&#45;&gt;AMD -->
+<g id="edge24" class="edge">
+<title>Core Scientific&#45;&gt;AMD</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" stroke-dasharray="5,2" d="M118.23,-171.03C166.02,-188.58 232.5,-213 232.5,-213 232.5,-213 232.5,-226 232.5,-226 232.5,-226 164.74,-253.06 120.61,-270.68"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="119.6,-268.44 114.01,-273.32 121.42,-272.99 119.6,-268.44"/>
+<text text-anchor="middle" x="317" y="-216.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">377 MW direct lease / pending</text>
+</g>
+<!-- Core Scientific&#45;&gt;CoreWeave -->
+<g id="edge16" class="edge">
+<title>Core Scientific&#45;&gt;CoreWeave</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" stroke-dasharray="5,2" d="M141.36,-165.83C241.54,-183.26 412.5,-213 412.5,-213 412.5,-213 634.54,-345.52 722.88,-398.24"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="721.73,-400.41 729,-401.89 724.24,-396.2 721.73,-400.41"/>
+<text text-anchor="middle" x="605" y="-283.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">Project hosting</text>
+</g>
+<!-- Core Scientific&#45;&gt;Undisclosed Neocloud -->
+<g id="edge25" class="edge">
+<title>Core Scientific&#45;&gt;Undisclosed Neocloud</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" stroke-dasharray="5,2" d="M141.16,-159.28C203.5,-164.38 284.5,-171 284.5,-171 284.5,-171 892.5,-213 892.5,-213 892.5,-213 1292.5,-347 1292.5,-347 1292.5,-347 1364.5,-481 1364.5,-481 1364.5,-481 1364.5,-494 1364.5,-494 1364.5,-494 1324.46,-515.46 1292.48,-532.61"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="1291.22,-530.5 1286.2,-535.97 1293.53,-534.82 1291.22,-530.5"/>
+<text text-anchor="middle" x="1366" y="-350.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">152 MW lease / pending</text>
+</g>
+<!-- CoreWeave&#45;&gt;Microsoft -->
+<g id="edge6" class="edge">
+<title>CoreWeave&#45;&gt;Microsoft</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" d="M765.87,-439.03C773.24,-456.58 783.5,-481 783.5,-481 783.5,-481 783.5,-494 783.5,-494 783.5,-494 775.64,-512.7 768.74,-529.13"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="766.32,-528.57 765.87,-535.97 770.84,-530.47 766.32,-528.57"/>
+<text text-anchor="middle" x="831" y="-484.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">Compute service</text>
+</g>
+<!-- CoreWeave&#45;&gt;NVIDIA -->
+<!-- CoreWeave&#45;&gt;OpenAI -->
+<g id="edge7" class="edge">
+<title>CoreWeave&#45;&gt;OpenAI</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" d="M815.78,-429.58C848.27,-434.17 882.5,-439 882.5,-439 882.5,-439 1258.5,-481 1258.5,-481 1258.5,-481 1258.5,-494 1258.5,-494 1258.5,-494 1129.43,-524.6 1056.4,-541.91"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="1055.76,-539.54 1049.51,-543.54 1056.89,-544.31 1055.76,-539.54"/>
+<text text-anchor="middle" x="1306" y="-484.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">Compute service</text>
+</g>
+<!-- Financing SPV&#45;&gt;Anthropic -->
+<g id="edge23" class="edge">
+<title>Financing SPV&#45;&gt;Anthropic</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" stroke-dasharray="5,2" d="M1471.1,-439.1C1473.19,-462.12 1476.87,-502.57 1479.24,-528.69"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="1476.83,-529.22 1479.91,-535.97 1481.71,-528.78 1476.83,-529.22"/>
+<text text-anchor="middle" x="1529.5" y="-484.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">Equipment leasing</text>
+</g>
+<!-- Google&#45;&gt;Akela -->
+<g id="edge13" class="edge">
+<title>Google&#45;&gt;Akela</title>
+<path fill="none" stroke="#ad7b38" stroke-width="1.5" d="M1623.46,-286.5C1558.77,-286.5 1433.81,-286.5 1368.9,-286.5"/>
+<polygon fill="#ad7b38" stroke="#ad7b38" stroke-width="1.5" points="1368.67,-284.05 1361.67,-286.5 1368.67,-288.95 1368.67,-284.05"/>
+<text text-anchor="middle" x="1492.5" y="-292.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#ad7b38">Conditional credit support</text>
+</g>
+<!-- IREN&#45;&gt;Microsoft -->
+<g id="edge9" class="edge">
+<title>IREN&#45;&gt;Microsoft</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" d="M925.88,-439.05C911.67,-460.51 889.5,-494 889.5,-494 889.5,-494 841.46,-515.82 803.56,-533.03"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="802.46,-530.84 797.1,-535.97 804.48,-535.31 802.46,-530.84"/>
+<text text-anchor="middle" x="954.5" y="-484.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">Phased GPU service</text>
+</g>
+<!-- IREN&#45;&gt;NVIDIA -->
+<g id="edge17" class="edge">
+<title>IREN&#45;&gt;NVIDIA</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" stroke-dasharray="5,2" d="M968.66,-407.46C1013.66,-390.07 1091.5,-360 1091.5,-360 1091.5,-360 1091.5,-347 1091.5,-347 1091.5,-347 896.51,-312.16 804.95,-295.8"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="805.33,-293.38 798.01,-294.56 804.47,-298.2 805.33,-293.38"/>
+<text text-anchor="middle" x="1186.5" y="-350.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">Cloud&#45;services customer contract</text>
+</g>
+<!-- Micron&#45;&gt;NVIDIA -->
+<g id="edge19" class="edge">
+<title>Micron&#45;&gt;NVIDIA</title>
+<path fill="none" stroke="#52748a" stroke-width="1.5" d="M610.99,-171.05C629.93,-192.51 659.5,-226 659.5,-226 659.5,-226 694.62,-247.11 723.02,-264.18"/>
+<polygon fill="#52748a" stroke="#52748a" stroke-width="1.5" points="722.07,-266.46 729.33,-267.97 724.59,-262.26 722.07,-266.46"/>
+<text text-anchor="middle" x="703.5" y="-216.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#52748a">Memory supply</text>
+</g>
+<!-- Microsoft&#45;&gt;CoreWeave -->
+<!-- NVIDIA&#45;&gt;CoreWeave -->
+<g id="edge5" class="edge">
+<title>NVIDIA&#45;&gt;CoreWeave</title>
+<path fill="none" stroke="#52748a" stroke-width="1.5" d="M765.87,-305.03C773.24,-322.58 783.5,-347 783.5,-347 783.5,-347 783.5,-360 783.5,-360 783.5,-360 775.64,-378.7 768.74,-395.13"/>
+<polygon fill="#52748a" stroke="#52748a" stroke-width="1.5" points="766.32,-394.57 765.87,-401.97 770.84,-396.47 766.32,-394.57"/>
+<text text-anchor="middle" x="816.5" y="-350.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#52748a">GPU supply</text>
+</g>
+<!-- NVIDIA&#45;&gt;CoreWeave -->
+<g id="edge15" class="edge">
+<title>NVIDIA&#45;&gt;CoreWeave</title>
+<path fill="none" stroke="#ad7b38" stroke-width="1.5" stroke-dasharray="5,2" d="M788.55,-305.03C818.64,-322.58 860.5,-347 860.5,-347 860.5,-347 860.5,-360 860.5,-360 860.5,-360 824.01,-381.28 794.69,-398.39"/>
+<polygon fill="#ad7b38" stroke="#ad7b38" stroke-width="1.5" points="793.36,-396.33 788.55,-401.97 795.83,-400.56 793.36,-396.33"/>
+<text text-anchor="middle" x="970.5" y="-350.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#ad7b38">Conditional residual&#45;capacity purchase</text>
+</g>
+<!-- NVIDIA&#45;&gt;SK hynix -->
+<!-- Nebius&#45;&gt;Microsoft -->
+<g id="edge8" class="edge">
+<title>Nebius&#45;&gt;Microsoft</title>
+<path fill="none" stroke="#315f4e" stroke-width="1.5" d="M1081.38,-439.05C1058,-460.51 1021.5,-494 1021.5,-494 1021.5,-494 892.78,-523.12 815.44,-540.62"/>
+<polygon fill="#315f4e" stroke="#315f4e" stroke-width="1.5" points="814.87,-538.23 808.59,-542.17 815.96,-543.01 814.87,-538.23"/>
+<text text-anchor="middle" x="1091.5" y="-484.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#315f4e">Phased GPU service</text>
+</g>
+<!-- SK hynix&#45;&gt;NVIDIA -->
+<g id="edge18" class="edge">
+<title>SK hynix&#45;&gt;NVIDIA</title>
+<path fill="none" stroke="#52748a" stroke-width="1.5" d="M768.81,-171.03C779.14,-188.58 793.5,-213 793.5,-213 793.5,-213 793.5,-226 793.5,-226 793.5,-226 782.31,-245.03 772.58,-261.57"/>
+<polygon fill="#52748a" stroke="#52748a" stroke-width="1.5" points="770.25,-260.69 768.81,-267.97 774.47,-263.18 770.25,-260.69"/>
+<text text-anchor="middle" x="837.5" y="-216.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#52748a">Memory supply</text>
+</g>
+<!-- SK hynix&#45;&gt;TSMC -->
+<!-- SK hynix&#45;&gt;TSMC -->
+<g id="edge20" class="edge">
+<title>SK hynix&#45;&gt;TSMC</title>
+<path fill="none" stroke="#52748a" stroke-width="1.5" d="M768.81,-133.97C779.14,-116.42 793.5,-92 793.5,-92 793.5,-92 793.5,-79 793.5,-79 793.5,-79 782.31,-59.97 772.58,-43.43"/>
+<polygon fill="#52748a" stroke="#52748a" stroke-width="1.5" points="774.47,-41.82 768.81,-37.03 770.25,-44.31 774.47,-41.82"/>
+<text text-anchor="middle" x="872" y="-82.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#52748a">HBM4 base&#45;die cooperation</text>
+</g>
+<!-- TeraWulf&#45;&gt;Akela -->
+<g id="edge11" class="edge">
+<title>TeraWulf&#45;&gt;Akela</title>
+<path fill="none" stroke="#8a8e84" stroke-width="1.5" d="M1058.23,-37.03C1125.88,-76.91 1285.5,-171 1285.5,-171 1285.5,-171 1374.5,-213 1374.5,-213 1374.5,-213 1374.5,-226 1374.5,-226 1374.5,-226 1358.93,-245.71 1345.71,-262.44"/>
+<polygon fill="#8a8e84" stroke="#8a8e84" stroke-width="1.5" points="1343.76,-260.96 1341.35,-267.97 1347.61,-264 1343.76,-260.96"/>
+<text text-anchor="middle" x="1337.5" y="-149.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#8a8e84">Indirect subsidiary</text>
+</g>
+<!-- TeraWulf&#45;&gt;Google -->
+<g id="edge14" class="edge">
+<title>TeraWulf&#45;&gt;Google</title>
+<path fill="none" stroke="#8a8e84" stroke-width="1.5" d="M1075.86,-34.23C1175.25,-65.16 1396.5,-134 1396.5,-134 1396.5,-134 1553.34,-222.66 1627.05,-264.33"/>
+<polygon fill="#8a8e84" stroke="#8a8e84" stroke-width="1.5" points="1626.2,-266.66 1633.5,-267.97 1628.61,-262.4 1626.2,-266.66"/>
+<text text-anchor="middle" x="1521.5" y="-149.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#8a8e84">Warrant consideration</text>
+</g>
+<!-- AMD -->
+<g id="node1" class="node">
+<title>AMD</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M102,-305C102,-305 65,-305 65,-305 59,-305 53,-299 53,-293 53,-293 53,-280 53,-280 53,-274 59,-268 65,-268 65,-268 102,-268 102,-268 108,-268 114,-274 114,-280 114,-280 114,-293 114,-293 114,-299 108,-305 102,-305"/>
+<text text-anchor="middle" x="83.5" y="-282.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">AMD</text>
+</g>
+<!-- Akela -->
+<g id="node2" class="node">
+<title>Akela</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M1349.5,-305C1349.5,-305 1305.5,-305 1305.5,-305 1299.5,-305 1293.5,-299 1293.5,-293 1293.5,-293 1293.5,-280 1293.5,-280 1293.5,-274 1299.5,-268 1305.5,-268 1305.5,-268 1349.5,-268 1349.5,-268 1355.5,-268 1361.5,-274 1361.5,-280 1361.5,-280 1361.5,-293 1361.5,-293 1361.5,-299 1355.5,-305 1349.5,-305"/>
+<text text-anchor="middle" x="1327.5" y="-282.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Akela</text>
+</g>
+<!-- Anthropic -->
+<g id="node3" class="node">
+<title>Anthropic</title>
+<path fill="#e3ecdf" stroke="#aab4a8" stroke-width="1.2" d="M1521.5,-573C1521.5,-573 1441.5,-573 1441.5,-573 1435.5,-573 1429.5,-567 1429.5,-561 1429.5,-561 1429.5,-548 1429.5,-548 1429.5,-542 1435.5,-536 1441.5,-536 1441.5,-536 1521.5,-536 1521.5,-536 1527.5,-536 1533.5,-542 1533.5,-548 1533.5,-548 1533.5,-561 1533.5,-561 1533.5,-567 1527.5,-573 1521.5,-573"/>
+<text text-anchor="middle" x="1481.5" y="-550.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Anthropic</text>
+</g>
+<!-- Applied Digital -->
+<g id="node4" class="node">
+<title>Applied Digital</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M436.5,-171C436.5,-171 320.5,-171 320.5,-171 314.5,-171 308.5,-165 308.5,-159 308.5,-159 308.5,-146 308.5,-146 308.5,-140 314.5,-134 320.5,-134 320.5,-134 436.5,-134 436.5,-134 442.5,-134 448.5,-140 448.5,-146 448.5,-146 448.5,-159 448.5,-159 448.5,-165 442.5,-171 436.5,-171"/>
+<text text-anchor="middle" x="378.5" y="-148.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Applied Digital</text>
+</g>
+<!-- Broadcom -->
+<g id="node5" class="node">
+<title>Broadcom</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M1881,-305C1881,-305 1798,-305 1798,-305 1792,-305 1786,-299 1786,-293 1786,-293 1786,-280 1786,-280 1786,-274 1792,-268 1798,-268 1798,-268 1881,-268 1881,-268 1887,-268 1893,-274 1893,-280 1893,-280 1893,-293 1893,-293 1893,-299 1887,-305 1881,-305"/>
+<text text-anchor="middle" x="1839.5" y="-282.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Broadcom</text>
+</g>
+<!-- Core Scientific -->
+<g id="node6" class="node">
+<title>Core Scientific</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M129,-171C129,-171 12,-171 12,-171 6,-171 0,-165 0,-159 0,-159 0,-146 0,-146 0,-140 6,-134 12,-134 12,-134 129,-134 129,-134 135,-134 141,-140 141,-146 141,-146 141,-159 141,-159 141,-165 135,-171 129,-171"/>
+<text text-anchor="middle" x="70.5" y="-148.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Core Scientific</text>
+</g>
+<!-- CoreWeave -->
+<g id="node7" class="node">
+<title>CoreWeave</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M803.5,-439C803.5,-439 713.5,-439 713.5,-439 707.5,-439 701.5,-433 701.5,-427 701.5,-427 701.5,-414 701.5,-414 701.5,-408 707.5,-402 713.5,-402 713.5,-402 803.5,-402 803.5,-402 809.5,-402 815.5,-408 815.5,-414 815.5,-414 815.5,-427 815.5,-427 815.5,-433 809.5,-439 803.5,-439"/>
+<text text-anchor="middle" x="758.5" y="-416.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">CoreWeave</text>
+</g>
+<!-- Financing SPV -->
+<g id="node8" class="node">
+<title>Financing SPV</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M1526.5,-439C1526.5,-439 1412.5,-439 1412.5,-439 1406.5,-439 1400.5,-433 1400.5,-427 1400.5,-427 1400.5,-414 1400.5,-414 1400.5,-408 1406.5,-402 1412.5,-402 1412.5,-402 1526.5,-402 1526.5,-402 1532.5,-402 1538.5,-408 1538.5,-414 1538.5,-414 1538.5,-427 1538.5,-427 1538.5,-433 1532.5,-439 1526.5,-439"/>
+<text text-anchor="middle" x="1469.5" y="-416.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Financing SPV</text>
+</g>
+<!-- Fluidstack -->
+<g id="node9" class="node">
+<title>Fluidstack</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M1059.5,-171C1059.5,-171 977.5,-171 977.5,-171 971.5,-171 965.5,-165 965.5,-159 965.5,-159 965.5,-146 965.5,-146 965.5,-140 971.5,-134 977.5,-134 977.5,-134 1059.5,-134 1059.5,-134 1065.5,-134 1071.5,-140 1071.5,-146 1071.5,-146 1071.5,-159 1071.5,-159 1071.5,-165 1065.5,-171 1059.5,-171"/>
+<text text-anchor="middle" x="1018.5" y="-148.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Fluidstack</text>
+</g>
+<!-- Google -->
+<g id="node10" class="node">
+<title>Google</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M1693.5,-305C1693.5,-305 1635.5,-305 1635.5,-305 1629.5,-305 1623.5,-299 1623.5,-293 1623.5,-293 1623.5,-280 1623.5,-280 1623.5,-274 1629.5,-268 1635.5,-268 1635.5,-268 1693.5,-268 1693.5,-268 1699.5,-268 1705.5,-274 1705.5,-280 1705.5,-280 1705.5,-293 1705.5,-293 1705.5,-299 1699.5,-305 1693.5,-305"/>
+<text text-anchor="middle" x="1664.5" y="-282.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Google</text>
+</g>
+<!-- IREN -->
+<g id="node11" class="node">
+<title>IREN</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M956.5,-439C956.5,-439 918.5,-439 918.5,-439 912.5,-439 906.5,-433 906.5,-427 906.5,-427 906.5,-414 906.5,-414 906.5,-408 912.5,-402 918.5,-402 918.5,-402 956.5,-402 956.5,-402 962.5,-402 968.5,-408 968.5,-414 968.5,-414 968.5,-427 968.5,-427 968.5,-433 962.5,-439 956.5,-439"/>
+<text text-anchor="middle" x="937.5" y="-416.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">IREN</text>
+</g>
+<!-- Micron -->
+<g id="node12" class="node">
+<title>Micron</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M623,-171C623,-171 568,-171 568,-171 562,-171 556,-165 556,-159 556,-159 556,-146 556,-146 556,-140 562,-134 568,-134 568,-134 623,-134 623,-134 629,-134 635,-140 635,-146 635,-146 635,-159 635,-159 635,-165 629,-171 623,-171"/>
+<text text-anchor="middle" x="595.5" y="-148.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Micron</text>
+</g>
+<!-- Microsoft -->
+<g id="node13" class="node">
+<title>Microsoft</title>
+<path fill="#e3ecdf" stroke="#aab4a8" stroke-width="1.2" d="M796.5,-573C796.5,-573 720.5,-573 720.5,-573 714.5,-573 708.5,-567 708.5,-561 708.5,-561 708.5,-548 708.5,-548 708.5,-542 714.5,-536 720.5,-536 720.5,-536 796.5,-536 796.5,-536 802.5,-536 808.5,-542 808.5,-548 808.5,-548 808.5,-561 808.5,-561 808.5,-567 802.5,-573 796.5,-573"/>
+<text text-anchor="middle" x="758.5" y="-550.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Microsoft</text>
+</g>
+<!-- NVIDIA -->
+<g id="node14" class="node">
+<title>NVIDIA</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M786,-305C786,-305 731,-305 731,-305 725,-305 719,-299 719,-293 719,-293 719,-280 719,-280 719,-274 725,-268 731,-268 731,-268 786,-268 786,-268 792,-268 798,-274 798,-280 798,-280 798,-293 798,-293 798,-299 792,-305 786,-305"/>
+<text text-anchor="middle" x="758.5" y="-282.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">NVIDIA</text>
+</g>
+<!-- Nebius -->
+<g id="node15" class="node">
+<title>Nebius</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M1128.5,-439C1128.5,-439 1072.5,-439 1072.5,-439 1066.5,-439 1060.5,-433 1060.5,-427 1060.5,-427 1060.5,-414 1060.5,-414 1060.5,-408 1066.5,-402 1072.5,-402 1072.5,-402 1128.5,-402 1128.5,-402 1134.5,-402 1140.5,-408 1140.5,-414 1140.5,-414 1140.5,-427 1140.5,-427 1140.5,-433 1134.5,-439 1128.5,-439"/>
+<text text-anchor="middle" x="1100.5" y="-416.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Nebius</text>
+</g>
+<!-- OpenAI -->
+<g id="node16" class="node">
+<title>OpenAI</title>
+<path fill="#e3ecdf" stroke="#aab4a8" stroke-width="1.2" d="M1037.5,-573C1037.5,-573 977.5,-573 977.5,-573 971.5,-573 965.5,-567 965.5,-561 965.5,-561 965.5,-548 965.5,-548 965.5,-542 971.5,-536 977.5,-536 977.5,-536 1037.5,-536 1037.5,-536 1043.5,-536 1049.5,-542 1049.5,-548 1049.5,-548 1049.5,-561 1049.5,-561 1049.5,-567 1043.5,-573 1037.5,-573"/>
+<text text-anchor="middle" x="1007.5" y="-550.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">OpenAI</text>
+</g>
+<!-- SK hynix -->
+<g id="node17" class="node">
+<title>SK hynix</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M793,-171C793,-171 724,-171 724,-171 718,-171 712,-165 712,-159 712,-159 712,-146 712,-146 712,-140 718,-134 724,-134 724,-134 793,-134 793,-134 799,-134 805,-140 805,-146 805,-146 805,-159 805,-159 805,-165 799,-171 793,-171"/>
+<text text-anchor="middle" x="758.5" y="-148.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">SK hynix</text>
+</g>
+<!-- TSMC -->
+<g id="node18" class="node">
+<title>TSMC</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M781,-37C781,-37 736,-37 736,-37 730,-37 724,-31 724,-25 724,-25 724,-12 724,-12 724,-6 730,0 736,0 736,0 781,0 781,0 787,0 793,-6 793,-12 793,-12 793,-25 793,-25 793,-31 787,-37 781,-37"/>
+<text text-anchor="middle" x="758.5" y="-14.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">TSMC</text>
+</g>
+<!-- TeraWulf -->
+<g id="node19" class="node">
+<title>TeraWulf</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M1063.5,-37C1063.5,-37 993.5,-37 993.5,-37 987.5,-37 981.5,-31 981.5,-25 981.5,-25 981.5,-12 981.5,-12 981.5,-6 987.5,0 993.5,0 993.5,0 1063.5,0 1063.5,0 1069.5,0 1075.5,-6 1075.5,-12 1075.5,-12 1075.5,-25 1075.5,-25 1075.5,-31 1069.5,-37 1063.5,-37"/>
+<text text-anchor="middle" x="1028.5" y="-14.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">TeraWulf</text>
+</g>
+<!-- Undisclosed Neocloud -->
+<g id="node20" class="node">
+<title>Undisclosed Neocloud</title>
+<path fill="#fffdfa" stroke="#aab4a8" stroke-width="1.2" d="M1343.5,-573C1343.5,-573 1163.5,-573 1163.5,-573 1157.5,-573 1151.5,-567 1151.5,-561 1151.5,-561 1151.5,-548 1151.5,-548 1151.5,-542 1157.5,-536 1163.5,-536 1163.5,-536 1343.5,-536 1343.5,-536 1349.5,-536 1355.5,-542 1355.5,-548 1355.5,-548 1355.5,-561 1355.5,-561 1355.5,-567 1349.5,-573 1343.5,-573"/>
+<text text-anchor="middle" x="1253.5" y="-550.4" font-family="Noto Sans CJK SC" font-size="17.00" fill="#20332d">Undisclosed Neocloud</text>
+</g>
+</g>
+</g><line x1="38.0" x2="67.0" y1="820.0" y2="820.0" stroke="#315f4e" stroke-width="3"/><text x="76.0" y="825.0" font-family="Noto Sans CJK SC,Arial" font-size="15" fill="#20332d">Compute / hosting</text><line x1="718.8333333333334" x2="747.8333333333334" y1="820.0" y2="820.0" stroke="#52748a" stroke-width="3"/><text x="756.8333333333334" y="825.0" font-family="Noto Sans CJK SC,Arial" font-size="15" fill="#20332d">Equipment / memory / technology</text><line x1="1399.6666666666667" x2="1428.6666666666667" y1="820.0" y2="820.0" stroke="#ad7b38" stroke-width="3"/><text x="1437.6666666666667" y="825.0" font-family="Noto Sans CJK SC,Arial" font-size="15" fill="#20332d">Conditional financial support</text><text x="38" y="862.0" font-family="Noto Sans CJK SC,Arial" font-size="13" fill="#64716a">Arrows show relationship direction, not risk weights. Funding, drawability, delivery and collections differ.</text></svg>

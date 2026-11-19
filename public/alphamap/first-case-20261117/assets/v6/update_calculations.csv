@@ -1,0 +1,17 @@
+﻿metric,value,unit,definition,source
+q4_revenue_increase,14.200000000000003,USD_bn,Q4 midpoint minus Q3,50
+q4_revenue_qoq_pct,12.262521588946452,percent,Q4 includes an extra week,50
+china_adjusted_q3_base,113.39999999999999,USD_bn,Q3 total less China Hopper,50;52
+q4_vs_adjusted_base_pct,14.63844797178131,percent,Scale comparison; Q4 extra week,50;52
+supply_commitments_increase,111,USD_bn,Oct25 vs prior quarter-end,52
+supply_commitments_increase_pct,39.78494623655915,percent,Multiyear dollar commitments,52
+crwv_cash_coverage_pct,23.932422107139825,percent,9M operating cash/cash PP&E,3
+delayed_advance_amount,1.8,USD_bn,Explicit20% illustrative delay,5;assumption
+unreplaced_payment_amount,0.8,USD_bn,Illustrative 1bn substitute capital,assumption
+incremental_annual_interest,0.01,USD_bn,Illustrative1bn and100bp,assumption
+corz_crwv_contracted_share_pct,52.67857142857143,percent,Approx1120MW contracted denominator,6;7;49
+corz_crwv_billable_share_pct,82.20338983050848,percent,Only590MW CoreWeave contract,6;7
+procurement_annual_gap_EB,2.3535685350347606,EB,"2028 growth25%, midpower, common opening inventory",model4.1
+procurement_annual_gap_pct,47.47484768164585,percent,1q to4q external procurement policy,model4.1
+pluggable_ports_growth_pct,16.66666666666665,percent,Comparable delivered-port set; illustrative,assumption
+CPO_ports_growth_pct,349.9999999999999,percent,Comparable delivered-port set; illustrative,assumption
