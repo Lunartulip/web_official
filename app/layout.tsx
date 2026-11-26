@@ -6,10 +6,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://lunartuliplab.com"),
   title: {
-    default: "LunarTulip Research｜全球科技股研究模型、另类数据与投资策略",
+    default: "LunarTulip Research｜全球科技股的基本面与量化研究",
     template: "%s | Lunartulip Lab",
   },
-  description: "LunarTulip Research 面向全球科技股，提供持续更新的 Research Models、AlphaMap Alternative Data 与机构策略合作；研究轨迹保留 PIT 证据、revision 与结果归因。",
+  description: "LunarTulip Research 是一家聚焦全球科技股的独立研究机构，结合产业与公司基本面洞察和量化策略，提供 Research Models、AlphaMap Alternative Data 与系统化投资策略合作。",
   keywords: [
     "全球科技股研究",
     "独立权益研究机构",
@@ -63,14 +63,14 @@ export const metadata: Metadata = {
     alternateLocale: "en_US",
     url: "/",
     siteName: "Lunartulip Lab",
-    title: "LunarTulip Research — Research Models, Alternative Data & Strategies",
-    description: "Independent research models, AlphaMap alternative data and investment strategies for global technology equities.",
+    title: "LunarTulip Research — Global Technology Equity Research & Alternative Data",
+    description: "Fundamental analysis, quantitative research and AlphaMap alternative data for global technology equities.",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Lunartulip Lab" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "LunarTulip Research — Research Models, Alternative Data & Strategies",
-    description: "Independent research models, alternative datasets and investment strategies for global technology equities.",
+    title: "LunarTulip Research — Global Technology Equity Research & Alternative Data",
+    description: "Fundamental and quantitative research for global technology equities.",
     images: ["/opengraph-image"],
   },
   robots: {

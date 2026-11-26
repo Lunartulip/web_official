@@ -117,7 +117,7 @@ const alphaMapIndustryCaseCn = await readFile(new URL(`../content/editorial-deep
 const alphaMapIndustryCaseEn = await readFile(new URL(`../content/editorial-deep-dives/${alphaMapIndustryCaseSlug}.en.html`, import.meta.url), "utf8");
 
 test("defines every public navigation section", () => {
-  for (const id of ["top", "research", "philosophy", "capabilities", "workflow", "direction", "practice", "notes", "contact"]) {
+  for (const id of ["top", "research", "philosophy", "capabilities", "workflow", "direction", "notes", "contact"]) {
     assert.match(pageSource, new RegExp(`id=["']${id}["']`));
   }
 });
@@ -143,12 +143,11 @@ test("publishes the official contact and canonical domain", () => {
 });
 
 test("states the global technology-equity identity and research disciplines", () => {
-  assert.match(pageSource, /全球科技股研究模型/);
+  assert.match(pageSource, /全球科技股独立研究机构/);
   assert.match(pageSource, /产业因果、公司利润与预期差/);
   assert.match(pageSource, /Global Technology/);
-  assert.match(pageSource, /Research Models, Alternative Data/);
-  assert.match(pageSource, /& Investment Strategies/);
-  assert.match(pageSource, /LunarTulip Research 面向全球科技股/);
+  assert.match(pageSource, /independent research firm focused on global technology equities/);
+  assert.match(pageSource, /LunarTulip Research 是一家聚焦全球科技股的独立研究机构/);
   assert.match(pageSource, /量化验证/);
   assert.match(pageSource, /AlphaMap Alternative Data/);
 });
@@ -163,7 +162,10 @@ test("publishes buyer tasks, proof surfaces, current offers and the product road
     "POINT-IN-TIME / VERSIONED",
     "AGGREGATE / METHODOLOGY-LED",
     "HUMAN-READABLE SHOWROOM",
-    "API、CSV、JSON、MCP",
+    "持续基本面跟踪与投资判断",
+    "PIT AlphaMap科技股另类数据",
+    "量化模型组合与机构策略合作",
+    "可审计、可复现、可归因",
   ]) {
     assert.match(pageSource, new RegExp(term.replace("$", "\\$")));
   }

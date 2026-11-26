@@ -55,9 +55,10 @@ const navigation = [
 ];
 
 const positioningSignals = [
-  { label: "RESEARCH MODELS", cn: "持续投资判断与情景修订", en: "Ongoing judgment and scenario revisions" },
-  { label: "ALPHAMAP DATA", cn: "PIT 产业关系、经营状态与另类特征", en: "PIT relationships, operating states and alternative features" },
-  { label: "STRATEGY", cn: "模型组合与机构策略合作", en: "Model portfolios and institutional strategy collaboration" },
+  { label: "WHO WE ARE", cn: "全球科技股独立研究机构", en: "Independent global technology equity research" },
+  { label: "RESEARCH MODELS", cn: "持续基本面跟踪与投资判断", en: "Ongoing judgment and scenario revisions" },
+  { label: "ALPHAMAP DATA", cn: "PIT AlphaMap科技股另类数据", en: "PIT relationships, operating states and alternative features" },
+  { label: "STRATEGY", cn: "量化模型组合与机构策略合作", en: "Model portfolios and institutional strategy collaboration" },
   { label: "SHARED CORE", cn: "可审计、可复现、可归因", en: "Auditable, reproducible and attributable" },
 ];
 
@@ -149,59 +150,6 @@ const productOffers = [
     href: "/authority-ledger",
     ctaCn: "打开 Authority Ledger",
     ctaEn: "Open Authority Ledger",
-  },
-];
-
-const practiceCases = [
-  {
-    code: "DEEP DIVE / PLTR",
-    title: "Palantir：商业化有硬数，定价零容错",
-    titleEn: "Palantir: hard commercialization evidence, zero valuation tolerance",
-    thesis: "用美国商业增速、合同价值、留存与现金闭环，对账「AI 主权」叙事与 65x TTM P/S。",
-    thesisEn: "Reconcile the AI-sovereignty narrative and 65x TTM P/S through US commercial growth, contract value, retention and cash conversion.",
-    metric: "PUBLISHED 2026-08-05 · UPDATED 2026-09-14",
-    nodes: ["QUESTION", "EVIDENCE", "THESIS", "RISK", "UPDATE"],
-    href: "/deep-dive/palantir-ai-application-commercialization-2026q2",
-  },
-  {
-    code: "DEEP DIVE / NVDA",
-    title: "NVIDIA：超级周期的对账变量换位",
-    titleEn: "NVIDIA: the supercycle’s reconciliation variables have shifted",
-    thesis: "需求方向已被硬数验证，风险转向毛利率、供应承诺、担保集中度与应收账期。",
-    thesisEn: "Demand is validated by hard numbers; risk has shifted to margins, supply commitments, guarantee concentration and receivables.",
-    metric: "PUBLISHED 2026-09-14 · FY27Q2",
-    nodes: ["DEMAND", "COST", "BALANCE SHEET", "VALUATION", "TEST"],
-    href: "/deep-dive/nvidia-fy27q2-supercycle-2026-09",
-  },
-  {
-    code: "DEEP DIVE / SNOW",
-    title: "Snowflake：加速有硬数，AI 归因仍待金额化",
-    titleEn: "Snowflake: hard acceleration data, AI attribution still awaits dollars",
-    thesis: "把消费增速、AI 产品账户与反向 DCF 放在同一对账框架，区分事实、归因与市场隐含。",
-    thesisEn: "Reconcile consumption growth, AI-product accounts and reverse DCF while separating fact, attribution and market implication.",
-    metric: "PUBLISHED 2026-09-14 · FY27Q2",
-    nodes: ["CONSUMPTION", "AI", "REVERSE DCF", "RISK", "TEST"],
-    href: "/deep-dive/snowflake-agentic-data-cloud-2026-09",
-  },
-  {
-    code: "DEEP DIVE / NET",
-    title: "Cloudflare：机器流量过半之后，收入仍待金额化",
-    titleEn: "Cloudflare: machine traffic is over half; monetization still lacks dollars",
-    thesis: "区分业务加速、agentic 流量与没有财务条款的催化，等待 Q3 财报对账。",
-    thesisEn: "Separate business acceleration and agentic traffic from catalysts without financial terms, then reconcile at Q3.",
-    metric: "PUBLISHED 2026-08-07 · UPDATED 2026-09-14",
-    nodes: ["QUESTION", "EVIDENCE", "THESIS", "RISK", "UPDATE"],
-    href: "/deep-dive/cloudflare-monetization-density-2026q2",
-  },
-  {
-    code: "DEEP DIVE / TEAM",
-    title: "Atlassian：三重催化之后，还差 Rovo 金额口径",
-    titleEn: "Atlassian: after three catalysts, Rovo still lacks a dollar metric",
-    thesis: "将 beat、Cloud 加速与盈利拐点同 FY27 降速指引、FCF 和 Rovo 变现披露对账。",
-    thesisEn: "Reconcile the beat, Cloud acceleration and profit inflection with FY27 deceleration guidance, FCF and Rovo monetization disclosure.",
-    metric: "PUBLISHED 2026-08-07 · UPDATED 2026-09-14",
-    nodes: ["BEAT", "ROVO", "GUIDANCE", "CASH", "TEST"],
-    href: "/deep-dive/atlassian-workflow-density-context-monetization-2026fy",
   },
 ];
 
@@ -593,31 +541,31 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
 
       <section className="hero" id="top" aria-labelledby="hero-title">
         <div className="hero-copy">
-          <p className="eyebrow">RESEARCH MODELS · ALTERNATIVE DATA · STRATEGIES</p>
+          <p className="eyebrow">GLOBAL TECHNOLOGY EQUITY RESEARCH & ALTERNATIVE DATA</p>
           <h1 id="hero-title">
             {language === "cn" ? (
               <>
-                <span className="hero-title-line">全球科技股研究模型</span>
-                <span className="hero-title-line hero-title-tagline">另类数据与投资策略</span>
+                <span className="hero-title-line">全球科技股</span>
+                <span className="hero-title-line hero-title-tagline">基本面与量化研究</span>
               </>
             ) : (
               <>
-                <span className="hero-title-line">Global Technology Equity</span>
-                <span className="hero-title-line">Research Models, Alternative Data</span>
-                <span className="hero-title-line hero-title-tagline">& Investment Strategies</span>
+                <span className="hero-title-line">Global Technology</span>
+                <span className="hero-title-line">Equity Research</span>
+                <span className="hero-title-line hero-title-tagline">& Alternative Data</span>
               </>
             )}
           </h1>
           <p className="hero-description">
             {language === "cn" ? (
               <>
-                <span>LunarTulip Research 面向全球科技股，提供持续更新的 Research Models、AlphaMap Alternative Data 与机构策略合作。</span>
-                <span>三类产品共享同一套研究内核，按客户购买的对象、使用权和服务责任分别交付。研究轨迹保留时点、来源、修订与结果归因。</span>
+                <span>LunarTulip Research 是一家聚焦全球科技股的独立研究机构，重点研究 AI 产业链与相关主题权益投资策略。</span>
+                <span>我们结合产业与公司基本面洞察和量化策略，提供持续更新的 Research Models、AlphaMap Alternative Data 与系统化投资策略合作，为股票选择、投资假设跟踪与主题投资策略提供研究输入和方法支持。</span>
               </>
             ) : (
               <>
-                <span>LunarTulip Research builds independent research models, alternative datasets and investment strategies for global technology equities.</span>
-                <span>All three share one research core and are delivered under distinct usage rights and service responsibilities. Each trail preserves point-in-time evidence, revisions and outcome attribution.</span>
+                <span>LunarTulip Research is an independent research firm focused on global technology equities, with an emphasis on the AI value chain and related thematic investment strategies.</span>
+                <span>We combine fundamental analysis, quantitative research and AlphaMap alternative data to support stock selection, investment thesis monitoring and thematic research.</span>
               </>
             )}
           </p>
@@ -677,13 +625,13 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
           <div>
             <p className="section-index">THREE WAYS TO WORK WITH US / 01</p>
             <h2 id="research-title">
-              {language === "cn" ? "先看购买对象，再选择交付方式。" : "Start with what you need to buy, then choose delivery."}
+              {language === "cn" ? "根据买方研究任务，选择数据或策略合作。" : "Choose data or strategy collaboration by buy-side research task."}
             </h2>
           </div>
           <p className="section-lead">
             {language === "cn"
-              ? "Research Models 交付持续投资判断，AlphaMap 交付可调用的数据与特征，Strategy 交付模型组合及机构策略合作。API、CSV、JSON、MCP 和 Skill 按实际工作流选配。"
-              : "Research Models deliver ongoing investment judgment. AlphaMap delivers callable data and features. Strategy delivers model portfolios and institutional collaboration. API, CSV, JSON, MCP and skills are selected as delivery layers."}
+              ? "系统化权益团队、基本面投资团队和投资研究平台面对的任务不同。合作从实际研究问题出发，再确定 Research Models、AlphaMap 数据或 Strategy 的合作范围。"
+              : "Systematic equity teams, fundamental investors and investment platforms face different research tasks. Each engagement starts with the actual question, then defines the scope across Research Models, AlphaMap data or Strategy."}
           </p>
         </div>
 
@@ -931,37 +879,10 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
         </div>
       </section>
 
-      <section className="practice-section page-section" id="practice" aria-labelledby="practice-title">
-        <div className="section-heading compact-heading">
-          <div>
-            <p className="section-index">DEEP RESEARCH / 06</p>
-            <h2 id="practice-title">{language === "cn" ? "从具体公司和产业问题，看见研究深度。" : "See the depth of research through specific company and industry questions."}</h2>
-          </div>
-          <p className="section-lead">{language === "cn" ? "持续更新的双语 Research Objects 围绕具体公司与产业问题展开，完整保留研究问题、核心论点、关键证据、风险边界、首发日期与更新记录。" : "Continuously updated bilingual Research Objects address specific company and industry questions while preserving the research question, core thesis, key evidence, risk boundary, original publication date and update history."}</p>
-        </div>
-        <div className="practice-grid">
-          {practiceCases.map((item) => (
-            <article className="practice-card" key={item.code}>
-              <p className="card-index">{item.code}</p>
-              <div className="practice-visual" aria-hidden="true">
-                <span className="practice-axis" />
-                {item.nodes.map((node, index) => <i key={node} className={`practice-node practice-node-${index + 1}`}>{node}</i>)}
-                <strong>{item.metric}</strong>
-              </div>
-              <div className="practice-copy">
-                <h3>{language === "cn" ? item.title : item.titleEn}</h3>
-                <p>{language === "cn" ? item.thesis : item.thesisEn}</p>
-                <a href={language === "en" ? `/en${item.href}` : item.href}>{language === "cn" ? "阅读研究" : "Read the research"}<span><ArrowRightIcon /></span></a>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="notes-section page-section" id="notes" aria-labelledby="notes-title">
         <div className="section-heading compact-heading">
           <div>
-            <p className="section-index">RESEARCH NOTES / 07</p>
+            <p className="section-index">RESEARCH NOTES / 06</p>
             <h2 id="notes-title">{language === "cn" ? "研究方法、系统实践与长期思考" : "Research methods, system practice and long-term thinking"}</h2>
           </div>
           <p className="section-lead">{language === "cn" ? "围绕主观基本面、系统化量化、AI-native investing 与投资决策系统，持续沉淀可供专业读者参考的方法研究。" : "Ongoing methodological research for professional readers across discretionary fundamental, systematic quant, AI-native investing and investment decision systems."}</p>
