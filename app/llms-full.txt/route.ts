@@ -59,13 +59,13 @@ ${deepDiveObjects}
 
 ## Institutional products and engagements
 
-- AlphaMap Technology-Equity Alternative Data — the current go-to-market spearhead, licensed by defined coverage, fields, history, updates and use: https://lunartuliplab.com/en/institutional-access#intent-alternative_dataset
-- Research Desk / Pro — the B2P continuous-research product line for PMs, CIOs, fund founders and professional investors. It follows AlphaMap in the launch sequence and may include theme-first Decision Objects, maintained coverage, structured exports and a limited API within the agreed scope: https://lunartuliplab.com/en/desk
-- Research API / Power — a machine-delivery surface of the same canonical research state. Some licensed AlphaMap delivery may use Desk APIs. Higher limits, bulk history and event streams remain demand-led roadmap surfaces: https://lunartuliplab.com/en/institutional-access#intent-machine_readable_research
-- Scoped Research Methodology & Application — one defined investment research question with agreed outputs and handoff: https://lunartuliplab.com/en/institutional-access#intent-research_access
-- Buyer Solutions & Institutional Access — for systematic equity teams, fundamental investors and investment research platforms: https://lunartuliplab.com/en/institutional-access
+- Research Models — ongoing variables, scenarios, judgment and revisions around one defined investment question. Deep Dive is the public evidence layer; Research Desk is the human-readable showroom and continuous delivery surface: https://lunartuliplab.com/en/institutional-access#intent-research_model_sample
+- AlphaMap Alternative Data — callable point-in-time industry relationships, company operating states, evidence and alternative features, licensed by defined coverage, fields, history, updates and use: https://lunartuliplab.com/en/institutional-access#intent-alternative_dataset
+- LunarTulip Strategies — model portfolios and institutional strategy collaboration grounded in validated signals, risk budgets, out-of-sample evidence and PnL attribution: https://lunartuliplab.com/en/strategy
+- Delivery layers — Desk and dashboards for human use; API, CSV and JSON for programmatic use; MCP and skills for agentic use. Delivery rights are scoped within the product agreement and do not form a fourth top-level product.
+- Institutional Access — structured inquiry routes for all three products: https://lunartuliplab.com/en/institutional-access
 
-Public metadata supports discovery and attributed citation under https://lunartuliplab.com/research-usage. Public research is not licensed Desk or API access, and no public page or standard license grants the complete internal system. Bulk extraction, republication, model training and competing database or API use require separate permission. Research is not investment advice.
+Public metadata supports discovery and attributed citation under https://lunartuliplab.com/research-usage. Public research is not licensed product access, and no public page or standard license grants the complete internal system. Bulk extraction, republication, model training and competing database or API use require separate permission. Research is not investment advice.
 `;
 
   return new Response(body, {

@@ -41,11 +41,11 @@ export default function AlphaMapIndex({ language = "cn" }: { language?: "cn" | "
 
       <section className={styles.hero}>
         <div>
-          <p className={styles.kicker}>FINLLM-KG → TRADABLE QUANT FACTORS</p>
+          <p className={styles.kicker}>ALPHAMAP ALTERNATIVE DATA / FINLLM-KG → TRADABLE QUANT FACTORS</p>
           <h1>{isCn ? <>让金融知识图谱，<br /><span>进入科技股因子与策略。</span></> : <>Turn financial knowledge graphs<br /><span>into technology-equity factors and strategies.</span></>}</h1>
         </div>
         <aside className={styles.heroAside}>
-          <p>{isCn ? "AlphaMap 将 FinLLM-KG（大模型金融知识图谱）转化为可交易的量化因子，主攻全球科技股趋势成长与轮动的中低频策略研究。研究重点是金融图的经济语义、时间与状态迁移；白皮书给出理论版图，DOI 实证研究负责检验。" : "AlphaMap turns FinLLM-KG—large-model financial knowledge graphs—into tradable quantitative factors for medium- and low-frequency global technology-equity growth and rotation strategies. The research focuses on economic meaning, time and state transitions; whitepapers define the map and DOI studies test it."}</p>
+          <p>{isCn ? "AlphaMap 将 FinLLM-KG（大模型金融知识图谱）转化为可调用的 PIT 产业关系、公司经营状态与另类特征因子，并继续检验其能否形成可交易的量化信号。研究主攻全球科技股趋势成长与轮动的中低频策略；白皮书给出理论版图，DOI 实证研究负责检验。" : "AlphaMap turns FinLLM-KG—large-model financial knowledge graphs—into callable point-in-time industry relationships, company operating states and alternative features, then tests whether they become tradable quantitative signals. The research focuses on medium- and low-frequency global technology-equity growth and rotation; whitepapers define the map and DOI studies test it."}</p>
           <strong>ECONOMIC SEMANTICS · STATE TRANSITIONS · ALPHA MECHANICS</strong>
         </aside>
       </section>
@@ -119,8 +119,8 @@ export default function AlphaMapIndex({ language = "cn" }: { language?: "cn" | "
 
       <section className={styles.section}>
         <div className={styles.sectionHead}>
-          <div><p className={styles.sectionLabel}>CONTINUE THE WORK</p><h2>{isCn ? "从公开方法研究进入机构数据评估。" : "Move from public methods research into institutional data evaluation."}</h2></div>
-          <p className={styles.lead}>{isCn ? "公开研究适合审阅问题、设计、结果和局限。机构可进一步获取 AlphaMap 数据说明与样例，并按许可选择文件、feed、Desk Pro 限额 API 或后续 Power/API 交付；明确的研究问题也可进入专题投研项目。" : "The public study supports review of the question, design, result and limitations. Institutions can request AlphaMap materials and use licensed file, feed, Desk Pro limited-API or later Power/API delivery; defined research questions may also enter a scoped engagement."}</p>
+          <div><p className={styles.sectionLabel}>ALPHAMAP ALTERNATIVE DATA / CONTINUE THE WORK</p><h2>{isCn ? "从公开方法研究进入机构数据评估。" : "Move from public methods research into institutional data evaluation."}</h2></div>
+          <p className={styles.lead}>{isCn ? "公开研究适合审阅问题、设计、结果和局限。机构可进一步获取 AlphaMap 数据说明与样例，并按许可选择文件、feed 或 API 交付；明确的投资问题也可进入 Research Models。" : "The public study supports review of the question, design, result and limitations. Institutions can request AlphaMap materials and use licensed file, feed or API delivery; defined investment questions may also enter Research Models."}</p>
         </div>
         <div className={styles.grid}>
           <article className={styles.card}><p className={styles.meta}>CITATION METADATA</p><h3>Research Object</h3><p>{isCn ? "读取对象 ID、版本、日期、摘要、DOI 和 canonical URL。" : "Read the object ID, version, dates, abstract, DOI and canonical URLs."}</p><Link href={`/research/${latestStudy.slug}`}>{isCn ? "打开最新公开元数据 →" : "Open the latest public metadata →"}</Link></article>

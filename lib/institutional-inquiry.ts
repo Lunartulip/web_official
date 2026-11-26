@@ -4,9 +4,11 @@ export const INQUIRY_SOURCE = "institutional_access";
 
 export const INQUIRY_INTENTS = [
   "sample_request",
+  "research_model_sample",
   "research_access",
   "machine_readable_research",
   "alternative_dataset",
+  "strategy_access",
   "commissioned_mandate",
   "research_system_diagnostic",
 ] as const;

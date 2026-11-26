@@ -26,6 +26,9 @@ const englishDeepDiveSource = await readFile(new URL("../app/en/deep-dive/page.t
 const englishAuthoritySource = await readFile(new URL("../app/en/authority-ledger/page.tsx", import.meta.url), "utf8");
 const englishAccessSource = await readFile(new URL("../app/en/institutional-access/page.tsx", import.meta.url), "utf8");
 const englishDeskSource = await readFile(new URL("../app/en/desk/page.tsx", import.meta.url), "utf8");
+const strategySource = await readFile(new URL("../app/strategy/strategy-page.tsx", import.meta.url), "utf8");
+const strategyPageSource = await readFile(new URL("../app/strategy/page.tsx", import.meta.url), "utf8");
+const englishStrategyPageSource = await readFile(new URL("../app/en/strategy/page.tsx", import.meta.url), "utf8");
 const englishWorkshopSource = await readFile(new URL("../app/en/workshop/page.tsx", import.meta.url), "utf8");
 const notesIndexSource = await readFile(new URL("../app/notes/page.tsx", import.meta.url), "utf8");
 const notePageSource = await readFile(new URL("../app/notes/[slug]/page.tsx", import.meta.url), "utf8");
@@ -140,31 +143,27 @@ test("publishes the official contact and canonical domain", () => {
 });
 
 test("states the global technology-equity identity and research disciplines", () => {
-  assert.match(pageSource, /全球科技股的/);
-  assert.match(pageSource, /基本面与量化研究/);
+  assert.match(pageSource, /全球科技股研究模型/);
+  assert.match(pageSource, /产业因果、公司利润与预期差/);
   assert.match(pageSource, /Global Technology/);
-  assert.match(pageSource, /Equity Research/);
-  assert.match(pageSource, /& Alternative Data/);
-  assert.match(pageSource, /聚焦全球科技股的独立研究机构/);
-  assert.match(pageSource, /重点研究 AI 产业链/);
-  assert.match(pageSource, /基本面与量化研究/);
-  assert.match(pageSource, /量化研究/);
-  assert.match(pageSource, /AlphaMap 科技股另类数据/);
+  assert.match(pageSource, /Research Models, Alternative Data/);
+  assert.match(pageSource, /& Investment Strategies/);
+  assert.match(pageSource, /LunarTulip Research 面向全球科技股/);
+  assert.match(pageSource, /量化验证/);
+  assert.match(pageSource, /AlphaMap Alternative Data/);
 });
 
 test("publishes buyer tasks, proof surfaces, current offers and the product roadmap", () => {
   for (const term of [
-    "系统化权益与基本面量化团队",
-    "基本面权益投资团队",
-    "投资研究平台与产品团队",
+    "Research Models",
+    "AlphaMap Alternative Data",
+    "LunarTulip Strategies",
     "Lunartulip Deep Dive",
     "判断与结局账本",
     "POINT-IN-TIME / VERSIONED",
     "AGGREGATE / METHODOLOGY-LED",
-    "AlphaMap 科技股另类数据",
-    "专题投研方法与应用",
-    "Research Desk／Pro",
-    "Power/API",
+    "HUMAN-READABLE SHOWROOM",
+    "API、CSV、JSON、MCP",
   ]) {
     assert.match(pageSource, new RegExp(term.replace("$", "\\$")));
   }
@@ -190,6 +189,7 @@ test("publishes canonical versioned Deep Dive research objects", () => {
   }
   assert.match(deepDiveIndexSource, /COMPANY DEEP DIVES/);
   assert.match(deepDiveIndexSource, /THEME STUDIES/);
+  assert.ok(deepDiveIndexSource.indexOf("THEME STUDIES") < deepDiveIndexSource.indexOf("COMPANY DEEP DIVES"));
   for (const term of [
     "市场共识",
     "差异化判断",
@@ -602,7 +602,7 @@ test("publishes AlphaMap Whitepaper #000 as the FinLLM-KG strategy prologue", ()
   ]) {
     assert.match(alphaMapWhitepaperSource, new RegExp(term));
   }
-  for (const term of ["FinLLM-KG", "转化为可交易的量化因子", "Alpha Mechanics", "状态迁移"]) {
+  for (const term of ["FinLLM-KG", "转化为可调用的 PIT 产业关系", "Alpha Mechanics", "状态迁移"]) {
     assert.match(alphaMapIndexComponentSource + alphaMapWhitepaperSource, new RegExp(term));
   }
   assert.match(alphaMapWhitepaperSource, /"@type":"Article"/);
@@ -648,8 +648,8 @@ test("routes AlphaMap discovery separately from Deep Dive and licensed data", ()
   assert.doesNotMatch(deepDiveIndexSource, /\.filter\(\(item\) => String\(item\.kind\) === "alphamap-study"\)/);
   assert.match(deskPreviewSource, /AlphaMap 科技股另类数据/);
   assert.match(deskPreviewSource, /Research API／Power/);
-  assert.match(accessPageSource, /ALPHAMAP TECHNOLOGY-EQUITY ALTERNATIVE DATA/);
-  assert.match(accessPageSource, /具体主题、公司、字段、历史、更新与使用范围在数据说明和授权方案中列明/);
+  assert.match(accessPageSource, /ALPHAMAP DATA — ALTERNATIVE-DATA LICENSE/);
+  assert.match(accessPageSource, /PIT 产业关系、公司经营状态与另类特征/);
 });
 
 test("renders the Authority Ledger from a generated data projection with visible methodology", () => {
@@ -677,7 +677,7 @@ test("publishes the Desk product roadmap and retires the Workshop route", () => 
   assert.match(deskPageSource, /LunarTulip Research Desk/);
   for (const term of [
     "ALWAYS-ON THEMATIC INTELLIGENCE / PRODUCT ROADMAP",
-    "面向专业投资者的持续研究产品",
+    "Research Models 的持续判断与可读交付",
     "AI_COMPUTE_ECONOMICS",
     "PHYSICAL_AI_ROBOTICS",
     "01 / RESEARCH",
@@ -701,21 +701,22 @@ test("publishes the Desk product roadmap and retires the Workshop route", () => 
   assert.doesNotMatch(deskPreviewSource, /6-Session Workshop/i);
 });
 
-test("keeps Dataset first while preserving Desk, Pro and API product surfaces", () => {
+test("publishes three commercial doors while preserving Desk and API as delivery surfaces", () => {
   for (const source of [pageSource, deskPreviewSource, accessPageSource, llmsSource, llmsFullSource]) {
     assert.match(source, /AlphaMap/);
     assert.match(source, /Research Desk/);
     assert.match(source, /API/);
   }
-  assert.match(pageSource, /AlphaMap Dataset 将基本面洞察整合成结构化研究数据和量化特征信号/);
-  assert.match(deskPreviewSource, /AlphaMap Dataset 率先进入市场/);
-  assert.match(deskPreviewSource, /Desk Pro 可在约定范围内提供结构化导出与限额 API/);
-  assert.match(englishDeskSource, /Continuous Research for Professional Investors/);
-  assert.match(llmsSource, /current go-to-market spearhead/);
-  assert.match(llmsSource, /Some licensed AlphaMap delivery may use Desk APIs/);
-  assert.match(accessPageSource, /高限额 API、批量历史和事件流在出现真实接入需求后开放/);
+  for (const source of [pageSource, accessPageSource, llmsSource, llmsFullSource]) {
+    assert.match(source, /Research Models/);
+    assert.match(source, /Strategy|Strategies/);
+  }
+  assert.match(pageSource, /ONE RESEARCH CORE · THREE COMMERCIAL DOORS/);
+  assert.match(deskPreviewSource, /human-readable showroom/);
+  assert.match(englishDeskSource, /Continuous Judgment for Research Models/);
+  assert.match(llmsSource, /do not form a fourth top-level product/);
+  assert.match(accessPageSource, /API · CSV · JSON · MCP · SKILL/);
   assert.match(accessPageSource, /购买 AlphaMap 不自动取得全部 Desk 或 API 权限/);
-  assert.doesNotMatch(deskPreviewSource + llmsSource + llmsFullSource, /not a third standalone product|不构成单独的第三款商品/i);
 });
 
 test("defines a canonical About entity page without a founder", () => {
@@ -729,7 +730,7 @@ test("defines a canonical About entity page without a founder", () => {
 });
 
 test("ships independent English routes with hreflang counterparts", () => {
-  for (const source of [englishHomeSource, englishAboutSource, englishDeepDiveSource, englishAuthoritySource, englishAccessSource, englishDeskSource]) {
+  for (const source of [englishHomeSource, englishAboutSource, englishDeepDiveSource, englishAuthoritySource, englishAccessSource, englishDeskSource, englishStrategyPageSource]) {
     assert.match(source, /canonical:/);
   }
   assert.match(englishHomeSource + englishAboutSource, /initialLanguage="en"/);
@@ -737,35 +738,36 @@ test("ships independent English routes with hreflang counterparts", () => {
   assert.match(englishDeepDiveSource + englishAuthoritySource + englishAccessSource, /language="en"/);
   assert.match(englishHomeSource, /languages:/);
   assert.match(sitemapSource, /lunartuliplab\.com\/en/);
-  for (const path of ["/about", "/deep-dive", "/authority-ledger", "/desk", "/institutional-access"]) {
+  for (const path of ["/about", "/deep-dive", "/authority-ledger", "/desk", "/institutional-access", "/strategy"]) {
     assert.match(sitemapSource, new RegExp(`path: "${path.replace("/", "\\/")}"`));
   }
   assert.doesNotMatch(sitemapSource, /path: "\/workshop"/);
 });
 
-test("separates the current mandate from the long-term buy-side vision", () => {
-  assert.match(pageSource, /AI-native Fund/);
-  assert.match(pageSource, /现在看得见研究质量/);
-  assert.match(pageSource, /先验证研究质量/);
-  assert.match(pageSource, /任何未来资管合作均将在相应主体、资质与合规框架完备后独立开展/);
-  assert.match(pageSource, /真实资本结果将长期检验双研究引擎/);
+test("states strategy evidence and public compliance boundaries", () => {
+  assert.match(pageSource, /先核验研究质量/);
+  assert.match(pageSource, /模型组合与机构策略合作/);
+  assert.match(pageSource, /不提供具体持仓、权重或结果承诺/);
   assert.match(pageSource, /不构成投资建议、操作指引、基金募集、金融产品推介或收益承诺/);
+  assert.match(strategySource, /样本外结果、风险统计和 PnL attribution/);
+  assert.match(strategySource, /不在公开页面提供具体持仓、权重或结果承诺/);
+  assert.match(strategyPageSource, /canonical: "\/strategy"/);
+  assert.match(englishStrategyPageSource, /canonical: "\/en\/strategy"/);
 });
 
-test("presents institutional access around buyer tasks and tiered product surfaces", () => {
+test("presents institutional access around three purchasing objects", () => {
   for (const term of [
-    "系统化权益与基本面量化",
-    "基本面权益",
-    "投资研究平台",
-    "需要 Research API 或结构化接入的团队",
-    "AlphaMap 科技股另类数据",
-    "LunarTulip Research Desk／Pro",
-    "Research API",
-    "专题投研方法与应用",
+    "持续投资判断与情景修订",
+    "PIT 产业关系、经营状态与另类特征",
+    "模型组合与机构策略合作",
+    "RESEARCH MODELS",
+    "ALPHAMAP DATA",
+    "STRATEGY",
+    "DELIVERY LAYER",
     "年度数据授权人民币 30 万元起",
-    "专题项目人民币 15 万元起",
-    "Annual data licenses start at US$42,000",
-    "Scoped projects start at US$21,000",
+    "项目人民币 15 万元起",
+    "Annual licenses start at US$42,000",
+    "Engagements start at US$21,000",
     "具体范围与报价在询单后确认",
   ]) {
     assert.match(accessPageSource, new RegExp(term.replace("$", "\\$")));
@@ -779,8 +781,8 @@ test("presents institutional access around buyer tasks and tiered product surfac
 });
 
 test("ships a validated, attributed SMTP institutional inquiry flow", () => {
-  for (const term of ["sample_request", "research_access", "machine_readable_research", "alternative_dataset", "commissioned_mandate", "research_system_diagnostic"]) {
-    assert.match(inquirySource + accessPageSource, new RegExp(term));
+  for (const term of ["sample_request", "research_model_sample", "research_access", "machine_readable_research", "alternative_dataset", "strategy_access", "commissioned_mandate", "research_system_diagnostic"]) {
+    assert.match(inquirySource, new RegExp(term));
   }
   for (const field of ["organization", "role", "name", "email", "researchQuestion", "timeline"]) {
     assert.match(accessPageSource, new RegExp(`name=["']${field}["']`));
@@ -864,8 +866,9 @@ test("exposes current institutional search intent in site metadata", () => {
   }
   assert.match(layoutSource, /knowsAbout/);
   assert.match(layoutSource, /AlphaMap Technology Equity Alternative Data/);
-  assert.match(layoutSource, /Scoped Research Methodology & Application/);
-  assert.doesNotMatch(layoutSource, /Machine-readable Research API|Point-in-time Alternative Datasets/);
+  assert.match(layoutSource, /LunarTulip Research Models/);
+  assert.match(layoutSource, /LunarTulip Strategies/);
+  assert.doesNotMatch(layoutSource, /Machine-readable Research API/);
 });
 
 test("defines a canonical Lunartulip organization and website entity", () => {

@@ -90,9 +90,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: "https://lunartuliplab.com/institutional-access",
-      lastModified: new Date("2026-10-31T00:00:00+08:00"),
+      lastModified: new Date("2026-11-27T00:00:00+08:00"),
       changeFrequency: "monthly",
       priority: 0.75,
+    },
+    {
+      url: "https://lunartuliplab.com/strategy",
+      lastModified: new Date("2026-11-27T00:00:00+08:00"),
+      changeFrequency: "monthly",
+      priority: 0.85,
+      alternates: {
+        languages: {
+          "zh-CN": "https://lunartuliplab.com/strategy",
+          en: "https://lunartuliplab.com/en/strategy",
+        },
+      },
     },
     {
       url: "https://lunartuliplab.com/desk",
@@ -161,7 +173,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       { path: "/alphamap", modified: latestAlphaMapDate },
       { path: "/authority-ledger", modified: authoritySummary.generated_at },
       { path: "/desk", modified: "2026-08-13" },
-      { path: "/institutional-access", modified: "2026-10-31" },
+      { path: "/institutional-access", modified: "2026-11-27" },
+      { path: "/strategy", modified: "2026-11-27" },
     ].map((entry, index) => ({
       url: `https://lunartuliplab.com/en${entry.path}`,
       lastModified: new Date(`${entry.modified}T00:00:00+08:00`),

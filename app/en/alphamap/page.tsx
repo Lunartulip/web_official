@@ -4,8 +4,8 @@ import { alphaMapStudies } from "@/lib/research-objects";
 import AlphaMapIndex from "../../alphamap/alphamap-index";
 
 export const metadata: Metadata = {
-  title: "AlphaMap | Turning FinLLM-KG into Tradable Technology-Equity Factors",
-  description: "AlphaMap studies the economic meaning, time and state transitions of financial knowledge graphs, and how graph structures map into medium- and low-frequency factors for global technology-equity growth and rotation.",
+  title: "AlphaMap Alternative Data | From FinLLM-KG to Technology-Equity Factors",
+  description: "AlphaMap turns FinLLM-KG into callable point-in-time industry relationships, company operating states and alternative features, then tests their use in medium- and low-frequency technology-equity factors.",
   alternates: {
     canonical: "/en/alphamap",
     languages: { en: "/en/alphamap", "zh-CN": "/alphamap", "x-default": "/en/alphamap" },

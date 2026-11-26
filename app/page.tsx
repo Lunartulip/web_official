@@ -18,10 +18,10 @@ const en: Record<string, string> = {
   "文档 / 数据 / 产业知识": "Documents / data / domain knowledge", "证据链 / 因果图 / 观察点": "Evidence chain / causal map / watchpoints",
   "多源解析": "Multi-source ingestion", "关系抽取": "Relationship extraction", "因果链校准": "Causal calibration",
   "Agent 工作流": "Agent Workflows", "把高质量研究动作封装成可重复流程。": "Encode high-quality research moves into repeatable workflows.",
-  "将研究方法拆成可编排的 skills、SOP 与 agent 任务，让复杂流程可被调用、检查与复用，而不是停留在一次性对话里。": "Decompose research methods into orchestrated skills, SOPs and agent tasks that can be invoked, audited and reused beyond a single conversation.",
+  "将研究方法拆成可编排的 skills、SOP 与 agent 任务，形成可调用、可检查、可复用的研究流程。": "Decompose research methods into orchestrated skills, SOPs and agent tasks that can be invoked, audited and reused.",
   "方法论 / SOP / 工具": "Method / SOP / tools", "任务编排": "Task orchestration", "质量检查": "Quality control", "资产化沉淀": "Reusable system assets",
   "策略验证实验室": "Strategy Validation Lab", "让主观判断与量化验证在同一框架协作。": "Bring discretionary judgment and quantitative validation into one framework.",
-  "用因子、信号、回测与情景分析检验研究命题，识别稳健区间和失效条件，为集中决策增加纪律，而非替代基金经理。": "Test investment theses with factors, signals, backtests and scenarios; identify robust ranges and failure conditions to add discipline without replacing the PM.",
+  "用因子、信号、回测与情景分析检验研究命题，识别稳健区间和失效条件；最终决策仍由人承担。": "Test investment theses with factors, signals, backtests and scenarios, identify robust ranges and failure conditions, and keep final decisions with people.",
   "命题 / 信号 / 市场数据": "Thesis / signals / market data", "验证结果 / 风险边界": "Validation / risk boundaries", "因子实验": "Factor research", "稳健性检验": "Robustness testing", "情景压力测试": "Scenario stress tests",
   "决策反馈闭环": "Decision Feedback Loop", "让结果反向更新研究系统，而非只做事后复盘。": "Feed outcomes back into the research system—not merely into post-mortems.",
   "记录预期、动作、结果与偏差来源，把真实反馈写回假设、证据权重和流程规则，持续提高下一次决策的起点。": "Record expectations, actions, outcomes and sources of error; write real-world feedback back into theses, evidence weights and operating rules.",
@@ -40,19 +40,25 @@ const en: Record<string, string> = {
 };
 
 const navigation = [
-  { label: "双研究引擎", labelEn: "Research", href: "#research" },
-  { label: "研究与结果", labelEn: "Research & Outcomes", href: "#practice" },
-  { label: "研究方法", labelEn: "Research Methods", href: "#capabilities" },
-  { label: "长期方向", labelEn: "Direction", href: "#direction" },
-  { label: "手札", href: "#notes" },
-  { label: "研究交流", labelEn: "Engage", href: "#contact" },
+  {
+    label: "Research Models",
+    labelEn: "Research Models",
+    href: "#research",
+    children: [
+      { label: "Deep Dive", labelEn: "Deep Dive", href: "/deep-dive" },
+      { label: "Research Desk", labelEn: "Research Desk", href: "/desk" },
+    ],
+  },
+  { label: "AlphaMap 另类数据", labelEn: "AlphaMap Data", href: "/alphamap" },
+  { label: "Strategy", labelEn: "Strategy", href: "/strategy" },
+  { label: "判断账本", labelEn: "Authority Ledger", href: "/authority-ledger" },
 ];
 
 const positioningSignals = [
-  { label: "WHO WE ARE", cn: "全球科技股独立研究机构", en: "Independent global technology-equity research" },
-  { label: "METHOD", cn: "基本面与量化研究", en: "Fundamental and quantitative research" },
-  { label: "ALTERNATIVE DATA", cn: "AlphaMap 科技股另类数据", en: "AlphaMap technology-equity alternative data" },
-  { label: "INSTITUTIONAL", cn: "专题投研方法与应用", en: "Scoped research methodology and application" },
+  { label: "RESEARCH MODELS", cn: "持续投资判断与情景修订", en: "Ongoing judgment and scenario revisions" },
+  { label: "ALPHAMAP DATA", cn: "PIT 产业关系、经营状态与另类特征", en: "PIT relationships, operating states and alternative features" },
+  { label: "STRATEGY", cn: "模型组合与机构策略合作", en: "Model portfolios and institutional strategy collaboration" },
+  { label: "SHARED CORE", cn: "可审计、可复现、可归因", en: "Auditable, reproducible and attributable" },
 ];
 
 const deskCapabilities = [
@@ -63,41 +69,47 @@ const deskCapabilities = [
 ];
 
 const engagementTopics = [
-  { cn: "获取 AlphaMap 数据说明与样例", en: "Request AlphaMap data overview and samples", detailCn: "面向系统化权益与基本面量化团队", detailEn: "For systematic equity and quantamental teams", intent: "alternative_dataset" },
-  { cn: "讨论科技股研究应用", en: "Discuss a technology-equity research use case", detailCn: "面向基本面 PM、分析师与研究负责人", detailEn: "For fundamental PMs, analysts and research leads", intent: "research_access" },
-  { cn: "讨论研究与数据合作", en: "Discuss a research and data partnership", detailCn: "面向投资研究平台与产品团队", detailEn: "For investment research platforms and product teams", intent: "commissioned_mandate" },
+  { cn: "获取 Research Model 样例", en: "Request a Research Model sample", detailCn: "评估持续判断、变量与 revision 记录", detailEn: "Review ongoing judgment, variables and revisions", intent: "research_model_sample" },
+  { cn: "获取 AlphaMap 数据样例", en: "Request an AlphaMap data sample", detailCn: "评估 PIT 关系、状态与另类特征", detailEn: "Review PIT relationships, states and alternative features", intent: "alternative_dataset" },
+  { cn: "讨论 Strategy 合作", en: "Discuss a Strategy collaboration", detailCn: "评估模型组合、风险边界与证据标准", detailEn: "Review model portfolios, risk boundaries and evidence standards", intent: "strategy_access" },
 ];
 
 const collaborationLanes = [
   {
-    code: "BUYER 01 / SYSTEMATIC EQUITY",
-    titleCn: "系统化权益与基本面量化团队",
-    titleEn: "Systematic Equity & Quantamental Teams",
-    bodyCn: "将产业关系、产品结构和经营变化用于科技股中低频选股、主题轮动与共同风险研究。",
-    bodyEn: "Use industry relationships, product structures and operating changes in medium- and low-frequency stock selection, thematic analysis and common-risk research.",
-    href: "/institutional-access#intent-alternative_dataset",
-    ctaCn: "获取数据说明与样例",
-    ctaEn: "Request data overview and samples",
+    code: "DOOR 01 / RESEARCH MODELS",
+    titleCn: "Research Models",
+    titleEn: "Research Models",
+    bodyCn: "围绕具体投资问题持续更新变量、情景与判断。Deep Dive 提供公开研究证据，Research Desk 承接持续跟踪与 revision。",
+    bodyEn: "Ongoing variables, scenarios and judgments around a defined investment question. Deep Dive provides public evidence; Research Desk carries continuous tracking and revisions.",
+    proofCn: "验证：判断是否随新证据持续改进",
+    proofEn: "Proof: whether judgment improves as evidence changes",
+    href: "/deep-dive",
+    ctaCn: "查看 Research Models",
+    ctaEn: "Explore Research Models",
   },
   {
-    code: "BUYER 02 / FUNDAMENTAL EQUITY",
-    titleCn: "基本面权益投资团队",
-    titleEn: "Fundamental Equity Investment Teams",
-    bodyCn: "把新的产业证据对应到公司盈利驱动，识别支持或挑战原有投资假设的变化。",
-    bodyEn: "Connect new industry evidence to company earnings drivers and identify what supports or challenges an existing investment thesis.",
-    href: "/institutional-access#intent-research_access",
-    ctaCn: "讨论科技股研究应用",
-    ctaEn: "Discuss a research use case",
+    code: "DOOR 02 / ALPHAMAP DATA",
+    titleCn: "AlphaMap Alternative Data",
+    titleEn: "AlphaMap Alternative Data",
+    bodyCn: "交付带时点的产业关系、公司经营状态、evidence 与另类特征因子，可进入研究、数据和模型工作流。",
+    bodyEn: "Point-in-time industry relationships, company operating states, evidence and alternative features for research, data and model workflows.",
+    proofCn: "验证：能否直接调用，以及重建成本",
+    proofEn: "Proof: workflow readiness and reconstruction cost",
+    href: "/alphamap",
+    ctaCn: "查看 AlphaMap Data",
+    ctaEn: "Explore AlphaMap Data",
   },
   {
-    code: "BUYER 03 / INVESTMENT PLATFORM",
-    titleCn: "投资研究平台与产品团队",
-    titleEn: "Investment Research Platforms",
-    bodyCn: "围绕终端投资用户的实际问题，增加科技产业分析、公司比较与投资假设跟踪能力。",
-    bodyEn: "Add technology-industry analysis, company comparison and thesis monitoring around a defined end-user investment task.",
-    href: "/institutional-access#intent-commissioned_mandate",
-    ctaCn: "讨论研究与数据合作",
-    ctaEn: "Discuss a research and data partnership",
+    code: "DOOR 03 / STRATEGY",
+    titleCn: "LunarTulip Strategies",
+    titleEn: "LunarTulip Strategies",
+    bodyCn: "围绕已验证信号、模型组合与风险预算开展机构策略合作，以样本外结果和归因材料界定证据等级。",
+    bodyEn: "Institutional collaboration around validated signals, model portfolios and risk budgets, with out-of-sample results and attribution defining the evidence level.",
+    proofCn: "验证：可复核的收益与风险证据",
+    proofEn: "Proof: reviewable return and risk evidence",
+    href: "/strategy",
+    ctaCn: "查看 Strategy",
+    ctaEn: "Explore Strategy",
   },
 ];
 
@@ -199,8 +211,8 @@ const noteColumns = [
     title: "AI 原生主动管理",
     titleEn: "AI-Native Active Management",
     notes: [
-      "AI 正在打开基金经理的 Alpha 半径",
-      "主观私募 AI 化成为共识之后，真正的分水岭才刚开始",
+      "AI 正在打开主动投资者的 Alpha 半径",
+      "主动投资团队 AI 化成为共识之后，真正的分水岭才刚开始",
       "AI 买方决策的差距才刚刚开始",
     ],
     notesEn: [
@@ -218,7 +230,7 @@ const noteColumns = [
       "AI 投研的隐蔽摩擦：为什么顶配的分析师 + FDE 团队造出的系统依旧脆弱",
       "盈亏不是经验：Self-Driving Portfolio 之后，AI 投资还缺一层决策归因",
       "Self-Driving Portfolio：AI 投研的真正终点",
-      "如果量化基金有因子库，主动管理也该有假设库",
+      "如果系统化投资有因子库，主动管理也该有假设库",
       "AI 买方决策的第一道分水岭：谁来验收",
       "AI 投研越多，为什么买方决策反而更难？",
     ],
@@ -226,7 +238,7 @@ const noteColumns = [
       "The Hidden Friction in AI Investment Research",
       "P&L Is Not Experience: The Missing Decision-Attribution Layer",
       "Self-Driving Portfolio: The Real Destination of AI Investing",
-      "If Quant Funds Have Factor Libraries, Active Managers Need Thesis Libraries",
+      "If Systematic Teams Have Factor Libraries, Active Managers Need Thesis Libraries",
       "The First Divide in AI Buy-Side Decisions: Who Validates the Output?",
       "Why More AI Research Can Make Buy-Side Decisions Harder",
     ],
@@ -237,12 +249,12 @@ const noteColumns = [
     title: "主观 × 量化",
     titleEn: "Quantamental Research",
     notes: [
-      "直觉惊人的基金经理，人均是隐式贝叶斯大师",
+      "直觉惊人的投资者，往往是隐式贝叶斯大师",
       "量化、基本面与 AI：贝叶斯更新如何重塑组合管理",
       "Qlib 一直没讲清楚的一件事：信号有了，策略从哪来",
     ],
     notesEn: [
-      "Great Intuitive PMs Are Often Implicit Bayesian Masters",
+      "Great Intuitive Investors Are Often Implicit Bayesian Masters",
       "How Bayesian Updating Reshapes Portfolio Management",
       "The Missing Link in Qlib: From Signals to Strategy",
     ],
@@ -253,14 +265,14 @@ const noteColumns = [
     title: "系统生长手记",
     titleEn: "Field Notes",
     notes: [
-      "AI 量化与基本面融合：一个 AI-native Fund 原型的生长手记",
+      "AI 量化与基本面融合：一个 AI-native 投资研究原型的生长手记",
       "从信息焦虑到系统自由：我的 Notion 投研大脑养成记",
-      "Claude Code 之后，量化基金的工程护城河正在坍缩",
+      "Claude Code 之后，系统化投资的工程护城河正在坍缩",
     ],
     notesEn: [
-      "AI Quant Meets Fundamental Research: Building an AI-native Fund Prototype",
+      "AI Quant Meets Fundamental Research: Building an AI-native Investment Research Prototype",
       "From Information Anxiety to System Freedom: Building My Notion Research Brain",
-      "After Claude Code, Quant Funds’ Engineering Moats Are Collapsing",
+      "After Claude Code, Systematic Investing’s Engineering Moats Are Collapsing",
     ],
     slugs: ["trading-like-pm-lab-notes", "notion-research-brain", "coding-agents-quant-moat"],
   },
@@ -315,7 +327,7 @@ const capabilities = [
     title: "Agent 工作流",
     short: "把高质量研究动作封装成可重复流程。",
     description:
-      "将研究方法拆成可编排的 skills、SOP 与 agent 任务，让复杂流程可被调用、检查与复用，而不是停留在一次性对话里。",
+      "将研究方法拆成可编排的 skills、SOP 与 agent 任务，形成可调用、可检查、可复用的研究流程。",
     input: "方法论 / SOP / 工具",
     output: "Skills / Agents / Harness",
     bullets: ["任务编排", "质量检查", "资产化沉淀"],
@@ -333,7 +345,7 @@ const capabilities = [
     title: "策略验证实验室",
     short: "让主观判断与量化验证在同一框架协作。",
     description:
-      "用因子、信号、回测与情景分析检验研究命题，识别稳健区间和失效条件，为集中决策增加纪律，而非替代基金经理。",
+      "用因子、信号、回测与情景分析检验研究命题，识别稳健区间和失效条件；最终决策仍由人承担。",
     input: "命题 / 信号 / 市场数据",
     output: "验证结果 / 风险边界",
     bullets: ["因子实验", "稳健性检验", "情景压力测试"],
@@ -485,7 +497,7 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
     updateScrollState();
     window.addEventListener("scroll", updateScrollState, { passive: true });
 
-    const sections = ["top", ...navigation.map((item) => item.href.slice(1))]
+    const sections = ["top", ...navigation.filter((item) => item.href.startsWith("#")).map((item) => item.href.slice(1))]
       .map((id) => document.getElementById(id))
       .filter((section): section is HTMLElement => section !== null);
     const observer = new IntersectionObserver(
@@ -513,12 +525,24 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
           <span>LUNARTULIP LAB</span>
         </a>
 
-        <nav className="desktop-nav" aria-label={language === "cn" ? "页面章节" : "Page sections"}>
-          {navigation.map((item) => (
-            <a href={item.href} className={activeSection === item.href ? "active" : ""} aria-current={activeSection === item.href ? "location" : undefined} key={item.href}>
-              {language === "en" ? (item.labelEn ?? tx(item.label)) : item.label}
-            </a>
-          ))}
+        <nav className="desktop-nav" aria-label={language === "cn" ? "产品入口" : "Product navigation"}>
+          {navigation.map((item) => {
+            const href = item.href.startsWith("/") && language === "en" ? `/en${item.href}` : item.href;
+            if (item.children) {
+              return (
+                <details className="nav-product-menu" key={item.href}>
+                  <summary className={activeSection === item.href ? "active" : ""}>{language === "en" ? item.labelEn : item.label}<span aria-hidden="true">⌄</span></summary>
+                  <div>
+                    <a href="#research">{language === "cn" ? "产品概览" : "Overview"}</a>
+                    {item.children.map((child) => (
+                      <Link key={child.href} href={language === "en" ? `/en${child.href}` : child.href}>{language === "en" ? child.labelEn : child.label}</Link>
+                    ))}
+                  </div>
+                </details>
+              );
+            }
+            return <Link href={href} key={item.href}>{language === "en" ? item.labelEn : item.label}</Link>;
+          })}
         </nav>
 
         <div className="header-tools">
@@ -556,47 +580,50 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
         onClick={() => setMenuOpen(false)}
       />
 
-      <nav className={`mobile-nav ${menuOpen ? "is-open" : ""}`} aria-label={language === "cn" ? "移动端页面章节" : "Mobile sections"} aria-hidden={!menuOpen}>
+      <nav className={`mobile-nav ${menuOpen ? "is-open" : ""}`} aria-label={language === "cn" ? "移动端产品入口" : "Mobile product navigation"} aria-hidden={!menuOpen}>
         {navigation.map((item, index) => (
-          <a href={item.href} className={activeSection === item.href ? "active" : ""} aria-current={activeSection === item.href ? "location" : undefined} key={item.href} onClick={() => setMenuOpen(false)}>
-            <span>0{index + 1}</span> {language === "en" ? (item.labelEn ?? tx(item.label)) : item.label}
-          </a>
+          <div className="mobile-nav-group" key={item.href}>
+            <Link href={item.href.startsWith("/") && language === "en" ? `/en${item.href}` : item.href} className={activeSection === item.href ? "active" : ""} aria-current={activeSection === item.href ? "location" : undefined} onClick={() => setMenuOpen(false)}>
+              <span>0{index + 1}</span> {language === "en" ? item.labelEn : item.label}
+            </Link>
+            {item.children && <div className="mobile-nav-children">{item.children.map((child) => <Link key={child.href} href={language === "en" ? `/en${child.href}` : child.href} onClick={() => setMenuOpen(false)}>{language === "en" ? child.labelEn : child.label}</Link>)}</div>}
+          </div>
         ))}
       </nav>
 
       <section className="hero" id="top" aria-labelledby="hero-title">
         <div className="hero-copy">
-          <p className="eyebrow">GLOBAL TECHNOLOGY EQUITY RESEARCH & ALTERNATIVE DATA</p>
+          <p className="eyebrow">RESEARCH MODELS · ALTERNATIVE DATA · STRATEGIES</p>
           <h1 id="hero-title">
             {language === "cn" ? (
               <>
-                <span className="hero-title-line">全球科技股</span>
-                <span className="hero-title-line hero-title-tagline">基本面与量化研究</span>
+                <span className="hero-title-line">全球科技股研究模型</span>
+                <span className="hero-title-line hero-title-tagline">另类数据与投资策略</span>
               </>
             ) : (
               <>
-                <span className="hero-title-line">Global Technology</span>
-                <span className="hero-title-line">Equity Research & Thematic Investing Strategies</span>
-                <span className="hero-title-line hero-title-tagline">& Alternative Data</span>
+                <span className="hero-title-line">Global Technology Equity</span>
+                <span className="hero-title-line">Research Models, Alternative Data</span>
+                <span className="hero-title-line hero-title-tagline">& Investment Strategies</span>
               </>
             )}
           </h1>
           <p className="hero-description">
             {language === "cn" ? (
               <>
-                <span>LunarTulip Research 是一家聚焦全球科技股的独立研究机构，重点研究 AI 产业链与相关主题投资策略。</span>
-                <span>我们结合产业与公司基本面洞察、量化策略和 AlphaMap 另类数据，为股票选择、投资假设跟踪与主题研究提供研究输入和方法支持。</span>
+                <span>LunarTulip Research 面向全球科技股，提供持续更新的 Research Models、AlphaMap Alternative Data 与机构策略合作。</span>
+                <span>三类产品共享同一套研究内核，按客户购买的对象、使用权和服务责任分别交付。研究轨迹保留时点、来源、修订与结果归因。</span>
               </>
             ) : (
               <>
-                <span>LunarTulip Research is an independent research firm focused on global technology equities, with an emphasis on the AI value chain and related thematic investment strategies.</span>
-                <span>We combine fundamental insights, Quant strategies and AlphaMap alternative data to support stock selection, investment thesis monitoring and thematic research.</span>
+                <span>LunarTulip Research builds independent research models, alternative datasets and investment strategies for global technology equities.</span>
+                <span>All three share one research core and are delivered under distinct usage rights and service responsibilities. Each trail preserves point-in-time evidence, revisions and outcome attribution.</span>
               </>
             )}
           </p>
           <div className="hero-actions">
-            <a className="primary-action" href="#practice">
-              {language === "cn" ? "阅读旗舰研究" : "Read flagship research"} <span aria-hidden="true"><ArrowRightIcon /></span>
+            <a className="primary-action" href="#research">
+              {language === "cn" ? "查看三类产品" : "Explore the three products"} <span aria-hidden="true"><ArrowRightIcon /></span>
             </a>
             <Link className="secondary-action" href={language === "en" ? "/en/authority-ledger" : "/authority-ledger"}>
               {language === "cn" ? "查看判断账本" : "View the Authority Ledger"} <span aria-hidden="true"><ArrowUpRightIcon /></span>
@@ -648,19 +675,19 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
       <section className="product-section page-section" id="research" aria-labelledby="research-title">
         <div className="section-heading product-heading">
           <div>
-            <p className="section-index">INSTITUTIONAL BUYERS / 01</p>
+            <p className="section-index">THREE WAYS TO WORK WITH US / 01</p>
             <h2 id="research-title">
-              {language === "cn" ? "按买方研究任务，选择数据或专题合作。" : "Choose data or a scoped engagement by buy-side research task."}
+              {language === "cn" ? "先看购买对象，再选择交付方式。" : "Start with what you need to buy, then choose delivery."}
             </h2>
           </div>
           <p className="section-lead">
             {language === "cn"
-              ? "系统化权益团队、基本面投资团队和投资研究平台面对的任务不同。合作从实际研究问题出发，再确定 AlphaMap 数据授权、专题投研方法与应用，或两者组合。"
-              : "Systematic equity teams, fundamental investors and investment platforms have different research tasks. Each engagement starts with the real question, then scopes AlphaMap data, a methodology application or both."}
+              ? "Research Models 交付持续投资判断，AlphaMap 交付可调用的数据与特征，Strategy 交付模型组合及机构策略合作。API、CSV、JSON、MCP 和 Skill 按实际工作流选配。"
+              : "Research Models deliver ongoing investment judgment. AlphaMap delivers callable data and features. Strategy delivers model portfolios and institutional collaboration. API, CSV, JSON, MCP and skills are selected as delivery layers."}
           </p>
         </div>
 
-        <div className="collaboration-lanes" aria-label={language === "cn" ? "两台研究引擎" : "Two research engines"}>
+        <div className="collaboration-lanes" aria-label={language === "cn" ? "三类产品" : "Three products"}>
           {collaborationLanes.map((lane, index) => (
             <article key={lane.code}>
               <div className="lane-index">0{index + 1}</div>
@@ -668,6 +695,7 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
                 <p>{lane.code}</p>
                 <h3>{language === "cn" ? lane.titleCn : lane.titleEn}</h3>
                 <span>{language === "cn" ? lane.bodyCn : lane.bodyEn}</span>
+                <b>{language === "cn" ? lane.proofCn : lane.proofEn}</b>
               </div>
               <a href={lane.href}>{language === "cn" ? lane.ctaCn : lane.ctaEn}<ArrowRightIcon /></a>
             </article>
@@ -676,12 +704,12 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
 
         <div className="desk-control-plane">
           <div className="desk-control-copy">
-            <p>RESEARCH DESK / ALWAYS-ON THEMATIC INTELLIGENCE</p>
-            <h3>{language === "cn" ? "Research Desk 持续主题研究工作台" : "Always-on Thematic Intelligence: Research Desk"}</h3>
+            <p>RESEARCH MODELS / HUMAN-READABLE SHOWROOM</p>
+            <h3>{language === "cn" ? "Research Desk 交付持续更新的投资判断" : "Research Desk delivers continuously updated judgment"}</h3>
             <span>
               {language === "cn"
-                ? "AlphaMap Dataset 将基本面洞察整合成结构化研究数据和量化特征信号，Research Desk／Pro 持续跟踪科技主题投资趋势。Desk 面向 PM、CIO、基金创始人与专业投资者，Pro 可按合作范围提供结构化导出与限额 API；更高限额的 Power/API 由真实接入需求拉出。"
-                : "AlphaMap Dataset turns fundamental insights into structured research data and quantitative features, while Research Desk / Pro continuously tracks technology investment themes and trends. Desk serves PMs, CIOs, fund founders and professional investors; Pro may include structured exports and a limited API, while higher-limit Power/API access remains demand-led."}
+                ? "Desk 是 Research Models 的可读展示与持续交付界面：围绕具体主题保留命题、变量、情景、revision 与下一验证点。结构化导出和 API 可随数据许可或工作流需求提供，不单独构成第四类产品。"
+                : "Desk is the readable showroom and continuous delivery surface for Research Models. Each theme preserves theses, variables, scenarios, revisions and next tests. Structured exports and APIs can accompany licensed data or workflows; they are not a fourth product."}
             </span>
             <Link href={language === "en" ? "/en/desk" : "/desk"}>
               {language === "cn" ? "查看 Desk 产品路线与脱敏界面" : "Explore the Desk roadmap and sanitized interface"} <ArrowRightIcon />
@@ -738,9 +766,9 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
         </div>
 
         <div className="enterprise-mode">
-          <div><small>ONE ENGINE · TIERED PRODUCT SURFACES</small><strong>{language === "cn" ? "AlphaMap 先行，Research Desk／Pro 与 API 随需求展开" : "AlphaMap first; Research Desk / Pro and API expand with demand"}</strong></div>
-          <p>{language === "cn" ? "当前商业承接以 AlphaMap 数据授权和固定范围的专题项目为主。Research Desk 保留专业投资者端的产品地位，Desk Pro 可包含限额 API；部分 AlphaMap 交付也可使用获许可的 Desk API。各产品面共用同一套时点化、证据可追溯的研究状态。" : "Current commercial work leads with AlphaMap licensing and scoped projects. Research Desk remains the professional-investor product line, Desk Pro may include a limited API, and some AlphaMap delivery may use licensed Desk APIs. Every surface shares the same point-in-time, evidence-linked research state."}</p>
-          <Link href={language === "en" ? "/en/institutional-access" : "/institutional-access"}>{language === "cn" ? "查看买方方案与标准范围" : "View buyer solutions and standard scope"} <ArrowRightIcon /></Link>
+          <div><small>ONE RESEARCH CORE · THREE COMMERCIAL DOORS</small><strong>{language === "cn" ? "购买对象分开，研究证据互相连通" : "Distinct purchasing objects, connected research evidence"}</strong></div>
+          <p>{language === "cn" ? "Research Models、AlphaMap Data 与 Strategy 共用带时点的证据状态和结果归因。交付界面、数据使用权与服务责任按询单分别界定。" : "Research Models, AlphaMap Data and Strategy share point-in-time evidence states and outcome attribution. Interfaces, data rights and service responsibilities are scoped separately for each engagement."}</p>
+          <Link href={language === "en" ? "/en/institutional-access" : "/institutional-access"}>{language === "cn" ? "选择合作入口" : "Choose an engagement route"} <ArrowRightIcon /></Link>
         </div>
       </section>
 
@@ -873,11 +901,11 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
         <div className="vision-panel">
           <div className="vision-copy">
             <p className="section-index">VALUE REALIZATION / 05</p>
-            <h2 id="vision-title">{language === "cn" ? <>现在看得见研究质量，<br />长期看资本结果。</> : <>See research quality now.<br />Judge long-term value through capital outcomes.</>}</h2>
+            <h2 id="vision-title">{language === "cn" ? <>先核验研究质量，<br />再讨论策略合作。</> : <>Verify research quality first.<br />Then discuss strategy collaboration.</>}</h2>
             <p>
               {language === "cn"
-                ? "机构与专业投资者可以先通过研究作品、版本记录、更正与结局账本判断我们的研究质量。长期，双研究引擎将在真实资本责任下持续接受检验；任何未来资管合作均将在相应主体、资质与合规框架完备后独立开展。"
-                : "Institutions and professional investors can first evaluate our research quality through published work, version histories, corrections and outcome records. Over time, both engines will remain accountable to real capital outcomes; any future asset-management activity will operate separately under the appropriate entity, qualifications and compliance framework."}
+                ? "机构客户可以先通过 Research Models、版本记录、更正与 Authority Ledger 核验判断质量。Strategy 合作另行审阅信号证据、样本外结果、风险预算和归因材料，并按具体范围界定责任。"
+                : "Institutional clients can first review judgment quality through Research Models, version histories, corrections and the Authority Ledger. Strategy collaboration separately reviews signal evidence, out-of-sample results, risk budgets and attribution, with responsibilities scoped to each engagement."}
             </p>
             <div className="vision-links">
               <Link href={language === "cn" ? "/notes/decision-attribution-after-self-driving-portfolio" : "/en/notes/decision-attribution-after-self-driving-portfolio"}>{language === "cn" ? "阅读决策归因研究" : "Read the decision-attribution research"}<ArrowRightIcon /></Link>
@@ -888,16 +916,16 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
             <article>
               <small>RESEARCH ACCESS</small>
               <h3>{language === "cn" ? "先验证研究质量" : "Evaluate research quality first"}</h3>
-              <p>{language === "cn" ? "通过 Deep Dive、AlphaMap Research Series、更新记录与 Authority Ledger 评估研究质量；随后按任务选择 AlphaMap 数据授权、Research Desk／API 产品路线或专题投研方法与应用。" : "Use Deep Dives, the AlphaMap Research Series, update histories and the Authority Ledger to assess quality, then evaluate AlphaMap licensing, the Research Desk / API roadmap or a scoped methodology application by task."}</p>
+              <p>{language === "cn" ? "通过 Deep Dive、AlphaMap Research Series、更新记录与 Authority Ledger 评估质量，再按任务进入 Research Models、AlphaMap Data 或 Strategy。" : "Use Deep Dives, the AlphaMap Research Series, update histories and the Authority Ledger to assess quality, then enter Research Models, AlphaMap Data or Strategy by task."}</p>
               <Link href={language === "en" ? "/en/institutional-access" : "/institutional-access"}>{language === "cn" ? "查看研究产品与服务" : "Explore research products and services"} <ArrowRightIcon /></Link>
             </article>
             <article>
-              <small>LONG-TERM DIRECTION</small>
-              <h3>{language === "cn" ? "长期资本管理方向" : "Long-term capital-management direction"}</h3>
-              <p>{language === "cn" ? "真实资本结果将长期检验双研究引擎的判断质量、风险纪律与学习能力。相关业务将在相应主体、资质与合规框架完备后独立开展。" : "Real capital outcomes will test the two engines’ judgment quality, risk discipline and learning capacity over time. Related activity will operate separately under the appropriate entity, qualifications and compliance framework."}</p>
-              <a href={institutionalMailto({ source: "HOME_ASSET_DIRECTION", topic: "Strategic Institutional Partnership", language })}>
-                {language === "cn" ? "讨论战略机构合作" : "Discuss a strategic institutional partnership"} <ArrowUpRightIcon />
-              </a>
+              <small>STRATEGY COLLABORATION</small>
+              <h3>{language === "cn" ? "模型组合与机构策略合作" : "Model portfolios and institutional strategy collaboration"}</h3>
+              <p>{language === "cn" ? "合作以明确的研究范围、风险预算和证据等级为前提。页面不提供具体持仓、权重或结果承诺。" : "Each collaboration starts with a defined research scope, risk budget and evidence level. This site does not provide specific holdings, weights or outcome promises."}</p>
+              <Link href={language === "en" ? "/en/strategy" : "/strategy"}>
+                {language === "cn" ? "查看 Strategy 合作边界" : "Review Strategy collaboration boundaries"} <ArrowUpRightIcon />
+              </Link>
             </article>
           </div>
         </div>
@@ -990,6 +1018,7 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
             <p className="footer-links">
               <Link href={language === "en" ? "/en/about" : "/about"}>{language === "cn" ? "关于我们" : "About"}</Link>
               <Link href={language === "en" ? "/en/alphamap" : "/alphamap"}>AlphaMap</Link>
+              <Link href={language === "en" ? "/en/strategy" : "/strategy"}>Strategy</Link>
               <Link href={language === "en" ? "/en/deep-dive" : "/deep-dive"}>Deep Dive</Link>
               <Link href={language === "en" ? "/en/authority-ledger" : "/authority-ledger"}>Authority Ledger</Link>
               <Link href={language === "en" ? "/en/institutional-access" : "/institutional-access"}>Research Access</Link>

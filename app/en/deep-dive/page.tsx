@@ -3,8 +3,8 @@ import { deepDiveResearchObjects } from "@/lib/research-objects";
 import DeepDiveIndex from "../../deep-dive/deep-dive-index";
 
 export const metadata: Metadata = {
-  title: "Lunartulip Deep Dive | Global AI Technology Equity Research",
-  description: "Versioned deep research on global AI technology companies and industries, with explicit questions, key evidence, risk boundaries, as-of dates and update histories.",
+  title: "Lunartulip Deep Dive | Public Evidence for Research Models",
+  description: "Versioned public evidence for global technology-equity Research Models, presenting Theme Studies before Company Deep Dives with explicit questions, risk boundaries, as-of dates and update histories.",
   alternates: {
     canonical: "/en/deep-dive",
     languages: { "zh-CN": "/deep-dive", en: "/en/deep-dive" },

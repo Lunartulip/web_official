@@ -4,8 +4,8 @@ import { alphaMapStudies } from "@/lib/research-objects";
 import AlphaMapIndex from "./alphamap-index";
 
 export const metadata: Metadata = {
-  title: "AlphaMap｜将 FinLLM-KG 转化为可交易的科技股量化因子",
-  description: "AlphaMap 研究大模型金融知识图谱的经济语义、时间与状态迁移，以及图结构如何映射为面向全球科技股趋势成长与轮动的中低频量化因子。",
+  title: "AlphaMap Alternative Data｜从 FinLLM-KG 到科技股量化因子",
+  description: "AlphaMap 将 FinLLM-KG 转化为可调用的 PIT 产业关系、公司经营状态与另类特征，并检验其如何进入全球科技股中低频量化因子与策略。",
   alternates: {
     canonical: "/alphamap",
     languages: { en: "/en/alphamap", "zh-CN": "/alphamap", "x-default": "/en/alphamap" },

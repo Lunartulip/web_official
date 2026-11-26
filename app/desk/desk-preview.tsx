@@ -247,8 +247,8 @@ export default function DeskPreview({
           </p>
           <p className={styles.productName}>
             {isCn
-              ? "LunarTulip Research Desk｜面向专业投资者的持续研究产品"
-              : "LUNARTULIP RESEARCH DESK / CONTINUOUS RESEARCH PRODUCT"}
+              ? "LunarTulip Research Desk｜Research Models 的持续判断与可读交付"
+              : "LUNARTULIP RESEARCH DESK / RESEARCH MODELS DELIVERY"}
           </p>
           <h1>
             {isCn ? (
@@ -267,8 +267,8 @@ export default function DeskPreview({
           </h1>
           <p className={styles.heroLead}>
             {isCn
-              ? "Research Desk 是 LunarTulip 面向 PM、CIO、基金创始人与专业投资者的持续研究产品线。当前由 AlphaMap Dataset 率先进入市场，Desk 随后分阶段开放；Desk Pro 可在约定范围内提供结构化导出与限额 API。"
-              : "Research Desk is LunarTulip’s continuous-research product line for PMs, CIOs, fund founders and professional investors. AlphaMap Dataset is first to market, with Desk opening in stages afterward; Desk Pro may include structured exports and a limited API within the agreed scope."}
+              ? "Research Desk 是 Research Models 的 human-readable showroom 与持续交付界面，围绕具体主题更新命题、变量、情景和 revision。Desk 按计划在 AlphaMap 之后分阶段开放；结构化导出与限额 API 可在约定范围内作为交付方式。"
+              : "Research Desk is the human-readable showroom and continuous delivery surface for Research Models, updating theses, variables, scenarios and revisions around defined themes. Desk opens in stages after AlphaMap; structured exports and a limited API may serve as delivery methods within scope."}
           </p>
           <div className={styles.heroActions}>
             <a className={styles.primaryButton} href="#workspace">
@@ -463,8 +463,8 @@ export default function DeskPreview({
             <h3>{isCn ? "Research Desk／Pro" : "Research Desk / Pro"}</h3>
             <span>
               {isCn
-                ? "把研究状态、主题优先的 Decision Objects、结构化导出与限额 API 组织成可持续使用的产品。"
-                : "Turns research state, theme-first Decision Objects, structured exports and a limited API into a recurring product."}
+                ? "把研究状态与主题优先的 Decision Objects 组织成可持续使用的判断界面；结构化导出与限额 API 按工作流选配。"
+                : "Organizes research state and theme-first Decision Objects into a continuous judgment surface; structured exports and a limited API follow workflow needs."}
             </span>
             <small>STAGED AVAILABILITY</small>
           </article>
@@ -483,8 +483,8 @@ export default function DeskPreview({
           </div>
           <p>
             {isCn
-              ? "AlphaMap 是当前先行产品；Research Desk／Pro 作为专业投资者端的 recurring 产品随后推进。限额 API 属于 Pro 的可选交付，高限额 Power/API 则由真实机器接入需求拉出。"
-              : "AlphaMap is the current spearhead. Research Desk / Pro follows as a recurring product for professional investors. A limited API may be included with Pro, while higher-limit Power/API access is pulled forward by validated machine-integration demand."}
+                ? "AlphaMap 当前先行，Research Desk／Pro 随后推进并承接 Research Models 的持续判断。限额 API 属于可选交付层，高限额 Power/API 由真实机器接入需求拉出。"
+                : "AlphaMap leads the current sequence. Research Desk / Pro follows with continuous judgment from Research Models. A limited API is an optional delivery layer; higher-limit Power/API access follows validated machine-integration demand."}
           </p>
         </div>
         <div className={styles.valueGrid}>
@@ -752,8 +752,8 @@ export default function DeskPreview({
           </h2>
           <p>
             {isCn
-              ? "Deep Dive 是 Research Desk 的公开、版本化研究输出，Authority Ledger 是 Desk 判断进入后续结算后的聚合结果层。可先从两者评估研究深度与纪律，再按任务讨论 AlphaMap 数据授权、Research Desk／Pro、机器接入或专题投研项目；数据、Desk 与 API 权限分别约定。"
-              : "Deep Dive is the public, versioned research output of Research Desk; the Authority Ledger is the aggregate outcome layer for Desk judgments after settlement. Use both to evaluate depth and discipline before discussing AlphaMap licensing, Research Desk / Pro, machine integration or a scoped project; data, Desk and API rights are scoped separately."}
+              ? "Deep Dive 是 Research Models 的公开证据层和 Desk 的版本化输出，Authority Ledger 汇总判断进入后续结算后的结果。可先从两者评估研究深度与纪律，再按任务讨论持续判断、AlphaMap 数据或 Strategy 合作；API 权限按交付范围另行约定。"
+              : "Deep Dive is the public evidence layer for Research Models and the versioned output of Desk; the Authority Ledger aggregates subsequent outcomes. Use both to assess depth and discipline before discussing ongoing judgment, AlphaMap data or Strategy collaboration; API rights are scoped as delivery terms."}
           </p>
         </div>
         <div className={styles.proofLinks}>

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import DeskPreview from "../../desk/desk-preview";
 
 export const metadata: Metadata = {
-  title: "LunarTulip Research Desk | Continuous Research for Professional Investors",
-  description: "Research Desk remains LunarTulip’s continuous-research product line. AlphaMap Dataset leads the launch sequence; Desk / Pro follows in stages, with structured exports and a limited API available by scope.",
+  title: "LunarTulip Research Desk | Continuous Judgment for Research Models",
+  description: "Research Desk is the readable showroom and continuous delivery surface for Research Models, maintaining theses, variables, scenarios and revisions with optional machine delivery.",
   alternates: {
     canonical: "https://lunartuliplab.com/en/desk",
     languages: {
@@ -12,8 +12,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "LunarTulip Research Desk | Product Roadmap",
-    description: "Theme-first Decision Objects, maintained coverage, structured exports and a limited Research API.",
+    title: "LunarTulip Research Desk | Research Models Delivery",
+    description: "Theme-first Decision Objects, maintained coverage, revisions and optional machine delivery.",
     url: "https://lunartuliplab.com/en/desk",
     type: "website",
   },
