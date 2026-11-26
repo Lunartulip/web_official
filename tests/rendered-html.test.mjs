@@ -166,6 +166,9 @@ test("publishes buyer tasks, proof surfaces, current offers and the product road
     "PIT AlphaMap科技股另类数据",
     "量化模型组合与机构策略合作",
     "可审计、可复现、可归因",
+    "系统化权益与基本面量化团队",
+    "基本面权益投资团队",
+    "投资研究平台与产品团队",
   ]) {
     assert.match(pageSource, new RegExp(term.replace("$", "\\$")));
   }

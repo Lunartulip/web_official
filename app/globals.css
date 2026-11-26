@@ -1451,6 +1451,24 @@ footer a:focus-visible { outline-color: var(--blue-bright); outline-offset: 2px;
 .collaboration-lanes article > a .ui-icon { width: 14px; height: 14px; transition: transform .2s ease; }
 .collaboration-lanes article > a:hover .ui-icon { transform: translateX(4px); }
 
+.buyer-route-label {
+  margin: 30px 0 16px;
+  padding: 21px 24px;
+  display: grid;
+  grid-template-columns: minmax(220px,.7fr) 1.3fr;
+  gap: 32px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-surface);
+  background: rgba(255,255,255,.2);
+}
+.buyer-route-label div { display: flex; flex-direction: column; gap: 8px; }
+.buyer-route-label small { color: #78868e; font: 8px/1.35 var(--mono); letter-spacing: .08em; }
+.buyer-route-label strong { color: #304651; font-size: 17px; }
+.buyer-route-label > span { color: #66757d; font-size: 12px; line-height: 1.75; }
+.buyer-lanes article { min-height: 210px; }
+.buyer-lanes h3 { font-size: 22px; }
+
 .desk-control-plane {
   margin-top: 28px;
   padding: 48px 50px;
@@ -1765,6 +1783,7 @@ footer a:focus-visible { outline-color: var(--blue-bright); outline-offset: 2px;
   .collaboration-lanes article:last-child { border-bottom: 0; }
   .lane-index { width: 36px; height: 36px; }
   .collaboration-lanes h3 { font-size: 22px; }
+  .buyer-route-label { grid-template-columns: 1fr; gap: 12px; padding: 20px; }
   .desk-control-plane { padding: 34px 24px; grid-template-columns: 1fr; gap: 38px; }
   .desk-control-grid > div { min-height: 132px; }
   .product-ladder { grid-template-columns: 1fr; gap: 18px; }

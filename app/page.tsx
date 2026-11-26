@@ -114,6 +114,39 @@ const collaborationLanes = [
   },
 ];
 
+const buyerLanes = [
+  {
+    code: "BUYER 01 / SYSTEMATIC EQUITY",
+    titleCn: "系统化权益与基本面量化团队",
+    titleEn: "Systematic Equity & Quantamental Teams",
+    bodyCn: "将产业关系、产品结构和经营变化用于科技股中低频选股、主题轮动与共同风险研究。",
+    bodyEn: "Use industry relationships, product structures and operating changes in medium- and low-frequency stock selection, thematic analysis and common-risk research.",
+    href: "/institutional-access#intent-alternative_dataset",
+    ctaCn: "获取数据说明与样例",
+    ctaEn: "Request data overview and samples",
+  },
+  {
+    code: "BUYER 02 / FUNDAMENTAL EQUITY",
+    titleCn: "基本面权益投资团队",
+    titleEn: "Fundamental Equity Investment Teams",
+    bodyCn: "把新的产业证据对应到公司盈利驱动，识别支持或挑战原有投资假设的变化。",
+    bodyEn: "Connect new industry evidence to company earnings drivers and identify what supports or challenges an existing investment thesis.",
+    href: "/institutional-access#intent-research_model_sample",
+    ctaCn: "讨论科技股研究应用",
+    ctaEn: "Discuss a research use case",
+  },
+  {
+    code: "BUYER 03 / INVESTMENT PLATFORM",
+    titleCn: "投资研究平台与产品团队",
+    titleEn: "Investment Research Platforms",
+    bodyCn: "围绕终端投资用户的实际问题，增加科技产业分析、公司比较与投资假设跟踪能力。",
+    bodyEn: "Add technology-industry analysis, company comparison and thesis monitoring around a defined end-user investment task.",
+    href: "/institutional-access",
+    ctaCn: "讨论研究与数据合作",
+    ctaEn: "Discuss a research and data partnership",
+  },
+];
+
 const productOffers = [
   {
     code: "PROOF 01 / RESEARCH OBJECTS",
@@ -646,6 +679,33 @@ export default function Home({ initialLanguage = "cn" }: { initialLanguage?: Lan
                 <b>{language === "cn" ? lane.proofCn : lane.proofEn}</b>
               </div>
               <a href={lane.href}>{language === "cn" ? lane.ctaCn : lane.ctaEn}<ArrowRightIcon /></a>
+            </article>
+          ))}
+        </div>
+
+        <div className="buyer-route-label">
+          <div>
+            <small>BUY-SIDE TASK ROUTES</small>
+            <strong>{language === "cn" ? "三类买家入口" : "Three buyer entry points"}</strong>
+          </div>
+          <span>
+            {language === "cn"
+              ? "从最接近自身任务的入口开始，再确定 Research Models、AlphaMap Data 或 Strategy 的合作范围。"
+              : "Start with the closest research task, then define the engagement across Research Models, AlphaMap Data or Strategy."}
+          </span>
+        </div>
+        <div className="collaboration-lanes buyer-lanes" aria-label={language === "cn" ? "三类买家入口" : "Three buyer entry points"}>
+          {buyerLanes.map((lane, index) => (
+            <article key={lane.code}>
+              <div className="lane-index">0{index + 1}</div>
+              <div>
+                <p>{lane.code}</p>
+                <h3>{language === "cn" ? lane.titleCn : lane.titleEn}</h3>
+                <span>{language === "cn" ? lane.bodyCn : lane.bodyEn}</span>
+              </div>
+              <Link href={language === "en" ? `/en${lane.href}` : lane.href}>
+                {language === "cn" ? lane.ctaCn : lane.ctaEn}<ArrowRightIcon />
+              </Link>
             </article>
           ))}
         </div>
